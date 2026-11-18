@@ -2,30 +2,39 @@
 <html lang="zh-CN"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Claude 最佳实践 · 思维导图</title>
+<script>(function(){try{var c=localStorage.getItem('bp-theme')||'auto';var m=window.matchMedia('(prefers-color-scheme: dark)').matches;var t=c==='auto'?(m?'dark':'light'):c;document.documentElement.dataset.theme=t;document.documentElement.dataset.choice=c;}catch(e){}})();</script>
 <style>
-  html,body{margin:0;height:100%;background:#0d0f13;color:#e8eaed;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+  :root{--bg:#0d0f13;--bar:rgba(21,25,34,.94);--line:#232a36;--fg:#e8eaed;--muted:#8b93a1;
+    --btn:#1c2230;--btn-line:#2b3444;--btn-fg:#cdd4e0;--code:#f0c674;--code-bg:#1c2230}
+  html[data-theme="light"]{--bg:#f6f5f2;--bar:rgba(255,254,250,.94);--line:rgba(20,22,26,.12);
+    --fg:#15171b;--muted:#5a6068;--btn:#fffefa;--btn-line:rgba(20,22,26,.14);--btn-fg:#3f444b;
+    --code:#a8542e;--code-bg:#ece9e2}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
   #bar{position:fixed;top:0;left:0;right:0;height:46px;display:flex;align-items:center;gap:10px;padding:0 14px;
-       background:rgba(21,25,34,.94);border-bottom:1px solid #232a36;z-index:10;font-size:13px;color:#8b93a1}
-  #bar b{color:#e8eaed;font-weight:600;margin-right:8px}
-  button{background:#1c2230;border:1px solid #2b3444;color:#cdd4e0;border-radius:8px;padding:5px 11px;cursor:pointer;font-size:12px}
-  button:hover{border-color:#d97757;color:#fff}
-  #mm{position:fixed;top:46px;left:0;width:100%;height:calc(100vh - 46px)}
-  /* markmap 默认把节点文字硬编码成 #333，在深色底上不可读，这里统一覆盖 */
-  #mm{--markmap-text-color:#e8eaed;--markmap-circle-open-bg:#0d0f13;--markmap-circle-stroke:#4C9AFF;
-      --markmap-code-color:#e8eaed;--markmap-code-bg:#1c2230;--markmap-a-color:#7aa7ff;--markmap-a-hover-color:#d97757;
-      --markmap-font: 300 16px/1.4 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
-  #mm text{fill:#e8eaed !important}
-  #mm .markmap-foreign, #mm .markmap-foreign *, #mm foreignObject div{color:#e8eaed !important}
+       background:var(--bar);border-bottom:1px solid var(--line);z-index:10;font-size:13px;color:var(--muted)}
+  #bar b{color:var(--fg);font-weight:600;margin-right:8px}
+  #bar .sp{flex:1}
+  button{background:var(--btn);border:1px solid var(--btn-line);color:var(--btn-fg);border-radius:8px;
+    padding:5px 11px;cursor:pointer;font-size:12px}
+  button:hover{border-color:#d97757;color:#d97757}
+  #mm{position:fixed;top:46px;left:0;width:100%;height:calc(100vh - 46px);
+      --markmap-text-color:var(--fg);--markmap-circle-open-bg:var(--bg);--markmap-circle-stroke:#4C9AFF;
+      --markmap-code-color:var(--fg);--markmap-code-bg:var(--code-bg);--markmap-a-color:#7aa7ff;--markmap-a-hover-color:#d97757}
+  #mm text{fill:var(--fg) !important}
+  #mm .markmap-foreign, #mm .markmap-foreign *, #mm foreignObject div{color:var(--fg) !important}
   #mm .markmap-foreign a, #mm .markmap-foreign a *{color:#7aa7ff !important}
-  #mm .markmap-foreign code{color:#f0c674 !important;background:#1c2230 !important}
-  #mm .markmap-node>circle{fill:#0d0f13;stroke-width:2}
+  #mm .markmap-foreign code{color:var(--code) !important;background:var(--code-bg) !important}
+  #mm .markmap-node>circle{fill:var(--bg);stroke-width:2}
 </style>
 </head><body>
 <div id="bar"><b>Claude 最佳实践 · 思维导图</b>
   <button id="lv1">只看分类</button><button id="lv2">展开一层</button><button id="lvAll">展开全部</button><button id="fit">适应窗口</button>
-  <span>滚轮缩放 · 拖拽平移 · 点击节点折叠</span>
+  <span class="sp"></span><span style="font-size:11.5px;color:var(--muted)">滚轮缩放 · 拖拽平移 · 点击节点折叠</span>
+  <div class="theme-slot"></div>
 </div>
 <svg id="mm"></svg>
+<script src="/theme.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
 <script src="https://cdn.jsdelivr.net/npm/markmap-lib/dist/browser/index.js"></script>
@@ -202,13 +211,12 @@
 <script>
 (async () => {
   const md = document.getElementById('md').textContent;
-  const { Transformer, deriveOptions } = window.markmap;
+  const { Transformer } = window.markmap;
   const { root } = new Transformer().transform(md);
   const map = window.markmap.Markmap.create('#mm', {
     colorFreezeLevel: 2, maxWidth: 240, spacingVertical: 8, paddingX: 12,
     initialExpandLevel: 2, duration: 300
   }, root);
-  window.__mm = map;
   const fit = () => { map.fit(); setTimeout(() => map.fit(), 350); };
   const setLevel = (lv) => {
     const walk = (n, d) => { n.payload = { ...(n.payload || {}), fold: d >= lv }; (n.children||[]).forEach(c => walk(c, d+1)); };
@@ -216,7 +224,6 @@
     map.renderData();
     setTimeout(() => {
       if (lv <= 1) { fit(); return; }
-      // 深层展开后不整体缩小到看不清：固定缩放比例，把根节点放到左侧，靠平移浏览
       const rect = document.querySelector('#mm').getBoundingClientRect();
       const t = d3.zoomIdentity.translate(140, rect.height / 2).scale(lv > 2 ? 0.5 : 0.8);
       map.svg.transition().duration(320).call(map.zoom.transform, t);

@@ -2,92 +2,382 @@
 <html lang="zh-CN"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Claude 最佳实践 · 知识图谱</title>
+<script>(function(){try{var c=localStorage.getItem('bp-theme')||'auto';var m=window.matchMedia('(prefers-color-scheme: dark)').matches;var t=c==='auto'?(m?'dark':'light'):c;document.documentElement.dataset.theme=t;document.documentElement.dataset.choice=c;}catch(e){}})();</script>
 <style>
-  :root{--bg:#0f1115;--fg:#e6e6e6;--muted:#8b93a1;--panel:#161a22;--line:#242a35}
+  :root{
+    --bg:#0a0d12; --panel:rgba(20,24,33,.86); --panel-solid:#0c1016; --line:#222a37; --fg:#e8ecf3; --muted:#8d97a8;
+    --accent:#e0795c; --glow:rgba(124,156,245,.18);
+    --cat-label:#5f6b7f; --label-halo:#0a0d12; --link-cross:#39465c; --chip:#121823; --chip-fg:#c3ccdb;
+    --node-fill-alpha:33; --side-a:#0d1118; --side-b:#0a0d12;
+  }
+  html[data-theme="light"]{
+    --bg:#f6f5f2; --panel:rgba(255,254,250,.92); --panel-solid:#fffefa; --line:rgba(20,22,26,.12);
+    --fg:#15171b; --muted:#5a6068; --accent:#c05a3a; --glow:rgba(124,156,245,.10);
+    --cat-label:#8b9099; --label-halo:#f6f5f2; --link-cross:#bdb7ac; --chip:#fffefa; --chip-fg:#3f444b;
+    --side-a:#f2efe9; --side-b:#f6f5f2;
+  }
   *{box-sizing:border-box}
-  body{margin:0;font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",sans-serif;background:var(--bg);color:var(--fg);height:100vh;display:flex;flex-direction:column}
-  header{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap;background:var(--panel)}
-  h1{font-size:15px;margin:0;font-weight:600}
-  .hint{color:var(--muted);font-size:12px}
-  #legend{display:flex;gap:10px;flex-wrap:wrap;padding:8px 18px;border-bottom:1px solid var(--line);background:var(--panel)}
-  .lg{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer;user-select:none}
-  .dot{width:9px;height:9px;border-radius:50%}
-  main{flex:1;position:relative}
-  #net{position:absolute;inset:0}
-  aside{position:absolute;top:14px;right:14px;width:330px;max-height:calc(100% - 28px);overflow:auto;background:rgba(22,26,34,.96);border:1px solid var(--line);border-radius:12px;padding:16px;display:none}
-  aside h2{margin:0 0 6px;font-size:16px}
-  aside .en{color:var(--muted);font-size:12px;margin-bottom:10px}
-  aside a{color:#7aa7ff;text-decoration:none}
-  aside .rel{font-size:12px;color:var(--muted);margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
-  input[type=search]{background:#0d1017;border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:5px 10px;outline:none;width:180px}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);
+    font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",sans-serif;overflow:hidden}
+  #app{display:flex;height:100vh}
+  /* ---------- sidebar ---------- */
+  #side{width:264px;flex:0 0 264px;border-right:1px solid var(--line);display:flex;flex-direction:column;
+        background:linear-gradient(180deg,var(--side-a),var(--side-b))}
+  .brand{padding:16px 18px 10px}
+  .brand h1{margin:0;font-size:15px;font-weight:600;letter-spacing:.01em}
+  .brand p{margin:2px 0 0;font-size:11.5px;color:var(--muted)}
+  .search{padding:8px 14px}
+  .search input{width:100%;background:var(--panel-solid);border:1px solid var(--line);border-radius:9px;color:var(--fg);
+    padding:7px 10px;font-size:13px;outline:none;transition:.15s border-color}
+  .search input:focus{border-color:#3b4a63}
+  .filters{padding:6px 14px 10px;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--chip-fg);background:var(--chip);
+    border:1px solid var(--line);border-radius:999px;padding:3px 9px;cursor:pointer;user-select:none;transition:.15s}
+  .chip .d{width:7px;height:7px;border-radius:50%}
+  .chip.off{opacity:.34;text-decoration:line-through}
+  .chip:hover{border-color:#3b4a63}
+  .controls{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px}
+  .controls button{background:var(--chip);border:1px solid var(--line);color:var(--chip-fg);border-radius:8px;
+    padding:4px 9px;font-size:11.5px;cursor:pointer}
+  .controls button:hover{border-color:#3b4a63;color:#fff}
+  .controls button.on{background:#1d2637;border-color:#40537a;color:#fff}
+  #detail{padding:14px 16px;overflow:auto;flex:1;border-top:1px solid var(--line)}
+  #detail h2{margin:0 0 2px;font-size:16px}
+  #detail .en{color:var(--muted);font-size:11.5px;margin-bottom:8px}
+  #detail .def{font-size:13px;color:var(--muted);line-height:1.65}
+  #detail .rels{margin-top:12px;font-size:12.5px}
+  #detail .rels div{padding:3px 0;border-top:1px solid rgba(255,255,255,.05)}
+  #detail .rels span.k{color:var(--muted)}
+  #detail a{display:inline-block;margin-top:12px;color:#7fa6ff;text-decoration:none;font-size:12.5px}
+  #detail a:hover{text-decoration:underline}
+  #detail .hint{color:var(--muted);font-size:12px;line-height:1.7}
+  #detail .stat{display:flex;gap:14px;margin-top:12px}
+  #detail .stat div b{display:block;font-size:18px}
+  #detail .stat div span{color:var(--muted);font-size:11px}
+  /* ---------- canvas ---------- */
+  #stage{flex:1;position:relative;background:
+      radial-gradient(900px 520px at 62% 18%, rgba(124,156,245,.09), transparent 70%),
+      radial-gradient(700px 500px at 24% 84%, rgba(224,121,92,.07), transparent 70%), var(--bg)}
+  svg{width:100%;height:100%;display:block;cursor:grab}
+  svg:active{cursor:grabbing}
+  .cat-label{font-size:12.5px;font-weight:600;letter-spacing:.08em;fill:var(--cat-label);text-transform:uppercase}
+  .n-label{font-size:11px;fill:var(--fg);paint-order:stroke;stroke:var(--label-halo);stroke-width:2.6px;
+    stroke-linejoin:round;pointer-events:none;transition:opacity .2s}
+  .n-label.big{font-size:13px;fill:var(--fg);font-weight:600}
+  .node{cursor:pointer;transition:opacity .2s}
+  .node circle{stroke-width:1.2}
+  .halo{fill:none;stroke-width:1;opacity:.5}
+  .link{stroke:var(--link-cross);stroke-linecap:round;transition:opacity .2s}
+  .link.hot{stroke:#8fb0ff;opacity:.95 !important}
+  .link-label{font-size:9.5px;fill:var(--muted);paint-order:stroke;stroke:var(--label-halo);stroke-width:2.5px;pointer-events:none;opacity:0;transition:opacity .15s}
+  .link-label.show{opacity:.95}
+  .dim{opacity:.13 !important}
+  #legend{position:absolute;right:14px;bottom:12px;font-size:11px;color:var(--muted);text-align:right;line-height:1.7}
+  #legend b{color:#cfd7e3;font-weight:500}
+  #tooltip{position:absolute;pointer-events:none;background:var(--panel-solid);border:1px solid var(--line);
+    border-radius:8px;padding:6px 9px;font-size:12px;max-width:240px;opacity:0;transition:opacity .15s;z-index:5}
 </style></head>
 <body>
-<header>
-  <h1>Claude 最佳实践 · 知识图谱</h1>
-  <input id="q" type="search" placeholder="搜索概念…"/>
-  <span class="hint">节点大小 = 被文章提及次数 ｜ 点击节点查看定义与关联 ｜ 双击打开维基条目</span>
-</header>
-<div id="legend"></div>
-<main><div id="net"></div>
-<aside id="panel"><h2 id="p-title"></h2><div class="en" id="p-en"></div><div id="p-def"></div><div class="rel" id="p-rel"></div><div style="margin-top:10px"><a id="p-link" href="#" target="_blank">打开维基条目 →</a></div></aside>
-</main>
-<script type="application/json" id="data">{"nodes":[{"id":"Claude-Code","label":"Claude Code","en":"Claude Code","cat":"Claude Code 与编程","count":79,"def":"Anthropic 的智能体编程工具，支持多智能体并行与动态工作流。"},{"id":"技能","label":"技能","en":"Skills","cat":"工具与扩展","count":46,"def":"以文件封装可复用工作流与专长、按需加载的能力包。"},{"id":"模型上下文协议","label":"模型上下文协议","en":"MCP","cat":"工具与扩展","count":31,"def":"标准化连接智能体与外部工具及数据源的开放协议。"},{"id":"子代理","label":"子代理","en":"Subagents","cat":"智能体架构","count":30,"def":"拥有独立上下文、由主代理编排的专注执行单元。"},{"id":"Claude-平台","label":"Claude 平台","en":"Claude Platform","cat":"产品线与功能","count":26,"def":"Anthropic 提供模型与智能体构建能力的开发平台。"},{"id":"上下文工程","label":"上下文工程","en":"Context Engineering","cat":"上下文工程","count":24,"def":"系统化设计与管理模型上下文以提升输出质量。"},{"id":"Claude-Cowork","label":"Claude Cowork","en":"Claude Cowork","cat":"产品线与功能","count":23,"def":"面向非技术知识工作者的企业级 AI 协作工作空间。"},{"id":"智能体","label":"智能体","en":"AI Agent","cat":"智能体架构","count":18,"def":"能自主规划、调用工具并执行多步任务的 AI 系统。"},{"id":"智能体编程","label":"智能体编程","en":"Agentic Coding","cat":"Claude Code 与编程","count":15,"def":"由 AI 智能体自主完成编码、审查与测试的开发范式。"},{"id":"上下文窗口","label":"上下文窗口","en":"Context Window","cat":"上下文工程","count":13,"def":"模型单次请求可处理的令牌总量上限。"},{"id":"Claude-Agent-SDK","label":"Claude Agent SDK","en":"Claude Agent SDK","cat":"Claude Code 与编程","count":12,"def":"构建可编程智能体应用的开发工具包。"},{"id":"提示缓存","label":"提示缓存","en":"prompt caching","cat":"成本与性能","count":11,"def":"缓存跨请求复用内容以降低输入成本、提升响应速度。"},{"id":"Claude-Tag","label":"Claude Tag","en":"Claude Tag","cat":"产品线与功能","count":10,"def":"可加入共享频道、具备记忆与工具访问的常驻协作智能体。"},{"id":"插件","label":"插件","en":"Plugins","cat":"工具与扩展","count":10,"def":"打包技能、连接器、命令与子代理的可安装定制单元。"},{"id":"提示工程","label":"提示工程","en":"Prompt Engineering","cat":"上下文工程","count":10,"def":"通过编写与迭代指令引导模型输出预期结果。"},{"id":"人在回路","label":"人在回路","en":"Human-in-the-Loop","cat":"安全与治理","count":10,"def":"在关键决策点保留人类审核与最终决定权的机制。"},{"id":"渐进式披露","label":"渐进式披露","en":"Progressive Disclosure","cat":"上下文工程","count":9,"def":"按需逐层加载上下文信息以节省令牌并保持相关性。"},{"id":"CLAUDE-md","label":"CLAUDE.md","en":"CLAUDE.md","cat":"上下文工程","count":8,"def":"会话启动时加载、记录项目约定与上下文的指令文件。"},{"id":"努力等级","label":"努力等级","en":"Effort Level","cat":"模型与能力","count":8,"def":"控制模型推理投入与延迟成本权衡的档位设置。"},{"id":"验证","label":"验证","en":"Verification","cat":"评估与验证","count":8,"def":"智能体检查自身工作是否达到完成标准的过程。"},{"id":"智能体工作流","label":"智能体工作流","en":"Agentic Workflow","cat":"智能体架构","count":8,"def":"为智能体自主性提供结构化执行流程的模式。"},{"id":"Claude-Fable-5","label":"Claude Fable 5","en":"Claude Fable 5","cat":"模型与能力","count":7,"def":"面向高难度推理与长程任务的前沿模型。"},{"id":"连接器","label":"连接器","en":"Connectors","cat":"工具与扩展","count":7,"def":"将 Claude 接入外部工具与数据源的集成组件。"},{"id":"MCP-服务器","label":"MCP 服务器","en":"MCP Server","cat":"工具与扩展","count":7,"def":"实现 MCP 协议、向智能体暴露工具与数据的服务端。"},{"id":"钩子","label":"钩子","en":"Hooks","cat":"工具与扩展","count":7,"def":"在智能体生命周期特定节点自动触发的脚本或动作。"},{"id":"提示注入","label":"提示注入","en":"Prompt Injection","cat":"安全与治理","count":7,"def":"攻击者将指令藏于内容中诱使智能体违背用户意图。"},{"id":"Claude-托管智能体","label":"Claude 托管智能体","en":"Claude Managed Agents","cat":"产品线与功能","count":7,"def":"提供运行时、会话与记忆管理的云端智能体托管服务。"},{"id":"上下文压缩","label":"上下文压缩","en":"Compaction","cat":"上下文工程","count":7,"def":"上下文接近上限时摘要历史以延续长任务。"},{"id":"动态工作流","label":"动态工作流","en":"Dynamic Workflows","cat":"智能体架构","count":7,"def":"按任务即时编写并编排多智能体框架的机制。"},{"id":"智能体循环","label":"智能体循环","en":"Agent Loop","cat":"智能体架构","count":6,"def":"智能体反复收集上下文、行动、验证直至完成的循环。"},{"id":"工作流自动化","label":"工作流自动化","en":"Workflow Automation","cat":"企业落地与组织","count":6,"def":"用智能体自动完成原本耗时的业务流程。"},{"id":"评估","label":"评估","en":"evaluation","cat":"评估与验证","count":6,"def":"系统化测试AI输出质量与可靠性的方法。"},{"id":"单任务成本","label":"单任务成本","en":"Cost per Task","cat":"成本与性能","count":5,"def":"完成一个实际任务的总花费，比单价更能反映经济性。"},{"id":"智能体框架","label":"智能体框架","en":"agent harness","cat":"智能体架构","count":5,"def":"围绕模型的循环、工具执行与上下文管理脚手架。"},{"id":"模型路由","label":"模型路由","en":"Model Routing","cat":"成本与性能","count":5,"def":"按任务复杂度将请求分派给不同能力层级模型的策略。"},{"id":"令牌成本","label":"令牌成本","en":"Token Cost","cat":"成本与性能","count":5,"def":"会话中发送与生成令牌所产生的费用。"},{"id":"评估框架","label":"评估框架","en":"Evaluation Framework","cat":"评估与验证","count":5,"def":"系统化衡量模型表现并定位问题的评测基础设施。"},{"id":"护栏","label":"护栏","en":"Guardrails","cat":"安全与治理","count":4,"def":"限制智能体可执行动作与花费的边界措施。"},{"id":"沙箱","label":"沙箱","en":"Sandbox","cat":"安全与治理","count":4,"def":"隔离运行智能体生成代码与工具调用的执行环境。"},{"id":"自动模式","label":"自动模式","en":"Auto Mode","cat":"安全与治理","count":4,"def":"用分类器审查高风险操作并拦截危险命令的自主执行模式。"},{"id":"幻觉","label":"幻觉","en":"Hallucination","cat":"安全与治理","count":4,"def":"模型生成看似合理但实际虚假或错误的内容。"},{"id":"可观测性","label":"可观测性","en":"Observability","cat":"安全与治理","count":4,"def":"追踪与审查智能体决策过程与数据来源的能力。"},{"id":"投资回报率","label":"投资回报率","en":"ROI","cat":"成本与性能","count":4,"def":"衡量AI投入与业务收益之比的量化指标。"},{"id":"AI治理","label":"AI治理","en":"AI governance","cat":"安全与治理","count":4,"def":"为AI部署设定控制、审计与自主性边界的框架。"},{"id":"工具搜索","label":"工具搜索","en":"Tool Search","cat":"上下文工程","count":4,"def":"按需检索并延迟加载工具定义以节省上下文。"},{"id":"记忆","label":"记忆","en":"Memory","cat":"智能体架构","count":4,"def":"跨运行持久保存用户指令、笔记与任务进度的存储。"},{"id":"长时运行智能体","label":"长时运行智能体","en":"long-running agent","cat":"智能体架构","count":4,"def":"可连续数小时无人监督执行复杂任务的智能体。"},{"id":"插件市场","label":"插件市场","en":"Plugin Marketplace","cat":"工具与扩展","count":3,"def":"集中浏览、安装与分发插件的渠道。"},{"id":"技能创建器","label":"技能创建器","en":"Skill Creator","cat":"工具与扩展","count":3,"def":"辅助构建、测试与迭代技能文件的工具。"},{"id":"定时任务","label":"定时任务","en":"Scheduled Tasks","cat":"工具与扩展","count":3,"def":"按预设时间自动触发技能或工作流的机制。"},{"id":"程序化工具调用","label":"程序化工具调用","en":"Programmatic Tool Calling","cat":"工具与扩展","count":3,"def":"用代码编排工具调用，仅将最终结果返回模型。"},{"id":"多智能体系统","label":"多智能体系统","en":"Multi-Agent System","cat":"智能体架构","count":3,"def":"多个专业化智能体在独立上下文中协同完成任务的架构。"},{"id":"代码审查","label":"代码审查","en":"Code Review","cat":"Claude Code 与编程","count":3,"def":"对代码变更进行检查以发现缺陷与改进点。"},{"id":"代码现代化","label":"代码现代化","en":"Code Modernization","cat":"Claude Code 与编程","count":3,"def":"将遗留系统升级重构为现代语言与架构的实践。"},{"id":"技术债务","label":"技术债务","en":"Technical Debt","cat":"Claude Code 与编程","count":3,"def":"为短期交付积累、需长期偿还的维护负担。"},{"id":"自适应思考","label":"自适应思考","en":"Adaptive Thinking","cat":"模型与能力","count":3,"def":"模型按任务复杂度动态决定推理深度的机制。"},{"id":"顾问策略","label":"顾问策略","en":"Advisor Strategy","cat":"成本与性能","count":3,"def":"小模型执行、遇难题时调用前沿模型获取判断的协作模式。"},{"id":"功能开关","label":"功能开关","en":"Feature Flag","cat":"企业落地与组织","count":3,"def":"控制新功能灰度放量与快速回滚的运行时开关。"},{"id":"内部试用","label":"内部试用","en":"Dogfooding","cat":"企业落地与组织","count":3,"def":"团队先在内部使用自建智能体再决定是否产品化。"},{"id":"企业AI转型","label":"企业AI转型","en":"Enterprise AI Transformation","cat":"企业落地与组织","count":3,"def":"企业系统性引入 AI 并重塑流程与能力的整体变革。"},{"id":"最佳实践","label":"最佳实践","en":"Best Practices","cat":"企业落地与组织","count":3,"def":"经实践验证、可复用的高效使用方法与规范。"},{"id":"上下文","label":"上下文","en":"Context","cat":"上下文工程","count":3,"def":"提供给模型的提示、文件与工具信息等背景依据。"},{"id":"扩展思考","label":"扩展思考","en":"Extended Thinking","cat":"模型与能力","count":2,"def":"模型在回答前执行额外结构化推理的能力。"},{"id":"令牌效率","label":"令牌效率","en":"Token Efficiency","cat":"成本与性能","count":2,"def":"以更少令牌完成同等工作的能力。"},{"id":"爬山优化","label":"爬山优化","en":"Hill Climbing","cat":"成本与性能","count":2,"def":"围绕单一可量化指标持续迭代优化的方法。"},{"id":"评分器","label":"评分器","en":"Grader","cat":"评估与验证","count":2,"def":"对智能体表现某方面给出分数或判定的组件。"},{"id":"分类器","label":"分类器","en":"Classifier","cat":"安全与治理","count":2,"def":"自动判断智能体动作是否具有潜在危害的模型组件。"},{"id":"审计追踪","label":"审计追踪","en":"Audit Trail","cat":"安全与治理","count":2,"def":"记录智能体所有操作与决策来源的完整日志。"},{"id":"监管合规","label":"监管合规","en":"Regulatory Compliance","cat":"安全与治理","count":2,"def":"智能体需满足多监管机构的法规与审计要求。"},{"id":"成熟度模型","label":"成熟度模型","en":"Maturity Model","cat":"企业落地与组织","count":2,"def":"分级评估组织 AI 应用水平并指明升级路径的框架。"},{"id":"人机团队","label":"人机团队","en":"Human-Agent Team","cat":"企业落地与组织","count":2,"def":"人类与 AI 智能体在同一平台分工协作的团队模式。"},{"id":"会话","label":"会话","en":"Session","cat":"智能体架构","count":2,"def":"记录消息与工具调用、可跨多次运行延续的对话实例。"},{"id":"商务智能体","label":"商务智能体","en":"Commerce Agent","cat":"行业与场景","count":2,"def":"在电商或旅行场景中辅助用户搜索、比较与购买的智能体。"},{"id":"智能体蓝图","label":"智能体蓝图","en":"agent blueprint","cat":"智能体架构","count":2,"def":"含脚手架、模式与护栏的可复用智能体参考实现。"},{"id":"任务委派","label":"任务委派","en":"task delegation","cat":"智能体架构","count":2,"def":"将子任务连同决策权分派给合适智能体执行。"},{"id":"自我改进循环","label":"自我改进循环","en":"self-improvement loop","cat":"智能体架构","count":2,"def":"依据反馈修正指令并持续迭代的闭环机制。"},{"id":"计划模式","label":"计划模式","en":"Plan Mode","cat":"Claude Code 与编程","count":2,"def":"只读探索代码库、先产出计划再执行的工作模式。"},{"id":"合并队列","label":"合并队列","en":"merge queue","cat":"Claude Code 与编程","count":2,"def":"合并前对主分支重新运行全部检查的机制。"},{"id":"测试驱动开发","label":"测试驱动开发","en":"test-driven development","cat":"Claude Code 与编程","count":2,"def":"先写测试定义成功标准再增量实现功能。"},{"id":"调试","label":"调试","en":"debugging","cat":"Claude Code 与编程","count":2,"def":"定位并修复软件缺陷与生产问题的过程。"},{"id":"根因分析","label":"根因分析","en":"root cause analysis","cat":"Claude Code 与编程","count":2,"def":"追溯问题根本原因而非仅修复表象的方法。"},{"id":"Claude-Opus-5-5","label":"Claude Opus 5.5","en":"Claude Opus 5.5","cat":"模型与能力","count":2,"def":"面向复杂长程任务优化的高端Claude模型版本。"},{"id":"前沿模型","label":"前沿模型","en":"frontier model","cat":"模型与能力","count":2,"def":"能力处于当前最先进水平、可承担复杂任务的大模型。"},{"id":"快速模式","label":"快速模式","en":"fast mode","cat":"成本与性能","count":2,"def":"以溢价换取更高输出速度的API选项。"},{"id":"延迟","label":"延迟","en":"latency","cat":"成本与性能","count":2,"def":"任务从开始到完成所需的时间开销。"},{"id":"缓存命中率","label":"缓存命中率","en":"cache hit rate","cat":"成本与性能","count":2,"def":"请求中命中缓存部分的比例，影响成本与延迟。"},{"id":"事件响应","label":"事件响应","en":"incident response","cat":"安全与治理","count":2,"def":"检测、响应和恢复安全事件的过程。"},{"id":"事故分诊","label":"事故分诊","en":"incident triage","cat":"安全与治理","count":2,"def":"对故障事件快速分类并定位责任环节。"},{"id":"误报","label":"误报","en":"false positive","cat":"安全与治理","count":2,"def":"被标记为威胁但实际无效的安全发现。"},{"id":"受保护健康信息","label":"受保护健康信息","en":"PHI","cat":"安全与治理","count":2,"def":"HIPAA监管下需严格保护的患者健康数据。"},{"id":"生产部署","label":"生产部署","en":"production deployment","cat":"企业落地与组织","count":2,"def":"将智能体安全投入实际业务环境运行的过程。"},{"id":"定时部署","label":"定时部署","en":"scheduled deployment","cat":"企业落地与组织","count":2,"def":"按设定时区与频率自动运行智能体的部署方式。"},{"id":"研究预览","label":"研究预览","en":"Research Preview","cat":"企业落地与组织","count":2,"def":"面向付费用户开放、功能尚在迭代的早期发布形态。"},{"id":"现场演示","label":"现场演示","en":"live demos","cat":"企业落地与组织","count":2,"def":"在活动中实时展示产品完成真实任务的过程。"},{"id":"业务拓展代表","label":"业务拓展代表","en":"business development representative","cat":"企业落地与组织","count":2,"def":"负责线索筛选与商机挖掘的一线销售角色。"},{"id":"对话式-AI","label":"对话式 AI","en":"conversational AI","cat":"行业与场景","count":2,"def":"以问答交互为主、不直接产出交付物的AI形态。"},{"id":"自助式数据分析","label":"自助式数据分析","en":"self-service data analytics","cat":"行业与场景","count":2,"def":"非技术用户无需数据团队介入即可自行获取数据洞察。"},{"id":"金融服务","label":"金融服务","en":"financial services","cat":"行业与场景","count":2,"def":"银行、保险、资管等受监管行业的业务领域。"},{"id":"遗留系统迁移","label":"遗留系统迁移","en":"legacy system migration","cat":"行业与场景","count":2,"def":"把老旧系统及其业务逻辑迁移到新平台的过程。"},{"id":"商家智能体","label":"商家智能体","en":"merchant agent","cat":"行业与场景","count":2,"def":"面向店铺运营者分析销售、库存并建议促销的智能体。"}],"edges":[{"from":"渐进式披露","to":"技能","rel":"启用","w":4,"docs":4},{"from":"Claude-Code","to":"智能体","rel":"属于","w":4,"docs":4},{"from":"Claude-平台","to":"智能体","rel":"用于","w":3,"docs":3},{"from":"技能创建器","to":"技能","rel":"用于","w":3,"docs":3},{"from":"模型上下文协议","to":"Claude-Code","rel":"用于","w":3,"docs":3},{"from":"Claude-Cowork","to":"技能","rel":"依赖","w":3,"docs":3},{"from":"Claude-Cowork","to":"定时任务","rel":"启用","w":3,"docs":3},{"from":"智能体编程","to":"子代理","rel":"用于","w":2,"docs":2},{"from":"Claude-Code","to":"Claude-平台","rel":"属于","w":2,"docs":2},{"from":"渐进式披露","to":"上下文窗口","rel":"解决","w":2,"docs":2},{"from":"Claude-Agent-SDK","to":"智能体循环","rel":"启用","w":2,"docs":2},{"from":"上下文工程","to":"子代理","rel":"用于","w":2,"docs":2},{"from":"现场演示","to":"Claude-Code","rel":"用于","w":2,"docs":2},{"from":"提示缓存","to":"令牌成本","rel":"解决","w":2,"docs":2},{"from":"Claude-Cowork","to":"对话式-AI","rel":"替代","w":2,"docs":2},{"from":"验证","to":"努力等级","rel":"启用","w":2,"docs":2},{"from":"单任务成本","to":"努力等级","rel":"衡量","w":2,"docs":2},{"from":"技能","to":"工作流自动化","rel":"用于","w":2,"docs":2},{"from":"Claude-Cowork","to":"插件","rel":"用于","w":2,"docs":2},{"from":"Claude-Cowork","to":"连接器","rel":"启用","w":2,"docs":2},{"from":"Claude-Code","to":"长时运行智能体","rel":"用于","w":2,"docs":2},{"from":"渐进式披露","to":"上下文工程","rel":"属于","w":2,"docs":2},{"from":"CLAUDE-md","to":"Claude-Code","rel":"用于","w":2,"docs":2},{"from":"Claude-平台","to":"企业AI转型","rel":"用于","w":2,"docs":2},{"from":"Claude-托管智能体","to":"会话","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-托管智能体","to":"沙箱","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-托管智能体","to":"可观测性","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-Agent-SDK","to":"智能体框架","rel":"依赖","w":2,"docs":1,"qa":true},{"from":"插件","to":"模型上下文协议","rel":"依赖","w":2,"docs":1,"qa":true},{"from":"Claude-平台","to":"Claude-托管智能体","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-平台","to":"子代理","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-Code","to":"工具搜索","rel":"依赖","w":2,"docs":1,"qa":true},{"from":"Claude-Code","to":"提示缓存","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-平台","to":"提示缓存","rel":"启用","w":2,"docs":1,"qa":true},{"from":"子代理","to":"上下文窗口","rel":"解决","w":2,"docs":1,"qa":true},{"from":"模型上下文协议","to":"MCP-服务器","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-Code","to":"子代理","rel":"启用","w":2,"docs":1,"qa":true},{"from":"Claude-Code","to":"技能","rel":"启用","w":2,"docs":1,"qa":true},{"from":"插件","to":"技能","rel":"依赖","w":2,"docs":1,"qa":true},{"from":"顾问策略","to":"模型路由","rel":"属于","w":1,"docs":1},{"from":"子代理","to":"动态工作流","rel":"依赖","w":1,"docs":1},{"from":"Claude-Code","to":"动态工作流","rel":"用于","w":1,"docs":1},{"from":"技能","to":"Claude-平台","rel":"用于","w":1,"docs":1},{"from":"分类器","to":"自动模式","rel":"依赖","w":1,"docs":1},{"from":"提示注入","to":"自动模式","rel":"解决","w":1,"docs":1},{"from":"护栏","to":"分类器","rel":"依赖","w":1,"docs":1},{"from":"上下文工程","to":"提示工程","rel":"依赖","w":1,"docs":1},{"from":"幻觉","to":"提示工程","rel":"解决","w":1,"docs":1},{"from":"扩展思考","to":"自适应思考","rel":"替代","w":1,"docs":1},{"from":"自动模式","to":"智能体编程","rel":"用于","w":1,"docs":1},{"from":"上下文工程","to":"智能体循环","rel":"依赖","w":1,"docs":1},{"from":"上下文工程","to":"上下文压缩","rel":"解决","w":1,"docs":1},{"from":"人在回路","to":"智能体","rel":"依赖","w":1,"docs":1},{"from":"智能体","to":"企业AI转型","rel":"依赖","w":1,"docs":1},{"from":"智能体","to":"Claude-Cowork","rel":"启用","w":1,"docs":1},{"from":"企业AI转型","to":"人在回路","rel":"属于","w":1,"docs":1},{"from":"监管合规","to":"可观测性","rel":"解决","w":1,"docs":1},{"from":"监管合规","to":"审计追踪","rel":"用于","w":1,"docs":1},{"from":"审计追踪","to":"可观测性","rel":"用于","w":1,"docs":1},{"from":"会话","to":"记忆","rel":"解决","w":1,"docs":1},{"from":"Claude-平台","to":"商务智能体","rel":"用于","w":1,"docs":1},{"from":"商家智能体","to":"商务智能体","rel":"属于","w":1,"docs":1},{"from":"Claude-Agent-SDK","to":"子代理","rel":"用于","w":1,"docs":1},{"from":"智能体编程","to":"人在回路","rel":"解决","w":1,"docs":1},{"from":"提示注入","to":"护栏","rel":"解决","w":1,"docs":1},{"from":"智能体循环","to":"验证","rel":"属于","w":1,"docs":1},{"from":"验证","to":"技能","rel":"启用","w":1,"docs":1},{"from":"验证","to":"Claude-Code","rel":"用于","w":1,"docs":1},{"from":"智能体","to":"评估","rel":"衡量","w":1,"docs":1},{"from":"评估","to":"生产部署","rel":"依赖","w":1,"docs":1},{"from":"智能体框架","to":"Claude-托管智能体","rel":"依赖","w":1,"docs":1},{"from":"上下文工程","to":"评估框架","rel":"用于","w":1,"docs":1},{"from":"智能体","to":"Claude-Tag","rel":"属于","w":1,"docs":1},{"from":"提示注入","to":"智能体","rel":"风险","w":1,"docs":1},{"from":"Claude-Code","to":"钩子","rel":"属于","w":1,"docs":1},{"from":"遗留系统迁移","to":"Claude-Code","rel":"用于","w":1,"docs":1},{"from":"自我改进循环","to":"内部试用","rel":"依赖","w":1,"docs":1},{"from":"令牌成本","to":"上下文工程","rel":"解决","w":1,"docs":1},{"from":"上下文工程","to":"CLAUDE-md","rel":"依赖","w":1,"docs":1},{"from":"上下文工程","to":"MCP-服务器","rel":"依赖","w":1,"docs":1},{"from":"Claude-Cowork","to":"最佳实践","rel":"用于","w":1,"docs":1},{"from":"智能体蓝图","to":"商务智能体","rel":"依赖","w":1,"docs":1},{"from":"人在回路","to":"商家智能体","rel":"依赖","w":1,"docs":1},{"from":"Claude-Code","to":"智能体蓝图","rel":"用于","w":1,"docs":1},{"from":"Claude-Cowork","to":"模型上下文协议","rel":"用于","w":1,"docs":1},{"from":"Claude-Cowork","to":"Claude-Agent-SDK","rel":"用于","w":1,"docs":1},{"from":"上下文","to":"模型路由","rel":"依赖","w":1,"docs":1},{"from":"模型路由","to":"Claude-Code","rel":"启用","w":1,"docs":1},{"from":"单任务成本","to":"顾问策略","rel":"解决","w":1,"docs":1},{"from":"Claude-Code","to":"Claude-Opus-5-5","rel":"用于","w":1,"docs":1},{"from":"上下文窗口","to":"智能体编程","rel":"依赖","w":1,"docs":1},{"from":"提示缓存","to":"子代理","rel":"依赖","w":1,"docs":1},{"from":"令牌成本","to":"Claude-Opus-5-5","rel":"解决","w":1,"docs":1},{"from":"令牌成本","to":"缓存命中率","rel":"衡量","w":1,"docs":1},{"from":"连接器","to":"Claude-Tag","rel":"依赖","w":1,"docs":1},{"from":"动态工作流","to":"智能体工作流","rel":"用于","w":1,"docs":1},{"from":"插件","to":"插件市场","rel":"用于","w":1,"docs":1},{"from":"Claude-Cowork","to":"研究预览","rel":"属于","w":1,"docs":1},{"from":"代码现代化","to":"智能体","rel":"用于","w":1,"docs":1},{"from":"遗留系统迁移","to":"代码现代化","rel":"依赖","w":1,"docs":1},{"from":"智能体框架","to":"评估框架","rel":"用于","w":1,"docs":1},{"from":"模型上下文协议","to":"多智能体系统","rel":"依赖","w":1,"docs":1},{"from":"多智能体系统","to":"Claude-平台","rel":"用于","w":1,"docs":1},{"from":"MCP-服务器","to":"程序化工具调用","rel":"用于","w":1,"docs":1},{"from":"根因分析","to":"调试","rel":"依赖","w":1,"docs":1},{"from":"调试","to":"Claude-Code","rel":"用于","w":1,"docs":1},{"from":"上下文工程","to":"智能体框架","rel":"依赖","w":1,"docs":1},{"from":"上下文窗口","to":"程序化工具调用","rel":"解决","w":1,"docs":1},{"from":"智能体框架","to":"提示缓存","rel":"用于","w":1,"docs":1},{"from":"记忆","to":"Claude-Tag","rel":"依赖","w":1,"docs":1},{"from":"调试","to":"智能体编程","rel":"用于","w":1,"docs":1},{"from":"测试驱动开发","to":"智能体编程","rel":"启用","w":1,"docs":1},{"from":"工作流自动化","to":"Claude-Code","rel":"用于","w":1,"docs":1},{"from":"工作流自动化","to":"提示工程","rel":"用于","w":1,"docs":1},{"from":"工作流自动化","to":"模型上下文协议","rel":"用于","w":1,"docs":1},{"from":"工作流自动化","to":"Claude-平台","rel":"启用","w":1,"docs":1},{"from":"上下文工程","to":"智能体编程","rel":"依赖","w":1,"docs":1},{"from":"Claude-平台","to":"模型上下文协议","rel":"用于","w":1,"docs":1},{"from":"Claude-托管智能体","to":"Claude-Code","rel":"用于","w":1,"docs":1},{"from":"人机团队","to":"Claude-Tag","rel":"用于","w":1,"docs":1},{"from":"事件响应","to":"Claude-Tag","rel":"用于","w":1,"docs":1},{"from":"Claude-Fable-5","to":"智能体编程","rel":"依赖","w":1,"docs":1},{"from":"长时运行智能体","to":"评估","rel":"衡量","w":1,"docs":1},{"from":"长时运行智能体","to":"提示注入","rel":"风险","w":1,"docs":1},{"from":"模型上下文协议","to":"Claude-Tag","rel":"依赖","w":1,"docs":1},{"from":"技术债务","to":"智能体编程","rel":"解决","w":1,"docs":1},{"from":"技能","to":"插件市场","rel":"用于","w":1,"docs":1},{"from":"提示缓存","to":"计划模式","rel":"依赖","w":1,"docs":1},{"from":"提示缓存","to":"缓存命中率","rel":"衡量","w":1,"docs":1},{"from":"技术债务","to":"上下文工程","rel":"解决","w":1,"docs":1},{"from":"代码审查","to":"智能体编程","rel":"启用","w":1,"docs":1},{"from":"内部试用","to":"Claude-Cowork","rel":"用于","w":1,"docs":1},{"from":"智能体编程","to":"提示工程","rel":"用于","w":1,"docs":1},{"from":"上下文窗口","to":"技能","rel":"解决","w":1,"docs":1},{"from":"验证","to":"CLAUDE-md","rel":"用于","w":1,"docs":1},{"from":"子代理","to":"钩子","rel":"用于","w":1,"docs":1},{"from":"子代理","to":"Claude-Cowork","rel":"启用","w":1,"docs":1},{"from":"长时运行智能体","to":"Claude-Cowork","rel":"启用","w":1,"docs":1},{"from":"代码现代化","to":"智能体编程","rel":"用于","w":1,"docs":1},{"from":"AI治理","to":"企业AI转型","rel":"依赖","w":1,"docs":1},{"from":"模型上下文协议","to":"智能体","rel":"用于","w":1,"docs":1}],"cats":["智能体架构","Claude Code 与编程","上下文工程","工具与扩展","模型与能力","评估与验证","成本与性能","安全与治理","企业落地与组织","产品线与功能","行业与场景"]}</script>
-<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<div id="app">
+  <aside id="side">
+    <div class="brand"><h1>Claude 最佳实践 · 知识图谱</h1>
+      <p>100 个概念 · 关系经 DeepSeek 审阅</p>
+      <div class="theme-slot" style="margin-top:10px"></div></div>
+    <div class="search"><input id="q" type="search" placeholder="搜索概念，回车定位"/></div>
+    <div class="filters" id="chips"></div>
+    <div class="controls">
+      <button id="btn-labels" class="on">关系标签</button>
+      <button id="btn-core">只看核心</button>
+      <button id="btn-reset">重置视图</button>
+    </div>
+    <div id="detail">
+      <p class="hint">点节点看定义与关联；双击打开维基条目；滚轮缩放、拖拽平移。</p>
+      <div class="stat" id="stat"></div>
+    </div>
+  </aside>
+  <div id="stage">
+    <svg id="graph"></svg>
+    <div id="tooltip"></div>
+    <div id="legend"></div>
+  </div>
+</div>
+<script type="application/json" id="data">{"nodes":[{"id":"Claude-Code","label":"Claude Code","en":"Claude Code","cat":"Claude Code 与编程","count":79,"def":"Anthropic 的智能体编程工具，支持多智能体并行与动态工作流。"},{"id":"技能","label":"技能","en":"Skills","cat":"工具与扩展","count":46,"def":"以文件封装可复用工作流与专长、按需加载的能力包。"},{"id":"模型上下文协议","label":"模型上下文协议","en":"MCP","cat":"工具与扩展","count":31,"def":"标准化连接智能体与外部工具及数据源的开放协议。"},{"id":"子代理","label":"子代理","en":"Subagents","cat":"智能体架构","count":30,"def":"拥有独立上下文、由主代理编排的专注执行单元。"},{"id":"Claude-平台","label":"Claude 平台","en":"Claude Platform","cat":"产品线与功能","count":26,"def":"Anthropic 提供模型与智能体构建能力的开发平台。"},{"id":"上下文工程","label":"上下文工程","en":"Context Engineering","cat":"上下文工程","count":24,"def":"系统化设计与管理模型上下文以提升输出质量。"},{"id":"Claude-Cowork","label":"Claude Cowork","en":"Claude Cowork","cat":"产品线与功能","count":23,"def":"面向非技术知识工作者的企业级 AI 协作工作空间。"},{"id":"智能体","label":"智能体","en":"AI Agent","cat":"智能体架构","count":18,"def":"能自主规划、调用工具并执行多步任务的 AI 系统。"},{"id":"智能体编程","label":"智能体编程","en":"Agentic Coding","cat":"Claude Code 与编程","count":15,"def":"由 AI 智能体自主完成编码、审查与测试的开发范式。"},{"id":"上下文窗口","label":"上下文窗口","en":"Context Window","cat":"上下文工程","count":13,"def":"模型单次请求可处理的令牌总量上限。"},{"id":"Claude-Agent-SDK","label":"Claude Agent SDK","en":"Claude Agent SDK","cat":"Claude Code 与编程","count":12,"def":"构建可编程智能体应用的开发工具包。"},{"id":"提示缓存","label":"提示缓存","en":"prompt caching","cat":"成本与性能","count":11,"def":"缓存跨请求复用内容以降低输入成本、提升响应速度。"},{"id":"Claude-Tag","label":"Claude Tag","en":"Claude Tag","cat":"产品线与功能","count":10,"def":"可加入共享频道、具备记忆与工具访问的常驻协作智能体。"},{"id":"插件","label":"插件","en":"Plugins","cat":"工具与扩展","count":10,"def":"打包技能、连接器、命令与子代理的可安装定制单元。"},{"id":"提示工程","label":"提示工程","en":"Prompt Engineering","cat":"上下文工程","count":10,"def":"通过编写与迭代指令引导模型输出预期结果。"},{"id":"人在回路","label":"人在回路","en":"Human-in-the-Loop","cat":"安全与治理","count":10,"def":"在关键决策点保留人类审核与最终决定权的机制。"},{"id":"渐进式披露","label":"渐进式披露","en":"Progressive Disclosure","cat":"上下文工程","count":9,"def":"按需逐层加载上下文信息以节省令牌并保持相关性。"},{"id":"CLAUDE-md","label":"CLAUDE.md","en":"CLAUDE.md","cat":"上下文工程","count":8,"def":"会话启动时加载、记录项目约定与上下文的指令文件。"},{"id":"努力等级","label":"努力等级","en":"Effort Level","cat":"模型与能力","count":8,"def":"控制模型推理投入与延迟成本权衡的档位设置。"},{"id":"验证","label":"验证","en":"Verification","cat":"评估与验证","count":8,"def":"智能体检查自身工作是否达到完成标准的过程。"},{"id":"智能体工作流","label":"智能体工作流","en":"Agentic Workflow","cat":"智能体架构","count":8,"def":"为智能体自主性提供结构化执行流程的模式。"},{"id":"Claude-Fable-5","label":"Claude Fable 5","en":"Claude Fable 5","cat":"模型与能力","count":7,"def":"面向高难度推理与长程任务的前沿模型。"},{"id":"连接器","label":"连接器","en":"Connectors","cat":"工具与扩展","count":7,"def":"将 Claude 接入外部工具与数据源的集成组件。"},{"id":"MCP-服务器","label":"MCP 服务器","en":"MCP Server","cat":"工具与扩展","count":7,"def":"实现 MCP 协议、向智能体暴露工具与数据的服务端。"},{"id":"钩子","label":"钩子","en":"Hooks","cat":"工具与扩展","count":7,"def":"在智能体生命周期特定节点自动触发的脚本或动作。"},{"id":"提示注入","label":"提示注入","en":"Prompt Injection","cat":"安全与治理","count":7,"def":"攻击者将指令藏于内容中诱使智能体违背用户意图。"},{"id":"Claude-托管智能体","label":"Claude 托管智能体","en":"Claude Managed Agents","cat":"产品线与功能","count":7,"def":"提供运行时、会话与记忆管理的云端智能体托管服务。"},{"id":"上下文压缩","label":"上下文压缩","en":"Compaction","cat":"上下文工程","count":7,"def":"上下文接近上限时摘要历史以延续长任务。"},{"id":"动态工作流","label":"动态工作流","en":"Dynamic Workflows","cat":"智能体架构","count":7,"def":"按任务即时编写并编排多智能体框架的机制。"},{"id":"智能体循环","label":"智能体循环","en":"Agent Loop","cat":"智能体架构","count":6,"def":"智能体反复收集上下文、行动、验证直至完成的循环。"},{"id":"工作流自动化","label":"工作流自动化","en":"Workflow Automation","cat":"企业落地与组织","count":6,"def":"用智能体自动完成原本耗时的业务流程。"},{"id":"评估","label":"评估","en":"evaluation","cat":"评估与验证","count":6,"def":"系统化测试AI输出质量与可靠性的方法。"},{"id":"单任务成本","label":"单任务成本","en":"Cost per Task","cat":"成本与性能","count":5,"def":"完成一个实际任务的总花费，比单价更能反映经济性。"},{"id":"智能体框架","label":"智能体框架","en":"agent harness","cat":"智能体架构","count":5,"def":"围绕模型的循环、工具执行与上下文管理脚手架。"},{"id":"模型路由","label":"模型路由","en":"Model Routing","cat":"成本与性能","count":5,"def":"按任务复杂度将请求分派给不同能力层级模型的策略。"},{"id":"令牌成本","label":"令牌成本","en":"Token Cost","cat":"成本与性能","count":5,"def":"会话中发送与生成令牌所产生的费用。"},{"id":"评估框架","label":"评估框架","en":"Evaluation Framework","cat":"评估与验证","count":5,"def":"系统化衡量模型表现并定位问题的评测基础设施。"},{"id":"护栏","label":"护栏","en":"Guardrails","cat":"安全与治理","count":4,"def":"限制智能体可执行动作与花费的边界措施。"},{"id":"沙箱","label":"沙箱","en":"Sandbox","cat":"安全与治理","count":4,"def":"隔离运行智能体生成代码与工具调用的执行环境。"},{"id":"自动模式","label":"自动模式","en":"Auto Mode","cat":"安全与治理","count":4,"def":"用分类器审查高风险操作并拦截危险命令的自主执行模式。"},{"id":"幻觉","label":"幻觉","en":"Hallucination","cat":"安全与治理","count":4,"def":"模型生成看似合理但实际虚假或错误的内容。"},{"id":"可观测性","label":"可观测性","en":"Observability","cat":"安全与治理","count":4,"def":"追踪与审查智能体决策过程与数据来源的能力。"},{"id":"投资回报率","label":"投资回报率","en":"ROI","cat":"成本与性能","count":4,"def":"衡量AI投入与业务收益之比的量化指标。"},{"id":"AI治理","label":"AI治理","en":"AI governance","cat":"安全与治理","count":4,"def":"为AI部署设定控制、审计与自主性边界的框架。"},{"id":"工具搜索","label":"工具搜索","en":"Tool Search","cat":"上下文工程","count":4,"def":"按需检索并延迟加载工具定义以节省上下文。"},{"id":"记忆","label":"记忆","en":"Memory","cat":"智能体架构","count":4,"def":"跨运行持久保存用户指令、笔记与任务进度的存储。"},{"id":"长时运行智能体","label":"长时运行智能体","en":"long-running agent","cat":"智能体架构","count":4,"def":"可连续数小时无人监督执行复杂任务的智能体。"},{"id":"插件市场","label":"插件市场","en":"Plugin Marketplace","cat":"工具与扩展","count":3,"def":"集中浏览、安装与分发插件的渠道。"},{"id":"技能创建器","label":"技能创建器","en":"Skill Creator","cat":"工具与扩展","count":3,"def":"辅助构建、测试与迭代技能文件的工具。"},{"id":"定时任务","label":"定时任务","en":"Scheduled Tasks","cat":"工具与扩展","count":3,"def":"按预设时间自动触发技能或工作流的机制。"},{"id":"程序化工具调用","label":"程序化工具调用","en":"Programmatic Tool Calling","cat":"工具与扩展","count":3,"def":"用代码编排工具调用，仅将最终结果返回模型。"},{"id":"多智能体系统","label":"多智能体系统","en":"Multi-Agent System","cat":"智能体架构","count":3,"def":"多个专业化智能体在独立上下文中协同完成任务的架构。"},{"id":"代码审查","label":"代码审查","en":"Code Review","cat":"Claude Code 与编程","count":3,"def":"对代码变更进行检查以发现缺陷与改进点。"},{"id":"代码现代化","label":"代码现代化","en":"Code Modernization","cat":"Claude Code 与编程","count":3,"def":"将遗留系统升级重构为现代语言与架构的实践。"},{"id":"技术债务","label":"技术债务","en":"Technical Debt","cat":"Claude Code 与编程","count":3,"def":"为短期交付积累、需长期偿还的维护负担。"},{"id":"自适应思考","label":"自适应思考","en":"Adaptive Thinking","cat":"模型与能力","count":3,"def":"模型按任务复杂度动态决定推理深度的机制。"},{"id":"顾问策略","label":"顾问策略","en":"Advisor Strategy","cat":"成本与性能","count":3,"def":"小模型执行、遇难题时调用前沿模型获取判断的协作模式。"},{"id":"功能开关","label":"功能开关","en":"Feature Flag","cat":"企业落地与组织","count":3,"def":"控制新功能灰度放量与快速回滚的运行时开关。"},{"id":"内部试用","label":"内部试用","en":"Dogfooding","cat":"企业落地与组织","count":3,"def":"团队先在内部使用自建智能体再决定是否产品化。"},{"id":"企业AI转型","label":"企业AI转型","en":"Enterprise AI Transformation","cat":"企业落地与组织","count":3,"def":"企业系统性引入 AI 并重塑流程与能力的整体变革。"},{"id":"最佳实践","label":"最佳实践","en":"Best Practices","cat":"企业落地与组织","count":3,"def":"经实践验证、可复用的高效使用方法与规范。"},{"id":"上下文","label":"上下文","en":"Context","cat":"上下文工程","count":3,"def":"提供给模型的提示、文件与工具信息等背景依据。"},{"id":"扩展思考","label":"扩展思考","en":"Extended Thinking","cat":"模型与能力","count":2,"def":"模型在回答前执行额外结构化推理的能力。"},{"id":"令牌效率","label":"令牌效率","en":"Token Efficiency","cat":"成本与性能","count":2,"def":"以更少令牌完成同等工作的能力。"},{"id":"爬山优化","label":"爬山优化","en":"Hill Climbing","cat":"成本与性能","count":2,"def":"围绕单一可量化指标持续迭代优化的方法。"},{"id":"评分器","label":"评分器","en":"Grader","cat":"评估与验证","count":2,"def":"对智能体表现某方面给出分数或判定的组件。"},{"id":"分类器","label":"分类器","en":"Classifier","cat":"安全与治理","count":2,"def":"自动判断智能体动作是否具有潜在危害的模型组件。"},{"id":"审计追踪","label":"审计追踪","en":"Audit Trail","cat":"安全与治理","count":2,"def":"记录智能体所有操作与决策来源的完整日志。"},{"id":"监管合规","label":"监管合规","en":"Regulatory Compliance","cat":"安全与治理","count":2,"def":"智能体需满足多监管机构的法规与审计要求。"},{"id":"成熟度模型","label":"成熟度模型","en":"Maturity Model","cat":"企业落地与组织","count":2,"def":"分级评估组织 AI 应用水平并指明升级路径的框架。"},{"id":"人机团队","label":"人机团队","en":"Human-Agent Team","cat":"企业落地与组织","count":2,"def":"人类与 AI 智能体在同一平台分工协作的团队模式。"},{"id":"会话","label":"会话","en":"Session","cat":"智能体架构","count":2,"def":"记录消息与工具调用、可跨多次运行延续的对话实例。"},{"id":"商务智能体","label":"商务智能体","en":"Commerce Agent","cat":"行业与场景","count":2,"def":"在电商或旅行场景中辅助用户搜索、比较与购买的智能体。"},{"id":"智能体蓝图","label":"智能体蓝图","en":"agent blueprint","cat":"智能体架构","count":2,"def":"含脚手架、模式与护栏的可复用智能体参考实现。"},{"id":"任务委派","label":"任务委派","en":"task delegation","cat":"智能体架构","count":2,"def":"将子任务连同决策权分派给合适智能体执行。"},{"id":"自我改进循环","label":"自我改进循环","en":"self-improvement loop","cat":"智能体架构","count":2,"def":"依据反馈修正指令并持续迭代的闭环机制。"},{"id":"计划模式","label":"计划模式","en":"Plan Mode","cat":"Claude Code 与编程","count":2,"def":"只读探索代码库、先产出计划再执行的工作模式。"},{"id":"合并队列","label":"合并队列","en":"merge queue","cat":"Claude Code 与编程","count":2,"def":"合并前对主分支重新运行全部检查的机制。"},{"id":"测试驱动开发","label":"测试驱动开发","en":"test-driven development","cat":"Claude Code 与编程","count":2,"def":"先写测试定义成功标准再增量实现功能。"},{"id":"调试","label":"调试","en":"debugging","cat":"Claude Code 与编程","count":2,"def":"定位并修复软件缺陷与生产问题的过程。"},{"id":"根因分析","label":"根因分析","en":"root cause analysis","cat":"Claude Code 与编程","count":2,"def":"追溯问题根本原因而非仅修复表象的方法。"},{"id":"Claude-Opus-5-5","label":"Claude Opus 5.5","en":"Claude Opus 5.5","cat":"模型与能力","count":2,"def":"面向复杂长程任务优化的高端Claude模型版本。"},{"id":"前沿模型","label":"前沿模型","en":"frontier model","cat":"模型与能力","count":2,"def":"能力处于当前最先进水平、可承担复杂任务的大模型。"},{"id":"快速模式","label":"快速模式","en":"fast mode","cat":"成本与性能","count":2,"def":"以溢价换取更高输出速度的API选项。"},{"id":"延迟","label":"延迟","en":"latency","cat":"成本与性能","count":2,"def":"任务从开始到完成所需的时间开销。"},{"id":"缓存命中率","label":"缓存命中率","en":"cache hit rate","cat":"成本与性能","count":2,"def":"请求中命中缓存部分的比例，影响成本与延迟。"},{"id":"事件响应","label":"事件响应","en":"incident response","cat":"安全与治理","count":2,"def":"检测、响应和恢复安全事件的过程。"},{"id":"事故分诊","label":"事故分诊","en":"incident triage","cat":"安全与治理","count":2,"def":"对故障事件快速分类并定位责任环节。"},{"id":"误报","label":"误报","en":"false positive","cat":"安全与治理","count":2,"def":"被标记为威胁但实际无效的安全发现。"},{"id":"受保护健康信息","label":"受保护健康信息","en":"PHI","cat":"安全与治理","count":2,"def":"HIPAA监管下需严格保护的患者健康数据。"},{"id":"生产部署","label":"生产部署","en":"production deployment","cat":"企业落地与组织","count":2,"def":"将智能体安全投入实际业务环境运行的过程。"},{"id":"定时部署","label":"定时部署","en":"scheduled deployment","cat":"企业落地与组织","count":2,"def":"按设定时区与频率自动运行智能体的部署方式。"},{"id":"研究预览","label":"研究预览","en":"Research Preview","cat":"企业落地与组织","count":2,"def":"面向付费用户开放、功能尚在迭代的早期发布形态。"},{"id":"现场演示","label":"现场演示","en":"live demos","cat":"企业落地与组织","count":2,"def":"在活动中实时展示产品完成真实任务的过程。"},{"id":"业务拓展代表","label":"业务拓展代表","en":"business development representative","cat":"企业落地与组织","count":2,"def":"负责线索筛选与商机挖掘的一线销售角色。"},{"id":"对话式-AI","label":"对话式 AI","en":"conversational AI","cat":"行业与场景","count":2,"def":"以问答交互为主、不直接产出交付物的AI形态。"},{"id":"自助式数据分析","label":"自助式数据分析","en":"self-service data analytics","cat":"行业与场景","count":2,"def":"非技术用户无需数据团队介入即可自行获取数据洞察。"},{"id":"金融服务","label":"金融服务","en":"financial services","cat":"行业与场景","count":2,"def":"银行、保险、资管等受监管行业的业务领域。"},{"id":"遗留系统迁移","label":"遗留系统迁移","en":"legacy system migration","cat":"行业与场景","count":2,"def":"把老旧系统及其业务逻辑迁移到新平台的过程。"},{"id":"商家智能体","label":"商家智能体","en":"merchant agent","cat":"行业与场景","count":2,"def":"面向店铺运营者分析销售、库存并建议促销的智能体。"}],"edges":[{"source":"渐进式披露","target":"技能","rel":"启用","w":4},{"source":"Claude-Code","target":"智能体","rel":"属于","w":4},{"source":"Claude-平台","target":"智能体","rel":"用于","w":3},{"source":"技能创建器","target":"技能","rel":"用于","w":3},{"source":"模型上下文协议","target":"Claude-Code","rel":"用于","w":3},{"source":"Claude-Cowork","target":"技能","rel":"依赖","w":3},{"source":"Claude-Cowork","target":"定时任务","rel":"启用","w":3},{"source":"智能体编程","target":"子代理","rel":"用于","w":2},{"source":"Claude-Code","target":"Claude-平台","rel":"属于","w":2},{"source":"渐进式披露","target":"上下文窗口","rel":"解决","w":2},{"source":"Claude-Agent-SDK","target":"智能体循环","rel":"启用","w":2},{"source":"上下文工程","target":"子代理","rel":"用于","w":2},{"source":"现场演示","target":"Claude-Code","rel":"用于","w":2},{"source":"提示缓存","target":"令牌成本","rel":"解决","w":2},{"source":"Claude-Cowork","target":"对话式-AI","rel":"替代","w":2},{"source":"验证","target":"努力等级","rel":"启用","w":2},{"source":"单任务成本","target":"努力等级","rel":"衡量","w":2},{"source":"技能","target":"工作流自动化","rel":"用于","w":2},{"source":"Claude-Cowork","target":"插件","rel":"用于","w":2},{"source":"Claude-Cowork","target":"连接器","rel":"启用","w":2},{"source":"Claude-Code","target":"长时运行智能体","rel":"用于","w":2},{"source":"渐进式披露","target":"上下文工程","rel":"属于","w":2},{"source":"CLAUDE-md","target":"Claude-Code","rel":"用于","w":2},{"source":"Claude-平台","target":"企业AI转型","rel":"用于","w":2},{"source":"Claude-托管智能体","target":"会话","rel":"启用","w":2},{"source":"Claude-托管智能体","target":"沙箱","rel":"启用","w":2},{"source":"Claude-托管智能体","target":"可观测性","rel":"启用","w":2},{"source":"Claude-Agent-SDK","target":"智能体框架","rel":"依赖","w":2},{"source":"插件","target":"模型上下文协议","rel":"依赖","w":2},{"source":"Claude-平台","target":"Claude-托管智能体","rel":"启用","w":2},{"source":"Claude-平台","target":"子代理","rel":"启用","w":2},{"source":"Claude-Code","target":"工具搜索","rel":"依赖","w":2},{"source":"Claude-Code","target":"提示缓存","rel":"启用","w":2},{"source":"Claude-平台","target":"提示缓存","rel":"启用","w":2},{"source":"子代理","target":"上下文窗口","rel":"解决","w":2},{"source":"模型上下文协议","target":"MCP-服务器","rel":"启用","w":2},{"source":"Claude-Code","target":"子代理","rel":"启用","w":2},{"source":"Claude-Code","target":"技能","rel":"启用","w":2},{"source":"插件","target":"技能","rel":"依赖","w":2},{"source":"顾问策略","target":"模型路由","rel":"属于","w":1},{"source":"子代理","target":"动态工作流","rel":"依赖","w":1},{"source":"Claude-Code","target":"动态工作流","rel":"用于","w":1},{"source":"技能","target":"Claude-平台","rel":"用于","w":1},{"source":"分类器","target":"自动模式","rel":"依赖","w":1},{"source":"提示注入","target":"自动模式","rel":"解决","w":1},{"source":"护栏","target":"分类器","rel":"依赖","w":1},{"source":"上下文工程","target":"提示工程","rel":"依赖","w":1},{"source":"幻觉","target":"提示工程","rel":"解决","w":1},{"source":"扩展思考","target":"自适应思考","rel":"替代","w":1},{"source":"自动模式","target":"智能体编程","rel":"用于","w":1},{"source":"上下文工程","target":"智能体循环","rel":"依赖","w":1},{"source":"上下文工程","target":"上下文压缩","rel":"解决","w":1},{"source":"人在回路","target":"智能体","rel":"依赖","w":1},{"source":"智能体","target":"企业AI转型","rel":"依赖","w":1},{"source":"智能体","target":"Claude-Cowork","rel":"启用","w":1},{"source":"企业AI转型","target":"人在回路","rel":"属于","w":1},{"source":"监管合规","target":"可观测性","rel":"解决","w":1},{"source":"监管合规","target":"审计追踪","rel":"用于","w":1},{"source":"审计追踪","target":"可观测性","rel":"用于","w":1},{"source":"会话","target":"记忆","rel":"解决","w":1},{"source":"Claude-平台","target":"商务智能体","rel":"用于","w":1},{"source":"商家智能体","target":"商务智能体","rel":"属于","w":1},{"source":"Claude-Agent-SDK","target":"子代理","rel":"用于","w":1},{"source":"智能体编程","target":"人在回路","rel":"解决","w":1},{"source":"提示注入","target":"护栏","rel":"解决","w":1},{"source":"智能体循环","target":"验证","rel":"属于","w":1},{"source":"验证","target":"技能","rel":"启用","w":1},{"source":"验证","target":"Claude-Code","rel":"用于","w":1},{"source":"智能体","target":"评估","rel":"衡量","w":1},{"source":"评估","target":"生产部署","rel":"依赖","w":1},{"source":"智能体框架","target":"Claude-托管智能体","rel":"依赖","w":1},{"source":"上下文工程","target":"评估框架","rel":"用于","w":1},{"source":"智能体","target":"Claude-Tag","rel":"属于","w":1},{"source":"提示注入","target":"智能体","rel":"风险","w":1},{"source":"Claude-Code","target":"钩子","rel":"属于","w":1},{"source":"遗留系统迁移","target":"Claude-Code","rel":"用于","w":1},{"source":"自我改进循环","target":"内部试用","rel":"依赖","w":1},{"source":"令牌成本","target":"上下文工程","rel":"解决","w":1},{"source":"上下文工程","target":"CLAUDE-md","rel":"依赖","w":1},{"source":"上下文工程","target":"MCP-服务器","rel":"依赖","w":1},{"source":"Claude-Cowork","target":"最佳实践","rel":"用于","w":1},{"source":"智能体蓝图","target":"商务智能体","rel":"依赖","w":1},{"source":"人在回路","target":"商家智能体","rel":"依赖","w":1},{"source":"Claude-Code","target":"智能体蓝图","rel":"用于","w":1},{"source":"Claude-Cowork","target":"模型上下文协议","rel":"用于","w":1},{"source":"Claude-Cowork","target":"Claude-Agent-SDK","rel":"用于","w":1},{"source":"上下文","target":"模型路由","rel":"依赖","w":1},{"source":"模型路由","target":"Claude-Code","rel":"启用","w":1},{"source":"单任务成本","target":"顾问策略","rel":"解决","w":1},{"source":"Claude-Code","target":"Claude-Opus-5-5","rel":"用于","w":1},{"source":"上下文窗口","target":"智能体编程","rel":"依赖","w":1},{"source":"提示缓存","target":"子代理","rel":"依赖","w":1},{"source":"令牌成本","target":"Claude-Opus-5-5","rel":"解决","w":1},{"source":"令牌成本","target":"缓存命中率","rel":"衡量","w":1},{"source":"连接器","target":"Claude-Tag","rel":"依赖","w":1},{"source":"动态工作流","target":"智能体工作流","rel":"用于","w":1},{"source":"插件","target":"插件市场","rel":"用于","w":1},{"source":"Claude-Cowork","target":"研究预览","rel":"属于","w":1},{"source":"代码现代化","target":"智能体","rel":"用于","w":1},{"source":"遗留系统迁移","target":"代码现代化","rel":"依赖","w":1},{"source":"智能体框架","target":"评估框架","rel":"用于","w":1},{"source":"模型上下文协议","target":"多智能体系统","rel":"依赖","w":1},{"source":"多智能体系统","target":"Claude-平台","rel":"用于","w":1},{"source":"MCP-服务器","target":"程序化工具调用","rel":"用于","w":1},{"source":"根因分析","target":"调试","rel":"依赖","w":1},{"source":"调试","target":"Claude-Code","rel":"用于","w":1},{"source":"上下文工程","target":"智能体框架","rel":"依赖","w":1},{"source":"上下文窗口","target":"程序化工具调用","rel":"解决","w":1},{"source":"智能体框架","target":"提示缓存","rel":"用于","w":1},{"source":"记忆","target":"Claude-Tag","rel":"依赖","w":1},{"source":"调试","target":"智能体编程","rel":"用于","w":1},{"source":"测试驱动开发","target":"智能体编程","rel":"启用","w":1},{"source":"工作流自动化","target":"Claude-Code","rel":"用于","w":1},{"source":"工作流自动化","target":"提示工程","rel":"用于","w":1},{"source":"工作流自动化","target":"模型上下文协议","rel":"用于","w":1},{"source":"工作流自动化","target":"Claude-平台","rel":"启用","w":1},{"source":"上下文工程","target":"智能体编程","rel":"依赖","w":1},{"source":"Claude-平台","target":"模型上下文协议","rel":"用于","w":1},{"source":"Claude-托管智能体","target":"Claude-Code","rel":"用于","w":1},{"source":"人机团队","target":"Claude-Tag","rel":"用于","w":1},{"source":"事件响应","target":"Claude-Tag","rel":"用于","w":1},{"source":"Claude-Fable-5","target":"智能体编程","rel":"依赖","w":1},{"source":"长时运行智能体","target":"评估","rel":"衡量","w":1},{"source":"长时运行智能体","target":"提示注入","rel":"风险","w":1},{"source":"模型上下文协议","target":"Claude-Tag","rel":"依赖","w":1},{"source":"技术债务","target":"智能体编程","rel":"解决","w":1},{"source":"技能","target":"插件市场","rel":"用于","w":1},{"source":"提示缓存","target":"计划模式","rel":"依赖","w":1},{"source":"提示缓存","target":"缓存命中率","rel":"衡量","w":1},{"source":"技术债务","target":"上下文工程","rel":"解决","w":1},{"source":"代码审查","target":"智能体编程","rel":"启用","w":1},{"source":"内部试用","target":"Claude-Cowork","rel":"用于","w":1},{"source":"智能体编程","target":"提示工程","rel":"用于","w":1},{"source":"上下文窗口","target":"技能","rel":"解决","w":1},{"source":"验证","target":"CLAUDE-md","rel":"用于","w":1},{"source":"子代理","target":"钩子","rel":"用于","w":1},{"source":"子代理","target":"Claude-Cowork","rel":"启用","w":1},{"source":"长时运行智能体","target":"Claude-Cowork","rel":"启用","w":1},{"source":"代码现代化","target":"智能体编程","rel":"用于","w":1},{"source":"AI治理","target":"企业AI转型","rel":"依赖","w":1},{"source":"模型上下文协议","target":"智能体","rel":"用于","w":1}],"cats":["Claude Code 与编程","工具与扩展","智能体架构","产品线与功能","上下文工程","成本与性能","模型与能力","安全与治理","企业落地与组织","评估与验证","行业与场景"],"reviewed":{"model":"deepseek-v4-pro","at":"2026-11-18","ops":{"remove":63,"flip":127,"add":16,"missing":19,"dup":37}},"generatedAt":"2026-11-18T03:07:10.540Z"}</script>
+<script src="/theme.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
-const COLORS = ['#4C9AFF','#36B37E','#FFAB00','#FF5630','#6554C0','#00B8D9','#FF8B00','#00875A','#5243AA','#0052CC','#A5A5A5'];
-const colorOf = (cat) => COLORS[Math.max(0, DATA.cats.indexOf(cat)) % COLORS.length];
-const visNodes = DATA.nodes.map(n => ({
-  id: n.id, label: n.label, value: n.count,
-  color: { background: colorOf(n.cat) + '33', border: colorOf(n.cat), highlight: { background: colorOf(n.cat)+'66', border: '#fff' } },
-  font: { color: '#e6e6e6', size: n.count >= 20 ? 26 : n.count >= 8 ? 19 : 15, face: 'PingFang SC, sans-serif' },
-  title: undefined, raw: n
-}));
-const visEdges = DATA.edges.map(e => ({
-  from: e.from, to: e.to, label: e.w >= 3 ? e.rel : '', arrows: 'to',
-  color: { color: '#2c3542', highlight: '#7aa7ff' }, width: Math.min(1 + e.w * 0.6, 5),
-  font: { color: '#6b7484', size: 10, strokeWidth: 0 }, smooth: { type: 'continuous' }
-}));
-const container = document.getElementById('net');
-const network = new vis.Network(container, { nodes: new vis.DataSet(visNodes), edges: new vis.DataSet(visEdges) }, {
-  nodes: { shape: 'dot', scaling: { min: 8, max: 34, label: { min: 12, max: 22 } }, borderWidth: 1.5 },
-  edges: { selectionWidth: 2 },
-  physics: { stabilization: { iterations: 260 }, barnesHut: { gravitationalConstant: -9000, springLength: 140, springConstant: 0.03, damping: 0.4 } },
-  interaction: { hover: true, tooltipDelay: 200, navigationButtons: false }
+const CATS = DATA.cats;
+const PALETTE = ['#7C9CF5','#E8B33C','#5FC9A3','#E0795C','#B48EAD','#63C5DA','#F2A65A','#9DBF6E','#C0A6F0','#5E8B7E','#D98E73'];
+const colorOf = (c) => PALETTE[Math.max(0, CATS.indexOf(c)) % PALETTE.length];
+
+const nodes = DATA.nodes.map(d => ({...d}));
+const byId = new Map(nodes.map(n => [n.id, n]));
+const links = DATA.edges.map(e => ({...e, source: e.source, target: e.target}));
+const deg = new Map(nodes.map(n => [n.id, 0]));
+links.forEach(l => { deg.set(l.source, (deg.get(l.source)||0)+1); deg.set(l.target, (deg.get(l.target)||0)+1); });
+nodes.forEach(n => n.deg = deg.get(n.id) || 0);
+const maxCount = d3.max(nodes, d => d.count);
+const r = d => 4 + Math.sqrt(d.count / maxCount) * 13;
+
+// 分类锚点：环形排布，让同类节点聚在一起
+const W = () => stage.clientWidth, H = () => stage.clientHeight;
+const RING = () => Math.min(W(), H()) * 0.335;
+const anchors = new Map();
+CATS.forEach((c, i) => {
+  const a = (i / CATS.length) * Math.PI * 2 - Math.PI / 2;
+  anchors.set(c, { x: Math.cos(a), y: Math.sin(a), angle: a });
 });
-network.once('stabilizationIterationsDone', () => {
-  network.setOptions({ physics: false });
-  const top = DATA.nodes[0];
-  network.selectNodes([top.id]);
-  network.focus(top.id, { scale: 1.15, animation: { duration: 600 } });
-  setTimeout(() => network.unselectAll(), 1200);
+
+const svg = d3.select('#graph');
+const gZoom = svg.append('g');
+const gCat = gZoom.append('g');
+const gLink = gZoom.append('g');
+const gLabel = gZoom.append('g');
+const gNode = gZoom.append('g');
+
+const stage = document.getElementById('stage');
+let hidden = new Set();
+let coreOnly = false;
+let showLinkLabels = true;
+
+const visible = (d) => !hidden.has(d.cat) && (!coreOnly || d.count >= 8);
+
+// ------- 力导向 -------
+const intra = (l) => byId.get(l.source.id || l.source)?.cat === byId.get(l.target.id || l.target)?.cat;
+
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(links).id(d => d.id)
+    .distance(l => (intra(l) ? 44 : 170))
+    .strength(l => (intra(l) ? 0.40 : 0.015)))
+  .force('charge', d3.forceManyBody().strength(-90).distanceMax(230))
+  .force('collide', d3.forceCollide(d => r(d) + 17).iterations(2))
+  .force('x', d3.forceX(d => anchors.get(d.cat).x * RING()).strength(d => (d.count >= 12 ? 0.30 : 0.22)))
+  .force('y', d3.forceY(d => anchors.get(d.cat).y * RING()).strength(d => (d.count >= 12 ? 0.30 : 0.22)))
+  .alphaDecay(0.026);
+
+const blobSel = gCat.insert('g', ':first-child').selectAll('path').data(CATS).join('path')
+  .attr('class', 'blob')
+  .attr('stroke', c => colorOf(c))
+  .attr('fill', c => colorOf(c))
+  .attr('fill-opacity', 0.05)
+  .attr('stroke-opacity', 0.22);
+
+const linkSel = gLink.selectAll('line').data(links).join('line')
+  .attr('class', 'link')
+  .attr('stroke', l => (intra(l) ? colorOf(byId.get(l.source.id || l.source).cat) : 'var(--link-cross)'))
+  .attr('stroke-width', l => (intra(l) ? Math.min(0.8 + l.w * 0.45, 2.6) : Math.min(0.6 + l.w * 0.3, 1.6)))
+  .attr('stroke-opacity', l => (intra(l) ? Math.min(0.16 + l.w * 0.1, 0.5) : Math.min(0.08 + l.w * 0.06, 0.28)))
+  .attr('stroke-dasharray', l => (intra(l) ? null : '3 4'));
+
+const linkLabel = gLink.selectAll('text').data(links).join('text')
+  .attr('class', 'link-label')
+  .text(d => d.rel);
+
+const nodeSel = gNode.selectAll('g').data(nodes).join('g')
+  .attr('class', 'node')
+  .call(d3.drag()
+    .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.25).restart(); d.fx = d.x; d.fy = d.y; })
+    .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+    .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+nodeSel.append('circle')
+  .attr('r', d => r(d) + 4)
+  .attr('fill', 'none')
+  .attr('stroke', d => colorOf(d.cat))
+  .attr('stroke-opacity', 0.28)
+  .attr('class', 'halo');
+
+nodeSel.append('circle')
+  .attr('r', r)
+  .attr('fill', d => colorOf(d.cat))
+  .attr('fill-opacity', 0.2)
+  .attr('stroke', d => colorOf(d.cat));
+
+const labelSel = gLabel.selectAll('text').data(nodes).join('text')
+  .attr('class', d => 'n-label' + (d.count >= 12 ? ' big' : ''))
+  .text(d => d.label);
+
+const catLabels = gCat.selectAll('text').data(CATS).join('text')
+  .attr('class', 'cat-label')
+  .text(c => c);
+
+function blobPath(cat) {
+  const pts = [];
+  for (const d of nodes) {
+    if (d.cat !== cat || d.x == null) continue;
+    const pad = r(d) + 16;
+    pts.push([d.x - pad, d.y], [d.x + pad, d.y], [d.x, d.y - pad], [d.x, d.y + pad]);
+  }
+  if (pts.length < 3) return '';
+  const hull = d3.polygonHull(pts);
+  if (!hull) return '';
+  return d3.line().curve(d3.curveCatmullRomClosed.alpha(0.6))(hull) + 'Z';
+}
+
+function tick() {
+  linkSel.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+    .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+  linkLabel.attr('x', d => (d.source.x + d.target.x) / 2).attr('y', d => (d.source.y + d.target.y) / 2 - 3);
+  nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
+  labelSel.attr('x', d => d.x).attr('y', d => d.y - r(d) - 6).attr('text-anchor', 'middle');
+  blobSel.attr('d', c => blobPath(c));
+  for (const c of CATS) {
+    const members = nodes.filter(n => n.cat === c && n.x != null);
+    if (!members.length) continue;
+    const cx = d3.mean(members, m => m.x), cy = d3.mean(members, m => m.y);
+    const rmax = d3.max(members, m => Math.hypot(m.x - cx, m.y - cy) + r(m));
+    const a = anchors.get(c);
+    const lab = catLabels.filter(x => x === c);
+    lab.attr('x', cx + a.x * (rmax + 24))
+      .attr('y', cy + a.y * (rmax + 24))
+      .attr('text-anchor', a.x > 0.35 ? 'start' : a.x < -0.35 ? 'end' : 'middle');
+  }
+}
+sim.on('tick', tick);
+
+// ------- 缩放 -------
+const zoom = d3.zoom().scaleExtent([0.35, 3.5]).on('zoom', (e) => {
+  gZoom.attr('transform', e.transform);
+  const k = e.transform.k;
+  labelSel.attr('opacity', d => (k < 1.15 && d.count < 4) ? 0 : (visible(d) ? 1 : 0));
+  catLabels.attr('opacity', k < 0.55 ? 0.4 : 0.9);
 });
-const legend = document.getElementById('legend');
-DATA.cats.forEach(c => {
-  const el = document.createElement('div'); el.className = 'lg';
-  el.innerHTML = '<span class="dot" style="background:' + colorOf(c) + '"></span>' + c;
-  legend.appendChild(el);
+svg.call(zoom).on('dblclick.zoom', null);
+const homeTransform = () => d3.zoomIdentity.translate(W() / 2, H() / 2).scale(1);
+svg.call(zoom.transform, homeTransform());
+
+// ------- 交互 -------
+const detail = document.getElementById('detail');
+const tip = document.getElementById('tooltip');
+
+function relatedOf(id) {
+  return links.filter(l => (l.source.id || l.source) === id || (l.target.id || l.target) === id)
+    .map(l => {
+      const out = (l.source.id || l.source) === id;
+      const other = byId.get(out ? (l.target.id || l.target) : (l.source.id || l.source));
+      return { other, rel: l.rel, out, w: l.w };
+    })
+    .filter(x => x.other)
+    .sort((a, b) => b.w - a.w);
+}
+
+function showDetail(d) {
+  const rels = relatedOf(d.id).slice(0, 12);
+  detail.innerHTML = `
+    <h2>${d.label}</h2>
+    <div class="en">${d.en || ''} · ${d.cat} · 提及 ${d.count} 篇</div>
+    <div class="def">${d.def || ''}</div>
+    <div class="rels">${rels.map(x => `<div><span class="k">${x.out ? x.rel + ' →' : '← ' + x.rel}</span> ${x.other.label}</div>`).join('')}</div>
+    <a href="https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/${encodeURIComponent(d.id)}.md" target="_blank">打开维基条目 →</a>`;
+}
+
+function focusNode(id) {
+  const n = byId.get(id);
+  if (!n) return;
+  const neighbors = new Set([id, ...relatedOf(id).map(x => x.other.id)]);
+  nodeSel.classed('dim', d => !neighbors.has(d.id));
+  linkSel.classed('dim', l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    return !(neighbors.has(s) && neighbors.has(t)) || !(s === id || t === id);
+  }).classed('hot', l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    return s === id || t === id;
+  });
+  labelSel.classed('dim', d => !neighbors.has(d.id));
+}
+
+function clearFocus() {
+  nodeSel.classed('dim', false);
+  linkSel.classed('dim', false).classed('hot', false);
+  labelSel.classed('dim', false);
+}
+
+nodeSel
+  .on('mouseenter', (e, d) => { focusNode(d.id); showDetail(d);
+    tip.innerHTML = `<b>${d.label}</b><br/><span style="color:#8d97a8">${d.cat} · 提及 ${d.count} 篇</span>`;
+    tip.style.opacity = 1; })
+  .on('mousemove', (e) => {
+    const rect = stage.getBoundingClientRect();
+    tip.style.left = Math.min(e.clientX - rect.left + 14, rect.width - 250) + 'px';
+    tip.style.top = (e.clientY - rect.top + 14) + 'px';
+  })
+  .on('mouseleave', () => { clearFocus(); tip.style.opacity = 0; })
+  .on('click', (e, d) => { showDetail(d); focusNode(d.id); })
+  .on('dblclick', (e, d) => { window.open('https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/' + encodeURIComponent(d.id) + '.md', '_blank'); });
+
+// ------- 过滤 -------
+const chips = document.getElementById('chips');
+CATS.forEach(c => {
+  const el = document.createElement('span');
+  el.className = 'chip';
+  el.innerHTML = `<span class="d" style="background:${colorOf(c)}"></span>${c}`;
+  el.onclick = () => {
+    if (hidden.has(c)) hidden.delete(c); else hidden.add(c);
+    el.classList.toggle('off', hidden.has(c));
+    applyVisibility();
+  };
+  chips.appendChild(el);
 });
-const panel = document.getElementById('panel');
-network.on('click', (p) => {
-  if (!p.nodes.length) { panel.style.display = 'none'; return; }
-  const n = DATA.nodes.find(x => x.id === p.nodes[0]);
-  document.getElementById('p-title').textContent = n.label;
-  document.getElementById('p-en').textContent = (n.en || '') + ' · ' + n.cat + ' · 提及 ' + n.count + ' 篇';
-  document.getElementById('p-def').textContent = n.def || '';
-  const rel = DATA.edges.filter(e => e.from === n.id || e.to === n.id).slice(0, 12)
-    .map(e => { const o = DATA.nodes.find(x => x.id === (e.from === n.id ? e.to : e.from)); return '· ' + (o ? o.label : '') + ' — ' + e.rel; }).join('<br/>');
-  document.getElementById('p-rel').innerHTML = '<b>关联概念</b><br/>' + (rel || '无');
-  const a = document.getElementById('p-link'); a.href = 'https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/' + encodeURIComponent(n.id) + '.md';
-  panel.style.display = 'block';
+
+function applyVisibility() {
+  nodeSel.style('display', d => visible(d) ? null : 'none');
+  labelSel.style('display', d => visible(d) ? null : 'none');
+  linkSel.style('display', l => {
+    const s = byId.get(l.source.id || l.source), t = byId.get(l.target.id || l.target);
+    return s && t && visible(s) && visible(t) ? null : 'none';
+  });
+  blobSel.style('display', c => (hidden.has(c) ? 'none' : null));
+  linkLabel.style('display', d => showLinkLabels ? null : 'none');
+  catLabels.style('display', c => hidden.has(c) ? 'none' : null);
+}
+
+document.getElementById('btn-labels').onclick = (e) => {
+  showLinkLabels = !showLinkLabels;
+  e.currentTarget.classList.toggle('on', showLinkLabels);
+  applyVisibility();
+};
+document.getElementById('btn-core').onclick = (e) => {
+  coreOnly = !coreOnly;
+  e.currentTarget.classList.toggle('on', coreOnly);
+  applyVisibility();
+  sim.alpha(0.25).restart();
+};
+document.getElementById('btn-reset').onclick = () => {
+  nodeSel.each(d => { d.fx = null; d.fy = null; });
+  svg.transition().duration(500).call(zoom.transform, homeTransform());
+  sim.alpha(0.5).restart();
+};
+
+// 关系标签只在缩放足够大时出现
+svg.on('zoom.labels', () => {});
+
+const q = document.getElementById('q');
+q.addEventListener('keydown', (ev) => {
+  if (ev.key !== 'Enter') return;
+  const k = q.value.trim().toLowerCase();
+  if (!k) return;
+  const hit = nodes.find(n => n.label.toLowerCase().includes(k) || (n.en || '').toLowerCase().includes(k));
+  if (!hit) return;
+  nodeSel.selectAll('circle').attr('stroke-width', 1.2);
+  const sel = nodeSel.filter(n => n.id === hit.id);
+  sel.selectAll('circle').attr('stroke-width', 3);
+  const t = d3.zoomTransform(svg.node());
+  svg.transition().duration(600).call(
+    zoom.transform,
+    d3.zoomIdentity.translate(W() / 2 - hit.x * 1.5, H() / 2 - hit.y * 1.5).scale(1.5)
+  );
+  showDetail(hit); focusNode(hit.id);
 });
-network.on('doubleClick', (p) => { if (p.nodes.length) window.open('https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/' + encodeURIComponent(p.nodes[0]) + '.md', '_blank'); });
-document.getElementById('q').addEventListener('input', (ev) => {
-  const q = ev.target.value.trim();
-  if (!q) { network.unselectAll(); return; }
-  const hit = DATA.nodes.filter(n => n.label.includes(q) || (n.en||'').toLowerCase().includes(q.toLowerCase())).map(n => n.id);
-  network.selectNodes(hit);
-  if (hit.length) network.focus(hit[0], { scale: 1.1, animation: true });
-});
+
+document.getElementById('stat').innerHTML = `
+  <div><b>${nodes.length}</b><span>概念</span></div>
+  <div><b>${links.length}</b><span>关系</span></div>
+  <div><b>${CATS.length}</b><span>分类</span></div>`;
+document.getElementById('legend').innerHTML =
+  `<b>节点大小</b> = 被提及文章数 ｜ <b>连线</b> = 语义关系<br/>悬停高亮关联 · 双击打开维基条目`;
+
+applyVisibility();
+sim.alpha(0.9).restart();
+window.addEventListener('resize', () => { svg.call(zoom.transform, homeTransform()); sim.alpha(0.2).restart(); });
 </script>
 </body></html>

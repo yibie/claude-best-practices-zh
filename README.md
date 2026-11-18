@@ -2,7 +2,8 @@
 
 > 把 [claude.com/resources/best-practices](https://claude.com/resources/best-practices) 上的全部资源抓取下来，全文译成中文，再按 **Karpathy LLM Wiki** 的思路编译成一套带双向链接的概念维基，并生成可交互的思维导图与知识图谱。
 
-**🌐 站点入口：<https://claude-best-practices-zh.vercel.app>**（只有首页 + 两个可视化，正文一律链接回本仓库）
+**🌐 站点：<https://claude-best-practices-zh.vercel.app>**
+站点提供首页、概念索引、译文索引、知识图谱与思维导图，支持 自动/浅色/深色 三种主题；条目正文一律跳回本仓库阅读（`RENDER_DOCS=1 node scripts/build-site.js` 可切换成站内全文渲染）。
 
 内容经 DeepSeek 三遍审校：① 逐篇对照原文修订译文（526 处）② 重新判定概念关系方向、删除噪声、补充关键缺失（141 条关系）③ 重做知识图谱可视化（分类聚类 + 力导向）。
 

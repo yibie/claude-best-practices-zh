@@ -17,10 +17,19 @@ const html = `<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Claude 最佳实践 · 知识图谱</title>
+<script>(function(){try{var c=localStorage.getItem('bp-theme')||'auto';var m=window.matchMedia('(prefers-color-scheme: dark)').matches;var t=c==='auto'?(m?'dark':'light'):c;document.documentElement.dataset.theme=t;document.documentElement.dataset.choice=c;}catch(e){}})();</script>
 <style>
   :root{
-    --bg:#0a0d12; --panel:rgba(20,24,33,.86); --line:#222a37; --fg:#e8ecf3; --muted:#8d97a8;
+    --bg:#0a0d12; --panel:rgba(20,24,33,.86); --panel-solid:#0c1016; --line:#222a37; --fg:#e8ecf3; --muted:#8d97a8;
     --accent:#e0795c; --glow:rgba(124,156,245,.18);
+    --cat-label:#5f6b7f; --label-halo:#0a0d12; --link-cross:#39465c; --chip:#121823; --chip-fg:#c3ccdb;
+    --node-fill-alpha:33; --side-a:#0d1118; --side-b:#0a0d12;
+  }
+  html[data-theme="light"]{
+    --bg:#f6f5f2; --panel:rgba(255,254,250,.92); --panel-solid:#fffefa; --line:rgba(20,22,26,.12);
+    --fg:#15171b; --muted:#5a6068; --accent:#c05a3a; --glow:rgba(124,156,245,.10);
+    --cat-label:#8b9099; --label-halo:#f6f5f2; --link-cross:#bdb7ac; --chip:#fffefa; --chip-fg:#3f444b;
+    --side-a:#f2efe9; --side-b:#f6f5f2;
   }
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);
@@ -28,29 +37,29 @@ const html = `<!doctype html>
   #app{display:flex;height:100vh}
   /* ---------- sidebar ---------- */
   #side{width:264px;flex:0 0 264px;border-right:1px solid var(--line);display:flex;flex-direction:column;
-        background:linear-gradient(180deg,#0d1118,#0a0d12)}
+        background:linear-gradient(180deg,var(--side-a),var(--side-b))}
   .brand{padding:16px 18px 10px}
   .brand h1{margin:0;font-size:15px;font-weight:600;letter-spacing:.01em}
   .brand p{margin:2px 0 0;font-size:11.5px;color:var(--muted)}
   .search{padding:8px 14px}
-  .search input{width:100%;background:#11161f;border:1px solid var(--line);border-radius:9px;color:var(--fg);
+  .search input{width:100%;background:var(--panel-solid);border:1px solid var(--line);border-radius:9px;color:var(--fg);
     padding:7px 10px;font-size:13px;outline:none;transition:.15s border-color}
   .search input:focus{border-color:#3b4a63}
   .filters{padding:6px 14px 10px;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
-  .chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:#c3ccdb;background:#131926;
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--chip-fg);background:var(--chip);
     border:1px solid var(--line);border-radius:999px;padding:3px 9px;cursor:pointer;user-select:none;transition:.15s}
   .chip .d{width:7px;height:7px;border-radius:50%}
   .chip.off{opacity:.34;text-decoration:line-through}
   .chip:hover{border-color:#3b4a63}
   .controls{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px}
-  .controls button{background:#131926;border:1px solid var(--line);color:#c3ccdb;border-radius:8px;
+  .controls button{background:var(--chip);border:1px solid var(--line);color:var(--chip-fg);border-radius:8px;
     padding:4px 9px;font-size:11.5px;cursor:pointer}
   .controls button:hover{border-color:#3b4a63;color:#fff}
   .controls button.on{background:#1d2637;border-color:#40537a;color:#fff}
   #detail{padding:14px 16px;overflow:auto;flex:1;border-top:1px solid var(--line)}
   #detail h2{margin:0 0 2px;font-size:16px}
   #detail .en{color:var(--muted);font-size:11.5px;margin-bottom:8px}
-  #detail .def{font-size:13px;color:#cfd7e3;line-height:1.65}
+  #detail .def{font-size:13px;color:var(--muted);line-height:1.65}
   #detail .rels{margin-top:12px;font-size:12.5px}
   #detail .rels div{padding:3px 0;border-top:1px solid rgba(255,255,255,.05)}
   #detail .rels span.k{color:var(--muted)}
@@ -66,28 +75,29 @@ const html = `<!doctype html>
       radial-gradient(700px 500px at 24% 84%, rgba(224,121,92,.07), transparent 70%), var(--bg)}
   svg{width:100%;height:100%;display:block;cursor:grab}
   svg:active{cursor:grabbing}
-  .cat-label{font-size:12.5px;font-weight:600;letter-spacing:.08em;fill:#5f6b7f;text-transform:uppercase}
-  .n-label{font-size:11px;fill:#cfd7e3;paint-order:stroke;stroke:#0a0d12;stroke-width:2.6px;
+  .cat-label{font-size:12.5px;font-weight:600;letter-spacing:.08em;fill:var(--cat-label);text-transform:uppercase}
+  .n-label{font-size:11px;fill:var(--fg);paint-order:stroke;stroke:var(--label-halo);stroke-width:2.6px;
     stroke-linejoin:round;pointer-events:none;transition:opacity .2s}
-  .n-label.big{font-size:13px;fill:#fff;font-weight:600}
+  .n-label.big{font-size:13px;fill:var(--fg);font-weight:600}
   .node{cursor:pointer;transition:opacity .2s}
   .node circle{stroke-width:1.2}
   .halo{fill:none;stroke-width:1;opacity:.5}
-  .link{stroke:#2b3546;stroke-linecap:round;transition:opacity .2s}
+  .link{stroke:var(--link-cross);stroke-linecap:round;transition:opacity .2s}
   .link.hot{stroke:#8fb0ff;opacity:.95 !important}
-  .link-label{font-size:9.5px;fill:#7f8ea8;pointer-events:none;opacity:0;transition:opacity .15s}
+  .link-label{font-size:9.5px;fill:var(--muted);paint-order:stroke;stroke:var(--label-halo);stroke-width:2.5px;pointer-events:none;opacity:0;transition:opacity .15s}
   .link-label.show{opacity:.95}
   .dim{opacity:.13 !important}
   #legend{position:absolute;right:14px;bottom:12px;font-size:11px;color:var(--muted);text-align:right;line-height:1.7}
   #legend b{color:#cfd7e3;font-weight:500}
-  #tooltip{position:absolute;pointer-events:none;background:rgba(14,18,26,.95);border:1px solid #2b3546;
+  #tooltip{position:absolute;pointer-events:none;background:var(--panel-solid);border:1px solid var(--line);
     border-radius:8px;padding:6px 9px;font-size:12px;max-width:240px;opacity:0;transition:opacity .15s;z-index:5}
 </style></head>
 <body>
 <div id="app">
   <aside id="side">
     <div class="brand"><h1>Claude 最佳实践 · 知识图谱</h1>
-      <p>100 个概念 · 关系经 DeepSeek 审阅</p></div>
+      <p>100 个概念 · 关系经 DeepSeek 审阅</p>
+      <div class="theme-slot" style="margin-top:10px"></div></div>
     <div class="search"><input id="q" type="search" placeholder="搜索概念，回车定位"/></div>
     <div class="filters" id="chips"></div>
     <div class="controls">
@@ -107,6 +117,7 @@ const html = `<!doctype html>
   </div>
 </div>
 <script type="application/json" id="data">${JSON.stringify(payload).replace(/</g, '\\u003c')}</script>
+<script src="/theme.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
@@ -168,7 +179,7 @@ const blobSel = gCat.insert('g', ':first-child').selectAll('path').data(CATS).jo
 
 const linkSel = gLink.selectAll('line').data(links).join('line')
   .attr('class', 'link')
-  .attr('stroke', l => (intra(l) ? colorOf(byId.get(l.source.id || l.source).cat) : '#39465c'))
+  .attr('stroke', l => (intra(l) ? colorOf(byId.get(l.source.id || l.source).cat) : 'var(--link-cross)'))
   .attr('stroke-width', l => (intra(l) ? Math.min(0.8 + l.w * 0.45, 2.6) : Math.min(0.6 + l.w * 0.3, 1.6)))
   .attr('stroke-opacity', l => (intra(l) ? Math.min(0.16 + l.w * 0.1, 0.5) : Math.min(0.08 + l.w * 0.06, 0.28)))
   .attr('stroke-dasharray', l => (intra(l) ? null : '3 4'));
@@ -193,7 +204,8 @@ nodeSel.append('circle')
 
 nodeSel.append('circle')
   .attr('r', r)
-  .attr('fill', d => colorOf(d.cat) + '2e')
+  .attr('fill', d => colorOf(d.cat))
+  .attr('fill-opacity', 0.2)
   .attr('stroke', d => colorOf(d.cat));
 
 const labelSel = gLabel.selectAll('text').data(nodes).join('text')
