@@ -251,6 +251,15 @@ const markmapHtml = `<!doctype html>
   button{background:#1c2230;border:1px solid #2b3444;color:#cdd4e0;border-radius:8px;padding:5px 11px;cursor:pointer;font-size:12px}
   button:hover{border-color:#d97757;color:#fff}
   #mm{position:fixed;top:46px;left:0;width:100%;height:calc(100vh - 46px)}
+  /* markmap 默认把节点文字硬编码成 #333，在深色底上不可读，这里统一覆盖 */
+  #mm{--markmap-text-color:#e8eaed;--markmap-circle-open-bg:#0d0f13;--markmap-circle-stroke:#4C9AFF;
+      --markmap-code-color:#e8eaed;--markmap-code-bg:#1c2230;--markmap-a-color:#7aa7ff;--markmap-a-hover-color:#d97757;
+      --markmap-font: 300 16px/1.4 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+  #mm text{fill:#e8eaed !important}
+  #mm .markmap-foreign, #mm .markmap-foreign *, #mm foreignObject div{color:#e8eaed !important}
+  #mm .markmap-foreign a, #mm .markmap-foreign a *{color:#7aa7ff !important}
+  #mm .markmap-foreign code{color:#f0c674 !important;background:#1c2230 !important}
+  #mm .markmap-node>circle{fill:#0d0f13;stroke-width:2}
 </style>
 </head><body>
 <div id="bar"><b>Claude 最佳实践 · 思维导图</b>
@@ -273,16 +282,18 @@ ${mm.join('\n')}
     colorFreezeLevel: 2, maxWidth: 240, spacingVertical: 8, paddingX: 12,
     initialExpandLevel: 2, duration: 300
   }, root);
+  window.__mm = map;
   const fit = () => { map.fit(); setTimeout(() => map.fit(), 350); };
   const setLevel = (lv) => {
     const walk = (n, d) => { n.payload = { ...(n.payload || {}), fold: d >= lv }; (n.children||[]).forEach(c => walk(c, d+1)); };
     walk(map.state.data, 0);
     map.renderData();
     setTimeout(() => {
-      if (lv <= 2) { fit(); return; }
-      // 深层层级不缩放：保持 1:1 字号，靠平移浏览
-      map.rescale(0.68);
-      map.centerNode(root, { scale: 1 });
+      if (lv <= 1) { fit(); return; }
+      // 深层展开后不整体缩小到看不清：固定缩放比例，把根节点放到左侧，靠平移浏览
+      const rect = document.querySelector('#mm').getBoundingClientRect();
+      const t = d3.zoomIdentity.translate(140, rect.height / 2).scale(lv > 2 ? 0.5 : 0.8);
+      map.svg.transition().duration(320).call(map.zoom.transform, t);
     }, 380);
   };
   setTimeout(fit, 400);
