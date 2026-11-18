@@ -2,7 +2,7 @@
 
 > 把 [claude.com/resources/best-practices](https://claude.com/resources/best-practices) 上的全部资源抓取下来，全文译成中文，再按 **Karpathy LLM Wiki** 的思路编译成一套带双向链接的概念维基，并生成可交互的思维导图与知识图谱。
 
-**🌐 在线阅读：<https://claude-best-practices-zh.vercel.app>**
+**🌐 站点入口：<https://claude-best-practices-zh.vercel.app>**（只有首页 + 两个可视化，正文一律链接回本仓库）
 
 内容经 DeepSeek 三遍审校：① 逐篇对照原文修订译文（526 处）② 重新判定概念关系方向、删除噪声、补充关键缺失（141 条关系）③ 重做知识图谱可视化（分类聚类 + 力导向）。
 
@@ -22,9 +22,10 @@
 **入口**
 
 1. 想快速建立全局印象 → [交互式知识图谱](https://claude-best-practices-zh.vercel.app/graph.html)（11 个分类聚类，悬停高亮关联）
-2. 想按主题系统学习 → [概念索引](https://claude-best-practices-zh.vercel.app/wiki/INDEX.html)
-3. 想读某一篇原文 → [中文译文目录](https://claude-best-practices-zh.vercel.app/read/index.html)
-4. 只想在 GitHub 里翻 → 从 [`wiki/INDEX.md`](wiki/INDEX.md) 或 [`docs/README.md`](docs/README.md) 进入
+2. 想看层级结构 → [思维导图](https://claude-best-practices-zh.vercel.app/mindmap.html)
+3. 想按主题系统学习 → 从 [`wiki/INDEX.md`](wiki/INDEX.md) 进入概念条目（GitHub 阅读）
+4. 想读某一篇原文 → 在 [`docs/README.md`](docs/README.md) 的目录里按日期/产品找
+5. 想核对英文 → 在 [`raw/`](raw/) 里看抓取当天的原文快照
 
 ## 数据规模
 
@@ -98,8 +99,9 @@ node scripts/relink.js          # 13. 用新关系重建「相关概念」与 Me
 node scripts/graph-view.js      # 14. 生成聚类力导向图谱
 
 # 站点
-node scripts/build-site.js      # 15. 静态站点 → site/
-vercel --prod                   # 16. 发布到 Vercel
+node scripts/site.js            # 15. 索引 + 思维导图源文件
+node scripts/build-site.js      # 16. 站点产物 → site/（首页取 site-src/landing.html）
+vercel --prod                   # 17. 发布到 Vercel
 ```
 
 翻译与概念抽取走 DeepSeek API，读取 `~/.pi/agent/auth.json` 中的密钥；所有脚本都是幂等 + 断点续跑，新增文章时重跑即可。

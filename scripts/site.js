@@ -118,7 +118,8 @@ for (const c of CATS) {
     for (const r of rels) mm.push(`#### ${nodeById.get(r.id)?.zh || r.id}（${r.rel}）`);
   }
 }
-mm.push('', '## 入口', '### [维基索引](../wiki/INDEX.md)', '### [译文目录](../docs/README.md)', '### [互动知识图谱](graph.html)');
+const GH = 'https://github.com/yibie/claude-best-practices-zh/blob/main';
+mm.push('', '## 入口', `### [维基索引](${GH}/wiki/INDEX.md)`, `### [译文目录](${GH}/docs/README.md)`, '### [交互式知识图谱](graph.html)');
 fs.mkdirSync(path.join(ROOT, 'mindmap'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'mindmap', 'mindmap.md'), mm.join('\n'));
 

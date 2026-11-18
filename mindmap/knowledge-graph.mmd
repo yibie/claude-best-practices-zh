@@ -79,54 +79,40 @@ graph LR
     n_Claude_Tag["Claude Tag"]
     n_Claude______["Claude 托管智能体"]
   end
-  n_Claude_Code -->|启用| n______
-  n___ -->|依赖| n______
-  n_Claude_Code -->|用于| n________
-  n_Claude_Code -->|用于| n___
-  n_Claude_Code -->|用于| n____
-  n______ -->|解决| n____
-  n_Claude_Cowork -->|启用| n___
-  n_Claude_Cowork -->|用于| n___
-  n_MCP____ -->|属于| n________
-  n______ -->|解决| n____
-  n___ -->|用于| n___
-  n______ -->|用于| n___
-  n_______ -->|解决| n___
-  n____ -->|属于| n______
+  n______ -->|启用| n___
+  n_Claude_Code -->|属于| n____
   n_Claude___ -->|用于| n____
-  n___ -->|依赖| n____
-  n_Claude_Cowork -->|启用| n____
-  n_Claude_Code -->|用于| n______
-  n___ -->|用于| n______
-  n_Claude_Code -->|启用| n____
-  n_Claude_Code -->|启用| n_____
-  n______ -->|解决| n______
-  n_CLAUDE_md -->|依赖| n_Claude_Code
+  n______ -->|用于| n___
+  n________ -->|用于| n_Claude_Code
+  n_Claude_Cowork -->|依赖| n___
   n_Claude_Cowork -->|启用| n_____
-  n______ -->|属于| n______
-  n____ -->|依赖| n___
-  n______ -->|依赖| n____
-  n______ -->|属于| n_____
+  n______ -->|用于| n____
   n_Claude_Code -->|属于| n_Claude___
-  n_MCP____ -->|依赖| n___
   n______ -->|解决| n______
-  n___ -->|用于| n________
   n_Claude_Agent_SDK -->|启用| n______
-  n_Claude_Cowork -->|启用| n____
-  n___ -->|启用| n___
-  n____ -->|替代| n_______
-  n_Claude_Code -->|启用| n___
+  n______ -->|用于| n____
   n_____ -->|解决| n_____
-  n_Claude_Cowork -->|用于| n_______
-  n_Claude_Cowork -->|依赖| n________
-  n_____ -->|启用| n___
-  n_____ -->|衡量| n______
-  n______ -->|属于| n_______
-  n______ -->|依赖| n______
-  n_Claude_Fable_5 -->|衡量| n______
-  n_Claude_Code -->|用于| n________
-  n_____ -->|依赖| n_____
-  n___ -->|属于| n_______
+  n___ -->|启用| n_____
+  n______ -->|衡量| n_____
+  n___ -->|用于| n_______
+  n_Claude_Cowork -->|用于| n___
   n_Claude_Cowork -->|启用| n____
+  n_Claude_Code -->|用于| n________
+  n______ -->|属于| n______
+  n_CLAUDE_md -->|用于| n_Claude_Code
   n_Claude___ -->|用于| n___AI__
+  n_Claude______ -->|启用| n___
+  n_Claude______ -->|启用| n_____
+  n_Claude_Agent_SDK -->|依赖| n______
+  n___ -->|依赖| n________
+  n_Claude___ -->|启用| n_Claude______
+  n_Claude___ -->|启用| n____
+  n_Claude_Code -->|依赖| n_____
+  n_Claude_Code -->|启用| n_____
+  n_Claude___ -->|启用| n_____
+  n____ -->|解决| n______
+  n________ -->|启用| n_MCP____
+  n_Claude_Code -->|启用| n____
+  n_Claude_Code -->|启用| n___
+  n___ -->|依赖| n___
 ```
