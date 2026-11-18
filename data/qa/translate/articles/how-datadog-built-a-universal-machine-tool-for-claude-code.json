@@ -1,0 +1,63 @@
+{
+  "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+  "issues": [
+    {
+      "zh": "将指标控制组件从 FoundationDB 重写到 Postgres",
+      "fix": "将指标控制平面从 FoundationDB 重写到 Postgres",
+      "type": "误译",
+      "note": "control 指控制平面，非组件"
+    },
+    {
+      "zh": "一个闭环进化优化执行框架（harness）",
+      "fix": "一个闭环进化优化测试框架",
+      "type": "误译",
+      "note": "harness 此处指测试/评估框架"
+    },
+    {
+      "zh": "我们开始对它做影子流量",
+      "fix": "我们开始对它做影子运行",
+      "type": "误译",
+      "note": "shadowing 指影子运行比对"
+    },
+    {
+      "zh": "以及为任意代码提供携带证明",
+      "fix": "以及为任意代码提供携带证明的规格",
+      "type": "漏译",
+      "note": "proof carrying 指携带证明的代码"
+    },
+    {
+      "zh": "拒绝记录为待决事项",
+      "fix": "拒绝记录为待决决策",
+      "type": "误译",
+      "note": "pending decisions 指待决决策"
+    },
+    {
+      "zh": "即围绕数据平面、承载工作负载的生命周期接口",
+      "fix": "即围绕承载工作负载的数据平面的生命周期接口",
+      "type": "语句不通",
+      "note": "修饰关系错乱，读不通"
+    },
+    {
+      "zh": "运维模式——通常以状态机的形式存在——在代码库中是隐式的",
+      "fix": "运维模式——通常以状态机的形式存在——隐含在代码库中",
+      "type": "语句不通",
+      "note": "“在代码库中是隐式的”生硬"
+    },
+    {
+      "zh": "并在会话和团队之间不断累积",
+      "fix": "并在会话和团队之间不断叠加复用",
+      "type": "误译",
+      "note": "compound 指累积增益，非数量累积"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5532,
+    "completion_tokens": 336,
+    "total_tokens": 5868,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5404
+  }
+}

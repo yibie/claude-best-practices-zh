@@ -1,0 +1,75 @@
+{
+  "rel": "articles/working-at-the-frontier-cursor.md",
+  "issues": [
+    {
+      "zh": "以下是 Claude Fable 5 为何以及如何改变了人们对编码智能体能力上限的判断",
+      "fix": "以下是 Claude Fable 5 为何以及如何改变了人们对编码智能体能力上限的判断",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "他可以把一个问题交出去，从一直拖延的棘手重构，到对微妙边界情况的推理，Claude Fable 5 都能解决",
+      "fix": "他可以把一个问题交出去，从一直拖延的棘手重构，到对微妙边界情况的推理，Claude Fable 5 都能解决",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "「我不觉得自己需要先给 Claude Fable 5 做引导",
+      "fix": "「我不觉得自己需要先给 Claude Fable 5 做引导",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "Claude Fable 5 在这些模糊任务上得分太高",
+      "fix": "Claude Fable 5 在这些模糊任务上得分太高",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "随后，Schmidt 把 Claude Fable 5 放到了他最喜欢的个人测试之一上",
+      "fix": "随后，Schmidt 把 Claude Fable 5 放到了他最喜欢的个人测试之一上",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "这次使用 Claude Fable 5",
+      "fix": "这次使用 Claude Fable 5",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "对于何时该用 Claude Fable 5 而非更便宜、能力更弱的模型",
+      "fix": "对于何时该用 Claude Fable 5 而非更便宜、能力更弱的模型",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "Claude Fable 5 还让他的团队得以专注于此前被搁置的项目",
+      "fix": "Claude Fable 5 还让他的团队得以专注于此前被搁置的项目",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "他的团队将 Claude Fable 5 与更快、更轻的模型搭配",
+      "fix": "他的团队将 Claude Fable 5 与更快、更轻的模型搭配",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    },
+    {
+      "zh": "Schmidt 仍在寻找 Claude Fable 5 的极限",
+      "fix": "Schmidt 仍在寻找 Claude Fable 5 的极限",
+      "type": "名词错",
+      "note": "原文为Fable 5，译文漏了数字5"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3601,
+    "completion_tokens": 609,
+    "total_tokens": 4210,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3473
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+  "issues": [
+    {
+      "zh": "他们最终构建了 Work Graph® 模型",
+      "fix": "他们最终构建了 Work Graph® 模型",
+      "type": "名词错",
+      "note": "原文W_ork Graph_®含下划线，译文漏掉"
+    },
+    {
+      "zh": "预置了相应的 Skills（技能）",
+      "fix": "预置了相应的技能",
+      "type": "术语不一致",
+      "note": "Skills原文为普通词，译文夹注且后文混用"
+    },
+    {
+      "zh": "比如 Skills、行为和记忆",
+      "fix": "比如技能、行为和记忆",
+      "type": "术语不一致",
+      "note": "同一概念前译技能后译Skills"
+    },
+    {
+      "zh": "Asana 智能体（其称之为 AI teammates）",
+      "fix": "Asana 智能体（其称之为 AI 队友）",
+      "type": "术语不一致",
+      "note": "AI teammates前文译AI teammate未统一"
+    },
+    {
+      "zh": "当一项任务被分配给 AI teammate 时",
+      "fix": "当一项任务被分配给 AI 队友时",
+      "type": "术语不一致",
+      "note": "AI teammate未译，与AI teammates混用"
+    },
+    {
+      "zh": "在 AI teammates 之前",
+      "fix": "在 AI 队友出现之前",
+      "type": "术语不一致",
+      "note": "AI teammates未译，术语不统一"
+    },
+    {
+      "zh": "名为 At-Risk Renewal 的智能体 AI teammate",
+      "fix": "名为 At-Risk Renewal 的智能体 AI 队友",
+      "type": "术语不一致",
+      "note": "AI teammate未译，术语不统一"
+    },
+    {
+      "zh": "因为答案很细微，而且会变化",
+      "fix": "因为答案很微妙，而且会变化",
+      "type": "误译",
+      "note": "nuanced意为微妙，非细微"
+    },
+    {
+      "zh": "你多少需要对产品的当前状态有一些品味判断",
+      "fix": "你多少需要对产品的当前状态有一些审美判断",
+      "type": "语句不通",
+      "note": "品味判断为生硬直译，读不通"
+    },
+    {
+      "zh": "以及他对等的 CTO",
+      "fix": "以及他对等的 CTO",
+      "type": "语句不通",
+      "note": "他对等的CTO为病句，应为对应职位的CTO"
+    },
+    {
+      "zh": "一个人类和智能体都能使用的共享上下文",
+      "fix": "一个人类和智能体都能使用的共享上下文",
+      "type": "误译",
+      "note": "原文work from，意为共同基于其工作"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6285,
+    "completion_tokens": 461,
+    "total_tokens": 6746,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 6285
+  }
+}

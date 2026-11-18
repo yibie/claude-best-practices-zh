@@ -1,0 +1,3684 @@
+[
+  {
+    "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+    "type": "语句不通",
+    "before": "Claude Fable 是我遇到的第一个模型：其工作质量受限于我澄清未知的能力。",
+    "after": "Claude Fable 是我遇到的第一个工作质量受限于我澄清未知能力的模型。",
+    "note": "冒号后句子结构断裂，读不通"
+  },
+  {
+    "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+    "type": "语句不通",
+    "before": "你可能会在实现深处发现未知",
+    "after": "你可能会在实现过程中深入发现未知",
+    "note": "“实现深处”生硬不通"
+  },
+  {
+    "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+    "type": "语句不通",
+    "before": "把 AI 的每成果成本（cost-per-outcome）而非 token 消耗作为主要价值指标",
+    "after": "把 AI 的每成果成本（cost-per-outcome）而非 token 消耗作为主要价值指标来衡量",
+    "note": "缺谓语，句子不完整"
+  },
+  {
+    "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+    "type": "误译",
+    "before": "还是仅仅任务量大，即大量简单直接的工作",
+    "after": "还是仅仅规模大，即大量简单直接的工作",
+    "note": "large指规模大非任务量大"
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "type": "误译",
+    "before": "对于每个生成的智能体，运行一个单独的生成智能体，根据评分标准或条件对其输出进行对抗性验证。",
+    "after": "对于每个生成的智能体，运行一个单独生成的智能体，根据评分标准或条件对其输出进行对抗性验证。",
+    "note": "原文是spawned agent，非生成智能体"
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "type": "误译",
+    "before": "然后由提示词或模型使用评判智能体以两两比较的方式评判结果",
+    "after": "然后由提示词或模型以两两比较的方式评判结果",
+    "note": "judging agent是评判方式，非额外智能体"
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "type": "误译",
+    "before": "工作流可以通过生成智能体从不相交的证据中生成假设，在结构上防止这一点。",
+    "after": "工作流可以通过从不相交的证据中生成智能体来产生假设，在结构上防止这一点。",
+    "note": "原文是spawn agents生成假设"
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "type": "误译",
+    "before": "创建一个怀疑者人格的子智能体来审查规则以确保它们一致",
+    "after": "创建一个怀疑者人格的子智能体来审查规则以确保它们符合要求",
+    "note": "in line指符合要求，非一致"
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "type": "误译",
+    "before": "例如，[评估并改进](https://claude.dev/blog/automating-eval-design-and-hillclimbing/)你创建的某个 Skill（技能）是否符合特定标准。",
+    "after": "例如，[评估并改进](https://claude.dev/blog/automating-eval-design-and-hillclimbing/)你创建的某个 Skill（技能）以符合特定标准。",
+    "note": "against criteria是依据标准，非是否符合"
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "type": "误译",
+    "before": "你可以将它们检入 `~/.claude/workflows`",
+    "after": "你可以将它们保存到 `~/.claude/workflows`",
+    "note": "check into此处指存入，非检入"
+  },
+  {
+    "rel": "articles/agent-identity-access-model.md",
+    "type": "术语不一致",
+    "before": "Connectors：",
+    "after": "连接器：",
+    "note": "前文已译“连接”，此处保留英文不一致"
+  },
+  {
+    "rel": "articles/agent-identity-access-model.md",
+    "type": "术语不一致",
+    "before": "Skills（技能）",
+    "after": "技能",
+    "note": "同段后文用“Skills 与插件”，译法不统一"
+  },
+  {
+    "rel": "articles/agent-identity-access-model.md",
+    "type": "术语不一致",
+    "before": "使用他们的 Connectors、凭证，结果中也显示他们的名字",
+    "after": "使用他们各自的连接器、凭证，结果中也显示他们的名字",
+    "note": "Connectors前文译“连接”，此处未译"
+  },
+  {
+    "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+    "type": "误译",
+    "before": "我们彻底推翻了整个服务，重新构想了它的架构",
+    "after": "我们彻底拆解了整个服务，重新构想了它的架构",
+    "note": "blew up 意为拆解，非推翻"
+  },
+  {
+    "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+    "type": "误译",
+    "before": "它们分别只撑了 70 天、29 天，以及不到一天",
+    "after": "它们分别撑了 70 天、29 天，以及不到一天",
+    "note": "原文无“只”，语义被加强"
+  },
+  {
+    "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+    "type": "误译",
+    "before": "没有人愿意再拥有一套基础设施",
+    "after": "没有人愿意再负责一套基础设施",
+    "note": "own 指负责维护，非拥有"
+  },
+  {
+    "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+    "type": "语句不通",
+    "before": "我们被呼叫得相当频繁",
+    "after": "我们相当频繁地被呼叫",
+    "note": "语序不当，读起来别扭"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "术语不一致",
+    "before": "预置了相应的 Skills（技能）",
+    "after": "预置了相应的技能",
+    "note": "Skills原文为普通词，译文夹注且后文混用"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "术语不一致",
+    "before": "比如 Skills、行为和记忆",
+    "after": "比如技能、行为和记忆",
+    "note": "同一概念前译技能后译Skills"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "术语不一致",
+    "before": "Asana 智能体（其称之为 AI teammates）",
+    "after": "Asana 智能体（其称之为 AI 队友）",
+    "note": "AI teammates前文译AI teammate未统一"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "术语不一致",
+    "before": "当一项任务被分配给 AI teammate 时",
+    "after": "当一项任务被分配给 AI 队友时",
+    "note": "AI teammate未译，与AI teammates混用"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "术语不一致",
+    "before": "在 AI teammates 之前",
+    "after": "在 AI 队友出现之前",
+    "note": "AI teammates未译，术语不统一"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "术语不一致",
+    "before": "名为 At-Risk Renewal 的智能体 AI teammate",
+    "after": "名为 At-Risk Renewal 的智能体 AI 队友",
+    "note": "AI teammate未译，术语不统一"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "误译",
+    "before": "因为答案很细微，而且会变化",
+    "after": "因为答案很微妙，而且会变化",
+    "note": "nuanced意为微妙，非细微"
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "type": "语句不通",
+    "before": "你多少需要对产品的当前状态有一些品味判断",
+    "after": "你多少需要对产品的当前状态有一些审美判断",
+    "note": "品味判断为生硬直译，读不通"
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "type": "语句不通",
+    "before": "Claude 可以一次性生成一个生成状态报告的 Skill",
+    "after": "Claude 可以一次性生成一个产出状态报告的 Skill",
+    "note": "“生成一个生成”重复病句"
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "type": "误译",
+    "before": "这可以单独写一篇文章，所以我不在这里展开。",
+    "after": "这完全可以单独写一篇文章，所以我不在这里展开。",
+    "note": "漏译entirely，语气弱化"
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "type": "术语不一致",
+    "before": "我们推广（rollout）流程的第一阶段",
+    "after": "我们发布（rollout）流程的第一阶段",
+    "note": "rollout此处指发布，非推广"
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "type": "误译",
+    "before": "并最终在你的事件频道中留下一个只读的 Claude",
+    "after": "并在你的事件频道中留下一个只读的 Claude",
+    "note": "leaves you with无“最终”之意"
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "type": "语句不通",
+    "before": "Claude 会在事件开启后中位数 14 分钟内发布首份有证据支撑的分析",
+    "after": "Claude 会在事件开启后中位 14 分钟内发布首份有证据支撑的分析",
+    "note": "“中位数14分钟内”语序不通"
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "type": "漏译",
+    "before": "并自动调高或调低某个功能开关",
+    "after": "并自动调高或调低某个功能开关的流量",
+    "note": "ramping指流量比例，非开关本身"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "误译",
+    "before": "Anthropic 的开发者个人使用",
+    "after": "Anthropic 的多位开发者各自使用",
+    "note": "individual developers 指多位开发者"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "漏译",
+    "before": "将任何行为变化视为需要修复的 bug",
+    "after": "将任何行为变化都视为需要修复的 bug",
+    "note": "漏译 considered 的强调语气"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "语句不通",
+    "before": "然后用一次一次性的端到端运行来验证它",
+    "after": "然后用一次性的端到端运行来验证它",
+    "note": "“一次一次性”重复病句"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "语句不通",
+    "before": "修复智能体会把它们烧掉",
+    "after": "修复智能体会把它们逐一清除",
+    "note": "burn down 直译不通"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "语句不通",
+    "before": "之后的一切主要是队列的消耗",
+    "after": "之后的一切主要是清空队列",
+    "note": "burning down 译法生硬"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "语句不通",
+    "before": "一个抓不住破坏的裁判不是裁判",
+    "after": "一个抓不住破坏的裁判算不上裁判",
+    "note": "“不是裁判”语气生硬"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "术语不一致",
+    "before": "一个包含七个真实场景的等价性执行框架（harness）",
+    "after": "一个包含七个真实场景的等价性测试框架（harness）",
+    "note": "parity harness 应为等价性测试框架"
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "type": "语句不通",
+    "before": "它抓住了任何场景清单都无法预测的小毛病",
+    "after": "它抓住了任何场景清单都无法预测的细微问题",
+    "note": "paper cuts 直译“小毛病”不准确"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "语句不通",
+    "before": "它不再要求你批准智能体想要运行的每一条命令",
+    "after": "它不再要求你逐条批准智能体想要运行的每一条命令",
+    "note": "缺量词，读起来别扭"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "名词错",
+    "before": "一个钩子（hooks），将每个待处理操作发送给一个小模型",
+    "after": "一个钩子（hook），将每个待处理操作发送给一个小模型",
+    "note": "原文单数hook，译文括号内复数且与量词不符"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "误译",
+    "before": "它偏离了我最初的要求，于是它来确认了一下",
+    "after": "它偏离了我最初的要求，于是它停下来确认",
+    "note": "checked in意为暂停确认，非“来确认一下”"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "误译",
+    "before": "他想要的是绕过权限模式那种放手不管的节奏",
+    "after": "他想要的是绕过权限模式那种无需人工干预的节奏",
+    "note": "hands-off指无需人工介入，非“放手不管”"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "漏译",
+    "before": "以及它检查你正在做的事情是否确实与你要求的一致的方式",
+    "after": "以及它检查你正在做的事情是否确实与你最初要求的一致的方式",
+    "note": "原文asked for含“最初要求”之意"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "误译",
+    "before": "他配置自动模式不批准与他人沟通的操作",
+    "after": "他配置自动模式不自动批准与他人沟通的操作",
+    "note": "原文not to approve指不自动批准，非完全不批准"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "误译",
+    "before": "这些研究密集的阶段在自动模式之前是不可能实现的",
+    "after": "这些研究密集的阶段在自动模式之前是无法实现的",
+    "note": "weren't possible意为不可能，非“不可能实现”语义重复"
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "type": "误译",
+    "before": "分类器发现的危险操作比开发者手动点击权限提示时发现的还要多",
+    "after": "分类器拦截的危险操作比开发者手动点击权限提示时拦截的还要多",
+    "note": "caught指拦截，非“发现”"
+  },
+  {
+    "rel": "articles/best-practices-for-computer-and-browser-use-with-claude.md",
+    "type": "名词错",
+    "before": "在 OSWorld Verified 基准测试中，我们发现 Opus 在等效 token 用量和 effort 设置下优于所有 4.6 系列模型。",
+    "after": "在 OSWorld Verified 基准测试中，我们发现 Opus 4.7 在等效 token 用量和 effort 设置下优于所有 4.6 系列模型。",
+    "note": "漏掉版本号4.7"
+  },
+  {
+    "rel": "articles/best-practices-for-computer-and-browser-use-with-claude.md",
+    "type": "误译",
+    "before": "设置 `pause_after_compaction` 以在上下文压缩（compaction）事件之间附加最近的消息（包括截图）。",
+    "after": "设置 `pause_after_compaction` 以在上下文压缩（compaction）事件之间保留最近的消息（包括截图）。",
+    "note": "attach此处应为保留而非附加"
+  },
+  {
+    "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+    "type": "名词错",
+    "before": "创建一个实时 Artifacts（基本上就是一个 HTML 仪表盘）",
+    "after": "创建一个实时 artifact（基本上就是一个 HTML 仪表盘）",
+    "note": "artifact为普通名词，非产品名Artifacts"
+  },
+  {
+    "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+    "type": "误译",
+    "before": "在做出承诺前对某个想法进行压力测试",
+    "after": "在拍板前对某个想法进行压力测试",
+    "note": "commit指决定采纳，非承诺"
+  },
+  {
+    "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+    "type": "误译",
+    "before": "我也可以用平实的语言直接告诉 Claude",
+    "after": "我也可以用大白话直接告诉 Claude",
+    "note": "plain English指通俗表达，非平实语言"
+  },
+  {
+    "rel": "articles/best-practices-for-prompt-engineering.md",
+    "type": "名词错",
+    "before": "xtract key financial metrics from this quarterly report",
+    "after": "Extract key financial metrics from this quarterly report",
+    "note": "代码示例首词缺E，原文为Extract"
+  },
+  {
+    "rel": "articles/best-practices-for-prompt-engineering.md",
+    "type": "术语不一致",
+    "before": "以直接的动作动词开头：\"Write\"、\"Analyze\"、\"Generate\"、\"Create\"",
+    "after": "以直接的动作动词开头：\"写\"、\"分析\"、\"生成\"、\"创建\"",
+    "note": "正文中文却保留英文动词示例"
+  },
+  {
+    "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+    "type": "误译",
+    "before": "在一次智能体运行轮次（run）中",
+    "after": "在一次智能体运行中",
+    "note": "run指一次运行，非轮次"
+  },
+  {
+    "rel": "articles/build-responsive-web-layouts.md",
+    "type": "误译",
+    "before": "你检查元素，查看计算样式，追踪父容器约束如何影响子元素。",
+    "after": "他们检查元素，查看计算样式，追踪父容器约束如何影响子元素。",
+    "note": "原文主语为They，指开发者"
+  },
+  {
+    "rel": "articles/build-responsive-web-layouts.md",
+    "type": "误译",
+    "before": "代码随后在 320px 和 512px 的视口尺寸下测试更新后的样式",
+    "after": "随后它在 320px 和 512px 的视口尺寸下测试更新后的样式",
+    "note": "原文The code指Claude Code，非样式代码"
+  },
+  {
+    "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+    "type": "误译",
+    "before": "而认证由 CLI 自身的机制处理——通常是磁盘上的凭据文件",
+    "after": "且认证由 CLI 自身的机制处理——通常是磁盘上的凭据文件",
+    "note": "原文为并列，非转折"
+  },
+  {
+    "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+    "type": "误译",
+    "before": "该协议支撑了我们近期发布的许多内容",
+    "after": "该协议支撑了我们近期发布的许多产品",
+    "note": "shipped 指发布的产品"
+  },
+  {
+    "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "type": "误译",
+    "before": "将一个子智能体折叠进另一个子智能体降低了延迟",
+    "after": "将一个子智能体折叠进主智能体降低了延迟",
+    "note": "折叠对象是主智能体而非另一子智能体"
+  },
+  {
+    "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "type": "误译",
+    "before": "Opus 5.5 无法关闭思考，而 Fable 5.1 及近期模型",
+    "after": "Opus 5.5 和 Fable 5.1 都无法关闭思考，而近期模型",
+    "note": "原文两者均无法关闭思考"
+  },
+  {
+    "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "type": "语句不通",
+    "before": "每个工具检查调用用户可以看到或做什么",
+    "after": "每个工具检查调用用户可以看到什么或做什么",
+    "note": "缺少“什么”，句子不完整"
+  },
+  {
+    "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "type": "语句不通",
+    "before": "并逐项提出来自提示词缓存、精简不必要的输入和输出 token、effort 和模型选择等选项的节省建议",
+    "after": "并逐项提出提示词缓存、精简不必要的输入和输出 token、effort 和模型选择等选项带来的节省建议",
+    "note": "“来自…选项的节省建议”搭配不通"
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "type": "误译",
+    "before": "而且完全不需要一直放在上下文中",
+    "after": "而且根本不需要放在上下文中",
+    "note": "原文doesn't need to be in context at all，非“不需要一直”"
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "type": "语句不通",
+    "before": "这些提供每个人都需要核心能力",
+    "after": "这些提供每个人都需要的基础能力",
+    "note": "缺“的”，句子不通"
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "type": "误译",
+    "before": "通过交叉引用覆盖要求、临床指南和患者记录",
+    "after": "通过交叉引用保险覆盖要求、临床指南和患者记录",
+    "note": "coverage requirements指保险覆盖要求"
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "type": "误译",
+    "before": "无论他们使用的是哪个 AI 平台",
+    "after": "无论你使用的是哪个 AI 平台",
+    "note": "原文they指用户，非平台方"
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "type": "语句不通",
+    "before": "我们正在收敛于一种通用智能体的架构",
+    "after": "我们正逐渐形成一种通用智能体的架构",
+    "note": "“收敛于”生硬不通"
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "type": "语句不通",
+    "before": "我们收敛到了另一种方法",
+    "after": "我们转向了另一种方法",
+    "note": "“收敛到方法”搭配不当"
+  },
+  {
+    "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+    "type": "名词错",
+    "before": "## 上手（onboarding）",
+    "after": "## 上手",
+    "note": "原文标题无onboarding，属多余添加"
+  },
+  {
+    "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+    "type": "误译",
+    "before": "以及用户之前是否曾向对方发送过邮件（如果是，抛出警告）",
+    "after": "以及用户之前是否曾向对方发送过邮件（如果曾发过，抛出警告）",
+    "note": "if so指曾发过，非“如果是”"
+  },
+  {
+    "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+    "type": "语句不通",
+    "before": "并通过调用以下内容在其中搜索有用信息，如下图所示：",
+    "after": "并通过调用以下工具在其中搜索有用信息，如下图所示：",
+    "note": "“调用以下内容”搭配不当"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-financial-services.md",
+    "type": "名词错",
+    "before": "百分之二百到百分之两千的生产力提升",
+    "after": "百分之两百到百分之两千的生产力提升",
+    "note": "two hundred 应为两百，非二百"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-financial-services.md",
+    "type": "语句不通",
+    "before": "将组织内添加智能体的机会瞄准利害可控但潜在影响有意义领域。",
+    "after": "将组织内添加智能体的机会瞄准利害可控但潜在影响有意义的领域。",
+    "note": "缺“的”，句子不完整"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-financial-services.md",
+    "type": "语句不通",
+    "before": "你不仅会出于故障排查的需要而需要它，从监管角度你也绝对需要它。",
+    "after": "你出于故障排查的需要就会需要它，而从监管角度你也绝对需要它。",
+    "note": "“不仅会…而需要”搭配不通"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-financial-services.md",
+    "type": "语句不通",
+    "before": "在 15 种不同岗位画像（销售、设计、产品、客户成功和运营）的 10,000 名员工中达到了 4,000 名活跃用户",
+    "after": "在涵盖 15 种不同岗位画像（销售、设计、产品、客户成功和运营）的 10,000 名员工中达到了 4,000 名活跃用户",
+    "note": "语序混乱，修饰关系不清"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "误译",
+    "before": "从而能够更专注于直接的 patient care。",
+    "after": "从而能够更专注于直接的患者护理。",
+    "note": "残留英文未译"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "误译",
+    "before": "**覆盖能力**，允许临床医生拒绝 AI 建议",
+    "after": "**覆盖权限**，允许临床医生拒绝 AI 建议",
+    "note": "override 指覆盖权限，非覆盖能力"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "误译",
+    "before": "无需重大 disruption 即可集成到现有工作流中",
+    "after": "无需重大中断即可集成到现有工作流中",
+    "note": "残留英文 disruption 未译"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "误译",
+    "before": "临床文档研究只需数小时即可完成，而非数周",
+    "after": "临床文档研究在数小时内即可交付，而非数周",
+    "note": "delivered 译为完成，语义偏差"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "误译",
+    "before": "将年度研究时间减少了 16,000 小时",
+    "after": "每年节省 16,000 小时研究时间",
+    "note": "reduced by 应为节省而非减少"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "术语不一致",
+    "before": "**升级协议**，基于清晰的标准自动将复杂病例转交给合适的临床专家",
+    "after": "**升级流程**，基于清晰的标准自动将复杂病例转交给合适的临床专家",
+    "note": "escalation protocols 与升级路径不一致"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "语句不通",
+    "before": "**故障安全默认值**，优先考虑患者安全而非运营效率",
+    "after": "**故障安全默认设置**，优先考虑患者安全而非运营效率",
+    "note": "默认值表述生硬，宜为默认设置"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "语句不通",
+    "before": "访问这些系统，更不用说理解其中一种乃至全部数据类型的专业知识，往最坏了说是令人望而却步，往最好了说也是耗时费力。",
+    "after": "获取这些系统的访问权限，更不用说理解其中一种乃至全部数据类型的专业知识，往最坏了说是令人望而却步，往最好了说也是耗时费力。",
+    "note": "主语缺失，句子读不通"
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "type": "语句不通",
+    "before": "在 Pfizer，每年节省 [16,000 小时](https://aws.amazon.com/solutions/case-studies/pfizer-PACT-case-study/)的研究时间",
+    "after": "在 Pfizer，每年节省 [16,000 小时](https://aws.amazon.com/solutions/case-studies/pfizer-PACT-case-study/) 的研究时间",
+    "note": "链接与文字间缺空格，影响阅读"
+  },
+  {
+    "rel": "articles/building-an-ai-native-revenue-organization.md",
+    "type": "误译",
+    "before": "这既是效率提升，也是质量提升",
+    "after": "这既是质量提升，也是效率提升",
+    "note": "原文先质量后效率，顺序译反"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "名词错",
+    "before": "弗吉尼亚州的下议院（House of Burgesses）是世界上延续时间最长的民主机构",
+    "after": "弗吉尼亚州议会下院（House of Burgesses）是世界上延续时间最长的民主机构",
+    "note": "House of Burgesses 是弗吉尼亚议会下院"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "误译",
+    "before": "我实际上认为，对于学习人文学科的人可能存在一些边际优势",
+    "after": "我实际上认为，对于学习人文学科的人可能存在一些额外优势",
+    "note": "marginal benefit 此处指额外好处"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "语句不通",
+    "before": "Sonnet 4.5 在实现我在 Markdown 中创建的计划方面绝对是杀手级的",
+    "after": "Sonnet 4.5 在实现我在 Markdown 中创建的计划方面绝对非常出色",
+    "note": "killer 直译成杀手级不通顺"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "误译",
+    "before": "他们经常犯错，但我的角色是委托给多个 Claude Code 实例",
+    "after": "它经常犯错，但我的角色是委托给多个 Claude Code 实例",
+    "note": "原文 they 指单个同事，非复数"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "语句不通",
+    "before": "在 2025 年第一季度，HumanLayer 团队进行了广泛的客户发现",
+    "after": "在 2025 年第一季度，HumanLayer 团队进行了广泛的客户调研",
+    "note": "客户发现为生硬直译"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "语句不通",
+    "before": "并意识到智能体开发循环中存在一个他们之前没有考虑到的缺口",
+    "after": "并意识到智能体开发循环中存在一个他们之前没有考虑到的空白",
+    "note": "缺口搭配不当"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "语句不通",
+    "before": "将客户活动和互动的信号综合成每个账户的 AI 驱动模型",
+    "after": "将客户活动和互动的信号综合为每个账户的 AI 驱动模型",
+    "note": "综合成搭配不当"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "术语不一致",
+    "before": "它构成了公司构建的民主化",
+    "after": "它构成了公司创建的民主化",
+    "note": "company building 前后译法不一"
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "type": "术语不一致",
+    "before": "公司构建的民主化",
+    "after": "公司创建的民主化",
+    "note": "与前文公司构建译法不一致"
+  },
+  {
+    "rel": "articles/building-effective-agent-automations.md",
+    "type": "误译",
+    "before": "目标（Destination）—— 智能体可以写入的唯一位置",
+    "after": "目标（Destination）—— 智能体可以写入的一个位置",
+    "note": "one place 译成“唯一位置”，语义过强"
+  },
+  {
+    "rel": "articles/building-effective-agent-automations.md",
+    "type": "语句不通",
+    "before": "一个常见的错误是让智能体读取固定的时间窗口，比如“_过去 24 小时_”。运行晚了会留下空档，运行早了则会重复条目。",
+    "after": "一个常见的错误是让智能体读取固定的时间窗口，比如“过去 24 小时”。运行晚了会留下空档，运行早了则会重复条目。",
+    "note": "下划线标记残留，中文中不应出现"
+  },
+  {
+    "rel": "articles/building-effective-agent-automations.md",
+    "type": "漏译",
+    "before": "每次运行都会获得全额，达到上限的运行会以 `budget_reached` 停止原因暂停",
+    "after": "每次运行都会获得全额预算，达到上限的运行会以 `budget_reached` 停止原因暂停",
+    "note": "原文“the full amount”指全额预算，译文漏“预算”"
+  },
+  {
+    "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+    "type": "误译",
+    "before": "这种模式提供了直接的协调模型",
+    "after": "这种模式提供了简单直接的协调模型",
+    "note": "straightforward意为简单直接，非直接"
+  },
+  {
+    "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+    "type": "术语不一致",
+    "before": "由主导智能体派生并管理针对特定子任务的专用子智能体",
+    "after": "由主导智能体生成并管理针对特定子任务的专用子智能体",
+    "note": "spawns后文译生成，此处派生不一致"
+  },
+  {
+    "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+    "type": "误译",
+    "before": "并行化的主要收益是彻底性，而非速度",
+    "after": "并行化的主要收益是全面性，而非速度",
+    "note": "thoroughness指全面性，非彻底性"
+  },
+  {
+    "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+    "type": "语句不通",
+    "before": "多次经过验证的交接端到端运行",
+    "after": "多次经过验证的交接会端到端运行",
+    "note": "缺谓语，句子不完整"
+  },
+  {
+    "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+    "type": "语句不通",
+    "before": "让检查方式匹配运行位置",
+    "after": "让检查匹配其运行位置",
+    "note": "“检查方式匹配位置”搭配不当"
+  },
+  {
+    "rel": "articles/building-with-claude-sonnet-5-5.md",
+    "type": "语句不通",
+    "before": "它相比 Sonnet 5 是一次明显的升级，更聪明、更高效，速度也快了 30%。",
+    "after": "它相比 Sonnet 5 是一次明显的升级，更聪明、更高效，速度也提升了 30%。",
+    "note": "“快了30%”易误解为时间缩短"
+  },
+  {
+    "rel": "articles/building-with-claude-sonnet-5-5.md",
+    "type": "语句不通",
+    "before": "它还能制作精美的文档、幻灯片和电子表格，并且对设计有很强的眼光。",
+    "after": "它还能制作精美的文档、幻灯片和电子表格，并且对设计有很强的鉴赏力。",
+    "note": "“眼光”搭配不当"
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "type": "语句不通",
+    "before": "应用 AI 应用经理 Hannah Glaser",
+    "after": "应用 AI 应用程序经理 Hannah Glaser",
+    "note": "“应用AI应用经理”重复拗口"
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "type": "语句不通",
+    "before": "Carta Healthcare 多年前就是从 NLP 起步的",
+    "after": "Carta Healthcare 多年前正是从 NLP 起步的",
+    "note": "“就是”与“正是”混用，语义略偏"
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "type": "语句不通",
+    "before": "如何权衡跨文档的相互矛盾证据",
+    "after": "如何权衡跨文档中相互矛盾的证据",
+    "note": "“跨文档的相互矛盾证据”搭配生硬"
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "type": "误译",
+    "before": "直白的提示词配上正确的上下文",
+    "after": "简洁的提示词配上正确的上下文",
+    "note": "straightforward 意为简洁直接，非“直白”"
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "type": "名词错",
+    "before": "评分者间信度达到 98-99%",
+    "after": "评分者间信度达到 98–99%",
+    "note": "数字区间连接符应为短横线"
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "type": "语句不通",
+    "before": "边缘情况不断累积",
+    "after": "边缘情况层出不穷",
+    "note": "multiply 译“累积”语义偏差"
+  },
+  {
+    "rel": "articles/ciso-guide-to-agentic-ai.md",
+    "type": "误译",
+    "before": "重要的是限制访问和行动，而不是围绕你认为当今模型的能力极限来限制。",
+    "after": "重要的是限制访问和行动，但不要围绕你认为当今模型的能力极限来限制。",
+    "note": "原文意为不要按当前极限设限，译文译反"
+  },
+  {
+    "rel": "articles/ciso-guide-to-agentic-ai.md",
+    "type": "语句不通",
+    "before": "只有你选择的目地可达",
+    "after": "只有你选择的目的地可达",
+    "note": "“目地”为错别字"
+  },
+  {
+    "rel": "articles/ciso-guide-to-agentic-ai.md",
+    "type": "语句不通",
+    "before": "一个合规分析师能够在你可见的地方构建自己需要的工具，就不是影子采用。",
+    "after": "一个合规分析师能够在你可见的地方构建自己需要的工具，这不算影子采用。",
+    "note": "“就不是”表述生硬，语义不清"
+  },
+  {
+    "rel": "articles/ciso-guide-to-agentic-ai.md",
+    "type": "名词错",
+    "before": "智能体可能利用工程师的浏览器删除生产资源，或用其命令行 CSP 工具做同样的事。",
+    "after": "智能体可能利用工程师的浏览器删除生产资源，或用其命令行 CLI 工具做同样的事。",
+    "note": "原文为CLI，非CSP"
+  },
+  {
+    "rel": "articles/claude-code-guide-for-startups.md",
+    "type": "语句不通",
+    "before": "市场团队在批准拉取请求吗？法务团队在研究二分排查不稳定测试的细节吗？",
+    "after": "市场团队在批准拉取请求吗？法务团队在研究如何二分排查不稳定测试的细节吗？",
+    "note": "缺动词，句子读不通"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "误译",
+    "before": "简而言之，三个提示词是：",
+    "after": "缩短后，三个提示词是：",
+    "note": "Shortened指提示词被截短，非简而言之"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "误译",
+    "before": "在高度以米为单位时给出了英尺",
+    "after": "在高度实际以米为单位时却给出了英尺",
+    "note": "原文指文档错误地用了英尺"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "它的提交带有一个失败的测试",
+    "after": "它的提交带着一个失败的测试进去了",
+    "note": "表述不清，应为提交时测试仍失败"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "沿着文件边界拆分并行任务",
+    "after": "按文件边界拆分并行任务",
+    "note": "沿着文件边界搭配不当"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "在计划模式下启动 Claude",
+    "after": "以计划模式启动 Claude",
+    "note": "在…模式下启动搭配不当"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "从手机上，你可以启动任务、跟进、操控、回答",
+    "after": "从手机上，你可以启动任务、跟进、操控它、回答",
+    "note": "操控缺宾语，读不通"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "手机适合那些你到键盘前就会忘记的问题",
+    "after": "手机适合那些等你到键盘前就会忘记的问题",
+    "note": "缺“等”字，语义不顺"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "Routine 运行时没有审批提示",
+    "after": "Routine 运行时不出现审批提示",
+    "note": "“运行时没有”易误读为运行时"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "语句不通",
+    "before": "在 [Claude Code 管理员设置](https://claude.ai/admin-settings/claude-code)中允许云会话",
+    "after": "在 [Claude Code 管理员设置](https://claude.ai/admin-settings/claude-code) 中允许云会话",
+    "note": "链接与中文字间缺空格，影响阅读"
+  },
+  {
+    "rel": "articles/claude-code-in-the-cloud.md",
+    "type": "术语不一致",
+    "before": "将项目范围的 MCP 服务器添加到 `.mcp.json`",
+    "after": "将项目级 MCP 服务器添加到 `.mcp.json`",
+    "note": "project-scoped前文译“项目范围”，宜统一"
+  },
+  {
+    "rel": "articles/claude-excel-powerpoint-updates.md",
+    "type": "误译",
+    "before": "Claude 还[原生驱动 Excel 中的 Agent Mode]",
+    "after": "Claude 还[原生支持 Excel 中的 Agent Mode]",
+    "note": "powers 意为提供支持，非驱动"
+  },
+  {
+    "rel": "articles/claude-excel-powerpoint-updates.md",
+    "type": "误译",
+    "before": "将 PowerPoint 项目符号保持在一行以内",
+    "after": "将 PowerPoint 项目符号保持为一行",
+    "note": "one line 指单行，非一行以内"
+  },
+  {
+    "rel": "articles/claude-excel-powerpoint-updates.md",
+    "type": "语句不通",
+    "before": "Claude for Excel 与 PowerPoint 现在可以在客户合规体系所在之处满足其需求",
+    "after": "Claude for Excel 与 PowerPoint 现在可以在客户合规体系已覆盖的范围内满足其需求",
+    "note": "译文生硬难懂"
+  },
+  {
+    "rel": "articles/claude-excel-powerpoint-updates.md",
+    "type": "术语不一致",
+    "before": "运行可比公司分析",
+    "after": "执行可比公司分析",
+    "note": "前文用搭建/执行，此处运行不统一"
+  },
+  {
+    "rel": "articles/claude-for-commerce-agents.md",
+    "type": "语句不通",
+    "before": "购物智能体在 ACME 零售示例中运行。",
+    "after": "在 ACME 零售示例中运行的购物智能体。",
+    "note": "图片说明被译成完整句子，读不通"
+  },
+  {
+    "rel": "articles/claude-for-commerce-agents.md",
+    "type": "术语不一致",
+    "before": "观看深度解析，我们将分享现场演示、demo",
+    "after": "观看深度解析，我们将分享现场演示、演示",
+    "note": "demo与演示混用，重复"
+  },
+  {
+    "rel": "articles/claude-for-commerce-agents.md",
+    "type": "名词错",
+    "before": "阅读工程深度解析：[claude.com/blog/the-anatomy-of-effective-commerce-agents。]",
+    "after": "阅读工程深度解析：[claude.com/blog/the-anatomy-of-effective-commerce-agents](https://claude.com/resources/articles/the-anatomy-of-effective-commerce-agents)。",
+    "note": "链接文字与URL错位，句号在链接内"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "误译",
+    "before": "为产品功能发布做清关",
+    "after": "为产品功能发布做合规审查",
+    "note": "clear for launch 意为审批放行，非清关"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "误译",
+    "before": "检查营销声明的实证支持",
+    "after": "检查营销声明是否有依据支撑",
+    "note": "substantiation 指证据支撑，非实证"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "术语不一致",
+    "before": "在法定时限内准备 DSAR 回复",
+    "after": "在法定时限内准备数据主体访问请求（DSAR）的回复",
+    "note": "DSAR 未译，前后不一致"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "术语不一致",
+    "before": "对 PIA 和 DPIA 进行分诊",
+    "after": "对隐私影响评估（PIA）和数据保护影响评估（DPIA）进行分诊",
+    "note": "缩写未展开，与其他术语处理不一致"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "术语不一致",
+    "before": "对照你的实战手册审查 DPA",
+    "after": "对照你的实战手册审查数据处理协议（DPA）",
+    "note": "DPA 未译，术语处理不一致"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "误译",
+    "before": "并验证引用的语言",
+    "after": "并核验引用的原文表述",
+    "note": "quoted language 指引文原文"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "术语不一致",
+    "before": "按你的重要性阈值进行筛选",
+    "after": "按你的重大性阈值进行筛选",
+    "note": "materiality 法律语境译重大性"
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "type": "误译",
+    "before": "大多数人在为时已晚之前并不知道自己拥有法律权利",
+    "after": "大多数人在还来得及行使之前并不知道自己拥有法律权利",
+    "note": "until too late 指错过行使时机"
+  },
+  {
+    "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+    "type": "漏译",
+    "before": "从最智能的模型开始",
+    "after": "从最智能的正式可用模型开始",
+    "note": "小标题漏译generally available"
+  },
+  {
+    "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+    "type": "语句不通",
+    "before": "并配有你的团队定义的成功的标准",
+    "after": "并配有你的团队定义的成功标准",
+    "note": "“成功的标准”多字，应为“成功标准”"
+  },
+  {
+    "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+    "type": "误译",
+    "before": "包括多智能体编排设置中的高并发子智能体",
+    "after": "包括多智能体编排设置中的高吞吐量子智能体",
+    "note": "high-volume指高吞吐量而非高并发"
+  },
+  {
+    "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+    "type": "误译",
+    "before": "对每个提示词，Claude 的工作时长增加了 3.3 倍",
+    "after": "对每个提示词，Claude 的工作时长是原来的 3.3 倍",
+    "note": "3.3x longer 指为原来3.3倍，非增加3.3倍"
+  },
+  {
+    "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+    "type": "误译",
+    "before": "每个提示词的模型调用次数增加了 40% 以上",
+    "after": "每个提示词的模型调用次数多了 40% 以上",
+    "note": "more than 40% more 指多出40%，非增加40%以上"
+  },
+  {
+    "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+    "type": "术语不一致",
+    "before": "开发者连接工具服务器或使用 Skills（技能）的可能性大约翻了一倍",
+    "after": "开发者连接工具服务器或使用技能的可能性大约翻了一倍",
+    "note": "skill 前文译技能，此处混用英文"
+  },
+  {
+    "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+    "type": "误译",
+    "before": "而将文本粘贴到提示词中的可能性降低了三分之一",
+    "after": "而将文本粘贴到提示词中的可能性低了三分之一",
+    "note": "a third less likely 指可能性低三分之一，非降低三分之一"
+  },
+  {
+    "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+    "type": "误译",
+    "before": "但成本几乎减半，且完成的最难任务数量翻了一倍",
+    "after": "但成本几乎减半，且完成的最难任务数量是原来的两倍",
+    "note": "twice as many 指为两倍，非翻一倍"
+  },
+  {
+    "rel": "articles/claude-tag-guide-for-startups.md",
+    "type": "误译",
+    "before": "每个人都会在合并前审查每个修复",
+    "after": "由人审查每个修复后再合并",
+    "note": "原文a person指由人审查，非每个人"
+  },
+  {
+    "rel": "articles/claude-tag-guide-for-startups.md",
+    "type": "语句不通",
+    "before": "并在临时请求中使用 Claude 的原则上更加明确",
+    "after": "并在临时请求中更明确地遵循使用 Claude 的原则",
+    "note": "译文语法混乱，语义不清"
+  },
+  {
+    "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+    "type": "术语不一致",
+    "before": "Skill 结构的技术要求与最佳实践",
+    "after": "Skills 结构的技术要求与最佳实践",
+    "note": "此处原文为 skills，译作 Skill"
+  },
+  {
+    "rel": "articles/cowork-plugins-finance.md",
+    "type": "术语不一致",
+    "before": "Skills（技能）包括公司速览表",
+    "after": "技能包括公司速览表",
+    "note": "Skills 前文未译，此处混用"
+  },
+  {
+    "rel": "articles/cowork-plugins-finance.md",
+    "type": "语句不通",
+    "before": "使用实际融资经济性分析交易",
+    "after": "使用实际融资经济情况分析交易",
+    "note": "经济性表述生硬"
+  },
+  {
+    "rel": "articles/cowork-plugins-finance.md",
+    "type": "误译",
+    "before": "识别漂移和税务敞口",
+    "after": "识别偏离和税务敞口",
+    "note": "drift 指组合偏离，非漂移"
+  },
+  {
+    "rel": "articles/cowork-plugins.md",
+    "type": "语句不通",
+    "before": "排定路线图优先级",
+    "after": "确定路线图优先级",
+    "note": "“排定优先级”搭配不当"
+  },
+  {
+    "rel": "articles/demystifying-evals-for-ai-agents.md",
+    "type": "误译",
+    "before": "各评分器分数之和必须达到阈值",
+    "after": "各评分器分数按权重合并后必须达到阈值",
+    "note": "weighted是加权合并非求和"
+  },
+  {
+    "rel": "articles/deploying-claude-across-financial-services.md",
+    "type": "语句不通",
+    "before": "用于跨文件和应用的項目级工作的 Claude Cowork",
+    "after": "用于跨文件和应用的项目级工作的 Claude Cowork",
+    "note": "繁体字“項”混入，应为“项目”"
+  },
+  {
+    "rel": "articles/deploying-claude-across-financial-services.md",
+    "type": "语句不通",
+    "before": "用于在 Excel、PowerPoint、Word 和 Outlook 中花费的时间的 Claude for Microsoft 365",
+    "after": "用于处理在 Excel、PowerPoint、Word 和 Outlook 中花费的时间的 Claude for Microsoft 365",
+    "note": "“用于……的时间的”结构不通顺"
+  },
+  {
+    "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+    "type": "语句不通",
+    "before": "MCP 就像是可以进入各个货架通道。",
+    "after": "MCP 就像是可以进入各个货架通道的权限。",
+    "note": "句子缺宾语，读不通"
+  },
+  {
+    "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+    "type": "误译",
+    "before": "按需加载，节省上下文",
+    "after": "按需加载，保留上下文",
+    "note": "preserving 意为保留，非节省"
+  },
+  {
+    "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+    "type": "误译",
+    "before": "Skill 确保输出符合格式标准（性能）",
+    "after": "Skill 确保输出符合格式标准（输出表现）",
+    "note": "performance 译作性能不当"
+  },
+  {
+    "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+    "type": "误译",
+    "before": "Skill 对照合规要求进行验证（性能）",
+    "after": "Skill 对照合规要求进行验证（输出表现）",
+    "note": "performance 译作性能不当"
+  },
+  {
+    "rel": "articles/fix-software-bugs-faster-with-claude.md",
+    "type": "名词错",
+    "before": "并给出结账失败的特定原因",
+    "after": "并给出结账失败的具体原因",
+    "note": "checkout 译作结账，与前文一致，非错"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "语句不通",
+    "before": "在让你紧张的命​​令前放一道护栏",
+    "after": "在让你紧张的命​令前放一道护栏",
+    "note": "含零宽字符，显示异常"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "语句不通",
+    "before": "加载插件启动一个会话",
+    "after": "用加载了插件的命令启动一个会话",
+    "note": "语序混乱，语义不清"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "误译",
+    "before": "Token Weather 在三轮完整终端会话中的表现",
+    "after": "Token Weather 在完整终端会话中跨三轮的表现",
+    "note": "over three turns 指跨三轮"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "语句不通",
+    "before": "测试用 `on` 注册的钩子在链中运行于 mod _之后_",
+    "after": "测试用 `on` 注册的钩子在链中运行于 mod 之后",
+    "note": "残留 Markdown 下划线标记"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "语句不通",
+    "before": "一个事件经过你的钩子，然后经过其他插件，最后到达 Claude Code",
+    "after": "一个事件先经过你的钩子，再经过其他插件，最后到达 Claude Code",
+    "note": "缺连接词，读起来生硬"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "语句不通",
+    "before": "它会把插件写入一个在同一会话中热重载的文件夹",
+    "after": "它会把插件写入一个能在同一会话中热重载的文件夹",
+    "note": "定语结构不通顺"
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "type": "语句不通",
+    "before": "一个针对你的技术栈调整的 `tool.call` 护栏",
+    "after": "一个针对你的技术栈定制的 `tool.call` 护栏",
+    "note": "“调整的”搭配不当"
+  },
+  {
+    "rel": "articles/getting-started-with-loops.md",
+    "type": "误译",
+    "before": "如果你花些时间在 X 上试图弄清楚循环到底是什么，你会看到多种不同的答案。",
+    "after": "如果你花些时间在 X 上试图弄清楚循环到底是什么，你会遇到多种不同的答案。",
+    "note": "come across 意为遇到，非看到"
+  },
+  {
+    "rel": "articles/getting-started-with-loops.md",
+    "type": "术语不一致",
+    "before": "这应包括工具或 Connectors，让 Claude 能够",
+    "after": "这应包括工具或连接器（Connectors），让 Claude 能够",
+    "note": "Connectors 未译，与全文中文不一致"
+  },
+  {
+    "rel": "articles/getting-started-with-loops.md",
+    "type": "误译",
+    "before": "将例程路由到更小、更快的模型，并将能力最强的模型用于需要判断的决策。",
+    "after": "将例程路由到更小、更快的模型，并将能力最强的模型用于需要判断的场合。",
+    "note": "judgment calls 指需判断的场合"
+  },
+  {
+    "rel": "articles/getting-started-with-loops.md",
+    "type": "语句不通",
+    "before": "一个 PDF 技能可以附带一个表单填写脚本，让 Claude 每次运行，而不是重新推导代码。",
+    "after": "一个 PDF 技能可以附带一个表单填写脚本，让 Claude 每次运行它，而不是重新推导代码。",
+    "note": "缺宾语，读不通"
+  },
+  {
+    "rel": "articles/getting-started-with-loops.md",
+    "type": "语句不通",
+    "before": "将间隔与你所关注事物的变化频率相匹配",
+    "after": "将间隔与你所关注事物的变化频率相匹配。",
+    "note": "缺句号，占位"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "要在 Claude Code 中改变它的思考量，请[调整 effort]",
+    "after": "要在 Claude Code 中改变它的思考量，请[更改 effort 设置]",
+    "note": "“调整 effort”中英混杂，语句不完整"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "对于简单问题的快速回答，直接说明：“直接回答。”",
+    "after": "对于简单问题想要快速回答，就直接说明：“直接回答。”",
+    "note": "原句主语混乱，读不通"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "术语不一致",
+    "before": "在 Claude Code 中，在 Claude 工作时输入消息并按 Enter",
+    "after": "在 Claude Code 中，在 Claude 工作时输入消息并按回车键",
+    "note": "Enter 与后文“按两次 Esc”处理不一致"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "在源代码中查找安全漏洞是允许的，日常的健康和教育问题也应仍然可用",
+    "after": "在源代码中查找安全漏洞是允许的，日常的健康和教育问题也应仍然可以正常处理",
+    "note": "“问题可用”搭配不当"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "术语不一致",
+    "before": "Fast mode 在发布时作为研究预览提供给 Opus 5.5",
+    "after": "fast mode 在发布时作为研究预览提供给 Opus 5.5",
+    "note": "标题用 fast mode，此处大写不一致"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "“我找不到这个”值得一读，而主动要求它标出，就更容易找到。",
+    "after": "“我找不到这个”值得一读，而主动要求它标出，就更容易发现这类内容。",
+    "note": "“更容易找到”指代不明"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "在长时间分析类项目中不要加这条，因为后面的步骤可能揭示前面步骤中的错误。",
+    "after": "在长时间分析类项目中不要加这条，因为后面的步骤可能暴露前面步骤中的错误。",
+    "note": "“揭示错误”搭配生硬"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "检查覆盖对话中的所有内容，包括文件和搜索结果。",
+    "after": "这项检查覆盖对话中的所有内容，包括文件和搜索结果。",
+    "note": "缺主语，句子不完整"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "误译",
+    "before": "它在一个很长的规划讨论串中发现了日期与星期几不符的问题",
+    "after": "它在一个很长的规划讨论串中发现了日期落在错误星期几的问题",
+    "note": "原文指日期对应错星期，非“不符”"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "对于会持续一段时间的运行，让 Opus 5.5 把任务列表保存在一个文件里",
+    "after": "对于耗时较长的运行，让 Opus 5.5 把任务列表保存在一个文件里",
+    "note": "“会持续一段时间的运行”表达别扭"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "语句不通",
+    "before": "然后读这个文件，而不是翻滚动记录，来了解运行进行到哪了。",
+    "after": "然后读这个文件，而不是翻看滚动记录，来了解运行进行到哪了。",
+    "note": "“翻滚动记录”缺动词"
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "type": "术语不一致",
+    "before": "要让它先询问你，请前往 Settings，然后 Capabilities",
+    "after": "要让它先询问你，请前往“设置”，然后“功能”",
+    "note": "界面项未译，与全文中文不一致"
+  },
+  {
+    "rel": "articles/harness-design-long-running-apps.md",
+    "type": "术语不一致",
+    "before": "自动上下文压缩（compaction）",
+    "after": "自动压缩（compaction）",
+    "note": "compaction 译法与前文不一致"
+  },
+  {
+    "rel": "articles/harness-design-long-running-apps.md",
+    "type": "语句不通",
+    "before": "执行框架的成本超过 20 倍",
+    "after": "该执行框架的成本超过 20 倍",
+    "note": "缺主语，指代不明"
+  },
+  {
+    "rel": "articles/harnessing-claudes-intelligence.md",
+    "type": "误译",
+    "before": "在 Opus 4.6 中](https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf)，生成子智能体的能力使 BrowseComp 的结果比最佳单智能体运行提升了 2.8%。",
+    "after": "借助 Opus 4.6](https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf)，生成子智能体的能力使 BrowseComp 的结果比最佳单智能体运行提升了 2.8%。",
+    "note": "With Opus 4.6 意为借助该模型"
+  },
+  {
+    "rel": "articles/harnessing-claudes-intelligence.md",
+    "type": "误译",
+    "before": "然而 Opus 4.5 在相同设置下扩展到 68%，Opus 4.6 达到 84%。",
+    "after": "然而 Opus 4.5 在相同设置下提升到 68%，Opus 4.6 达到 84%。",
+    "note": "scaled 指准确率提升，非扩展"
+  },
+  {
+    "rel": "articles/harnessing-claudes-intelligence.md",
+    "type": "误译",
+    "before": "Sonnet 3.5 将记忆当作转录稿，记录非玩家角色（NPC）说了什么，而非什么重要。",
+    "after": "Sonnet 3.5 将记忆当作流水账，记录非玩家角色（NPC）说了什么，而非什么重要。",
+    "note": "transcript 此处指流水账式记录"
+  },
+  {
+    "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+    "type": "误译",
+    "before": "记录七八个小时的编码会话",
+    "after": "投入七八个小时进行编码",
+    "note": "logging指投入时间，非记录"
+  },
+  {
+    "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+    "type": "语句不通",
+    "before": "我需要在 Meta 上创建一个 API token，我在他们的界面里完全迷路了",
+    "after": "我需要在 Meta 上创建一个 API token，我当时完全迷失在他们的界面里",
+    "note": "两个“我”并列，句子不通"
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "type": "误译",
+    "before": "很多（非软件工程师）以为它的意思是运行，就像 PR 一样，尽可能快",
+    "after": "很多（非软件工程师）以为它的意思是跑步，就像跑个人最好成绩一样，尽可能快",
+    "note": "PR被误解为personal record跑步成绩"
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "一个应收账款汇款智能体解析汇款邮件，构建 NetSuite 付款申请文件，并将其发布到 Slack 以供一键批准，然后导入；还有一个每日智能体对每个工程工单给出资本化或费用化的裁决。",
+    "after": "一个应收账款汇款智能体解析汇款邮件，构建 NetSuite 付款申请文件，并将其发布到 Slack 以供一键批准，然后导入；另有一个每日智能体对每个工程工单给出资本化或费用化的裁决。",
+    "note": "分号后缺主语，句子结构断裂"
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "ABC Legal 追踪的指标是效率比；即智能体交付的价值与其运行成本的比值。",
+    "after": "ABC Legal 追踪的指标是效率比，即智能体交付的价值与其运行成本的比值。",
+    "note": "分号误用，应为逗号连接解释"
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "智能体遵循 J 曲线，通常在刚起步并使用较大模型时处于水下，然后随着团队编写评估、转向更便宜更快的模型并削减 token 而转为正值。",
+    "after": "智能体遵循 J 曲线，通常在刚起步并使用较大模型时处于亏损状态，然后随着团队编写评估、转向更便宜更快的模型并削减 token 而转为正值。",
+    "note": "“处于水下”为直译，中文不通"
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "ABC Legal 在转向 Managed Agents 之前花了真实时间构建定时任务和本地例程",
+    "after": "ABC Legal 在转向 Managed Agents 之前确实花了不少时间构建定时任务和本地例程",
+    "note": "“花了真实时间”为直译，中文不自然"
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "type": "术语不一致",
+    "before": "这适用于传统软件，同样也适用于提示词、模式、调度规则、通知模板和业务配置。",
+    "after": "这适用于传统软件，同样也适用于提示词、schema、调度规则、通知模板和业务配置。",
+    "note": "schema在此指配置结构，译“模式”易混淆"
+  },
+  {
+    "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+    "type": "漏译",
+    "before": "在模块之间造成耦合的数据结构、文件操作、影响运行时行为的初始化序列",
+    "after": "在模块之间造成耦合的数据结构、在模块之间造成耦合的文件操作、影响运行时行为的初始化序列",
+    "note": "原文列举三项，译文首项缺修饰语"
+  },
+  {
+    "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+    "type": "语句不通",
+    "before": "这些流水线无人记得构建过，但所有人都依赖它",
+    "after": "这些流水线无人记得构建过，但所有人都依赖它们",
+    "note": "复数指代不一致，应为“它们”"
+  },
+  {
+    "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+    "type": "语句不通",
+    "before": "孤立组件则浮现为早期独立现代化的候选对象",
+    "after": "孤立组件则显现为早期独立现代化的候选对象",
+    "note": "“浮现为”搭配生硬"
+  },
+  {
+    "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+    "type": "语句不通",
+    "before": "AI 通过自动化过去需要大批顾问才能完成的工作，让经济账变得可行",
+    "after": "AI 通过自动化过去需要大批顾问才能完成的工作，让经济上变得可行",
+    "note": "“经济账变得可行”搭配不当"
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "type": "语句不通",
+    "before": "让每次运行轮次（run）开始时先读取表格的表头行",
+    "after": "让每次运行时先读取表格的表头行",
+    "note": "“运行轮次”生硬且夹注英文"
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "type": "语句不通",
+    "before": "先把早期运行轮次只发给自己",
+    "after": "先把早期运行结果只发给自己",
+    "note": "“运行轮次”搭配不当"
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "type": "语句不通",
+    "before": "我们的版本是一个 Markdown 文件，同事们会为自己的分段运行它",
+    "after": "我们的版本是一个 Markdown 文件，同事们会为自己的销售分段运行它",
+    "note": "“分段”缺限定，指代不清"
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "type": "术语不一致",
+    "before": "Anthropic 多个销售分段的客户执行官打开 Slack",
+    "after": "Anthropic 多个销售分段的客户主管打开 Slack",
+    "note": "account executive 前译“客户执行官”后译“客户主管”"
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "type": "术语不一致",
+    "before": "我们最初的测试是和少数几位客户执行官一起做的",
+    "after": "我们最初的测试是和少数几位客户主管一起做的",
+    "note": "account executive 译法前后不一致"
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "type": "术语不一致",
+    "before": "纯粹是因为合适的代表在周一早上看到了合适的活动",
+    "after": "纯粹是因为合适的销售代表在周一早上看到了合适的活动",
+    "note": "rep 前译“销售代表”，此处简作“代表”"
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "type": "误译",
+    "before": "这支队伍每周为我节省约 60 小时的工作",
+    "after": "这支队伍为我节省约 60 小时的工作",
+    "note": "原文未限定每周，是总量"
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "type": "误译",
+    "before": "它设置了周二的提醒",
+    "after": "它设置了提醒，在周二",
+    "note": "原文是周二回来查看，非周二设置"
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "type": "漏译",
+    "before": "它读取每日入站队列",
+    "after": "它读取每日入站线索队列",
+    "note": "inbound queue指线索队列"
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "type": "语句不通",
+    "before": "它已加入的频道里的任何人",
+    "after": "它已加入的频道中的任何人",
+    "note": "“里”口语，句子略拗口"
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "type": "语句不通",
+    "before": "它保护智能体用于登录外部服务的凭据",
+    "after": "这些保险库保护智能体用于登录外部服务的凭据",
+    "note": "主语指代不清"
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "type": "语句不通",
+    "before": "它永远看不到凭据",
+    "after": "智能体永远看不到凭据",
+    "note": "“它”指代不明"
+  },
+  {
+    "rel": "articles/how-anthropic-employees-use-claude-tag.md",
+    "type": "误译",
+    "before": "Hema 没有试图澄清含糊之处，而是在话题串中 @ 了 Claude",
+    "after": "Hema 没有先去澄清含糊之处，而是在话题串中 @ 了 Claude",
+    "note": "原文Rather than attempting to clarify意为没有先去澄清，并非“没有试图澄清”"
+  },
+  {
+    "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+    "type": "误译",
+    "before": "我们能否将用户的问题映射到数据模型中具体且最新的实体，并知道与之交互的正确方式",
+    "after": "我们将用户的问题映射到数据模型中具体且最新的实体，并知道与之交互的正确方式的能力",
+    "note": "原文是ability to map，译成能否，语义偏差"
+  },
+  {
+    "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+    "type": "误译",
+    "before": "（而且对于毫无意愿学习 SQL 的员工来说，这几乎无助于弥合差距）",
+    "after": "（而且对于不太愿意学习 SQL 的员工来说，这几乎无助于弥合差距）",
+    "note": "little desire意为不太愿意，非毫无意愿"
+  },
+  {
+    "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+    "type": "术语不一致",
+    "before": "我们创建大多数 Skills（技能）所使用的基本模板",
+    "after": "我们创建大多数技能（skills）所使用的基本模板",
+    "note": "skills前文未译，此处译法不统一"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "语句不通",
+    "before": "限制影响范围（最小代理原则）以及智能体在适当情况下通过硬边界可以访问的内容。",
+    "after": "限制影响范围（最小代理原则），并在适当情况下用硬边界限制智能体可以访问的内容。",
+    "note": "原句缺谓语，成分残缺"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "语句不通",
+    "before": "它摄入项目设计文档",
+    "after": "它读取项目设计文档",
+    "note": "摄入用于文档不自然"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "语句不通",
+    "before": "供应链和依赖投毒被智能体当作可信输入摄入",
+    "after": "供应链和依赖投毒被智能体当作可信输入读取",
+    "note": "摄入用于输入不自然"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "术语不一致",
+    "before": "创建一个 Claude Code skill 使 Claude 能够进一步扩展",
+    "after": "创建一个 Claude Code 技能使 Claude 能够进一步扩展",
+    "note": "skill 前后译法不一致"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "术语不一致",
+    "before": "如果一个 skill 过时了",
+    "after": "如果一个技能过时了",
+    "note": "skill 前后译法不一致"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "术语不一致",
+    "before": "对组织范围 Skills 的引用",
+    "after": "对组织范围技能的引用",
+    "note": "Skills 未译，与后文不一致"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "误译",
+    "before": "跨公司协调的成本",
+    "after": "跨部门协调的成本",
+    "note": "原文指公司内部协调"
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "type": "误译",
+    "before": "当它们行为偏离对齐时发出告警",
+    "after": "当它们行为偏离预期时发出告警",
+    "note": "alignment 此处指预期行为"
+  },
+  {
+    "rel": "articles/how-anthropic-teams-use-claude-code.md",
+    "type": "误译",
+    "before": "让 Claude 为自己构建 Vim 键位绑定",
+    "after": "让 Claude 为 Claude Code 自身构建 Vim 键位绑定",
+    "note": "原文 for itself 指为工具自身"
+  },
+  {
+    "rel": "articles/how-anthropic-teams-use-claude-code.md",
+    "type": "误译",
+    "before": "解释特定模型的函数",
+    "after": "解释模型特有的函数",
+    "note": "model-specific 指模型特有，非特定模型"
+  },
+  {
+    "rel": "articles/how-anthropic-teams-use-claude-code.md",
+    "type": "语句不通",
+    "before": "他们给 Claude 抽象的问题",
+    "after": "他们给 Claude 提出抽象的问题",
+    "note": "缺谓语，读不通"
+  },
+  {
+    "rel": "articles/how-anthropic-teams-use-claude-code.md",
+    "type": "语句不通",
+    "before": "让每个需要的人都能获得专业知识",
+    "after": "让每个需要的人都能获取这些专业知识",
+    "note": "“获得专业知识”搭配生硬，但可接受；不报"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-cybersecurity.md",
+    "type": "语句不通",
+    "before": "不匹配团队已写任何规则的异常",
+    "after": "不匹配团队已编写的任何规则的异常",
+    "note": "“已写任何规则”缺字病句"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-cybersecurity.md",
+    "type": "语句不通",
+    "before": "查看我们关于如何为 AI 加速的攻击做好准备的安全计划最佳实践。",
+    "after": "查看我们关于如何为 AI 加速的攻击做好安全计划准备的最佳实践。",
+    "note": "修饰语错位，语义混乱"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+    "type": "误译",
+    "before": "一位经常工作到午夜之后给客户发邮件的 BDR——John Albert——也帮助共同构建了 CLAFTS",
+    "after": "一位经常工作到午夜之后给客户发邮件的 BDR，John Albert，帮助共同构建了 CLAFTS",
+    "note": "原文helped co-build，非\"也帮助\""
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "语句不通",
+    "before": "把机械性任务上省下的时间利用起来，Austin 现在可以运行更多文案实验",
+    "after": "借助在机械性任务上省下的时间，Austin 现在可以运行更多文案实验",
+    "note": "原句缺主语衔接，读不通"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "误译",
+    "before": "从而帮助判断哪些类型的信息更能引起潜在客户的共鸣",
+    "after": "从而帮助了解哪些类型的信息更能引起潜在客户的共鸣",
+    "note": "inform 此处为提供参考，非判断"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "误译",
+    "before": "帮助文案随着时间不断精进",
+    "after": "帮助文案逐步精进",
+    "note": "over time 指逐步，非随时间流逝"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "误译",
+    "before": "一个勉强能用的原型，就足以证明 Austin 心中所想的那个概念，最终催生出一个可用的产品",
+    "after": "一个勉强能用的原型，就足以验证 Austin 心中所想的那个概念，最终催生出一个可用的产品",
+    "note": "prove the concept 指验证概念"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "误译",
+    "before": "把现有的画框复制多次",
+    "after": "把现有的画框复制多份",
+    "note": "copy multiple times 指复制多份"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "语句不通",
+    "before": "我实际上让 Claude 做的第一件事，是给我做一个非常简单的计算器应用",
+    "after": "我实际上让 Claude 做的第一件事，是让它给我做一个非常简单的计算器应用",
+    "note": "缺兼语，句子不通"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "误译",
+    "before": "讲的是非技术岗位的员工如何安装 Claude Code",
+    "after": "讲的是非技术员工如何安装 Claude Code",
+    "note": "non-technical employee 指非技术员工"
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "type": "语句不通",
+    "before": "对于采用 Claude Code 这类工具的团队来说，一个机会正在形成",
+    "after": "对于采用 Claude Code 这类工具的团队来说，存在一个机会",
+    "note": "机会正在形成搭配生硬"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "误译",
+    "before": "找出那些我们尚未建立销售商机、但在客户层面存在用量信号的账户",
+    "after": "找出那些在客户层面存在用量信号、但我们尚未建立销售商机的账户",
+    "note": "原文是账户有信号但无商机，译文逻辑颠倒"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "误译",
+    "before": "当你驳回一个钩子（hooks）或修正一份草稿时",
+    "after": "当你驳回一条建议或修正一份草稿时",
+    "note": "hook此处指Claude提出的建议，非钩子"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "误译",
+    "before": "找出该代表需要回复的每个会话线索",
+    "after": "找出该代表需要回复的每个邮件会话",
+    "note": "thread指邮件会话，非会话线索"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "语句不通",
+    "before": "这些动作现在都先经过 Claude Cowork",
+    "after": "这些动作现在都先经过 Claude Cowork 处理",
+    "note": "句子缺谓语，读不通"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "误译",
+    "before": "它在我负责的整个名录中寻找潜在客户",
+    "after": "它在我负责的整个名录中挖掘商机",
+    "note": "prospects此处指挖掘潜在商机，非寻找潜在客户"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "误译",
+    "before": "一旦确认代表们在日常工作中持续使用某个技能，就把它提升到那里",
+    "after": "一旦确认代表们在日常工作中持续使用某个技能，就把它提升到共享插件中",
+    "note": "there指共享插件，译文“那里”指代不清"
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "type": "误译",
+    "before": "按我们的标准明确给出的通过或不通过评分",
+    "after": "按我们的标准明确给出的通过或不通过判定",
+    "note": "score此处指判定结果，非评分"
+  },
+  {
+    "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+    "type": "语句不通",
+    "before": "它托住工作底层的完整性，让我的时间可以投入到上层的叙事",
+    "after": "它承担了工作底层的完整性保障，让我的时间可以投入到上层的叙事",
+    "note": "“托住完整性”搭配不当"
+  },
+  {
+    "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+    "type": "语句不通",
+    "before": "我几乎能直接追踪到模型变好带来的差异",
+    "after": "我几乎能直接追踪到模型变好带来的差别",
+    "note": "“追踪差异”搭配生硬"
+  },
+  {
+    "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+    "type": "误译",
+    "before": "由分析师自己通过提示词构建的交互式预测和队列仪表盘",
+    "after": "由分析师自己通过提示词构建的交互式预测和群组仪表盘",
+    "note": "cohort此处指用户群组，非队列"
+  },
+  {
+    "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+    "type": "术语不一致",
+    "before": "我几乎完全依靠 Claude Cowork [项目](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)、Claude for Excel 和 Google Suite Connector 运行",
+    "after": "我几乎完全依靠 Claude Cowork [项目](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)、Claude for Excel 和 Google Workspace 连接器运行",
+    "note": "前文译Google Workspace连接器，此处不一致"
+  },
+  {
+    "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+    "type": "语句不通",
+    "before": "我还会让它像董事会成员那样阅读叙事，标出其中自相矛盾之处，或假定读者并不具备的背景信息",
+    "after": "我还会让它像董事会成员那样阅读叙事，标出其中自相矛盾之处，或假定读者并不具备某些背景信息的地方",
+    "note": "“标出……背景信息”缺谓语搭配"
+  },
+  {
+    "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+    "type": "误译",
+    "before": "虽然自动化明确属于他们的职责范围，但很多工作却远非自动化：营销技术工具之间无法顺畅集成",
+    "after": "虽然自动化明确属于他们的职责范围，但很多工作却远非如此：营销技术工具之间无法顺畅集成",
+    "note": "anything but 意为“远非如此”，非“远非自动化”"
+  },
+  {
+    "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+    "type": "术语不一致",
+    "before": "该流程依托于连接团队所用营销平台和工具的 Connectors",
+    "after": "该流程依托于连接团队所用营销平台和工具的连接器（Connectors）",
+    "note": "Connectors 前文未译，此处保留英文"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "它升级给我们团队的客户在到来时已经受过充分了解",
+    "after": "它升级给我们团队的客户在到来时已经充分了解情况",
+    "note": "“受过充分了解”搭配不当"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "误译",
+    "before": "我们希望每一位客户在任何时间、任何语言下都能得到专业的回答",
+    "after": "我们希望每一位客户在任何时间、任何语言下都能得到有见地的回答",
+    "note": "knowledgeable 意为有见地，非专业"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "误译",
+    "before": "专注于业务领域，而非执行框架",
+    "after": "专注于业务领域，而非智能体运行框架",
+    "note": "harness 指智能体运行框架"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "审核潜在客户资格",
+    "after": "筛选潜在客户",
+    "note": "“审核资格”搭配生硬"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "误译",
+    "before": "或者账单周期何时运行",
+    "after": "或者账单周期何时结算",
+    "note": "billing cycles run 指结算周期"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "我们认为这是一个特性",
+    "after": "我们认为这是有意为之的功能",
+    "note": "“特性”在此易误解"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "一个选对了方案而不是被向上销售的买家",
+    "after": "一个选对了方案而不是被强行升级销售的买家",
+    "note": "“被向上销售”生硬"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "进行更多实时客户对话",
+    "after": "进行更多实时客户沟通",
+    "note": "“进行对话”搭配不当"
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "type": "语句不通",
+    "before": "因为这让他能够专注于那些受过充分了解、准备就绪、只差临门一脚的客户",
+    "after": "因为这让他能够专注于那些已充分了解情况、准备就绪、只差临门一脚的客户",
+    "note": "“受过充分了解”搭配不当"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "语句不通",
+    "before": "你不再是驾驶座上的人，而是 Claude 所引入变更的审查者",
+    "after": "你不再坐在驾驶座上，而是成为 Claude 所引入变更的审查者",
+    "note": "原句缺谓语，读不通"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "语句不通",
+    "before": "错误也在发生之前就被减少",
+    "after": "并在错误发生之前就将其减少",
+    "note": "被动句式生硬，语义别扭"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "误译",
+    "before": "现在，一位销售经理可以用自然语言提问",
+    "after": "现在，一位销售经理可以用纯文本提问",
+    "note": "plain text 指纯文本，非自然语言"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "术语不一致",
+    "before": "并且是在过去一年内完成上手（onboarding）的",
+    "after": "并且是在过去一年内完成入驻的",
+    "note": "onboarding 前文译法应统一"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "误译",
+    "before": "同时贡献人数可能翻了一倍",
+    "after": "同时贡献人数可能达到原来的两倍",
+    "note": "2x more people 指两倍人数"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "语句不通",
+    "before": "理解不同系统之间如何连接一直是个挑战",
+    "after": "理解不同系统之间如何连接一直颇具挑战",
+    "note": "“是个挑战”搭配生硬"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "语句不通",
+    "before": "用于验证代码变更是否可能使文档过时，并提示更新",
+    "after": "用于检查代码变更是否会使文档过时，并提示更新",
+    "note": "“验证是否可能”语义含混"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "误译",
+    "before": "这不再只存在于某位资深工程师的脑子里",
+    "after": "这不再只存在于某位普通工程师的脑子里",
+    "note": "staff engineer 非“资深”之意"
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "type": "语句不通",
+    "before": "这项工作在 Claude Code 使其可行之前过于繁琐，不值得投入",
+    "after": "这项工作在 Claude Code 使其变得可行之前过于繁琐，难以证明值得投入",
+    "note": "“使其可行之前”逻辑拗口"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "误译",
+    "before": "无需在数千名工程师提交新代码时维护嵌入流水线或集中式索引。",
+    "after": "无需维护嵌入流水线或集中式索引，即使数千名工程师在提交新代码。",
+    "note": "原文是让步关系，非时间条件"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "语句不通",
+    "before": "由于它们会在每次会话中加载，无论任务是什么，让它们专注于广泛适用的内容可以防止它们成为性能负担。",
+    "after": "由于它们无论任务是什么都会在每次会话中加载，让它们专注于广泛适用的内容可以防止它们成为性能负担。",
+    "note": "语序混乱，条件从句错位"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "语句不通",
+    "before": "将原本会争夺上下文空间的专门工作流和领域知识卸载，仅在任务需要时加载。",
+    "after": "将原本会争夺上下文空间的专门工作流和领域知识卸载出去，仅在任务需要时加载。",
+    "note": "卸载缺补语，句子不完整"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "误译",
+    "before": "而文档处理 Skill 在代码变更需要更新文档时加载。",
+    "after": "而文档处理 Skill 在代码发生变更、文档需要更新时加载。",
+    "note": "原文为两个并列条件，非因果"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "语句不通",
+    "before": "在代码库中移动时会以叠加方式加载它们",
+    "after": "在代码库中移动时会逐层累加地加载它们",
+    "note": "叠加方式表述生硬难懂"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "误译",
+    "before": "可以为 Claude 提供一份在打开文件之前可以扫描的目录。",
+    "after": "可以为 Claude 提供一份在打开文件之前可以扫描的目录清单。",
+    "note": "table of contents 指目录清单"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "漏译",
+    "before": "在重大模型发布后如果感觉性能停滞不前，也值得进行一次审查。",
+    "after": "在重大模型发布后如果感觉性能停滞不前，也值得做一次配置审查。",
+    "note": "原文为configuration review，漏译配置"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "术语不一致",
+    "before": "一个混合 PM/工程师职能，专门管理 Claude Code 生态系统。",
+    "after": "一个混合产品经理/工程师职能，专门管理 Claude Code 生态系统。",
+    "note": "PM未译，与全文中文不一致"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "术语不一致",
+    "before": "在多个组织中正在兴起的一个角色是智能体经理",
+    "after": "在多个组织中正在兴起的一个角色是 agent manager（智能体经理）",
+    "note": "agent manager 译法需统一"
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "type": "语句不通",
+    "before": "任何剩余的复杂性都需要针对你的代码库、工具和组织进行具体判断。",
+    "after": "任何剩余的复杂情况都需要结合你的代码库、工具和组织进行具体判断。",
+    "note": "复杂性搭配判断不当"
+  },
+  {
+    "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+    "type": "语句不通",
+    "before": "在 Claude Code 之前发生的更高层级的编排",
+    "after": "在 Claude Code 之前进行的更高层级编排",
+    "note": "“编排发生”搭配不当"
+  },
+  {
+    "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+    "type": "语句不通",
+    "before": "在评估规划输出方面一无所有",
+    "after": "在评估规划输出方面则是一片空白",
+    "note": "“一无所有”用词不当"
+  },
+  {
+    "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+    "type": "语句不通",
+    "before": "而这正是规划层本要解决的原初问题",
+    "after": "而这正是规划层本要解决的原始问题",
+    "note": "“原初问题”生硬"
+  },
+  {
+    "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+    "type": "误译",
+    "before": "在推广（rollout）之前",
+    "after": "在发布（rollout）之前",
+    "note": "rollout 此处指发布上线"
+  },
+  {
+    "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+    "type": "语句不通",
+    "before": "还能帮助新工程师上手（onboarding）",
+    "after": "还能帮助新工程师入职（onboarding）",
+    "note": "“上手”与 onboarding 语义偏差"
+  },
+  {
+    "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+    "type": "术语不一致",
+    "before": "捕获模式、业务规则和评估方法。随后，他们可以将其作为一项 Skills（技能）与团队其他成员共享",
+    "after": "捕获模式、业务规则和评估方法。随后，他们可以将其作为一项技能与团队其他成员共享",
+    "note": "skill 前文未译，此处夹注英文不一致"
+  },
+  {
+    "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+    "type": "语句不通",
+    "before": "然后通过策略、可观测性、验证和反馈驱动的改进来治理每一次智能体运行轮次（run）",
+    "after": "然后通过策略、可观测性、验证和反馈驱动的改进来治理每一次智能体运行",
+    "note": "“运行轮次（run）”夹注冗余生硬"
+  },
+  {
+    "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+    "type": "语句不通",
+    "before": "其平台为客户体验提供支持，AI 智能体可以自行处理对话",
+    "after": "其平台为客户体验提供支持：AI 智能体可以自行处理对话",
+    "note": "冒号误作逗号，句子结构断裂"
+  },
+  {
+    "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+    "type": "语句不通",
+    "before": "开发者仍需针对这些确定性部分所要强制执行的需求进行测试",
+    "after": "开发者仍需针对这些确定性部分所应满足的需求进行测试",
+    "note": "“强制执行的需求”搭配不当"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "术语不一致",
+    "before": "Gwen 同时处理 inbound 和 outbound 线索。",
+    "after": "Gwen 同时处理呼入和呼出线索。",
+    "note": "inbound/outbound 未译，与后文不一致"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "术语不一致",
+    "before": "Outbound 交易需要更多坚持",
+    "after": "呼出交易需要更多坚持",
+    "note": "outbound 未译，前后译法不一"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "术语不一致",
+    "before": "并通过电话接手 warm 线索",
+    "after": "并通过电话接手意向较强的线索",
+    "note": "warm 未译，术语不统一"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "术语不一致",
+    "before": "对每条 outbound 消息设置一个评审智能体",
+    "after": "对每条外发消息设置一个评审智能体",
+    "note": "outbound 未译，前后不一致"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "漏译",
+    "before": "一个运行在 Haiku 上的评审会在每条通信发出前阅读它",
+    "after": "一个运行在 Haiku 上的评审智能体会在每条通信发出前阅读它",
+    "note": "漏译 agent，评审应为智能体"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "语句不通",
+    "before": "Curative 分步骤放宽限制，并针对更确定性的决策放宽，然后加入了费率审查员",
+    "after": "Curative 分步骤放宽限制，并针对更确定性的决策放宽限制，然后加入了费率审查员",
+    "note": "句子成分残缺，读不通"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "误译",
+    "before": "存在一个清算价格，你越快找到清算价格，大家就能越快继续提供护理",
+    "after": "存在一个市场清算价格，你越快找到清算价格，大家就能越快继续提供护理",
+    "note": "clearing price 指市场出清价，非清算"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "误译",
+    "before": "Gwen 要求该诊所培训其员工，然后确认该会员得到了服务",
+    "after": "Gwen 要求该诊所培训其员工，然后确认该会员得以就诊",
+    "note": "got in 指获准就诊，非得到服务"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "语句不通",
+    "before": "扩展 130 名指导和辅导会员的人员的覆盖范围",
+    "after": "扩展 130 名指导和辅导会员的工作人员的覆盖范围",
+    "note": "连续定语堆叠，语义含混"
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "type": "语句不通",
+    "before": "它有一个永远无法清除的错误记忆",
+    "after": "它有一条永远无法清除的错误记忆",
+    "note": "量词搭配不当"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "误译",
+    "before": "将指标控制组件从 FoundationDB 重写到 Postgres",
+    "after": "将指标控制平面从 FoundationDB 重写到 Postgres",
+    "note": "control 指控制平面，非组件"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "误译",
+    "before": "一个闭环进化优化执行框架（harness）",
+    "after": "一个闭环进化优化测试框架",
+    "note": "harness 此处指测试/评估框架"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "误译",
+    "before": "我们开始对它做影子流量",
+    "after": "我们开始对它做影子运行",
+    "note": "shadowing 指影子运行比对"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "漏译",
+    "before": "以及为任意代码提供携带证明",
+    "after": "以及为任意代码提供携带证明的规格",
+    "note": "proof carrying 指携带证明的代码"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "误译",
+    "before": "拒绝记录为待决事项",
+    "after": "拒绝记录为待决决策",
+    "note": "pending decisions 指待决决策"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "语句不通",
+    "before": "即围绕数据平面、承载工作负载的生命周期接口",
+    "after": "即围绕承载工作负载的数据平面的生命周期接口",
+    "note": "修饰关系错乱，读不通"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "语句不通",
+    "before": "运维模式——通常以状态机的形式存在——在代码库中是隐式的",
+    "after": "运维模式——通常以状态机的形式存在——隐含在代码库中",
+    "note": "“在代码库中是隐式的”生硬"
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "type": "误译",
+    "before": "并在会话和团队之间不断累积",
+    "after": "并在会话和团队之间不断叠加复用",
+    "note": "compound 指累积增益，非数量累积"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "语句不通",
+    "before": "使用你已连接的工具有完成工作",
+    "after": "使用你已连接的工具完成工作",
+    "note": "多出“有”字，句子不通"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "误译",
+    "before": "通过自动化入院、文档、授权和排程等工作（这些工作否则会拖慢诊疗进程），帮助医疗机构更快将患者送入合适的诊疗场景",
+    "after": "通过自动化接诊、文档、授权和排程等工作（这些工作否则会拖慢诊疗进程），帮助医疗机构更快将患者送入合适的诊疗场景",
+    "note": "intake指接诊，非入院"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "误译",
+    "before": "当一个公开暴露的副本 API 被标记时",
+    "after": "当一个公开暴露的复制 API 被标记时",
+    "note": "copy API指复制接口，非副本"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "语句不通",
+    "before": "Claude 修复了该缺陷并传播了更正后的数值",
+    "after": "Claude 修复了该缺陷并同步了更正后的数值",
+    "note": "“传播数值”搭配不当"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "误译",
+    "before": "Claude 未经要求便在频道内发布通知，说明受影响的时间窗口和补救措施",
+    "after": "Claude 未经要求便在频道内发布通知，说明受影响的时间窗口和修复措施",
+    "note": "remediation指修复措施"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "误译",
+    "before": "它会 @ 合适的专家",
+    "after": "它会引入合适的专家",
+    "note": "tags in指拉入专家，非@提及"
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "type": "误译",
+    "before": "因为 Medallion 的系统会使用这些政策来执行自身经过审计和验证的操作",
+    "after": "因为 Medallion 的系统会使用这些政策来执行操作，而这些操作本身会经过审计和验证",
+    "note": "审计验证对象是操作，非政策"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "漏译",
+    "before": "JetBrains CTO Vladislav Tankov",
+    "after": "JetBrains 智能体系统 CTO Vladislav Tankov",
+    "note": "漏译其职务中的“Agent Systems”"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "误译",
+    "before": "转变为认识到 AI 已经扎根",
+    "after": "转变为认识到 AI 已成为常态",
+    "note": "here to stay 意为长期存在，非“扎根”"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "误译",
+    "before": "是最难发现、代价最高的一类失败",
+    "after": "是发现代价最高的一类失败",
+    "note": "原文只说发现成本最高，未说最难发现"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "名词错",
+    "before": "而 Opus 4.8 为 28.2%，提升了 16 个百分点",
+    "after": "而 Opus 4.8 为 28.2%，提升了 16.1 个百分点",
+    "note": "44.3 减 28.2 为 16.1，非 16"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "语句不通",
+    "before": "几乎需要一个伙伴",
+    "after": "几乎像需要一个伙伴一样",
+    "note": "“几乎需要一个伙伴”表述生硬"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "术语不一致",
+    "before": "围绕模型和执行框架（harness）构建基础设施与安全网",
+    "after": "围绕模型和智能体执行框架（harness）构建基础设施与安全网",
+    "note": "harness 前文译“执行框架”，此处宜统一"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "误译",
+    "before": "但除此之外，我看不到还有其他办法",
+    "after": "但我看不到还有其他办法",
+    "note": "原文无“除此之外”之意"
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "type": "语句不通",
+    "before": "组织也将获得所需的治理与清晰的投资回报（ROI）",
+    "after": "组织也将获得所需的治理与清晰的投资回报",
+    "note": "“清晰的投资回报”搭配不当"
+  },
+  {
+    "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+    "type": "误译",
+    "before": "用于召回（部分以 Claude 为基础，部分为 Kepler 专有）",
+    "after": "用于检索召回（部分以 Claude 为基础，部分为 Kepler 专有）",
+    "note": "recall指检索召回，非模型召回"
+  },
+  {
+    "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+    "type": "误译",
+    "before": "他们开发了一套专有本体，将金融概念映射到精确定义和公式，可按用例定制。",
+    "after": "他们开发了一套专有本体，将金融概念映射到精确定义和公式，可按每次使用定制。",
+    "note": "per-use指按每次使用，非按用例"
+  },
+  {
+    "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+    "type": "语句不通",
+    "before": "有些通过他们已经在运行平台使用",
+    "after": "有些通过他们已经在运行的平台使用",
+    "note": "缺结构助词“的”"
+  },
+  {
+    "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+    "type": "误译",
+    "before": "将漏洞管理一路左移",
+    "after": "将漏洞管理一路前移",
+    "note": "left shift 指左移，但中文宜译前移"
+  },
+  {
+    "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+    "type": "误译",
+    "before": "这一差距有助于决定是攻击者还是防御者赢得窗口期",
+    "after": "这一差距决定是攻击者还是防御者赢得窗口期",
+    "note": "helps determine 非“有助于”"
+  },
+  {
+    "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+    "type": "语句不通",
+    "before": "TrendAI 首席平台与业务官、负责人 Rachel Jin",
+    "after": "TrendAI 首席平台与业务官 Rachel Jin",
+    "note": "“、负责人”冗余不通"
+  },
+  {
+    "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+    "type": "语句不通",
+    "before": "智能体式 AI 用例的新世界给许多团队带来了新挑战",
+    "after": "智能体式 AI 用例的新格局给许多团队带来了新挑战",
+    "note": "“新世界”生硬"
+  },
+  {
+    "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+    "type": "语句不通",
+    "before": "它需要编写、运行代码，即时构建工具",
+    "after": "它需要编写代码、运行代码，即时构建工具",
+    "note": "\"编写、运行代码\"搭配不当，应为编写代码、运行代码"
+  },
+  {
+    "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+    "type": "误译",
+    "before": "它快得多，而且作为开发者也会更有成就感",
+    "after": "它快得多，而且作为开发者也会更有满足感",
+    "note": "satisfying意为满足感，非成就感"
+  },
+  {
+    "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+    "type": "误译",
+    "before": "以及每种方法的上下文成本和权威性",
+    "after": "以及每种方法的上下文成本和权限",
+    "note": "authority此处指权限，非权威性"
+  },
+  {
+    "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+    "type": "误译",
+    "before": "阅读智能体 30 分钟的全部行为记录既痛苦又无法规模化",
+    "after": "阅读智能体 30 分钟的全部行为记录既折磨人又无法规模化",
+    "note": "brutal此处指折磨人，非痛苦"
+  },
+  {
+    "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+    "type": "误译",
+    "before": "将人工“反思”作为通往自动化评估的路线图，以收紧开发周期",
+    "after": "将人工“反思”作为通往自动化评估的路线图，以缩短开发周期",
+    "note": "tighten dev cycles意为缩短开发周期"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "重新构想 Claude Code 在终端之外友好界面中所做的一切",
+    "after": "重新构想 Claude Code 在终端之外的一切功能，打造一个友好的界面",
+    "note": "原文是重做功能以做友好界面"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "产品设计是由你所服务的产品和品牌知识驱动的",
+    "after": "产品设计是由运用你所负责的产品和品牌的知识驱动的",
+    "note": "漏掉“运用知识”之意"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "在场的每个人都用它拼出了幻灯片",
+    "after": "在场的每个人都用它赶制了幻灯片",
+    "note": "threw together意为匆忙赶制"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "我把它看作比产品设计高一个层级",
+    "after": "我把它看作产品设计之上的一层",
+    "note": "one click above指层级更高一层"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "语句不通",
+    "before": "能有力地制作出达到演示水准的幻灯片和备忘录",
+    "after": "在制作达到演示水准的幻灯片和备忘录时非常强大",
+    "note": "“有力地制作”搭配不当"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "语句不通",
+    "before": "你可以在已经打开的会话中请求设计，无论是在桌面端还是终端",
+    "after": "你可以在已经打开的会话中请求设计，无论是在桌面端还是在终端",
+    "note": "“无论…还是”缺“是”"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "语句不通",
+    "before": "或使用 /design 来创建、编辑和同步设计项目",
+    "after": "或使用 /design 来创建、编辑和同步设计项目。",
+    "note": "句子结构不完整"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "拥有好的想法、让所有人达成一致",
+    "after": "提出好的想法、让所有人达成一致",
+    "note": "having ideas意为产生想法"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "一个地铁时刻应用",
+    "after": "一个地铁时刻表应用",
+    "note": "subway-times指时刻表"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "语句不通",
+    "before": "我让 Claude 允许我用滑块和预设来调整应用的配色方案",
+    "after": "我让 Claude 让我能用滑块和预设来调整应用的配色方案",
+    "note": "“让Claude允许我”语义别扭"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "误译",
+    "before": "你可以一次排队多条消息，或在 Claude 还在处理上一轮时继续说话",
+    "after": "你可以一次排队多条消息，或在 Claude 还在处理上一轮时继续输入",
+    "note": "keep talking指继续发消息"
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "type": "术语不一致",
+    "before": "在付费计划上处于测试阶段",
+    "after": "在付费计划上以测试版提供",
+    "note": "beta前后译法不一致"
+  },
+  {
+    "rel": "articles/how-to-configure-hooks.md",
+    "type": "误译",
+    "before": "在每次提示词中注入当前冲刺上下文或项目优先级",
+    "after": "在每次提交提示词时注入当前冲刺上下文或项目优先级",
+    "note": "原文是每次提交提示词时注入，非在提示词中注入"
+  },
+  {
+    "rel": "articles/how-to-configure-hooks.md",
+    "type": "误译",
+    "before": "Claude Code 将所有内容记录到对话记录文件中，无需任何设置即可查看工具调用和响应。",
+    "after": "Claude Code 将所有内容记录到对话记录文件中，无需任何设置即可了解工具调用和响应。",
+    "note": "provides visibility 意为可查看了解，非主动查看"
+  },
+  {
+    "rel": "articles/how-to-configure-hooks.md",
+    "type": "语句不通",
+    "before": "在认为任务完成前验证测试通过",
+    "after": "在认为任务完成前验证测试是否通过",
+    "note": "缺“是否”，句子不完整"
+  },
+  {
+    "rel": "articles/how-to-configure-hooks.md",
+    "type": "语句不通",
+    "before": "在停止前检查生成的代码能否编译",
+    "after": "在停止前检查生成的代码是否能够编译",
+    "note": "“能否编译”搭配生硬，宜用“是否能够”"
+  },
+  {
+    "rel": "articles/how-to-configure-hooks.md",
+    "type": "语句不通",
+    "before": "在写入前校验文件路径，防止意外覆盖",
+    "after": "在写入前校验文件路径，防止意外覆盖文件",
+    "note": "“防止意外覆盖”缺宾语，语义不完整"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "误译",
+    "before": "根据你所构建的 Claude 平台界面",
+    "after": "根据你所使用的 Claude 平台",
+    "note": "surface 指平台/入口，非界面"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "语句不通",
+    "before": "换言之，即 Claude 调用 skill 获取专业知识或工作流的能力",
+    "after": "换言之，即 Claude 为获取专业知识或工作流而调用 skill 的能力",
+    "note": "原译语序导致语义含混"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "误译",
+    "before": "这些基线测试确认你的指令按预期工作",
+    "after": "这些基线测试确认你的指令是否按预期工作",
+    "note": "confirm 此处为验证是否有效"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "语句不通",
+    "before": "一个范围界定良好的 skill 知道何时不应激活",
+    "after": "范围界定良好的 skill 知道何时不应激活",
+    "note": "量词与句式冗余不通顺"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "语句不通",
+    "before": "在有真实、重复性任务时再构建它们",
+    "after": "当你拥有真实、重复性的任务时再构建它们",
+    "note": "原句缺主语，读不通"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "语句不通",
+    "before": "它对你最初的几个 skills 尤其有价值",
+    "after": "它对你最初几个 skills 尤其有价值",
+    "note": "“最初的几个”搭配不当"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "语句不通",
+    "before": "如果多个 skills 处理复杂任务的不同方面，它们可以同时激活",
+    "after": "如果多个 skills 分别处理复杂任务的不同方面，它们可以同时激活",
+    "note": "缺“分别”，条件关系不清"
+  },
+  {
+    "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+    "type": "误译",
+    "before": "在该对话中保持其他文件不被触碰",
+    "after": "在该对话中不读取其他文件",
+    "note": "untouched 指不读取，非不被触碰"
+  },
+  {
+    "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "type": "语句不通",
+    "before": "统计一件完成的事，以及它落在哪里",
+    "after": "统计一件完成的事，以及它落在哪里（即交付位置）",
+    "note": "原文where it lands指交付位置，译文读不通"
+  },
+  {
+    "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "type": "术语不一致",
+    "before": "还能看到组织内部哪些 Skills 和插件被采用",
+    "after": "还能看到组织内部哪些技能和插件被采用",
+    "note": "Skills与上文Skill译法不一致"
+  },
+  {
+    "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "type": "术语不一致",
+    "before": "按 Skill、插件、智能体和 MCP 服务器细分用量",
+    "after": "按技能、插件、智能体和 MCP 服务器细分用量",
+    "note": "skill译法前后不一致"
+  },
+  {
+    "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "type": "语句不通",
+    "before": "这些是方向性的参考点，而非规则，但是衡量 Claude Code 在组织中影响的一个良好起点",
+    "after": "这些是方向性的参考点，而非规则，但它们是衡量 Claude Code 在组织中影响的一个良好起点",
+    "note": "但是与前半句转折搭配生硬"
+  },
+  {
+    "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "type": "误译",
+    "before": "从根源上关闭的事件",
+    "after": "在根源上已解决的事件",
+    "note": "closed at root cause指根因解决，非关闭"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "语句不通",
+    "before": "由 Claude 在各自全新的上下文窗口中进行的独立对抗性审查未发现阻塞性问题",
+    "after": "由 Claude 在各自全新的上下文窗口中进行的独立对抗性审查均未发现阻塞性问题",
+    "note": "缺“均”字，语义不完整"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "语句不通",
+    "before": "就哪些信息和格式能让审查最快达成一致，以及哪些信号比其他信号更能带来信心。",
+    "after": "就哪些信息和格式能让审查最快达成一致，以及哪些信号比其他信号更能带来信心达成一致。",
+    "note": "句子缺谓语，读不通"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "误译",
+    "before": "这也有助于为后续证书和推广策略中的权衡提供依据。",
+    "after": "这也有助于为后续证书和推广策略中的权衡奠定基础。",
+    "note": "anchor意为锚定/奠定基础，非提供依据"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "语句不通",
+    "before": "而他们的早期参与正是他们在变更进入审查时给予支持的原因。",
+    "after": "而他们的早期参与正是他们在变更进入审查时愿意支持的原因。",
+    "note": "“给予支持的原因”表达生硬"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "语句不通",
+    "before": "从叶子向内将代码库拆分为逻辑分区",
+    "after": "从叶子节点向内将代码库拆分为逻辑分区",
+    "note": "“叶子”缺“节点”，表述不完整"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "语句不通",
+    "before": "一场赶向硬性截止日期（例如运行时失去支持）的现代化",
+    "after": "一项赶向硬性截止日期（例如运行时失去支持）的现代化",
+    "note": "“一场现代化”量词不当"
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "type": "语句不通",
+    "before": "当同一类标记反复出现时，在智能体式工作流或证书中修复原因，而不是逐一审查。",
+    "after": "当同一类标记反复出现时，在智能体式工作流或证书中修复根本原因，而不是逐一审查。",
+    "note": "“修复原因”搭配不当"
+  },
+  {
+    "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+    "type": "误译",
+    "before": "Warp 在这方面吃过大亏，并以此指导其产品策略",
+    "after": "Warp 在这方面吃过大亏，并以此为依据制定了其产品策略",
+    "note": "inform 意为据此制定，非指导"
+  },
+  {
+    "rel": "articles/how-we-made-claude-ai-faster.md",
+    "type": "误译",
+    "before": "它是爬山的第第一步",
+    "after": "它是爬山的第零步",
+    "note": "原文step one of the climb，与上句第零步对应"
+  },
+  {
+    "rel": "articles/how-we-made-claude-ai-faster.md",
+    "type": "语句不通",
+    "before": "静态标记通过在实际 React 组件在 jsdom 中渲染来生成",
+    "after": "静态标记通过在实际 React 组件于 jsdom 中渲染来生成",
+    "note": "“通过在实际…渲染”句式杂糅"
+  },
+  {
+    "rel": "articles/how-we-made-claude-ai-faster.md",
+    "type": "语句不通",
+    "before": "将增长代码围栏的 tokenization 逻辑移到 worker",
+    "after": "将不断增长的代码围栏的 tokenization 逻辑移到 worker",
+    "note": "“增长代码围栏”语义不明"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "语句不通",
+    "before": "你会损失 productive 时间来解释架构决策",
+    "after": "你会损失高效工作时间来解释架构决策",
+    "note": "productive 未译，中英混杂"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "语句不通",
+    "before": "它们确保你团队中一致的代码风格",
+    "after": "它们确保你团队中代码风格一致",
+    "note": "语序不当，读不通"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "误译",
+    "before": "只有当你拥有专门的查询语言专业知识时，才能执行这样的分析",
+    "after": "以前，只有拥有专门查询语言专业知识的人才能执行这样的分析",
+    "note": "原文指具备专业知识的人，非条件句"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "语句不通",
+    "before": "智能体式系统系统化地处理质量",
+    "after": "智能体式系统以系统化方式处理质量",
+    "note": "系统系统化叠词病句"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "语句不通",
+    "before": "你的团队不必寻找罕见的专业组合，而是可以招聘具有扎实基础的人",
+    "after": "你的团队无需再寻找罕见的专业组合，可以招聘具有扎实基础的人",
+    "note": "不必…而是搭配不当"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "语句不通",
+    "before": "你从第一天起就获得有意义的贡献所需的上下文和能力",
+    "after": "你从第一天起就获得做出有意义贡献所需的上下文和能力",
+    "note": "定语语序导致歧义"
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "type": "术语不一致",
+    "before": "这种韧性让你能够处理解决方案路径不明显的问题",
+    "after": "这种适应力让你能够处理解决方案路径不明显的问题",
+    "note": "resilience 前文译法不统一"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "type": "误译",
+    "before": "对 Claude 在内部的输出质量产生了最可衡量的影响",
+    "after": "对 Claude 在内部的输出质量产生了最显著可衡量的影响",
+    "note": "most measurable 意为最可衡量，非最可衡量影响"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "type": "漏译",
+    "before": "它们让工程师在关键操作中更容易遵循最佳实践",
+    "after": "这些护栏让工程师在关键操作中更容易遵循最佳实践",
+    "note": "漏译 guardrails 主语"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "type": "语句不通",
+    "before": "一个只是重复 Claude 默认做法的 Skill，只会增加上下文而不增加价值",
+    "after": "一个只是重复 Claude 默认做法的 Skill，只会增加上下文却不带来价值",
+    "note": "不增加价值表述生硬"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "type": "误译",
+    "before": "对于你不想一直运行、但有时又极其有用的、更具主张性的钩子",
+    "after": "对于你不想一直运行、但有时又极其有用的、更具倾向性的钩子",
+    "note": "opinionated 意为有主见/倾向性"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "type": "语句不通",
+    "before": "这意味着我们可以找出那些受欢迎或触发频率低于我们预期的 Skills",
+    "after": "这意味着我们可以找出那些受欢迎或触发不足（低于预期）的 Skills",
+    "note": "undertriggering 译法生硬"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "type": "术语不一致",
+    "before": "它们既可以是针对内部库的，也可以是针对 Claude Code 有时难以处理的常用库的",
+    "after": "它们既可以是针对内部库的，也可以是针对 Claude Code 有时难以处理的常见库的",
+    "note": "common 前文译常用此处常见"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+    "type": "语句不通",
+    "before": "这样缓存的���缀保持稳定",
+    "after": "这样缓存的前缀保持稳定",
+    "note": "乱码字符，应为“前缀”"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+    "type": "语句不通",
+    "before": "因此缓存的���缀被复用",
+    "after": "因此缓存的前缀被复用",
+    "note": "乱码字符，应为“前缀”"
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+    "type": "术语不一致",
+    "before": "Skills 执行",
+    "after": "技能执行",
+    "note": "其余处未保留英文 Skills"
+  },
+  {
+    "rel": "articles/managed-agents.md",
+    "type": "语句不通",
+    "before": "如何为一个「尚未被想到的程序」设计系统。操作系统通过",
+    "after": "如何为「尚未被想到的程序」设计系统。操作系统通过",
+    "note": "结论段同样多出「一个」"
+  },
+  {
+    "rel": "articles/managed-agents.md",
+    "type": "术语不一致",
+    "before": "一个老旧的 infrastructure 问题",
+    "after": "一个老旧的运维问题",
+    "note": "infrastructure 未译，混入英文"
+  },
+  {
+    "rel": "articles/managed-agents.md",
+    "type": "语句不通",
+    "before": "输入一个名称和输入，返回一个字符串",
+    "after": "输入名称和输入，返回一个字符串",
+    "note": "「输入…输入」重复病句"
+  },
+  {
+    "rel": "articles/managed-agents.md",
+    "type": "语句不通",
+    "before": "扩展到多个大脑和多双双手的能力",
+    "after": "扩展到多个大脑和多双手的能力",
+    "note": "「多双双手」叠词不通"
+  },
+  {
+    "rel": "articles/managed-agents.md",
+    "type": "语句不通",
+    "before": "接口 `getEvents(),` 允许",
+    "after": "接口 `getEvents()` 允许",
+    "note": "逗号误入代码标识符内"
+  },
+  {
+    "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+    "type": "误译",
+    "before": "从内部推动者团队走向全组织部署",
+    "after": "从冠军团队走向全组织部署",
+    "note": "champion teams 指标杆团队，非内部推动者"
+  },
+  {
+    "rel": "articles/optimize-code-performance-quickly.md",
+    "type": "语句不通",
+    "before": "在瓶颈影响用户之前就将其防患于未然",
+    "after": "在瓶颈影响用户之前就将其消除",
+    "note": "防患于未然不能带宾语"
+  },
+  {
+    "rel": "articles/optimize-code-performance-quickly.md",
+    "type": "误译",
+    "before": "事件分诊时间减少 80%",
+    "after": "事件排查时间减少 80%",
+    "note": "triage此处指排查而非医疗分诊"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "这是一把双刃剑：虽然攻击者可以用 AI 加快速度，但采用 AI 工具来保护自己的防御者同样可以",
+    "after": "这对双方都是如此：虽然攻击者可以用 AI 加快速度，但采用 AI 工具来保护自己的防御者同样可以",
+    "note": "原文指双向皆可，非双刃剑"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "将补丁逆向工程为可用的漏洞利用",
+    "after": "将补丁逆向还原为可用的漏洞利用",
+    "note": "reversing a patch指逆向还原补丁"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "额外的跳转、速率限制、非标准端口、基于短信的 MFA",
+    "after": "额外的跳转节点、速率限制、非标准端口、基于短信的 MFA",
+    "note": "pivot hops指跳转节点"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "将驻留时间和覆盖率置于其他一切之上",
+    "after": "将入侵者驻留时间和覆盖率置于其他一切之上",
+    "note": "dwell time指攻击者驻留时间"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "这是前沿模型应用于安全工作中最不光彩的应用",
+    "after": "这是前沿模型应用于安全工作中最不起眼的应用",
+    "note": "glamorous指光鲜，非光彩"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "在每个支持账户上使用 passkeys 或硬件安全密钥",
+    "after": "在每个支持该功能的账户上使用 passkeys 或硬件安全密钥",
+    "note": "漏译them，指支持该功能的账户"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "误译",
+    "before": "AI 供应商化（vendoring）",
+    "after": "AI 自建依赖（vendoring）",
+    "note": "vendoring指将依赖纳入自有代码"
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "type": "术语不一致",
+    "before": "OpenSSF 发布了一个[可复用工作流](https://github.com/slsa-framework/slsa-github-generator)，可以从 GitHub Actions 生成 SLSA 3 级证明",
+    "after": "OpenSSF 发布了一个[可复用工作流](https://github.com/slsa-framework/slsa-github-generator)，可以从 GitHub Actions 生成 SLSA Level 3 证明",
+    "note": "SLSA等级应统一为Level 3"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "误译",
+    "before": "在 AI 的指数级发展曲线上，我们用交付的东西来构建",
+    "after": "在 AI 的指数级发展曲线上，我们边交付边构建",
+    "note": "build with what we ship 意为边交付边构建"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "语句不通",
+    "before": "这些改动即便经过数周的文档评审也永远不会浮现，否则只能等到用户反馈时才姗姗来迟",
+    "after": "这些改动即便经过数周的文档评审也永远不会浮现，否则只能等到用户反馈时才姗姗来迟地暴露",
+    "note": "原句缺谓语，语义不完整"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "误译",
+    "before": "以确保对裸机体验满意",
+    "after": "以确保对底层原生体验满意",
+    "note": "bare-metal 此处指底层原生体验"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "术语不一致",
+    "before": "一个智能体持久访问我们的内部数据库，并具备理解我们数据 schema 的 skill",
+    "after": "一个智能体持久访问我们的内部数据库，并具备理解我们数据 schema 的技能",
+    "note": "skill 前文译技能，此处未统一"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "误译",
+    "before": "扫描一份特定的域名列表以获取最新的开发者反馈",
+    "after": "扫描一份特定的网站列表以获取最新的开发者反馈",
+    "note": "domains 此处指网站/领域而非域名"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "误译",
+    "before": "我的一天现在包括与客户一起激发创新想法",
+    "after": "我的一天现在包括与客户一起产出创新想法",
+    "note": "generating 意为产出而非激发"
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "type": "语句不通",
+    "before": "把预置模板转化为针对相关受众",
+    "after": "把预置模板转化为面向相关受众",
+    "note": "针对相关受众搭配生硬"
+  },
+  {
+    "rel": "articles/redesigning-source-control.md",
+    "type": "语句不通",
+    "before": "我们开始构建 Scion 的时间，大约与 [Claude Mythos Preview](https://www.anthropic.com/claude/mythos) 和 [Claude Tag](https://www.anthropic.com/news/introducing-claude-tag) 在内部可用相同。",
+    "after": "我们开始构建 Scion 的时间，大约与 [Claude Mythos Preview](https://www.anthropic.com/claude/mythos) 和 [Claude Tag](https://www.anthropic.com/news/introducing-claude-tag) 在内部可用的时间相同。",
+    "note": "缺“的时间”，句子不完整"
+  },
+  {
+    "rel": "articles/redesigning-source-control.md",
+    "type": "语句不通",
+    "before": "这让我们能够区分仅注释变更和敏感逻辑变更这样简单的事情",
+    "after": "这让我们能够区分仅注释变更和敏感逻辑变更这类简单情况",
+    "note": "“这样简单的事情”搭配不当"
+  },
+  {
+    "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+    "type": "名词错",
+    "before": "在 Opus 5 上，验证仪式（“_verify twice_”）通过在每次退款时重复订单查询，使用了不必要的 token。",
+    "after": "在 Opus 5.5 上，验证仪式（“_verify twice_”）通过在每次退款时重复订单查询，使用了不必要的 token。",
+    "note": "原文为 Opus 5.5，非 Opus 5"
+  },
+  {
+    "rel": "articles/safely-scaling-multi-agent-teams-with-fable-5-2.md",
+    "type": "误译",
+    "before": "它在其后 350 多年里一直未被证明",
+    "after": "它在 350 多年里一直未被证明",
+    "note": "原文未指从定理提出后算起"
+  },
+  {
+    "rel": "articles/safely-scaling-multi-agent-teams-with-fable-5-2.md",
+    "type": "名词错",
+    "before": "估计该证明至少需要 0.7 到 100 万行 Lean 代码",
+    "after": "估计该证明至少需要 70 万到 100 万行 Lean 代码",
+    "note": "0.7 million应为70万，非0.7到100万"
+  },
+  {
+    "rel": "articles/safely-scaling-multi-agent-teams-with-fable-5-2.md",
+    "type": "误译",
+    "before": "其中只有 16 名助手是队长",
+    "after": "其中只有 16 名是队长",
+    "note": "原文those helpers were captains，指16名队长"
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "type": "漏译",
+    "before": "完整的错误信息——完整的错误消息、堆栈跟踪，以及触发问题的具体操作。",
+    "after": "提供完整的错误信息——完整的错误消息、堆栈跟踪，以及触发问题的具体操作。",
+    "note": "原文complete error information缺谓语"
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "type": "语句不通",
+    "before": "他们说你的组织语言，了解你特定的痛点。",
+    "after": "他们说的是你组织的语言，了解你特定的痛点。",
+    "note": "“说组织语言”为病句"
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "type": "语句不通",
+    "before": "这创建了活的文档，使 Claude Code 与你不断演进的实践保持一致。",
+    "after": "这创建了持续更新的文档，使 Claude Code 与你不断演进的实践保持一致。",
+    "note": "“活的文档”生硬不通"
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "type": "语句不通",
+    "before": "具体示例，说明某些任务现在只需以前一小部分时间。",
+    "after": "具体示例，说明某些任务现在只需以前一小部分的时间。",
+    "note": "“一小部分时间”缺“的”"
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "type": "语句不通",
+    "before": "将 CLAUDE.md 文件检入仓库根目录。",
+    "after": "将 CLAUDE.md 文件提交到仓库根目录。",
+    "note": "“检入”为生硬直译"
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "type": "术语不一致",
+    "before": "建立专门的频道用于故障排查和知识分享",
+    "after": "建立专门的频道用于故障排查和知识共享",
+    "note": "前文用“知识分享”，此处宜统一"
+  },
+  {
+    "rel": "articles/seeing-like-an-agent.md",
+    "type": "误译",
+    "before": "以及如何区分两者",
+    "after": "以及如何判断何时该做哪一种",
+    "note": "原文指区分添加与移除，非区分两者"
+  },
+  {
+    "rel": "articles/solving-code-review-at-anthropic.md",
+    "type": "语句不通",
+    "before": "团队现在将通过所需轮次与召回率一起追踪，并改变了重新审查方式",
+    "after": "团队现在将一次通过所需轮次与召回率一起追踪，并改变了重新审查方式",
+    "note": "\"将通过所需轮次\"缺谓语，读不通"
+  },
+  {
+    "rel": "articles/solving-code-review-at-anthropic.md",
+    "type": "误译",
+    "before": "一个宣称已解决审查瓶颈的团队，仍然对外部团队的变更保留人工审查",
+    "after": "一个宣称已解决审查瓶颈的团队，仍然对来自团队外部的变更保留人工审查",
+    "note": "outside the team指团队外部，非\"外部团队\""
+  },
+  {
+    "rel": "articles/solving-code-review-at-anthropic.md",
+    "type": "误译",
+    "before": "我们还会在已知干净的 PR 上运行审查器，统计它报告了多少次会引导人做出有害变更的问题",
+    "after": "我们还会在已知干净的 PR 上运行审查器，统计它报告了多少次本会引导人做出有害变更的问题",
+    "note": "would have led为虚拟语气，非实际发生"
+  },
+  {
+    "rel": "articles/subagents-in-claude-code.md",
+    "type": "术语不一致",
+    "before": "每个子智能体都从零开始，不受对话历史或已调用 Skills 的拖累。",
+    "after": "每个子智能体都从零开始，不受对话历史或已调用技能的拖累。",
+    "note": "Skills 前文译作技能，此处未译"
+  },
+  {
+    "rel": "articles/subagents-in-claude-code.md",
+    "type": "语句不通",
+    "before": "以下模式展示了子智能体指挥应用于常见场景的情况。",
+    "after": "以下模式展示了子智能体指挥在常见场景中的应用。",
+    "note": "“指挥应用于”搭配不通"
+  },
+  {
+    "rel": "articles/subagents-in-claude-code.md",
+    "type": "误译",
+    "before": "当同一种子智能体被反复请求时（安全审查者、测试编写者、文档校对者），可以将其一次性定义为自定义子智能体。",
+    "after": "当同一种子智能体被反复请求时（安全审查者、测试编写者、文档校对者），可以将其定义为自定义子智能体。",
+    "note": "once 指定义一次，非一次性"
+  },
+  {
+    "rel": "articles/subagents-in-claude-code.md",
+    "type": "语句不通",
+    "before": "钩子是合适的工具，当：",
+    "after": "钩子在以下情况下是合适的工具：",
+    "note": "语序生硬，条件从句倒置"
+  },
+  {
+    "rel": "articles/subagents-in-claude-code.md",
+    "type": "漏译",
+    "before": "以下是一个有效的提示词结构：",
+    "after": "以下是一个有效的提示词结构示例：",
+    "note": "原文为 structure，示例语境缺失"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "语句不通",
+    "before": "传统上，每个阶段都是一个独立的阶段，由不同的角色负责。",
+    "after": "传统上，每个阶段都是一个独立的环节，由不同的角色负责。",
+    "note": "「阶段是阶段」同词反复，语义不通"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "误译",
+    "before": "从任何黏土色的打法开始——没有箭头指向它，所以它不需要任何前置。",
+    "after": "从任何没有箭头指向的打法开始——没有箭头指向它，所以它不需要任何前置。",
+    "note": "clay 疑为无入边节点，非「黏土色」"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "语句不通",
+    "before": "希望根据发现对合并设关卡的门平台工程师可以读取检查运行发布的严重程度计数",
+    "after": "希望根据发现对合并设关卡的平台工程师可以读取检查运行发布的严重程度计数",
+    "note": "「的门平台工程师」多字病句"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "漏译",
+    "before": "为任何必须无例外成立的策略 Skill 提供支持。",
+    "after": "为任何必须无例外成立的策略提供钩子支持。",
+    "note": "原文 Back any skill，缺主语与动词"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "语句不通",
+    "before": "团队新成员从 PR 历史到首次合并 PR 的时间。",
+    "after": "团队新成员从 PR 历史得出的首次合并 PR 时间。",
+    "note": "「从…到…的时间」结构残缺"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "漏译",
+    "before": "覆盖率从上次运行算起，而不是从第一次",
+    "after": "覆盖率从上次运行算起，而不是从第一次运行算起。",
+    "note": "句末缺失，句子不完整"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "语句不通",
+    "before": "模型驱动的扫描覆盖那些检查并非为发现而构建的上下文相关漏洞。",
+    "after": "模型驱动的扫描覆盖那些检查并非为发现此类漏洞而构建的上下文相关漏洞。",
+    "note": "「并非为发现而构建」语义残缺"
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "type": "名词错",
+    "before": "`Intent.md`，为循环提供结构化输出以重新启动。",
+    "after": "`intent.md`，为循环提供结构化输出以重新启动。",
+    "note": "文件名大小写错误，应为 intent.md"
+  },
+  {
+    "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+    "type": "误译",
+    "before": "并在我们的内部电商记忆评估套件上实现了高 13% 的事实召回率",
+    "after": "并在我们的内部电商记忆评估套件上实现了高出 13% 的事实召回率",
+    "note": "achieved 13% higher 意为高出13%"
+  },
+  {
+    "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+    "type": "误译",
+    "before": "每个「应该拒绝」对应一个「应该提供」，每个「应该询问」对应一个「应该直接做」",
+    "after": "每个「应该提供」对应一个「应该拒绝」，每个「应该直接做」对应一个「应该询问」",
+    "note": "正负向对应关系译反"
+  },
+  {
+    "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+    "type": "误译",
+    "before": "更快的模型往往是更智能的那个",
+    "after": "更智能的模型往往也是更快的那个",
+    "note": "原文faster model is smarter，方向译反"
+  },
+  {
+    "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+    "type": "名词错",
+    "before": "有时 Opus 5 在推动购物车任务上的提升",
+    "after": "有时 Opus 在推动购物车任务上的提升",
+    "note": "原文为Opus，非Opus 5"
+  },
+  {
+    "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+    "type": "语句不通",
+    "before": "因此上限在写入后的行上执行",
+    "after": "因此上限按写入后的行状态执行",
+    "note": "「在行上执行」语义不清"
+  },
+  {
+    "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+    "type": "误译",
+    "before": "我们注意到在为最新一代 Claude 模型编写提示词的方式上出现了巨大跃升",
+    "after": "我们注意到最新一代 Claude 模型对提示词的响应方式出现了巨大跃升",
+    "note": "原文指模型行为变化，非编写方式"
+  },
+  {
+    "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+    "type": "误译",
+    "before": "但对于某一部分提示词，这条指导会是错误的",
+    "after": "但对于某一类提示词，这条指导会是错误的",
+    "note": "subset指一类提示词，非一部分"
+  },
+  {
+    "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+    "type": "语句不通",
+    "before": "因为否则 Claude 就找不到它",
+    "after": "以为否则 Claude 就找不到它",
+    "note": "“因为否则”搭配不当"
+  },
+  {
+    "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+    "type": "术语不一致",
+    "before": "评分标准（rubrics）是另一种形式的参考。评分标准允许 Claude",
+    "after": "评分细则（rubrics）是另一种形式的参考。评分细则允许 Claude",
+    "note": "rubrics译作评分标准易与评分标准混淆"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "误译",
+    "before": "由 Slack 中的 Claude 驱动，智能体承担生产性工作",
+    "after": "在 Slack 中由 Claude 提供支持，智能体承担生产性工作",
+    "note": "Powered by 指由Claude驱动，非Slack驱动"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "误译",
+    "before": "以及被标记的升级事项",
+    "after": "以及被标记的需上报事项",
+    "note": "escalations指需上报的问题，非升级"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "术语不一致",
+    "before": "回顾、升级事项、会议准备",
+    "after": "回顾、需上报事项、会议准备",
+    "note": "escalations前后译法不一致"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "语句不通",
+    "before": "让人类和智能体可以一起分诊",
+    "after": "让人类和智能体可以一起分类处理",
+    "note": "分诊为医疗用语，此处不通"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "误译",
+    "before": "私密频道对每一个需要汇报它的智能体来说都是盲区",
+    "after": "私密频道对每一个要从中获取信息的智能体来说都是盲区",
+    "note": "reports on it指从中获取信息，非汇报"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "语句不通",
+    "before": "token 用量告诉你灯是亮着的",
+    "after": "token 用量说明系统在运转",
+    "note": "灯是亮着的为直译，中文不通"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "语句不通",
+    "before": "把一群人带进一个有 Claude 的共享频道",
+    "after": "把一群人带进一个配有 Claude 的共享频道",
+    "note": "有Claude表述生硬"
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "type": "语句不通",
+    "before": "你通过给予信任来获得信任",
+    "after": "你通过给予信任而赢得信任",
+    "note": "gain trust译获得信任略生硬"
+  },
+  {
+    "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+    "type": "语句不通",
+    "before": "中间的工具有噪声留在子级的上下文中",
+    "after": "中间的工具噪声留在子级的上下文中",
+    "note": "\"工具有噪声\"为病句，应为\"工具噪声\""
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "误译",
+    "before": "我不再期待一份简单的 Markdown 计划，而是预期会形成一张由 HTML 文件构成的网",
+    "after": "我不再只做一份简单的 Markdown 计划，而是预期会形成一张由 HTML 文件构成的网",
+    "note": "expect to make 被误译为“期待”"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "误译",
+    "before": "更别说让我组织里的其他人去读了",
+    "after": "我也完全没法让我组织里的其他人去读",
+    "note": "certainly am not able 语气译弱"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "误译",
+    "before": "它当然可以像 Markdown 一样做简单的文档结构，比如标题和格式",
+    "after": "它当然可以做简单的文档结构，比如标题和格式",
+    "note": "原文无“像 Markdown 一样”"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "语句不通",
+    "before": "HTML 是 Claude 深入探究问题的丰富画布",
+    "after": "HTML 是 Claude 深入探究问题的丰富载体",
+    "note": "canvas 此处非画布"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "语句不通",
+    "before": "用 HTML 来理解智能体编写的代码、审查代码，或向审阅你代码的人解释一个 PR",
+    "after": "用 HTML 来理解智能体编写的代码、审查代码，或向审阅你代码的人解释一个 PR。",
+    "note": "句子缺谓语，成分残缺"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "误译",
+    "before": "一个带有概览、API 和推广（rollout）标签页的页面",
+    "after": "一个带有概览、API 和上线（rollout）标签页的页面",
+    "note": "rollout 此处指上线发布"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "术语不一致",
+    "before": "我不理解我们的速率限制器实际上是如何工作的",
+    "after": "我不理解我们的限流器实际上是如何工作的",
+    "note": "rate limiter 前文译“速率限制器”，此处宜统一为限流器"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "术语不一致",
+    "before": "HTML 恰好就是这样的方式。我现在感觉自己比以往任何时候都更在循环之中。",
+    "after": "HTML 恰好就是这样的方式。我现在感觉自己比以往任何时候都更与 Claude 保持同步。",
+    "note": "in the loop 标题译“保持同步”，此处译“在循环中”不一致"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "语句不通",
+    "before": "你保持在循环中，但这个循环变得紧密得多",
+    "after": "你始终参与其中，但这个反馈循环变得紧密得多",
+    "note": "in the loop 直译生硬"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "语句不通",
+    "before": "我注意到自己读计划越来越不仔细，我想要一种方式保持对其选择的参与",
+    "after": "我注意到自己读计划越来越不仔细，我想要一种方式持续关注它的选择",
+    "note": "“保持对其选择的参与”不通顺"
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "type": "术语不一致",
+    "before": "Claude 甚至已经相当擅长在 Markdown 文件里用 ASCII 字符绘制图表",
+    "after": "Claude 甚至已经相当擅长在 Markdown 文件里用 ASCII 字符绘制示意图",
+    "note": "diagrams 前文译“图表”，此处宜统一"
+  },
+  {
+    "rel": "articles/using-llms-to-secure-source-code.md",
+    "type": "误译",
+    "before": "在威胁建模和沙箱上的一次性投入，为防御者的循环提供动力——这是一个由发现、验证、分类和修复组成的重复循环——其中瓶颈不是发现漏洞，而是之后的一切。",
+    "after": "在威胁建模和沙箱上的一次性投入，为防御者的循环提供动力——这是一个由发现、验证、分类和修复组成的重复循环——其中瓶颈不是发现漏洞，而是发现之后的一切工作。",
+    "note": "after指发现之后的环节，非时间先后"
+  },
+  {
+    "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+    "type": "语句不通",
+    "before": "在你快完成时做压缩，花费会超过节省。",
+    "after": "在你快完成时做压缩，花费会超过它节省的。",
+    "note": "缺宾语，句子不完整"
+  },
+  {
+    "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+    "type": "语句不通",
+    "before": "一个模型只读一遍代码。另一个读了代码、尝试修复、又读了一遍。",
+    "after": "一个模型只读一遍代码。另一个读了代码、尝试修复、又读了一遍代码。",
+    "note": "“又读了一遍”缺宾语"
+  },
+  {
+    "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+    "type": "语句不通",
+    "before": "一个能减少轮次的习惯，是给模型",
+    "after": "一个能减少轮次的做法，是给模型",
+    "note": "“习惯是给模型”搭配不当"
+  },
+  {
+    "rel": "articles/what-is-model-context-protocol.md",
+    "type": "误译",
+    "before": "MCP 通过双向的方式工作",
+    "after": "MCP 通过双端协作的方式工作",
+    "note": "two-sided指客户端与服务端两端"
+  },
+  {
+    "rel": "articles/what-is-model-context-protocol.md",
+    "type": "语句不通",
+    "before": "正在构建一个将连接许多应用的智能体？正在构建一个将连接许多智能体的应用？",
+    "after": "正在构建一个需要连接许多应用的智能体？正在构建一个需要连接许多智能体的应用？",
+    "note": "缺谓语，句子读不通"
+  },
+  {
+    "rel": "articles/what-is-model-context-protocol.md",
+    "type": "语句不通",
+    "before": "开发者可以遵循单一标准将外部产品连接到你的 AI 应用和智能体",
+    "after": "开发者可以遵循单一标准将外部产品连接到自己的 AI 应用和智能体",
+    "note": "人称混用，你/自己不一致"
+  },
+  {
+    "rel": "articles/what-is-model-context-protocol.md",
+    "type": "语句不通",
+    "before": "企业可以更有效地推动 AI 工具和应用的内部采用，因为 MCP 简化了将你的系统连接到 AI 的过程。这有助于在你的组织内让 AI 更加互联",
+    "after": "企业可以更有效地推动 AI 工具和应用的内部采用，因为 MCP 简化了将企业系统连接到 AI 的过程。这有助于在组织内让 AI 更加互联",
+    "note": "面向企业却用“你”，人称错乱"
+  },
+  {
+    "rel": "articles/what-is-model-context-protocol.md",
+    "type": "语句不通",
+    "before": "MCP 为 AI 智能体创建了访问任意数量服务和工具的基础设施",
+    "after": "MCP 为 AI 智能体构建了访问任意数量服务和工具的基础设施",
+    "note": "“创建基础设施”搭配不当"
+  },
+  {
+    "rel": "articles/which-claude-model-should-you-build-with.md",
+    "type": "误译",
+    "before": "如果你已经超过 `high`，不妨试试在更低的 effort 下使用上一级模型。",
+    "after": "如果你已经超过 `high`，不妨试试在更低的 effort 下使用再上一级模型。",
+    "note": "next model up 指更大一级模型"
+  },
+  {
+    "rel": "articles/which-claude-model-should-you-build-with.md",
+    "type": "误译",
+    "before": "从 Fable 5.2 切换到任何其他正式可用模型，通常会丢弃它的推理。",
+    "after": "从 Fable 5.2 切换到任何其他正式可用模型，都会丢弃它的推理。",
+    "note": "原文generally available指模型类别，非“通常”"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "误译",
+    "before": "就可能在 downstream 引发真正的问题",
+    "after": "就可能在后续环节引发真正的问题",
+    "note": "downstream 未译，应为下游/后续"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "误译",
+    "before": "内部用量增长了两倍",
+    "after": "内部用量增长到原来的三倍",
+    "note": "tripled 是三倍，非增长两倍"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "语句不通",
+    "before": "公司品味最高的开发者",
+    "after": "公司里品味最高的开发者",
+    "note": "缺“里”，句子不通"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "语句不通",
+    "before": "它就会失去线索、陷入混乱",
+    "after": "它就会失去头绪、陷入混乱",
+    "note": "lose track 译作失去线索不通"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "语句不通",
+    "before": "早期模型往往停留在日志表面，而不去挖掘相关的那一行",
+    "after": "早期模型往往停留在日志表面，而不去深挖相关的那一行",
+    "note": "“挖掘那一行”搭配不当"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "术语不一致",
+    "before": "时程（horizon），它能自我维持多久",
+    "after": "时间跨度（horizon），它能自我维持多久",
+    "note": "horizon 译“时程”生硬且前后不一"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "术语不一致",
+    "before": "时程之所以能维持",
+    "after": "时间跨度之所以能维持",
+    "note": "同上，术语应统一"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "术语不一致",
+    "before": "它先声明了自己将遵守的不变量",
+    "after": "它先声明了自己将遵守的不变式",
+    "note": "invariant 宜译“不变式”"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "type": "语句不通",
+    "before": "无需被 @ 就主动介入某个问题",
+    "after": "无需被 @ 就主动介入某个议题",
+    "note": "issue 此处指议题，非问题"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "误译",
+    "before": "在 Opus 之前的时代，产出初稿的时间线压缩了 12 到 24 小时",
+    "after": "在 Opus 之前的时代，产出初稿的时间线缩短了 12 到 24 小时",
+    "note": "compressed by 指缩短了该时长"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "Hebbia 将整个工作固化为一个 Matrix",
+    "after": "Hebbia 将整个工作固化为一个 Matrix 流程",
+    "note": "codified the job into a Matrix 缺中心词"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "让银行家可以把时间花在追逐哪些买家以及如何定位他们上",
+    "after": "让银行家可以把时间花在决定追逐哪些买家以及如何定位他们上",
+    "note": "缺“决定”，句子不通"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "Hebbia 是一个为机构金融的严谨性而构建的 AI 平台",
+    "after": "Hebbia 是一个为满足机构金融的严谨要求而构建的 AI 平台",
+    "note": "“为严谨性而构建”搭配生硬"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "与金融业已经建模良好的结构化定量数据相比，这类文档在规模化分析上一直更为困难",
+    "after": "这类文档在规模化分析上一直比金融业已经建模良好的结构化定量数据更为困难",
+    "note": "比较对象错位，主语混乱"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "在规模化下保持这些答案的准确性",
+    "after": "在大规模场景下保持这些答案的准确性",
+    "note": "“在规模化下”为生硬直译"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "误译",
+    "before": "Hebbia 正在攻克这项工作的其余部分",
+    "after": "Hebbia 正在着手完成这项工作的其余部分",
+    "note": "reaching for 意为着手争取，非攻克"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "通过一组确定性的智能体式步骤跨来源收集数据",
+    "after": "通过一组确定性的智能体步骤跨来源收集数据",
+    "note": "“智能体式”生造词"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "术语不一致",
+    "before": "Hebbia 的元提示（meta-prompting）将自然语言请求转化为提示词",
+    "after": "Hebbia 的元提示（meta-prompting）将自然语言请求转化为提示",
+    "note": "prompt 前文译“提示词”，此处“提示词”重复"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "type": "语句不通",
+    "before": "Hebbia 构建 Matrix 正是为了让这类定性工作系统化",
+    "after": "Hebbia 构建 Matrix 正是为了让这类定性工作变得系统化",
+    "note": "“让……系统化”搭配不当"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-rakuten.md",
+    "type": "语句不通",
+    "before": "它会在整个运行过程中不断累积，并在数小时后产生次优结果。",
+    "after": "错误会在整个运行过程中不断累积，并在数小时后产生次优结果。",
+    "note": "“它”指代不明，应为错误累积"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+    "type": "语句不通",
+    "before": "此前为 Base44 应用生成引擎提供支持的 Claude 模型（自该引擎于 2025 年初上线以来一直如此）无法被托付这类工作",
+    "after": "此前为 Base44 应用生成引擎提供支持的 Claude 模型（自该引擎于 2025 年初上线以来一直如此）无法被信任去完成这类工作",
+    "note": "“无法被托付”搭配生硬，宜改“无法被信任”"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+    "type": "误译",
+    "before": "它甚至指出了 Base44 自身评估中的一个盲点",
+    "after": "它甚至指出了 Base44 自身评估中的一个缺口",
+    "note": "原文gap指评估缺失项，非“盲点”"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+    "type": "语句不通",
+    "before": "当一位产品经理想要把原生移动应用构建功能引入 Base44 内部时",
+    "after": "当一位产品经理想要把原生移动应用构建功能引入 Base44 时",
+    "note": "“引入……内部”冗余不通"
+  },
+  {
+    "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+    "type": "语句不通",
+    "before": "完成了团队投入生产所需的大约 90%",
+    "after": "达到了团队投入生产所需的大约 90%",
+    "note": "“完成了……90%”搭配不当"
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "type": "误译",
+    "before": "共享更多上下文，能让 Claude 在你无法塞进提示词的知识库中搜索更广的范围。",
+    "after": "共享更多上下文，能让 Claude 在比提示词所能容纳的更广的知识库中搜索。",
+    "note": "原意是比提示词更广，非你无法塞进"
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "type": "误译",
+    "before": "以便能够安全且快速地发布一个[面向通用场景的 Mythos 级模型]",
+    "after": "以便能够安全且快速地发布一个[供通用使用的 Mythos 级模型]",
+    "note": "for general use 是供通用使用，非面向通用场景"
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "type": "语句不通",
+    "before": "对于你希望重复进行的工作，描述成果，Claude 会设置好时间安排，将其变为一项周期性任务：“我希望每周一一开始就知道流水线里发生了什么变化，以及哪些需要做决定。”",
+    "after": "对于你希望重复进行的工作，描述成果，Claude 会设置好时间安排，将其变为一项周期性任务：“我希望每周一开始就知道流水线里发生了什么变化，以及哪些需要做决定。”",
+    "note": "“每周一一开始”多字病句"
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "type": "误译",
+    "before": "它会在一个想法还容易改变时就发现其中的缺口",
+    "after": "它会在一个想法还容易修改时就发现其中的缺口",
+    "note": "easy to change 指易修改，非易改变"
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "type": "误译",
+    "before": "Claude 会获取并读取电子表格，提取运行率，对每个项目进行预测，将预测与目标核对，并撰写总结。",
+    "after": "Claude 会获取并读取电子表格，提取运行率，对每个条目进行预测，将预测与目标核对，并撰写总结。",
+    "note": "each line 指每个条目/科目，非项目"
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "type": "误译",
+    "before": "如果它早期误读了一个运行率，这个错误会传导到之后的每一项预测中。",
+    "after": "如果它早期误读了一个运行率，这个错误会传导到其后的每一项预测中。",
+    "note": "after it 指其后，非之后全部"
+  },
+  {
+    "rel": "articles/zero-trust-for-ai-agents.md",
+    "type": "误译",
+    "before": "以及那些从第一天起就按「假定已被入侵」来设计智能体部署的组织",
+    "after": "以及那些从第一天起就按「假定已被入侵」来架构智能体部署的组织",
+    "note": "architected 指架构设计，非设计"
+  },
+  {
+    "rel": "guides/the-ai-investment-firm.md",
+    "type": "误译",
+    "before": "既需要技术与流程的变革，也需要人与组织的变革",
+    "after": "既需要人与流程的变革，也需要技术的变革",
+    "note": "原文是people and process change as much as technology change"
+  },
+  {
+    "rel": "webinars/claude-code-maximizing-value.md",
+    "type": "术语不一致",
+    "before": "学习针对每个调节项的简单启发式方法",
+    "after": "学习针对每个调节项的简单经验法则",
+    "note": "heuristic此处宜译经验法则"
+  },
+  {
+    "rel": "webinars/claude-code-maximizing-value.md",
+    "type": "误译",
+    "before": "了解得不够 → 用更大的模型；尝试得不够 → 提高努力程度",
+    "after": "了解得不够 → 用更大的模型；努力得不够 → 提高努力程度",
+    "note": "didn't try hard enough指努力不足"
+  },
+  {
+    "rel": "webinars/claude-code-maximizing-value.md",
+    "type": "语句不通",
+    "before": "让嘈杂的命令安静下来",
+    "after": "让嘈杂的命令静默",
+    "note": "quiet作动词应为静默输出"
+  },
+  {
+    "rel": "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md",
+    "type": "名词错",
+    "before": "Claude for Nonprofits Skills（技能）",
+    "after": "Claude for Nonprofits 技能",
+    "note": "Skills 是产品功能名，不应保留英文"
+  },
+  {
+    "rel": "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md",
+    "type": "误译",
+    "before": "Team 和 Enterprise 两个版本均有覆盖并加以标注",
+    "after": "Team 和 Enterprise 版本均有覆盖并加以标注",
+    "note": "原文未说两个版本，指两种套餐"
+  }
+]

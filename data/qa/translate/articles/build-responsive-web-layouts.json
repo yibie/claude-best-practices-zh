@@ -1,0 +1,34 @@
+{
+  "rel": "articles/build-responsive-web-layouts.md",
+  "issues": [
+    {
+      "zh": "你检查元素，查看计算样式，追踪父容器约束如何影响子元素。",
+      "fix": "他们检查元素，查看计算样式，追踪父容器约束如何影响子元素。",
+      "type": "误译",
+      "note": "原文主语为They，指开发者"
+    },
+    {
+      "zh": "代码随后在 320px 和 512px 的视口尺寸下测试更新后的样式",
+      "fix": "随后它在 320px 和 512px 的视口尺寸下测试更新后的样式",
+      "type": "误译",
+      "note": "原文The code指Claude Code，非样式代码"
+    },
+    {
+      "zh": "找到 3 个具体问题，附带行号和修复建议。",
+      "fix": "找到 3 个具体问题，附带行号和修复建议。",
+      "type": "语句不通",
+      "note": "原文recommendations，译文可接受，但此处无误，删除",
+      "note2": ""
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5600,
+    "completion_tokens": 189,
+    "total_tokens": 5789,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5472
+  }
+}

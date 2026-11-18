@@ -1,0 +1,45 @@
+{
+  "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+  "issues": [
+    {
+      "zh": "我们注意到在为最新一代 Claude 模型编写提示词的方式上出现了巨大跃升",
+      "fix": "我们注意到最新一代 Claude 模型对提示词的响应方式出现了巨大跃升",
+      "type": "误译",
+      "note": "原文指模型行为变化，非编写方式"
+    },
+    {
+      "zh": "但对于某一部分提示词，这条指导会是错误的",
+      "fix": "但对于某一类提示词，这条指导会是错误的",
+      "type": "误译",
+      "note": "subset指一类提示词，非一部分"
+    },
+    {
+      "zh": "因为否则 Claude 就找不到它",
+      "fix": "以为否则 Claude 就找不到它",
+      "type": "语句不通",
+      "note": "“因为否则”搭配不当"
+    },
+    {
+      "zh": "评分标准（rubrics）是另一种形式的参考。评分标准允许 Claude",
+      "fix": "评分细则（rubrics）是另一种形式的参考。评分细则允许 Claude",
+      "type": "术语不一致",
+      "note": "rubrics译作评分标准易与评分标准混淆"
+    },
+    {
+      "zh": "将内容保存到 Claude 的记忆中",
+      "fix": "将内容保存到 Claude 的记忆中",
+      "type": "误译",
+      "note": "原文为鼓励用户保存，非自动写入"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5602,
+    "completion_tokens": 236,
+    "total_tokens": 5838,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5474
+  }
+}

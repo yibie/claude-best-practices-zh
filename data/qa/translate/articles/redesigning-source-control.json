@@ -1,0 +1,87 @@
+{
+  "rel": "articles/redesigning-source-control.md",
+  "issues": [
+    {
+      "zh": "我们每天为 CI 执行约 2,500 万次代码检出",
+      "fix": "我们每天为 CI 执行约 2,500 万次代码检出",
+      "type": "名词错",
+      "note": "原文25 million即2500万，正确"
+    },
+    {
+      "zh": "我们现在的 Scion 基础设施占用比之前的 git 镜像基础设施小 200 倍",
+      "fix": "我们现在的 Scion 基础设施占用比之前的 git 镜像基础设施小 200 倍",
+      "type": "名词错",
+      "note": "原文200x smaller，正确"
+    },
+    {
+      "zh": "它产出了一个内存消耗减少 20 倍、速度快 4 倍的版本",
+      "fix": "它产出了一个内存消耗减少 20 倍、速度快 4 倍的版本",
+      "type": "名词错",
+      "note": "原文20x less memory、4x faster，正确"
+    },
+    {
+      "zh": "每天合并的代码量增长了 10 倍",
+      "fix": "每天合并的代码量增长了 10 倍",
+      "type": "名词错",
+      "note": "原文increased by 10x，正确"
+    },
+    {
+      "zh": "仅 CI 就实现了 25% 的 CPU 容量收益",
+      "fix": "仅 CI 就实现了 25% 的 CPU 容量收益",
+      "type": "名词错",
+      "note": "原文25% CPU capacity win，正确"
+    },
+    {
+      "zh": "changeset 存储的是相对于其第一个父提交发生变更的文件列表",
+      "fix": "changeset 存储的是相对于其第一个父提交发生变更的文件列表",
+      "type": "名词错",
+      "note": "原文first parent，正确"
+    },
+    {
+      "zh": "我们开始构建 Scion 的时间，大约与 [Claude Mythos Preview](https://www.anthropic.com/claude/mythos) 和 [Claude Tag](https://www.anthropic.com/news/introducing-claude-tag) 在内部可用相同。",
+      "fix": "我们开始构建 Scion 的时间，大约与 [Claude Mythos Preview](https://www.anthropic.com/claude/mythos) 和 [Claude Tag](https://www.anthropic.com/news/introducing-claude-tag) 在内部可用的时间相同。",
+      "type": "语句不通",
+      "note": "缺“的时间”，句子不完整"
+    },
+    {
+      "zh": "这让我们能够区分仅注释变更和敏感逻辑变更这样简单的事情",
+      "fix": "这让我们能够区分仅注释变更和敏感逻辑变更这类简单情况",
+      "type": "语句不通",
+      "note": "“这样简单的事情”搭配不当"
+    },
+    {
+      "zh": "我们所有系统也都有传统告警，但我们的超级粉丝能够检测到微妙而新颖的问题，相比之下这些告警显得单一维度。",
+      "fix": "我们所有系统也都有传统告警，但我们的超级粉丝能够检测到微妙而新颖的问题，相比之下这些告警显得单一维度。",
+      "type": "语句不通",
+      "note": "“单一维度”生硬，但可理解"
+    },
+    {
+      "zh": "在 Anthropic，编码不再是构建系统或开展研究的瓶颈。",
+      "fix": "在 Anthropic，编码不再是构建系统或开展研究的瓶颈。",
+      "type": "误译",
+      "note": "原文coding no longer bottleneck，正确"
+    },
+    {
+      "zh": "它支持对仓库的丰富访问控制",
+      "fix": "它支持对仓库的丰富访问控制",
+      "type": "语句不通",
+      "note": "“丰富访问控制”搭配生硬"
+    },
+    {
+      "zh": "我们完成这一切的同时，每天合并的代码量增长了 10 倍。",
+      "fix": "我们完成这一切的同时，每天合并的代码量增长了 10 倍。",
+      "type": "名词错",
+      "note": "原文increased by 10x，正确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9324,
+    "completion_tokens": 739,
+    "total_tokens": 10063,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9196
+  }
+}

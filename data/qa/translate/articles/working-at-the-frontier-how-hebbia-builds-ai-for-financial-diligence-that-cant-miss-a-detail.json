@@ -1,0 +1,75 @@
+{
+  "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+  "issues": [
+    {
+      "zh": "在 Opus 之前的时代，产出初稿的时间线压缩了 12 到 24 小时",
+      "fix": "在 Opus 之前的时代，产出初稿的时间线缩短了 12 到 24 小时",
+      "type": "误译",
+      "note": "compressed by 指缩短了该时长"
+    },
+    {
+      "zh": "Hebbia 将整个工作固化为一个 Matrix",
+      "fix": "Hebbia 将整个工作固化为一个 Matrix 流程",
+      "type": "语句不通",
+      "note": "codified the job into a Matrix 缺中心词"
+    },
+    {
+      "zh": "让银行家可以把时间花在追逐哪些买家以及如何定位他们上",
+      "fix": "让银行家可以把时间花在决定追逐哪些买家以及如何定位他们上",
+      "type": "语句不通",
+      "note": "缺“决定”，句子不通"
+    },
+    {
+      "zh": "Hebbia 是一个为机构金融的严谨性而构建的 AI 平台",
+      "fix": "Hebbia 是一个为满足机构金融的严谨要求而构建的 AI 平台",
+      "type": "语句不通",
+      "note": "“为严谨性而构建”搭配生硬"
+    },
+    {
+      "zh": "与金融业已经建模良好的结构化定量数据相比，这类文档在规模化分析上一直更为困难",
+      "fix": "这类文档在规模化分析上一直比金融业已经建模良好的结构化定量数据更为困难",
+      "type": "语句不通",
+      "note": "比较对象错位，主语混乱"
+    },
+    {
+      "zh": "在规模化下保持这些答案的准确性",
+      "fix": "在大规模场景下保持这些答案的准确性",
+      "type": "语句不通",
+      "note": "“在规模化下”为生硬直译"
+    },
+    {
+      "zh": "Hebbia 正在攻克这项工作的其余部分",
+      "fix": "Hebbia 正在着手完成这项工作的其余部分",
+      "type": "误译",
+      "note": "reaching for 意为着手争取，非攻克"
+    },
+    {
+      "zh": "通过一组确定性的智能体式步骤跨来源收集数据",
+      "fix": "通过一组确定性的智能体步骤跨来源收集数据",
+      "type": "语句不通",
+      "note": "“智能体式”生造词"
+    },
+    {
+      "zh": "Hebbia 的元提示（meta-prompting）将自然语言请求转化为提示词",
+      "fix": "Hebbia 的元提示（meta-prompting）将自然语言请求转化为提示",
+      "type": "术语不一致",
+      "note": "prompt 前文译“提示词”，此处“提示词”重复"
+    },
+    {
+      "zh": "Hebbia 构建 Matrix 正是为了让这类定性工作系统化",
+      "fix": "Hebbia 构建 Matrix 正是为了让这类定性工作变得系统化",
+      "type": "语句不通",
+      "note": "“让……系统化”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3840,
+    "completion_tokens": 541,
+    "total_tokens": 4381,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3712
+  }
+}

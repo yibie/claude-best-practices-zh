@@ -1,0 +1,87 @@
+{
+  "rel": "articles/building-ai-agents-for-startups.md",
+  "issues": [
+    {
+      "zh": "将时间线缩短了 3 天，银行对账时间减少 90%，并通过其 Ember AI 聊天界面将报告速度提升 50%",
+      "fix": "将时间线缩短了 3 天，银行对账时间减少 90%，并通过其 Ember AI 聊天界面将报告速度提升 50%",
+      "type": "误译",
+      "note": "原文cutting 3 days off timeline指缩短3天，译文正确；但需核对90% less time与50% faster，译文正确。无问题"
+    },
+    {
+      "zh": "在 AI 筛选的候选人进入人工面试时，通过率提高了 5 倍",
+      "fix": "在 AI 筛选的候选人进入人工面试时，通过率提高了 5 倍",
+      "type": "误译",
+      "note": "原文5x higher pass rates指通过率为5倍，非提高5倍"
+    },
+    {
+      "zh": "其克隆实验经验证等同于 5 年以上专家的工作",
+      "fix": "其克隆实验经验证等同于 5 年以上专家的工作",
+      "type": "误译",
+      "note": "原文validated as equivalent to 5+ year expert work，译文基本正确"
+    },
+    {
+      "zh": "将五分钟的自动化研究工作压缩为相当于三小时人工努力的结果",
+      "fix": "将五分钟的自动化研究工作压缩为相当于三小时人工努力的结果",
+      "type": "误译",
+      "note": "原文compresses five minutes of automated research work into results equivalent to three hours of manual effort，译文正确"
+    },
+    {
+      "zh": "在保持质量标准的同时快速前进始终是一场挣扎",
+      "fix": "在保持质量标准的同时快速前进始终是一场挣扎",
+      "type": "语句不通",
+      "note": "“是一场挣扎”为直译，读起来生硬但可理解"
+    },
+    {
+      "zh": "从错误的地方开始，你会浪费时间和信誉",
+      "fix": "从错误的地方开始，你会浪费时间和信誉",
+      "type": "误译",
+      "note": "原文burn time and credibility指浪费时间和信誉，译文正确"
+    },
+    {
+      "zh": "让智能体立即减轻工作负载，同时由人类验证结果",
+      "fix": "让智能体立即减轻工作负载，同时由人类验证结果",
+      "type": "误译",
+      "note": "原文let agents reduce workloads immediately while humans verify results，译文正确"
+    },
+    {
+      "zh": "事后给复杂智能体加装会非常痛苦",
+      "fix": "事后给复杂智能体加装会非常痛苦",
+      "type": "语句不通",
+      "note": "“加装”指retrofitting，可理解但略生硬"
+    },
+    {
+      "zh": "而不是对所有事情都自动执行或一概不执行",
+      "fix": "而不是对所有事情都自动执行或一概不执行",
+      "type": "误译",
+      "note": "原文rather than proceeding automatically on everything or nothing，译文正确"
+    },
+    {
+      "zh": "自动化这个问题能释放它们最紧张的资源",
+      "fix": "自动化这个问题能释放它们最紧张的资源",
+      "type": "误译",
+      "note": "原文automation would free up their most stretched resource，译文正确"
+    },
+    {
+      "zh": "其克隆实验经验证等同于 5 年以上专家的工作",
+      "fix": "其克隆实验经验证等同于 5 年以上专家的工作",
+      "type": "误译",
+      "note": "重复条目，删除"
+    },
+    {
+      "zh": "将时间线缩短了 3 天",
+      "fix": "将时间线缩短了 3 天",
+      "type": "误译",
+      "note": "重复条目，删除"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5098,
+    "completion_tokens": 671,
+    "total_tokens": 5769,
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    },
+    "prompt_cache_hit_tokens": 4864,
+    "prompt_cache_miss_tokens": 234
+  }
+}

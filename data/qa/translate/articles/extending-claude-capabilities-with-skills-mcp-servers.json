@@ -1,0 +1,63 @@
+{
+  "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+  "issues": [
+    {
+      "zh": "MCP 就像是可以进入各个货架通道。",
+      "fix": "MCP 就像是可以进入各个货架通道的权限。",
+      "type": "语句不通",
+      "note": "句子缺宾语，读不通"
+    },
+    {
+      "zh": "按需加载，节省上下文",
+      "fix": "按需加载，保留上下文",
+      "type": "误译",
+      "note": "preserving 意为保留，非节省"
+    },
+    {
+      "zh": "定义在前期加载",
+      "fix": "定义在连接时预先加载",
+      "type": "语句不通",
+      "note": "表述生硬，语义不清"
+    },
+    {
+      "zh": "一致的性能",
+      "fix": "一致的输出表现",
+      "type": "误译",
+      "note": "performance 此处指输出表现"
+    },
+    {
+      "zh": "（性能）",
+      "fix": "（输出表现）",
+      "type": "误译",
+      "note": "同上，performance 非性能"
+    },
+    {
+      "zh": "Skill 确保输出符合格式标准（性能）",
+      "fix": "Skill 确保输出符合格式标准（输出表现）",
+      "type": "误译",
+      "note": "performance 译作性能不当"
+    },
+    {
+      "zh": "Skill 对照合规要求进行验证（性能）",
+      "fix": "Skill 对照合规要求进行验证（输出表现）",
+      "type": "误译",
+      "note": "performance 译作性能不当"
+    },
+    {
+      "zh": "程序性知识",
+      "fix": "流程性知识",
+      "type": "术语不一致",
+      "note": "procedural knowledge 前后译法不一"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6016,
+    "completion_tokens": 284,
+    "total_tokens": 6300,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5888
+  }
+}

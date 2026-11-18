@@ -1,0 +1,75 @@
+{
+  "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+  "issues": [
+    {
+      "zh": "JetBrains CTO Vladislav Tankov",
+      "fix": "JetBrains 智能体系统 CTO Vladislav Tankov",
+      "type": "漏译",
+      "note": "漏译其职务中的“Agent Systems”"
+    },
+    {
+      "zh": "转变为认识到 AI 已经扎根",
+      "fix": "转变为认识到 AI 已成为常态",
+      "type": "误译",
+      "note": "here to stay 意为长期存在，非“扎根”"
+    },
+    {
+      "zh": "是最难发现、代价最高的一类失败",
+      "fix": "是发现代价最高的一类失败",
+      "type": "误译",
+      "note": "原文只说发现成本最高，未说最难发现"
+    },
+    {
+      "zh": "而 Opus 4.8 为 28.2%，提升了 16 个百分点",
+      "fix": "而 Opus 4.8 为 28.2%，提升了 16.1 个百分点",
+      "type": "名词错",
+      "note": "44.3 减 28.2 为 16.1，非 16"
+    },
+    {
+      "zh": "几乎需要一个伙伴",
+      "fix": "几乎像需要一个伙伴一样",
+      "type": "语句不通",
+      "note": "“几乎需要一个伙伴”表述生硬"
+    },
+    {
+      "zh": "围绕模型和执行框架（harness）构建基础设施与安全网",
+      "fix": "围绕模型和智能体执行框架（harness）构建基础设施与安全网",
+      "type": "术语不一致",
+      "note": "harness 前文译“执行框架”，此处宜统一"
+    },
+    {
+      "zh": "但除此之外，我看不到还有其他办法",
+      "fix": "但我看不到还有其他办法",
+      "type": "误译",
+      "note": "原文无“除此之外”之意"
+    },
+    {
+      "zh": "包括那些此前无人知晓的漏洞",
+      "fix": "包括那些此前无人知晓的漏洞",
+      "type": "误译",
+      "note": "原文指无人知晓的漏洞，译文可接受，但“此前”为增译"
+    },
+    {
+      "zh": "组织也将获得所需的治理与清晰的投资回报（ROI）",
+      "fix": "组织也将获得所需的治理与清晰的投资回报",
+      "type": "语句不通",
+      "note": "“清晰的投资回报”搭配不当"
+    },
+    {
+      "zh": "我们给运行 Claude Fable 5 的智能体提供规格说明",
+      "fix": "我们给运行 Claude Fable 5 的智能体提供规格说明",
+      "type": "误译",
+      "note": "原文 provide...with specifications，译文可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3117,
+    "completion_tokens": 470,
+    "total_tokens": 3587,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 2989
+  }
+}

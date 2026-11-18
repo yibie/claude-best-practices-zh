@@ -1,0 +1,14 @@
+{
+  "rel": "articles/deploying-claude-across-the-legal-industry.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 1803,
+    "completion_tokens": 5,
+    "total_tokens": 1808,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1675
+  }
+}

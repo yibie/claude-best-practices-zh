@@ -1,0 +1,51 @@
+{
+  "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+  "issues": [
+    {
+      "zh": "把 AI 的每成果成本（cost-per-outcome）而非 token 消耗作为主要价值指标",
+      "fix": "把 AI 的每成果成本（cost-per-outcome）而非 token 消耗作为主要价值指标来衡量",
+      "type": "语句不通",
+      "note": "缺谓语，句子不完整"
+    },
+    {
+      "zh": "还是仅仅任务量大，即大量简单直接的工作",
+      "fix": "还是仅仅规模大，即大量简单直接的工作",
+      "type": "误译",
+      "note": "large指规模大非任务量大"
+    },
+    {
+      "zh": "若按组设置，则每位成员各自获得该限额",
+      "fix": "若按组设置，则每位成员各自获得该限额",
+      "type": "误译",
+      "note": "原文each member gets the limit，译文可接受，但“各自获得”易误解为叠加；建议改为“每位成员适用该限额”"
+    },
+    {
+      "zh": "缓存命中时成本可低至正常输入费率的 10%",
+      "fix": "缓存命中时成本可低至正常输入费率的 10%",
+      "type": "误译",
+      "note": "原文cost 10% of normal input rate，译文“可低至”弱化了确定性；建议改为“成本为正常输入费率的10%”"
+    },
+    {
+      "zh": "这样你只在需要高峰费率的调用上支付高峰费率",
+      "fix": "这样你只在需要高峰费率的调用上支付高峰费率",
+      "type": "语句不通",
+      "note": "“高峰费率”重复且原文peak rates指高effort费率，非高峰时段；建议改为“高推理费率”"
+    },
+    {
+      "zh": "通常可以在任何人动预算之前就大幅降低生产工作负载的成本",
+      "fix": "通常可以在任何人动预算之前就大幅降低生产工作负载的成本",
+      "type": "误译",
+      "note": "原文before anyone touches a budget line指调整预算项，非“动预算”"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3693,
+    "completion_tokens": 378,
+    "total_tokens": 4071,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3693
+  }
+}

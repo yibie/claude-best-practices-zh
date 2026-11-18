@@ -1,0 +1,75 @@
+{
+  "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+  "issues": [
+    {
+      "zh": "根据你所构建的 Claude 平台界面",
+      "fix": "根据你所使用的 Claude 平台",
+      "type": "误译",
+      "note": "surface 指平台/入口，非界面"
+    },
+    {
+      "zh": "换言之，即 Claude 调用 skill 获取专业知识或工作流的能力",
+      "fix": "换言之，即 Claude 为获取专业知识或工作流而调用 skill 的能力",
+      "type": "语句不通",
+      "note": "原译语序导致语义含混"
+    },
+    {
+      "zh": "这些基线测试确认你的指令按预期工作",
+      "fix": "这些基线测试确认你的指令是否按预期工作",
+      "type": "误译",
+      "note": "confirm 此处为验证是否有效"
+    },
+    {
+      "zh": "一个范围界定良好的 skill 知道何时不应激活",
+      "fix": "范围界定良好的 skill 知道何时不应激活",
+      "type": "语句不通",
+      "note": "量词与句式冗余不通顺"
+    },
+    {
+      "zh": "在有真实、重复性任务时再构建它们",
+      "fix": "当你拥有真实、重复性的任务时再构建它们",
+      "type": "语句不通",
+      "note": "原句缺主语，读不通"
+    },
+    {
+      "zh": "它对你最初的几个 skills 尤其有价值",
+      "fix": "它对你最初几个 skills 尤其有价值",
+      "type": "语句不通",
+      "note": "“最初的几个”搭配不当"
+    },
+    {
+      "zh": "如果多个 skills 处理复杂任务的不同方面，它们可以同时激活",
+      "fix": "如果多个 skills 分别处理复杂任务的不同方面，它们可以同时激活",
+      "type": "语句不通",
+      "note": "缺“分别”，条件关系不清"
+    },
+    {
+      "zh": "在该对话中保持其他文件不被触碰",
+      "fix": "在该对话中不读取其他文件",
+      "type": "误译",
+      "note": "untouched 指不读取，非不被触碰"
+    },
+    {
+      "zh": "让 Claude 输出更强大、更有效的结果",
+      "fix": "让 Claude 输出更强大、更有效的结果",
+      "type": "语句不通",
+      "note": "“输出结果”语义重复"
+    },
+    {
+      "zh": "包含展示正确用法的具体示例",
+      "fix": "包含展示正确用法的具体示例",
+      "type": "语句不通",
+      "note": "“展示……用法”搭配可，但“具体示例”冗余"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14210,
+    "completion_tokens": 433,
+    "total_tokens": 14643,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 14082
+  }
+}

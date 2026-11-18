@@ -1,0 +1,75 @@
+{
+  "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+  "issues": [
+    {
+      "zh": "找出那些我们尚未建立销售商机、但在客户层面存在用量信号的账户",
+      "fix": "找出那些在客户层面存在用量信号、但我们尚未建立销售商机的账户",
+      "type": "误译",
+      "note": "原文是账户有信号但无商机，译文逻辑颠倒"
+    },
+    {
+      "zh": "把 Claude 指向相关的产品文档和团队频道，让它构建第一版",
+      "fix": "把 Claude 指向相关的产品文档和团队频道，让它构建第一版",
+      "type": "误译",
+      "note": "原文external-facing指对外文档，此处指产品文档，非错误"
+    },
+    {
+      "zh": "当你驳回一个钩子（hooks）或修正一份草稿时",
+      "fix": "当你驳回一条建议或修正一份草稿时",
+      "type": "误译",
+      "note": "hook此处指Claude提出的建议，非钩子"
+    },
+    {
+      "zh": "找出该代表需要回复的每个会话线索",
+      "fix": "找出该代表需要回复的每个邮件会话",
+      "type": "误译",
+      "note": "thread指邮件会话，非会话线索"
+    },
+    {
+      "zh": "这些动作现在都先经过 Claude Cowork",
+      "fix": "这些动作现在都先经过 Claude Cowork 处理",
+      "type": "语句不通",
+      "note": "句子缺谓语，读不通"
+    },
+    {
+      "zh": "这些组成部分为技能补充了上下文",
+      "fix": "这些组成部分为技能补充了上下文",
+      "type": "语句不通",
+      "note": "原文These pieces of the skill指技能的各部分，译文主语错位"
+    },
+    {
+      "zh": "它在我负责的整个名录中寻找潜在客户",
+      "fix": "它在我负责的整个名录中挖掘商机",
+      "type": "误译",
+      "note": "prospects此处指挖掘潜在商机，非寻找潜在客户"
+    },
+    {
+      "zh": "把团队反复回答的问题和你们的最佳回答收集到一份对外文档中",
+      "fix": "把团队反复回答的问题和你们的最佳回答收集到一份对外文档中",
+      "type": "误译",
+      "note": "原文external-facing指对外，此处无误"
+    },
+    {
+      "zh": "一旦确认代表们在日常工作中持续使用某个技能，就把它提升到那里",
+      "fix": "一旦确认代表们在日常工作中持续使用某个技能，就把它提升到共享插件中",
+      "type": "误译",
+      "note": "there指共享插件，译文“那里”指代不清"
+    },
+    {
+      "zh": "按我们的标准明确给出的通过或不通过评分",
+      "fix": "按我们的标准明确给出的通过或不通过判定",
+      "type": "误译",
+      "note": "score此处指判定结果，非评分"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4550,
+    "completion_tokens": 503,
+    "total_tokens": 5053,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4422
+  }
+}

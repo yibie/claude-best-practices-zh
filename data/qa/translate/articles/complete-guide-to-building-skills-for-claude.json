@@ -1,0 +1,33 @@
+{
+  "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+  "issues": [
+    {
+      "zh": "它涵盖了从技术要求和 Skill 结构到测试方法和常见故障排查模式的方方面面。",
+      "fix": "它涵盖了从技术要求和 Skill 结构到测试方法和常见故障排查模式的方方面面。",
+      "type": "术语不一致",
+      "note": "Skill 单复数译法不统一"
+    },
+    {
+      "zh": "Skill 结构的技术要求与最佳实践",
+      "fix": "Skills 结构的技术要求与最佳实践",
+      "type": "术语不一致",
+      "note": "此处原文为 skills，译作 Skill"
+    },
+    {
+      "zh": "构建并测试你的第一个可用 Skill 大约需要 15-30 分钟",
+      "fix": "构建并测试你的第一个可用 Skill 大约需要 15-30 分钟",
+      "type": "术语不一致",
+      "note": "Skill 单复数译法不统一"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1726,
+    "completion_tokens": 156,
+    "total_tokens": 1882,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1598
+  }
+}

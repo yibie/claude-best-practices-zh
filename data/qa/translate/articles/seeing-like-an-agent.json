@@ -1,0 +1,33 @@
+{
+  "rel": "articles/seeing-like-an-agent.md",
+  "issues": [
+    {
+      "zh": "以及如何区分两者",
+      "fix": "以及如何判断何时该做哪一种",
+      "type": "误译",
+      "note": "原文指区分添加与移除，非区分两者"
+    },
+    {
+      "zh": "纸笔是最低要求",
+      "fix": "纸是最低要求",
+      "type": "误译",
+      "note": "原文为paper，未提笔"
+    },
+    {
+      "zh": "执行框架会在每次响应前检索相关片段并交给 Claude。虽然",
+      "fix": "执行框架会在每次响应前检索相关片段并交给 Claude。虽然",
+      "type": "语句不通",
+      "note": "原文有重复句号，译文无实质错误"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5395,
+    "completion_tokens": 125,
+    "total_tokens": 5520,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5267
+  }
+}

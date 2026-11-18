@@ -1,0 +1,75 @@
+{
+  "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+  "issues": [
+    {
+      "zh": "Gwen 同时处理 inbound 和 outbound 线索。",
+      "fix": "Gwen 同时处理呼入和呼出线索。",
+      "type": "术语不一致",
+      "note": "inbound/outbound 未译，与后文不一致"
+    },
+    {
+      "zh": "Outbound 交易需要更多坚持",
+      "fix": "呼出交易需要更多坚持",
+      "type": "术语不一致",
+      "note": "outbound 未译，前后译法不一"
+    },
+    {
+      "zh": "并通过电话接手 warm 线索",
+      "fix": "并通过电话接手意向较强的线索",
+      "type": "术语不一致",
+      "note": "warm 未译，术语不统一"
+    },
+    {
+      "zh": "对每条 outbound 消息设置一个评审智能体",
+      "fix": "对每条外发消息设置一个评审智能体",
+      "type": "术语不一致",
+      "note": "outbound 未译，前后不一致"
+    },
+    {
+      "zh": "一个运行在 Haiku 上的评审会在每条通信发出前阅读它",
+      "fix": "一个运行在 Haiku 上的评审智能体会在每条通信发出前阅读它",
+      "type": "漏译",
+      "note": "漏译 agent，评审应为智能体"
+    },
+    {
+      "zh": "Curative 分步骤放宽限制，并针对更确定性的决策放宽，然后加入了费率审查员",
+      "fix": "Curative 分步骤放宽限制，并针对更确定性的决策放宽限制，然后加入了费率审查员",
+      "type": "语句不通",
+      "note": "句子成分残缺，读不通"
+    },
+    {
+      "zh": "存在一个清算价格，你越快找到清算价格，大家就能越快继续提供护理",
+      "fix": "存在一个市场清算价格，你越快找到清算价格，大家就能越快继续提供护理",
+      "type": "误译",
+      "note": "clearing price 指市场出清价，非清算"
+    },
+    {
+      "zh": "Gwen 要求该诊所培训其员工，然后确认该会员得到了服务",
+      "fix": "Gwen 要求该诊所培训其员工，然后确认该会员得以就诊",
+      "type": "误译",
+      "note": "got in 指获准就诊，非得到服务"
+    },
+    {
+      "zh": "扩展 130 名指导和辅导会员的人员的覆盖范围",
+      "fix": "扩展 130 名指导和辅导会员的工作人员的覆盖范围",
+      "type": "语句不通",
+      "note": "连续定语堆叠，语义含混"
+    },
+    {
+      "zh": "它有一个永远无法清除的错误记忆",
+      "fix": "它有一条永远无法清除的错误记忆",
+      "type": "语句不通",
+      "note": "量词搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5624,
+    "completion_tokens": 495,
+    "total_tokens": 6119,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5496
+  }
+}

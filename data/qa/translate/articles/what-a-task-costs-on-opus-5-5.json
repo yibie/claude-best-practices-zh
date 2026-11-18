@@ -1,0 +1,87 @@
+{
+  "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+  "issues": [
+    {
+      "zh": "在你快完成时做压缩，花费会超过节省。",
+      "fix": "在你快完成时做压缩，花费会超过它节省的。",
+      "type": "语句不通",
+      "note": "缺宾语，句子不完整"
+    },
+    {
+      "zh": "一个模型只读一遍代码。另一个读了代码、尝试修复、又读了一遍。",
+      "fix": "一个模型只读一遍代码。另一个读了代码、尝试修复、又读了一遍代码。",
+      "type": "语句不通",
+      "note": "“又读了一遍”缺宾语"
+    },
+    {
+      "zh": "一个能减少轮次的习惯，是给模型",
+      "fix": "一个能减少轮次的做法，是给模型",
+      "type": "语句不通",
+      "note": "“习惯是给模型”搭配不当"
+    },
+    {
+      "zh": "一个没有缓存、答案很长的简短提问，最多可省 20%",
+      "fix": "一个没有缓存、答案很长的简短提问，最多可省 20%",
+      "type": "误译",
+      "note": "原文为短问题长答案，译文可接受，但“简短提问”易误解为问题短；保留原样不报"
+    },
+    {
+      "zh": "它假设 Opus 5.5 在其默认的 medium 档位上每项任务使用的 token 更少，再加上更低的价格，所以这并不是 token 价格降低了 40%。",
+      "fix": "它假设 Opus 5.5 在其默认的 medium 档位上每项任务使用的 token 更少，再加上更低的价格，所以这并不是 token 价格降低了 40%。",
+      "type": "误译",
+      "note": "译文准确，不报"
+    },
+    {
+      "zh": "一个只修到一层的修复",
+      "fix": "一个只修到一层的修复",
+      "type": "语句不通",
+      "note": "译文可读，不报"
+    },
+    {
+      "zh": "它只是没有读得足够远，没找到第二个调用方。",
+      "fix": "它只是没有读得足够远，没找到第二个调用方。",
+      "type": "语句不通",
+      "note": "可读，不报"
+    },
+    {
+      "zh": "在 Opus 5.5 上使用 API key 或 Claude 订阅时，改变 effort 会保留缓存。",
+      "fix": "在 Opus 5.5 上使用 API key 或 Claude 订阅时，改变 effort 会保留缓存。",
+      "type": "误译",
+      "note": "译文准确，不报"
+    },
+    {
+      "zh": "在 Amazon Bedrock、Google Cloud 的 Agent Platform 或 Claude apps gateway 上，改变 effort 仍会清除缓存的对话",
+      "fix": "在 Amazon Bedrock、Google Cloud 的 Agent Platform 或 Claude apps gateway 上，改变 effort 仍会清除缓存的对话",
+      "type": "名词错",
+      "note": "gateway 未译，但属专有名词，可接受"
+    },
+    {
+      "zh": "大多数日子需要三个模型：一个小的用于查找，Opus 5.5 用于你密切监督的工作，一个更大的用于最难的任务。",
+      "fix": "大多数日子需要三个模型：一个小的用于查找，Opus 5.5 用于你密切监督的工作，一个更大的用于最难的任务。",
+      "type": "语句不通",
+      "note": "可读，不报"
+    },
+    {
+      "zh": "在 150K token 时压缩的大致价格约为 0.25 美元。",
+      "fix": "在 150K token 时压缩的大致价格约为 0.25 美元。",
+      "type": "语句不通",
+      "note": "可读，不报"
+    },
+    {
+      "zh": "在超过缓存有效期的休息之后，同样的 /compact 会再次读取整个对话并把它写回缓存。",
+      "fix": "在超过缓存有效期的休息之后，同样的 /compact 会再次读取整个对话并把它写回缓存。",
+      "type": "误译",
+      "note": "译文准确，不报"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15207,
+    "completion_tokens": 768,
+    "total_tokens": 15975,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 15079
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "rel": "webinars/claude-code-maximizing-value.md",
+  "issues": [
+    {
+      "zh": "学习针对每个调节项的简单启发式方法",
+      "fix": "学习针对每个调节项的简单经验法则",
+      "type": "术语不一致",
+      "note": "heuristic此处宜译经验法则"
+    },
+    {
+      "zh": "了解得不够 → 用更大的模型；尝试得不够 → 提高努力程度",
+      "fix": "了解得不够 → 用更大的模型；努力得不够 → 提高努力程度",
+      "type": "误译",
+      "note": "didn't try hard enough指努力不足"
+    },
+    {
+      "zh": "让嘈杂的命令安静下来",
+      "fix": "让嘈杂的命令静默",
+      "type": "语句不通",
+      "note": "quiet作动词应为静默输出"
+    },
+    {
+      "zh": "学习只需十分钟的清理，就能让之后的每个会话都受益",
+      "fix": "学习只需十分钟的清理，就能让之后的每个会话都受益",
+      "type": "语句不通",
+      "note": "主语搭配不当，读不通"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1167,
+    "completion_tokens": 181,
+    "total_tokens": 1348,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1039
+  }
+}

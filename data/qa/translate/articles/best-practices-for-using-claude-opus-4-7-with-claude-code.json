@@ -1,0 +1,45 @@
+{
+  "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+  "issues": [
+    {
+      "zh": "能以更少的指引推理模糊任务",
+      "fix": "能以更少的指引推理模糊任务",
+      "type": "语句不通",
+      "note": "原文为reason through，译文缺介词导致病句"
+    },
+    {
+      "zh": "在一次智能体运行轮次（run）中",
+      "fix": "在一次智能体运行中",
+      "type": "误译",
+      "note": "run指一次运行，非轮次"
+    },
+    {
+      "zh": "把 Claude 当作一位你能干、可以委派任务的工程师",
+      "fix": "把 Claude 当作一位你能干、可以委派任务的工程师",
+      "type": "语句不通",
+      "note": "“一位你能干”歧义，应为“一位能干的”"
+    },
+    {
+      "zh": "Opus 4.7 的 token 用量和行为会有所不同，取决于你部署的是",
+      "fix": "Opus 4.7 的 token 用量和行为会有所不同，取决于你部署的是",
+      "type": "语句不通",
+      "note": "语序生硬，宜先说取决于"
+    },
+    {
+      "zh": "它比 Opus 4.6 更能处理模糊性",
+      "fix": "它比 Opus 4.6 更能处理模糊性",
+      "type": "误译",
+      "note": "原文handles ambiguity，指处理歧义"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4039,
+    "completion_tokens": 249,
+    "total_tokens": 4288,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3911
+  }
+}

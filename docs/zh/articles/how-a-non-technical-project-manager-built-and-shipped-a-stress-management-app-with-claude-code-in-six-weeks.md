@@ -47,7 +47,7 @@ Claude 还让转向变得毫无痛苦：当 Respiro 最初基于 React Native �
 
 “当我卡住时，我可以直接截个图问 Claude，‘嘿，我该点这里吗？’”他说。他用同样的方法设置了其他第三方服务，比如用于日志记录的 Sentry 和用于分析的 Amplitude。“我会告诉 Claude，*我已经完成了登录，这是 API key*，99% 的情况下 Claude 第一次就搞定了，”Vlasenko 说。他继续说，剩下 1% 的情况，“我只需要在第一个提示词里进一步细化、把需求说得更清楚，再多试几次 Claude 就能给我想要的结果。”
 
-事实上，Vlasenko 认为 [Claude 的视觉能力](https://platform.claude.com/docs/en/build-with-claude/vision)是它最被低估的功能。“你给 Claude 发一张截图让它分析，它会告诉你它看到了什么。然后你可以借此让 Claude 引导你完成哪怕是最复杂的 UX，”他解释道。“比如，我需要在 Meta 上创建一个 API token，我在他们的界面里完全迷路了，但 Claude 真的理解，并引导你到所有需要去的地方。”
+事实上，Vlasenko 认为 [Claude 的视觉能力](https://platform.claude.com/docs/en/build-with-claude/vision)是它最被低估的功能。“你给 Claude 发一张截图让它分析，它会告诉你它看到了什么。然后你可以借此让 Claude 引导你完成哪怕是最复杂的 UX，”他解释道。“比如，我需要在 Meta 上创建一个 API token，我当时完全迷失在他们的界面里，但 Claude 真的理解，并引导你到所有需要去的地方。”
 
 Respiro 的营销也是 Claude 协助完成的。当 Vlasenko 需要分析时，Claude 不仅集成了 Amplitude 的基础 SDK，还搭建了完整的用户漏斗、留存指标以及日活和月活的活跃追踪。当他需要内容时，Claude 开始为他撰写博客文章，并帮他制作 TikTok。Claude 还提出了一个 Vlasenko 说自己绝不会想到的增长策略：联系心理学家和正念练习者，让他们向客户推荐 Respiro。他试了。奏效了。练习者们开始推荐这款应用。
 
@@ -57,7 +57,7 @@ Vlasenko 在构建 Respiro 过程中培养的技能，并不只用于他的副�
 
 “他们大多数人回来说，‘嘿，这个工作流比我现在的要好得多！’”他指出。因此，Mythical 现在有一个小型内部团队完全通过 Claude 交付工作。不过，Vlasenko 观察到，对所有相关人员来说，这并非完全没有摩擦的转变。“对一些工程师来说，很难转变心态，不去完全控制每一行代码，”他说。“对我来说这很容易，因为我没有深厚的编程背景，这感觉就是一种自然的工作方式。”
 
-对 Vlasenko 来说，构建 Respiro 的经历抹去了可能与不可能之间的所有界限。他正在把语音引导练习和动作练习加入应用的下一版本，依据的是 Claude 帮他撰写的路线图，并在完成日常工作后记录七八个小时的编码会话。
+对 Vlasenko 来说，构建 Respiro 的经历抹去了可能与不可能之间的所有界限。他正在把语音引导练习和动作练习加入应用的下一版本，依据的是 Claude 帮他撰写的路线图，并在完成日常工作后投入七八个小时进行编码。
 
 “我会说 Claude Code 是我的新瘾，”他说。
 

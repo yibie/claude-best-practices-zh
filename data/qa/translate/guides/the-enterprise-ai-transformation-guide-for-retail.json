@@ -1,0 +1,14 @@
+{
+  "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 747,
+    "completion_tokens": 5,
+    "total_tokens": 752,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 619
+  }
+}

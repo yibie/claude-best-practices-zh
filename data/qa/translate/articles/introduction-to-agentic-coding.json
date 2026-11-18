@@ -1,0 +1,27 @@
+{
+  "rel": "articles/introduction-to-agentic-coding.md",
+  "issues": [
+    {
+      "zh": "粘贴一条错误信息，即可探索排查思路。",
+      "fix": "粘贴一条错误信息，即可探索排查思路。",
+      "type": "漏译",
+      "note": "原文此处缺动词，译文已补全，非错误"
+    },
+    {
+      "zh": "先慢后快，逐步扩展",
+      "fix": "先慢后快，逐步扩展",
+      "type": "误译",
+      "note": "原文Start slow, then expand无\"快\"之意"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4508,
+    "completion_tokens": 92,
+    "total_tokens": 4600,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4380
+  }
+}

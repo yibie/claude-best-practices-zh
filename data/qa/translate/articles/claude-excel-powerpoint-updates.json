@@ -1,0 +1,39 @@
+{
+  "rel": "articles/claude-excel-powerpoint-updates.md",
+  "issues": [
+    {
+      "zh": "Claude 还[原生驱动 Excel 中的 Agent Mode]",
+      "fix": "Claude 还[原生支持 Excel 中的 Agent Mode]",
+      "type": "误译",
+      "note": "powers 意为提供支持，非驱动"
+    },
+    {
+      "zh": "将 PowerPoint 项目符号保持在一行以内",
+      "fix": "将 PowerPoint 项目符号保持为一行",
+      "type": "误译",
+      "note": "one line 指单行，非一行以内"
+    },
+    {
+      "zh": "Claude for Excel 与 PowerPoint 现在可以在客户合规体系所在之处满足其需求",
+      "fix": "Claude for Excel 与 PowerPoint 现在可以在客户合规体系已覆盖的范围内满足其需求",
+      "type": "语句不通",
+      "note": "译文生硬难懂"
+    },
+    {
+      "zh": "运行可比公司分析",
+      "fix": "执行可比公司分析",
+      "type": "术语不一致",
+      "note": "前文用搭建/执行，此处运行不统一"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2819,
+    "completion_tokens": 188,
+    "total_tokens": 3007,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 2691
+  }
+}

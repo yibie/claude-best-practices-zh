@@ -1,0 +1,27 @@
+{
+  "rel": "articles/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.md",
+  "issues": [
+    {
+      "zh": "并在隔夜之间为 4,000 个账户评分",
+      "fix": "并在一夜之间为 4,000 个账户评分",
+      "type": "误译",
+      "note": "overnight 意为“一夜之间”，非“隔夜之间”"
+    },
+    {
+      "zh": "提取每周预测",
+      "fix": "获取每周预测",
+      "type": "误译",
+      "note": "pull forecasts 意为获取，非提取"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 960,
+    "completion_tokens": 90,
+    "total_tokens": 1050,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 832
+  }
+}

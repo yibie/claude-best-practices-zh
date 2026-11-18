@@ -37,23 +37,15 @@ Claude Fable 5 是面向高难度推理与长程任务的前沿模型，其核�
 
 ## 相关概念
 
-- [单任务成本](单任务成本.md) —— 衡量 Claude Fable 5 经济性的关键指标，复杂长时程工作中可能低于前代模型。
-- [Claude Code](Claude-Code.md) —— Claude Fable 5 用于智能体编程与工程任务的载体之一。
 - [智能体编程](智能体编程.md) —— 依赖 Claude Fable 5 的长程自主与自我纠错能力。
-- [令牌效率](令牌效率.md) —— 衡量其效率的维度，达到解决方案所需步骤更少。
-- [Claude Cowork](Claude-Cowork.md) —— 启用 Claude Fable 5 的知识工作智能体式系统，贯穿应用上下文与 Skills。
+
 
 ## 知识图谱（Knowledge Graph）
 
 ```mermaid
 graph LR
   C["Claude Fable 5"]
-  C -->|衡量| N0["单任务成本"]
-  C -->|用于| N1["Claude Code"]
-  C -->|依赖| N2["智能体编程"]
-  C -->|衡量| N3["令牌效率"]
-  C -->|启用| N4["Claude Cowork"]
-  C -->|依赖| N5["上下文"]
+  C -->|依赖| N0["智能体编程"]
 ```
 
 ## 来源（Sources）

@@ -78,7 +78,7 @@ Claude Code 和 Claude apps gateway 增加了各自的跟踪与控制能力。�
 
 ![展示 Google Cloud 上 Claude Code 遥测的图示](https://assets.claude.com/f2ab59204d683994ef32ddc5b4e6f1167389a800.png)
 
-Claude Code 无论运行在开发者机器上还是云工作站上，只要启用即可导出 OpenTelemetry，包括会话、活跃时间、代码行数、提交、拉取请求（PR）、token 和成本，并按用户、团队和模型细分。最新版本的 Claude Code 还按 Skill、插件、智能体和 MCP 服务器细分用量，因此你不仅能看到 Claude Code 的整体用量，还能看到组织内部哪些 Skills 和插件被采用。使用 Claude apps gateway，你无需配置每台机器。在网关上设置遥测目标，它就会为已登录的开发者开启遥测。它还会为每次导出打上开发者登录时验证过的邮箱和 IdP 组标签，而不是客户端配置的值。
+Claude Code 无论运行在开发者机器上还是云工作站上，只要启用即可导出 OpenTelemetry，包括会话、活跃时间、代码行数、提交、拉取请求（PR）、token 和成本，并按用户、团队和模型细分。最新版本的 Claude Code 还按技能、插件、智能体和 MCP 服务器细分用量，因此你不仅能看到 Claude Code 的整体用量，还能看到组织内部哪些技能和插件被采用。使用 Claude apps gateway，你无需配置每台机器。在网关上设置遥测目标，它就会为已登录的开发者开启遥测。它还会为每次导出打上开发者登录时验证过的邮箱和 IdP 组标签，而不是客户端配置的值。
 
 要将用量归因到你自己的成本中心和部门，请设置 OTEL\_RESOURCE\_ATTRIBUTES 环境变量（例如 department=engineering,cost\_center=eng-123）。Claude Code 会将这些标签添加到每个指标和事件中，因此你可以按它们筛选和聚合。这些指标会带着这些自定义属性进入 Google Cloud Monitoring（或其他监控解决方案，如 Grafana 或 Splunk）。
 
@@ -114,11 +114,11 @@ Cloud Monitoring 中的 Claude Code 用量仪表盘，基于 Claude Code 的 Ope
 
 **数量**衡量释放出的产能带来了什么：每位工程师的 PR 数、部署频率，以及具名工作内容：你的团队用释放出的产能交付的具体待办事项。这些在计数之外增加了定性视角。
 
-这些是方向性的参考点，而非规则，但是衡量 Claude Code 在组织中影响的一个良好起点。你需要的基线已经存在：源代码控制和工单中的交付历史。
+这些是方向性的参考点，而非规则，但它们是衡量 Claude Code 在组织中影响的一个良好起点。你需要的基线已经存在：源代码控制和工单中的交付历史。
 
 ### **定义你的工作单元**
 
-这些指标大多统计 PR，但修复一个拼写错误和发布一个功能都算一个 PR。因此，应统计已定义类别的已合并 PR：Claude 开启 PR，由人决定是否发布。诸如 hotfix 或 feature release 之类的标签、工单 ID 以及 Claude 是否参与，使这些 PR 在你已经运行的系统里易于查找。并非每个工作单元都是 PR；服务切换或从根源上关闭的事件就是例子。同样的规则适用：统计一件完成的事，以及它落在哪里。
+这些指标大多统计 PR，但修复一个拼写错误和发布一个功能都算一个 PR。因此，应统计已定义类别的已合并 PR：Claude 开启 PR，由人决定是否发布。诸如 hotfix 或 feature release 之类的标签、工单 ID 以及 Claude 是否参与，使这些 PR 在你已经运行的系统里易于查找。并非每个工作单元都是 PR；服务切换或在根源上已解决的事件就是例子。同样的规则适用：统计一件完成的事，以及它落在哪里（即交付位置）。
 
 ## Claude Code 原生遥测
 

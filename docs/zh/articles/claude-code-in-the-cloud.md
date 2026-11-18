@@ -36,7 +36,7 @@ fetched_at: "2026-11-18"
 
 示例仓库是 **tidepool**，一个小型 Node API，用于预测三个虚构港口的潮汐。它有三个普通的问题：一个测试大约每四次运行失败一次，API 文档描述了代码已不再读取的参数，日志器通过拼接字符串来构建日志行。
 
-我在 16 秒内启动了三个云会话，每个问题一个。我是以编程方式启动它们的，而且因为 tidepool 不在 GitHub 上，每个会话首先根据其提示词中的文件重建仓库。对于真实仓库，你会跳过这一步，而从终端启动时，每个会话就是一条 `claude --cloud` 命令。简而言之，三个提示词是：
+我在 16 秒内启动了三个云会话，每个问题一个。我是以编程方式启动它们的，而且因为 tidepool 不在 GitHub 上，每个会话首先根据其提示词中的文件重建仓库。对于真实仓库，你会跳过这一步，而从终端启动时，每个会话就是一条 `claude --cloud` 命令。缩短后，三个提示词是：
 
 CODEShell
 
@@ -47,14 +47,14 @@ claude --cloud "Make src/logger.js emit one JSON object per line, keep LOG\_LEVE
 这些会话分别运行了 61、65 和 72 秒，三个都在第一个启动后 87 秒时完成。重建仓库大约占每次运行的 三分之一 到略多于一半。以下是结果。
 
 -   **不稳定测试。** Claude 在 `TtlCache.get` 中发现了一个竞态。缓存在加载器完成后才存储值，因此在加载期间对同一个键的第二次 `get` 会再次调用加载器。Claude 修改缓存以存储进行中的 promise，在加载失败时删除条目，并连续运行 `npm test` 40 次，零失败。
--   **文档。** Claude 启动了服务器，对每个端点运行 curl，并发现旧文档有五处错误。它列出了 API 从不返回的字段，记录了代码忽略的 `days` 参数，在高度以米为单位时给出了英尺，跳过了 `/next-high` 端点，并遗漏了错误响应。它还发现格式错误的 `from=` 值会返回空列表和 200 状态码，并将其记录为注意事项，而不是修改未被要求改动的服务器代码。
--   **日志器。** Claude 编写了 JSON 日志器，将请求日志改为结构化字段，并新增了五个测试。它的提交带有一个失败的测试，因此 Claude 重新运行缓存测试八次，看到其中五次失败，并将失败追溯到第一个会话正在修复的同一个竞态。它提出了相同的修复，但没有改动缓存，因为这超出了它的任务范围，并在总结中说明测试套件并不干净。
+-   **文档。** Claude 启动了服务器，对每个端点运行 curl，并发现旧文档有五处错误。它列出了 API 从不返回的字段，记录了代码忽略的 `days` 参数，在高度实际以米为单位时却给出了英尺，跳过了 `/next-high` 端点，并遗漏了错误响应。它还发现格式错误的 `from=` 值会返回空列表和 200 状态码，并将其记录为注意事项，而不是修改未被要求改动的服务器代码。
+-   **日志器。** Claude 编写了 JSON 日志器，将请求日志改为结构化字段，并新增了五个测试。它的提交带着一个失败的测试进去了，因此 Claude 重新运行缓存测试八次，看到其中五次失败，并将失败追溯到第一个会话正在修复的同一个竞态。它提出了相同的修复，但没有改动缓存，因为这超出了它的任务范围，并在总结中说明测试套件并不干净。
 
 **图 E**同一本地构建的 20 秒录屏：在三个会话之间点击，然后滚动日志器会话的对话记录
 
 日志器的结果说明了为什么云会话适合并行工作。每个会话都有自己的仓库副本、自己的进程和自己的分支。文档会话和日志器会话各自启动了 API 服务器进行测试，彼此互不影响。在单台笔记本电脑上，两个智能体在同一个检出中工作会编辑相同的文件，并且除非各自选择自己的端口，否则会在端口上冲突。
 
-由于这种隔离，日志器会话无法访问第一个会话正在进行的缓存修复。沿着文件边界拆分并行任务，按合理的顺序合并分支，并预期某个会话会报告另一个会话已经在修复的问题。
+由于这种隔离，日志器会话无法访问第一个会话正在进行的缓存修复。按文件边界拆分并行任务，按合理的顺序合并分支，并预期某个会话会报告另一个会话已经在修复的问题。
 
 ## Claude Code 云会话的内部机制
 
@@ -126,7 +126,7 @@ Claude 的每一轮仍然计入你的套餐，但一条命令中的长时间测�
 
 ### 3\. 在办公桌前规划，在云端构建，在终端中收尾
 
-对于较大的更改，先在来回沟通成本低的地方就方案达成一致。在计划模式下启动 Claude，一起制定计划，提交计划并推送。
+对于较大的更改，先在来回沟通成本低的地方就方案达成一致。以计划模式启动 Claude，一起制定计划，提交计划并推送。
 
 CODEShell
 
@@ -145,9 +145,9 @@ Teleport 会检查你在同一个仓库中，获取会话的分支，检出它�
 
 ### 4\. 从手机查看进度
 
-Claude 应用中的 Code 标签页连接到相同的会话。从手机上，你可以启动任务、跟进、操控、回答 Claude 提出的问题，或告诉 Claude 关注一个拉取请求。
+Claude 应用中的 Code 标签页连接到相同的会话。从手机上，你可以启动任务、跟进、操控它、回答 Claude 提出的问题，或告诉 Claude 关注一个拉取请求。
 
-手机适合那些你到键盘前就会忘记的问题。我给第四个会话提了一个你会在手机上输入的问题：tidepool 如何预测潮汐，它在时间窗口的边缘可能如何出错？它运行代码来检查答案，并发现了一个真实的 bug。循环从不检查第一个或最后一个样本，因此 API 会漏掉恰好落在窗口开始处的高潮。
+手机适合那些等你到键盘前就会忘记的问题。我给第四个会话提了一个你会在手机上输入的问题：tidepool 如何预测潮汐，它在时间窗口的边缘可能如何出错？它运行代码来检查答案，并发现了一个真实的 bug。循环从不检查第一个或最后一个样本，因此 API 会漏掉恰好落在窗口开始处的高潮。
 
 ### 5\. 将 CI 失败和审查评论交给 Claude
 
@@ -157,7 +157,7 @@ Claude 会为失败的检查和审查评论推送清晰的修复，并解释它�
 
 ### 6\. 无需自己启动就开始工作
 
-**routine**（研究预览）是若干保存的资源，旨在完成一个任务，例如提示词、仓库、Connectors 和环境。每次运行都是一个云会话，由触发器启动。触发器可以是定时计划（最频繁为每小时）、对 routine 自身端点的 HTTP 调用，或 GitHub 事件，例如拉取请求打开或发布。你可以在 claude.ai/code/routines、Desktop 应用中，或通过 CLI 中的 `/schedule` 创建一个。Routine 运行时没有审批提示，默认推送到以 `claude/` 为前缀的分支。
+**routine**（研究预览）是若干保存的资源，旨在完成一个任务，例如提示词、仓库、Connectors 和环境。每次运行都是一个云会话，由触发器启动。触发器可以是定时计划（最频繁为每小时）、对 routine 自身端点的 HTTP 调用，或 GitHub 事件，例如拉取请求打开或发布。你可以在 claude.ai/code/routines、Desktop 应用中，或通过 CLI 中的 `/schedule` 创建一个。Routine 运行时不出现审批提示，默认推送到以 `claude/` 为前缀的分支。
 
 有两个较小的工具在这里有帮助。你可以从任何已登录的机器（包括 CI 作业）向正在运行的会话排队一个后续消息。
 
@@ -211,7 +211,7 @@ Auto-fix、GitHub 触发的 routine 和项目也依赖 App，因此即使你以�
 
 ### 如果你运行 Team 或 Enterprise
 
-所有者有一份简短的清单：在 [claude.ai/admin-settings/connectors](https://claude.ai/admin-settings/connectors) 开启 GitHub Connector，在 [Claude Code 管理员设置](https://claude.ai/admin-settings/claude-code)中允许云会话，在组织的仓库上安装 Claude GitHub App（或批准成员的请求），并决定是否开启[快速设置](https://code.claude.com/docs/en/claude-code-on-the-web#quick-setup-for-team-and-enterprise)。有 IP 允许列表或 GitHub Enterprise Server 的组织有额外步骤。参见关于 [IP 允许列表](https://code.claude.com/docs/en/claude-code-on-the-web#limitations)和 [GitHub Enterprise Server](https://code.claude.com/docs/en/github-enterprise-server)的文档。
+所有者有一份简短的清单：在 [claude.ai/admin-settings/connectors](https://claude.ai/admin-settings/connectors) 开启 GitHub Connector，在 [Claude Code 管理员设置](https://claude.ai/admin-settings/claude-code) 中允许云会话，在组织的仓库上安装 Claude GitHub App（或批准成员的请求），并决定是否开启[快速设置](https://code.claude.com/docs/en/claude-code-on-the-web#quick-setup-for-team-and-enterprise)。有 IP 允许列表或 GitHub Enterprise Server 的组织有额外步骤。参见关于 [IP 允许列表](https://code.claude.com/docs/en/claude-code-on-the-web#limitations)和 [GitHub Enterprise Server](https://code.claude.com/docs/en/github-enterprise-server)的文档。
 
 ### 如果仍然不工作
 
@@ -265,7 +265,7 @@ Auto-fix、GitHub 触发的 routine 和项目也依赖 App，因此即使你以�
 
 **并行分支冲突时会发生什么？** 会话彼此不知道。合并一个分支，然后[向下一个会话发送后续消息](https://code.claude.com/docs/en/claude-code-on-the-web#send-follow-ups-from-the-cli)，例如 `claude -p "rebase on main and fix any conflicts" --cloud <session-id>`。
 
-**我会失去本地工具吗？** 用户级配置不会传输，因此将团队需要的内容移入仓库：在 `.claude/` 下提交 Skills 和命令，将项目范围的 MCP 服务器添加到 `.mcp.json`，并在 `CLAUDE.md` 中记录测试命令。[云会话中的设置](https://code.claude.com/docs/en/settings#settings-in-cloud-sessions)列出了每个会话读取的内容。
+**我会失去本地工具吗？** 用户级配置不会传输，因此将团队需要的内容移入仓库：在 `.claude/` 下提交 Skills 和命令，将项目级 MCP 服务器添加到 `.mcp.json`，并在 `CLAUDE.md` 中记录测试命令。[云会话中的设置](https://code.claude.com/docs/en/settings#settings-in-cloud-sessions)列出了每个会话读取的内容。
 
 ## 五分钟开始
 

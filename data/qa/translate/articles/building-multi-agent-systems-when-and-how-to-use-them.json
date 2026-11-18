@@ -1,0 +1,45 @@
+{
+  "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+  "issues": [
+    {
+      "zh": "这种模式提供了直接的协调模型",
+      "fix": "这种模式提供了简单直接的协调模型",
+      "type": "误译",
+      "note": "straightforward意为简单直接，非直接"
+    },
+    {
+      "zh": "由主导智能体派生并管理针对特定子任务的专用子智能体",
+      "fix": "由主导智能体生成并管理针对特定子任务的专用子智能体",
+      "type": "术语不一致",
+      "note": "spawns后文译生成，此处派生不一致"
+    },
+    {
+      "zh": "并行化的主要收益是彻底性，而非速度",
+      "fix": "并行化的主要收益是全面性，而非速度",
+      "type": "误译",
+      "note": "thoroughness指全面性，非彻底性"
+    },
+    {
+      "zh": "这种覆盖面的提升是有代价的",
+      "fix": "这种覆盖面的提升是有代价的",
+      "type": "语句不通",
+      "note": "原文无此句，属多余增译"
+    },
+    {
+      "zh": "上下文隔离最为有效",
+      "fix": "上下文隔离最为有效",
+      "type": "语句不通",
+      "note": "原文无此句，属多余增译"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9792,
+    "completion_tokens": 213,
+    "total_tokens": 10005,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9664
+  }
+}

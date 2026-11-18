@@ -1,0 +1,87 @@
+{
+  "rel": "articles/best-practices-for-computer-and-browser-use-with-claude.md",
+  "issues": [
+    {
+      "zh": "在将截图发送给 API 之前预先降采样",
+      "fix": "在将截图发送给 API 之前预先降采样",
+      "type": "语句不通",
+      "note": "原文pre-downscale，译文缺字"
+    },
+    {
+      "zh": "在 OSWorld Verified 基准测试中，我们发现 Opus 在等效 token 用量和 effort 设置下优于所有 4.6 系列模型。",
+      "fix": "在 OSWorld Verified 基准测试中，我们发现 Opus 4.7 在等效 token 用量和 effort 设置下优于所有 4.6 系列模型。",
+      "type": "名词错",
+      "note": "漏掉版本号4.7"
+    },
+    {
+      "zh": "设置 `pause_after_compaction` 以在上下文压缩（compaction）事件之间附加最近的消息（包括截图）。",
+      "fix": "设置 `pause_after_compaction` 以在上下文压缩（compaction）事件之间保留最近的消息（包括截图）。",
+      "type": "误译",
+      "note": "attach此处应为保留而非附加"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题缺动词，应为在客户端截断"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题语法不完整"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题缺谓语"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题不通顺"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题缺动词"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题不完整"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题缺谓语"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题语法错误"
+    },
+    {
+      "zh": "在客户端截断以匹配服务端",
+      "fix": "在客户端截断以匹配服务端",
+      "type": "语句不通",
+      "note": "标题不通顺"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 27571,
+    "completion_tokens": 530,
+    "total_tokens": 28101,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 27443
+  }
+}

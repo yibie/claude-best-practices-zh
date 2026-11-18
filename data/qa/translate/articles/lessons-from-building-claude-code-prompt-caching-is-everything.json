@@ -1,0 +1,39 @@
+{
+  "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+  "issues": [
+    {
+      "zh": "这样缓存的���缀保持稳定",
+      "fix": "这样缓存的前缀保持稳定",
+      "type": "语句不通",
+      "note": "乱码字符，应为“前缀”"
+    },
+    {
+      "zh": "因此缓存的���缀被复用",
+      "fix": "因此缓存的前缀被复用",
+      "type": "语句不通",
+      "note": "乱码字符，应为“前缀”"
+    },
+    {
+      "zh": "这看起来很直觉",
+      "fix": "这看起来很直观",
+      "type": "语句不通",
+      "note": "“很直觉”搭配不当"
+    },
+    {
+      "zh": "Skills 执行",
+      "fix": "技能执行",
+      "type": "术语不一致",
+      "note": "其余处未保留英文 Skills"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5004,
+    "completion_tokens": 130,
+    "total_tokens": 5134,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4876
+  }
+}

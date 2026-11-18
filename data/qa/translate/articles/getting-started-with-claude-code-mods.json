@@ -1,0 +1,63 @@
+{
+  "rel": "articles/getting-started-with-claude-code-mods.md",
+  "issues": [
+    {
+      "zh": "在让你紧张的命​​令前放一道护栏",
+      "fix": "在让你紧张的命​令前放一道护栏",
+      "type": "语句不通",
+      "note": "含零宽字符，显示异常"
+    },
+    {
+      "zh": "加载插件启动一个会话",
+      "fix": "用加载了插件的命令启动一个会话",
+      "type": "语句不通",
+      "note": "语序混乱，语义不清"
+    },
+    {
+      "zh": "Token Weather 在三轮完整终端会话中的表现",
+      "fix": "Token Weather 在完整终端会话中跨三轮的表现",
+      "type": "误译",
+      "note": "over three turns 指跨三轮"
+    },
+    {
+      "zh": "测试用 `on` 注册的钩子在链中运行于 mod _之后_",
+      "fix": "测试用 `on` 注册的钩子在链中运行于 mod 之后",
+      "type": "语句不通",
+      "note": "残留 Markdown 下划线标记"
+    },
+    {
+      "zh": "一个事件经过你的钩子，然后经过其他插件，最后到达 Claude Code",
+      "fix": "一个事件先经过你的钩子，再经过其他插件，最后到达 Claude Code",
+      "type": "语句不通",
+      "note": "缺连接词，读起来生硬"
+    },
+    {
+      "zh": "它会把插件写入一个在同一会话中热重载的文件夹",
+      "fix": "它会把插件写入一个能在同一会话中热重载的文件夹",
+      "type": "语句不通",
+      "note": "定语结构不通顺"
+    },
+    {
+      "zh": "一个列出 Claude 本会话读取过的文件的窗格",
+      "fix": "一个列出 Claude 本会话读取过的文件的窗格",
+      "type": "语句不通",
+      "note": "缺谓语，句子不完整"
+    },
+    {
+      "zh": "一个针对你的技术栈调整的 `tool.call` 护栏",
+      "fix": "一个针对你的技术栈定制的 `tool.call` 护栏",
+      "type": "语句不通",
+      "note": "“调整的”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15301,
+    "completion_tokens": 375,
+    "total_tokens": 15676,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 15173
+  }
+}

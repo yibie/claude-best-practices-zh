@@ -1,0 +1,39 @@
+{
+  "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+  "issues": [
+    {
+      "zh": "捕获模式、业务规则和评估方法。随后，他们可以将其作为一项 Skills（技能）与团队其他成员共享",
+      "fix": "捕获模式、业务规则和评估方法。随后，他们可以将其作为一项技能与团队其他成员共享",
+      "type": "术语不一致",
+      "note": "skill 前文未译，此处夹注英文不一致"
+    },
+    {
+      "zh": "然后通过策略、可观测性、验证和反馈驱动的改进来治理每一次智能体运行轮次（run）",
+      "fix": "然后通过策略、可观测性、验证和反馈驱动的改进来治理每一次智能体运行",
+      "type": "语句不通",
+      "note": "“运行轮次（run）”夹注冗余生硬"
+    },
+    {
+      "zh": "其平台为客户体验提供支持，AI 智能体可以自行处理对话",
+      "fix": "其平台为客户体验提供支持：AI 智能体可以自行处理对话",
+      "type": "语句不通",
+      "note": "冒号误作逗号，句子结构断裂"
+    },
+    {
+      "zh": "开发者仍需针对这些确定性部分所要强制执行的需求进行测试",
+      "fix": "开发者仍需针对这些确定性部分所应满足的需求进行测试",
+      "type": "语句不通",
+      "note": "“强制执行的需求”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4265,
+    "completion_tokens": 248,
+    "total_tokens": 4513,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4137
+  }
+}

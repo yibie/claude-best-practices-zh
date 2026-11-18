@@ -37,9 +37,10 @@ Claude Agent SDK 是 Claude Code 执行框架的产品化开放形式，开发�
 ## 相关概念
 
 - [智能体循环](智能体循环.md) —— SDK 直接启用并封装了这一循环，开发者无需自行实现。
-- [子代理](子代理.md) —— 构建复杂智能体时的常用手段，SDK 支持按数据类型或职责配置专门子智能体。
 - [智能体框架](智能体框架.md) —— SDK 依赖并复用 Claude Code 的执行框架作为通用底座。
 - [Claude Cowork](Claude-Cowork.md) —— 与 SDK 配合使用的产品形态之一。
+- [子代理](子代理.md) —— 构建复杂智能体时的常用手段，SDK 支持按数据类型或职责配置专门子智能体。
+
 
 ## 知识图谱（Knowledge Graph）
 
@@ -47,9 +48,9 @@ Claude Agent SDK 是 Claude Code 执行框架的产品化开放形式，开发�
 graph LR
   C["Claude Agent SDK"]
   C -->|启用| N0["智能体循环"]
-  C -->|用于| N1["子代理"]
-  C -->|依赖| N2["智能体框架"]
-  C -->|用于| N3["Claude Cowork"]
+  C -->|依赖| N1["智能体框架"]
+  N2["Claude Cowork"] -->|用于| C
+  C -->|用于| N3["子代理"]
 ```
 
 ## 来源（Sources）

@@ -1,0 +1,27 @@
+{
+  "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+  "issues": [
+    {
+      "zh": "一位经常工作到午夜之后给客户发邮件的 BDR——John Albert——也帮助共同构建了 CLAFTS",
+      "fix": "一位经常工作到午夜之后给客户发邮件的 BDR，John Albert，帮助共同构建了 CLAFTS",
+      "type": "误译",
+      "note": "原文helped co-build，非\"也帮助\""
+    },
+    {
+      "zh": "将 skills 和 MCP 连接器打包成一个任何人都能在几分钟内安装的插件",
+      "fix": "将 skills 和 MCP 连接器打包成一个任何人都能在几分钟内安装的插件",
+      "type": "术语不一致",
+      "note": "skills 前文译\"技能\"，此处未译"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4569,
+    "completion_tokens": 143,
+    "total_tokens": 4712,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4441
+  }
+}

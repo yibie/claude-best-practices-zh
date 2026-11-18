@@ -1,0 +1,39 @@
+{
+  "rel": "articles/cowork-plugins-finance.md",
+  "issues": [
+    {
+      "zh": "工流模式",
+      "fix": "工作流模式",
+      "type": "语句不通",
+      "note": "漏字，应为工作流模式"
+    },
+    {
+      "zh": "Skills（技能）包括公司速览表",
+      "fix": "技能包括公司速览表",
+      "type": "术语不一致",
+      "note": "Skills 前文未译，此处混用"
+    },
+    {
+      "zh": "使用实际融资经济性分析交易",
+      "fix": "使用实际融资经济情况分析交易",
+      "type": "语句不通",
+      "note": "经济性表述生硬"
+    },
+    {
+      "zh": "识别漂移和税务敞口",
+      "fix": "识别偏离和税务敞口",
+      "type": "误译",
+      "note": "drift 指组合偏离，非漂移"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2870,
+    "completion_tokens": 145,
+    "total_tokens": 3015,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 2742
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 3885,
+    "completion_tokens": 5,
+    "total_tokens": 3890,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3757
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "rel": "articles/claude-for-the-legal-industry.md",
+  "issues": [
+    {
+      "zh": "为产品功能发布做清关",
+      "fix": "为产品功能发布做合规审查",
+      "type": "误译",
+      "note": "clear for launch 意为审批放行，非清关"
+    },
+    {
+      "zh": "检查营销声明的实证支持",
+      "fix": "检查营销声明是否有依据支撑",
+      "type": "误译",
+      "note": "substantiation 指证据支撑，非实证"
+    },
+    {
+      "zh": "并筛查发明披露",
+      "fix": "并筛选发明披露",
+      "type": "语句不通",
+      "note": "筛查发明披露搭配不当"
+    },
+    {
+      "zh": "在法定时限内准备 DSAR 回复",
+      "fix": "在法定时限内准备数据主体访问请求（DSAR）的回复",
+      "type": "术语不一致",
+      "note": "DSAR 未译，前后不一致"
+    },
+    {
+      "zh": "对 PIA 和 DPIA 进行分诊",
+      "fix": "对隐私影响评估（PIA）和数据保护影响评估（DPIA）进行分诊",
+      "type": "术语不一致",
+      "note": "缩写未展开，与其他术语处理不一致"
+    },
+    {
+      "zh": "对照你的实战手册审查 DPA",
+      "fix": "对照你的实战手册审查数据处理协议（DPA）",
+      "type": "术语不一致",
+      "note": "DPA 未译，术语处理不一致"
+    },
+    {
+      "zh": "检查处理状态",
+      "fix": "检查引证的处理状态",
+      "type": "误译",
+      "note": "treatment status 指判例后续处理情况"
+    },
+    {
+      "zh": "查找引用权威",
+      "fix": "查找引用该案的权威来源",
+      "type": "误译",
+      "note": "citing authorities 指引用该案的权威"
+    },
+    {
+      "zh": "并验证引用的语言",
+      "fix": "并核验引用的原文表述",
+      "type": "误译",
+      "note": "quoted language 指引文原文"
+    },
+    {
+      "zh": "按你的重要性阈值进行筛选",
+      "fix": "按你的重大性阈值进行筛选",
+      "type": "术语不一致",
+      "note": "materiality 法律语境译重大性"
+    },
+    {
+      "zh": "在二月份的",
+      "fix": "在二月的",
+      "type": "语句不通",
+      "note": "二月份后接名词搭配不当"
+    },
+    {
+      "zh": "大多数人在为时已晚之前并不知道自己拥有法律权利",
+      "fix": "大多数人在还来得及行使之前并不知道自己拥有法律权利",
+      "type": "误译",
+      "note": "until too late 指错过行使时机"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6129,
+    "completion_tokens": 461,
+    "total_tokens": 6590,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6001
+  }
+}

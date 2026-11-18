@@ -1,0 +1,87 @@
+{
+  "rel": "articles/how-we-made-claude-ai-faster.md",
+  "issues": [
+    {
+      "zh": "它是爬山的第第一步",
+      "fix": "它是爬山的第零步",
+      "type": "误译",
+      "note": "原文step one of the climb，与上句第零步对应"
+    },
+    {
+      "zh": "在突出显示每个代码块之前将其复制到单字节字符串中",
+      "fix": "在突出显示每个代码块之前将其复制到单字节字符串中",
+      "type": "语句不通",
+      "note": "原文copy...before highlighting，译文语序颠倒致因果错"
+    },
+    {
+      "zh": "静态标记通过在实际 React 组件在 jsdom 中渲染来生成",
+      "fix": "静态标记通过在实际 React 组件于 jsdom 中渲染来生成",
+      "type": "语句不通",
+      "note": "“通过在实际…渲染”句式杂糅"
+    },
+    {
+      "zh": "将增长代码围栏的 tokenization 逻辑移到 worker",
+      "fix": "将不断增长的代码围栏的 tokenization 逻辑移到 worker",
+      "type": "语句不通",
+      "note": "“增长代码围栏”语义不明"
+    },
+    {
+      "zh": "它把发现记成工单，对可行性持保留态度，并给估算留有余地",
+      "fix": "它把发现记成工单，对可行性持保留态度，并给估算留有余地",
+      "type": "误译",
+      "note": "hedges on feasibility意为对可行性含糊其辞，非持保留"
+    },
+    {
+      "zh": "我们的大部分决定是关于排序和用户影响",
+      "fix": "我们的大部分决定是关于排序和用户影响",
+      "type": "误译",
+      "note": "calls指决策/判断，此处译“决定”可，但sequencing应为排序/先后"
+    },
+    {
+      "zh": "我们跳进彼此的线程，辩论决策并庆祝胜利",
+      "fix": "我们跳进彼此的线程，辩论决策并庆祝胜利",
+      "type": "误译",
+      "note": "jumped in and out指频繁进出，非跳进"
+    },
+    {
+      "zh": "每个绘制的帧有 8.33 毫秒的预算",
+      "fix": "每个绘制的帧有 8.33 毫秒的预算",
+      "type": "名词错",
+      "note": "8.33ms对应120Hz，原文一致，无误"
+    },
+    {
+      "zh": "240 个 begin-frame 恰好 240 帧，每帧 8.33 毫秒",
+      "fix": "240 个 begin-frame 恰好 240 帧，每帧 8.33 毫秒",
+      "type": "名词错",
+      "note": "原文exactly 240 frames for 240 begin-frames at 8.33ms，无误"
+    },
+    {
+      "zh": "它通过记忆化已完成的块消除了每个块的 `O(message length)` 工作",
+      "fix": "它通过记忆化已完成的块消除了每个块的 `O(message length)` 工作",
+      "type": "误译",
+      "note": "memoizing finished blocks，译文准确"
+    },
+    {
+      "zh": "将侧边栏重渲染减少了 90%",
+      "fix": "将侧边栏重渲染减少了 90%",
+      "type": "名词错",
+      "note": "原文cut sidebar re-renders by 90%，准确"
+    },
+    {
+      "zh": "我们最终资助了原始项目列表中的几乎每个项目",
+      "fix": "我们最终资助了原始项目列表中的几乎每个项目",
+      "type": "误译",
+      "note": "funding此处指投入资源/立项，译“资助”可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10978,
+    "completion_tokens": 662,
+    "total_tokens": 11640,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 10850
+  }
+}

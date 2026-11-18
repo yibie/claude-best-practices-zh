@@ -37,23 +37,26 @@ Claude Code 是命令行工具，需要 npm 安装和 API 访问，专为大型�
 
 ## 相关概念
 
-- [智能体编程](智能体编程.md) —— Claude Code 是启用智能体编程的通用编程智能体。
+- [智能体](智能体.md) —— 属于「智能体」
 - [模型上下文协议](模型上下文协议.md) —— Claude Code 通过 MCP 连接外部工具与数据，MCP 已成为智能体连接的标准。
-- [技能](技能.md) —— Claude Code 借助 Skills 封装并复用深度研究、评估设计等工作流。
-- [子代理](子代理.md) —— Claude Code 可部署子代理并行处理任务。
 - [CLAUDE.md](CLAUDE-md.md) —— Claude Code 依赖 CLAUDE.md 承载项目级上下文与约定。
+- [Claude 平台](Claude-平台.md) —— 属于「Claude 平台」
+- [子代理](子代理.md) —— Claude Code 可部署子代理并行处理任务。
+- [工具搜索](工具搜索.md) —— 依赖「工具搜索」
+- [技能](技能.md) —— Claude Code 借助 Skills 封装并复用深度研究、评估设计等工作流。
+
 
 ## 知识图谱（Knowledge Graph）
 
 ```mermaid
 graph LR
   C["Claude Code"]
-  C -->|启用| N0["智能体编程"]
-  C -->|用于| N1["模型上下文协议"]
-  C -->|用于| N2["技能"]
-  C -->|用于| N3["智能体"]
-  C -->|用于| N4["上下文工程"]
-  C -->|启用| N5["子代理"]
+  C -->|属于| N0["智能体"]
+  N1["模型上下文协议"] -->|用于| C
+  N2["CLAUDE.md"] -->|用于| C
+  C -->|属于| N3["Claude 平台"]
+  C -->|启用| N4["子代理"]
+  C -->|依赖| N5["工具搜索"]
 ```
 
 ## 来源（Sources）

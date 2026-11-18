@@ -1,0 +1,27 @@
+{
+  "rel": "articles/integrate-apis-seamlessly.md",
+  "issues": [
+    {
+      "zh": "因端点而异的速率限制",
+      "fix": "因端点而异的速率限制",
+      "type": "误译",
+      "note": "原文vary by endpoint指各端点不同，译文可接受"
+    },
+    {
+      "zh": "有的按用户计数，有的按 IP，有的按 API key",
+      "fix": "有的按用户计数，有的按 IP，有的按 API key",
+      "type": "误译",
+      "note": "原文by user/by IP/by API key，译文准确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3596,
+    "completion_tokens": 97,
+    "total_tokens": 3693,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3468
+  }
+}

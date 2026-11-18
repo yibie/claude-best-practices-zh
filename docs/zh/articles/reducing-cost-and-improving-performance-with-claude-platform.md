@@ -77,7 +77,7 @@ _**更新：** 本文最初发布于 2026 年 9 月 8 日，其中包含反映�
 
 从 Opus 4.8 迁移到 Opus 5.5 将成本降低了约 18%。这是因为 Opus 5.5 的[输入 token 和提示词缓存读取](https://platform.claude.com/docs/en/about-claude/pricing)比 Opus 4.8 更便宜。
 
-在 Opus 5 上，验证仪式（“_verify twice_”）通过在每次退款时重复订单查询，使用了不必要的 token。强调增强器（“_be maximally thorough_”）变成了数十次不需要的知识库搜索。
+在 Opus 5.5 上，验证仪式（“_verify twice_”）通过在每次退款时重复订单查询，使用了不必要的 token。强调增强器（“_be maximally thorough_”）变成了数十次不需要的知识库搜索。
 
 运行 `/claude-api prompt-audit` 移除了反模式，额外降低了 9% 的成本。成本下降是因为消除了额外的工具调用和重复推理。准确率上升了约 2 个百分点，原因有三。已弃用的 thinking 设置使 API 直接拒绝每一个路由请求。相互矛盾的退款规则导致 Opus 5.5 扣留了四笔本应退款的款项，同时要求客户确认。手动草稿纸与 Opus 5.5 的内置 thinking 发生冲突：在三张工单上，它把工具调用写进了推理中，却从未执行。
 

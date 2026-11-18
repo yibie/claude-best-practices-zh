@@ -1,0 +1,27 @@
+{
+  "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+  "issues": [
+    {
+      "zh": "Claude Fable 是我遇到的第一个模型：其工作质量受限于我澄清未知的能力。",
+      "fix": "Claude Fable 是我遇到的第一个工作质量受限于我澄清未知能力的模型。",
+      "type": "语句不通",
+      "note": "冒号后句子结构断裂，读不通"
+    },
+    {
+      "zh": "你可能会在实现深处发现未知",
+      "fix": "你可能会在实现过程中深入发现未知",
+      "type": "语句不通",
+      "note": "“实现深处”生硬不通"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 984,
+    "completion_tokens": 104,
+    "total_tokens": 1088,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 856
+  }
+}

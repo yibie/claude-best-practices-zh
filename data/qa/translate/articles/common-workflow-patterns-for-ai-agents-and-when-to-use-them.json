@@ -1,0 +1,14 @@
+{
+  "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 5551,
+    "completion_tokens": 5,
+    "total_tokens": 5556,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5423
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+  "issues": [
+    {
+      "zh": "在 Opus 5 上，验证仪式（“_verify twice_”）通过在每次退款时重复订单查询，使用了不必要的 token。",
+      "fix": "在 Opus 5.5 上，验证仪式（“_verify twice_”）通过在每次退款时重复订单查询，使用了不必要的 token。",
+      "type": "名词错",
+      "note": "原文为 Opus 5.5，非 Opus 5"
+    },
+    {
+      "zh": "更改 effort 使得分提高约 2.7 倍（+19 分），成本约为 3.5 倍（图 4）。",
+      "fix": "更改 effort 使得分提高约 2.7 倍（+19 分），成本约为 3.5 倍（图 4）。",
+      "type": "语句不通",
+      "note": "成本“约为3.5倍”缺比较对象"
+    },
+    {
+      "zh": "这一增益落在基准测试的运行间噪声范围内，因此你花了更多钱却没有可测量的收益。",
+      "fix": "这一增益落在基准测试的运行间噪声范围内，因此你花了更多钱却没有可测量的收益。",
+      "type": "语句不通",
+      "note": "原文The gain is inside noise，缺谓语"
+    },
+    {
+      "zh": "在搜索从未见过的 14 张留出工单上，最终配置得分为 90.5%",
+      "fix": "在搜索从未见过的 14 张留出工单上，最终配置得分为 90.5%",
+      "type": "语句不通",
+      "note": "“在……上”结构重复，病句"
+    },
+    {
+      "zh": "这以 98.9% 的训练准确率超过了 Opus 4.8 基线，并将单工单成本降至 2.6 美分。",
+      "fix": "这以 98.9% 的训练准确率超过了 Opus 4.8 基线，并将单工单成本降至 2.6 美分。",
+      "type": "误译",
+      "note": "cleared baseline意为达到基线，非超过"
+    },
+    {
+      "zh": "在 Opus 5 上，验证仪式",
+      "fix": "在 Opus 5.5 上，验证仪式",
+      "type": "名词错",
+      "note": "模型版本号错误"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8950,
+    "completion_tokens": 454,
+    "total_tokens": 9404,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 8822
+  }
+}

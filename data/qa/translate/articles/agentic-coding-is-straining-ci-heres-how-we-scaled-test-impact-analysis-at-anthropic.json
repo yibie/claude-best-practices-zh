@@ -1,0 +1,81 @@
+{
+  "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+  "issues": [
+    {
+      "zh": "我们彻底推翻了整个服务，重新构想了它的架构",
+      "fix": "我们彻底拆解了整个服务，重新构想了它的架构",
+      "type": "误译",
+      "note": "blew up 意为拆解，非推翻"
+    },
+    {
+      "zh": "它们分别只撑了 70 天、29 天，以及不到一天",
+      "fix": "它们分别撑了 70 天、29 天，以及不到一天",
+      "type": "误译",
+      "note": "原文无“只”，语义被加强"
+    },
+    {
+      "zh": "没有人愿意再拥有一套基础设施",
+      "fix": "没有人愿意再负责一套基础设施",
+      "type": "误译",
+      "note": "own 指负责维护，非拥有"
+    },
+    {
+      "zh": "我们被呼叫得相当频繁",
+      "fix": "我们相当频繁地被呼叫",
+      "type": "语句不通",
+      "note": "语序不当，读起来别扭"
+    },
+    {
+      "zh": "准确地说是一个内存数据存储",
+      "fix": "准确地说是一个内存数据存储",
+      "type": "误译",
+      "note": "in-memory data store 应为内存数据存储"
+    },
+    {
+      "zh": "我们有效地卸载了单例过去在内存中处理的一大块工作",
+      "fix": "我们有效地卸载了单例过去在内存中处理的一大块工作",
+      "type": "误译",
+      "note": "offload 指卸载，此处可接受"
+    },
+    {
+      "zh": "爬山式优化",
+      "fix": "爬山式优化",
+      "type": "语句不通",
+      "note": "hill-climb 直译生硬，建议意译"
+    },
+    {
+      "zh": "活动水平的下限被抬高了",
+      "fix": "活动水平的下限被抬高了",
+      "type": "语句不通",
+      "note": "activity level floor 直译生硬"
+    },
+    {
+      "zh": "任何其他做法都行不通",
+      "fix": "任何其他做法都行不通",
+      "type": "误译",
+      "note": "proceed any other way 指无法以其他方式推进"
+    },
+    {
+      "zh": "我们只增加了少量工程师",
+      "fix": "我们只增加了少量工程师",
+      "type": "误译",
+      "note": "nominal amount 指名义上少量，可接受"
+    },
+    {
+      "zh": "这主要导致我们运行了一些本来就极不稳定或普遍失败的测试",
+      "fix": "这主要导致我们运行了一些本来就极不稳定或普遍失败的测试",
+      "type": "误译",
+      "note": "widespread-failing 指广泛失败，可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4767,
+    "completion_tokens": 464,
+    "total_tokens": 5231,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4639
+  }
+}

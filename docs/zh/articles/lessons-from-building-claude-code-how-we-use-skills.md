@@ -38,7 +38,7 @@ Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并�
 
 ### 1\. 库与 API 参考
 
-这类 Skills 说明如何正确使用某个库、CLI 或 SDK。它们既可以是针对内部库的，也可以是针对 Claude Code 有时难以处理的常用库的。这类 Skills 通常包含一个参考代码片段文件夹，以及一份 Claude 在编写脚本时应避免的常见陷阱清单。
+这类 Skills 说明如何正确使用某个库、CLI 或 SDK。它们既可以是针对内部库的，也可以是针对 Claude Code 有时难以处理的常见库的。这类 Skills 通常包含一个参考代码片段文件夹，以及一份 Claude 在编写脚本时应避免的常见陷阱清单。
 
 示例包括：
 
@@ -50,7 +50,7 @@ Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并�
 
 这类 Skills 描述如何测试或验证你的代码是否正常工作。它们通常与 playwright、tmux 或其他外部工具配合使用以进行验证。
 
-[验证类 Skills](https://claude.com/resources/articles/building-verification-loops-in-claude-code-with-skills) 对 Claude 在内部的输出质量产生了最可衡量的影响。值得让一名工程师花一周时间专门把你的验证类 Skills 打磨到极致。
+[验证类 Skills](https://claude.com/resources/articles/building-verification-loops-in-claude-code-with-skills) 对 Claude 在内部的输出质量产生了最显著可衡量的影响。值得让一名工程师花一周时间专门把你的验证类 Skills 打磨到极致。
 
 可以考虑一些技巧，比如让 Claude 录制其输出的视频，这样你就能确切看到它测试了什么；或者对每一步的状态强制执行程序化断言。这些通常通过在 Skill 中包含各种脚本来实现。
 
@@ -121,7 +121,7 @@ Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并�
 
 ### 9\. 基础设施运维
 
-这类 Skills 执行日常维护和运维流程，其中一些涉及破坏性操作，需要护栏（guardrail）来保护。它们让工程师在关键操作中更容易遵循最佳实践。
+这类 Skills 执行日常维护和运维流程，其中一些涉及破坏性操作，需要护栏（guardrail）来保护。这些护栏让工程师在关键操作中更容易遵循最佳实践。
 
 示例包括：
 
@@ -135,7 +135,7 @@ Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并�
 
 ### 不要陈述显而易见的内容
 
-Claude 已经会写代码，也能读懂你的代码库。一个只是重复 Claude 默认做法的 Skill，只会增加上下文而不增加价值。如果你要发布一个主要关于知识的 Skill，请聚焦于那些能把 Claude 推出其常规思维模式的信息。
+Claude 已经会写代码，也能读懂你的代码库。一个只是重复 Claude 默认做法的 Skill，只会增加上下文却不带来价值。如果你要发布一个主要关于知识的 Skill，请聚焦于那些能把 Claude 推出其常规思维模式的信息。
 
 [前端设计 Skill](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) 就是一个很好的例子；它由 Anthropic 的一位工程师通过与客户反复迭代、改进 Claude 的设计品味而构建，避免了 Inter 字体和紫色渐变之类的经典套路。
 
@@ -225,7 +225,7 @@ Claude 通常会尽量遵循你的指令，而由于 Skills 高度可复用，�
 
 ### 使用按需钩子
 
-Skills 可以包含仅在 Skill 被调用时才激活、且仅在会话期间持续的钩子。对于你不想一直运行、但有时又极其有用的、更具主张性的钩子，可以使用这种方式。
+Skills 可以包含仅在 Skill 被调用时才激活、且仅在会话期间持续的钩子。对于你不想一直运行、但有时又极其有用的、更具倾向性的钩子，可以使用这种方式。
 
 例如：
 
@@ -257,7 +257,7 @@ Skills 最大的好处之一就是你可以与团队其他成员分享。
 
 ## 衡量 SKILLS
 
-为了了解某个 Skill 的表现，我们使用一个 PreToolUse 钩子来记录公司内部的 Skill 使用情况（[示例代码在此](https://gist.github.com/ThariqS/24defad423d701746e23dc19aace4de5)）。这意味着我们可以找出那些受欢迎或触发频率低于我们预期的 Skills。
+为了了解某个 Skill 的表现，我们使用一个 PreToolUse 钩子来记录公司内部的 Skill 使用情况（[示例代码在此](https://gist.github.com/ThariqS/24defad423d701746e23dc19aace4de5)）。这意味着我们可以找出那些受欢迎或触发不足（低于预期）的 Skills。
 
 ## 开始使用
 

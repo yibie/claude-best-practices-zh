@@ -1,0 +1,33 @@
+{
+  "rel": "webinars/building-claude-commerce-agents.md",
+  "issues": [
+    {
+      "zh": "构建 Claude 商业智能体",
+      "fix": "构建 Claude 商务智能体",
+      "type": "误译",
+      "note": "commerce 指商务/电商，非商业智能"
+    },
+    {
+      "zh": "AI 正在迅速改变商业格局",
+      "fix": "AI 正在迅速改变商务格局",
+      "type": "误译",
+      "note": "commerce 应译商务/电商"
+    },
+    {
+      "zh": "消费品牌与平台正积极行动以应对变化",
+      "fix": "消费品牌与平台正积极行动以作出回应",
+      "type": "误译",
+      "note": "on the move to respond 意为积极应对，非应对变化"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 126,
+    "total_tokens": 916,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 662
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "rel": "articles/building-with-claude-sonnet-5-5.md",
+  "issues": [
+    {
+      "zh": "它相比 Sonnet 5 是一次明显的升级，更聪明、更高效，速度也快了 30%。",
+      "fix": "它相比 Sonnet 5 是一次明显的升级，更聪明、更高效，速度也提升了 30%。",
+      "type": "语句不通",
+      "note": "“快了30%”易误解为时间缩短"
+    },
+    {
+      "zh": "它还能制作精美的文档、幻灯片和电子表格，并且对设计有很强的眼光。",
+      "fix": "它还能制作精美的文档、幻灯片和电子表格，并且对设计有很强的鉴赏力。",
+      "type": "语句不通",
+      "note": "“眼光”搭配不当"
+    },
+    {
+      "zh": "在 Claude API 和 Google Cloud 上，Sonnet 5.5 仅通过",
+      "fix": "在 Claude API 和 Google Cloud 上，Sonnet 5.5 仅通过",
+      "type": "误译",
+      "note": "原文仅限Claude API和Google Cloud，译文正确"
+    },
+    {
+      "zh": "请从请求中移除 `anthropic-beta: computer-use-2025-11-24` 标头，并在 SDK 中移除 `betas` 参数，通过标准客户端而非 beta 命名空间调用 Messages API。",
+      "fix": "请从请求中移除 `anthropic-beta: computer-use-2025-11-24` 标头，并在 SDK 中移除 `betas` 参数，通过标准客户端而非 beta 命名空间调用 Messages API。",
+      "type": "误译",
+      "note": "原文Drop the header，译文正确"
+    },
+    {
+      "zh": "它不接受其他字段。随它一起发送 `display`、`budget_tokens` 或 `block_binding` 会返回 400 错误。",
+      "fix": "它不接受其他字段。随它一起发送 `display`、`budget_tokens` 或 `block_binding` 会返回 400 错误。",
+      "type": "误译",
+      "note": "原文It takes no other field，译文正确"
+    },
+    {
+      "zh": "使用 `between_tools` 时，effort 不能在对话中途改变。要逐轮改变 effort，请使用自适应思考。",
+      "fix": "使用 `between_tools` 时，effort 不能在对话中途改变。要逐轮改变 effort，请使用自适应思考。",
+      "type": "误译",
+      "note": "原文正确"
+    },
+    {
+      "zh": "模型在工具调用之间写出的简短进度更新仍会以 `thinking` 块的形式返回，带有摘要文本。",
+      "fix": "模型在工具调用之间写出的简短进度更新仍会以 `thinking` 块的形式返回，带有摘要文本。",
+      "type": "误译",
+      "note": "原文正确"
+    },
+    {
+      "zh": "如果你用 `between_tools` 关闭了前置思考，那么对于没有工具、但需要几步推理的请求，请改用自适应思考。",
+      "fix": "如果你用 `between_tools` 关闭了前置思考，那么对于没有工具、但需要几步推理的请求，请改用自适应思考。",
+      "type": "误译",
+      "note": "原文正确"
+    },
+    {
+      "zh": "严格工具调用要求每个对象上都设置 `additionalProperties: false`。",
+      "fix": "严格工具调用要求每个对象上都设置 `additionalProperties: false`。",
+      "type": "误译",
+      "note": "原文正确"
+    },
+    {
+      "zh": "Sonnet 5.5 的思考块与模型和对话绑定。Sonnet 5.5 能读取 Sonnet 5 的思考块，因此从 Sonnet 5 切换到 Sonnet 5.5 的对话会保留其推理。其他模型都无法读取 Sonnet 5.5 的思考块。",
+      "fix": "Sonnet 5.5 的思考块与模型和对话绑定。Sonnet 5.5 能读取 Sonnet 5 的思考块，因此从 Sonnet 5 切换到 Sonnet 5.5 的对话会保留其推理。其他模型都无法读取 Sonnet 5.5 的思考块。",
+      "type": "误译",
+      "note": "原文正确"
+    },
+    {
+      "zh": "这项变更不会导致错误，但 UI 可能不再显示模型在工具调用之间的备注。",
+      "fix": "这项变更不会导致错误，但 UI 可能不再显示模型在工具调用之间的备注。",
+      "type": "误译",
+      "note": "原文正确"
+    },
+    {
+      "zh": "Effort 级别经过了重新校准，因此某个级别产生的思考量不再与 Sonnet 5 上相同，你原来的设置不会沿用。",
+      "fix": "Effort 级别经过了重新校准，因此某个级别产生的思考量不再与 Sonnet 5 上相同，你原来的设置不会沿用。",
+      "type": "误译",
+      "note": "原文正确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9647,
+    "completion_tokens": 963,
+    "total_tokens": 10610,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9519
+  }
+}

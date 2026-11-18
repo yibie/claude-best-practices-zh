@@ -1,0 +1,33 @@
+{
+  "rel": "articles/deploying-claude-across-financial-services.md",
+  "issues": [
+    {
+      "zh": "用于跨文件和应用的項目级工作的 Claude Cowork",
+      "fix": "用于跨文件和应用的项目级工作的 Claude Cowork",
+      "type": "语句不通",
+      "note": "繁体字“項”混入，应为“项目”"
+    },
+    {
+      "zh": "公司正在研究、交易工作、承保、理赔、模型审查和月末结账中使用 Claude",
+      "fix": "公司正在研究、交易工作、承保、理赔、模型审查和月末结账中使用 Claude",
+      "type": "误译",
+      "note": "原文research为研究业务，非“正在研究”"
+    },
+    {
+      "zh": "用于在 Excel、PowerPoint、Word 和 Outlook 中花费的时间的 Claude for Microsoft 365",
+      "fix": "用于处理在 Excel、PowerPoint、Word 和 Outlook 中花费的时间的 Claude for Microsoft 365",
+      "type": "语句不通",
+      "note": "“用于……的时间的”结构不通顺"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1553,
+    "completion_tokens": 185,
+    "total_tokens": 1738,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1425
+  }
+}

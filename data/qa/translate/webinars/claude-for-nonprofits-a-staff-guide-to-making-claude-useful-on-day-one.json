@@ -1,0 +1,27 @@
+{
+  "rel": "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md",
+  "issues": [
+    {
+      "zh": "Claude for Nonprofits Skills（技能）",
+      "fix": "Claude for Nonprofits 技能",
+      "type": "名词错",
+      "note": "Skills 是产品功能名，不应保留英文"
+    },
+    {
+      "zh": "Team 和 Enterprise 两个版本均有覆盖并加以标注",
+      "fix": "Team 和 Enterprise 版本均有覆盖并加以标注",
+      "type": "误译",
+      "note": "原文未说两个版本，指两种套餐"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1130,
+    "completion_tokens": 93,
+    "total_tokens": 1223,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1002
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+  "issues": [
+    {
+      "zh": "而且完全不需要一直放在上下文中",
+      "fix": "而且根本不需要放在上下文中",
+      "type": "误译",
+      "note": "原文doesn't need to be in context at all，非“不需要一直”"
+    },
+    {
+      "zh": "这些提供每个人都需要核心能力",
+      "fix": "这些提供每个人都需要的基础能力",
+      "type": "语句不通",
+      "note": "缺“的”，句子不通"
+    },
+    {
+      "zh": "通过交叉引用覆盖要求、临床指南和患者记录",
+      "fix": "通过交叉引用保险覆盖要求、临床指南和患者记录",
+      "type": "误译",
+      "note": "coverage requirements指保险覆盖要求"
+    },
+    {
+      "zh": "无论他们使用的是哪个 AI 平台",
+      "fix": "无论你使用的是哪个 AI 平台",
+      "type": "误译",
+      "note": "原文they指用户，非平台方"
+    },
+    {
+      "zh": "我们正在收敛于一种通用智能体的架构",
+      "fix": "我们正逐渐形成一种通用智能体的架构",
+      "type": "语句不通",
+      "note": "“收敛于”生硬不通"
+    },
+    {
+      "zh": "我们收敛到了另一种方法",
+      "fix": "我们转向了另一种方法",
+      "type": "语句不通",
+      "note": "“收敛到方法”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6082,
+    "completion_tokens": 237,
+    "total_tokens": 6319,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5954
+  }
+}

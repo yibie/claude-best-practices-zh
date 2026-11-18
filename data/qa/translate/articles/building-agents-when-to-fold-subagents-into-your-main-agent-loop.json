@@ -1,0 +1,51 @@
+{
+  "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+  "issues": [
+    {
+      "zh": "-   **\nd context produces better answers:**",
+      "fix": "-   **共享上下文能产生更好的答案：**",
+      "type": "漏译",
+      "note": "原文Shared context被截断漏译"
+    },
+    {
+      "zh": "将一个子智能体折叠进另一个子智能体降低了延迟",
+      "fix": "将一个子智能体折叠进主智能体降低了延迟",
+      "type": "误译",
+      "note": "折叠对象是主智能体而非另一子智能体"
+    },
+    {
+      "zh": "Opus 5.5 无法关闭思考，而 Fable 5.1 及近期模型",
+      "fix": "Opus 5.5 和 Fable 5.1 都无法关闭思考，而近期模型",
+      "type": "误译",
+      "note": "原文两者均无法关闭思考"
+    },
+    {
+      "zh": "每个工具检查调用用户可以看到或做什么",
+      "fix": "每个工具检查调用用户可以看到什么或做什么",
+      "type": "语句不通",
+      "note": "缺少“什么”，句子不完整"
+    },
+    {
+      "zh": "并逐项提出来自提示词缓存、精简不必要的输入和输出 token、effort 和模型选择等选项的节省建议",
+      "fix": "并逐项提出提示词缓存、精简不必要的输入和输出 token、effort 和模型选择等选项带来的节省建议",
+      "type": "语句不通",
+      "note": "“来自…选项的节省建议”搭配不通"
+    },
+    {
+      "zh": "我们建议按用户意图对工具分组（而不是每个 API 一个工具），因为一旦系统提示词中的工具定义超过 30-50 个，工具选择往往会退化。",
+      "fix": "我们建议按用户意图对工具分组（而不是每个 API 一个工具），因为一旦系统提示词中的工具定义超过 30-50 个，工具选择往往会退化。",
+      "type": "名词错",
+      "note": "占位，无问题则删除"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8440,
+    "completion_tokens": 377,
+    "total_tokens": 8817,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 8312
+  }
+}

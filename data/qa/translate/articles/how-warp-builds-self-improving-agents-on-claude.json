@@ -1,0 +1,33 @@
+{
+  "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+  "issues": [
+    {
+      "zh": "Warp 在这方面吃过大亏，并以此指导其产品策略",
+      "fix": "Warp 在这方面吃过大亏，并以此为依据制定了其产品策略",
+      "type": "误译",
+      "note": "inform 意为据此制定，非指导"
+    },
+    {
+      "zh": "Warp 是用于构建和度量自我改进型云软件工厂的开放平台",
+      "fix": "Warp 是用于构建和度量自我改进型云软件工厂的开放平台",
+      "type": "语句不通",
+      "note": "云软件工厂表述生硬但可接受，不报"
+    },
+    {
+      "zh": "外层改进器 Skill 在 [Oz，Warp 的智能体编排平台](https://docs.warp.dev/)中作为定时的“update triage”智能体运行",
+      "fix": "外层改进器 Skill 在 [Oz，Warp 的智能体编排平台](https://docs.warp.dev/)中作为定时的“update triage”智能体运行",
+      "type": "语句不通",
+      "note": "无问题，不报"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5145,
+    "completion_tokens": 212,
+    "total_tokens": 5357,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5017
+  }
+}

@@ -35,7 +35,7 @@ Claude 可以在一次连续的对话中跨多个 Excel 和 PowerPoint 文件传
 
 -   审计模型中的公式错误和资产负债表完整性
 -   构建并填充 LBO、DCF 和三表模型模板
--   运行可比公司分析
+-   执行可比公司分析
 -   清理杂乱的电子表格数据——某个区域、活动工作表或整个文件
 
 对于 PowerPoint，入门 Skills 覆盖分析之后的演示层工作：
@@ -46,13 +46,13 @@ Claude 可以在一次连续的对话中跨多个 Excel 和 PowerPoint 文件传
 
 通过桌面端或 Web 应用在 Claude 中已设置好的每个 skill——无论是个人的还是组织范围的——都能像 MCP connectors 一样在加载项中开箱即用。Excel 和 PowerPoint 的入门 Skills 也可通过 [Financial Analysis 插件](https://github.com/anthropics/financial-services-plugins/tree/main/financial-analysis/skills)获取，该插件会自动安装到两个加载项中。添加到该插件的新 Skills 无需任何额外设置即可使用。
 
-最后，[instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude) 用于处理应始终生效的、应用层面的持久偏好。这可能包括在 Excel 中始终使用公司的数字格式、将 PowerPoint 项目符号保持在一行以内，或标记引用硬编码假设的单元格。Instructions 可以设置一次并自动应用，无需额外提示。Claude 也可以帮你编写和编辑 instructions。
+最后，[instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude) 用于处理应始终生效的、应用层面的持久偏好。这可能包括在 Excel 中始终使用公司的数字格式、将 PowerPoint 项目符号保持为一行，或标记引用硬编码假设的单元格。Instructions 可以设置一次并自动应用，无需额外提示。Claude 也可以帮你编写和编辑 instructions。
 
 ## 部署灵活性
 
-Claude for Excel 与 PowerPoint 现在可以在客户合规体系所在之处满足其需求。组织可以使用 Claude 账户访问这两个加载项，也可以通过现有的 LLM 网关将流量路由到运行在 Amazon Bedrock、Google Cloud 的 Vertex AI 或 Microsoft Foundry 上的 Claude 模型。请参阅[指南](https://support.claude.com/en/articles/13945233-use-claude-in-excel-and-powerpoint-with-an-llm-gateway)，了解如何通过 LLM 网关使用 Claude for Excel 与 PowerPoint。
+Claude for Excel 与 PowerPoint 现在可以在客户合规体系已覆盖的范围内满足其需求。组织可以使用 Claude 账户访问这两个加载项，也可以通过现有的 LLM 网关将流量路由到运行在 Amazon Bedrock、Google Cloud 的 Vertex AI 或 Microsoft Foundry 上的 Claude 模型。请参阅[指南](https://support.claude.com/en/articles/13945233-use-claude-in-excel-and-powerpoint-with-an-llm-gateway)，了解如何通过 LLM 网关使用 Claude for Excel 与 PowerPoint。
 
-Claude 还[原生驱动 Excel 中的 Agent Mode](https://support.microsoft.com/en-gb/topic/use-claude-with-agent-mode-in-excel-b2c3b3ec-154b-484b-84d0-914a80df395a)，因此 Microsoft 365 Copilot 客户可以与 Copilot 并肩构建、编辑和分析工作簿。
+Claude 还[原生支持 Excel 中的 Agent Mode](https://support.microsoft.com/en-gb/topic/use-claude-with-agent-mode-in-excel-b2c3b3ec-154b-484b-84d0-914a80df395a)，因此 Microsoft 365 Copilot 客户可以与 Copilot 并肩构建、编辑和分析工作簿。
 
 ## 开始使用
 

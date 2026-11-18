@@ -39,18 +39,17 @@ CLAUDE.md 是 Claude Code 在会话启动时自动加载的指令文件，用来
 
 - [Claude Code](Claude-Code.md) —— CLAUDE.md 是 Claude Code 会话启动时加载的指令文件，二者是依赖关系。
 - [上下文工程](上下文工程.md) —— CLAUDE.md 是上下文工程中“始终开启”的一层，属于其组装上下文的手段之一。
-- [上下文窗口](上下文窗口.md) —— CLAUDE.md 的内容会占用上下文窗口，因此需要保持简短并定期清理。
 - [验证](验证.md) —— 审查器会标记违反 CLAUDE.md 约定的代码，也可在 CLAUDE.md 中列出智能体可运行的检查。
+
 
 ## 知识图谱（Knowledge Graph）
 
 ```mermaid
 graph LR
   C["CLAUDE.md"]
-  C -->|依赖| N0["Claude Code"]
-  C -->|依赖| N1["上下文工程"]
-  C -->|属于| N2["上下文窗口"]
-  C -->|用于| N3["验证"]
+  C -->|用于| N0["Claude Code"]
+  N1["上下文工程"] -->|依赖| C
+  N2["验证"] -->|用于| C
 ```
 
 ## 来源（Sources）

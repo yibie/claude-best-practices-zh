@@ -1,0 +1,63 @@
+{
+  "rel": "articles/ai-ci-cd-on-call.md",
+  "issues": [
+    {
+      "zh": "Claude 可以一次性生成一个生成状态报告的 Skill",
+      "fix": "Claude 可以一次性生成一个产出状态报告的 Skill",
+      "type": "语句不通",
+      "note": "“生成一个生成”重复病句"
+    },
+    {
+      "zh": "这可以单独写一篇文章，所以我不在这里展开。",
+      "fix": "这完全可以单独写一篇文章，所以我不在这里展开。",
+      "type": "误译",
+      "note": "漏译entirely，语气弱化"
+    },
+    {
+      "zh": "我们推广（rollout）流程的第一阶段",
+      "fix": "我们发布（rollout）流程的第一阶段",
+      "type": "术语不一致",
+      "note": "rollout此处指发布，非推广"
+    },
+    {
+      "zh": "并最终在你的事件频道中留下一个只读的 Claude",
+      "fix": "并在你的事件频道中留下一个只读的 Claude",
+      "type": "误译",
+      "note": "leaves you with无“最终”之意"
+    },
+    {
+      "zh": "我是在其中一次事件中与 Claude 逐轮排查问题，然后让它根据那段经历创建了这个文件。",
+      "fix": "我是在其中一次事件中与 Claude 逐轮排查问题，然后让它根据那段经历创建了这个文件。",
+      "type": "语句不通",
+      "note": "“逐轮排查问题”表述生硬"
+    },
+    {
+      "zh": "Claude 会在事件开启后中位数 14 分钟内发布首份有证据支撑的分析",
+      "fix": "Claude 会在事件开启后中位 14 分钟内发布首份有证据支撑的分析",
+      "type": "语句不通",
+      "note": "“中位数14分钟内”语序不通"
+    },
+    {
+      "zh": "我请同事回滚了该开关。3 分钟后，Claude 在 Slack 上通知我",
+      "fix": "我请同事回滚了该开关。3 分钟后，Claude 在 Slack 上通知我",
+      "type": "误译",
+      "note": "原文pinged为主动联系，非通知"
+    },
+    {
+      "zh": "并自动调高或调低某个功能开关",
+      "fix": "并自动调高或调低某个功能开关的流量",
+      "type": "漏译",
+      "note": "ramping指流量比例，非开关本身"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6009,
+    "completion_tokens": 434,
+    "total_tokens": 6443,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5881
+  }
+}

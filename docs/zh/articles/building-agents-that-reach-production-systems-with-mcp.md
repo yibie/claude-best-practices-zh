@@ -28,7 +28,7 @@ fetched_at: "2026-11-18"
 
 智能体在 shell 中运行你的命令行工具。这种方式快速、轻量，并且依托于已有的工具链。它非常适合本地环境和沙箱容器——任何有文件系统和 shell 的地方。这提供了一个公共层，但这个层很薄。
 
-CLI 在触达移动端、Web 或云托管平台时会遇到硬性限制，因为这些平台不提供容器，而认证由 CLI 自身的机制处理——通常是磁盘上的凭据文件。它最适合本地环境中快速、宽松的集成。
+CLI 在触达移动端、Web 或云托管平台时会遇到硬性限制，因为这些平台不提供容器，且认证由 CLI 自身的机制处理——通常是磁盘上的凭据文件。它最适合本地环境中快速、宽松的集成。
 
 ### Model Context Protocol（MCP）
 
@@ -40,7 +40,7 @@ MCP 以协议的形式提供公共层。智能体连接到一个暴露你系统�
 
 生产环境中的智能体越来越多地运行在云端，以便扩展并持续运行。它们需要触达的系统同样托管在云端：你的数据所在之处、工作被追踪之处，以及你的基础设施运行之处。这些系统往往是远程的、位于认证之后，而 MCP 正是在这里提供公共层。当这些系统位于私有网络而非公共互联网时，[Claude Managed Agents 中的 MCP tunnels](https://claude.com/resources/articles/claude-managed-agents-updates) 通过仅出站的连接将智能体连接到它们——无需暴露端口或公共端点。
 
-我们已经在采用情况中看到了这一点。[MCP SDK](https://modelcontextprotocol.io/docs/sdk) 最近的月下载量已超过 3 亿次，而年初为 1 亿次，在企业界和流行的智能体式平台中都有强劲的采用。每天有数百万人将 MCP 与 Claude 一起使用，该协议支撑了我们近期发布的许多内容，包括 [Claude Cowork](https://claude.com/product/cowork)、[Claude Managed Agents](https://claude.com/resources/articles/claude-managed-agents) 以及 [Claude Code 中的 channels](https://code.claude.com/docs/en/channels)。
+我们已经在采用情况中看到了这一点。[MCP SDK](https://modelcontextprotocol.io/docs/sdk) 最近的月下载量已超过 3 亿次，而年初为 1 亿次，在企业界和流行的智能体式平台中都有强劲的采用。每天有数百万人将 MCP 与 Claude 一起使用，该协议支撑了我们近期发布的许多产品，包括 [Claude Cowork](https://claude.com/product/cowork)、[Claude Managed Agents](https://claude.com/resources/articles/claude-managed-agents) 以及 [Claude Code 中的 channels](https://code.claude.com/docs/en/channels)。
 ‍
 随着 MCP 持续支撑生产环境的智能体式系统，我们分享一些把这些集成做好的模式：从构建高级服务器到上下文高效的客户端，以及 Skills 在哪些方面对协议形成补充。
 

@@ -1,0 +1,87 @@
+{
+  "rel": "articles/which-claude-model-should-you-build-with.md",
+  "issues": [
+    {
+      "zh": "如果你已经超过 `high`，不妨试试在更低的 effort 下使用上一级模型。",
+      "fix": "如果你已经超过 `high`，不妨试试在更低的 effort 下使用再上一级模型。",
+      "type": "误译",
+      "note": "next model up 指更大一级模型"
+    },
+    {
+      "zh": "在 `xhigh` 下得分高约 1.4 分，成本是 `high` 的 2.5 倍。",
+      "fix": "在 `xhigh` 下得分高约 1.4 分，成本是 `high` 的 2.5 倍。",
+      "type": "误译",
+      "note": "原文为2.5倍成本，译文正确，但需核对"
+    },
+    {
+      "zh": "从 Fable 5.2 切换到任何其他正式可用模型，通常会丢弃它的推理。",
+      "fix": "从 Fable 5.2 切换到任何其他正式可用模型，都会丢弃它的推理。",
+      "type": "误译",
+      "note": "原文generally available指模型类别，非“通常”"
+    },
+    {
+      "zh": "在 Claude API 上，该模型上限为 Opus。",
+      "fix": "在 Claude API 上，该模型上限为 Opus。",
+      "type": "误译",
+      "note": "原文capped at Opus，译文正确"
+    },
+    {
+      "zh": "在 Anthropic API 上，`haiku` 别名现在解析为 Haiku 5.5",
+      "fix": "在 Anthropic API 上，`haiku` 别名现在解析为 Haiku 5.5",
+      "type": "名词错",
+      "note": "原文为Anthropic API，正确"
+    },
+    {
+      "zh": "在一个覆盖约 2200 万 token 源代码的内部缺陷搜索基准测试中",
+      "fix": "在一个覆盖约 2200 万 token 源代码的内部缺陷搜索基准测试中",
+      "type": "名词错",
+      "note": "22 million为2200万，正确"
+    },
+    {
+      "zh": "这比单独使用 `high` 下的 Opus 5.5 高 1.7 分，成本约为 2.1 倍。",
+      "fix": "这比单独使用 `high` 下的 Opus 5.5 高 1.7 分，成本约为 2.1 倍。",
+      "type": "误译",
+      "note": "原文about 2.1 times the money，正确"
+    },
+    {
+      "zh": "在 `low` 下得分低约 8 分，成本约为三分之一。",
+      "fix": "在 `low` 下得分低约 8 分，成本约为三分之一。",
+      "type": "误译",
+      "note": "原文about a third of the cost，正确"
+    },
+    {
+      "zh": "在 `medium` 下的得分比 `high` effort 低约 2.5 分，成本约为 70%。",
+      "fix": "在 `medium` 下的得分比 `high` effort 低约 2.5 分，成本约为 70%。",
+      "type": "误译",
+      "note": "原文about 70% of the cost，正确"
+    },
+    {
+      "zh": "Haiku 5.5 是唯一一个 token 价格随提示词长度变化的模型。",
+      "fix": "Haiku 5.5 是唯一一个 token 价格随提示词长度变化的模型。",
+      "type": "误译",
+      "note": "原文the only model，正确"
+    },
+    {
+      "zh": "长提示词档的价格仍然是 Sonnet 5.5 每 token 价格的四分之一。",
+      "fix": "长提示词档的价格仍然是 Sonnet 5.5 每 token 价格的四分之一。",
+      "type": "误译",
+      "note": "原文a quarter，正确"
+    },
+    {
+      "zh": "其输入价格只有 Sonnet 5.5 的二十分之一。",
+      "fix": "其输入价格只有 Sonnet 5.5 的二十分之一。",
+      "type": "误译",
+      "note": "原文a twentieth，正确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 12565,
+    "completion_tokens": 802,
+    "total_tokens": 13367,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 12437
+  }
+}

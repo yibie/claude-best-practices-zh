@@ -1,0 +1,87 @@
+{
+  "rel": "articles/safely-scaling-multi-agent-teams-with-fable-5-2.md",
+  "issues": [
+    {
+      "zh": "该团队耗时 28.7 小时，使用的输出 token 只有原来的三分之一",
+      "fix": "该团队耗时 28.7 小时，使用的输出 token 只有原来的三分之一",
+      "type": "误译",
+      "note": "原文one-third as many指三分之一，非三倍"
+    },
+    {
+      "zh": "它在其后 350 多年里一直未被证明",
+      "fix": "它在 350 多年里一直未被证明",
+      "type": "误译",
+      "note": "原文未指从定理提出后算起"
+    },
+    {
+      "zh": "估计该证明至少需要 0.7 到 100 万行 Lean 代码",
+      "fix": "估计该证明至少需要 70 万到 100 万行 Lean 代码",
+      "type": "名词错",
+      "note": "0.7 million应为70万，非0.7到100万"
+    },
+    {
+      "zh": "所需任务数约为其九倍，新代码量超过其两倍",
+      "fix": "所需任务数约为其九倍，新代码量超过其两倍",
+      "type": "误译",
+      "note": "原文more than twice指两倍多，非超过两倍"
+    },
+    {
+      "zh": "它通过向 assign 表写入 999 行（每个助手一行），将每条陈述分配给一个由 16–17 名助手组成的小组",
+      "fix": "它通过向 assign 表写入 999 行（每个助手一行），将每条陈述分配给一个由 16–17 名助手组成的小组",
+      "type": "误译",
+      "note": "原文assign each statement to a crew，非每条陈述各一组"
+    },
+    {
+      "zh": "它将大多数助手判定在运行预算内不可行的 47 条陈述搁置一旁",
+      "fix": "它将大多数助手判定在运行预算内不可行的 47 条陈述搁置一旁",
+      "type": "语句不通",
+      "note": "定语过长导致歧义，读不通"
+    },
+    {
+      "zh": "负责人写入命令和分配，助手记录已完成工作并管理 subtasks 表，双方都写入 notes 表",
+      "fix": "负责人写入命令和分配，助手记录已完成工作并管理 subtasks 表，双方都写入 notes 表",
+      "type": "误译",
+      "note": "原文both指负责人和助手都写notes"
+    },
+    {
+      "zh": "其中只有 16 名助手是队长",
+      "fix": "其中只有 16 名是队长",
+      "type": "误译",
+      "note": "原文those helpers were captains，指16名队长"
+    },
+    {
+      "zh": "五个替代方案不再需要，另有一条陈述被放弃",
+      "fix": "五个替代方案不再需要，另有一条陈述被放弃",
+      "type": "误译",
+      "note": "原文five alternatives指五个替代陈述"
+    },
+    {
+      "zh": "它由数十个运行内部研究模型的智能体编写，该模型大致相当于 Claude Fable 5.1",
+      "fix": "它由数十个运行内部研究模型的智能体编写，该模型大致相当于 Claude Fable 5.1",
+      "type": "误译",
+      "note": "原文roughly comparable指大致相当，非相当于"
+    },
+    {
+      "zh": "一个分类器会在每条 shell 命令和每次文件编辑执行前进行检查",
+      "fix": "一个分类器会在每条 shell 命令和每次文件编辑执行前进行检查",
+      "type": "误译",
+      "note": "原文every shell command and file edit，非每次编辑"
+    },
+    {
+      "zh": "它只能看到动作，看不到 CoT",
+      "fix": "它只能看到动作，看不到 CoT",
+      "type": "误译",
+      "note": "原文sees only actions, not CoT，非只能看到动作"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 11150,
+    "completion_tokens": 713,
+    "total_tokens": 11863,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 11022
+  }
+}

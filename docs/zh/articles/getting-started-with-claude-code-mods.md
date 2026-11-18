@@ -15,7 +15,7 @@ mod 是一个小型 JavaScript 或 TypeScript 文件，运行在你的 [Claude C
 
 Claude Code 已经允许你改变它的很多行为：设置、权限规则、斜杠命令、Skills（技能）和状态栏。mod 走得更远：它们可以重写或替换 Claude Code 的行为，并绘制自定义 UI。在底层，mod 是随插件一起分发的钩子（hooks），每一个都能实时看到你会话中的每个事件。
 
-这让 mod 成为一种让 Claude Code 贴合你工作方式的手段。你可以加一个你时常查看的读数，在让你紧张的命​​令前放一道护栏，或者为你喜欢的阅读方式构建一个审查视图。
+这让 mod 成为一种让 Claude Code 贴合你工作方式的手段。你可以加一个你时常查看的读数，在让你紧张的命​令前放一道护栏，或者为你喜欢的阅读方式构建一个审查视图。
 
 本指南从空文件夹开始构建一个 mod，**Token Weather**，一个绘制在提示词上方的上下文窗口实时预报。它大约 80 行。然后会介绍两个更大的 mod，**Blast Radius** 和 **Replay Theater**，展示 API 还能做什么。三个 mod 的完整代码都在 [anthropics/claude-code-playground](https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods)。
 
@@ -50,7 +50,7 @@ on("tool.call", { tool: "Bash" }, async ($, e, next) => {
 
 钩子形成一条链
 
-一个事件经过你的钩子，然后经过其他插件，最后到达 Claude Code
+一个事件先经过你的钩子，再经过其他插件，最后到达 Claude Code
 
 | 动作 | 方式 | 示例 |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ Token Weather 在每轮之后读取上下文窗口的填充程度，并在提示
 
 下面是它在真实会话中的样子。每一轮读取更多文件，色带从 ☀ Clear 变为 ☂ Showers 再变为 ☇ Storm：
 
-**图 C**Token Weather 在三轮完整终端会话中的表现：200k 窗口的 18%，然后 67%，然后 81%
+**图 C**Token Weather 在完整终端会话中跨三轮的表现：200k 窗口的 18%，然后 67%，然后 81%
 
 ### 捷径：让 Claude 来构建
 
@@ -164,7 +164,7 @@ export function register(on) {
 
 这些元素不是全局的。`$.ui.resolve(e)` 返回正在绘制的界面的构造函数，因为 Claude Code 绘制的每个界面支持的集合略有不同。JSX 也可以使用，以 `h` 作为工厂函数。
 
-加载插件启动一个会话：
+用加载了插件的命令启动一个会话：
 
 CODEShell
 
@@ -172,7 +172,7 @@ claude --plugin-dir ./token-weather
 
 "☀ Clear skies" 出现在提示词上方。保持会话打开。该文件夹被监视，所以每次保存都会就地重新加载模块，无需重启。这个快速反馈循环正是编写 mod 的大部分乐趣所在。
 
-**提示：**一旦你了解了形状，就像[捷径](#the-shortcut-let-claude-build-it)那样向 Claude 描述下一个 mod。它会把插件写入一个在同一会话中热重载的文件夹。
+**提示：**一旦你了解了形状，就像[捷径](#the-shortcut-let-claude-build-it)那样向 Claude 描述下一个 mod。它会把插件写入一个能在同一会话中热重载的文件夹。
 
 ### 第 3 步：读取真实数字并保存在 `$.state` 中
 
@@ -342,7 +342,7 @@ $ claude plugin validate ./token-weather
   > ./token-weather.mjs state reads: token-weather.readings
 √ Validation passed
 
-`claude plugin test` 针对真实的 Claude Code 运行时运行插件的 `*.test.ts` 文件。测试用 `on` 注册的钩子在链中运行于 mod _之后_，并桩掉 Claude Code 会给出的回答，因此你可以精确控制 `$.session.usage()` 返回什么：
+`claude plugin test` 针对真实的 Claude Code 运行时运行插件的 `*.test.ts` 文件。测试用 `on` 注册的钩子在链中运行于 mod 之后，并桩掉 Claude Code 会给出的回答，因此你可以精确控制 `$.session.usage()` 返回什么：
 
 CODETypeScript
 
@@ -522,6 +522,6 @@ on("command.run", { command: "replay" }, async ($, e) => ({ text: (await openRep
 -   一个 `prompt.submit` 钩子，把团队约定添加到每个提示词
 -   一个列出 Claude 本会话读取过的文件的窗格，作为它所见内容的实时地图
 -   一个专注计时器，在长轮次结束时用 `$.ui.toast` 发送一个 toast
--   一个针对你的技术栈调整的 `tool.call` 护栏，例如生产 kubectl 上下文或 `terraform apply`
+-   一个针对你的技术栈定制的 `tool.call` 护栏，例如生产 kubectl 上下文或 `terraform apply`
 
 做了一个你现在每天都用的 mod？在 X 或 LinkedIn 上发布它，附上它运行时的 GIF 或截图，让其他开发者看到什么是可能的。把插件放进一个市场（[分享你的 mod](#sharing-your-mod)）并链接到它，这样任何喜欢它的人都能用三条命令安装它。

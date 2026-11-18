@@ -13,7 +13,7 @@ fetched_at: "2026-11-18"
 # 我们的合作伙伴如何将 Opus 用于网络安全
 AI 正在改变安全漏洞被发现和被利用的速度，而最明确的应对方式是让安全团队将能力强大的模型用于自身的防御。
 
-当我们[推出 Claude Security 公开测试版](https://claude.com/resources/articles/claude-security-public-beta)时，我们也分享了一批基于 Claude Opus 构建的技术与服务合作伙伴，因为对每个团队来说，实现采用的最快路径各不相同：有些团队可能直接使用 Claude，有些通过他们已经在运行平台使用，还有些通过熟悉其环境的服务合作伙伴使用。
+当我们[推出 Claude Security 公开测试版](https://claude.com/resources/articles/claude-security-public-beta)时，我们也分享了一批基于 Claude Opus 构建的技术与服务合作伙伴，因为对每个团队来说，实现采用的最快路径各不相同：有些团队可能直接使用 Claude，有些通过他们已经在运行的平台使用，还有些通过熟悉其环境的服务合作伙伴使用。
 
 其中多项产品现已上线，早期结果展示了前沿模型防御在实践中的样子。
 
@@ -37,7 +37,7 @@ Wiz [Red Agent](https://www.wiz.io/blog/red-agent-claude-opus) 是一款 AI 驱�
 
 CrowdStrike 的 [Frontier AI Readiness and Resilience Service](https://www.crowdstrike.com/en-us/services/ai-security-services/frontier-ai-readiness-and-resilience/) 将同类能力带到超过 60% 的《财富》500 强企业所信赖的平台上，将 Opus 与 CrowdStrike 的 AI Red Team Services 和专有智能体框架相结合，持续在客户应用中搜寻潜在的零日漏洞、验证发现结果，并在新代码进入生产环境之前加速修复。
 
-> ""Anthropic 的 Claude Opus 等前沿模型正在赋予防御者一年前还不存在的能力优势，将漏洞管理一路左移。" - Mark Manglicmot，CrowdStrike 全球咨询服务副总裁"
+> ""Anthropic 的 Claude Opus 等前沿模型正在赋予防御者一年前还不存在的能力优势，将漏洞管理一路前移。" - Mark Manglicmot，CrowdStrike 全球咨询服务副总裁"
 
 ## 弥合发现与修复之间的差距
 
@@ -47,13 +47,13 @@ Accenture 的 [Cyber.AI](https://newsroom.accenture.com/news/2026/accenture-and-
 
 > ""企业领导者正在应对历史上变化最快、最复杂的网络威胁格局。我们正与 Anthropic 合作，交付客户保持领先所需的工具。" - Harpreet Sidhu，Accenture 网络安全全球负责人"
 
-TrendAI™ [Vision One](https://www.trendmicro.com/en_us/business/products/one-platform.html) 使用 Opus 辅助的漏洞研究，帮助遍布 185 个国家的企业识别暴露面并通过虚拟补丁缓解风险。经验证的发现结果还会流入 TrendAI Zero Day Initiative 进行协调披露，帮助在厂商补丁可用之前最多 96 天保护处于风险中的系统。"随着 AI 加速漏洞发现，防御者面临的真正挑战变成大规模修复，"TrendAI 首席平台与业务官、负责人 Rachel Jin 表示。"我们与 Anthropic 一起，帮助客户在攻击者利用这一差距之前，通过缓解措施和虚拟补丁降低风险。"
+TrendAI™ [Vision One](https://www.trendmicro.com/en_us/business/products/one-platform.html) 使用 Opus 辅助的漏洞研究，帮助遍布 185 个国家的企业识别暴露面并通过虚拟补丁缓解风险。经验证的发现结果还会流入 TrendAI Zero Day Initiative 进行协调披露，帮助在厂商补丁可用之前最多 96 天保护处于风险中的系统。"随着 AI 加速漏洞发现，防御者面临的真正挑战变成大规模修复，"TrendAI 首席平台与业务官 Rachel Jin 表示。"我们与 Anthropic 一起，帮助客户在攻击者利用这一差距之前，通过缓解措施和虚拟补丁降低风险。"
 
-Deloitte 的[持续威胁暴露管理（CTEM）](https://www.deloitte.com/global/en/services/consulting-risk/services/deloitte-cyber-attack-surface-management.html)构建于 Deloitte Ascend™ 之上，将发现、验证、优先级排序和修复作为一个工作流运行，包括在无补丁可用时的对策设计。Opus 的代码推理和自动化稳定性测试让团队有信心在数小时内而非数天或数周内完成修复。"构建于 Ascend 之上的 CTEM 旨在帮助降低漏洞修复中的决策延迟，"Deloitte 合伙人兼美国网络负责人 Adnan Amjad 表示，"这一差距有助于决定是攻击者还是防御者赢得窗口期。"
+Deloitte 的[持续威胁暴露管理（CTEM）](https://www.deloitte.com/global/en/services/consulting-risk/services/deloitte-cyber-attack-surface-management.html)构建于 Deloitte Ascend™ 之上，将发现、验证、优先级排序和修复作为一个工作流运行，包括在无补丁可用时的对策设计。Opus 的代码推理和自动化稳定性测试让团队有信心在数小时内而非数天或数周内完成修复。"构建于 Ascend 之上的 CTEM 旨在帮助降低漏洞修复中的决策延迟，"Deloitte 合伙人兼美国网络负责人 Adnan Amjad 表示，"这一差距决定是攻击者还是防御者赢得窗口期。"
 
 ## 将受治理的 AI 投入生产
 
-智能体式 AI 用例的新世界给许多团队带来了新挑战。如果没有清晰的框架，为部署设置控制措施、审计证据和自主边界，往往会让安全领域的 AI 采用停留在试点困境中。
+智能体式 AI 用例的新格局给许多团队带来了新挑战。如果没有清晰的框架，为部署设置控制措施、审计证据和自主边界，往往会让安全领域的 AI 采用停留在试点困境中。
 
 PwC 的 [Claude Native Cybersecurity 产品](https://www.pwc.com/us/en/technology/alliances/anthropic.html)同时解决 CISO 提出的两个问题：让 AI 安全地进入生产环境，以及实现网络职能本身的现代化。Secure AI Adoption 帮助企业在数周而非数个季度内从沙箱走向生产，提供部署、治理和审计证据，帮助 CISO 和 CRO 有信心地为团队带来创新。Scaled Frontier Defense 将 Opus 驱动的智能体式推理集成到现有的漏洞管理、检测、安全工程和 GRC 工作流中，在既定护栏和可审计性范围内实现自主执行。
 

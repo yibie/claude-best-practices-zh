@@ -36,12 +36,13 @@ tags: [concept, 行业与场景]
 
 - [Claude Cowork](Claude-Cowork.md) —— 作为对话式 AI 的替代形态出现，为工作本身而构建，可直接读写文件、使用已连接应用并代为运行多步骤任务。
 
+
 ## 知识图谱（Knowledge Graph）
 
 ```mermaid
 graph LR
   C["对话式 AI"]
-  C -->|替代| N0["Claude Cowork"]
+  N0["Claude Cowork"] -->|替代| C
 ```
 
 ## 来源（Sources）

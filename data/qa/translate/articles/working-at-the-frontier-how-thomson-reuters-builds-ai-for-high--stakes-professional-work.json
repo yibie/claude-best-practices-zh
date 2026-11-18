@@ -1,0 +1,27 @@
+{
+  "rel": "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md",
+  "issues": [
+    {
+      "zh": "它来自数十年精心整理的判例法",
+      "fix": "它来自数十年精心整理的判例法",
+      "type": "语句不通",
+      "note": "原文为否定句，译文漏掉否定，意思译反"
+    },
+    {
+      "zh": "这项任务\"一直需要过多的上下文和精确度\"，此前的模型无法胜任。",
+      "fix": "这项任务\"一直需要过多的上下文和精确度\"，此前的模型无法胜任。",
+      "type": "误译",
+      "note": "原文意为对早期模型要求过高，非无法胜任"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4138,
+    "completion_tokens": 113,
+    "total_tokens": 4251,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4010
+  }
+}

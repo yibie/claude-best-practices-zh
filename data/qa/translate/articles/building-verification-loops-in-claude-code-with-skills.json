@@ -1,0 +1,33 @@
+{
+  "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+  "issues": [
+    {
+      "zh": "多次经过验证的交接端到端运行",
+      "fix": "多次经过验证的交接会端到端运行",
+      "type": "语句不通",
+      "note": "缺谓语，句子不完整"
+    },
+    {
+      "zh": "让检查方式匹配运行位置",
+      "fix": "让检查匹配其运行位置",
+      "type": "语句不通",
+      "note": "“检查方式匹配位置”搭配不当"
+    },
+    {
+      "zh": "任何你希望在许多工作流中可用、但不想在每次代码改动时都触发的检查",
+      "fix": "任何你希望在许多工作流中可用、但不想在每次代码改动时都触发的检查",
+      "type": "语句不通",
+      "note": "原文为Anything…，此处可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5435,
+    "completion_tokens": 143,
+    "total_tokens": 5578,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5307
+  }
+}

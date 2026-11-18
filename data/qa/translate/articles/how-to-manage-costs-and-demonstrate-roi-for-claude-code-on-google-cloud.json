@@ -1,0 +1,63 @@
+{
+  "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+  "issues": [
+    {
+      "zh": "统计一件完成的事，以及它落在哪里",
+      "fix": "统计一件完成的事，以及它落在哪里（即交付位置）",
+      "type": "语句不通",
+      "note": "原文where it lands指交付位置，译文读不通"
+    },
+    {
+      "zh": "按 Skill、插件、智能体和 MCP 服务器细分",
+      "fix": "按技能、插件、智能体和 MCP 服务器细分",
+      "type": "术语不一致",
+      "note": "skill前译Skill后译技能，不统一"
+    },
+    {
+      "zh": "还能看到组织内部哪些 Skills 和插件被采用",
+      "fix": "还能看到组织内部哪些技能和插件被采用",
+      "type": "术语不一致",
+      "note": "Skills与上文Skill译法不一致"
+    },
+    {
+      "zh": "按 Skill、插件、智能体和 MCP 服务器细分用量",
+      "fix": "按技能、插件、智能体和 MCP 服务器细分用量",
+      "type": "术语不一致",
+      "note": "skill译法前后不一致"
+    },
+    {
+      "zh": "这些是方向性的参考点，而非规则，但是衡量 Claude Code 在组织中影响的一个良好起点",
+      "fix": "这些是方向性的参考点，而非规则，但它们是衡量 Claude Code 在组织中影响的一个良好起点",
+      "type": "语句不通",
+      "note": "但是与前半句转折搭配生硬"
+    },
+    {
+      "zh": "从根源上关闭的事件",
+      "fix": "在根源上已解决的事件",
+      "type": "误译",
+      "note": "closed at root cause指根因解决，非关闭"
+    },
+    {
+      "zh": "服务切换",
+      "fix": "服务切换（cutover）",
+      "type": "误译",
+      "note": "cutover指切换上线，此处可接受但易误解"
+    },
+    {
+      "zh": "记录组织正在获得的价值",
+      "fix": "记录组织正在获得的价值",
+      "type": "语句不通",
+      "note": "document此处意为记录/证明，可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8404,
+    "completion_tokens": 364,
+    "total_tokens": 8768,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 8276
+  }
+}

@@ -19,7 +19,7 @@ Claude Resources
 
 当单个销售代表把通话准备交给 Claude，每天都能省下时间；而当整个团队都采用它时，收益会不断累积。一个销售组织能从 Claude 中获得多少价值，取决于它在 Claude 周围搭建了什么：Claude 能读写哪些系统，以及它是否拥有承担更复杂工作所需的访问权限和控制手段。
 
-[Cox Communications 报告称](https://claude.com/customers/cox-and-accenture)，其在 AI 投资的第一年获得了 7 倍回报，并将销售线索验证与丰富化的成本降低了 86%，准确率从 18% 提升到 97%。在 [Cyera](https://claude.com/customers/cyera)，约 1,500 名员工中有 88% 每周使用 Claude，[BDR 借助一项 Skills 起草外联内容](https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day)，该 Skills 是基于顶尖销售的最佳成果构建的——这既是效率提升，也是质量提升。
+[Cox Communications 报告称](https://claude.com/customers/cox-and-accenture)，其在 AI 投资的第一年获得了 7 倍回报，并将销售线索验证与丰富化的成本降低了 86%，准确率从 18% 提升到 97%。在 [Cyera](https://claude.com/customers/cyera)，约 1,500 名员工中有 88% 每周使用 Claude，[BDR 借助一项 Skills 起草外联内容](https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day)，该 Skills 是基于顶尖销售的最佳成果构建的——这既是质量提升，也是效率提升。
 
 为帮助收入团队最大化利用 AI，我们编写了《构建 AI 原生收入组织》——一份在整个销售团队推广 Claude 的指南。
 

@@ -1,0 +1,45 @@
+{
+  "rel": "articles/cowork-plugins.md",
+  "issues": [
+    {
+      "zh": "研究前景",
+      "fix": "调研潜在客户",
+      "type": "误译",
+      "note": "prospect 指潜在客户，非前景"
+    },
+    {
+      "zh": "准备交易",
+      "fix": "准备交易推进",
+      "type": "误译",
+      "note": "prep deals 指准备交易材料/推进交易，译作“准备交易”语义不完整，易误解为筹备一笔交易"
+    },
+    {
+      "zh": "分诊问题",
+      "fix": "分类处理问题",
+      "type": "误译",
+      "note": "triage 此处指问题分类分派，非医疗分诊"
+    },
+    {
+      "zh": "排定路线图优先级",
+      "fix": "确定路线图优先级",
+      "type": "语句不通",
+      "note": "“排定优先级”搭配不当"
+    },
+    {
+      "zh": "分析财务状况",
+      "fix": "分析财务数据",
+      "type": "误译",
+      "note": "financials 指财务数据/报表"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1866,
+    "completion_tokens": 176,
+    "total_tokens": 2042,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1738
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+  "issues": [
+    {
+      "zh": "由 Slack 中的 Claude 驱动，智能体承担生产性工作",
+      "fix": "在 Slack 中由 Claude 提供支持，智能体承担生产性工作",
+      "type": "误译",
+      "note": "Powered by 指由Claude驱动，非Slack驱动"
+    },
+    {
+      "zh": "以及被标记的升级事项",
+      "fix": "以及被标记的需上报事项",
+      "type": "误译",
+      "note": "escalations指需上报的问题，非升级"
+    },
+    {
+      "zh": "回顾、升级事项、会议准备",
+      "fix": "回顾、需上报事项、会议准备",
+      "type": "术语不一致",
+      "note": "escalations前后译法不一致"
+    },
+    {
+      "zh": "让人类和智能体可以一起分诊",
+      "fix": "让人类和智能体可以一起分类处理",
+      "type": "语句不通",
+      "note": "分诊为医疗用语，此处不通"
+    },
+    {
+      "zh": "私密频道对每一个需要汇报它的智能体来说都是盲区",
+      "fix": "私密频道对每一个要从中获取信息的智能体来说都是盲区",
+      "type": "误译",
+      "note": "reports on it指从中获取信息，非汇报"
+    },
+    {
+      "zh": "写了一份画布",
+      "fix": "写了一份 Canvas 文档",
+      "type": "名词错",
+      "note": "canvas是Slack产品功能名"
+    },
+    {
+      "zh": "token 用量告诉你灯是亮着的",
+      "fix": "token 用量说明系统在运转",
+      "type": "语句不通",
+      "note": "灯是亮着的为直译，中文不通"
+    },
+    {
+      "zh": "很多信念的飞跃",
+      "fix": "很多大胆的假设",
+      "type": "语句不通",
+      "note": "leaps of faith直译不通"
+    },
+    {
+      "zh": "把一群人带进一个有 Claude 的共享频道",
+      "fix": "把一群人带进一个配有 Claude 的共享频道",
+      "type": "语句不通",
+      "note": "有Claude表述生硬"
+    },
+    {
+      "zh": "你通过给予信任来获得信任",
+      "fix": "你通过给予信任而赢得信任",
+      "type": "语句不通",
+      "note": "gain trust译获得信任略生硬"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4233,
+    "completion_tokens": 414,
+    "total_tokens": 4647,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4105
+  }
+}

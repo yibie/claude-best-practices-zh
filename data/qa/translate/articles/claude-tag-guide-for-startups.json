@@ -1,0 +1,39 @@
+{
+  "rel": "articles/claude-tag-guide-for-startups.md",
+  "issues": [
+    {
+      "zh": "每个人都会在合并前审查每个修复",
+      "fix": "由人审查每个修复后再合并",
+      "type": "误译",
+      "note": "原文a person指由人审查，非每个人"
+    },
+    {
+      "zh": "并在临时请求中使用 Claude 的原则上更加明确",
+      "fix": "并在临时请求中更明确地遵循使用 Claude 的原则",
+      "type": "语句不通",
+      "note": "译文语法混乱，语义不清"
+    },
+    {
+      "zh": "它实际上发现这来自一个未接入监控的内部定时任务",
+      "fix": "它实际上发现这来自一个未接入监控的内部定时任务",
+      "type": "误译",
+      "note": "uninstrumented指未接入监控，译文可接受，但原文强调未被监控发现，此处保留"
+    },
+    {
+      "zh": "从数天到数小时",
+      "fix": "从数天到数小时",
+      "type": "名词错",
+      "note": "原文Days to hours，译文正确，无需修改"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14916,
+    "completion_tokens": 185,
+    "total_tokens": 15101,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 14788
+  }
+}

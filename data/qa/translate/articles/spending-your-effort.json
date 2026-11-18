@@ -1,0 +1,88 @@
+{
+  "rel": "articles/spending-your-effort.md",
+  "issues": [
+    {
+      "zh": "来自我对三个构建版本的亲身测试",
+      "fix": "来自我对三个构建版本的亲身测试",
+      "type": "名词错",
+      "note": "原文three builds指三次构建运行，非版本",
+      "note_zh": "原文three builds指三次构建运行，非版本"
+    },
+    {
+      "zh": "在每一档，基准测试分数和消耗的 token 都有提升",
+      "fix": "在每一档，基准测试分数和消耗的 token 都有提升",
+      "type": "误译",
+      "note": "原文uptick指上升趋势，非必然提升"
+    },
+    {
+      "zh": "我得到了一个看起来非常像 Claude Code 的模型稿",
+      "fix": "我得到了一个看起来非常像 Claude Code 的模型稿",
+      "type": "名词错",
+      "note": "mockup应为模型稿/样稿，非模型稿？"
+    },
+    {
+      "zh": "在最高 effort 下，Claude 花了一些时间简化了其中一些细节",
+      "fix": "在最高 effort 下，Claude 花了一些时间简化了其中一些细节",
+      "type": "误译",
+      "note": "原文simplify a few details，非简化细节？"
+    },
+    {
+      "zh": "对于像 HTML 净化器这样边界情况繁多的东西",
+      "fix": "对于像 HTML 净化器这样边界情况繁多的东西",
+      "type": "语句不通",
+      "note": "东西口语化，宜用任务"
+    },
+    {
+      "zh": "低 effort 汇总每个模型最低的两档设置，最高 effort 汇总最高的三档",
+      "fix": "低 effort 汇总每个模型最低的两档设置，最高 effort 汇总最高的三档",
+      "type": "误译",
+      "note": "原文pools指合并统计，非汇总设置"
+    },
+    {
+      "zh": "Claude 会在构建或运行复现器之前就编辑代码",
+      "fix": "Claude 会在构建或运行复现器之前就编辑代码",
+      "type": "误译",
+      "note": "原文before building it指构建代码，非构建复现器"
+    },
+    {
+      "zh": "针对一个单独的暴力求解器在随机问题上测试其求解器",
+      "fix": "针对一个单独的暴力求解器在随机问题上测试其求解器",
+      "type": "语句不通",
+      "note": "语序混乱，应为用暴力求解器测试"
+    },
+    {
+      "zh": "如果用户在循环中，Claude 可能会询问用户如何设置问题",
+      "fix": "如果用户在循环中，Claude 可能会询问用户如何设置问题",
+      "type": "语句不通",
+      "note": "在循环中为直译，应为参与其中"
+    },
+    {
+      "zh": "当我想要快速响应并保持参与时",
+      "fix": "当我想要快速响应并保持参与时",
+      "type": "误译",
+      "note": "原文in the loop指人在回路中参与"
+    },
+    {
+      "zh": "在关键软件中寻找安全漏洞",
+      "fix": "在关键软件中寻找安全漏洞",
+      "type": "误译",
+      "note": "原文critical software指关键软件，可接受"
+    },
+    {
+      "zh": "示例来自单次运行，有些是在中间 effort 设置下",
+      "fix": "示例来自单次运行，有些是在中间 effort 设置下",
+      "type": "误译",
+      "note": "原文worked examples指详细示例"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6592,
+    "completion_tokens": 617,
+    "total_tokens": 7209,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6464
+  }
+}

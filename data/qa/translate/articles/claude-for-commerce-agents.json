@@ -1,0 +1,33 @@
+{
+  "rel": "articles/claude-for-commerce-agents.md",
+  "issues": [
+    {
+      "zh": "购物智能体在 ACME 零售示例中运行。",
+      "fix": "在 ACME 零售示例中运行的购物智能体。",
+      "type": "语句不通",
+      "note": "图片说明被译成完整句子，读不通"
+    },
+    {
+      "zh": "观看深度解析，我们将分享现场演示、demo",
+      "fix": "观看深度解析，我们将分享现场演示、演示",
+      "type": "术语不一致",
+      "note": "demo与演示混用，重复"
+    },
+    {
+      "zh": "阅读工程深度解析：[claude.com/blog/the-anatomy-of-effective-commerce-agents。]",
+      "fix": "阅读工程深度解析：[claude.com/blog/the-anatomy-of-effective-commerce-agents](https://claude.com/resources/articles/the-anatomy-of-effective-commerce-agents)。",
+      "type": "名词错",
+      "note": "链接文字与URL错位，句号在链接内"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2737,
+    "completion_tokens": 179,
+    "total_tokens": 2916,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 2609
+  }
+}

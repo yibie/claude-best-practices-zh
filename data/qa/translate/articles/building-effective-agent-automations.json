@@ -1,0 +1,87 @@
+{
+  "rel": "articles/building-effective-agent-automations.md",
+  "issues": [
+    {
+      "zh": "目标（Destination）—— 智能体可以写入的唯一位置",
+      "fix": "目标（Destination）—— 智能体可以写入的一个位置",
+      "type": "误译",
+      "note": "one place 译成“唯一位置”，语义过强"
+    },
+    {
+      "zh": "一个常见的错误是让智能体读取固定的时间窗口，比如“_过去 24 小时_”。运行晚了会留下空档，运行早了则会重复条目。",
+      "fix": "一个常见的错误是让智能体读取固定的时间窗口，比如“过去 24 小时”。运行晚了会留下空档，运行早了则会重复条目。",
+      "type": "语句不通",
+      "note": "下划线标记残留，中文中不应出现"
+    },
+    {
+      "zh": "如果它因为不确定第一条帖子是否送达而再次发布，读者会收到两次相同的简报。",
+      "fix": "如果它因为不确定第一条帖子是否送达而再次发布，读者会收到两次相同的简报。",
+      "type": "误译",
+      "note": "原文为“如果它再次发布”，译文语义基本正确，但“因为”因果略强；可保留"
+    },
+    {
+      "zh": "达到上限的运行会暂停而不是失败，因此上限设置过低看起来就像简报突然安静了。",
+      "fix": "达到上限的运行会暂停而不是失败，因此上限设置过低看起来就像简报突然安静了。",
+      "type": "误译",
+      "note": "原文“looks like a brief that went quiet”意为“看起来像简报没声了”，译文可接受"
+    },
+    {
+      "zh": "每次运行都会获得全额，达到上限的运行会以 `budget_reached` 停止原因暂停",
+      "fix": "每次运行都会获得全额预算，达到上限的运行会以 `budget_reached` 停止原因暂停",
+      "type": "漏译",
+      "note": "原文“the full amount”指全额预算，译文漏“预算”"
+    },
+    {
+      "zh": "智能体会读取其他人写的消息和 issue，这些文本可能被解释为指令。限制智能体在遵循这些指令时可能造成的后果。",
+      "fix": "智能体会读取其他人写的消息和 issue，这些文本可能被解释为指令。限制智能体在遵循这些指令时可能造成的后果。",
+      "type": "误译",
+      "note": "原文“Limit what the agent could do if it followed them”意为“限制它若遵循这些指令可能做的事”，译文“可能造成的后果”略偏但可接受"
+    },
+    {
+      "zh": "一个常见的 bug 是智能体将今天早上称为“昨天”，因为它在服务器的时区中计算日期。",
+      "fix": "一个常见的 bug 是智能体将今天早上称为“昨天”，因为它在服务器的时区中计算日期。",
+      "type": "误译",
+      "note": "原文“calling this morning 'yesterday'”意为“把今天早上称作昨天”，译文正确"
+    },
+    {
+      "zh": "在检查今天的简报尚未发布后，智能体发布到一个目标，该目标将简报传递给读者。",
+      "fix": "在检查今天的简报尚未发布后，智能体发布到一个目标，该目标将简报传递给读者。",
+      "type": "误译",
+      "note": "原文“After a check that today's brief isn't already posted”意为“检查今天的简报是否尚未发布后”，译文可接受"
+    },
+    {
+      "zh": "智能体在其记忆存储中保留运行记录（`runs/<date>.md`）。它在发布前将运行标记为“发布中”，然后标记为“已发布”并附上消息 ID，或者标记为“可能已发布”。",
+      "fix": "智能体在其记忆存储中保留运行记录（`runs/<date>.md`）。它在发布前将运行标记为“发布中”，然后标记为“已发布”并附上消息 ID，或者标记为“可能已发布”。",
+      "type": "误译",
+      "note": "原文“marks the run 'posting' before the post, then 'posted' with the message ID, or 'maybe posted'”译文正确"
+    },
+    {
+      "zh": "MCP 工具默认请求批准，而现场没有人来批准，因此 GitHub 工具集设置为 `always_allow`，GitHub token 为 `read-only`。",
+      "fix": "MCP 工具默认请求批准，而现场没有人来批准，因此 GitHub 工具集设置为 `always_allow`，GitHub token 为 `read-only`。",
+      "type": "误译",
+      "note": "原文“nobody is there to give it”意为“没有人在那里批准”，译文“现场没有人来批准”可接受"
+    },
+    {
+      "zh": "一个常见问题是将偏好的副本固化到提示词中，这会持续应用你已经更改过的规则。",
+      "fix": "一个常见问题是将偏好的副本固化到提示词中，这会持续应用你已经更改过的规则。",
+      "type": "误译",
+      "note": "原文“which keeps applying rules you've already changed”意为“这会持续应用你已经更改过的规则”，译文正确"
+    },
+    {
+      "zh": "从正常运行成本的三到五倍开始，然后根据真实数据逐步收紧。",
+      "fix": "从正常运行成本的三到五倍开始，然后根据真实数据逐步收紧。",
+      "type": "误译",
+      "note": "原文“Start at three to five times the cost of a normal run”意为“从正常运行成本的三到五倍开始”，译文正确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10730,
+    "completion_tokens": 1062,
+    "total_tokens": 11792,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 10602
+  }
+}

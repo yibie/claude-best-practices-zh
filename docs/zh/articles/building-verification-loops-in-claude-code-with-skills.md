@@ -83,7 +83,7 @@ where it's missing and strip the payload from the log call.
 
 完整的 schema 及其背后的理念见我们的 [skill 构建完整指南](https://claude.com/resources/articles/complete-guide-to-building-skills-for-claude)。
 
-## 让检查方式匹配运行位置
+## 让检查匹配其运行位置
 
 接下来要确定的是验证循环如何启动：独立、内嵌、链式，还是绑定到 PR。
 
@@ -131,7 +131,7 @@ address any errors before reporting completion.
 
 ### 链式
 
-一个 skill 在其末尾调用另一个 skill，多次经过验证的交接端到端运行。
+一个 skill 在其末尾调用另一个 skill，多次经过验证的交接会端到端运行。
 
 Anthropic 的 Claude Code 团队成员在日常工作中使用这种模式：/code-review 查找 bug，/simplify 清理 diff，一个 /verify skill 确认端到端行为，如果改动涉及 UI，还有一个自定义的 /design skill 对照 DESIGN.md 文件中的规范进行检查。
 

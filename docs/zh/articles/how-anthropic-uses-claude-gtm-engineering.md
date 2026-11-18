@@ -61,7 +61,7 @@ Jared 通过在自己的个人账户上给自己写一系列越来越愤怒的�
 
 ## **扩展 Anthropic 的 GTM 工具包**
 
-除了 Jared，一位经常工作到午夜之后给客户发邮件的 BDR——John Albert——也帮助共同构建了 CLAFTS。业务拓展团队的其余成员在看到队友每天都能省下几个小时之后也加入了进来。从那时起，他们自己完成了大部分的推广工作。
+除了 Jared，一位经常工作到午夜之后给客户发邮件的 BDR，John Albert，帮助共同构建了 CLAFTS。业务拓展团队的其余成员在看到队友每天都能省下几个小时之后也加入了进来。从那时起，他们自己完成了大部分的推广工作。
 
 Jared 构建的下一组工具是一组围绕他日历的 [skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)：每日简报和每日回顾。
 

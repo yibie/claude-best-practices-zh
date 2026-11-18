@@ -1,0 +1,14 @@
+{
+  "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 867,
+    "completion_tokens": 5,
+    "total_tokens": 872,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 739
+  }
+}

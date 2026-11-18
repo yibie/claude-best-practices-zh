@@ -1,0 +1,14 @@
+{
+  "rel": "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 1617,
+    "completion_tokens": 5,
+    "total_tokens": 1622,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1489
+  }
+}

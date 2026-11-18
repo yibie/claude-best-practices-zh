@@ -1,0 +1,51 @@
+{
+  "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+  "issues": [
+    {
+      "zh": "此前为 Base44 应用生成引擎提供支持的 Claude 模型（自该引擎于 2025 年初上线以来一直如此）无法被托付这类工作",
+      "fix": "此前为 Base44 应用生成引擎提供支持的 Claude 模型（自该引擎于 2025 年初上线以来一直如此）无法被信任去完成这类工作",
+      "type": "语句不通",
+      "note": "“无法被托付”搭配生硬，宜改“无法被信任”"
+    },
+    {
+      "zh": "它用少得多的轮次完成任务",
+      "fix": "它用少得多的轮次完成任务",
+      "type": "语句不通",
+      "note": "“用少得多的轮次”语序别扭"
+    },
+    {
+      "zh": "它甚至指出了 Base44 自身评估中的一个盲点",
+      "fix": "它甚至指出了 Base44 自身评估中的一个缺口",
+      "type": "误译",
+      "note": "原文gap指评估缺失项，非“盲点”"
+    },
+    {
+      "zh": "模型提出了一个盲点并纠正了它",
+      "fix": "模型提出了一个盲点并纠正了它",
+      "type": "语句不通",
+      "note": "“提出盲点”搭配不当"
+    },
+    {
+      "zh": "当一位产品经理想要把原生移动应用构建功能引入 Base44 内部时",
+      "fix": "当一位产品经理想要把原生移动应用构建功能引入 Base44 时",
+      "type": "语句不通",
+      "note": "“引入……内部”冗余不通"
+    },
+    {
+      "zh": "完成了团队投入生产所需的大约 90%",
+      "fix": "达到了团队投入生产所需的大约 90%",
+      "type": "语句不通",
+      "note": "“完成了……90%”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2882,
+    "completion_tokens": 334,
+    "total_tokens": 3216,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 2754
+  }
+}

@@ -12,7 +12,7 @@ fetched_at: "2026-11-18"
 
 # 打造 Claude Design 的产品设计师，如何在动手构建之前用它探索想法
 
-2025 年秋天，我是 [Claude Code for VS Code](https://code.claude.com/docs/en/vs-code) 唯一的产品设计师，和两位工程师一起，重新构想 Claude Code 在终端之外友好界面中所做的一切。我们在 9 月底[发布了测试版](https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously)，[Opus 4.5 在 11 月到来](https://www.anthropic.com/news/claude-opus-4-5)，Claude Code 团队开始快速而激进地发布版本。工程师们的交付量远超以往，而我的交付速度还和从前一样。我需要找到一种方法赶上进度。
+2025 年秋天，我是 [Claude Code for VS Code](https://code.claude.com/docs/en/vs-code) 唯一的产品设计师，和两位工程师一起，重新构想 Claude Code 在终端之外的一切功能，打造一个友好的界面。我们在 9 月底[发布了测试版](https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously)，[Opus 4.5 在 11 月到来](https://www.anthropic.com/news/claude-opus-4-5)，Claude Code 团队开始快速而激进地发布版本。工程师们的交付量远超以往，而我的交付速度还和从前一样。我需要找到一种方法赶上进度。
 
 Claude Code 运行在终端里，一切都是基于文本的，我最初的尝试也沿用了这种方式：我把输出复制到 Claude 里，加上截图，然后问："这是我们想加的一个功能。你为什么不设计一下？"结果并不好。大约一个月的时间里，我把它当作副业项目，一直在寻找改进 Claude 设计输出的方法。
 
@@ -20,23 +20,23 @@ Claude Code 运行在终端里，一切都是基于文本的，我最初的尝�
 
 最终我偶然找到了答案：Claude 非常擅长 HTML。我们通常把 HTML 视为网站的格式，但它也是一种丰富、可交互的视觉媒介：你能在幻灯片、视频文件或 PDF 里做出来的任何东西，都能在网页里做出来。于是我提示 Claude 生成 HTML，并给它一个分屏界面，左边聊天，右边查看输出。
 
-这很有用，但产品设计是由你所服务的产品和品牌知识驱动的，所以下一步，我花了一段时间把 Anthropic 品牌的精髓（我们产品使用的字体、颜色、素材和原则）提炼成提示词。这样，当我把提示词输入工具时，输出就符合 Anthropic 品牌指南。
+这很有用，但产品设计是由运用你所负责的产品和品牌的知识驱动的，所以下一步，我花了一段时间把 Anthropic 品牌的精髓（我们产品使用的字体、颜色、素材和原则）提炼成提示词。这样，当我把提示词输入工具时，输出就符合 Anthropic 品牌指南。
 
 我把这些放进一个小型内部原型，并分享给了团队。产品设计师们立刻用它来做交互式原型。在传统设计工具里做一个可点击的原型，意味着要为每个屏幕的每个状态做模型，再手动把它们连起来。而在这里，你把素材交给 Claude，说：让它跑起来。它交付的每个产物都有一个链接，你可以像分享文档一样分享它。
 
 ## **Claude Design 如何成为一种视觉工作媒介**
 
-我第一次意识到 Claude Design 有多吸引人，是在 [Anthropic Labs](https://www.anthropic.com/news/introducing-anthropic-labs) 团队的一次异地办公活动的创意提案环节：在场的每个人都用它拼出了幻灯片，而且常常是在会议进行中、轮到自己展示之前才做的。那次活动说服了 Labs 团队为它配备人员，Claude Design 也从一个副业项目变成了一个真正的项目。
+我第一次意识到 Claude Design 有多吸引人，是在 [Anthropic Labs](https://www.anthropic.com/news/introducing-anthropic-labs) 团队的一次异地办公活动的创意提案环节：在场的每个人都用它赶制了幻灯片，而且常常是在会议进行中、轮到自己展示之前才做的。那次活动说服了 Labs 团队为它配备人员，Claude Design 也从一个副业项目变成了一个真正的项目。
 
-我们不再把它描述为做产品模型稿的工具。Claude Design 成了一种制作任何类型视觉沟通内容的工具：幻灯片、落地页、可打印成 PDF 的单页文档、电子邮件、动画、用于社交媒体分享的视觉内容。幻灯片成了人们用 Claude Design 制作的最常见的东西之一，所以它们现在有了自己的起点——Claude Slides，你可以在任何与 Claude 的对话中要求它，或从 Artifacts 标签页开始。我把它看作比产品设计高一个层级：你与 Claude 协作制作视觉内容，其主要职责是沟通和构思。
+我们不再把它描述为做产品模型稿的工具。Claude Design 成了一种制作任何类型视觉沟通内容的工具：幻灯片、落地页、可打印成 PDF 的单页文档、电子邮件、动画、用于社交媒体分享的视觉内容。幻灯片成了人们用 Claude Design 制作的最常见的东西之一，所以它们现在有了自己的起点——Claude Slides，你可以在任何与 Claude 的对话中要求它，或从 Artifacts 标签页开始。我把它看作产品设计之上的一层：你与 Claude 协作制作视觉内容，其主要职责是沟通和构思。
 
-随着模型在视觉方面越来越强，Claude Design 能完成的工作范围和质量也在提升。我们最新的 Opus 级模型 [Claude Opus 5](https://www.anthropic.com/news/claude-opus-5) 在读取图表、示意图和截图方面比之前的 Opus 模型更强，与 Claude Design 搭配时，能有力地制作出达到演示水准的幻灯片和备忘录。
+随着模型在视觉方面越来越强，Claude Design 能完成的工作范围和质量也在提升。我们最新的 Opus 级模型 [Claude Opus 5](https://www.anthropic.com/news/claude-opus-5) 在读取图表、示意图和截图方面比之前的 Opus 模型更强，与 Claude Design 搭配时，在制作达到演示水准的幻灯片和备忘录时非常强大。
 
 ## **Claude Design 不适合做什么**
 
 Claude Design 没有图像模型，也不是为图像生成而构建的，所以它不适合做 logo 设计——尽管这并没有阻止人们去尝试。更好的做法是引入你已有的 logo 和素材。产品的其余部分也是同样的运作方式：Claude 创建选项和起点，这样你就不必盯着空白画布，然后你挑选出单独看不错、或由多个版本组合起来不错的方案。
 
-如果你要交付生产软件，请继续使用 Claude Code。Claude Code 用于编码；Claude Design 用于设计工作的其他部分：早期构思、协作，或在任何人承诺动手构建之前就某个方向达成共识。Claude Design 现在可以在 Claude Code 内使用，所以你可以在已经打开的会话中请求设计，无论是在桌面端还是终端，或使用 /design 来创建、编辑和同步设计项目。当设计准备好变成软件时，把它交给 Claude Code，它会从你现有的工作继续，而不是从截图重新开始。随着模型在构建生产软件方面越来越强，最重要的工作会前移到流程的更早阶段：拥有好的想法、让所有人达成一致，并在想法还处于早期时收集反馈。
+如果你要交付生产软件，请继续使用 Claude Code。Claude Code 用于编码；Claude Design 用于设计工作的其他部分：早期构思、协作，或在任何人承诺动手构建之前就某个方向达成共识。Claude Design 现在可以在 Claude Code 内使用，所以你可以在已经打开的会话中请求设计，无论是在桌面端还是在终端，或使用 /design 来创建、编辑和同步设计项目。。当设计准备好变成软件时，把它交给 Claude Code，它会从你现有的工作继续，而不是从截图重新开始。随着模型在构建生产软件方面越来越强，最重要的工作会前移到流程的更早阶段：提出好的想法、让所有人达成一致，并在想法还处于早期时收集反馈。
 
 ## **我如何在日常工作中使用 Claude Design**
 
@@ -44,9 +44,9 @@ Claude Design 没有图像模型，也不是为图像生成而构建的，所以
 
 -   **Claude Design 的介绍动画。** 你注册 Claude Design 时播放的动画是在这个工具本身里制作的，但不是直接做的：我不是动画师，所以我先让 Claude Design 为我构建了一个定制的视频编辑器，然后用那个编辑器制作了动画。
 
--   **一个地铁时刻应用**，带有可调节的动画控制，用来调校运动的物理效果。
+-   **一个地铁时刻表应用**，带有可调节的动画控制，用来调校运动的物理效果。
 
--   **Instagram 风格的色彩控制。** 我让 Claude 允许我用滑块和预设来调整应用的配色方案，而不是用文字描述颜色。
+-   **Instagram 风格的色彩控制。** 我让 Claude 让我能用滑块和预设来调整应用的配色方案，而不是用文字描述颜色。
 
 -   **Claude Design 本身的一次重新设计。** 我和两位队友 Helen 和 Andrew 一直在工具内部反复推敲编辑器的新设计。我们不会照原样发布它，但这就是我们探索产品未来可能形态的方式。
 
@@ -61,7 +61,7 @@ Claude Design 没有图像模型，也不是为图像生成而构建的，所以
 7.  **保真度不重要时先画线框图。** 要求线框图要快得多，而且能让 Claude 专注于设计的更高层结构，而不是视觉效果。这是快速尝试许多不同想法的好方法。
 8.  **最后一公里手动完成。** 用直接编辑工具（重新排列、删除、编辑文本、调整大小、更改颜色）做最后的润色，而不是通过提示词来做。直接编辑不消耗 token，而且像尺寸和对齐这样的小调整，本来用眼睛判断就更好。
 9.  **给 Claude 你真实的上下文。** 如果你在为现有的应用或网站设计功能，连接 GitHub，或在 Claude Code 中基于本地代码库工作：Claude 会获取你的组件和现有屏幕，并把它们作为起点，试几次之后，它就能以相当高的保真度重现你现有的设计。如果你在对话中途请求设计，Claude 会基于对话中已有的文件和分析来构建，并引用你的记忆、项目和 Skills。当设计依赖外部信息时，Connectors 和网页搜索也能用。
-10. **与 Claude 并行工作。** 你不必等 Claude 交付完成的结果再提示新的更改或任务。你可以一次排队多条消息，或在 Claude 还在处理上一轮时继续说话。
+10. **与 Claude 并行工作。** 你不必等 Claude 交付完成的结果再提示新的更改或任务。你可以一次排队多条消息，或在 Claude 还在处理上一轮时继续输入。
 
 ## **让它活起来**
 
@@ -69,7 +69,7 @@ Claude Design 没有图像模型，也不是为图像生成而构建的，所以
 
 我鼓励设计师们，无论是在 Claude Design 还是任何其他工具中，都思考如何让自己的创作活起来。我最喜欢的 Claude Design 创作，是那些无法归入现有类别的：带交互式模拟的文档、会跟你说话的幻灯片、同时也是视频的示意图、同时也是自己编辑器的设计。代码，特别是 HTML，是极具创造力的媒介，而设计师们终于能比较轻松地用它来创作了。
 
-Claude Design 之所以成为现在的样子，是因为 Anthropic 的人们不断发现我未曾计划过的用途。它现在可以在任何与 Claude 的对话中使用，包括 Claude Code 和 Artifacts 标签页，在付费计划上处于测试阶段。如果你已经在 claude.ai/design 上工作，对你来说没有任何变化。它现在在 Claude Pro、Max、Ultra、Team 和 Enterprise 计划上以测试版提供。[试一试](https://claude.com/product/design)，把它带到我们还没想到的地方。
+Claude Design 之所以成为现在的样子，是因为 Anthropic 的人们不断发现我未曾计划过的用途。它现在可以在任何与 Claude 的对话中使用，包括 Claude Code 和 Artifacts 标签页，在付费计划上以测试版提供。如果你已经在 claude.ai/design 上工作，对你来说没有任何变化。它现在在 Claude Pro、Max、Ultra、Team 和 Enterprise 计划上以测试版提供。[试一试](https://claude.com/product/design)，把它带到我们还没想到的地方。
 
 _本文由 Anthropic 的产品设计师 Nate Parrott 撰写，表达了他对 Claude Design 的观点、使用模式和建议。_
 

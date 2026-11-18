@@ -36,16 +36,14 @@ Claude Opus 5.5 是面向复杂、长程任务优化的高端 Claude 模型版�
 
 ## 相关概念
 
-- [Claude Code](Claude-Code.md) —— Opus 5.5 主要被用于 Claude Code 中的长时编码会话。
-- [令牌成本](令牌成本.md) —— Opus 5.5 针对长时、高上下文会话的成本问题而设计。
+
+
 
 ## 知识图谱（Knowledge Graph）
 
 ```mermaid
 graph LR
-  C["Claude Opus 5.5"]
-  C -->|用于| N0["Claude Code"]
-  C -->|解决| N1["令牌成本"]
+  C["Claude-Opus-5.5"]
 ```
 
 ## 来源（Sources）

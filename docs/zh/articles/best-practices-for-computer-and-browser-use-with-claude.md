@@ -339,7 +339,7 @@ Claude 的最新模型支持[自适应思考](https://platform.claude.com/docs/e
 
 
 
-**Opus 4.7 优于 4.6 系列。** 在 OSWorld Verified 基准测试中，我们发现 Opus 在等效 token 用量和 effort 设置下优于所有 4.6 系列模型。Opus 4.7 在 low effort 下的得分与 Sonnet 4.6 在 max 下相似，而每个任务的 token 用量约为其 1/10。对于困难任务，Opus 4.7 是显而易见的选择。
+**Opus 4.7 优于 4.6 系列。** 在 OSWorld Verified 基准测试中，我们发现 Opus 4.7 在等效 token 用量和 effort 设置下优于所有 4.6 系列模型。Opus 4.7 在 low effort 下的得分与 Sonnet 4.6 在 max 下相似，而每个任务的 token 用量约为其 1/10。对于困难任务，Opus 4.7 是显而易见的选择。
 
 **将 effort 设为 `high`** 可达到接近最高任务成功率，同时输出 token 约为 `max` 的一半。与 Opus 4.6 相比，low、medium 和 high 使用的 token 量大致相同，同时提高了 OSWorld 上的得分。在我们的内部测试中，Max effort 使用了更多 token 并提供了最佳得分。下表概述了我们对何时使用每个思考 effort 级别的建议。
 
@@ -610,7 +610,7 @@ Your summary MUST include these sections:
 
 ### **服务端上下文压缩（compaction）（beta）**
 
-使用此提示词的最简单方法是让 API 通过[服务端上下文压缩（compaction）](https://docs.anthropic.com/en/docs/build-with-claude/compaction)（beta）处理上下文压缩（compaction）。将你的自定义总结提示词作为 `context_management` 中的 `instructions` 参数传入，当输入 token 超过触发阈值时 API 会自动总结。`instructions` 参数完全替换默认总结提示词，因此上述各节就是模型将遵循的内容。设置 `pause_after_compaction` 以在上下文压缩（compaction）事件之间附加最近的消息（包括截图）。
+使用此提示词的最简单方法是让 API 通过[服务端上下文压缩（compaction）](https://docs.anthropic.com/en/docs/build-with-claude/compaction)（beta）处理上下文压缩（compaction）。将你的自定义总结提示词作为 `context_management` 中的 `instructions` 参数传入，当输入 token 超过触发阈值时 API 会自动总结。`instructions` 参数完全替换默认总结提示词，因此上述各节就是模型将遵循的内容。设置 `pause_after_compaction` 以在上下文压缩（compaction）事件之间保留最近的消息（包括截图）。
 
 _使用自动上下文压缩（autocompaction）工具的示例：_
 

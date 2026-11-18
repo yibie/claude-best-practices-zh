@@ -1,0 +1,75 @@
+{
+  "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+  "issues": [
+    {
+      "zh": "对于每个生成的智能体，运行一个单独的生成智能体，根据评分标准或条件对其输出进行对抗性验证。",
+      "fix": "对于每个生成的智能体，运行一个单独生成的智能体，根据评分标准或条件对其输出进行对抗性验证。",
+      "type": "误译",
+      "note": "原文是spawned agent，非生成智能体"
+    },
+    {
+      "zh": "然后由提示词或模型使用评判智能体以两两比较的方式评判结果",
+      "fix": "然后由提示词或模型以两两比较的方式评判结果",
+      "type": "误译",
+      "note": "judging agent是评判方式，非额外智能体"
+    },
+    {
+      "zh": "工作流可以通过生成智能体从不相交的证据中生成假设，在结构上防止这一点。",
+      "fix": "工作流可以通过从不相交的证据中生成智能体来产生假设，在结构上防止这一点。",
+      "type": "误译",
+      "note": "原文是spawn agents生成假设"
+    },
+    {
+      "zh": "创建一个怀疑者人格的子智能体来审查规则以确保它们一致",
+      "fix": "创建一个怀疑者人格的子智能体来审查规则以确保它们符合要求",
+      "type": "误译",
+      "note": "in line指符合要求，非一致"
+    },
+    {
+      "zh": "例如，[评估并改进](https://claude.dev/blog/automating-eval-design-and-hillclimbing/)你创建的某个 Skill（技能）是否符合特定标准。",
+      "fix": "例如，[评估并改进](https://claude.dev/blog/automating-eval-design-and-hillclimbing/)你创建的某个 Skill（技能）以符合特定标准。",
+      "type": "误译",
+      "note": "against criteria是依据标准，非是否符合"
+    },
+    {
+      "zh": "例如在安全审查中只处理了 50 个条目中的 35 个",
+      "fix": "例如在安全审查中只处理了 50 个条目中的 35 个",
+      "type": "误译",
+      "note": "原文addressing 35 of 50，译文正确无误"
+    },
+    {
+      "zh": "在 worktree 中为每个修复生成一个子智能体来进行修复",
+      "fix": "在 worktree 中为每个修复生成一个子智能体来进行修复",
+      "type": "误译",
+      "note": "原文正确，无需修改"
+    },
+    {
+      "zh": "你可以将它们检入 `~/.claude/workflows`",
+      "fix": "你可以将它们保存到 `~/.claude/workflows`",
+      "type": "误译",
+      "note": "check into此处指存入，非检入"
+    },
+    {
+      "zh": "工作流可以通过生成智能体从不相交的证据中生成假设",
+      "fix": "工作流可以通过从不相交的证据中生成智能体来产生假设",
+      "type": "语句不通",
+      "note": "原句语法混乱，主谓宾不清"
+    },
+    {
+      "zh": "对于每个生成的智能体，运行一个单独的生成智能体",
+      "fix": "对于每个生成的智能体，运行一个单独生成的智能体",
+      "type": "语句不通",
+      "note": "生成智能体易误解为动词短语"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9415,
+    "completion_tokens": 605,
+    "total_tokens": 10020,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9287
+  }
+}

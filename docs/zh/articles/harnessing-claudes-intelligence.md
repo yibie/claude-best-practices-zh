@@ -70,13 +70,13 @@ Claude 可以使用 Skills 逐步披露与任务相关的上下文。
 
 Skills 赋予 Claude 自由组装自己上下文窗口的能力，而[上下文编辑](https://platform.claude.com/docs/en/build-with-claude/context-editing)则相反，提供了一种选择性地移除已过时或无关上下文（例如旧的工具结果或思考块）的方式。
 
-借助[子智能体](https://code.claude.com/docs/en/sub-agents)，Claude 越来越擅长判断何时分叉到一个全新的上下文窗口，以隔离特定任务的工作。[在 Opus 4.6 中](https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf)，生成子智能体的能力使 BrowseComp 的结果比最佳单智能体运行提升了 2.8%。
+借助[子智能体](https://code.claude.com/docs/en/sub-agents)，Claude 越来越擅长判断何时分叉到一个全新的上下文窗口，以隔离特定任务的工作。[借助 Opus 4.6](https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf)，生成子智能体的能力使 BrowseComp 的结果比最佳单智能体运行提升了 2.8%。
 
 **让 Claude 持久化自己的上下文**
 
 长时间运行的智能体可能超出单个[上下文窗口](https://platform.claude.com/docs/en/build-with-claude/context-windows)的限制。一个常见的假设是，记忆系统应依赖模型周围的检索基础设施。我们的许多工作都集中在为 Claude 提供简单的方式，让它_自行选择_要持久化哪些内容。
 
-例如，[上下文压缩（compaction）](https://platform.claude.com/docs/en/build-with-claude/compaction)让 Claude 总结其过去的上下文，以在长时程任务中保持连续性。经过多次发布，Claude 在选择记住什么方面越来越好。例如，[在 BrowseComp](https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf)（一个智能体式搜索任务）上，无论我们给 Sonnet 4.5 多少压缩预算，它都停留在 43%。然而 Opus 4.5 在相同设置下扩展到 68%，Opus 4.6 达到 84%。
+例如，[上下文压缩（compaction）](https://platform.claude.com/docs/en/build-with-claude/compaction)让 Claude 总结其过去的上下文，以在长时程任务中保持连续性。经过多次发布，Claude 在选择记住什么方面越来越好。例如，[在 BrowseComp](https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf)（一个智能体式搜索任务）上，无论我们给 Sonnet 4.5 多少压缩预算，它都停留在 43%。然而 Opus 4.5 在相同设置下提升到 68%，Opus 4.6 达到 84%。
 
 [记忆文件夹](https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool)是另一种方法，允许 Claude 将上下文写入文件，之后按需读取。我们看到 Claude 将其用于智能体式搜索。在 BrowseComp-Plus 上，给 Sonnet 4.5 一个记忆文件夹[将准确率从 60.4% 提升到 67.2%](https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf)。
 
@@ -84,7 +84,7 @@ Skills 赋予 Claude 自由组装自己上下文窗口的能力，而[上下文�
 
 Claude 可以将上下文持久化到记忆文件夹。
 
-[长时程游戏](https://www.youtube.com/watch?v=CXhYDOvgpuU)，例如 Pokémon，是 Claude 使用记忆文件夹能力提升的一个例子。Sonnet 3.5 将记忆当作转录稿，记录非玩家角色（NPC）说了什么，而非什么重要。经过 14,000 步后，它有 31 个文件——包括两个关于毛毛虫宝可梦的近乎重复的文件——而且仍在第二个城镇：
+[长时程游戏](https://www.youtube.com/watch?v=CXhYDOvgpuU)，例如 Pokémon，是 Claude 使用记忆文件夹能力提升的一个例子。Sonnet 3.5 将记忆当作流水账，记录非玩家角色（NPC）说了什么，而非什么重要。经过 14,000 步后，它有 31 个文件——包括两个关于毛毛虫宝可梦的近乎重复的文件——而且仍在第二个城镇：
 
 ```
 caterpie_weedle_info:

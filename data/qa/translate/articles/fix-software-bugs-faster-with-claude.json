@@ -1,0 +1,27 @@
+{
+  "rel": "articles/fix-software-bugs-faster-with-claude.md",
+  "issues": [
+    {
+      "zh": "并给出结账失败的特定原因",
+      "fix": "并给出结账失败的具体原因",
+      "type": "名词错",
+      "note": "checkout 译作结账，与前文一致，非错"
+    },
+    {
+      "zh": "推演一下如果两个用户同时触发结账会有什么并发问题",
+      "fix": "推演一下如果两个用户同时触发结账会有什么并发问题",
+      "type": "术语不一致",
+      "note": "checkout 前文译结账，此处一致，非错"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4267,
+    "completion_tokens": 151,
+    "total_tokens": 4418,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4139
+  }
+}

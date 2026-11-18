@@ -1,0 +1,45 @@
+{
+  "rel": "articles/how-anthropic-uses-claude-cybersecurity.md",
+  "issues": [
+    {
+      "zh": "构建实战手册",
+      "fix": "构建操作手册",
+      "type": "误译",
+      "note": "playbooks 在安全运营语境指操作手册"
+    },
+    {
+      "zh": "让流程确定化",
+      "fix": "让流程具有确定性",
+      "type": "语句不通",
+      "note": "“确定化”不是通顺中文"
+    },
+    {
+      "zh": "不匹配团队已写任何规则的异常",
+      "fix": "不匹配团队已编写的任何规则的异常",
+      "type": "语句不通",
+      "note": "“已写任何规则”缺字病句"
+    },
+    {
+      "zh": "查看我们关于如何为 AI 加速的攻击做好准备的安全计划最佳实践。",
+      "fix": "查看我们关于如何为 AI 加速的攻击做好安全计划准备的最佳实践。",
+      "type": "语句不通",
+      "note": "修饰语错位，语义混乱"
+    },
+    {
+      "zh": "它给出处置结论：误报、真实告警、恶意或预期行为",
+      "fix": "它给出处置结论：误报、真实告警、恶意或预期行为",
+      "type": "术语不一致",
+      "note": "disposition 前文译“处置结论”，此处一致，无问题"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4775,
+    "completion_tokens": 223,
+    "total_tokens": 4998,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4647
+  }
+}

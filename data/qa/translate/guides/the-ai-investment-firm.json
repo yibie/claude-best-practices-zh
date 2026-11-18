@@ -1,0 +1,27 @@
+{
+  "rel": "guides/the-ai-investment-firm.md",
+  "issues": [
+    {
+      "zh": "既需要技术与流程的变革，也需要人与组织的变革",
+      "fix": "既需要人与流程的变革，也需要技术的变革",
+      "type": "误译",
+      "note": "原文是people and process change as much as technology change"
+    },
+    {
+      "zh": "系统化管理人",
+      "fix": "系统化策略管理人",
+      "type": "名词错",
+      "note": "systematic managers指系统化策略管理人"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1016,
+    "completion_tokens": 82,
+    "total_tokens": 1098,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 888
+  }
+}

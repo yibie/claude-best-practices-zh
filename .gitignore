@@ -3,3 +3,5 @@ data/page*.json
 *.log
 *.tmp
 .DS_Store
+site/
+.vercel

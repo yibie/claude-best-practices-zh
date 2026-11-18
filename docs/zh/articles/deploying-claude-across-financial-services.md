@@ -15,7 +15,7 @@ Claude Resources
 
 在本指南中，我们分享金融服务公司如何借助 Claude 压缩其最耗时的工作，包括客户案例和一份实用的采用路线图。
 
-在整个金融服务行业，公司正在研究、交易工作、承保、理赔、模型审查和月末结账中使用 Claude。大多数公司为此同时运行不止一个 Claude 产品：用于对话和研究的 Claude，用于跨文件和应用的項目级工作的 Claude Cowork，面向量化和工程团队的 Claude Code，用于在 Excel、PowerPoint、Word 和 Outlook 中花费的时间的 Claude for Microsoft 365，以及用于构建和部署自定义应用和智能体的 Claude Platform 和 Claude Managed Agents。
+在整个金融服务行业，公司正在研究、交易工作、承保、理赔、模型审查和月末结账中使用 Claude。大多数公司为此同时运行不止一个 Claude 产品：用于对话和研究的 Claude，用于跨文件和应用的项目级工作的 Claude Cowork，面向量化和工程团队的 Claude Code，用于处理在 Excel、PowerPoint、Word 和 Outlook 中花费的时间的 Claude for Microsoft 365，以及用于构建和部署自定义应用和智能体的 Claude Platform 和 Claude Managed Agents。
 
 为帮助领导者规划推广（rollout），我们整理了一份面向金融服务的实用部署指南。它涵盖每个产品、Anthropic 已发布的预构建金融智能体参考架构，以及公司当下即可执行的三阶段采用实战手册（playbook）。
 

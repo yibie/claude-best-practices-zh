@@ -1,0 +1,81 @@
+{
+  "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+  "issues": [
+    {
+      "zh": "我不再期待一份简单的 Markdown 计划，而是预期会形成一张由 HTML 文件构成的网",
+      "fix": "我不再只做一份简单的 Markdown 计划，而是预期会形成一张由 HTML 文件构成的网",
+      "type": "误译",
+      "note": "expect to make 被误译为“期待”"
+    },
+    {
+      "zh": "更别说让我组织里的其他人去读了",
+      "fix": "我也完全没法让我组织里的其他人去读",
+      "type": "误译",
+      "note": "certainly am not able 语气译弱"
+    },
+    {
+      "zh": "它当然可以像 Markdown 一样做简单的文档结构，比如标题和格式",
+      "fix": "它当然可以做简单的文档结构，比如标题和格式",
+      "type": "误译",
+      "note": "原文无“像 Markdown 一样”"
+    },
+    {
+      "zh": "HTML 是 Claude 深入探究问题的丰富画布",
+      "fix": "HTML 是 Claude 深入探究问题的丰富载体",
+      "type": "语句不通",
+      "note": "canvas 此处非画布"
+    },
+    {
+      "zh": "用 HTML 来理解智能体编写的代码、审查代码，或向审阅你代码的人解释一个 PR",
+      "fix": "用 HTML 来理解智能体编写的代码、审查代码，或向审阅你代码的人解释一个 PR。",
+      "type": "语句不通",
+      "note": "句子缺谓语，成分残缺"
+    },
+    {
+      "zh": "一个带有概览、API 和推广（rollout）标签页的页面",
+      "fix": "一个带有概览、API 和上线（rollout）标签页的页面",
+      "type": "误译",
+      "note": "rollout 此处指上线发布"
+    },
+    {
+      "zh": "我不理解我们的速率限制器实际上是如何工作的",
+      "fix": "我不理解我们的限流器实际上是如何工作的",
+      "type": "术语不一致",
+      "note": "rate limiter 前文译“速率限制器”，此处宜统一为限流器"
+    },
+    {
+      "zh": "HTML 恰好就是这样的方式。我现在感觉自己比以往任何时候都更在循环之中。",
+      "fix": "HTML 恰好就是这样的方式。我现在感觉自己比以往任何时候都更与 Claude 保持同步。",
+      "type": "术语不一致",
+      "note": "in the loop 标题译“保持同步”，此处译“在循环中”不一致"
+    },
+    {
+      "zh": "你保持在循环中，但这个循环变得紧密得多",
+      "fix": "你始终参与其中，但这个反馈循环变得紧密得多",
+      "type": "语句不通",
+      "note": "in the loop 直译生硬"
+    },
+    {
+      "zh": "我注意到自己读计划越来越不仔细，我想要一种方式保持对其选择的参与",
+      "fix": "我注意到自己读计划越来越不仔细，我想要一种方式持续关注它的选择",
+      "type": "语句不通",
+      "note": "“保持对其选择的参与”不通顺"
+    },
+    {
+      "zh": "Claude 甚至已经相当擅长在 Markdown 文件里用 ASCII 字符绘制图表",
+      "fix": "Claude 甚至已经相当擅长在 Markdown 文件里用 ASCII 字符绘制示意图",
+      "type": "术语不一致",
+      "note": "diagrams 前文译“图表”，此处宜统一"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 7925,
+    "completion_tokens": 619,
+    "total_tokens": 8544,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 7797
+  }
+}

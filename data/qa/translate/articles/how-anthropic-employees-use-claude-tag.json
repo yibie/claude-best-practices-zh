@@ -1,0 +1,87 @@
+{
+  "rel": "articles/how-anthropic-employees-use-claude-tag.md",
+  "issues": [
+    {
+      "zh": "Hema 没有试图澄清含糊之处，而是在话题串中 @ 了 Claude",
+      "fix": "Hema 没有先去澄清含糊之处，而是在话题串中 @ 了 Claude",
+      "type": "误译",
+      "note": "原文Rather than attempting to clarify意为没有先去澄清，并非“没有试图澄清”"
+    },
+    {
+      "zh": "Claude 将文档中的说法分为两类：一类是已对照公开文档核实过的，另一类是它自己的表述，后者被标记出来，需由产品负责人签字确认。",
+      "fix": "Claude 将文档中的说法分为两类：一类是已对照公开文档核实过的，另一类是它自己的表述，后者被标记出来，需由产品负责人签字确认。",
+      "type": "误译",
+      "note": "原文sorted...into ones verified and those that were its own framing，译文基本准确，但“需由产品负责人签字确认”对应flagged for product-lead sign-off，可接受；此条不报"
+    },
+    {
+      "zh": "产品战略与运营团队的 Steph Soderborg 能够汇总与一个即将发布功能相关的所有需求，并直接通知每一位代表客户提出需求的销售代表，整个过程约 26 分钟。",
+      "fix": "产品战略与运营团队的 Steph Soderborg 能够汇总与一个即将发布功能相关的所有需求，并直接通知每一位代表客户提出需求的销售代表，整个过程约 26 分钟。",
+      "type": "误译",
+      "note": "原文notify each rep who had asked for it on behalf of a customer，译文准确；此条不报"
+    },
+    {
+      "zh": "Claude 在多个频道及整个工作区中运行了约 20 种搜索变体。",
+      "fix": "Claude 在多个频道及整个工作区中运行了约 20 种搜索变体。",
+      "type": "误译",
+      "note": "原文ran about 20 search variants，译文准确；此条不报"
+    },
+    {
+      "zh": "Claude 会尝试通过可访问的文档和频道收集相关或有关的信息",
+      "fix": "Claude 会尝试通过可访问的文档和频道收集相关或有关的信息",
+      "type": "语句不通",
+      "note": "“相关或有关”重复冗余，原文related or relevant"
+    },
+    {
+      "zh": "从一段话的社交文案到 2,500 词的博客草稿、带十几个以上标签页的规划文档",
+      "fix": "从一段话的社交文案到 2,500 词的博客草稿、带十几个以上标签页的规划文档",
+      "type": "误译",
+      "note": "原文a dozen-plus tabs意为十几个以上标签页，译文准确；此条不报"
+    },
+    {
+      "zh": "Claude 不仅能发现法务问题（如缺乏依据的营销声明），还能帮助核查营销内容中的事实陈述",
+      "fix": "Claude 不仅能发现法务问题（如缺乏依据的营销声明），还能帮助核查营销内容中的事实陈述",
+      "type": "误译",
+      "note": "原文spot issues for legal，译文准确；此条不报"
+    },
+    {
+      "zh": "几分钟后，它在未受提示的情况下，从内部文档中找到了所需信息，并解决了其中一项",
+      "fix": "几分钟后，它在未受提示的情况下，从内部文档中找到了所需信息，并解决了其中一项",
+      "type": "误译",
+      "note": "原文unprompted意为未经提示，译文准确；此条不报"
+    },
+    {
+      "zh": "Molly 让它在营销法务审查频道中 @Claude，将这一做法设为默认",
+      "fix": "Molly 让它在营销法务审查频道中 @Claude，将这一做法设为默认",
+      "type": "误译",
+      "note": "原文Molly asked it to make this the default by tagging @Claude，译文准确；此条不报"
+    },
+    {
+      "zh": "让 Claude 每周五审查当周法律顾问的反馈",
+      "fix": "让 Claude 每周五审查当周法律顾问的反馈",
+      "type": "误译",
+      "note": "原文review the week's counsel feedback，译文准确；此条不报"
+    },
+    {
+      "zh": "Claude Tag 目前处于公开测试阶段，在 Anthropic 第一方服务的 Team 和 Enterprise 套餐中提供。",
+      "fix": "Claude Tag 目前处于公开测试阶段，在 Anthropic 第一方服务的 Team 和 Enterprise 套餐中提供。",
+      "type": "误译",
+      "note": "原文public beta，译文准确；此条不报"
+    },
+    {
+      "zh": "它还能[跟进对话](https://claude.com/resources/articles/claude-tag-now-reads-even-more-of-the-room)，并借助可用的上下文、记忆以及被赋予的常设指令，自行判断何时参与聊天。",
+      "fix": "它还能[跟进对话](https://claude.com/resources/articles/claude-tag-now-reads-even-more-of-the-room)，并借助可用的上下文、记忆以及被赋予的常设指令，自行判断何时参与聊天。",
+      "type": "误译",
+      "note": "原文follow conversations and draw on...to decide，译文准确；此条不报"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4963,
+    "completion_tokens": 1026,
+    "total_tokens": 5989,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4835
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+  "issues": [
+    {
+      "zh": "虽然自动化明确属于他们的职责范围，但很多工作却远非自动化：营销技术工具之间无法顺畅集成",
+      "fix": "虽然自动化明确属于他们的职责范围，但很多工作却远非如此：营销技术工具之间无法顺畅集成",
+      "type": "误译",
+      "note": "anything but 意为“远非如此”，非“远非自动化”"
+    },
+    {
+      "zh": "有些还没从数据仓库进入仪表盘，还有些甚至尚未接入数据仓库",
+      "fix": "有些还没从数据仓库进入仪表盘，还有些甚至尚未接入数据仓库",
+      "type": "误译",
+      "note": "原文顺序为未进仓库者，译文逻辑颠倒"
+    },
+    {
+      "zh": "以及在他们自行从 Claude 拉取数据时解读返回的结果",
+      "fix": "以及在他们自行从 Claude 拉取数据时解读返回的结果",
+      "type": "误译",
+      "note": "原文指解读返回结果，译文可接受"
+    },
+    {
+      "zh": "一个定时任务每周日晚运行",
+      "fix": "一个定时任务每周日晚运行",
+      "type": "误译",
+      "note": "原文为 Sunday evening，译文正确"
+    },
+    {
+      "zh": "该流程依托于连接团队所用营销平台和工具的 Connectors",
+      "fix": "该流程依托于连接团队所用营销平台和工具的连接器（Connectors）",
+      "type": "术语不一致",
+      "note": "Connectors 前文未译，此处保留英文"
+    },
+    {
+      "zh": "一个**调度技能（dispatcher skill）** 会读取该频道",
+      "fix": "一个**调度技能（dispatcher skill）** 会读取该频道",
+      "type": "语句不通",
+      "note": "无问题"
+    },
+    {
+      "zh": "它本身不做任何活动设置；它的职责是决定接下来运行什么，而将其独立出来，让 Annabel 可以单独优化每个专项技能，而无需改动路由逻辑。",
+      "fix": "它本身不做任何活动设置；它的职责是决定接下来运行什么，而将其独立出来，让 Annabel 可以单独优化每个专项技能，而无需改动路由逻辑。",
+      "type": "语句不通",
+      "note": "无问题"
+    },
+    {
+      "zh": "一个**申请参会技能（apply-to-attend skill）** 处理注册流程进行中的变更：",
+      "fix": "一个**申请参会技能（apply-to-attend skill）** 处理注册流程进行中的变更。",
+      "type": "语句不通",
+      "note": "列表项末尾冒号应为句号"
+    },
+    {
+      "zh": "虽然这些自动化工作流将大大节省 Annabel 日常工作中的时间",
+      "fix": "虽然这些自动化工作流将大大节省 Annabel 日常工作中的时间",
+      "type": "误译",
+      "note": "原文 significant time savers，译文可接受"
+    },
+    {
+      "zh": "她能够大规模地获得一致的搭建质量",
+      "fix": "她能够大规模地获得一致的搭建质量",
+      "type": "误译",
+      "note": "原文 consistency across builds at scale，译文可接受"
+    },
+    {
+      "zh": "Claude 阅读指令的方式与人类书写指令的方式不同",
+      "fix": "Claude 阅读指令的方式与人类书写指令的方式不同",
+      "type": "误译",
+      "note": "原文 reads instructions differently than a human writes them，译文正确"
+    },
+    {
+      "zh": "任何值得保留的内容都会回写到相应的技能中",
+      "fix": "任何值得保留的内容都会回写到相应的技能中",
+      "type": "误译",
+      "note": "无问题"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4404,
+    "completion_tokens": 661,
+    "total_tokens": 5065,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4276
+  }
+}

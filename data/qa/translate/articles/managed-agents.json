@@ -1,0 +1,57 @@
+{
+  "rel": "articles/managed-agents.md",
+  "issues": [
+    {
+      "zh": "如何为一个「尚未被想到的程序」设计系统",
+      "fix": "如何为「尚未被想到的程序」设计系统",
+      "type": "语句不通",
+      "note": "「为一个…设计系统」多出「一个」"
+    },
+    {
+      "zh": "如何为一个「尚未被想到的程序」设计系统。操作系统通过",
+      "fix": "如何为「尚未被想到的程序」设计系统。操作系统通过",
+      "type": "语句不通",
+      "note": "结论段同样多出「一个」"
+    },
+    {
+      "zh": "一个老旧的 infrastructure 问题",
+      "fix": "一个老旧的运维问题",
+      "type": "术语不一致",
+      "note": "infrastructure 未译，混入英文"
+    },
+    {
+      "zh": "输入一个名称和输入，返回一个字符串",
+      "fix": "输入名称和输入，返回一个字符串",
+      "type": "语句不通",
+      "note": "「输入…输入」重复病句"
+    },
+    {
+      "zh": "多双双手",
+      "fix": "多双手",
+      "type": "语句不通",
+      "note": "「多双双手」叠词不通"
+    },
+    {
+      "zh": "扩展到多个大脑和多双双手的能力",
+      "fix": "扩展到多个大脑和多双手的能力",
+      "type": "语句不通",
+      "note": "「多双双手」叠词不通"
+    },
+    {
+      "zh": "接口 `getEvents(),` 允许",
+      "fix": "接口 `getEvents()` 允许",
+      "type": "语句不通",
+      "note": "逗号误入代码标识符内"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 277,
+    "total_tokens": 6117,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5712
+  }
+}

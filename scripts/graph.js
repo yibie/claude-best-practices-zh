@@ -33,19 +33,26 @@ for (const card of cards) {
   }
 }
 
-// edges from relations
+// edges from relations（保留方向：自动抽取时 from -> rel -> to 是有语义方向的）
 const edges = new Map();
 for (const card of cards) {
-  const rels = card.relations || [];
-  for (const r of rels) {
+  for (const r of card.relations || []) {
     const a = nameToCanon.get(r.from), b = nameToCanon.get(r.to);
     if (!a || !b || a === b) continue;
-    const k = a < b ? `${a}\u0000${b}` : `${b}\u0000${a}`;
-    if (!edges.has(k)) edges.set(k, { from: a < b ? a : b, to: a < b ? b : a, rel: r.rel, w: 0, docs: new Set() });
+    const rel = String(r.rel || '用于').trim();
+    const k = `${a}\u0001${rel}\u0001${b}`;
+    if (!edges.has(k)) edges.set(k, { from: a, to: b, rel, w: 0, docs: new Set() });
     const e = edges.get(k);
     e.w++;
     e.docs.add(card.rel);
   }
+}
+// 同一对概念的正反同名关系只保留更强的那个方向
+for (const [k, e] of [...edges]) {
+  const rev = `${e.to}\u0001${e.rel}\u0001${e.from}`;
+  const r = edges.get(rev);
+  if (r && r.w > e.w) edges.delete(k);
+  else if (r && r.w === e.w) edges.delete(rev);
 }
 
 const idOf = (zh) => zh.replace(/[\/\\:*?"<>|.\s]+/g, '-').replace(/^-|-$/g, '');

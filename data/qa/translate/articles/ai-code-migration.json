@@ -1,0 +1,87 @@
+{
+  "rel": "articles/ai-code-migration.md",
+  "issues": [
+    {
+      "zh": "Anthropic 的开发者个人使用",
+      "fix": "Anthropic 的多位开发者各自使用",
+      "type": "误译",
+      "note": "individual developers 指多位开发者"
+    },
+    {
+      "zh": "将任何行为变化视为需要修复的 bug",
+      "fix": "将任何行为变化都视为需要修复的 bug",
+      "type": "漏译",
+      "note": "漏译 considered 的强调语气"
+    },
+    {
+      "zh": "然后用一次一次性的端到端运行来验证它",
+      "fix": "然后用一次性的端到端运行来验证它",
+      "type": "语句不通",
+      "note": "“一次一次性”重复病句"
+    },
+    {
+      "zh": "修复智能体会把它们烧掉",
+      "fix": "修复智能体会把它们逐一清除",
+      "type": "语句不通",
+      "note": "burn down 直译不通"
+    },
+    {
+      "zh": "之后的一切主要是队列的消耗",
+      "fix": "之后的一切主要是清空队列",
+      "type": "语句不通",
+      "note": "burning down 译法生硬"
+    },
+    {
+      "zh": "可衡量地更好",
+      "fix": "在可衡量的意义上更好",
+      "type": "语句不通",
+      "note": "measurably better 直译生硬"
+    },
+    {
+      "zh": "一个抓不住破坏的裁判不是裁判",
+      "fix": "一个抓不住破坏的裁判算不上裁判",
+      "type": "语句不通",
+      "note": "“不是裁判”语气生硬"
+    },
+    {
+      "zh": "将每条命令的输出与 Python 原版逐一比对",
+      "fix": "将每条命令的输出与 Python 原版逐一比对",
+      "type": "误译",
+      "note": "原文为 diffed every command's output，译文基本准确，但“原版”应为“原始版本”更准确"
+    },
+    {
+      "zh": "一个包含七个真实场景的等价性执行框架（harness）",
+      "fix": "一个包含七个真实场景的等价性测试框架（harness）",
+      "type": "术语不一致",
+      "note": "parity harness 应为等价性测试框架"
+    },
+    {
+      "zh": "修复方法可以是一条直白、强调性的提示词指令",
+      "fix": "修复方法可以是一条直白、强调性的提示词指令",
+      "type": "误译",
+      "note": "原文为 blunt, emphatic prompt instruction，译文准确"
+    },
+    {
+      "zh": "它抓住了任何场景清单都无法预测的小毛病",
+      "fix": "它抓住了任何场景清单都无法预测的细微问题",
+      "type": "语句不通",
+      "note": "paper cuts 直译“小毛病”不准确"
+    },
+    {
+      "zh": "问问 Claude 它的迁移流程会是什么样",
+      "fix": "问问 Claude 它的迁移流程会是什么样",
+      "type": "误译",
+      "note": "原文为 ask Claude what the migration process looks like，译文准确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9454,
+    "completion_tokens": 522,
+    "total_tokens": 9976,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9326
+  }
+}

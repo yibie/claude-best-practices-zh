@@ -1,0 +1,14 @@
+{
+  "rel": "webinars/claude-on-vertex-ai.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 5,
+    "total_tokens": 778,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 645
+  }
+}

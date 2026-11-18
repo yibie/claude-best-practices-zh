@@ -1,0 +1,69 @@
+{
+  "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+  "issues": [
+    {
+      "zh": "你不再是驾驶座上的人，而是 Claude 所引入变更的审查者",
+      "fix": "你不再坐在驾驶座上，而是成为 Claude 所引入变更的审查者",
+      "type": "语句不通",
+      "note": "原句缺谓语，读不通"
+    },
+    {
+      "zh": "错误也在发生之前就被减少",
+      "fix": "并在错误发生之前就将其减少",
+      "type": "语句不通",
+      "note": "被动句式生硬，语义别扭"
+    },
+    {
+      "zh": "现在，一位销售经理可以用自然语言提问",
+      "fix": "现在，一位销售经理可以用纯文本提问",
+      "type": "误译",
+      "note": "plain text 指纯文本，非自然语言"
+    },
+    {
+      "zh": "并且是在过去一年内完成上手（onboarding）的",
+      "fix": "并且是在过去一年内完成入驻的",
+      "type": "术语不一致",
+      "note": "onboarding 前文译法应统一"
+    },
+    {
+      "zh": "同时贡献人数可能翻了一倍",
+      "fix": "同时贡献人数可能达到原来的两倍",
+      "type": "误译",
+      "note": "2x more people 指两倍人数"
+    },
+    {
+      "zh": "理解不同系统之间如何连接一直是个挑战",
+      "fix": "理解不同系统之间如何连接一直颇具挑战",
+      "type": "语句不通",
+      "note": "“是个挑战”搭配生硬"
+    },
+    {
+      "zh": "用于验证代码变更是否可能使文档过时，并提示更新",
+      "fix": "用于检查代码变更是否会使文档过时，并提示更新",
+      "type": "语句不通",
+      "note": "“验证是否可能”语义含混"
+    },
+    {
+      "zh": "这不再只存在于某位资深工程师的脑子里",
+      "fix": "这不再只存在于某位普通工程师的脑子里",
+      "type": "误译",
+      "note": "staff engineer 非“资深”之意"
+    },
+    {
+      "zh": "这项工作在 Claude Code 使其可行之前过于繁琐，不值得投入",
+      "fix": "这项工作在 Claude Code 使其变得可行之前过于繁琐，难以证明值得投入",
+      "type": "语句不通",
+      "note": "“使其可行之前”逻辑拗口"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3731,
+    "completion_tokens": 404,
+    "total_tokens": 4135,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3603
+  }
+}

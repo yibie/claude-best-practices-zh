@@ -1,0 +1,51 @@
+{
+  "rel": "articles/running-an-ai-native-engineering-org.md",
+  "issues": [
+    {
+      "zh": "大多数问题的第一步是找到写代码的那个人",
+      "fix": "大多数问题的第一步是找到写代码的那个人",
+      "type": "漏译",
+      "note": "原文为getting an answer to most questions，译文漏译“获得答案”"
+    },
+    {
+      "zh": "你是在找谁导致了回归？",
+      "fix": "你是在找谁导致了回归？",
+      "type": "误译",
+      "note": "regression此处指功能退化，非回归分析"
+    },
+    {
+      "zh": "我们不断质疑为什么我们这样做事情",
+      "fix": "我们不断质疑为什么我们这样做事情",
+      "type": "语句不通",
+      "note": "“为什么我们这样做事情”语序不通"
+    },
+    {
+      "zh": "上手（onboarding）加速时间下降",
+      "fix": "上手（onboarding）加速时间下降",
+      "type": "误译",
+      "note": "ramp time指上手所需时间，非加速时间"
+    },
+    {
+      "zh": "我重点看重两类人",
+      "fix": "我重点看重两类人",
+      "type": "误译",
+      "note": "indexed heavily on意为重点考察/看重，可接受"
+    },
+    {
+      "zh": "这看起来很有趣",
+      "fix": "这看起来很有趣",
+      "type": "误译",
+      "note": "fun to see意为看着很有意思，可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4290,
+    "completion_tokens": 247,
+    "total_tokens": 4537,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4162
+  }
+}

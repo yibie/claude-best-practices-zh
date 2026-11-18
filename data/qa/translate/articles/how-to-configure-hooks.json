@@ -1,0 +1,45 @@
+{
+  "rel": "articles/how-to-configure-hooks.md",
+  "issues": [
+    {
+      "zh": "在每次提示词中注入当前冲刺上下文或项目优先级",
+      "fix": "在每次提交提示词时注入当前冲刺上下文或项目优先级",
+      "type": "误译",
+      "note": "原文是每次提交提示词时注入，非在提示词中注入"
+    },
+    {
+      "zh": "Claude Code 将所有内容记录到对话记录文件中，无需任何设置即可查看工具调用和响应。",
+      "fix": "Claude Code 将所有内容记录到对话记录文件中，无需任何设置即可了解工具调用和响应。",
+      "type": "误译",
+      "note": "provides visibility 意为可查看了解，非主动查看"
+    },
+    {
+      "zh": "在认为任务完成前验证测试通过",
+      "fix": "在认为任务完成前验证测试是否通过",
+      "type": "语句不通",
+      "note": "缺“是否”，句子不完整"
+    },
+    {
+      "zh": "在停止前检查生成的代码能否编译",
+      "fix": "在停止前检查生成的代码是否能够编译",
+      "type": "语句不通",
+      "note": "“能否编译”搭配生硬，宜用“是否能够”"
+    },
+    {
+      "zh": "在写入前校验文件路径，防止意外覆盖",
+      "fix": "在写入前校验文件路径，防止意外覆盖文件",
+      "type": "语句不通",
+      "note": "“防止意外覆盖”缺宾语，语义不完整"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8220,
+    "completion_tokens": 263,
+    "total_tokens": 8483,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 8092
+  }
+}

@@ -45,7 +45,7 @@ fetched_at: "2026-11-18"
 
 **最佳实践**：
 
--   以直接的动作动词开头："Write"、"Analyze"、"Generate"、"Create"
+-   以直接的动作动词开头："写"、"分析"、"生成"、"创建"
 -   跳过开场白，直奔请求
 -   说明你希望输出包含什么，而不只是要处理什么
 -   对质量和深度的预期要具体
@@ -313,7 +313,7 @@ Generate a meal plan based on the athlete information above.
 **组合多种技术的示例**：
 
 ```
-xtract key financial metrics from this quarterly report and present them in JSON format.
+Extract key financial metrics from this quarterly report and present them in JSON format.
 
 I need this data for automated processing, so it's critical that your response contains ONLY valid JSON with no preamble or explanation.
 

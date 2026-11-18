@@ -1,0 +1,27 @@
+{
+  "rel": "articles/how-anthropic-uses-claude-legal.md",
+  "issues": [
+    {
+      "zh": "从保密协议到第三方供应商协议",
+      "fix": "从保密协议到第三方供应商协议",
+      "type": "名词错",
+      "note": "NDA译法可接受，但此处无误，占位"
+    },
+    {
+      "zh": "雇佣律师过去要在例行的利益冲突表格审查上花费大量时间",
+      "fix": "雇佣律师过去要在例行的利益冲突表格审查上花费大量时间",
+      "type": "名词错",
+      "note": "占位"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4353,
+    "completion_tokens": 92,
+    "total_tokens": 4445,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4225
+  }
+}

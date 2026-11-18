@@ -1,0 +1,3947 @@
+{
+  "generatedAt": "2026-11-18T03:05:38.835Z",
+  "source": "https://claude.com/resources/best-practices",
+  "categories": [
+    "Claude Code 与编程",
+    "工具与扩展",
+    "智能体架构",
+    "产品线与功能",
+    "上下文工程",
+    "成本与性能",
+    "模型与能力",
+    "安全与治理",
+    "企业落地与组织",
+    "评估与验证",
+    "行业与场景"
+  ],
+  "nodes": [
+    {
+      "id": "Claude-Code",
+      "zh": "Claude Code",
+      "en": "Claude Code",
+      "cat": "Claude Code 与编程",
+      "kind": "product",
+      "def": "Anthropic 的智能体编程工具，支持多智能体并行与动态工作流。",
+      "count": 79,
+      "docs": [
+        "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "articles/ai-code-migration.md",
+        "articles/automating-eval-design-and-hillclimbing.md",
+        "articles/best-practices-for-getting-started-with-claude-cowork.md",
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/build-responsive-web-layouts.md",
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "articles/building-companies-with-claude-code.md",
+        "articles/building-effective-agent-automations.md",
+        "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "articles/building-with-claude-sonnet-5-5.md",
+        "articles/claude-code-guide-for-startups.md",
+        "articles/claude-for-commerce-agents.md",
+        "articles/claude-model-and-effort-level-in-claude-code.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/claude-tag-guide-for-startups.md",
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/deploying-claude-across-financial-services.md",
+        "articles/fix-software-bugs-faster-with-claude.md",
+        "articles/getting-the-most-out-of-opus-5-5.md",
+        "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+        "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+        "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/how-anthropic-uses-claude-cybersecurity.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropic-uses-claude-marketing.md",
+        "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+        "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+        "articles/how-to-configure-hooks.md",
+        "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+        "articles/how-we-made-claude-ai-faster.md",
+        "articles/integrate-apis-seamlessly.md",
+        "articles/introduction-to-agentic-coding.md",
+        "articles/key-benefits-transitioning-agentic-coding.md",
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/optimize-code-performance-quickly.md",
+        "articles/product-development-in-the-agentic-era.md",
+        "articles/running-an-ai-native-engineering-org.md",
+        "articles/scaling-agentic-coding.md",
+        "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "articles/solving-code-review-at-anthropic.md",
+        "articles/spending-your-effort.md",
+        "articles/the-ai-native-sdlc-playbook.md",
+        "articles/the-claude-cowork-product-guide.md",
+        "articles/the-founders-playbook.md",
+        "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "articles/using-claude-code-session-management-and-1m-context.md",
+        "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+        "articles/using-claude-md-files.md",
+        "articles/what-a-task-costs-on-opus-5-5.md",
+        "articles/which-claude-model-should-you-build-with.md",
+        "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "articles/working-at-the-frontier-rakuten.md",
+        "guides/scaling-agentic-coding-across-your-organization.md",
+        "guides/the-code-modernization-playbook.md",
+        "guides/the-complete-guide-to-building-skills-for-claude.md",
+        "guides/the-founders-playbook-building-an-ai-native-startup.md",
+        "guides/zero-trust-for-ai-agents.md",
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "webinars/claude-code-best-practices-lightspeed.md",
+        "webinars/claude-code-financial-services.md",
+        "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "webinars/claude-code-live.md",
+        "webinars/claude-code-maximizing-value.md",
+        "webinars/claude-code-service-delivery.md",
+        "webinars/deloitte-code-modernization.md"
+      ],
+      "aliases": [
+        "Claude Code"
+      ]
+    },
+    {
+      "id": "技能",
+      "zh": "技能",
+      "en": "Skills",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "以文件封装可复用工作流与专长、按需加载的能力包。",
+      "count": 46,
+      "docs": [
+        "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "articles/ai-ci-cd-on-call.md",
+        "articles/auto-mode-in-production.md",
+        "articles/automating-eval-design-and-hillclimbing.md",
+        "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-an-ai-native-revenue-organization.md",
+        "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "articles/claude-code-guide-for-startups.md",
+        "articles/claude-excel-powerpoint-updates.md",
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/cowork-plugins.md",
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "articles/getting-started-with-loops.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropic-uses-claude-legal.md",
+        "articles/how-anthropic-uses-claude-marketing.md",
+        "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+        "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "articles/how-warp-builds-self-improving-agents-on-claude.md",
+        "articles/improving-frontend-design-through-skills.md",
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "articles/seeing-like-an-agent.md",
+        "articles/skills-explained.md",
+        "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "articles/subagents-in-claude-code.md",
+        "articles/the-ai-native-sdlc-playbook.md",
+        "articles/the-anatomy-of-effective-commerce-agents.md",
+        "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "guides/the-ai-investment-firm.md",
+        "guides/the-complete-guide-to-building-skills-for-claude.md",
+        "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md"
+      ],
+      "aliases": [
+        "技能",
+        "智能体技能",
+        "Agent Skills",
+        "agent skills",
+        "技能结构",
+        "技能分发",
+        "技能测试",
+        "claude-api 技能"
+      ]
+    },
+    {
+      "id": "模型上下文协议",
+      "zh": "模型上下文协议",
+      "en": "MCP",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "标准化连接智能体与外部工具及数据源的开放协议。",
+      "count": 31,
+      "docs": [
+        "articles/ai-ci-cd-on-call.md",
+        "articles/auto-mode-in-production.md",
+        "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/building-ai-agents-in-financial-services.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "articles/claude-code-guide-for-startups.md",
+        "articles/claude-excel-powerpoint-updates.md",
+        "articles/claude-for-the-legal-industry.md",
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/cowork-plugins-finance.md",
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropic-uses-claude-legal.md",
+        "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "articles/how-we-made-claude-ai-faster.md",
+        "articles/introduction-to-agentic-coding.md",
+        "articles/managed-agents.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/skills-explained.md",
+        "articles/the-ai-native-sdlc-playbook.md",
+        "articles/using-claude-md-files.md",
+        "articles/what-is-model-context-protocol.md",
+        "guides/zero-trust-for-ai-agents.md",
+        "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "webinars/future-of-ai-coding-mcp-vs-code.md"
+      ],
+      "aliases": [
+        "模型上下文协议",
+        "MCP",
+        "MCP 连接器",
+        "MCP Connectors",
+        "MCP connectors"
+      ]
+    },
+    {
+      "id": "子代理",
+      "zh": "子代理",
+      "en": "Subagents",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "拥有独立上下文、由主代理编排的专注执行单元。",
+      "count": 30,
+      "docs": [
+        "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "articles/ai-code-migration.md",
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/building-companies-with-claude-code.md",
+        "articles/claude-code-guide-for-startups.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/cowork-plugins.md",
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/getting-the-most-out-of-opus-5-5.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/seeing-like-an-agent.md",
+        "articles/skills-explained.md",
+        "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "articles/subagents-in-claude-code.md",
+        "articles/the-anatomy-of-effective-commerce-agents.md",
+        "articles/the-claude-cowork-product-guide.md",
+        "articles/using-claude-code-session-management-and-1m-context.md",
+        "articles/using-claude-md-files.md",
+        "articles/what-a-task-costs-on-opus-5-5.md",
+        "articles/which-claude-model-should-you-build-with.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "webinars/claude-code-best-practices-lightspeed.md",
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "aliases": [
+        "子代理",
+        "subagent",
+        "subagents",
+        "子智能体",
+        "Subagents"
+      ]
+    },
+    {
+      "id": "Claude-平台",
+      "zh": "Claude 平台",
+      "en": "Claude Platform",
+      "cat": "产品线与功能",
+      "kind": "product",
+      "def": "Anthropic 提供模型与智能体构建能力的开发平台。",
+      "count": 26,
+      "docs": [
+        "articles/build-responsive-web-layouts.md",
+        "articles/building-ai-agents-for-startups.md",
+        "articles/building-ai-agents-in-financial-services.md",
+        "articles/carta-healthcare-clinical-abstractor.md",
+        "articles/deploying-claude-across-financial-services.md",
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/fix-software-bugs-faster-with-claude.md",
+        "articles/how-anthropic-uses-claude-legal.md",
+        "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+        "articles/integrate-apis-seamlessly.md",
+        "articles/optimize-code-performance-quickly.md",
+        "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "guides/building-effective-ai-agents.md",
+        "guides/financial-services-guide-to-building-autonomous-ai-agents.md",
+        "guides/the-enterprise-ai-transformation-guide-for-life-sciences.md",
+        "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "guides/the-enterprise-ai-transformation-guide.md",
+        "guides/the-founders-playbook-building-an-ai-native-startup.md",
+        "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "webinars/building-claude-commerce-agents.md",
+        "webinars/claude-on-vertex-ai.md",
+        "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "webinars/future-of-ai-coding-mcp-vs-code.md",
+        "webinars/unified-claude-what-it-means-for-admins.md"
+      ],
+      "aliases": [
+        "Claude 平台",
+        "Claude",
+        "Claude 企业版",
+        "Claude企业版",
+        "Claude.ai",
+        "Vertex AI"
+      ]
+    },
+    {
+      "id": "上下文工程",
+      "zh": "上下文工程",
+      "en": "Context Engineering",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "系统化设计与管理模型上下文以提升输出质量。",
+      "count": 24,
+      "docs": [
+        "articles/best-practices-for-prompt-engineering.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/building-companies-with-claude-code.md",
+        "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+        "articles/carta-healthcare-clinical-abstractor.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+        "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+        "articles/improving-frontend-design-through-skills.md",
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "articles/managed-agents.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/seeing-like-an-agent.md",
+        "articles/subagents-in-claude-code.md",
+        "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "articles/using-claude-md-files.md",
+        "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md",
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "aliases": [
+        "上下文工程",
+        "context engineering",
+        "Context Engineering",
+        "上下文管理",
+        "context management",
+        "Context Management",
+        "上下文隔离",
+        "知识库",
+        "Knowledge Base"
+      ]
+    },
+    {
+      "id": "Claude-Cowork",
+      "zh": "Claude Cowork",
+      "en": "Claude Cowork",
+      "cat": "产品线与功能",
+      "kind": "product",
+      "def": "面向非技术知识工作者的企业级 AI 协作工作空间。",
+      "count": 23,
+      "docs": [
+        "articles/best-practices-for-getting-started-with-claude-cowork.md",
+        "articles/building-ai-agents-for-the-enterprise.md",
+        "articles/building-an-ai-native-revenue-organization.md",
+        "articles/ciso-guide-to-agentic-ai.md",
+        "articles/claude-for-the-legal-industry.md",
+        "articles/cowork-plugins.md",
+        "articles/deploying-claude-across-financial-services.md",
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "articles/how-we-made-claude-ai-faster.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "articles/product-development-in-the-agentic-era.md",
+        "articles/running-an-ai-native-engineering-org.md",
+        "articles/the-claude-cowork-product-guide.md",
+        "articles/the-founders-playbook.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "guides/claude-cowork-product-guide.md",
+        "guides/deploying-claude-across-your-organization.md",
+        "webinars/unified-claude-what-it-means-for-admins.md"
+      ],
+      "aliases": [
+        "Claude Cowork"
+      ]
+    },
+    {
+      "id": "智能体",
+      "zh": "智能体",
+      "en": "AI Agent",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "能自主规划、调用工具并执行多步任务的 AI 系统。",
+      "count": 18,
+      "docs": [
+        "articles/building-ai-agents-for-startups.md",
+        "articles/building-ai-agents-for-the-enterprise.md",
+        "articles/building-ai-agents-in-financial-services.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "articles/ciso-guide-to-agentic-ai.md",
+        "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/working-at-the-frontier-cursor.md",
+        "guides/building-effective-ai-agents.md",
+        "guides/the-ai-investment-firm.md",
+        "guides/zero-trust-for-ai-agents.md",
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+        "webinars/claude-code-live.md",
+        "webinars/claude-on-vertex-ai.md",
+        "webinars/deloitte-code-modernization.md"
+      ],
+      "aliases": [
+        "智能体",
+        "AI agent",
+        "agent",
+        "AI智能体",
+        "AI Agent",
+        "AI 智能体",
+        "智能体AI",
+        "agentic AI",
+        "Agentic AI",
+        "AI代理",
+        "智能体 AI",
+        "代理式编码"
+      ]
+    },
+    {
+      "id": "智能体编程",
+      "zh": "智能体编程",
+      "en": "Agentic Coding",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "由 AI 智能体自主完成编码、审查与测试的开发范式。",
+      "count": 15,
+      "docs": [
+        "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/building-companies-with-claude-code.md",
+        "articles/claude-code-guide-for-startups.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/fix-software-bugs-faster-with-claude.md",
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "articles/introduction-to-agentic-coding.md",
+        "articles/key-benefits-transitioning-agentic-coding.md",
+        "articles/running-an-ai-native-engineering-org.md",
+        "articles/scaling-agentic-coding.md",
+        "guides/scaling-agentic-coding-across-your-organization.md",
+        "guides/the-code-modernization-playbook.md"
+      ],
+      "aliases": [
+        "智能体编程",
+        "agentic coding",
+        "Agentic Coding",
+        "智能体编码"
+      ]
+    },
+    {
+      "id": "上下文窗口",
+      "zh": "上下文窗口",
+      "en": "Context Window",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "模型单次请求可处理的令牌总量上限。",
+      "count": 13,
+      "docs": [
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-with-claude-sonnet-5-5.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/getting-started-with-claude-code-mods.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/skills-explained.md",
+        "articles/subagents-in-claude-code.md",
+        "articles/using-claude-code-session-management-and-1m-context.md",
+        "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+        "articles/using-claude-md-files.md",
+        "articles/which-claude-model-should-you-build-with.md"
+      ],
+      "aliases": [
+        "上下文窗口",
+        "Context Window",
+        "context window"
+      ]
+    },
+    {
+      "id": "Claude-Agent-SDK",
+      "zh": "Claude Agent SDK",
+      "en": "Claude Agent SDK",
+      "cat": "Claude Code 与编程",
+      "kind": "product",
+      "def": "构建可编程智能体应用的开发工具包。",
+      "count": 12,
+      "docs": [
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/building-companies-with-claude-code.md",
+        "articles/building-with-claude-managed-agents.md",
+        "articles/claude-for-commerce-agents.md",
+        "articles/claude-for-the-legal-industry.md",
+        "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "articles/how-healthcare-organizations-use-claude-tag.md",
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+        "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md",
+        "webinars/claude-code-for-financial-services-boris-cherny.md"
+      ],
+      "aliases": [
+        "Claude Agent SDK",
+        "Claude代理SDK",
+        "智能体 SDK",
+        "Agent SDK",
+        "Claude 智能体 SDK"
+      ]
+    },
+    {
+      "id": "提示缓存",
+      "zh": "提示缓存",
+      "en": "prompt caching",
+      "cat": "成本与性能",
+      "kind": "technique",
+      "def": "缓存跨请求复用内容以降低输入成本、提升响应速度。",
+      "count": 11,
+      "docs": [
+        "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+        "articles/building-with-claude-sonnet-5-5.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "articles/spending-your-effort.md",
+        "articles/the-anatomy-of-effective-commerce-agents.md",
+        "articles/which-claude-model-should-you-build-with.md",
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "aliases": [
+        "提示缓存"
+      ]
+    },
+    {
+      "id": "Claude-Tag",
+      "zh": "Claude Tag",
+      "en": "Claude Tag",
+      "cat": "产品线与功能",
+      "kind": "product",
+      "def": "可加入共享频道、具备记忆与工具访问的常驻协作智能体。",
+      "count": 10,
+      "docs": [
+        "articles/agent-identity-access-model.md",
+        "articles/ai-ci-cd-on-call.md",
+        "articles/ciso-guide-to-agentic-ai.md",
+        "articles/claude-tag-guide-for-startups.md",
+        "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "articles/how-anthropic-employees-use-claude-tag.md",
+        "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "articles/how-healthcare-organizations-use-claude-tag.md",
+        "articles/how-we-made-claude-ai-faster.md",
+        "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md"
+      ],
+      "aliases": [
+        "Claude Tag"
+      ]
+    },
+    {
+      "id": "插件",
+      "zh": "插件",
+      "en": "Plugins",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "打包技能、连接器、命令与子代理的可安装定制单元。",
+      "count": 10,
+      "docs": [
+        "articles/claude-excel-powerpoint-updates.md",
+        "articles/cowork-plugins-finance.md",
+        "articles/cowork-plugins.md",
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/getting-started-with-claude-code-mods.md",
+        "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "articles/the-claude-cowork-product-guide.md",
+        "guides/claude-cowork-product-guide.md"
+      ],
+      "aliases": [
+        "插件",
+        "plugins",
+        "Plugins",
+        "财务分析插件",
+        "Financial Analysis Plugin",
+        "Claude for Excel"
+      ]
+    },
+    {
+      "id": "提示工程",
+      "zh": "提示工程",
+      "en": "Prompt Engineering",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "通过编写与迭代指令引导模型输出预期结果。",
+      "count": 10,
+      "docs": [
+        "articles/best-practices-for-prompt-engineering.md",
+        "articles/carta-healthcare-clinical-abstractor.md",
+        "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+        "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+        "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "articles/scaling-agentic-coding.md",
+        "articles/using-claude-md-files.md",
+        "articles/what-a-task-costs-on-opus-5-5.md"
+      ],
+      "aliases": [
+        "提示工程",
+        "prompt engineering",
+        "Prompt Engineering",
+        "提示审计"
+      ]
+    },
+    {
+      "id": "人在回路",
+      "zh": "人在回路",
+      "en": "Human-in-the-Loop",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "在关键决策点保留人类审核与最终决定权的机制。",
+      "count": 10,
+      "docs": [
+        "articles/building-ai-agents-for-startups.md",
+        "articles/building-ai-agents-for-the-enterprise.md",
+        "articles/building-ai-agents-in-financial-services.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "articles/building-companies-with-claude-code.md",
+        "articles/claude-for-commerce-agents.md",
+        "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+        "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "articles/how-warp-builds-self-improving-agents-on-claude.md"
+      ],
+      "aliases": [
+        "人在回路",
+        "human-in-the-loop",
+        "Human-in-the-Loop",
+        "人工在环",
+        "人工审批"
+      ]
+    },
+    {
+      "id": "渐进式披露",
+      "zh": "渐进式披露",
+      "en": "Progressive Disclosure",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "按需逐层加载上下文信息以节省令牌并保持相关性。",
+      "count": 9,
+      "docs": [
+        "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "articles/how-warp-builds-self-improving-agents-on-claude.md",
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "articles/seeing-like-an-agent.md",
+        "articles/skills-explained.md",
+        "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md"
+      ],
+      "aliases": [
+        "渐进式披露",
+        "progressive disclosure",
+        "Progressive Disclosure",
+        "渐进披露"
+      ]
+    },
+    {
+      "id": "CLAUDE-md",
+      "zh": "CLAUDE.md",
+      "en": "CLAUDE.md",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "会话启动时加载、记录项目约定与上下文的指令文件。",
+      "count": 8,
+      "docs": [
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/scaling-agentic-coding.md",
+        "articles/solving-code-review-at-anthropic.md",
+        "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "articles/the-ai-native-sdlc-playbook.md",
+        "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "aliases": [
+        "CLAUDE.md",
+        "CLAUDE.md 文件"
+      ]
+    },
+    {
+      "id": "努力等级",
+      "zh": "努力等级",
+      "en": "Effort Level",
+      "cat": "模型与能力",
+      "kind": "technique",
+      "def": "控制模型推理投入与延迟成本权衡的档位设置。",
+      "count": 8,
+      "docs": [
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/building-with-claude-sonnet-5-5.md",
+        "articles/claude-model-and-effort-level-in-claude-code.md",
+        "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/spending-your-effort.md",
+        "articles/what-a-task-costs-on-opus-5-5.md",
+        "articles/which-claude-model-should-you-build-with.md"
+      ],
+      "aliases": [
+        "努力等级",
+        "effort level",
+        "effort"
+      ]
+    },
+    {
+      "id": "验证",
+      "zh": "验证",
+      "en": "Verification",
+      "cat": "评估与验证",
+      "kind": "technique",
+      "def": "智能体检查自身工作是否达到完成标准的过程。",
+      "count": 8,
+      "docs": [
+        "articles/ai-code-migration.md",
+        "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "articles/claude-model-and-effort-level-in-claude-code.md",
+        "articles/getting-started-with-loops.md",
+        "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "articles/solving-code-review-at-anthropic.md",
+        "articles/spending-your-effort.md",
+        "articles/using-llms-to-secure-source-code.md"
+      ],
+      "aliases": [
+        "验证",
+        "验证循环"
+      ]
+    },
+    {
+      "id": "智能体工作流",
+      "zh": "智能体工作流",
+      "en": "Agentic Workflow",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "为智能体自主性提供结构化执行流程的模式。",
+      "count": 8,
+      "docs": [
+        "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+        "articles/skills-explained.md",
+        "articles/the-founders-playbook.md",
+        "guides/claude-cowork-product-guide.md",
+        "guides/the-complete-guide-to-building-skills-for-claude.md",
+        "webinars/building-with-claude-in-europe-agent-fundamentals.md"
+      ],
+      "aliases": [
+        "智能体工作流",
+        "agent workflow",
+        "Agentic Workflow",
+        "工作流",
+        "workflow",
+        "workflows",
+        "代理式工作流"
+      ]
+    },
+    {
+      "id": "Claude-Fable-5",
+      "zh": "Claude Fable 5",
+      "en": "Claude Fable 5",
+      "cat": "模型与能力",
+      "kind": "product",
+      "def": "面向高难度推理与长程任务的前沿模型。",
+      "count": 7,
+      "docs": [
+        "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "articles/working-at-the-frontier-cursor.md",
+        "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+        "articles/working-at-the-frontier-rakuten.md",
+        "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md"
+      ],
+      "aliases": [
+        "Claude Fable 5"
+      ]
+    },
+    {
+      "id": "连接器",
+      "zh": "连接器",
+      "en": "Connectors",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "将 Claude 接入外部工具与数据源的集成组件。",
+      "count": 7,
+      "docs": [
+        "articles/building-an-ai-native-revenue-organization.md",
+        "articles/claude-tag-guide-for-startups.md",
+        "articles/cowork-plugins.md",
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "articles/what-is-model-context-protocol.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md"
+      ],
+      "aliases": [
+        "连接器",
+        "connectors",
+        "Connectors"
+      ]
+    },
+    {
+      "id": "MCP-服务器",
+      "zh": "MCP 服务器",
+      "en": "MCP Server",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "实现 MCP 协议、向智能体暴露工具与数据的服务端。",
+      "count": 7,
+      "docs": [
+        "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+        "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "articles/what-is-model-context-protocol.md",
+        "webinars/claude-code-maximizing-value.md",
+        "webinars/future-of-ai-coding-mcp-vs-code.md"
+      ],
+      "aliases": [
+        "MCP 服务器",
+        "MCP server",
+        "MCP Servers",
+        "MCP服务器",
+        "MCP Server"
+      ]
+    },
+    {
+      "id": "钩子",
+      "zh": "钩子",
+      "en": "Hooks",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "在智能体生命周期特定节点自动触发的脚本或动作。",
+      "count": 7,
+      "docs": [
+        "articles/getting-started-with-claude-code-mods.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "articles/how-to-configure-hooks.md",
+        "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "articles/subagents-in-claude-code.md",
+        "articles/the-ai-native-sdlc-playbook.md",
+        "webinars/claude-code-best-practices-lightspeed.md"
+      ],
+      "aliases": [
+        "钩子",
+        "hooks",
+        "hook"
+      ]
+    },
+    {
+      "id": "提示注入",
+      "zh": "提示注入",
+      "en": "Prompt Injection",
+      "cat": "安全与治理",
+      "kind": "risk",
+      "def": "攻击者将指令藏于内容中诱使智能体违背用户意图。",
+      "count": 7,
+      "docs": [
+        "articles/auto-mode-in-production.md",
+        "articles/building-effective-agent-automations.md",
+        "articles/ciso-guide-to-agentic-ai.md",
+        "articles/claude-code-auto-mode.md",
+        "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "articles/managed-agents.md"
+      ],
+      "aliases": [
+        "提示注入",
+        "prompt injection",
+        "Prompt Injection"
+      ]
+    },
+    {
+      "id": "Claude-托管智能体",
+      "zh": "Claude 托管智能体",
+      "en": "Claude Managed Agents",
+      "cat": "产品线与功能",
+      "kind": "product",
+      "def": "提供运行时、会话与记忆管理的云端智能体托管服务。",
+      "count": 7,
+      "docs": [
+        "articles/building-with-claude-managed-agents.md",
+        "articles/deploying-claude-across-financial-services.md",
+        "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+        "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+        "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+        "articles/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate.md",
+        "articles/working-at-the-frontier-rakuten.md"
+      ],
+      "aliases": [
+        "Claude 托管智能体",
+        "Claude托管代理"
+      ]
+    },
+    {
+      "id": "上下文压缩",
+      "zh": "上下文压缩",
+      "en": "Compaction",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "上下文接近上限时摘要历史以延续长任务。",
+      "count": 7,
+      "docs": [
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "articles/using-claude-code-session-management-and-1m-context.md",
+        "articles/what-a-task-costs-on-opus-5-5.md"
+      ],
+      "aliases": [
+        "上下文压缩",
+        "Compaction",
+        "compaction",
+        "压缩"
+      ]
+    },
+    {
+      "id": "动态工作流",
+      "zh": "动态工作流",
+      "en": "Dynamic Workflows",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "按任务即时编写并编排多智能体框架的机制。",
+      "count": 7,
+      "docs": [
+        "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "articles/ai-ci-cd-on-call.md",
+        "articles/ai-code-migration.md",
+        "articles/claude-code-in-the-cloud.md",
+        "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "articles/getting-started-with-loops.md",
+        "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md"
+      ],
+      "aliases": [
+        "动态工作流",
+        "dynamic workflows",
+        "dynamic workflow",
+        "并行工作流",
+        "Parallel Workflows"
+      ]
+    },
+    {
+      "id": "智能体循环",
+      "zh": "智能体循环",
+      "en": "Agent Loop",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "智能体反复收集上下文、行动、验证直至完成的循环。",
+      "count": 6,
+      "docs": [
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "articles/getting-started-with-loops.md",
+        "articles/how-anthropic-uses-claude-cybersecurity.md",
+        "articles/the-anatomy-of-effective-commerce-agents.md"
+      ],
+      "aliases": [
+        "智能体循环",
+        "Agent Loop",
+        "agentic loop",
+        "代理循环"
+      ]
+    },
+    {
+      "id": "工作流自动化",
+      "zh": "工作流自动化",
+      "en": "Workflow Automation",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "用智能体自动完成原本耗时的业务流程。",
+      "count": 6,
+      "docs": [
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropic-uses-claude-legal.md",
+        "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+        "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "webinars/claude-code-service-delivery.md"
+      ],
+      "aliases": [
+        "工作流自动化",
+        "workflow automation",
+        "Workflow Automation"
+      ]
+    },
+    {
+      "id": "评估",
+      "zh": "评估",
+      "en": "evaluation",
+      "cat": "评估与验证",
+      "kind": "technique",
+      "def": "系统化测试AI输出质量与可靠性的方法。",
+      "count": 6,
+      "docs": [
+        "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "articles/working-at-the-frontier-cursor.md",
+        "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+        "guides/the-ai-investment-firm.md",
+        "webinars/building-with-claude-in-europe-agent-fundamentals.md"
+      ],
+      "aliases": [
+        "评估",
+        "Evaluation",
+        "evals",
+        "模型评估",
+        "eval",
+        "智能体评估",
+        "agent evals"
+      ]
+    },
+    {
+      "id": "单任务成本",
+      "zh": "单任务成本",
+      "en": "Cost per Task",
+      "cat": "成本与性能",
+      "kind": "metric",
+      "def": "完成一个实际任务的总花费，比单价更能反映经济性。",
+      "count": 5,
+      "docs": [
+        "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+        "articles/which-claude-model-should-you-build-with.md",
+        "articles/working-at-the-frontier-rakuten.md"
+      ],
+      "aliases": [
+        "单任务成本",
+        "cost-per-task",
+        "cost per task"
+      ]
+    },
+    {
+      "id": "智能体框架",
+      "zh": "智能体框架",
+      "en": "agent harness",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "围绕模型的循环、工具执行与上下文管理脚手架。",
+      "count": 5,
+      "docs": [
+        "articles/building-with-claude-managed-agents.md",
+        "articles/demystifying-evals-for-ai-agents.md",
+        "articles/harness-design-long-running-apps.md",
+        "articles/harnessing-claudes-intelligence.md",
+        "articles/managed-agents.md"
+      ],
+      "aliases": [
+        "智能体框架",
+        "代理框架",
+        "智能体框架设计"
+      ]
+    },
+    {
+      "id": "模型路由",
+      "zh": "模型路由",
+      "en": "Model Routing",
+      "cat": "成本与性能",
+      "kind": "technique",
+      "def": "按任务复杂度将请求分派给不同能力层级模型的策略。",
+      "count": 5,
+      "docs": [
+        "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+        "articles/claude-model-and-effort-level-in-claude-code.md",
+        "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+        "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "aliases": [
+        "模型路由",
+        "模型选择"
+      ]
+    },
+    {
+      "id": "令牌成本",
+      "zh": "令牌成本",
+      "en": "Token Cost",
+      "cat": "成本与性能",
+      "kind": "metric",
+      "def": "会话中发送与生成令牌所产生的费用。",
+      "count": 5,
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "articles/getting-started-with-loops.md",
+        "articles/subagents-in-claude-code.md",
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "aliases": [
+        "令牌成本",
+        "令牌用量"
+      ]
+    },
+    {
+      "id": "评估框架",
+      "zh": "评估框架",
+      "en": "Evaluation Framework",
+      "cat": "评估与验证",
+      "kind": "technique",
+      "def": "系统化衡量模型表现并定位问题的评测基础设施。",
+      "count": 5,
+      "docs": [
+        "articles/carta-healthcare-clinical-abstractor.md",
+        "articles/demystifying-evals-for-ai-agents.md",
+        "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+        "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "articles/the-anatomy-of-effective-commerce-agents.md"
+      ],
+      "aliases": [
+        "评估框架",
+        "evaluation framework",
+        "evaluation harness",
+        "评估套件",
+        "eval suite"
+      ]
+    },
+    {
+      "id": "护栏",
+      "zh": "护栏",
+      "en": "Guardrails",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "限制智能体可执行动作与花费的边界措施。",
+      "count": 4,
+      "docs": [
+        "articles/auto-mode-in-production.md",
+        "articles/building-effective-agent-automations.md",
+        "articles/claude-for-commerce-agents.md",
+        "articles/how-we-made-claude-ai-faster.md"
+      ],
+      "aliases": [
+        "护栏",
+        "guardrails",
+        "guardrail"
+      ]
+    },
+    {
+      "id": "沙箱",
+      "zh": "沙箱",
+      "en": "Sandbox",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "隔离运行智能体生成代码与工具调用的执行环境。",
+      "count": 4,
+      "docs": [
+        "articles/building-with-claude-managed-agents.md",
+        "articles/claude-code-auto-mode.md",
+        "articles/managed-agents.md",
+        "articles/using-llms-to-secure-source-code.md"
+      ],
+      "aliases": [
+        "沙箱",
+        "Sandbox",
+        "sandbox"
+      ]
+    },
+    {
+      "id": "自动模式",
+      "zh": "自动模式",
+      "en": "Auto Mode",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "用分类器审查高风险操作并拦截危险命令的自主执行模式。",
+      "count": 4,
+      "docs": [
+        "articles/auto-mode-in-production.md",
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/building-always-on-agents.md",
+        "articles/claude-code-auto-mode.md"
+      ],
+      "aliases": [
+        "自动模式"
+      ]
+    },
+    {
+      "id": "幻觉",
+      "zh": "幻觉",
+      "en": "Hallucination",
+      "cat": "安全与治理",
+      "kind": "risk",
+      "def": "模型生成看似合理但实际虚假或错误的内容。",
+      "count": 4,
+      "docs": [
+        "articles/best-practices-for-prompt-engineering.md",
+        "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "articles/how-anthropic-uses-claude-legal.md",
+        "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md"
+      ],
+      "aliases": [
+        "幻觉",
+        "hallucination",
+        "Hallucination"
+      ]
+    },
+    {
+      "id": "可观测性",
+      "zh": "可观测性",
+      "en": "Observability",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "追踪与审查智能体决策过程与数据来源的能力。",
+      "count": 4,
+      "docs": [
+        "articles/building-ai-agents-in-financial-services.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "articles/building-with-claude-managed-agents.md",
+        "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md"
+      ],
+      "aliases": [
+        "可观测性",
+        "observability",
+        "Observability"
+      ]
+    },
+    {
+      "id": "投资回报率",
+      "zh": "投资回报率",
+      "en": "ROI",
+      "cat": "成本与性能",
+      "kind": "metric",
+      "def": "衡量AI投入与业务收益之比的量化指标。",
+      "count": 4,
+      "docs": [
+        "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+        "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+        "guides/the-code-modernization-playbook.md",
+        "guides/the-enterprise-ai-transformation-guide-for-retail.md"
+      ],
+      "aliases": [
+        "投资回报率",
+        "可衡量投资回报"
+      ]
+    },
+    {
+      "id": "AI治理",
+      "zh": "AI治理",
+      "en": "AI governance",
+      "cat": "安全与治理",
+      "kind": "org",
+      "def": "为AI部署设定控制、审计与自主性边界的框架。",
+      "count": 4,
+      "docs": [
+        "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+        "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "guides/the-enterprise-ai-transformation-guide-for-life-sciences.md",
+        "guides/the-enterprise-ai-transformation-guide-for-retail.md"
+      ],
+      "aliases": [
+        "AI治理",
+        "AI Governance",
+        "AI 治理"
+      ]
+    },
+    {
+      "id": "工具搜索",
+      "zh": "工具搜索",
+      "en": "Tool Search",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "按需检索并延迟加载工具定义以节省上下文。",
+      "count": 4,
+      "docs": [
+        "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md"
+      ],
+      "aliases": [
+        "工具搜索",
+        "Tool Search",
+        "tool search",
+        "智能体搜索",
+        "Agentic Search"
+      ]
+    },
+    {
+      "id": "记忆",
+      "zh": "记忆",
+      "en": "Memory",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "跨运行持久保存用户指令、笔记与任务进度的存储。",
+      "count": 4,
+      "docs": [
+        "articles/building-always-on-agents.md",
+        "articles/building-effective-agent-automations.md",
+        "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "articles/how-anthropic-employees-use-claude-tag.md"
+      ],
+      "aliases": [
+        "记忆",
+        "记忆存储"
+      ]
+    },
+    {
+      "id": "长时运行智能体",
+      "zh": "长时运行智能体",
+      "en": "long-running agent",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "可连续数小时无人监督执行复杂任务的智能体。",
+      "count": 4,
+      "docs": [
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "articles/the-claude-cowork-product-guide.md",
+        "articles/working-at-the-frontier-rakuten.md",
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md"
+      ],
+      "aliases": [
+        "长时任务",
+        "long-running tasks",
+        "long-running work",
+        "长时运行智能体",
+        "long-running agents"
+      ]
+    },
+    {
+      "id": "插件市场",
+      "zh": "插件市场",
+      "en": "Plugin Marketplace",
+      "cat": "工具与扩展",
+      "kind": "product",
+      "def": "集中浏览、安装与分发插件的渠道。",
+      "count": 3,
+      "docs": [
+        "articles/cowork-plugins.md",
+        "articles/getting-started-with-claude-code-mods.md",
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md"
+      ],
+      "aliases": [
+        "插件市场",
+        "Plugin Marketplace",
+        "plugin marketplace"
+      ]
+    },
+    {
+      "id": "技能创建器",
+      "zh": "技能创建器",
+      "en": "Skill Creator",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "辅助构建、测试与迭代技能文件的工具。",
+      "count": 3,
+      "docs": [
+        "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/how-to-create-skills-key-steps-limitations-and-examples.md"
+      ],
+      "aliases": [
+        "技能创建器",
+        "skill-creator",
+        "Skill Creator"
+      ]
+    },
+    {
+      "id": "定时任务",
+      "zh": "定时任务",
+      "en": "Scheduled Tasks",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "按预设时间自动触发技能或工作流的机制。",
+      "count": 3,
+      "docs": [
+        "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "articles/the-claude-cowork-product-guide.md"
+      ],
+      "aliases": [
+        "定时任务",
+        "Scheduled Tasks",
+        "Scheduled Task"
+      ]
+    },
+    {
+      "id": "程序化工具调用",
+      "zh": "程序化工具调用",
+      "en": "Programmatic Tool Calling",
+      "cat": "工具与扩展",
+      "kind": "technique",
+      "def": "用代码编排工具调用，仅将最终结果返回模型。",
+      "count": 3,
+      "docs": [
+        "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "articles/harnessing-claudes-intelligence.md"
+      ],
+      "aliases": [
+        "程序化工具调用",
+        "Programmatic Tool Calling",
+        "programmatic tool calling"
+      ]
+    },
+    {
+      "id": "多智能体系统",
+      "zh": "多智能体系统",
+      "en": "Multi-Agent System",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "多个专业化智能体在独立上下文中协同完成任务的架构。",
+      "count": 3,
+      "docs": [
+        "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+        "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+        "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md"
+      ],
+      "aliases": [
+        "多智能体系统"
+      ]
+    },
+    {
+      "id": "代码审查",
+      "zh": "代码审查",
+      "en": "Code Review",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "对代码变更进行检查以发现缺陷与改进点。",
+      "count": 3,
+      "docs": [
+        "articles/claude-code-guide-for-startups.md",
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/running-an-ai-native-engineering-org.md"
+      ],
+      "aliases": [
+        "代码审查"
+      ]
+    },
+    {
+      "id": "代码现代化",
+      "zh": "代码现代化",
+      "en": "Code Modernization",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "将遗留系统升级重构为现代语言与架构的实践。",
+      "count": 3,
+      "docs": [
+        "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+        "guides/the-code-modernization-playbook.md",
+        "webinars/deloitte-code-modernization.md"
+      ],
+      "aliases": [
+        "代码现代化",
+        "Code Modernization",
+        "code modernization"
+      ]
+    },
+    {
+      "id": "技术债务",
+      "zh": "技术债务",
+      "en": "Technical Debt",
+      "cat": "Claude Code 与编程",
+      "kind": "risk",
+      "def": "为短期交付积累、需长期偿还的维护负担。",
+      "count": 3,
+      "docs": [
+        "articles/key-benefits-transitioning-agentic-coding.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/the-founders-playbook.md"
+      ],
+      "aliases": [
+        "技术债务",
+        "technical debt",
+        "Technical Debt"
+      ]
+    },
+    {
+      "id": "自适应思考",
+      "zh": "自适应思考",
+      "en": "Adaptive Thinking",
+      "cat": "模型与能力",
+      "kind": "technique",
+      "def": "模型按任务复杂度动态决定推理深度的机制。",
+      "count": 3,
+      "docs": [
+        "articles/best-practices-for-computer-and-browser-use-with-claude.md",
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/building-with-claude-sonnet-5-5.md"
+      ],
+      "aliases": [
+        "自适应思考"
+      ]
+    },
+    {
+      "id": "顾问策略",
+      "zh": "顾问策略",
+      "en": "Advisor Strategy",
+      "cat": "成本与性能",
+      "kind": "technique",
+      "def": "小模型执行、遇难题时调用前沿模型获取判断的协作模式。",
+      "count": 3,
+      "docs": [
+        "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+        "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md"
+      ],
+      "aliases": [
+        "顾问策略"
+      ]
+    },
+    {
+      "id": "功能开关",
+      "zh": "功能开关",
+      "en": "Feature Flag",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "控制新功能灰度放量与快速回滚的运行时开关。",
+      "count": 3,
+      "docs": [
+        "articles/ai-ci-cd-on-call.md",
+        "articles/how-we-made-claude-ai-faster.md",
+        "articles/solving-code-review-at-anthropic.md"
+      ],
+      "aliases": [
+        "功能开关"
+      ]
+    },
+    {
+      "id": "内部试用",
+      "zh": "内部试用",
+      "en": "Dogfooding",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "团队先在内部使用自建智能体再决定是否产品化。",
+      "count": 3,
+      "docs": [
+        "articles/claude-code-guide-for-startups.md",
+        "articles/running-an-ai-native-engineering-org.md",
+        "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md"
+      ],
+      "aliases": [
+        "内部试用"
+      ]
+    },
+    {
+      "id": "企业AI转型",
+      "zh": "企业AI转型",
+      "en": "Enterprise AI Transformation",
+      "cat": "企业落地与组织",
+      "kind": "org",
+      "def": "企业系统性引入 AI 并重塑流程与能力的整体变革。",
+      "count": 3,
+      "docs": [
+        "articles/building-ai-agents-for-the-enterprise.md",
+        "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "guides/the-enterprise-ai-transformation-guide.md"
+      ],
+      "aliases": [
+        "企业AI转型",
+        "enterprise AI transformation",
+        "Enterprise AI Transformation"
+      ]
+    },
+    {
+      "id": "最佳实践",
+      "zh": "最佳实践",
+      "en": "Best Practices",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "经实践验证、可复用的高效使用方法与规范。",
+      "count": 3,
+      "docs": [
+        "guides/claude-cowork-product-guide.md",
+        "webinars/claude-code-best-practices-lightspeed.md",
+        "webinars/claude-code-live.md"
+      ],
+      "aliases": [
+        "最佳实践"
+      ]
+    },
+    {
+      "id": "上下文",
+      "zh": "上下文",
+      "en": "Context",
+      "cat": "上下文工程",
+      "kind": "technique",
+      "def": "提供给模型的提示、文件与工具信息等背景依据。",
+      "count": 3,
+      "docs": [
+        "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "articles/claude-model-and-effort-level-in-claude-code.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md"
+      ],
+      "aliases": [
+        "上下文",
+        "context",
+        "Context"
+      ]
+    },
+    {
+      "id": "扩展思考",
+      "zh": "扩展思考",
+      "en": "Extended Thinking",
+      "cat": "模型与能力",
+      "kind": "technique",
+      "def": "模型在回答前执行额外结构化推理的能力。",
+      "count": 2,
+      "docs": [
+        "articles/best-practices-for-prompt-engineering.md",
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md"
+      ],
+      "aliases": [
+        "扩展思考"
+      ]
+    },
+    {
+      "id": "令牌效率",
+      "zh": "令牌效率",
+      "en": "Token Efficiency",
+      "cat": "成本与性能",
+      "kind": "metric",
+      "def": "以更少令牌完成同等工作的能力。",
+      "count": 2,
+      "docs": [
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/working-at-the-frontier-cursor.md"
+      ],
+      "aliases": [
+        "令牌效率"
+      ]
+    },
+    {
+      "id": "爬山优化",
+      "zh": "爬山优化",
+      "en": "Hill Climbing",
+      "cat": "成本与性能",
+      "kind": "technique",
+      "def": "围绕单一可量化指标持续迭代优化的方法。",
+      "count": 2,
+      "docs": [
+        "articles/automating-eval-design-and-hillclimbing.md",
+        "articles/how-we-made-claude-ai-faster.md"
+      ],
+      "aliases": [
+        "爬山优化",
+        "hillclimbing",
+        "hill climbing"
+      ]
+    },
+    {
+      "id": "评分器",
+      "zh": "评分器",
+      "en": "Grader",
+      "cat": "评估与验证",
+      "kind": "technique",
+      "def": "对智能体表现某方面给出分数或判定的组件。",
+      "count": 2,
+      "docs": [
+        "articles/automating-eval-design-and-hillclimbing.md",
+        "articles/demystifying-evals-for-ai-agents.md"
+      ],
+      "aliases": [
+        "评分器"
+      ]
+    },
+    {
+      "id": "分类器",
+      "zh": "分类器",
+      "en": "Classifier",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "自动判断智能体动作是否具有潜在危害的模型组件。",
+      "count": 2,
+      "docs": [
+        "articles/auto-mode-in-production.md",
+        "articles/working-with-claude-fable-5-in-claude-cowork.md"
+      ],
+      "aliases": [
+        "分类器",
+        "classifier",
+        "Classifiers"
+      ]
+    },
+    {
+      "id": "审计追踪",
+      "zh": "审计追踪",
+      "en": "Audit Trail",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "记录智能体所有操作与决策来源的完整日志。",
+      "count": 2,
+      "docs": [
+        "articles/agent-identity-access-model.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md"
+      ],
+      "aliases": [
+        "审计追踪"
+      ]
+    },
+    {
+      "id": "监管合规",
+      "zh": "监管合规",
+      "en": "Regulatory Compliance",
+      "cat": "安全与治理",
+      "kind": "risk",
+      "def": "智能体需满足多监管机构的法规与审计要求。",
+      "count": 2,
+      "docs": [
+        "articles/building-ai-agents-in-financial-services.md",
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md"
+      ],
+      "aliases": [
+        "监管合规"
+      ]
+    },
+    {
+      "id": "成熟度模型",
+      "zh": "成熟度模型",
+      "en": "Maturity Model",
+      "cat": "企业落地与组织",
+      "kind": "org",
+      "def": "分级评估组织 AI 应用水平并指明升级路径的框架。",
+      "count": 2,
+      "docs": [
+        "articles/building-an-ai-native-revenue-organization.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md"
+      ],
+      "aliases": [
+        "成熟度模型"
+      ]
+    },
+    {
+      "id": "人机团队",
+      "zh": "人机团队",
+      "en": "Human-Agent Team",
+      "cat": "企业落地与组织",
+      "kind": "org",
+      "def": "人类与 AI 智能体在同一平台分工协作的团队模式。",
+      "count": 2,
+      "docs": [
+        "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+        "articles/how-healthcare-organizations-use-claude-tag.md"
+      ],
+      "aliases": [
+        "人机团队"
+      ]
+    },
+    {
+      "id": "会话",
+      "zh": "会话",
+      "en": "Session",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "记录消息与工具调用、可跨多次运行延续的对话实例。",
+      "count": 2,
+      "docs": [
+        "articles/building-always-on-agents.md",
+        "articles/building-with-claude-managed-agents.md"
+      ],
+      "aliases": [
+        "会话",
+        "session",
+        "Session"
+      ]
+    },
+    {
+      "id": "商务智能体",
+      "zh": "商务智能体",
+      "en": "Commerce Agent",
+      "cat": "行业与场景",
+      "kind": "technique",
+      "def": "在电商或旅行场景中辅助用户搜索、比较与购买的智能体。",
+      "count": 2,
+      "docs": [
+        "articles/claude-for-commerce-agents.md",
+        "webinars/building-claude-commerce-agents.md"
+      ],
+      "aliases": [
+        "商务智能体"
+      ]
+    },
+    {
+      "id": "智能体蓝图",
+      "zh": "智能体蓝图",
+      "en": "agent blueprint",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "含脚手架、模式与护栏的可复用智能体参考实现。",
+      "count": 2,
+      "docs": [
+        "articles/claude-for-commerce-agents.md",
+        "webinars/building-claude-commerce-agents.md"
+      ],
+      "aliases": [
+        "智能体蓝图"
+      ]
+    },
+    {
+      "id": "任务委派",
+      "zh": "任务委派",
+      "en": "task delegation",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "将子任务连同决策权分派给合适智能体执行。",
+      "count": 2,
+      "docs": [
+        "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md"
+      ],
+      "aliases": [
+        "任务委派",
+        "Delegation"
+      ]
+    },
+    {
+      "id": "自我改进循环",
+      "zh": "自我改进循环",
+      "en": "self-improvement loop",
+      "cat": "智能体架构",
+      "kind": "technique",
+      "def": "依据反馈修正指令并持续迭代的闭环机制。",
+      "count": 2,
+      "docs": [
+        "articles/claude-code-guide-for-startups.md",
+        "articles/how-warp-builds-self-improving-agents-on-claude.md"
+      ],
+      "aliases": [
+        "自我改进循环"
+      ]
+    },
+    {
+      "id": "计划模式",
+      "zh": "计划模式",
+      "en": "Plan Mode",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "只读探索代码库、先产出计划再执行的工作模式。",
+      "count": 2,
+      "docs": [
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "articles/the-ai-native-sdlc-playbook.md"
+      ],
+      "aliases": [
+        "计划模式",
+        "plan mode"
+      ]
+    },
+    {
+      "id": "合并队列",
+      "zh": "合并队列",
+      "en": "merge queue",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "合并前对主分支重新运行全部检查的机制。",
+      "count": 2,
+      "docs": [
+        "articles/redesigning-source-control.md",
+        "articles/solving-code-review-at-anthropic.md"
+      ],
+      "aliases": [
+        "合并队列"
+      ]
+    },
+    {
+      "id": "测试驱动开发",
+      "zh": "测试驱动开发",
+      "en": "test-driven development",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "先写测试定义成功标准再增量实现功能。",
+      "count": 2,
+      "docs": [
+        "articles/how-anthropic-teams-use-claude-code.md",
+        "articles/scaling-agentic-coding.md"
+      ],
+      "aliases": [
+        "测试驱动开发"
+      ]
+    },
+    {
+      "id": "调试",
+      "zh": "调试",
+      "en": "debugging",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "定位并修复软件缺陷与生产问题的过程。",
+      "count": 2,
+      "docs": [
+        "articles/fix-software-bugs-faster-with-claude.md",
+        "articles/how-anthropic-teams-use-claude-code.md"
+      ],
+      "aliases": [
+        "调试",
+        "Debugging"
+      ]
+    },
+    {
+      "id": "根因分析",
+      "zh": "根因分析",
+      "en": "root cause analysis",
+      "cat": "Claude Code 与编程",
+      "kind": "technique",
+      "def": "追溯问题根本原因而非仅修复表象的方法。",
+      "count": 2,
+      "docs": [
+        "articles/fix-software-bugs-faster-with-claude.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md"
+      ],
+      "aliases": [
+        "根因分析",
+        "Root Cause Analysis"
+      ]
+    },
+    {
+      "id": "Claude-Opus-5-5",
+      "zh": "Claude Opus 5.5",
+      "en": "Claude Opus 5.5",
+      "cat": "模型与能力",
+      "kind": "product",
+      "def": "面向复杂长程任务优化的高端Claude模型版本。",
+      "count": 2,
+      "docs": [
+        "articles/building-with-claude-sonnet-5-5.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "aliases": [
+        "Claude Opus 5.5"
+      ]
+    },
+    {
+      "id": "前沿模型",
+      "zh": "前沿模型",
+      "en": "frontier model",
+      "cat": "模型与能力",
+      "kind": "technique",
+      "def": "能力处于当前最先进水平、可承担复杂任务的大模型。",
+      "count": 2,
+      "docs": [
+        "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md"
+      ],
+      "aliases": [
+        "前沿模型"
+      ]
+    },
+    {
+      "id": "快速模式",
+      "zh": "快速模式",
+      "en": "fast mode",
+      "cat": "成本与性能",
+      "kind": "technique",
+      "def": "以溢价换取更高输出速度的API选项。",
+      "count": 2,
+      "docs": [
+        "articles/getting-the-most-out-of-opus-5-5.md",
+        "articles/which-claude-model-should-you-build-with.md"
+      ],
+      "aliases": [
+        "快速模式"
+      ]
+    },
+    {
+      "id": "延迟",
+      "zh": "延迟",
+      "en": "latency",
+      "cat": "成本与性能",
+      "kind": "metric",
+      "def": "任务从开始到完成所需的时间开销。",
+      "count": 2,
+      "docs": [
+        "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "webinars/building-claude-commerce-agents.md"
+      ],
+      "aliases": [
+        "延迟"
+      ]
+    },
+    {
+      "id": "缓存命中率",
+      "zh": "缓存命中率",
+      "en": "cache hit rate",
+      "cat": "成本与性能",
+      "kind": "metric",
+      "def": "请求中命中缓存部分的比例，影响成本与延迟。",
+      "count": 2,
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md"
+      ],
+      "aliases": [
+        "缓存命中率"
+      ]
+    },
+    {
+      "id": "事件响应",
+      "zh": "事件响应",
+      "en": "incident response",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "检测、响应和恢复安全事件的过程。",
+      "count": 2,
+      "docs": [
+        "articles/how-healthcare-organizations-use-claude-tag.md",
+        "articles/preparing-your-security-program-for-ai-accelerated-offense.md"
+      ],
+      "aliases": [
+        "事件响应"
+      ]
+    },
+    {
+      "id": "事故分诊",
+      "zh": "事故分诊",
+      "en": "incident triage",
+      "cat": "安全与治理",
+      "kind": "technique",
+      "def": "对故障事件快速分类并定位责任环节。",
+      "count": 2,
+      "docs": [
+        "articles/fix-software-bugs-faster-with-claude.md",
+        "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md"
+      ],
+      "aliases": [
+        "事故分诊",
+        "Incident Triage"
+      ]
+    },
+    {
+      "id": "误报",
+      "zh": "误报",
+      "en": "false positive",
+      "cat": "安全与治理",
+      "kind": "risk",
+      "def": "被标记为威胁但实际无效的安全发现。",
+      "count": 2,
+      "docs": [
+        "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+        "articles/using-llms-to-secure-source-code.md"
+      ],
+      "aliases": [
+        "误报"
+      ]
+    },
+    {
+      "id": "受保护健康信息",
+      "zh": "受保护健康信息",
+      "en": "PHI",
+      "cat": "安全与治理",
+      "kind": "risk",
+      "def": "HIPAA监管下需严格保护的患者健康数据。",
+      "count": 2,
+      "docs": [
+        "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "articles/how-healthcare-organizations-use-claude-tag.md"
+      ],
+      "aliases": [
+        "受保护健康信息"
+      ]
+    },
+    {
+      "id": "生产部署",
+      "zh": "生产部署",
+      "en": "production deployment",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "将智能体安全投入实际业务环境运行的过程。",
+      "count": 2,
+      "docs": [
+        "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+        "webinars/claude-code-for-financial-services-boris-cherny.md"
+      ],
+      "aliases": [
+        "生产部署"
+      ]
+    },
+    {
+      "id": "定时部署",
+      "zh": "定时部署",
+      "en": "scheduled deployment",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "按设定时区与频率自动运行智能体的部署方式。",
+      "count": 2,
+      "docs": [
+        "articles/building-effective-agent-automations.md",
+        "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md"
+      ],
+      "aliases": [
+        "定时部署"
+      ]
+    },
+    {
+      "id": "研究预览",
+      "zh": "研究预览",
+      "en": "Research Preview",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "面向付费用户开放、功能尚在迭代的早期发布形态。",
+      "count": 2,
+      "docs": [
+        "articles/cowork-plugins-finance.md",
+        "articles/cowork-plugins.md"
+      ],
+      "aliases": [
+        "研究预览"
+      ]
+    },
+    {
+      "id": "现场演示",
+      "zh": "现场演示",
+      "en": "live demos",
+      "cat": "企业落地与组织",
+      "kind": "technique",
+      "def": "在活动中实时展示产品完成真实任务的过程。",
+      "count": 2,
+      "docs": [
+        "webinars/claude-code-live.md",
+        "webinars/claude-code-service-delivery.md"
+      ],
+      "aliases": [
+        "现场演示",
+        "live demonstration"
+      ]
+    },
+    {
+      "id": "业务拓展代表",
+      "zh": "业务拓展代表",
+      "en": "business development representative",
+      "cat": "企业落地与组织",
+      "kind": "role",
+      "def": "负责线索筛选与商机挖掘的一线销售角色。",
+      "count": 2,
+      "docs": [
+        "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md"
+      ],
+      "aliases": [
+        "业务拓展代表",
+        "Business Development Representative"
+      ]
+    },
+    {
+      "id": "对话式-AI",
+      "zh": "对话式 AI",
+      "en": "conversational AI",
+      "cat": "行业与场景",
+      "kind": "technique",
+      "def": "以问答交互为主、不直接产出交付物的AI形态。",
+      "count": 2,
+      "docs": [
+        "articles/the-claude-cowork-product-guide.md",
+        "guides/claude-cowork-product-guide.md"
+      ],
+      "aliases": [
+        "对话式 AI"
+      ]
+    },
+    {
+      "id": "自助式数据分析",
+      "zh": "自助式数据分析",
+      "en": "self-service data analytics",
+      "cat": "行业与场景",
+      "kind": "technique",
+      "def": "非技术用户无需数据团队介入即可自行获取数据洞察。",
+      "count": 2,
+      "docs": [
+        "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md"
+      ],
+      "aliases": [
+        "自助式数据分析"
+      ]
+    },
+    {
+      "id": "金融服务",
+      "zh": "金融服务",
+      "en": "financial services",
+      "cat": "行业与场景",
+      "kind": "org",
+      "def": "银行、保险、资管等受监管行业的业务领域。",
+      "count": 2,
+      "docs": [
+        "webinars/claude-code-financial-services.md",
+        "webinars/claude-code-for-financial-services-boris-cherny.md"
+      ],
+      "aliases": [
+        "金融服务",
+        "Financial Services"
+      ]
+    },
+    {
+      "id": "遗留系统迁移",
+      "zh": "遗留系统迁移",
+      "en": "legacy system migration",
+      "cat": "行业与场景",
+      "kind": "technique",
+      "def": "把老旧系统及其业务逻辑迁移到新平台的过程。",
+      "count": 2,
+      "docs": [
+        "webinars/claude-code-financial-services.md",
+        "webinars/deloitte-code-modernization.md"
+      ],
+      "aliases": [
+        "遗留系统迁移",
+        "Legacy System Migration"
+      ]
+    },
+    {
+      "id": "商家智能体",
+      "zh": "商家智能体",
+      "en": "merchant agent",
+      "cat": "行业与场景",
+      "kind": "product",
+      "def": "面向店铺运营者分析销售、库存并建议促销的智能体。",
+      "count": 2,
+      "docs": [
+        "articles/claude-for-commerce-agents.md",
+        "webinars/building-claude-commerce-agents.md"
+      ],
+      "aliases": [
+        "商家智能体"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "Claude-Code",
+      "to": "智能体编程",
+      "rel": "属于",
+      "w": 5,
+      "docs": 5
+    },
+    {
+      "from": "技能",
+      "to": "渐进式披露",
+      "rel": "依赖",
+      "w": 4,
+      "docs": 4
+    },
+    {
+      "from": "技能",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 4,
+      "docs": 4
+    },
+    {
+      "from": "Claude-Code",
+      "to": "智能体编程",
+      "rel": "启用",
+      "w": 4,
+      "docs": 4
+    },
+    {
+      "from": "Claude-Code",
+      "to": "智能体",
+      "rel": "属于",
+      "w": 4,
+      "docs": 4
+    },
+    {
+      "from": "Claude-平台",
+      "to": "智能体",
+      "rel": "用于",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "技能创建器",
+      "to": "技能",
+      "rel": "用于",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "Claude-Code",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "技能",
+      "rel": "依赖",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "定时任务",
+      "rel": "启用",
+      "w": 3,
+      "docs": 3
+    },
+    {
+      "from": "子代理",
+      "to": "智能体编程",
+      "rel": "属于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "智能体",
+      "to": "技能",
+      "rel": "依赖",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Code",
+      "to": "Claude-平台",
+      "rel": "属于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "MCP-服务器",
+      "to": "模型上下文协议",
+      "rel": "属于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "技能",
+      "to": "MCP-服务器",
+      "rel": "依赖",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "渐进式披露",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Agent-SDK",
+      "to": "智能体循环",
+      "rel": "启用",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "子代理",
+      "to": "上下文工程",
+      "rel": "解决",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "现场演示",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "提示缓存",
+      "to": "令牌成本",
+      "rel": "解决",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "对话式-AI",
+      "rel": "替代",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "努力等级",
+      "to": "验证",
+      "rel": "启用",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "努力等级",
+      "to": "单任务成本",
+      "rel": "衡量",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "技能",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "插件",
+      "rel": "启用",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "连接器",
+      "rel": "依赖",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "插件",
+      "rel": "依赖",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "渐进式披露",
+      "to": "技能",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "MCP-服务器",
+      "rel": "依赖",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "快速模式",
+      "to": "Claude-Code",
+      "rel": "属于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "单任务成本",
+      "to": "Claude-Fable-5",
+      "rel": "衡量",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Code",
+      "to": "长时运行智能体",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "技能",
+      "to": "渐进式披露",
+      "rel": "启用",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "渐进式披露",
+      "to": "上下文工程",
+      "rel": "属于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Code",
+      "to": "智能体编程",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "CLAUDE-md",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Code",
+      "to": "努力等级",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "依赖",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-平台",
+      "to": "企业AI转型",
+      "rel": "用于",
+      "w": 2,
+      "docs": 2
+    },
+    {
+      "from": "Claude-Code",
+      "to": "Claude-Fable-5",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "顾问策略",
+      "to": "模型路由",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "动态工作流",
+      "to": "子代理",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "动态工作流",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "Claude-平台",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "工作流自动化",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "动态工作流",
+      "to": "子代理",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "自动模式",
+      "to": "分类器",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "自动模式",
+      "to": "提示注入",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "分类器",
+      "to": "护栏",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "爬山优化",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "Claude-Code",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示工程",
+      "to": "上下文工程",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示工程",
+      "to": "幻觉",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "自适应思考",
+      "to": "扩展思考",
+      "rel": "替代",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "自动模式",
+      "to": "智能体编程",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "令牌效率",
+      "to": "努力等级",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "长时运行智能体",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体循环",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文工程",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "人在回路",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "企业AI转型",
+      "to": "智能体",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "智能体",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "人在回路",
+      "to": "企业AI转型",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "监管合规",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "可观测性",
+      "to": "监管合规",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "监管合规",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "审计追踪",
+      "to": "监管合规",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "智能体",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "可观测性",
+      "to": "审计追踪",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "记忆",
+      "to": "会话",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "连接器",
+      "to": "Claude-Cowork",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-平台",
+      "to": "商务智能体",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "商务智能体",
+      "to": "商家智能体",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "延迟",
+      "to": "商务智能体",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Agent-SDK",
+      "to": "子代理",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "人在回路",
+      "to": "智能体编程",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "护栏",
+      "to": "提示注入",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "验证",
+      "to": "智能体循环",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "验证",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "验证",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "智能体工作流",
+      "rel": "替代",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "评估",
+      "to": "智能体",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "生产部署",
+      "to": "评估",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-托管智能体",
+      "to": "智能体框架",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-托管智能体",
+      "to": "会话",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-托管智能体",
+      "to": "沙箱",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-托管智能体",
+      "to": "可观测性",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Agent-SDK",
+      "to": "智能体框架",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示工程",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "评估框架",
+      "to": "上下文工程",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "智能体",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "提示注入",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "子代理",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "钩子",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "遗留系统迁移",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "生产部署",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "内部试用",
+      "to": "自我改进循环",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型路由",
+      "to": "令牌成本",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文工程",
+      "to": "令牌成本",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "上下文工程",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "CLAUDE-md",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "MCP-服务器",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "令牌成本",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "Claude-Cowork",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "最佳实践",
+      "to": "Claude-Cowork",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "插件",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "商务智能体",
+      "to": "智能体蓝图",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "商家智能体",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "商家智能体",
+      "to": "人在回路",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Agent-SDK",
+      "to": "Claude-Cowork",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型路由",
+      "to": "上下文",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "模型路由",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "努力等级",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "顾问策略",
+      "to": "单任务成本",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Opus-5-5",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文工程",
+      "to": "缓存命中率",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "上下文窗口",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "提示缓存",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Opus-5-5",
+      "to": "令牌成本",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "缓存命中率",
+      "to": "令牌成本",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "连接器",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体工作流",
+      "to": "智能体",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "动态工作流",
+      "to": "智能体工作流",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体工作流",
+      "to": "延迟",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体工作流",
+      "to": "令牌成本",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "技能",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "连接器",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "子代理",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件市场",
+      "to": "插件",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "研究预览",
+      "to": "Claude-Cowork",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体",
+      "to": "代码现代化",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "代码现代化",
+      "to": "遗留系统迁移",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "评估框架",
+      "to": "智能体框架",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-平台",
+      "to": "Claude-托管智能体",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-平台",
+      "to": "子代理",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "多智能体系统",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-平台",
+      "to": "多智能体系统",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "MCP-服务器",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "调试",
+      "to": "根因分析",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "调试",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "事故分诊",
+      "to": "Claude-Code",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "验证",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "令牌成本",
+      "to": "智能体循环",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "Claude-Code",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体框架",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示缓存",
+      "to": "智能体框架",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "记忆",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "调试",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "测试驱动开发",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "CLAUDE-md",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "智能体编程",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude-Cowork",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示工程",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-平台",
+      "to": "工作流自动化",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "业务拓展代表",
+      "to": "技能",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "工具搜索",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude-平台",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "Claude-托管智能体",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "人机团队",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "事件响应",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "Claude-Fable-5",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "评估",
+      "to": "长时运行智能体",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示注入",
+      "to": "长时运行智能体",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "钩子",
+      "to": "Claude-Code",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体工作流",
+      "to": "动态工作流",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "人在回路",
+      "to": "自我改进循环",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "功能开关",
+      "to": "护栏",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Tag",
+      "to": "爬山优化",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "上下文工程",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "技术债务",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "Claude-Code",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "插件市场",
+      "to": "技能",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "计划模式",
+      "to": "提示缓存",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "缓存命中率",
+      "to": "提示缓存",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体框架",
+      "to": "上下文工程",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "沙箱",
+      "to": "提示注入",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "沙箱",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "CLAUDE-md",
+      "to": "上下文窗口",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "上下文窗口",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "提示缓存",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "智能体",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文工程",
+      "to": "Claude-Code",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文工程",
+      "to": "技术债务",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "根因分析",
+      "to": "技术债务",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "提示工程",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-平台",
+      "to": "提示缓存",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "代码审查",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "内部试用",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示工程",
+      "to": "智能体编程",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "技能",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体工作流",
+      "to": "技能",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体工作流",
+      "to": "子代理",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "合并队列",
+      "to": "功能开关",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "CLAUDE-md",
+      "to": "验证",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "钩子",
+      "to": "上下文压缩",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "上下文工程",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "子代理",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "钩子",
+      "to": "子代理",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "智能体",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "评估",
+      "to": "技能",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "子代理",
+      "rel": "替代",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "子代理",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "长时运行智能体",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "智能体编程",
+      "to": "代码现代化",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "投资回报率",
+      "to": "代码现代化",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "技能",
+      "to": "智能体工作流",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "企业AI转型",
+      "to": "AI治理",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Code",
+      "to": "技术债务",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文工程",
+      "to": "渐进式披露",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "上下文工程",
+      "to": "上下文窗口",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "沙箱",
+      "to": "验证",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "验证",
+      "to": "误报",
+      "rel": "解决",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "子代理",
+      "to": "Claude-Code",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "连接器",
+      "to": "MCP-服务器",
+      "rel": "属于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "提示缓存",
+      "to": "单任务成本",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Fable-5",
+      "to": "令牌效率",
+      "rel": "衡量",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "Claude-Fable-5",
+      "rel": "启用",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Cowork",
+      "to": "子代理",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Fable-5",
+      "to": "上下文",
+      "rel": "依赖",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "Claude-Fable-5",
+      "to": "技能",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "任务委派",
+      "to": "Claude-Fable-5",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "分类器",
+      "to": "Claude-Fable-5",
+      "rel": "风险",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "连接器",
+      "to": "上下文",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "智能体",
+      "rel": "用于",
+      "w": 1,
+      "docs": 1
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+  "issues": [
+    {
+      "zh": "从而能够更专注于直接的 patient care。",
+      "fix": "从而能够更专注于直接的患者护理。",
+      "type": "误译",
+      "note": "残留英文未译"
+    },
+    {
+      "zh": "**覆盖能力**，允许临床医生拒绝 AI 建议",
+      "fix": "**覆盖权限**，允许临床医生拒绝 AI 建议",
+      "type": "误译",
+      "note": "override 指覆盖权限，非覆盖能力"
+    },
+    {
+      "zh": "无需重大 disruption 即可集成到现有工作流中",
+      "fix": "无需重大中断即可集成到现有工作流中",
+      "type": "误译",
+      "note": "残留英文 disruption 未译"
+    },
+    {
+      "zh": "临床文档研究只需数小时即可完成，而非数周",
+      "fix": "临床文档研究在数小时内即可交付，而非数周",
+      "type": "误译",
+      "note": "delivered 译为完成，语义偏差"
+    },
+    {
+      "zh": "将年度研究时间减少了 16,000 小时",
+      "fix": "每年节省 16,000 小时研究时间",
+      "type": "误译",
+      "note": "reduced by 应为节省而非减少"
+    },
+    {
+      "zh": "数据综合",
+      "fix": "数据整合",
+      "type": "术语不一致",
+      "note": "synthesis 宜译整合，与后文一致"
+    },
+    {
+      "zh": "**升级路径**，用于复杂或模糊的病例",
+      "fix": "**升级通道**，用于复杂或模糊的病例",
+      "type": "术语不一致",
+      "note": "escalation pathways 前后译法不一"
+    },
+    {
+      "zh": "**升级协议**，基于清晰的标准自动将复杂病例转交给合适的临床专家",
+      "fix": "**升级流程**，基于清晰的标准自动将复杂病例转交给合适的临床专家",
+      "type": "术语不一致",
+      "note": "escalation protocols 与升级路径不一致"
+    },
+    {
+      "zh": "**故障安全默认值**，优先考虑患者安全而非运营效率",
+      "fix": "**故障安全默认设置**，优先考虑患者安全而非运营效率",
+      "type": "语句不通",
+      "note": "默认值表述生硬，宜为默认设置"
+    },
+    {
+      "zh": "访问这些系统，更不用说理解其中一种乃至全部数据类型的专业知识，往最坏了说是令人望而却步，往最好了说也是耗时费力。",
+      "fix": "获取这些系统的访问权限，更不用说理解其中一种乃至全部数据类型的专业知识，往最坏了说是令人望而却步，往最好了说也是耗时费力。",
+      "type": "语句不通",
+      "note": "主语缺失，句子读不通"
+    },
+    {
+      "zh": "在 Pfizer，每年节省 [16,000 小时](https://aws.amazon.com/solutions/case-studies/pfizer-PACT-case-study/)的研究时间",
+      "fix": "在 Pfizer，每年节省 [16,000 小时](https://aws.amazon.com/solutions/case-studies/pfizer-PACT-case-study/) 的研究时间",
+      "type": "语句不通",
+      "note": "链接与文字间缺空格，影响阅读"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5832,
+    "completion_tokens": 588,
+    "total_tokens": 6420,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5704
+  }
+}

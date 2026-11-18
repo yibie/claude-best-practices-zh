@@ -1,0 +1,21 @@
+{
+  "rel": "articles/multi-agent-coordination-patterns.md",
+  "issues": [
+    {
+      "zh": "共享资源会加剧这两个问题。",
+      "fix": "共享资源会加剧这两个问题。",
+      "type": "语句不通",
+      "note": ""
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 7372,
+    "completion_tokens": 62,
+    "total_tokens": 7434,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 7244
+  }
+}

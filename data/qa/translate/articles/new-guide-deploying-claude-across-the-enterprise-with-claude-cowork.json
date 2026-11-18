@@ -1,0 +1,21 @@
+{
+  "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+  "issues": [
+    {
+      "zh": "从内部推动者团队走向全组织部署",
+      "fix": "从冠军团队走向全组织部署",
+      "type": "误译",
+      "note": "champion teams 指标杆团队，非内部推动者"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1554,
+    "completion_tokens": 48,
+    "total_tokens": 1602,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1426
+  }
+}

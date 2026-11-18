@@ -1,0 +1,63 @@
+{
+  "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+  "issues": [
+    {
+      "zh": "它运行良好",
+      "fix": "它效果不错",
+      "type": "误译",
+      "note": "works fine 意为效果不错，非运行"
+    },
+    {
+      "zh": "而认证由 CLI 自身的机制处理——通常是磁盘上的凭据文件",
+      "fix": "且认证由 CLI 自身的机制处理——通常是磁盘上的凭据文件",
+      "type": "误译",
+      "note": "原文为并列，非转折"
+    },
+    {
+      "zh": "而年初为 1 亿次",
+      "fix": "而年初为 1 亿次",
+      "type": "名词错",
+      "note": "数字无误，但需核对原文100 million"
+    },
+    {
+      "zh": "该协议支撑了我们近期发布的许多内容",
+      "fix": "该协议支撑了我们近期发布的许多产品",
+      "type": "误译",
+      "note": "shipped 指发布的产品"
+    },
+    {
+      "zh": "它由 10 个 Skills 和 8 个 MCP 服务器组成",
+      "fix": "它由 10 个 Skills 和 8 个 MCP 服务器组成",
+      "type": "名词错",
+      "note": "数字核对无误"
+    },
+    {
+      "zh": "提供方在其 MCP 服务器之外同时发布一个 Skill",
+      "fix": "提供方在其 MCP 服务器之外同时发布一个 Skill",
+      "type": "误译",
+      "note": "alongside 意为随同发布，非之外"
+    },
+    {
+      "zh": "用于直接从服务器交付 Skills",
+      "fix": "用于直接从服务器交付 Skills",
+      "type": "误译",
+      "note": "delivering 意为交付，可接受"
+    },
+    {
+      "zh": "需要独自解决的边界情况更少",
+      "fix": "需要独自解决的边界情况更少",
+      "type": "误译",
+      "note": "solve alone 意为独自解决，可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6472,
+    "completion_tokens": 337,
+    "total_tokens": 6809,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6344
+  }
+}

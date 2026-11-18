@@ -1,0 +1,21 @@
+{
+  "rel": "articles/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate.md",
+  "issues": [
+    {
+      "zh": "两个月、五百万次智能体交互之后",
+      "fix": "两个月、五百万次智能体交互之后",
+      "type": "名词错",
+      "note": "占位"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4774,
+    "completion_tokens": 65,
+    "total_tokens": 4839,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4646
+  }
+}

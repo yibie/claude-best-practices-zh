@@ -1,0 +1,21 @@
+{
+  "rel": "articles/skills-explained.md",
+  "issues": [
+    {
+      "zh": "团队协作：** 共享知识和对话历史（在 Team 和 Enterprise 套餐中）",
+      "fix": "团队协作：** 共享知识和对话历史（在 Team 和 Enterprise 套餐中）",
+      "type": "漏译",
+      "note": "占位"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9482,
+    "completion_tokens": 75,
+    "total_tokens": 9557,
+    "prompt_tokens_details": {
+      "cached_tokens": 9344
+    },
+    "prompt_cache_hit_tokens": 9344,
+    "prompt_cache_miss_tokens": 138
+  }
+}

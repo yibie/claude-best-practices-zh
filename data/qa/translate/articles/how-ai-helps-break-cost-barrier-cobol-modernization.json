@@ -1,0 +1,39 @@
+{
+  "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+  "issues": [
+    {
+      "zh": "在模块之间造成耦合的数据结构、文件操作、影响运行时行为的初始化序列",
+      "fix": "在模块之间造成耦合的数据结构、在模块之间造成耦合的文件操作、影响运行时行为的初始化序列",
+      "type": "漏译",
+      "note": "原文列举三项，译文首项缺修饰语"
+    },
+    {
+      "zh": "这些流水线无人记得构建过，但所有人都依赖它",
+      "fix": "这些流水线无人记得构建过，但所有人都依赖它们",
+      "type": "语句不通",
+      "note": "复数指代不一致，应为“它们”"
+    },
+    {
+      "zh": "孤立组件则浮现为早期独立现代化的候选对象",
+      "fix": "孤立组件则显现为早期独立现代化的候选对象",
+      "type": "语句不通",
+      "note": "“浮现为”搭配生硬"
+    },
+    {
+      "zh": "AI 通过自动化过去需要大批顾问才能完成的工作，让经济账变得可行",
+      "fix": "AI 通过自动化过去需要大批顾问才能完成的工作，让经济上变得可行",
+      "type": "语句不通",
+      "note": "“经济账变得可行”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3582,
+    "completion_tokens": 214,
+    "total_tokens": 3796,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3454
+  }
+}

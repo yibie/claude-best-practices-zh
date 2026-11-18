@@ -1,0 +1,51 @@
+{
+  "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+  "issues": [
+    {
+      "zh": "有些通过他们已经在运行平台使用",
+      "fix": "有些通过他们已经在运行的平台使用",
+      "type": "语句不通",
+      "note": "缺结构助词“的”"
+    },
+    {
+      "zh": "将漏洞管理一路左移",
+      "fix": "将漏洞管理一路前移",
+      "type": "误译",
+      "note": "left shift 指左移，但中文宜译前移"
+    },
+    {
+      "zh": "这一差距有助于决定是攻击者还是防御者赢得窗口期",
+      "fix": "这一差距决定是攻击者还是防御者赢得窗口期",
+      "type": "误译",
+      "note": "helps determine 非“有助于”"
+    },
+    {
+      "zh": "TrendAI 首席平台与业务官、负责人 Rachel Jin",
+      "fix": "TrendAI 首席平台与业务官 Rachel Jin",
+      "type": "语句不通",
+      "note": "“、负责人”冗余不通"
+    },
+    {
+      "zh": "智能体式 AI 用例的新世界给许多团队带来了新挑战",
+      "fix": "智能体式 AI 用例的新格局给许多团队带来了新挑战",
+      "type": "语句不通",
+      "note": "“新世界”生硬"
+    },
+    {
+      "zh": "有些通过他们已经在运行平台使用",
+      "fix": "有些通过他们已经在运行的平台使用",
+      "type": "语句不通",
+      "note": "重复项，忽略"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3985,
+    "completion_tokens": 253,
+    "total_tokens": 4238,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3857
+  }
+}

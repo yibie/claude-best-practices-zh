@@ -1,0 +1,51 @@
+{
+  "rel": "articles/how-anthropic-teams-use-claude-code.md",
+  "issues": [
+    {
+      "zh": "让 Claude 为自己构建 Vim 键位绑定",
+      "fix": "让 Claude 为 Claude Code 自身构建 Vim 键位绑定",
+      "type": "误译",
+      "note": "原文 for itself 指为工具自身"
+    },
+    {
+      "zh": "解释特定模型的函数",
+      "fix": "解释模型特有的函数",
+      "type": "误译",
+      "note": "model-specific 指模型特有，非特定模型"
+    },
+    {
+      "zh": "识别画框",
+      "fix": "识别框架",
+      "type": "误译",
+      "note": "Figma 中 frame 通常译作框架"
+    },
+    {
+      "zh": "在沙箱环境中进行一次提示后",
+      "fix": "在沙箱环境中进行一次提示后",
+      "type": "语句不通",
+      "note": "原文 one-shot prompting 指一次性提示，译文可接受，但“进行一次提示后”略生硬；不报"
+    },
+    {
+      "zh": "他们给 Claude 抽象的问题",
+      "fix": "他们给 Claude 提出抽象的问题",
+      "type": "语句不通",
+      "note": "缺谓语，读不通"
+    },
+    {
+      "zh": "让每个需要的人都能获得专业知识",
+      "fix": "让每个需要的人都能获取这些专业知识",
+      "type": "语句不通",
+      "note": "“获得专业知识”搭配生硬，但可接受；不报"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3351,
+    "completion_tokens": 248,
+    "total_tokens": 3599,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3223
+  }
+}

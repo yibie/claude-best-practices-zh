@@ -1,0 +1,27 @@
+{
+  "rel": "articles/building-an-ai-native-revenue-organization.md",
+  "issues": [
+    {
+      "zh": "这既是效率提升，也是质量提升",
+      "fix": "这既是质量提升，也是效率提升",
+      "type": "误译",
+      "note": "原文先质量后效率，顺序译反"
+    },
+    {
+      "zh": "准确率从 18% 提升到 97%",
+      "fix": "准确率从 18% 提升到 97%",
+      "type": "名词错",
+      "note": "数字与原文一致，无误"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1729,
+    "completion_tokens": 90,
+    "total_tokens": 1819,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1601
+  }
+}

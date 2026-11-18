@@ -1,0 +1,45 @@
+{
+  "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+  "issues": [
+    {
+      "zh": "用于召回（部分以 Claude 为基础，部分为 Kepler 专有）",
+      "fix": "用于检索召回（部分以 Claude 为基础，部分为 Kepler 专有）",
+      "type": "误译",
+      "note": "recall指检索召回，非模型召回"
+    },
+    {
+      "zh": "在将财务报表标签映射到标准化分类代码等任务上达到 94% 的准确率",
+      "fix": "在将财务报表标签映射到标准化分类代码等任务上达到 94% 的准确率",
+      "type": "名词错",
+      "note": "原文94%为专用模型得分，非Claude"
+    },
+    {
+      "zh": "他们开发了一套专有本体，将金融概念映射到精确定义和公式，可按用例定制。",
+      "fix": "他们开发了一套专有本体，将金融概念映射到精确定义和公式，可按每次使用定制。",
+      "type": "误译",
+      "note": "per-use指按每次使用，非按用例"
+    },
+    {
+      "zh": "在不到三个月内索引了 2600 万+ 份 SEC 文件、5000 万+ 份公开文档、100 万+ 份私有文档，以及覆盖 27 个全球市场的 14,000+ 家公司。",
+      "fix": "在不到三个月内索引了 2600 万+ 份 SEC 文件、5000 万+ 份公开文档、100 万+ 份私有文档，以及覆盖 27 个全球市场的 14,000+ 家公司。",
+      "type": "名词错",
+      "note": "原文为50M+公开文档，译文5000万+正确"
+    },
+    {
+      "zh": "Claude 会停下来，请分析师做出决定。",
+      "fix": "Claude 会停下来，请分析师做出决定。",
+      "type": "误译",
+      "note": "原文stopped and asked，译文准确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4329,
+    "completion_tokens": 378,
+    "total_tokens": 4707,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4201
+  }
+}

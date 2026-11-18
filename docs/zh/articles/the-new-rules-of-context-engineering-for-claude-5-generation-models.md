@@ -17,7 +17,7 @@ fetched_at: "2026-11-18"
 
 与提示词不同，上下文会普遍地跨许多请求使用，因此它无法那么具体。你如何为 Claude 构建这些通用的提示词和指导，尤其是在你不知道用户的提示词可能是什么的情况下？
 
-随着 Claude 自身能力的演进，这可能出奇地困难。最近，我们注意到在为最新一代 Claude 模型编写提示词的方式上出现了巨大跃升。对于 Claude Opus 5 和 Claude Fable 5 等模型，我们删除了 [Claude Code](https://claude.com/product/claude-code) 系统提示词中超过 80% 的内容，而我们的编码评估没有出现可测量的损失。
+随着 Claude 自身能力的演进，这可能出奇地困难。最近，我们注意到最新一代 Claude 模型对提示词的响应方式出现了巨大跃升。对于 Claude Opus 5 和 Claude Fable 5 等模型，我们删除了 [Claude Code](https://claude.com/product/claude-code) 系统提示词中超过 80% 的内容，而我们的编码评估没有出现可测量的损失。
 
 以下是我们学到的关于为这类新模型编写提示词的经验，以及你如何利用它来更新你的上下文工程。我们已将这些最佳实践放入 `claude doctor`；在 Claude Code 中使用 `/doctor` 命令来调整你的 skills 和 CLAUDE.md 文件的规模。
 
@@ -49,7 +49,7 @@ fetched_at: "2026-11-18"
 
 _在代码中：默认不写注释。永远不要写多段 docstring 或多行注释块——最多一行短注释。除非用户要求，不要创建规划、决策或分析文档——从对话上下文中工作，而不是中间文件。_
 
-但对于某一部分提示词，这条指导会是错误的。就文档而言，用户可能有自己的偏好，或者非常复杂代码的特定部分可能需要多行注释块。
+但对于某一类提示词，这条指导会是错误的。就文档而言，用户可能有自己的偏好，或者非常复杂代码的特定部分可能需要多行注释块。
 
 不过，如果没有这些针对旧模型的护栏，Claude 写的注释在许多情况下会不正确，我们不得不接受这种权衡。但更新的模型有更好的判断力，无需明确的规则就能很好地处理这些决策。
 
@@ -77,7 +77,7 @@ _在代码中：默认不写注释。永远不要写多段 docstring 或多行�
 
 但渐进式披露不仅仅用于 skills，我们也将其用于工具。我们的一些工具是“延迟加载”的，这意味着智能体必须先使用 ToolSearch 搜索它们的完整定义，然后才能使用它们。这使我们能够拥有更多工具（例如我们的 Task 工具），它们在需要之前不占用上下文。
 
-同样的方法可以应用于你自己的 CLAUDE.md 和 Skill.md 文件。一个常见的迷思是，你想把这些文件做成一个中央仓库，收录你_可能_遇到的每一个已知实践，因为否则 Claude 就找不到它。相反，[考虑拥有一棵可以在正确时间加载的文件树](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code)。
+同样的方法可以应用于你自己的 CLAUDE.md 和 Skill.md 文件。一个常见的迷思是，你想把这些文件做成一个中央仓库，收录你_可能_遇到的每一个已知实践，以为否则 Claude 就找不到它。相反，[考虑拥有一棵可以在正确时间加载的文件树](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code)。
 
 ### 过去：重复自己
 
@@ -103,7 +103,7 @@ _在代码中：默认不写注释。永远不要写多段 docstring 或多行�
 
 你也可以以代码的形式给 Claude 提供参考。规格说明也可以是一个详细的测试套件，或者另一个代码库中 Claude 可能移植的函数。
 
-评分标准（rubrics）是另一种形式的参考。评分标准允许 Claude 通过使用[动态工作流](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code)并启动带有这些评分标准的验证器智能体，来尝试并验证你在特定领域的品味（例如，好的 API 设计是什么样的）。
+评分细则（rubrics）是另一种形式的参考。评分细则允许 Claude 通过使用[动态工作流](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code)并启动带有这些评分标准的验证器智能体，来尝试并验证你在特定领域的品味（例如，好的 API 设计是什么样的）。
 
 ## 将其应用到你的上下文中
 

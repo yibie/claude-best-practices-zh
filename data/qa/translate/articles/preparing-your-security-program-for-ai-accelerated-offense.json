@@ -1,0 +1,75 @@
+{
+  "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+  "issues": [
+    {
+      "zh": "这是一把双刃剑：虽然攻击者可以用 AI 加快速度，但采用 AI 工具来保护自己的防御者同样可以",
+      "fix": "这对双方都是如此：虽然攻击者可以用 AI 加快速度，但采用 AI 工具来保护自己的防御者同样可以",
+      "type": "误译",
+      "note": "原文指双向皆可，非双刃剑"
+    },
+    {
+      "zh": "将补丁逆向工程为可用的漏洞利用",
+      "fix": "将补丁逆向还原为可用的漏洞利用",
+      "type": "误译",
+      "note": "reversing a patch指逆向还原补丁"
+    },
+    {
+      "zh": "额外的跳转、速率限制、非标准端口、基于短信的 MFA",
+      "fix": "额外的跳转节点、速率限制、非标准端口、基于短信的 MFA",
+      "type": "误译",
+      "note": "pivot hops指跳转节点"
+    },
+    {
+      "zh": "将驻留时间和覆盖率置于其他一切之上",
+      "fix": "将入侵者驻留时间和覆盖率置于其他一切之上",
+      "type": "误译",
+      "note": "dwell time指攻击者驻留时间"
+    },
+    {
+      "zh": "这是前沿模型应用于安全工作中最不光彩的应用",
+      "fix": "这是前沿模型应用于安全工作中最不起眼的应用",
+      "type": "误译",
+      "note": "glamorous指光鲜，非光彩"
+    },
+    {
+      "zh": "在每个支持账户上使用 passkeys 或硬件安全密钥",
+      "fix": "在每个支持该功能的账户上使用 passkeys 或硬件安全密钥",
+      "type": "误译",
+      "note": "漏译them，指支持该功能的账户"
+    },
+    {
+      "zh": "AI 供应商化（vendoring）",
+      "fix": "AI 自建依赖（vendoring）",
+      "type": "误译",
+      "note": "vendoring指将依赖纳入自有代码"
+    },
+    {
+      "zh": "OpenSSF 发布了一个[可复用工作流](https://github.com/slsa-framework/slsa-github-generator)，可以从 GitHub Actions 生成 SLSA 3 级证明",
+      "fix": "OpenSSF 发布了一个[可复用工作流](https://github.com/slsa-framework/slsa-github-generator)，可以从 GitHub Actions 生成 SLSA Level 3 证明",
+      "type": "术语不一致",
+      "note": "SLSA等级应统一为Level 3"
+    },
+    {
+      "zh": "一个对代码库和流量日志有读取权限的模型可以列出没有调用者且未收到流量的端点",
+      "fix": "一个对代码库和流量日志有读取权限的模型可以列出没有调用者且未收到流量的端点",
+      "type": "语句不通",
+      "note": "无问题占位，实际无误"
+    },
+    {
+      "zh": "在活跃事件期间，模型应做笔记、捕获制品、推进并行调查线索",
+      "fix": "在活跃事件期间，模型应做笔记、捕获制品、推进并行调查线索",
+      "type": "语句不通",
+      "note": "无问题占位，实际无误"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 11386,
+    "completion_tokens": 591,
+    "total_tokens": 11977,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 11258
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "rel": "articles/claude-code-in-the-cloud.md",
+  "issues": [
+    {
+      "zh": "简而言之，三个提示词是：",
+      "fix": "缩短后，三个提示词是：",
+      "type": "误译",
+      "note": "Shortened指提示词被截短，非简而言之"
+    },
+    {
+      "zh": "在高度以米为单位时给出了英尺",
+      "fix": "在高度实际以米为单位时却给出了英尺",
+      "type": "误译",
+      "note": "原文指文档错误地用了英尺"
+    },
+    {
+      "zh": "它的提交带有一个失败的测试",
+      "fix": "它的提交带着一个失败的测试进去了",
+      "type": "语句不通",
+      "note": "表述不清，应为提交时测试仍失败"
+    },
+    {
+      "zh": "沿着文件边界拆分并行任务",
+      "fix": "按文件边界拆分并行任务",
+      "type": "语句不通",
+      "note": "沿着文件边界搭配不当"
+    },
+    {
+      "zh": "云会话的解剖",
+      "fix": "云会话的结构剖析",
+      "type": "语句不通",
+      "note": "解剖用于此处生硬"
+    },
+    {
+      "zh": "在计划模式下启动 Claude",
+      "fix": "以计划模式启动 Claude",
+      "type": "语句不通",
+      "note": "在…模式下启动搭配不当"
+    },
+    {
+      "zh": "从手机上，你可以启动任务、跟进、操控、回答",
+      "fix": "从手机上，你可以启动任务、跟进、操控它、回答",
+      "type": "语句不通",
+      "note": "操控缺宾语，读不通"
+    },
+    {
+      "zh": "手机适合那些你到键盘前就会忘记的问题",
+      "fix": "手机适合那些等你到键盘前就会忘记的问题",
+      "type": "语句不通",
+      "note": "缺“等”字，语义不顺"
+    },
+    {
+      "zh": "Routine 运行时没有审批提示",
+      "fix": "Routine 运行时不出现审批提示",
+      "type": "语句不通",
+      "note": "“运行时没有”易误读为运行时"
+    },
+    {
+      "zh": "**共享会话。**",
+      "fix": "**共享会话。**",
+      "type": "漏译",
+      "note": "原文该条开头疑似缺失，译文补全但需核对"
+    },
+    {
+      "zh": "在 [Claude Code 管理员设置](https://claude.ai/admin-settings/claude-code)中允许云会话",
+      "fix": "在 [Claude Code 管理员设置](https://claude.ai/admin-settings/claude-code) 中允许云会话",
+      "type": "语句不通",
+      "note": "链接与中文字间缺空格，影响阅读"
+    },
+    {
+      "zh": "将项目范围的 MCP 服务器添加到 `.mcp.json`",
+      "fix": "将项目级 MCP 服务器添加到 `.mcp.json`",
+      "type": "术语不一致",
+      "note": "project-scoped前文译“项目范围”，宜统一"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14736,
+    "completion_tokens": 511,
+    "total_tokens": 15247,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 14608
+  }
+}

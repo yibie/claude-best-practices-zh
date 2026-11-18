@@ -1,0 +1,21 @@
+{
+  "rel": "articles/zero-trust-for-ai-agents.md",
+  "issues": [
+    {
+      "zh": "以及那些从第一天起就按「假定已被入侵」来设计智能体部署的组织",
+      "fix": "以及那些从第一天起就按「假定已被入侵」来架构智能体部署的组织",
+      "type": "误译",
+      "note": "architected 指架构设计，非设计"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1792,
+    "completion_tokens": 66,
+    "total_tokens": 1858,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1664
+  }
+}

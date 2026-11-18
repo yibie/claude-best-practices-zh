@@ -1,0 +1,87 @@
+{
+  "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+  "issues": [
+    {
+      "zh": "重新构想 Claude Code 在终端之外友好界面中所做的一切",
+      "fix": "重新构想 Claude Code 在终端之外的一切功能，打造一个友好的界面",
+      "type": "误译",
+      "note": "原文是重做功能以做友好界面"
+    },
+    {
+      "zh": "产品设计是由你所服务的产品和品牌知识驱动的",
+      "fix": "产品设计是由运用你所负责的产品和品牌的知识驱动的",
+      "type": "误译",
+      "note": "漏掉“运用知识”之意"
+    },
+    {
+      "zh": "在场的每个人都用它拼出了幻灯片",
+      "fix": "在场的每个人都用它赶制了幻灯片",
+      "type": "误译",
+      "note": "threw together意为匆忙赶制"
+    },
+    {
+      "zh": "我把它看作比产品设计高一个层级",
+      "fix": "我把它看作产品设计之上的一层",
+      "type": "误译",
+      "note": "one click above指层级更高一层"
+    },
+    {
+      "zh": "能有力地制作出达到演示水准的幻灯片和备忘录",
+      "fix": "在制作达到演示水准的幻灯片和备忘录时非常强大",
+      "type": "语句不通",
+      "note": "“有力地制作”搭配不当"
+    },
+    {
+      "zh": "你可以在已经打开的会话中请求设计，无论是在桌面端还是终端",
+      "fix": "你可以在已经打开的会话中请求设计，无论是在桌面端还是在终端",
+      "type": "语句不通",
+      "note": "“无论…还是”缺“是”"
+    },
+    {
+      "zh": "或使用 /design 来创建、编辑和同步设计项目",
+      "fix": "或使用 /design 来创建、编辑和同步设计项目。",
+      "type": "语句不通",
+      "note": "句子结构不完整"
+    },
+    {
+      "zh": "拥有好的想法、让所有人达成一致",
+      "fix": "提出好的想法、让所有人达成一致",
+      "type": "误译",
+      "note": "having ideas意为产生想法"
+    },
+    {
+      "zh": "一个地铁时刻应用",
+      "fix": "一个地铁时刻表应用",
+      "type": "误译",
+      "note": "subway-times指时刻表"
+    },
+    {
+      "zh": "我让 Claude 允许我用滑块和预设来调整应用的配色方案",
+      "fix": "我让 Claude 让我能用滑块和预设来调整应用的配色方案",
+      "type": "语句不通",
+      "note": "“让Claude允许我”语义别扭"
+    },
+    {
+      "zh": "你可以一次排队多条消息，或在 Claude 还在处理上一轮时继续说话",
+      "fix": "你可以一次排队多条消息，或在 Claude 还在处理上一轮时继续输入",
+      "type": "误译",
+      "note": "keep talking指继续发消息"
+    },
+    {
+      "zh": "在付费计划上处于测试阶段",
+      "fix": "在付费计划上以测试版提供",
+      "type": "术语不一致",
+      "note": "beta前后译法不一致"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5326,
+    "completion_tokens": 521,
+    "total_tokens": 5847,
+    "prompt_tokens_details": {
+      "cached_tokens": 5120
+    },
+    "prompt_cache_hit_tokens": 5120,
+    "prompt_cache_miss_tokens": 206
+  }
+}

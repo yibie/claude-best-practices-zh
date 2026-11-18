@@ -1,0 +1,39 @@
+{
+  "rel": "articles/demystifying-evals-for-ai-agents.md",
+  "issues": [
+    {
+      "zh": "各评分器分数之和必须达到阈值",
+      "fix": "各评分器分数按权重合并后必须达到阈值",
+      "type": "误译",
+      "note": "weighted是加权合并非求和"
+    },
+    {
+      "zh": "评分可以是加权的（各评分器分数之和必须达到阈值）、二元的（所有评分器都必须通过）或混合的",
+      "fix": "评分可以是加权的（各评分器分数按权重合并后必须达到阈值）、二元的（所有评分器都必须通过）或混合的",
+      "type": "误译",
+      "note": "weighted指加权合并"
+    },
+    {
+      "zh": "评估中的智能体必须与生产环境中使用的智能体大致相同地运行",
+      "fix": "评估中的智能体必须与生产环境中使用的智能体大致相同地运行",
+      "type": "语句不通",
+      "note": "句子可读但略拗口，非硬错，跳过"
+    },
+    {
+      "zh": "共享状态也可能人为地抬高表现",
+      "fix": "共享状态也可能人为地抬高表现",
+      "type": "语句不通",
+      "note": "原文前有断行，译文合并，非错，跳过"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14219,
+    "completion_tokens": 221,
+    "total_tokens": 14440,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 14091
+  }
+}

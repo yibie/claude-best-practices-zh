@@ -1,0 +1,51 @@
+{
+  "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+  "issues": [
+    {
+      "zh": "对 Claude 在内部的输出质量产生了最可衡量的影响",
+      "fix": "对 Claude 在内部的输出质量产生了最显著可衡量的影响",
+      "type": "误译",
+      "note": "most measurable 意为最可衡量，非最可衡量影响"
+    },
+    {
+      "zh": "它们让工程师在关键操作中更容易遵循最佳实践",
+      "fix": "这些护栏让工程师在关键操作中更容易遵循最佳实践",
+      "type": "漏译",
+      "note": "漏译 guardrails 主语"
+    },
+    {
+      "zh": "一个只是重复 Claude 默认做法的 Skill，只会增加上下文而不增加价值",
+      "fix": "一个只是重复 Claude 默认做法的 Skill，只会增加上下文却不带来价值",
+      "type": "语句不通",
+      "note": "不增加价值表述生硬"
+    },
+    {
+      "zh": "对于你不想一直运行、但有时又极其有用的、更具主张性的钩子",
+      "fix": "对于你不想一直运行、但有时又极其有用的、更具倾向性的钩子",
+      "type": "误译",
+      "note": "opinionated 意为有主见/倾向性"
+    },
+    {
+      "zh": "这意味着我们可以找出那些受欢迎或触发频率低于我们预期的 Skills",
+      "fix": "这意味着我们可以找出那些受欢迎或触发不足（低于预期）的 Skills",
+      "type": "语句不通",
+      "note": "undertriggering 译法生硬"
+    },
+    {
+      "zh": "它们既可以是针对内部库的，也可以是针对 Claude Code 有时难以处理的常用库的",
+      "fix": "它们既可以是针对内部库的，也可以是针对 Claude Code 有时难以处理的常见库的",
+      "type": "术语不一致",
+      "note": "common 前文译常用此处常见"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9674,
+    "completion_tokens": 328,
+    "total_tokens": 10002,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9546
+  }
+}

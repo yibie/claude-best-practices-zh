@@ -1,0 +1,51 @@
+{
+  "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+  "issues": [
+    {
+      "zh": "它需要编写、运行代码，即时构建工具",
+      "fix": "它需要编写代码、运行代码，即时构建工具",
+      "type": "语句不通",
+      "note": "\"编写、运行代码\"搭配不当，应为编写代码、运行代码"
+    },
+    {
+      "zh": "它快得多，而且作为开发者也会更有成就感",
+      "fix": "它快得多，而且作为开发者也会更有满足感",
+      "type": "误译",
+      "note": "satisfying意为满足感，非成就感"
+    },
+    {
+      "zh": "以及每种方法的上下文成本和权威性",
+      "fix": "以及每种方法的上下文成本和权限",
+      "type": "误译",
+      "note": "authority此处指权限，非权威性"
+    },
+    {
+      "zh": "阅读智能体 30 分钟的全部行为记录既痛苦又无法规模化",
+      "fix": "阅读智能体 30 分钟的全部行为记录既折磨人又无法规模化",
+      "type": "误译",
+      "note": "brutal此处指折磨人，非痛苦"
+    },
+    {
+      "zh": "将人工“反思”作为通往自动化评估的路线图，以收紧开发周期",
+      "fix": "将人工“反思”作为通往自动化评估的路线图，以缩短开发周期",
+      "type": "误译",
+      "note": "tighten dev cycles意为缩短开发周期"
+    },
+    {
+      "zh": "它需要编写、运行代码，即时构建工具，并真正与恶意域名交互",
+      "fix": "它需要编写代码、运行代码，即时构建工具，并真正与恶意域名交互",
+      "type": "语句不通",
+      "note": "\"编写、运行代码\"搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6152,
+    "completion_tokens": 309,
+    "total_tokens": 6461,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6024
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+  "issues": [
+    {
+      "zh": "**在任务之间运行 `/clear`。**",
+      "fix": "**在任务之间运行 `/clear`。**",
+      "type": "误译",
+      "note": "原文Run /clear指执行命令，非运行任务"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 7295,
+    "completion_tokens": 65,
+    "total_tokens": 7360,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 7167
+  }
+}

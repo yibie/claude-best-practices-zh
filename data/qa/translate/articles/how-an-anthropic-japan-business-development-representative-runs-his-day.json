@@ -1,0 +1,75 @@
+{
+  "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+  "issues": [
+    {
+      "zh": "这支队伍每周为我节省约 60 小时的工作",
+      "fix": "这支队伍为我节省约 60 小时的工作",
+      "type": "误译",
+      "note": "原文未限定每周，是总量"
+    },
+    {
+      "zh": "它设置了周二的提醒",
+      "fix": "它设置了提醒，在周二",
+      "type": "误译",
+      "note": "原文是周二回来查看，非周二设置"
+    },
+    {
+      "zh": "它筛选每条线索",
+      "fix": "它甄别每条线索",
+      "type": "术语不一致",
+      "note": "qualify前文译筛选，此处应统一"
+    },
+    {
+      "zh": "它读取每日入站队列",
+      "fix": "它读取每日入站线索队列",
+      "type": "漏译",
+      "note": "inbound queue指线索队列"
+    },
+    {
+      "zh": "它已加入的频道里的任何人",
+      "fix": "它已加入的频道中的任何人",
+      "type": "语句不通",
+      "note": "“里”口语，句子略拗口"
+    },
+    {
+      "zh": "它保护智能体用于登录外部服务的凭据",
+      "fix": "这些保险库保护智能体用于登录外部服务的凭据",
+      "type": "语句不通",
+      "note": "主语指代不清"
+    },
+    {
+      "zh": "它接收请求并在该线程中处理",
+      "fix": "它会接收请求并在该线程中处理",
+      "type": "语句不通",
+      "note": "缺主语衔接"
+    },
+    {
+      "zh": "它永远看不到凭据",
+      "fix": "智能体永远看不到凭据",
+      "type": "语句不通",
+      "note": "“它”指代不明"
+    },
+    {
+      "zh": "它为自己设置一个提醒",
+      "fix": "Claude 会为自己设置一个提醒",
+      "type": "语句不通",
+      "note": "主语缺失"
+    },
+    {
+      "zh": "它设置了周二的提醒，用来检查",
+      "fix": "它设置了周二的提醒，用来检查",
+      "type": "误译",
+      "note": "原文是周二回来查看，非周二设置"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 7114,
+    "completion_tokens": 366,
+    "total_tokens": 7480,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6986
+  }
+}

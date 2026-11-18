@@ -1,0 +1,87 @@
+{
+  "rel": "articles/harness-design-long-running-apps.md",
+  "issues": [
+    {
+      "zh": "执行框架",
+      "fix": "harness",
+      "type": "术语不一致",
+      "note": "harness 全文译法混乱，此处应统一"
+    },
+    {
+      "zh": "上下文压缩（compaction）",
+      "fix": "压缩（compaction）",
+      "type": "术语不一致",
+      "note": "compaction 前文译作上下文压缩，此处重复"
+    },
+    {
+      "zh": "自动上下文压缩（compaction）",
+      "fix": "自动压缩（compaction）",
+      "type": "术语不一致",
+      "note": "compaction 译法与前文不一致"
+    },
+    {
+      "zh": "执行框架的成本超过 20 倍",
+      "fix": "该执行框架的成本超过 20 倍",
+      "type": "语句不通",
+      "note": "缺主语，指代不明"
+    },
+    {
+      "zh": "执行框架中的每个组件",
+      "fix": "执行框架中的每个组件",
+      "type": "术语不一致",
+      "note": "harness 译法不统一"
+    },
+    {
+      "zh": "执行框架设计",
+      "fix": "harness 设计",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    },
+    {
+      "zh": "执行框架运行",
+      "fix": "harness 运行",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    },
+    {
+      "zh": "执行框架内",
+      "fix": "harness 内",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    },
+    {
+      "zh": "执行框架处理",
+      "fix": "harness 处理",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    },
+    {
+      "zh": "执行框架的输出",
+      "fix": "harness 的输出",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    },
+    {
+      "zh": "执行框架结果",
+      "fix": "harness 结果",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    },
+    {
+      "zh": "执行框架复杂度",
+      "fix": "harness 复杂度",
+      "type": "术语不一致",
+      "note": "harness 译法前后不一致"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 11634,
+    "completion_tokens": 382,
+    "total_tokens": 12016,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 11506
+  }
+}

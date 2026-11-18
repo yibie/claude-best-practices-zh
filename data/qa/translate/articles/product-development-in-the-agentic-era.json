@@ -1,0 +1,63 @@
+{
+  "rel": "articles/product-development-in-the-agentic-era.md",
+  "issues": [
+    {
+      "zh": "在 AI 的指数级发展曲线上，我们用交付的东西来构建",
+      "fix": "在 AI 的指数级发展曲线上，我们边交付边构建",
+      "type": "误译",
+      "note": "build with what we ship 意为边交付边构建"
+    },
+    {
+      "zh": "这些改动即便经过数周的文档评审也永远不会浮现，否则只能等到用户反馈时才姗姗来迟",
+      "fix": "这些改动即便经过数周的文档评审也永远不会浮现，否则只能等到用户反馈时才姗姗来迟地暴露",
+      "type": "语句不通",
+      "note": "原句缺谓语，语义不完整"
+    },
+    {
+      "zh": "以确保对裸机体验满意",
+      "fix": "以确保对底层原生体验满意",
+      "type": "误译",
+      "note": "bare-metal 此处指底层原生体验"
+    },
+    {
+      "zh": "一个智能体持久访问我们的内部数据库，并具备理解我们数据 schema 的 skill",
+      "fix": "一个智能体持久访问我们的内部数据库，并具备理解我们数据 schema 的技能",
+      "type": "术语不一致",
+      "note": "skill 前文译技能，此处未统一"
+    },
+    {
+      "zh": "扫描一份特定的域名列表以获取最新的开发者反馈",
+      "fix": "扫描一份特定的网站列表以获取最新的开发者反馈",
+      "type": "误译",
+      "note": "domains 此处指网站/领域而非域名"
+    },
+    {
+      "zh": "我可以扩展自己",
+      "fix": "我可以放大自己的能力",
+      "type": "语句不通",
+      "note": "scale myself 直译生硬不通"
+    },
+    {
+      "zh": "我的一天现在包括与客户一起激发创新想法",
+      "fix": "我的一天现在包括与客户一起产出创新想法",
+      "type": "误译",
+      "note": "generating 意为产出而非激发"
+    },
+    {
+      "zh": "把预置模板转化为针对相关受众",
+      "fix": "把预置模板转化为面向相关受众",
+      "type": "语句不通",
+      "note": "针对相关受众搭配生硬"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2949,
+    "completion_tokens": 378,
+    "total_tokens": 3327,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 2821
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "rel": "articles/agent-identity-access-model.md",
+  "issues": [
+    {
+      "zh": "这使管理员能够独立于参与的人类，定义智能体在 Slack 中可以做什么，并对 Slack 中所做的事进行独立追踪。",
+      "fix": "这使管理员能够独立于参与的人类，定义智能体在 Slack 中可以做什么，并对 Slack 中所做的事进行独立追踪。",
+      "type": "语句不通",
+      "note": "原文为This gives admins，主语应为该模型/此设计，译文主语错为“这”指代不明"
+    },
+    {
+      "zh": "Connectors：",
+      "fix": "连接器：",
+      "type": "术语不一致",
+      "note": "前文已译“连接”，此处保留英文不一致"
+    },
+    {
+      "zh": "Skills（技能）",
+      "fix": "技能",
+      "type": "术语不一致",
+      "note": "同段后文用“Skills 与插件”，译法不统一"
+    },
+    {
+      "zh": "这是对按用户访问控制列表（ACL）的背离",
+      "fix": "这是对按用户访问控制列表（ACL）的背离",
+      "type": "名词错",
+      "note": "ACL是Access Control List缩写，原文未出现缩写"
+    },
+    {
+      "zh": "在 Claude Tag 中，私信的工作方式与共享频道不同。",
+      "fix": "在 Claude Tag 中，私信的工作方式与共享频道不同。",
+      "type": "误译",
+      "note": "原文DMs run on users' individual claude.ai accounts，译文漏译“各自的claude.ai账户”关键信息"
+    },
+    {
+      "zh": "使用他们的 Connectors、凭证，结果中也显示他们的名字",
+      "fix": "使用他们各自的连接器、凭证，结果中也显示他们的名字",
+      "type": "术语不一致",
+      "note": "Connectors前文译“连接”，此处未译"
+    },
+    {
+      "zh": "从 Claude 中获益最多的团队，是那些从一开始就授予其慷慨访问权限、再根据组织的管理员偏好逐步收缩访问的团队。",
+      "fix": "从 Claude 中获益最多的团队，是那些从一开始就授予其慷慨访问权限、再根据组织的管理员偏好逐步收缩访问的团队。",
+      "type": "误译",
+      "note": "原文pare access back意为按需削减，非“逐步收缩”"
+    },
+    {
+      "zh": "一次一个审慎的授权",
+      "fix": "一次一个审慎的授权",
+      "type": "语句不通",
+      "note": "表达生硬，one deliberate grant at a time"
+    },
+    {
+      "zh": "身份属于频道，因此默认情况下频道中的任何人都可以 @ 提及 Claude",
+      "fix": "身份属于频道，因此默认情况下频道中的任何人都可以 @ 提及 Claude",
+      "type": "误译",
+      "note": "原文tag Claude指@提及，可接受；但“@ 提及”与tag语义基本一致，保留"
+    },
+    {
+      "zh": "在 Anthropic 内部运行 Claude Tag 时，我们发现其价值会随着工具和上下文访问的增加而叠加。",
+      "fix": "在 Anthropic 内部运行 Claude Tag 时，我们发现其价值会随着工具和上下文访问的增加而叠加。",
+      "type": "误译",
+      "note": "compounds意为复合放大，非“叠加”"
+    },
+    {
+      "zh": "从 Slack 拉取一个讨论串、从 Drive 取一份文档、从工单系统取一张工单、从数据仓库取一个查询",
+      "fix": "从 Slack 拉取一个讨论串、从 Drive 取一份文档、从工单系统取一张工单、从数据仓库取一个查询",
+      "type": "误译",
+      "note": "原文a query from a warehouse指查询结果，译文可接受"
+    },
+    {
+      "zh": "这将在智能体的范围之上增加用户级检查，使 Claude 仅在频道配置和请求用户自身的权限都允许时才行动。",
+      "fix": "这将在智能体的范围之上增加用户级检查，使 Claude 仅在频道配置和请求用户自身的权限都允许时才行动。",
+      "type": "误译",
+      "note": "原文both the channel's profile and the requesting user's own permissions，译文准确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4028,
+    "completion_tokens": 780,
+    "total_tokens": 4808,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3900
+  }
+}

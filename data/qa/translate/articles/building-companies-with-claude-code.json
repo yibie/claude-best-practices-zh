@@ -1,0 +1,81 @@
+{
+  "rel": "articles/building-companies-with-claude-code.md",
+  "issues": [
+    {
+      "zh": "弗吉尼亚州的下议院（House of Burgesses）是世界上延续时间最长的民主机构",
+      "fix": "弗吉尼亚州议会下院（House of Burgesses）是世界上延续时间最长的民主机构",
+      "type": "名词错",
+      "note": "House of Burgesses 是弗吉尼亚议会下院"
+    },
+    {
+      "zh": "在早期——前几次工具调用内——就发现错误方向，比让 Claude Code 完成整个错误方法节省的时间要多得多。",
+      "fix": "在早期——前几次工具调用内——就发现错误方向，比让 Claude Code 完成整个错误方法节省的时间要多得多。",
+      "type": "语句不通",
+      "note": "比较结构混乱，语义不清"
+    },
+    {
+      "zh": "我实际上认为，对于学习人文学科的人可能存在一些边际优势",
+      "fix": "我实际上认为，对于学习人文学科的人可能存在一些额外优势",
+      "type": "误译",
+      "note": "marginal benefit 此处指额外好处"
+    },
+    {
+      "zh": "Sonnet 4.5 在实现我在 Markdown 中创建的计划方面绝对是杀手级的",
+      "fix": "Sonnet 4.5 在实现我在 Markdown 中创建的计划方面绝对非常出色",
+      "type": "语句不通",
+      "note": "killer 直译成杀手级不通顺"
+    },
+    {
+      "zh": "他们经常犯错，但我的角色是委托给多个 Claude Code 实例",
+      "fix": "它经常犯错，但我的角色是委托给多个 Claude Code 实例",
+      "type": "误译",
+      "note": "原文 they 指单个同事，非复数"
+    },
+    {
+      "zh": "在 2025 年第一季度，HumanLayer 团队进行了广泛的客户发现",
+      "fix": "在 2025 年第一季度，HumanLayer 团队进行了广泛的客户调研",
+      "type": "语句不通",
+      "note": "客户发现为生硬直译"
+    },
+    {
+      "zh": "并意识到智能体开发循环中存在一个他们之前没有考虑到的缺口",
+      "fix": "并意识到智能体开发循环中存在一个他们之前没有考虑到的空白",
+      "type": "语句不通",
+      "note": "缺口搭配不当"
+    },
+    {
+      "zh": "将客户活动和互动的信号综合成每个账户的 AI 驱动模型",
+      "fix": "将客户活动和互动的信号综合为每个账户的 AI 驱动模型",
+      "type": "语句不通",
+      "note": "综合成搭配不当"
+    },
+    {
+      "zh": "它构成了公司构建的民主化",
+      "fix": "它构成了公司创建的民主化",
+      "type": "术语不一致",
+      "note": "company building 前后译法不一"
+    },
+    {
+      "zh": "公司构建的民主化",
+      "fix": "公司创建的民主化",
+      "type": "术语不一致",
+      "note": "与前文公司构建译法不一致"
+    },
+    {
+      "zh": "弗吉尼亚州的下议院",
+      "fix": "弗吉尼亚州议会下院",
+      "type": "名词错",
+      "note": "机构名译法不准确"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6638,
+    "completion_tokens": 568,
+    "total_tokens": 7206,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6510
+  }
+}

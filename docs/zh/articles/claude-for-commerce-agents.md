@@ -22,7 +22,7 @@ fetched_at: "2026-11-18"
 
 
 
-购物智能体在 ACME 零售示例中运行。
+在 ACME 零售示例中运行的购物智能体。
 
 ## 蓝图包含什么
 
@@ -64,7 +64,7 @@ fetched_at: "2026-11-18"
 该蓝图现已可用。[联系我们的销售团队](https://claude.com/contact-sales)了解更多、预约演示，或讨论如何为你的组织落地实施。
 
 1.  在 [github.com/anthropics/commerce-agents](https://github.com/anthropics/commerce-agents) fork 该仓库。
-2.  阅读工程深度解析：[claude.com/blog/the-anatomy-of-effective-commerce-agents。](https://claude.com/resources/articles/the-anatomy-of-effective-commerce-agents)
+2.  阅读工程深度解析：[claude.com/blog/the-anatomy-of-effective-commerce-agents](https://claude.com/resources/articles/the-anatomy-of-effective-commerce-agents)。(https://claude.com/resources/articles/the-anatomy-of-effective-commerce-agents)
 3.  查看各垂直行业演示，并在 [claude.com/solutions/commerce](https://claude.com/solutions/commerce) 申请一场工作会。
 
-注册我们的[网络研讨会](https://claude.com/resources/webinars/building-claude-commerce-agents)，观看深度解析，我们将分享现场演示、demo，并介绍商务构建者如何充分利用 Claude。
+注册我们的[网络研讨会](https://claude.com/resources/webinars/building-claude-commerce-agents)，观看深度解析，我们将分享现场演示、演示，并介绍商务构建者如何充分利用 Claude。

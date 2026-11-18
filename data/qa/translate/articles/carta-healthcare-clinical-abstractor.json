@@ -1,0 +1,51 @@
+{
+  "rel": "articles/carta-healthcare-clinical-abstractor.md",
+  "issues": [
+    {
+      "zh": "应用 AI 应用经理 Hannah Glaser",
+      "fix": "应用 AI 应用程序经理 Hannah Glaser",
+      "type": "语句不通",
+      "note": "“应用AI应用经理”重复拗口"
+    },
+    {
+      "zh": "Carta Healthcare 多年前就是从 NLP 起步的",
+      "fix": "Carta Healthcare 多年前正是从 NLP 起步的",
+      "type": "语句不通",
+      "note": "“就是”与“正是”混用，语义略偏"
+    },
+    {
+      "zh": "如何权衡跨文档的相互矛盾证据",
+      "fix": "如何权衡跨文档中相互矛盾的证据",
+      "type": "语句不通",
+      "note": "“跨文档的相互矛盾证据”搭配生硬"
+    },
+    {
+      "zh": "直白的提示词配上正确的上下文",
+      "fix": "简洁的提示词配上正确的上下文",
+      "type": "误译",
+      "note": "straightforward 意为简洁直接，非“直白”"
+    },
+    {
+      "zh": "评分者间信度达到 98-99%",
+      "fix": "评分者间信度达到 98–99%",
+      "type": "名词错",
+      "note": "数字区间连接符应为短横线"
+    },
+    {
+      "zh": "边缘情况不断累积",
+      "fix": "边缘情况层出不穷",
+      "type": "语句不通",
+      "note": "multiply 译“累积”语义偏差"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4005,
+    "completion_tokens": 254,
+    "total_tokens": 4259,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3877
+  }
+}

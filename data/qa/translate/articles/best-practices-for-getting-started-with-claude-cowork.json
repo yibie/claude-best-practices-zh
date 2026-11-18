@@ -1,0 +1,51 @@
+{
+  "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+  "issues": [
+    {
+      "zh": "Anthropic 增长营销负责人 Austin Lau",
+      "fix": "Anthropic 增长营销负责人 Austin Lau",
+      "type": "名词错",
+      "note": "原文为growth marketing lead，非负责人"
+    },
+    {
+      "zh": "创建一个实时 Artifacts（基本上就是一个 HTML 仪表盘）",
+      "fix": "创建一个实时 artifact（基本上就是一个 HTML 仪表盘）",
+      "type": "名词错",
+      "note": "artifact为普通名词，非产品名Artifacts"
+    },
+    {
+      "zh": "在做出承诺前对某个想法进行压力测试",
+      "fix": "在拍板前对某个想法进行压力测试",
+      "type": "误译",
+      "note": "commit指决定采纳，非承诺"
+    },
+    {
+      "zh": "任何被 Slack 和邮件淹没的人都可以运行这个工作流的某个版本",
+      "fix": "任何被 Slack 和邮件淹没的人都可以运行这个工作流的某个版本",
+      "type": "误译",
+      "note": "原文some version，非某个版本"
+    },
+    {
+      "zh": "我也可以用平实的语言直接告诉 Claude",
+      "fix": "我也可以用大白话直接告诉 Claude",
+      "type": "误译",
+      "note": "plain English指通俗表达，非平实语言"
+    },
+    {
+      "zh": "推敲要点说明",
+      "fix": "推敲要点说明",
+      "type": "误译",
+      "note": "callouts指重点标注，非要点说明"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5631,
+    "completion_tokens": 262,
+    "total_tokens": 5893,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5503
+  }
+}

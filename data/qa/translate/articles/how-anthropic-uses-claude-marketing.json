@@ -1,0 +1,63 @@
+{
+  "rel": "articles/how-anthropic-uses-claude-marketing.md",
+  "issues": [
+    {
+      "zh": "把机械性任务上省下的时间利用起来，Austin 现在可以运行更多文案实验",
+      "fix": "借助在机械性任务上省下的时间，Austin 现在可以运行更多文案实验",
+      "type": "语句不通",
+      "note": "原句缺主语衔接，读不通"
+    },
+    {
+      "zh": "从而帮助判断哪些类型的信息更能引起潜在客户的共鸣",
+      "fix": "从而帮助了解哪些类型的信息更能引起潜在客户的共鸣",
+      "type": "误译",
+      "note": "inform 此处为提供参考，非判断"
+    },
+    {
+      "zh": "帮助文案随着时间不断精进",
+      "fix": "帮助文案逐步精进",
+      "type": "误译",
+      "note": "over time 指逐步，非随时间流逝"
+    },
+    {
+      "zh": "一个勉强能用的原型，就足以证明 Austin 心中所想的那个概念，最终催生出一个可用的产品",
+      "fix": "一个勉强能用的原型，就足以验证 Austin 心中所想的那个概念，最终催生出一个可用的产品",
+      "type": "误译",
+      "note": "prove the concept 指验证概念"
+    },
+    {
+      "zh": "把现有的画框复制多次",
+      "fix": "把现有的画框复制多份",
+      "type": "误译",
+      "note": "copy multiple times 指复制多份"
+    },
+    {
+      "zh": "我实际上让 Claude 做的第一件事，是给我做一个非常简单的计算器应用",
+      "fix": "我实际上让 Claude 做的第一件事，是让它给我做一个非常简单的计算器应用",
+      "type": "语句不通",
+      "note": "缺兼语，句子不通"
+    },
+    {
+      "zh": "讲的是非技术岗位的员工如何安装 Claude Code",
+      "fix": "讲的是非技术员工如何安装 Claude Code",
+      "type": "误译",
+      "note": "non-technical employee 指非技术员工"
+    },
+    {
+      "zh": "对于采用 Claude Code 这类工具的团队来说，一个机会正在形成",
+      "fix": "对于采用 Claude Code 这类工具的团队来说，存在一个机会",
+      "type": "语句不通",
+      "note": "机会正在形成搭配生硬"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4787,
+    "completion_tokens": 401,
+    "total_tokens": 5188,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4659
+  }
+}

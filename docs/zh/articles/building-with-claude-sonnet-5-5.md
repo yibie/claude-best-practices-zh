@@ -11,7 +11,7 @@ fetched_at: "2026-11-18"
 ---
 
 # 使用 Claude Sonnet 5.5 构建
-Claude Sonnet 5.5 是继 [Opus 5.5](https://claude.dev/blog/getting-the-most-out-of-opus-5-5/) 之后，Claude 5.5 家族中的第二个模型。它相比 Sonnet 5 是一次明显的升级，更聪明、更高效，速度也快了 30%。每 token 的价格保持不变，而且由于 Sonnet 5.5 完成同样的工作通常需要的 token 少得多，对大多数工作而言成本最多可降低 30%。
+Claude Sonnet 5.5 是继 [Opus 5.5](https://claude.dev/blog/getting-the-most-out-of-opus-5-5/) 之后，Claude 5.5 家族中的第二个模型。它相比 Sonnet 5 是一次明显的升级，更聪明、更高效，速度也提升了 30%。每 token 的价格保持不变，而且由于 Sonnet 5.5 完成同样的工作通常需要的 token 少得多，对大多数工作而言成本最多可降低 30%。
 
 ![两块分别标着 Claude Sonnet 5 和 Claude Sonnet 5.5 的空白画布被一笔一笔地填满，每块画布下方都有一个不断累加的画笔引擎调用计数，同时每个模型编写的代码绘制出一幅城市天际线的日落鸟瞰图。最后画面定格为并排的四块面板：那张照片，以及 Claude Sonnet 5、Claude Sonnet 5.5 和 Claude Opus 5.5 各自的画作。](https://claude.dev/media/dca9efdc2515061f31f7244c9c4825c7e29f9e8d9b0b0da5e1259a4bca669d3d.jpg)
 
@@ -47,7 +47,7 @@ for block in response.content:
 
 ## 在 SONNET 5.5 与 OPUS 5.5 之间选择
 
-在 Claude 5.5 家族中，Opus 5.5 是为需要审慎判断的复杂工作而打造的。对于范围明确的日常任务，比如修复 bug 和快速迭代功能，请使用 Sonnet 5.5。它还能制作精美的文档、幻灯片和电子表格，并且对设计有很强的眼光。它的速度使其非常适合快速迭代。[Claude Haiku 5.5](https://claude.dev/blog/which-claude-model-should-you-build-with/) 将在未来几周加入这个家族，面向高用量、低延迟的工作流。
+在 Claude 5.5 家族中，Opus 5.5 是为需要审慎判断的复杂工作而打造的。对于范围明确的日常任务，比如修复 bug 和快速迭代功能，请使用 Sonnet 5.5。它还能制作精美的文档、幻灯片和电子表格，并且对设计有很强的鉴赏力。它的速度使其非常适合快速迭代。[Claude Haiku 5.5](https://claude.dev/blog/which-claude-model-should-you-build-with/) 将在未来几周加入这个家族，面向高用量、低延迟的工作流。
 
 | 你的工作负载 | 从哪个模型开始 |
 | --- | --- |

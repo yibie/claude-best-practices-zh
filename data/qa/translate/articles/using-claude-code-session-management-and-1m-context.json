@@ -1,0 +1,21 @@
+{
+  "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+  "issues": [
+    {
+      "zh": "中间的工具有噪声留在子级的上下文中",
+      "fix": "中间的工具噪声留在子级的上下文中",
+      "type": "语句不通",
+      "note": "\"工具有噪声\"为病句，应为\"工具噪声\""
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4078,
+    "completion_tokens": 51,
+    "total_tokens": 4129,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3950
+  }
+}

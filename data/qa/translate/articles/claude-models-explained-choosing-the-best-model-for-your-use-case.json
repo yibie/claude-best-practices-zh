@@ -1,0 +1,33 @@
+{
+  "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+  "issues": [
+    {
+      "zh": "从最智能的模型开始",
+      "fix": "从最智能的正式可用模型开始",
+      "type": "漏译",
+      "note": "小标题漏译generally available"
+    },
+    {
+      "zh": "并配有你的团队定义的成功的标准",
+      "fix": "并配有你的团队定义的成功标准",
+      "type": "语句不通",
+      "note": "“成功的标准”多字，应为“成功标准”"
+    },
+    {
+      "zh": "包括多智能体编排设置中的高并发子智能体",
+      "fix": "包括多智能体编排设置中的高吞吐量子智能体",
+      "type": "误译",
+      "note": "high-volume指高吞吐量而非高并发"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3622,
+    "completion_tokens": 129,
+    "total_tokens": 3751,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3494
+  }
+}

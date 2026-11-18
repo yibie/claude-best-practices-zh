@@ -1,0 +1,63 @@
+{
+  "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+  "issues": [
+    {
+      "zh": "限制影响范围（最小代理原则）以及智能体在适当情况下通过硬边界可以访问的内容。",
+      "fix": "限制影响范围（最小代理原则），并在适当情况下用硬边界限制智能体可以访问的内容。",
+      "type": "语句不通",
+      "note": "原句缺谓语，成分残缺"
+    },
+    {
+      "zh": "它摄入项目设计文档",
+      "fix": "它读取项目设计文档",
+      "type": "语句不通",
+      "note": "摄入用于文档不自然"
+    },
+    {
+      "zh": "供应链和依赖投毒被智能体当作可信输入摄入",
+      "fix": "供应链和依赖投毒被智能体当作可信输入读取",
+      "type": "语句不通",
+      "note": "摄入用于输入不自然"
+    },
+    {
+      "zh": "创建一个 Claude Code skill 使 Claude 能够进一步扩展",
+      "fix": "创建一个 Claude Code 技能使 Claude 能够进一步扩展",
+      "type": "术语不一致",
+      "note": "skill 前后译法不一致"
+    },
+    {
+      "zh": "如果一个 skill 过时了",
+      "fix": "如果一个技能过时了",
+      "type": "术语不一致",
+      "note": "skill 前后译法不一致"
+    },
+    {
+      "zh": "对组织范围 Skills 的引用",
+      "fix": "对组织范围技能的引用",
+      "type": "术语不一致",
+      "note": "Skills 未译，与后文不一致"
+    },
+    {
+      "zh": "跨公司协调的成本",
+      "fix": "跨部门协调的成本",
+      "type": "误译",
+      "note": "原文指公司内部协调"
+    },
+    {
+      "zh": "当它们行为偏离对齐时发出告警",
+      "fix": "当它们行为偏离预期时发出告警",
+      "type": "误译",
+      "note": "alignment 此处指预期行为"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8140,
+    "completion_tokens": 321,
+    "total_tokens": 8461,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 8012
+  }
+}

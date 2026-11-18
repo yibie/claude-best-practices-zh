@@ -1,0 +1,39 @@
+{
+  "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+  "issues": [
+    {
+      "zh": "我该点这里吗？",
+      "fix": "我该按哪里？",
+      "type": "误译",
+      "note": "原文问该按哪个，非确认此处"
+    },
+    {
+      "zh": "记录七八个小时的编码会话",
+      "fix": "投入七八个小时进行编码",
+      "type": "误译",
+      "note": "logging指投入时间，非记录"
+    },
+    {
+      "zh": "我需要在 Meta 上创建一个 API token，我在他们的界面里完全迷路了",
+      "fix": "我需要在 Meta 上创建一个 API token，我当时完全迷失在他们的界面里",
+      "type": "语句不通",
+      "note": "两个“我”并列，句子不通"
+    },
+    {
+      "zh": "我尽量保持最少",
+      "fix": "我尽量保持精简",
+      "type": "语句不通",
+      "note": "“保持最少”搭配不当"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4535,
+    "completion_tokens": 156,
+    "total_tokens": 4691,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4407
+  }
+}

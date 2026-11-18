@@ -1,0 +1,33 @@
+{
+  "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+  "issues": [
+    {
+      "zh": "我们能否将用户的问题映射到数据模型中具体且最新的实体，并知道与之交互的正确方式",
+      "fix": "我们将用户的问题映射到数据模型中具体且最新的实体，并知道与之交互的正确方式的能力",
+      "type": "误译",
+      "note": "原文是ability to map，译成能否，语义偏差"
+    },
+    {
+      "zh": "（而且对于毫无意愿学习 SQL 的员工来说，这几乎无助于弥合差距）",
+      "fix": "（而且对于不太愿意学习 SQL 的员工来说，这几乎无助于弥合差距）",
+      "type": "误译",
+      "note": "little desire意为不太愿意，非毫无意愿"
+    },
+    {
+      "zh": "我们创建大多数 Skills（技能）所使用的基本模板",
+      "fix": "我们创建大多数技能（skills）所使用的基本模板",
+      "type": "术语不一致",
+      "note": "skills前文未译，此处译法不统一"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1963,
+    "completion_tokens": 181,
+    "total_tokens": 2144,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1835
+  }
+}

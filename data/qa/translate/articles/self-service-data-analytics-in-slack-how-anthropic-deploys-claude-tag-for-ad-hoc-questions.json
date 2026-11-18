@@ -1,0 +1,14 @@
+{
+  "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 1232,
+    "completion_tokens": 5,
+    "total_tokens": 1237,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1104
+  }
+}

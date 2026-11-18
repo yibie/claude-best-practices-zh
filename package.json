@@ -12,7 +12,13 @@
     "wiki": "node scripts/wiki.js",
     "links": "node scripts/fixlinks.js",
     "site": "node scripts/site.js",
-    "build": "npm run manifest && npm run fetch && npm run translate && npm run concepts && npm run taxonomy && npm run graph && npm run wiki && npm run links && npm run site"
+    "build": "node scripts/graph.js && node scripts/relink.js && node scripts/graph-view.js && node scripts/site.js && node scripts/build-site.js",
+    "qa:translate": "node scripts/qa-translate.js",
+    "qa:apply": "node scripts/qa-apply.js",
+    "qa:relations": "node scripts/qa-associations.js",
+    "relations:apply": "node scripts/apply-associations.js",
+    "graph:view": "node scripts/graph-view.js",
+    "site:build": "node scripts/build-site.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +26,7 @@
   "dependencies": {
     "@mozilla/readability": "^0.6.0",
     "jsdom": "^31.0.1",
+    "markdown-it": "^15.0.3",
     "playwright-core": "^1.65.1",
     "turndown": "^7.2.5",
     "turndown-plugin-gfm": "^1.0.2"

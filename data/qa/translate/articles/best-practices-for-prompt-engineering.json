@@ -1,0 +1,27 @@
+{
+  "rel": "articles/best-practices-for-prompt-engineering.md",
+  "issues": [
+    {
+      "zh": "xtract key financial metrics from this quarterly report",
+      "fix": "Extract key financial metrics from this quarterly report",
+      "type": "名词错",
+      "note": "代码示例首词缺E，原文为Extract"
+    },
+    {
+      "zh": "以直接的动作动词开头：\"Write\"、\"Analyze\"、\"Generate\"、\"Create\"",
+      "fix": "以直接的动作动词开头：\"写\"、\"分析\"、\"生成\"、\"创建\"",
+      "type": "术语不一致",
+      "note": "正文中文却保留英文动词示例"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9763,
+    "completion_tokens": 114,
+    "total_tokens": 9877,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9635
+  }
+}

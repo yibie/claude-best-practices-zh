@@ -1,0 +1,1334 @@
+{
+  "remove": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "reason": "重复且方向冗余"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "reason": "重复关系"
+    },
+    {
+      "from": "技能",
+      "to": "MCP 服务器",
+      "reason": "技能不依赖MCP服务器"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "MCP 服务器",
+      "reason": "方向反了"
+    },
+    {
+      "from": "快速模式",
+      "to": "Claude Code",
+      "reason": "快速模式非Claude Code子类"
+    },
+    {
+      "from": "单任务成本",
+      "to": "Claude Fable 5",
+      "reason": "成本不衡量模型"
+    },
+    {
+      "from": "Claude Code",
+      "to": "努力等级",
+      "reason": "Claude Code不用于努力等级"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Fable 5",
+      "reason": "Claude Code不用于模型"
+    },
+    {
+      "from": "技能",
+      "to": "爬山优化",
+      "reason": "技能不启用爬山优化"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "Claude Code",
+      "reason": "Cowork非Code子类"
+    },
+    {
+      "from": "令牌效率",
+      "to": "努力等级",
+      "reason": "令牌效率不衡量努力等级"
+    },
+    {
+      "from": "智能体",
+      "to": "长时运行智能体",
+      "reason": "智能体不用于长时运行智能体"
+    },
+    {
+      "from": "智能体",
+      "to": "监管合规",
+      "reason": "智能体不依赖监管合规"
+    },
+    {
+      "from": "延迟",
+      "to": "商务智能体",
+      "reason": "延迟不衡量商务智能体"
+    },
+    {
+      "from": "智能体",
+      "to": "智能体工作流",
+      "reason": "智能体不替代工作流"
+    },
+    {
+      "from": "Claude Code",
+      "to": "生产部署",
+      "reason": "Claude Code不依赖生产部署"
+    },
+    {
+      "from": "模型路由",
+      "to": "令牌成本",
+      "reason": "模型路由不衡量令牌成本"
+    },
+    {
+      "from": "Claude Code",
+      "to": "令牌成本",
+      "reason": "Claude Code不衡量令牌成本"
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "商家智能体",
+      "reason": "蓝图非商家智能体子类"
+    },
+    {
+      "from": "上下文工程",
+      "to": "缓存命中率",
+      "reason": "上下文工程不衡量缓存命中率"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "延迟",
+      "reason": "工作流不衡量延迟"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "令牌成本",
+      "reason": "工作流不衡量令牌成本"
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "reason": "插件非技能子类"
+    },
+    {
+      "from": "插件",
+      "to": "连接器",
+      "reason": "插件非连接器子类"
+    },
+    {
+      "from": "插件",
+      "to": "子代理",
+      "reason": "插件非子代理子类"
+    },
+    {
+      "from": "事故分诊",
+      "to": "Claude Code",
+      "reason": "事故分诊不衡量Claude Code"
+    },
+    {
+      "from": "令牌成本",
+      "to": "智能体循环",
+      "reason": "令牌成本不衡量智能体循环"
+    },
+    {
+      "from": "业务拓展代表",
+      "to": "技能",
+      "reason": "业务拓展代表不用于技能"
+    },
+    {
+      "from": "人在回路",
+      "to": "自我改进循环",
+      "reason": "人在回路不带来自我改进循环风险"
+    },
+    {
+      "from": "功能开关",
+      "to": "护栏",
+      "reason": "功能开关非护栏子类"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "爬山优化",
+      "reason": "Claude Tag不用于爬山优化"
+    },
+    {
+      "from": "技能",
+      "to": "上下文工程",
+      "reason": "技能非上下文工程子类"
+    },
+    {
+      "from": "技能",
+      "to": "Claude Code",
+      "reason": "技能非Claude Code子类"
+    },
+    {
+      "from": "沙箱",
+      "to": "提示注入",
+      "reason": "沙箱不带来提示注入风险"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "沙箱",
+      "reason": "MCP不用于沙箱"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "上下文窗口",
+      "reason": "CLAUDE.md非上下文窗口子类"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "上下文窗口",
+      "reason": "MCP非上下文窗口子类"
+    },
+    {
+      "from": "上下文工程",
+      "to": "Claude Code",
+      "reason": "上下文工程不启用Claude Code"
+    },
+    {
+      "from": "根因分析",
+      "to": "技术债务",
+      "reason": "根因分析不解决技术债务"
+    },
+    {
+      "from": "技能",
+      "to": "提示工程",
+      "reason": "技能不启用提示工程"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "技能",
+      "reason": "工作流非技能子类"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "子代理",
+      "reason": "工作流非子代理子类"
+    },
+    {
+      "from": "合并队列",
+      "to": "功能开关",
+      "reason": "合并队列不依赖功能开关"
+    },
+    {
+      "from": "钩子",
+      "to": "上下文压缩",
+      "reason": "钩子不解决上下文压缩"
+    },
+    {
+      "from": "技能",
+      "to": "子代理",
+      "reason": "技能不用于子代理"
+    },
+    {
+      "from": "技能",
+      "to": "智能体",
+      "reason": "技能非智能体子类"
+    },
+    {
+      "from": "评估",
+      "to": "技能",
+      "reason": "评估不衡量技能"
+    },
+    {
+      "from": "技能",
+      "to": "子代理",
+      "reason": "技能不替代子代理"
+    },
+    {
+      "from": "投资回报率",
+      "to": "代码现代化",
+      "reason": "ROI不衡量代码现代化"
+    },
+    {
+      "from": "技能",
+      "to": "智能体工作流",
+      "reason": "技能不依赖智能体工作流"
+    },
+    {
+      "from": "Claude Code",
+      "to": "技术债务",
+      "reason": "Claude Code不带来技术债务风险"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "reason": "压缩不用于上下文窗口"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "reason": "子代理不用于上下文窗口"
+    },
+    {
+      "from": "上下文工程",
+      "to": "上下文窗口",
+      "reason": "上下文工程不衡量上下文窗口"
+    },
+    {
+      "from": "沙箱",
+      "to": "验证",
+      "reason": "沙箱不用于验证"
+    },
+    {
+      "from": "验证",
+      "to": "误报",
+      "reason": "验证不解决误报"
+    },
+    {
+      "from": "子代理",
+      "to": "Claude Code",
+      "reason": "子代理非Claude Code子类"
+    },
+    {
+      "from": "连接器",
+      "to": "MCP 服务器",
+      "reason": "连接器非MCP服务器子类"
+    },
+    {
+      "from": "提示缓存",
+      "to": "单任务成本",
+      "reason": "提示缓存不衡量单任务成本"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "令牌效率",
+      "reason": "模型不衡量令牌效率"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "Claude Fable 5",
+      "reason": "Cowork不启用模型"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "上下文",
+      "reason": "模型不依赖上下文"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "技能",
+      "reason": "模型不用于技能"
+    },
+    {
+      "from": "任务委派",
+      "to": "Claude Fable 5",
+      "reason": "任务委派不用于模型"
+    },
+    {
+      "from": "分类器",
+      "to": "Claude Fable 5",
+      "reason": "分类器不带来模型风险"
+    },
+    {
+      "from": "连接器",
+      "to": "上下文",
+      "reason": "连接器不用于上下文"
+    }
+  ],
+  "flip": [
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "reason": "子代理解决上下文窗口限制"
+    },
+    {
+      "from": "技能",
+      "to": "渐进式披露",
+      "rel": "依赖",
+      "reason": "技能依赖渐进式披露"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "MCP 服务器",
+      "rel": "启用",
+      "reason": "MCP启用MCP服务器"
+    },
+    {
+      "from": "努力等级",
+      "to": "验证",
+      "rel": "启用",
+      "reason": "努力等级启用验证"
+    },
+    {
+      "from": "努力等级",
+      "to": "单任务成本",
+      "rel": "衡量",
+      "reason": "努力等级衡量单任务成本"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "插件",
+      "rel": "启用",
+      "reason": "Cowork启用插件"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "连接器",
+      "rel": "依赖",
+      "reason": "Cowork依赖连接器"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "插件",
+      "rel": "依赖",
+      "reason": "Cowork依赖插件"
+    },
+    {
+      "from": "渐进式披露",
+      "to": "技能",
+      "rel": "用于",
+      "reason": "渐进式披露用于技能"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "reason": "压缩解决上下文窗口限制"
+    },
+    {
+      "from": "技能",
+      "to": "渐进式披露",
+      "rel": "启用",
+      "reason": "技能启用渐进式披露"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "用于",
+      "reason": "Claude Code用于智能体编程"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "依赖",
+      "reason": "子代理依赖上下文窗口"
+    },
+    {
+      "from": "动态工作流",
+      "to": "子代理",
+      "rel": "依赖",
+      "reason": "动态工作流依赖子代理"
+    },
+    {
+      "from": "动态工作流",
+      "to": "子代理",
+      "rel": "启用",
+      "reason": "动态工作流启用子代理"
+    },
+    {
+      "from": "自动模式",
+      "to": "分类器",
+      "rel": "依赖",
+      "reason": "自动模式依赖分类器"
+    },
+    {
+      "from": "自动模式",
+      "to": "提示注入",
+      "rel": "解决",
+      "reason": "自动模式解决提示注入"
+    },
+    {
+      "from": "分类器",
+      "to": "护栏",
+      "rel": "依赖",
+      "reason": "分类器依赖护栏"
+    },
+    {
+      "from": "提示工程",
+      "to": "幻觉",
+      "rel": "解决",
+      "reason": "提示工程解决幻觉"
+    },
+    {
+      "from": "自适应思考",
+      "to": "扩展思考",
+      "rel": "替代",
+      "reason": "自适应思考替代扩展思考"
+    },
+    {
+      "from": "智能体循环",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "智能体循环依赖上下文工程"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文工程",
+      "rel": "解决",
+      "reason": "压缩解决上下文工程问题"
+    },
+    {
+      "from": "智能体",
+      "to": "人在回路",
+      "rel": "依赖",
+      "reason": "智能体依赖人在回路"
+    },
+    {
+      "from": "企业AI转型",
+      "to": "智能体",
+      "rel": "依赖",
+      "reason": "企业AI转型依赖智能体"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "智能体",
+      "rel": "启用",
+      "reason": "Cowork启用智能体"
+    },
+    {
+      "from": "人在回路",
+      "to": "企业AI转型",
+      "rel": "属于",
+      "reason": "人在回路属于企业AI转型"
+    },
+    {
+      "from": "智能体",
+      "to": "监管合规",
+      "rel": "风险",
+      "reason": "智能体带来监管合规风险"
+    },
+    {
+      "from": "可观测性",
+      "to": "监管合规",
+      "rel": "解决",
+      "reason": "可观测性解决监管合规"
+    },
+    {
+      "from": "审计追踪",
+      "to": "监管合规",
+      "rel": "用于",
+      "reason": "审计追踪用于监管合规"
+    },
+    {
+      "from": "可观测性",
+      "to": "审计追踪",
+      "rel": "用于",
+      "reason": "可观测性用于审计追踪"
+    },
+    {
+      "from": "记忆",
+      "to": "会话",
+      "rel": "解决",
+      "reason": "记忆解决会话问题"
+    },
+    {
+      "from": "连接器",
+      "to": "Claude Cowork",
+      "rel": "启用",
+      "reason": "连接器启用Cowork"
+    },
+    {
+      "from": "商务智能体",
+      "to": "商家智能体",
+      "rel": "属于",
+      "reason": "商务智能体属于商家智能体"
+    },
+    {
+      "from": "人在回路",
+      "to": "智能体编程",
+      "rel": "解决",
+      "reason": "人在回路解决智能体编程问题"
+    },
+    {
+      "from": "护栏",
+      "to": "提示注入",
+      "rel": "解决",
+      "reason": "护栏解决提示注入"
+    },
+    {
+      "from": "验证",
+      "to": "智能体循环",
+      "rel": "属于",
+      "reason": "验证属于智能体循环"
+    },
+    {
+      "from": "技能",
+      "to": "验证",
+      "rel": "启用",
+      "reason": "技能启用验证"
+    },
+    {
+      "from": "Claude Code",
+      "to": "验证",
+      "rel": "用于",
+      "reason": "Claude Code用于验证"
+    },
+    {
+      "from": "评估",
+      "to": "智能体",
+      "rel": "衡量",
+      "reason": "评估衡量智能体"
+    },
+    {
+      "from": "生产部署",
+      "to": "评估",
+      "rel": "依赖",
+      "reason": "生产部署依赖评估"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "to": "智能体框架",
+      "rel": "依赖",
+      "reason": "托管智能体依赖智能体框架"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "to": "会话",
+      "rel": "启用",
+      "reason": "托管智能体启用会话"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "to": "沙箱",
+      "rel": "启用",
+      "reason": "托管智能体启用沙箱"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "to": "可观测性",
+      "rel": "启用",
+      "reason": "托管智能体启用可观测性"
+    },
+    {
+      "from": "Claude Agent SDK",
+      "to": "智能体框架",
+      "rel": "依赖",
+      "reason": "Agent SDK依赖智能体框架"
+    },
+    {
+      "from": "提示工程",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "提示工程依赖上下文工程"
+    },
+    {
+      "from": "评估框架",
+      "to": "上下文工程",
+      "rel": "用于",
+      "reason": "评估框架用于上下文工程"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "智能体",
+      "rel": "属于",
+      "reason": "Claude Tag属于智能体"
+    },
+    {
+      "from": "智能体",
+      "to": "提示注入",
+      "rel": "风险",
+      "reason": "智能体带来提示注入风险"
+    },
+    {
+      "from": "Claude Code",
+      "to": "子代理",
+      "rel": "启用",
+      "reason": "Claude Code启用子代理"
+    },
+    {
+      "from": "Claude Code",
+      "to": "钩子",
+      "rel": "启用",
+      "reason": "Claude Code启用钩子"
+    },
+    {
+      "from": "Claude Code",
+      "to": "遗留系统迁移",
+      "rel": "用于",
+      "reason": "Claude Code用于遗留系统迁移"
+    },
+    {
+      "from": "内部试用",
+      "to": "自我改进循环",
+      "rel": "依赖",
+      "reason": "内部试用依赖自我改进循环"
+    },
+    {
+      "from": "上下文工程",
+      "to": "令牌成本",
+      "rel": "解决",
+      "reason": "上下文工程解决令牌成本"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文工程",
+      "rel": "用于",
+      "reason": "子代理用于上下文工程"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "CLAUDE.md依赖上下文工程"
+    },
+    {
+      "from": "MCP 服务器",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "MCP服务器依赖上下文工程"
+    },
+    {
+      "from": "插件",
+      "to": "Claude Cowork",
+      "rel": "用于",
+      "reason": "插件用于Cowork"
+    },
+    {
+      "from": "最佳实践",
+      "to": "Claude Cowork",
+      "rel": "用于",
+      "reason": "最佳实践用于Cowork"
+    },
+    {
+      "from": "技能",
+      "to": "插件",
+      "rel": "用于",
+      "reason": "技能用于插件"
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "依赖",
+      "reason": "插件依赖技能"
+    },
+    {
+      "from": "商务智能体",
+      "to": "智能体蓝图",
+      "rel": "依赖",
+      "reason": "商务智能体依赖智能体蓝图"
+    },
+    {
+      "from": "商家智能体",
+      "to": "人在回路",
+      "rel": "依赖",
+      "reason": "商家智能体依赖人在回路"
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "Claude Code",
+      "rel": "用于",
+      "reason": "智能体蓝图用于Claude Code"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "reason": "Cowork依赖MCP"
+    },
+    {
+      "from": "Claude Agent SDK",
+      "to": "Claude Cowork",
+      "rel": "用于",
+      "reason": "Agent SDK用于Cowork"
+    },
+    {
+      "from": "模型路由",
+      "to": "上下文",
+      "rel": "依赖",
+      "reason": "模型路由依赖上下文"
+    },
+    {
+      "from": "Claude Code",
+      "to": "模型路由",
+      "rel": "启用",
+      "reason": "Claude Code启用模型路由"
+    },
+    {
+      "from": "Claude Code",
+      "to": "努力等级",
+      "rel": "启用",
+      "reason": "Claude Code启用努力等级"
+    },
+    {
+      "from": "顾问策略",
+      "to": "单任务成本",
+      "rel": "解决",
+      "reason": "顾问策略解决单任务成本"
+    },
+    {
+      "from": "Claude Opus 5.5",
+      "to": "Claude Code",
+      "rel": "用于",
+      "reason": "Opus 5.5用于Claude Code"
+    },
+    {
+      "from": "智能体编程",
+      "to": "上下文窗口",
+      "rel": "依赖",
+      "reason": "智能体编程依赖上下文窗口"
+    },
+    {
+      "from": "子代理",
+      "to": "提示缓存",
+      "rel": "依赖",
+      "reason": "子代理依赖提示缓存"
+    },
+    {
+      "from": "Claude Opus 5.5",
+      "to": "令牌成本",
+      "rel": "解决",
+      "reason": "Opus 5.5解决令牌成本"
+    },
+    {
+      "from": "缓存命中率",
+      "to": "令牌成本",
+      "rel": "衡量",
+      "reason": "缓存命中率衡量令牌成本"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "连接器",
+      "rel": "依赖",
+      "reason": "Claude Tag依赖连接器"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "智能体",
+      "rel": "用于",
+      "reason": "智能体工作流用于智能体"
+    },
+    {
+      "from": "动态工作流",
+      "to": "智能体工作流",
+      "rel": "属于",
+      "reason": "动态工作流属于智能体工作流"
+    },
+    {
+      "from": "Claude Code",
+      "to": "技能",
+      "rel": "启用",
+      "reason": "Claude Code启用技能"
+    },
+    {
+      "from": "插件",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "reason": "插件依赖MCP"
+    },
+    {
+      "from": "插件市场",
+      "to": "插件",
+      "rel": "用于",
+      "reason": "插件市场用于插件"
+    },
+    {
+      "from": "研究预览",
+      "to": "Claude Cowork",
+      "rel": "属于",
+      "reason": "研究预览属于Cowork"
+    },
+    {
+      "from": "智能体",
+      "to": "代码现代化",
+      "rel": "用于",
+      "reason": "智能体用于代码现代化"
+    },
+    {
+      "from": "代码现代化",
+      "to": "遗留系统迁移",
+      "rel": "依赖",
+      "reason": "代码现代化依赖遗留系统迁移"
+    },
+    {
+      "from": "评估框架",
+      "to": "智能体框架",
+      "rel": "用于",
+      "reason": "评估框架用于智能体框架"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "Claude 托管智能体",
+      "rel": "启用",
+      "reason": "Claude平台启用托管智能体"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "子代理",
+      "rel": "启用",
+      "reason": "Claude平台启用子代理"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "reason": "多智能体系统依赖MCP"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "多智能体系统",
+      "rel": "用于",
+      "reason": "Claude平台用于多智能体系统"
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "MCP 服务器",
+      "rel": "用于",
+      "reason": "程序化工具调用用于MCP服务器"
+    },
+    {
+      "from": "调试",
+      "to": "根因分析",
+      "rel": "依赖",
+      "reason": "调试依赖根因分析"
+    },
+    {
+      "from": "Claude Code",
+      "to": "调试",
+      "rel": "用于",
+      "reason": "Claude Code用于调试"
+    },
+    {
+      "from": "技能",
+      "to": "验证",
+      "rel": "用于",
+      "reason": "技能用于验证"
+    },
+    {
+      "from": "子代理",
+      "to": "Claude Code",
+      "rel": "用于",
+      "reason": "子代理用于Claude Code"
+    },
+    {
+      "from": "智能体框架",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "智能体框架依赖上下文工程"
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "reason": "程序化工具调用解决上下文窗口限制"
+    },
+    {
+      "from": "提示缓存",
+      "to": "智能体框架",
+      "rel": "用于",
+      "reason": "提示缓存用于智能体框架"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "记忆",
+      "rel": "依赖",
+      "reason": "Claude Tag依赖记忆"
+    },
+    {
+      "from": "智能体编程",
+      "to": "调试",
+      "rel": "用于",
+      "reason": "智能体编程用于调试"
+    },
+    {
+      "from": "智能体编程",
+      "to": "测试驱动开发",
+      "rel": "启用",
+      "reason": "智能体编程启用测试驱动开发"
+    },
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE.md",
+      "rel": "依赖",
+      "reason": "Claude Code依赖CLAUDE.md"
+    },
+    {
+      "from": "子代理",
+      "to": "智能体编程",
+      "rel": "用于",
+      "reason": "子代理用于智能体编程"
+    },
+    {
+      "from": "Claude Code",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "reason": "Claude Code用于工作流自动化"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude Cowork",
+      "rel": "用于",
+      "reason": "MCP用于Cowork"
+    },
+    {
+      "from": "提示工程",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "reason": "提示工程用于工作流自动化"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "工作流自动化",
+      "rel": "用于",
+      "reason": "MCP用于工作流自动化"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "工作流自动化",
+      "rel": "启用",
+      "reason": "Claude平台启用工作流自动化"
+    },
+    {
+      "from": "技能",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "技能依赖上下文工程"
+    },
+    {
+      "from": "智能体编程",
+      "to": "上下文工程",
+      "rel": "依赖",
+      "reason": "智能体编程依赖上下文工程"
+    },
+    {
+      "from": "Claude Code",
+      "to": "工具搜索",
+      "rel": "依赖",
+      "reason": "Claude Code依赖工具搜索"
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "启用",
+      "reason": "插件启用技能"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude 平台",
+      "rel": "用于",
+      "reason": "MCP用于Claude平台"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude 托管智能体",
+      "rel": "用于",
+      "reason": "Claude Code用于托管智能体"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "人机团队",
+      "rel": "用于",
+      "reason": "Claude Tag用于人机团队"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "事件响应",
+      "rel": "用于",
+      "reason": "Claude Tag用于事件响应"
+    },
+    {
+      "from": "智能体编程",
+      "to": "Claude Fable 5",
+      "rel": "依赖",
+      "reason": "智能体编程依赖Fable 5"
+    },
+    {
+      "from": "评估",
+      "to": "长时运行智能体",
+      "rel": "衡量",
+      "reason": "评估衡量长时运行智能体"
+    },
+    {
+      "from": "提示注入",
+      "to": "长时运行智能体",
+      "rel": "风险",
+      "reason": "提示注入带来长时运行智能体风险"
+    },
+    {
+      "from": "钩子",
+      "to": "Claude Code",
+      "rel": "属于",
+      "reason": "钩子属于Claude Code"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "动态工作流",
+      "rel": "用于",
+      "reason": "智能体工作流用于动态工作流"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "模型上下文协议",
+      "rel": "依赖",
+      "reason": "Claude Tag依赖MCP"
+    },
+    {
+      "from": "技能",
+      "to": "上下文工程",
+      "rel": "属于",
+      "reason": "技能属于上下文工程"
+    },
+    {
+      "from": "智能体编程",
+      "to": "技术债务",
+      "rel": "解决",
+      "reason": "智能体编程解决技术债务"
+    },
+    {
+      "from": "技能",
+      "to": "Claude Code",
+      "rel": "属于",
+      "reason": "技能属于Claude Code"
+    },
+    {
+      "from": "插件市场",
+      "to": "技能",
+      "rel": "用于",
+      "reason": "插件市场用于技能"
+    },
+    {
+      "from": "计划模式",
+      "to": "提示缓存",
+      "rel": "依赖",
+      "reason": "计划模式依赖提示缓存"
+    },
+    {
+      "from": "缓存命中率",
+      "to": "提示缓存",
+      "rel": "衡量",
+      "reason": "缓存命中率衡量提示缓存"
+    },
+    {
+      "from": "智能体框架",
+      "to": "上下文工程",
+      "rel": "用于",
+      "reason": "智能体框架用于上下文工程"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "沙箱",
+      "rel": "用于",
+      "reason": "MCP用于沙箱"
+    },
+    {
+      "from": "Claude Code",
+      "to": "提示缓存",
+      "rel": "启用",
+      "reason": "Claude Code启用提示缓存"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "智能体",
+      "rel": "属于",
+      "reason": "Cowork属于智能体"
+    },
+    {
+      "from": "上下文工程",
+      "to": "技术债务",
+      "rel": "解决",
+      "reason": "上下文工程解决技术债务"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "提示缓存",
+      "rel": "启用",
+      "reason": "Claude平台启用提示缓存"
+    },
+    {
+      "from": "智能体编程",
+      "to": "代码审查",
+      "rel": "启用",
+      "reason": "智能体编程启用代码审查"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "内部试用",
+      "rel": "用于",
+      "reason": "Cowork用于内部试用"
+    },
+    {
+      "from": "提示工程",
+      "to": "智能体编程",
+      "rel": "用于",
+      "reason": "提示工程用于智能体编程"
+    },
+    {
+      "from": "技能",
+      "to": "上下文窗口",
+      "rel": "解决",
+      "reason": "技能解决上下文窗口限制"
+    },
+    {
+      "from": "子代理",
+      "to": "技能",
+      "rel": "依赖",
+      "reason": "子代理依赖技能"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "验证",
+      "rel": "用于",
+      "reason": "CLAUDE.md用于验证"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文工程",
+      "rel": "启用",
+      "reason": "子代理启用上下文工程"
+    },
+    {
+      "from": "钩子",
+      "to": "子代理",
+      "rel": "用于",
+      "reason": "钩子用于子代理"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "子代理",
+      "rel": "启用",
+      "reason": "Cowork启用子代理"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "长时运行智能体",
+      "rel": "启用",
+      "reason": "Cowork启用长时运行智能体"
+    },
+    {
+      "from": "智能体编程",
+      "to": "代码现代化",
+      "rel": "用于",
+      "reason": "智能体编程用于代码现代化"
+    },
+    {
+      "from": "企业AI转型",
+      "to": "AI治理",
+      "rel": "依赖",
+      "reason": "企业AI转型依赖AI治理"
+    },
+    {
+      "from": "上下文工程",
+      "to": "渐进式披露",
+      "rel": "依赖",
+      "reason": "上下文工程依赖渐进式披露"
+    }
+  ],
+  "add": [
+    {
+      "from": "子代理",
+      "rel": "解决",
+      "to": "上下文窗口",
+      "reason": "子代理解决上下文窗口限制"
+    },
+    {
+      "from": "技能",
+      "rel": "依赖",
+      "to": "渐进式披露",
+      "reason": "技能依赖渐进式披露"
+    },
+    {
+      "from": "模型上下文协议",
+      "rel": "启用",
+      "to": "MCP 服务器",
+      "reason": "MCP启用MCP服务器"
+    },
+    {
+      "from": "Claude Code",
+      "rel": "启用",
+      "to": "子代理",
+      "reason": "Claude Code启用子代理"
+    },
+    {
+      "from": "Claude Code",
+      "rel": "启用",
+      "to": "钩子",
+      "reason": "Claude Code启用钩子"
+    },
+    {
+      "from": "Claude Code",
+      "rel": "依赖",
+      "to": "CLAUDE.md",
+      "reason": "Claude Code依赖CLAUDE.md"
+    },
+    {
+      "from": "Claude Code",
+      "rel": "启用",
+      "to": "技能",
+      "reason": "Claude Code启用技能"
+    },
+    {
+      "from": "Claude Code",
+      "rel": "启用",
+      "to": "提示缓存",
+      "reason": "Claude Code启用提示缓存"
+    },
+    {
+      "from": "Claude Code",
+      "rel": "依赖",
+      "to": "工具搜索",
+      "reason": "Claude Code依赖工具搜索"
+    },
+    {
+      "from": "Claude 平台",
+      "rel": "启用",
+      "to": "Claude 托管智能体",
+      "reason": "Claude平台启用托管智能体"
+    },
+    {
+      "from": "Claude 平台",
+      "rel": "启用",
+      "to": "子代理",
+      "reason": "Claude平台启用子代理"
+    },
+    {
+      "from": "Claude 平台",
+      "rel": "启用",
+      "to": "提示缓存",
+      "reason": "Claude平台启用提示缓存"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "rel": "启用",
+      "to": "会话",
+      "reason": "托管智能体启用会话"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "rel": "启用",
+      "to": "沙箱",
+      "reason": "托管智能体启用沙箱"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "rel": "启用",
+      "to": "可观测性",
+      "reason": "托管智能体启用可观测性"
+    },
+    {
+      "from": "Claude Agent SDK",
+      "rel": "依赖",
+      "to": "智能体框架",
+      "reason": "Agent SDK依赖智能体框架"
+    },
+    {
+      "from": "Claude Agent SDK",
+      "rel": "启用",
+      "to": "智能体循环",
+      "reason": "Agent SDK启用智能体循环"
+    },
+    {
+      "from": "插件",
+      "rel": "依赖",
+      "to": "技能",
+      "reason": "插件依赖技能"
+    },
+    {
+      "from": "插件",
+      "rel": "依赖",
+      "to": "模型上下文协议",
+      "reason": "插件依赖MCP"
+    },
+    {
+      "from": "Claude Cowork",
+      "rel": "依赖",
+      "to": "模型上下文协议",
+      "reason": "Cowork依赖MCP"
+    }
+  ]
+}

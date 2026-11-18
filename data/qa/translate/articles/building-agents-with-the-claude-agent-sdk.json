@@ -1,0 +1,51 @@
+{
+  "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+  "issues": [
+    {
+      "zh": "牢记智能体循环（收集上下文、采取行动、验证工作）",
+      "fix": "牢记智能体循环（收集上下文、采取行动、验证工作）",
+      "type": "漏译",
+      "note": "原文含your verifying work，漏译“你的”"
+    },
+    {
+      "zh": "## 上手（onboarding）",
+      "fix": "## 上手",
+      "type": "名词错",
+      "note": "原文标题无onboarding，属多余添加"
+    },
+    {
+      "zh": "以及用户之前是否曾向对方发送过邮件（如果是，抛出警告）",
+      "fix": "以及用户之前是否曾向对方发送过邮件（如果曾发过，抛出警告）",
+      "type": "误译",
+      "note": "if so指曾发过，非“如果是”"
+    },
+    {
+      "zh": "并通过调用以下内容在其中搜索有用信息，如下图所示：",
+      "fix": "并通过调用以下工具在其中搜索有用信息，如下图所示：",
+      "type": "语句不通",
+      "note": "“调用以下内容”搭配不当"
+    },
+    {
+      "zh": "这为我们思考其他智能体以及应当赋予它们哪些能力提供了一种有用的方式。",
+      "fix": "这为我们思考其他智能体以及应当赋予它们哪些能力提供了一种有用的方式。",
+      "type": "语句不通",
+      "note": "“这为我们……提供了”结构可读，但“为……提供方式”略拗口，属可接受"
+    },
+    {
+      "zh": "使其成为 Claude 在决定如何完成任务时考虑的主要行动",
+      "fix": "使其成为 Claude 在决定如何完成任务时考虑的主要行动",
+      "type": "语句不通",
+      "note": "“行动”应为“操作/动作”，但可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6717,
+    "completion_tokens": 337,
+    "total_tokens": 7054,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6589
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+  "issues": [
+    {
+      "zh": "它托住工作底层的完整性，让我的时间可以投入到上层的叙事",
+      "fix": "它承担了工作底层的完整性保障，让我的时间可以投入到上层的叙事",
+      "type": "语句不通",
+      "note": "“托住完整性”搭配不当"
+    },
+    {
+      "zh": "我几乎能直接追踪到模型变好带来的差异",
+      "fix": "我几乎能直接追踪到模型变好带来的差别",
+      "type": "语句不通",
+      "note": "“追踪差异”搭配生硬"
+    },
+    {
+      "zh": "我于 2025 年 3 月加入 Anthropic 的企业财务与战略团队",
+      "fix": "我于 2025 年 3 月加入 Anthropic 的企业财务与战略团队",
+      "type": "名词错",
+      "note": "原文为2025年3月，无误"
+    },
+    {
+      "zh": "由分析师自己通过提示词构建的交互式预测和队列仪表盘",
+      "fix": "由分析师自己通过提示词构建的交互式预测和群组仪表盘",
+      "type": "误译",
+      "note": "cohort此处指用户群组，非队列"
+    },
+    {
+      "zh": "我几乎完全依靠 Claude Cowork [项目](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)、Claude for Excel 和 Google Suite Connector 运行",
+      "fix": "我几乎完全依靠 Claude Cowork [项目](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)、Claude for Excel 和 Google Workspace 连接器运行",
+      "type": "术语不一致",
+      "note": "前文译Google Workspace连接器，此处不一致"
+    },
+    {
+      "zh": "我还会让它像董事会成员那样阅读叙事，标出其中自相矛盾之处，或假定读者并不具备的背景信息",
+      "fix": "我还会让它像董事会成员那样阅读叙事，标出其中自相矛盾之处，或假定读者并不具备某些背景信息的地方",
+      "type": "语句不通",
+      "note": "“标出……背景信息”缺谓语搭配"
+    },
+    {
+      "zh": "我几乎能直接追踪到模型变好带来的差异",
+      "fix": "我几乎能直接追踪到模型变好带来的差别",
+      "type": "语句不通",
+      "note": "重复项，忽略"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3949,
+    "completion_tokens": 467,
+    "total_tokens": 4416,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3821
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "rel": "webinars/future-of-ai-coding-mcp-vs-code.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 977,
+    "completion_tokens": 5,
+    "total_tokens": 982,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 849
+  }
+}

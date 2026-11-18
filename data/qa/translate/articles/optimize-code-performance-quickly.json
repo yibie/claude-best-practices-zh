@@ -1,0 +1,27 @@
+{
+  "rel": "articles/optimize-code-performance-quickly.md",
+  "issues": [
+    {
+      "zh": "在瓶颈影响用户之前就将其防患于未然",
+      "fix": "在瓶颈影响用户之前就将其消除",
+      "type": "语句不通",
+      "note": "防患于未然不能带宾语"
+    },
+    {
+      "zh": "事件分诊时间减少 80%",
+      "fix": "事件排查时间减少 80%",
+      "type": "误译",
+      "note": "triage此处指排查而非医疗分诊"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4591,
+    "completion_tokens": 87,
+    "total_tokens": 4678,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4463
+  }
+}

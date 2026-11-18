@@ -1,0 +1,51 @@
+{
+  "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+  "issues": [
+    {
+      "zh": "Brendan 曾怀疑，现代 AI 编程工具能否像一款专为 C# 语言和环境打造的工具那样理解 C# 代码。",
+      "fix": "Brendan 曾怀疑，现代 AI 编程工具能否像一款专为 C# 语言和环境打造的工具那样理解 C# 代码。",
+      "type": "误译",
+      "note": "原文指专用工具已能做到，此处语气偏差"
+    },
+    {
+      "zh": "在让一位熟练的 LabKey 开发者用 Claude Code 编写了搭建文档之后",
+      "fix": "在让一位熟练的 LabKey 开发者用 Claude Code 编写了搭建文档之后",
+      "type": "误译",
+      "note": "原文为setup文档，非搭建文档"
+    },
+    {
+      "zh": "数据来自 LabKey Server 上三路相互独立的关系数据流、团队邮件，以及 GitHub 上带发布标签的代码。",
+      "fix": "数据来自 LabKey Server 上三路相互独立的关系数据流、团队邮件，以及 GitHub 上带发布标签的代码。",
+      "type": "误译",
+      "note": "原文为三个独立数据源，非三路数据流"
+    },
+    {
+      "zh": "而这些功能他们过去可能觉得自己被其他工作埋没，根本无暇尝试",
+      "fix": "而这些功能他们过去可能觉得自己被其他工作埋没，根本无暇尝试",
+      "type": "语句不通",
+      "note": "被其他工作埋没，搭配不当"
+    },
+    {
+      "zh": "没有上手预算，没有书面记录之外的机构记忆",
+      "fix": "没有上手预算，没有书面记录之外的机构记忆",
+      "type": "误译",
+      "note": "原文指无入职培训预算，非上手预算"
+    },
+    {
+      "zh": "并以人类机构知识永远无法做到的方式贯穿项目的整个生命周期",
+      "fix": "并以人类机构知识永远无法做到的方式贯穿项目的整个生命周期",
+      "type": "语句不通",
+      "note": "机构知识译法生硬，应为组织知识"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4813,
+    "completion_tokens": 383,
+    "total_tokens": 5196,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4685
+  }
+}

@@ -47,7 +47,7 @@ Stop and ask me only if a test fails for a reason you can't explain.
 
 **为什么在 Opus 5.5 上重要。** Opus 5.5 在回复前总会先思考，并由它自己决定思考多少。你不需要要求它思考。我们在某聊天产品中的测试显示，删掉“仔细思考”这句话后，回复开始得更快，质量没有明显下降。
 
-**怎么做。** 删掉这句话。对于简单问题的快速回答，直接说明：“直接回答。”要在 Claude Code 中改变它的思考量，请[调整 effort](https://claude.dev/blog/spending-your-effort/)。
+**怎么做。** 删掉这句话。对于简单问题想要快速回答，就直接说明：“直接回答。”要在 Claude Code 中改变它的思考量，请[更改 effort 设置](https://claude.dev/blog/spending-your-effort/)。
 
 ### 向正在运行的任务追加内容
 
@@ -55,7 +55,7 @@ Stop and ask me only if a test fails for a reason you can't explain.
 
 **为什么在 Opus 5.5 上重要。** 现在的运行轮次更长，因此重新开始代价更大。
 
-**怎么做。** 在 Claude Code 中，在 Claude 工作时输入消息并按 Enter，例如：“Also keep the old endpoint names as aliases.”
+**怎么做。** 在 Claude Code 中，在 Claude 工作时输入消息并按回车键，例如：“Also keep the old endpoint names as aliases.”
 
 ### 对于设计工作，点名你不想要的风格
 
@@ -117,7 +117,7 @@ Finish with one table: service, affected yes or no, and the evidence.
 
 ### 把任务列表保存在文件里
 
-**做法。** 对于会持续一段时间的运行，让 Opus 5.5 把任务列表保存在一个文件里，并随进展更新。然后读这个文件，而不是翻滚动记录，来了解运行进行到哪了。
+**做法。** 对于耗时较长的运行，让 Opus 5.5 把任务列表保存在一个文件里，并随进展更新。然后读这个文件，而不是翻看滚动记录，来了解运行进行到哪了。
 
 **为什么在 Opus 5.5 上重要。** 现在的运行轮次更长。长时程运行会填满上下文窗口，Claude Code 随后会总结较早的轮次。文件中的列表能经受住这一点，并让你一眼看出哪些已完成、哪些还剩。
 
@@ -150,7 +150,7 @@ List only problems you'd block the merge for. For each one, give the file and li
 
 **做法。** 对于研究和分析，让它说明哪些内容它找不到或无法核实。
 
-**为什么在 Opus 5.5 上重要。**“我找不到这个”值得一读，而主动要求它标出，就更容易找到。
+**为什么在 Opus 5.5 上重要。**“我找不到这个”值得一读，而主动要求它标出，就更容易发现这类内容。
 
 **怎么做。** 在请求中加上“标出任何你无法确认的内容，并说明你在哪里找过”。这在 Claude 研究报告和 Claude Code 中都有效。
 
@@ -168,7 +168,7 @@ List only problems you'd block the merge for. For each one, give the file and li
 
 **做法。** 给它一份长计划、报告或演示文稿，让它找出错误。
 
-**为什么在 Opus 5.5 上重要。** Opus 5.5 比之前的 Opus 模型更注重细节。在我们的测试中，它在一个很长的规划讨论串中发现了日期与星期几不符的问题，以及演示文稿中图表与数字不一致的问题。
+**为什么在 Opus 5.5 上重要。** Opus 5.5 比之前的 Opus 模型更注重细节。在我们的测试中，它在一个很长的规划讨论串中发现了日期落在错误星期几的问题，以及演示文稿中图表与数字不一致的问题。
 
 **怎么做。** 提交提示词：“检查这份演示文稿中任何自相矛盾之处：数字、日期和名称。引用每个问题并说明其位置。”
 
@@ -192,11 +192,11 @@ PROMPT
 
 Once you have answered something, treat that answer as done. Focus on what I'm asking now, and don't go back over an earlier answer unless I ask about it or point out a problem with it.
 
-在长时间分析类项目中不要加这条，因为后面的步骤可能揭示前面步骤中的错误。
+在长时间分析类项目中不要加这条，因为后面的步骤可能暴露前面步骤中的错误。
 
 ## 5\. 当消息被标记时
 
-Opus 5.5 是首个在发布时即配备 Fable 级生物与网络安全防护的 Opus 模型。在 Claude 应用和 Claude Code 中，大多数被标记的消息会转到较旧的模型，你的工作在那里继续。在源代码中查找安全漏洞是允许的，日常的健康和教育问题也应仍然可用。这些防护有时会标记合法的工作，我们正在调整它们以减少错误标记。如果你被切换了，以下是你将看到的内容以及该怎么做。
+Opus 5.5 是首个在发布时即配备 Fable 级生物与网络安全防护的 Opus 模型。在 Claude 应用和 Claude Code 中，大多数被标记的消息会转到较旧的模型，你的工作在那里继续。在源代码中查找安全漏洞是允许的，日常的健康和教育问题也应仍然可以正常处理。这些防护有时会标记合法的工作，我们正在调整它们以减少错误标记。如果你被切换了，以下是你将看到的内容以及该怎么做。
 
 ### 在 Claude 应用中
 
@@ -205,9 +205,9 @@ Opus 5.5 是首个在发布时即配备 Fable 级生物与网络安全防护的 
 **该怎么做。**
 
 -   要回到 Opus 5.5，在模型选择器中选择它。如果先前的消息仍在对话中，它可能再次被标记。开始新对话可以避免这一点。
--   要让它先询问你，请前往 Settings，然后 Capabilities，关闭“Switch models when a message is flagged”。你会看到一张带选项的“paused”卡片。
+-   要让它先询问你，请前往“设置”，然后“功能”，关闭“Switch models when a message is flagged”。你会看到一张带选项的“paused”卡片。
 
-检查覆盖对话中的所有内容，包括文件和搜索结果。因此标记可能来自较早的内容，而不只是你最后一条消息。
+这项检查覆盖对话中的所有内容，包括文件和搜索结果。因此标记可能来自较早的内容，而不只是你最后一条消息。
 
 ### 在 Claude Code 中
 
@@ -234,7 +234,7 @@ Opus 5.5 是首个在发布时即配备 Fable 级生物与网络安全防护的 
 
 **做法。** 在 Claude Code 中，对于来回交互的工作使用 fast mode，即你读完每条回复后再发送下一条消息。
 
-**为什么在 Opus 5.5 上重要。** Fast mode 在发布时作为研究预览提供给 Opus 5.5。你得到的是同一个模型，文本到达得更快。它需要开启额外用量，且每 token 的成本高于标准模式。
+**为什么在 Opus 5.5 上重要。** fast mode 在发布时作为研究预览提供给 Opus 5.5。你得到的是同一个模型，文本到达得更快。它需要开启额外用量，且每 token 的成本高于标准模式。
 
 **怎么做。** 在 Claude 中输入 /fast。
 

@@ -1,0 +1,39 @@
+{
+  "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+  "issues": [
+    {
+      "zh": "有七种方法可以指示 Claude 的行为：CLAUDE.md 文件、规则（rules）、[**Skills（技能）**](https://code.claude.com/docs/en/skills)、[**子智能体**](https://code.claude.com/docs/en/sub-agents)、[**钩子（hooks）**](https://code.claude.com/docs/en/hooks-guide)、输出样式（output styles），以及追加系统提示词。",
+      "fix": "有七种方法可以指示 Claude 的行为：CLAUDE.md 文件、规则（rules）、[**Skills（技能）**](https://code.claude.com/docs/en/skills)、[**子智能体**](https://code.claude.com/docs/en/sub-agents)、[**钩子（hooks）**](https://code.claude.com/docs/en/hooks-guide)、输出样式（output styles），以及追加系统提示词。",
+      "type": "名词错",
+      "note": "原文说七种但只列六项，译文照搬未补"
+    },
+    {
+      "zh": "有七种方式可以自定义 Claude Code 的行为：CLAUDE.md 文件用于始终开启的项目上下文，规则用于硬性约束，Skills 用于可复用的流程，子智能体用于委派工作，钩子（hooks）用于确定性自动化，而输出样式或系统提示词追加用于全局变更。",
+      "fix": "有七种方式可以自定义 Claude Code 的行为：CLAUDE.md 文件用于始终开启的项目上下文，规则用于硬性约束，Skills 用于可复用的流程，子智能体用于委派工作，钩子（hooks）用于确定性自动化，而输出样式或系统提示词追加用于全局变更。",
+      "type": "名词错",
+      "note": "原文七种仅列六项，译文未补全"
+    },
+    {
+      "zh": "当 Claude 读取该目录内的文件时，cwd 之下的所有子目录 CLAUDE.md 文件都会加载。",
+      "fix": "当 Claude 读取该目录内的文件时，cwd 之下的所有子目录 CLAUDE.md 文件都会加载。",
+      "type": "误译",
+      "note": "原文为below the cwd，指cwd之下，译文可接受但语义模糊"
+    },
+    {
+      "zh": "记忆化。读取一次并缓存供会话使用；上下文压缩后缓存清除并重新读取",
+      "fix": "记忆化。读取一次并缓存供会话使用；上下文压缩后缓存清除并重新读取",
+      "type": "术语不一致",
+      "note": "原文Memoized，译文记忆化，术语生硬但一致"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3422,
+    "completion_tokens": 533,
+    "total_tokens": 3955,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3294
+  }
+}

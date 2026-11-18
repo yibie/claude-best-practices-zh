@@ -1,0 +1,51 @@
+{
+  "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+  "issues": [
+    {
+      "zh": "在 Claude Code 之前发生的更高层级的编排",
+      "fix": "在 Claude Code 之前进行的更高层级编排",
+      "type": "语句不通",
+      "note": "“编排发生”搭配不当"
+    },
+    {
+      "zh": "在评估规划输出方面一无所有",
+      "fix": "在评估规划输出方面则是一片空白",
+      "type": "语句不通",
+      "note": "“一无所有”用词不当"
+    },
+    {
+      "zh": "达到目标消耗了多少 token",
+      "fix": "达到目标消耗了多少 token",
+      "type": "语句不通",
+      "note": "“达到目标”指代不清，应为“达成结果”"
+    },
+    {
+      "zh": "而这正是规划层本要解决的原初问题",
+      "fix": "而这正是规划层本要解决的原始问题",
+      "type": "语句不通",
+      "note": "“原初问题”生硬"
+    },
+    {
+      "zh": "在推广（rollout）之前",
+      "fix": "在发布（rollout）之前",
+      "type": "误译",
+      "note": "rollout 此处指发布上线"
+    },
+    {
+      "zh": "还能帮助新工程师上手（onboarding）",
+      "fix": "还能帮助新工程师入职（onboarding）",
+      "type": "语句不通",
+      "note": "“上手”与 onboarding 语义偏差"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3461,
+    "completion_tokens": 238,
+    "total_tokens": 3699,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3333
+  }
+}

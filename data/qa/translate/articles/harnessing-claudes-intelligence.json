@@ -1,0 +1,87 @@
+{
+  "rel": "articles/harnessing-claudes-intelligence.md",
+  "issues": [
+    {
+      "zh": "Anthropic 的联合创始人之一 Chris Olah",
+      "fix": "Anthropic 的联合创始人之一 Chris Olah",
+      "type": "名词错",
+      "note": "Chris Olah 并非 Anthropic 联合创始人"
+    },
+    {
+      "zh": "在 Opus 4.6 中](https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf)，生成子智能体的能力使 BrowseComp 的结果比最佳单智能体运行提升了 2.8%。",
+      "fix": "借助 Opus 4.6](https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf)，生成子智能体的能力使 BrowseComp 的结果比最佳单智能体运行提升了 2.8%。",
+      "type": "误译",
+      "note": "With Opus 4.6 意为借助该模型"
+    },
+    {
+      "zh": "然而 Opus 4.5 在相同设置下扩展到 68%，Opus 4.6 达到 84%。",
+      "fix": "然而 Opus 4.5 在相同设置下提升到 68%，Opus 4.6 达到 84%。",
+      "type": "误译",
+      "note": "scaled 指准确率提升，非扩展"
+    },
+    {
+      "zh": "Sonnet 3.5 将记忆当作转录稿，记录非玩家角色（NPC）说了什么，而非什么重要。",
+      "fix": "Sonnet 3.5 将记忆当作流水账，记录非玩家角色（NPC）说了什么，而非什么重要。",
+      "type": "误译",
+      "note": "transcript 此处指流水账式记录"
+    },
+    {
+      "zh": "旋转地砖迷宫：不同的进入 y 坐标通向不同的目的地。",
+      "fix": "旋转地砖迷宫：不同的进入 y 坐标通向不同的目的地。",
+      "type": "名词错",
+      "note": "Spin tile 非旋转地砖，指旋转机关"
+    },
+    {
+      "zh": "第一世代背包限制：最多 20 个物品。进入地下城前丢弃不需要的 TM。",
+      "fix": "第一世代背包限制：最多 20 个物品。进入地下城前丢弃不需要的 TM。",
+      "type": "名词错",
+      "note": "Gen 1 指第一世代，此处无误"
+    },
+    {
+      "zh": "在消息中追加 `<system-reminder>`，而非编辑提示词。",
+      "fix": "在消息中追加 `<system-reminder>`，而非编辑提示词。",
+      "type": "名词错",
+      "note": "原文为 system-reminder，无误"
+    },
+    {
+      "zh": "将操作提升为专用工具，可以给执行框架一个操作特定的钩子，带有类型化参数，它可以拦截、把关、渲染或审计。",
+      "fix": "将操作提升为专用工具，可以给执行框架一个操作特定的钩子，带有类型化参数，它可以拦截、把关、渲染或审计。",
+      "type": "语句不通",
+      "note": "句子冗长但可读，非病句"
+    },
+    {
+      "zh": "它让第二个 Claude 读取命令字符串并判断其是否安全。",
+      "fix": "它让第二个 Claude 读取命令字符串并判断其是否安全。",
+      "type": "误译",
+      "note": "原文为 has a second Claude read，无误"
+    },
+    {
+      "zh": "我们添加了重置来清空上下文窗口，以解决这种\"上下文焦虑\"。",
+      "fix": "我们添加了重置来清空上下文窗口，以解决这种\"上下文焦虑\"。",
+      "type": "误译",
+      "note": "原文 resets 指上下文重置，无误"
+    },
+    {
+      "zh": "移除这些累赘很重要，[因为它可能成为瓶颈](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)，限制 Claude 的表现。",
+      "fix": "移除这些累赘很重要，[因为它可能成为瓶颈](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)，限制 Claude 的表现。",
+      "type": "误译",
+      "note": "原文 bottleneck 指累赘成为瓶颈，无误"
+    },
+    {
+      "zh": "作者：Lance Martin，Claude Platform 团队技术员工。",
+      "fix": "作者：Lance Martin，Claude Platform 团队技术员工。",
+      "type": "名词错",
+      "note": "member of technical staff 译为技术员工可接受"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 7256,
+    "completion_tokens": 884,
+    "total_tokens": 8140,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 7128
+  }
+}

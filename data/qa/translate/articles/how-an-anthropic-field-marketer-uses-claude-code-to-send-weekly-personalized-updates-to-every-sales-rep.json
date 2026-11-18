@@ -1,0 +1,57 @@
+{
+  "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+  "issues": [
+    {
+      "zh": "让每次运行轮次（run）开始时先读取表格的表头行",
+      "fix": "让每次运行时先读取表格的表头行",
+      "type": "语句不通",
+      "note": "“运行轮次”生硬且夹注英文"
+    },
+    {
+      "zh": "先把早期运行轮次只发给自己",
+      "fix": "先把早期运行结果只发给自己",
+      "type": "语句不通",
+      "note": "“运行轮次”搭配不当"
+    },
+    {
+      "zh": "我们的版本是一个 Markdown 文件，同事们会为自己的分段运行它",
+      "fix": "我们的版本是一个 Markdown 文件，同事们会为自己的销售分段运行它",
+      "type": "语句不通",
+      "note": "“分段”缺限定，指代不清"
+    },
+    {
+      "zh": "Anthropic 多个销售分段的客户执行官打开 Slack",
+      "fix": "Anthropic 多个销售分段的客户主管打开 Slack",
+      "type": "术语不一致",
+      "note": "account executive 前译“客户执行官”后译“客户主管”"
+    },
+    {
+      "zh": "我们最初的测试是和少数几位客户执行官一起做的",
+      "fix": "我们最初的测试是和少数几位客户主管一起做的",
+      "type": "术语不一致",
+      "note": "account executive 译法前后不一致"
+    },
+    {
+      "zh": "纯粹是因为合适的代表在周一早上看到了合适的活动",
+      "fix": "纯粹是因为合适的销售代表在周一早上看到了合适的活动",
+      "type": "术语不一致",
+      "note": "rep 前译“销售代表”，此处简作“代表”"
+    },
+    {
+      "zh": "还为销售之外的其它跨职能伙伴提供所有营销活动的概览",
+      "fix": "还为销售之外的其它跨职能伙伴提供所有营销活动的概览",
+      "type": "名词错",
+      "note": "“其它”应为“其他”，非硬错，可忽略"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4386,
+    "completion_tokens": 345,
+    "total_tokens": 4731,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 4258
+  }
+}

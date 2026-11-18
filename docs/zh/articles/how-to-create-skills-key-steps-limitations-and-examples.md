@@ -29,7 +29,7 @@ fetched_at: "2026-11-18"
 
 ### **2. 编写名称**
 
-你的 skill 需要三个核心组成部分：**name**（清晰的标识符）、**description**（何时激活）和 **instructions**（如何执行）。事实上，name 和 description 是 [SKILL.md](http://skill.md/) 文件中唯一影响触发的部分，换言之，即 Claude 调用 skill 获取专业知识或工作流的能力。
+你的 skill 需要三个核心组成部分：**name**（清晰的标识符）、**description**（何时激活）和 **instructions**（如何执行）。事实上，name 和 description 是 [SKILL.md](http://skill.md/) 文件中唯一影响触发的部分，换言之，即 Claude 为获取专业知识或工作流而调用 skill 的能力。
 
 名称应直白且具有描述性。使用小写字母加连字符（例如 pdf-editor、brand-guidelines）。保持简短清晰。
 
@@ -63,7 +63,7 @@ Comprehensive PDF manipulation toolkit for extracting text and tables, creating 
 
 ### **5. 上传你的 skill**
 
-根据你所构建的 Claude 平台界面，以下是上传 skill 以供使用的方法：
+根据你所使用的 Claude 平台，以下是上传 skill 以供使用的方法：
 
 -   [Claude.ai](http://claude.ai/redirect/claudedotcom.v1.f3c9fc09-6928-4a88-a15c-b8005e93863b)（Claude apps）：前往 **Settings** 并在那里添加你的自定义 skill。自定义 skills 需要 Pro、Max、Ultra、Team 或 Enterprise 套餐，并启用代码执行。在此上传的 skills 属于每个用户个人。它们不会在整个组织范围内共享，也无法由管理员集中管理。
 -   [Claude Code](https://www.claude.com/product/claude-code)：在你的插件或项目根目录中创建 skills/ 目录，并添加包含 SKILL.md 文件的 skill 文件夹。安装插件后，Claude 会自动发现并使用它们。示例结构：
@@ -92,13 +92,13 @@ curl -X POST "https://api.anthropic.com/v1/skills" \
 
 创建一个覆盖三种场景的测试矩阵：
 
--   **正常操作**：用 skill 应能完美处理的典型请求进行测试。如果你构建了一个财务分析 skill，试试 "分析微软最新的财报" 或 "为这份 10-K 文件构建一个数据包"。这些基线测试确认你的指令按预期工作。
+-   **正常操作**：用 skill 应能完美处理的典型请求进行测试。如果你构建了一个财务分析 skill，试试 "分析微软最新的财报" 或 "为这份 10-K 文件构建一个数据包"。这些基线测试确认你的指令是否按预期工作。
 -   **边缘情况**：用不完整或不寻常的输入进行测试。数据缺失时会怎样？文件格式出乎意料时会怎样？用户提供模糊指令时会怎样？你的 skill 应优雅地处理这些情况——要么产出降级但有用的输出，要么说明继续所需的条件。
 -   **超出范围的请求**：用看似相关但不应触发你 skill 的任务进行测试。如果你构建了一个 NDA 审查 skill，试试请求 "审查这份雇佣协议" 或 "分析这份租约"。该 skill 应保持休眠，让其他 skills 或 Claude 的通用能力来处理该请求。
 
 考虑实施以下测试以进行更深入的验证：
 
--   **触发测试**：skill 是否在预期时激活？用显式请求（"使用财务数据包 skill 分析这家公司"）和自然请求（"帮我理解这家公司的财务状况"）进行测试。不相关时它是否保持不激活？一个范围界定良好的 skill 知道何时不应激活。测试相似但不同的请求以验证边界。
+-   **触发测试**：skill 是否在预期时激活？用显式请求（"使用财务数据包 skill 分析这家公司"）和自然请求（"帮我理解这家公司的财务状况"）进行测试。不相关时它是否保持不激活？范围界定良好的 skill 知道何时不应激活。测试相似但不同的请求以验证边界。
 -   **功能测试**：包括输出一致性（用相似输入多次运行是否产生可比结果？）、可用性（不熟悉该领域的人能否成功使用？）和文档准确性（你的示例是否与实际行为一致？）。
 
 ### **5. 基于使用情况迭代**
@@ -111,7 +111,7 @@ curl -X POST "https://api.anthropic.com/v1/skills" \
 
 ### **从用例出发**
 
-不要凭空编写 skills。在有真实、重复性任务时再构建它们。最好的 skills 解决你经常遇到的问题。
+不要凭空编写 skills。当你拥有真实、重复性的任务时再构建它们。最好的 skills 解决你经常遇到的问题。
 
 在创建 skill 之前，问自己：这个任务我做过至少五次吗？我还会再做至少十次吗？如果答案是肯定的，那么 skill 就有意义。
 
@@ -121,7 +121,7 @@ curl -X POST "https://api.anthropic.com/v1/skills" \
 
 ### **使用 Skill-Creator skill**
 
-[skill-creator skill](https://github.com/anthropics/skills/tree/main/skill-creator) 引导你创建结构良好的 skills。它会提出澄清性问题、建议改进 description，并帮助正确格式化指令。可在 [GitHub 上的 Skills 仓库](https://github.com/anthropics/skills)中获取，也可直接通过 [Claude.ai](http://claude.ai/redirect/claudedotcom.v1.f3c9fc09-6928-4a88-a15c-b8005e93863b) 使用，它对你最初的几个 skills 尤其有价值。
+[skill-creator skill](https://github.com/anthropics/skills/tree/main/skill-creator) 引导你创建结构良好的 skills。它会提出澄清性问题、建议改进 description，并帮助正确格式化指令。可在 [GitHub 上的 Skills 仓库](https://github.com/anthropics/skills)中获取，也可直接通过 [Claude.ai](http://claude.ai/redirect/claudedotcom.v1.f3c9fc09-6928-4a88-a15c-b8005e93863b) 使用，它对你最初几个 skills 尤其有价值。
 
 ## **Skill 的限制与注意事项**
 
@@ -131,13 +131,13 @@ curl -X POST "https://api.anthropic.com/v1/skills" \
 
 Claude 会根据你的请求评估 skill descriptions 以确定相关性。这不是关键词匹配——Claude 理解语义关系。然而，模糊的 description 会降低触发准确性。
 
-如果多个 skills 处理复杂任务的不同方面，它们可以同时激活。过于通用的 description 会导致不当激活，而缺失的用例会导致漏触发。
+如果多个 skills 分别处理复杂任务的不同方面，它们可以同时激活。过于通用的 description 会导致不当激活，而缺失的用例会导致漏触发。
 
 ### **适当的文件大小**
 
 编写 skills 时，避免用不必要的内容膨胀上下文窗口。考虑每条信息是否需要每次都加载，还是仅在特定条件下加载。
 
-使用 "菜单" 方法：如果你的 skill 涵盖多个不同的流程或选项，SKILL.md 应描述可用的内容，并使用相对路径引用每个流程的独立文件。Claude 随后只读取与用户任务相关的文件，在该对话中保持其他文件不被触碰。
+使用 "菜单" 方法：如果你的 skill 涵盖多个不同的流程或选项，SKILL.md 应描述可用的内容，并使用相对路径引用每个流程的独立文件。Claude 随后只读取与用户任务相关的文件，在该对话中不读取其他文件。
 
 这些独立文件不必代表互斥的路径。关键原则是将内容分解为合理的块，让 Claude 根据手头任务选择所需内容。
 

@@ -1,0 +1,14 @@
+{
+  "rel": "articles/using-claude-md-files.md",
+  "issues": [],
+  "usage": {
+    "prompt_tokens": 6922,
+    "completion_tokens": 5,
+    "total_tokens": 6927,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6794
+  }
+}
