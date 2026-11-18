@@ -159,15 +159,22 @@ ${nav(current)}
 </main></div>
 <script>
 const q=document.getElementById('q'),hits=document.getElementById('hits');
-let idx=null;
-q.addEventListener('focus',async()=>{ if(!idx){ idx=await (await fetch('/search.json')).json(); } });
+let idx=null, loading=null;
+const ensureIndex=async()=>{ if(idx) return idx; if(!loading) loading=fetch('/search.json').then(r=>r.json()).then(d=>{idx=d;return d;}); return loading; };
+let timer=null;
 q.addEventListener('input',()=>{
+  clearTimeout(timer);
   const k=q.value.trim().toLowerCase();
-  if(!k||!idx){hits.style.display='none';return;}
-  const out=idx.filter(d=>d.t.toLowerCase().includes(k)||d.x.toLowerCase().includes(k)).slice(0,18);
-  hits.innerHTML=out.length?out.map(d=>'<a href="'+d.u+'"><b>'+d.t+'</b><span class="k">'+d.k+'</span></a>').join(''):'<a>没有匹配结果</a>';
+  if(!k){hits.style.display='none';return;}
   hits.style.display='block';
+  hits.innerHTML='<a>搜索中…</a>';
+  timer=setTimeout(async()=>{
+    const data=await ensureIndex();
+    const out=data.map(d=>({d,s:(d.t.toLowerCase().includes(k)?0:1)})).filter(x=>x.s===0||x.d.x.toLowerCase().includes(k)).sort((a,b)=>a.s-b.s).slice(0,18).map(x=>x.d);
+    hits.innerHTML=out.length?out.map(d=>'<a href="'+d.u+'"><b>'+d.t+'</b><span class="k">'+d.k+'</span></a>').join(''):'<a>没有匹配结果</a>';
+  },120);
 });
+q.addEventListener('keydown',e=>{ if(e.key==='Enter'){ const first=hits.querySelector('a[href]'); if(first) location.href=first.getAttribute('href'); } });
 document.addEventListener('click',e=>{ if(!e.target.closest('#hits')&&e.target!==q) hits.style.display='none'; });
 </script>
 <script type="module">
