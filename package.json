@@ -18,7 +18,9 @@
     "qa:relations": "node scripts/qa-associations.js",
     "relations:apply": "node scripts/apply-associations.js",
     "graph:view": "node scripts/graph-view.js",
-    "site:build": "node scripts/build-site.js"
+    "site:build": "node scripts/build-site.js",
+    "edges:notes": "node scripts/edge-notes.js",
+    "edges:merge": "node scripts/merge-notes.js"
   },
   "keywords": [],
   "author": "",

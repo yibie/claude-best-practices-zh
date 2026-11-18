@@ -6,6 +6,10 @@ const ROOT = path.join(__dirname, '..');
 const GRAPH = path.join(ROOT, 'data', 'graph.json');
 const graph = JSON.parse(fs.readFileSync(GRAPH, 'utf8'));
 const ops = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'qa', 'associations.json'), 'utf8'));
+if (graph.reviewed && !process.argv.includes('--force')) {
+  console.log('graph.json 已经应用过审阅结果，跳过（需要重跑请加 --force）');
+  process.exit(0);
+}
 const byZh = new Map(graph.nodes.map((n) => [n.zh, n]));
 
 const idOf = (zh) => byZh.get(zh)?.id;
@@ -37,7 +41,7 @@ for (const r of ops.add || []) {
   const f = idOf(r.from), t = idOf(r.to);
   if (!f || !t || f === t) { log.missing++; continue; }
   if (edges.some((e) => e.from === f && e.to === t)) { log.dup++; continue; }
-  edges.push({ from: f, to: t, rel: r.rel || '用于', w: 2, docs: 1, qa: true });
+  edges.push({ from: f, to: t, rel: r.rel || '用于', w: 2, docs: [], qa: true });
   log.add++;
 }
 // 4) 同一对概念只保留权重最高的一条，避免双向重复标签

@@ -71,7 +71,7 @@ const out = {
     .sort((a, b) => b.count - a.count),
   edges: [...edges.values()]
     .filter((e) => e.w >= 1)
-    .map((e) => ({ from: idOf(e.from), to: idOf(e.to), rel: e.rel, w: e.w, docs: e.docs.size }))
+    .map((e) => ({ from: idOf(e.from), to: idOf(e.to), rel: e.rel, w: e.w, docs: [...e.docs].slice(0, 6) }))
     .sort((a, b) => b.w - a.w),
 };
 fs.writeFileSync(path.join(ROOT, 'data', 'graph.json'), JSON.stringify(out, null, 2));

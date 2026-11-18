@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T03:07:10.540Z",
+  "generatedAt": "2026-11-18T05:03:31.050Z",
   "source": "https://claude.com/resources/best-practices",
   "categories": [
     "Claude Code 与编程",
@@ -2254,1002 +2254,1523 @@
       "to": "技能",
       "rel": "启用",
       "w": 4,
-      "docs": 4
+      "docs": [
+        "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "articles/skills-explained.md"
+      ],
+      "note": "技能包体积大，靠渐进式披露先只暴露元数据、用时再加载全文，避免挤占上下文窗口。",
+      "quote": "在运行时，只有元数据（YAML frontmatter 中的名称和描述）会展示给模型。"
     },
     {
       "from": "Claude-Code",
       "to": "智能体",
       "rel": "属于",
       "w": 4,
-      "docs": 4
+      "docs": [
+        "webinars/claude-code-live.md",
+        "webinars/deloitte-code-modernization.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "guides/zero-trust-for-ai-agents.md"
+      ],
+      "note": "Claude Code 能自主规划并调用工具完成多步编程任务，因此归入智能体类别。",
+      "quote": "了解企业如何借助 Claude Code 和经过验证的 AI 驱动软件开发生命周期框架"
     },
     {
       "from": "Claude-平台",
       "to": "智能体",
       "rel": "用于",
       "w": 3,
-      "docs": 3
+      "docs": [
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "articles/building-ai-agents-for-startups.md",
+        "guides/building-effective-ai-agents.md"
+      ],
+      "note": "开发者可在Claude平台上按步骤搭建智能体，并借助Google Cloud完成项目配置与治理。",
+      "quote": "你将观看一个智能体如何一步步搭建完成，了解在你的 Google Cloud 项目中如何完成设置与治理"
     },
     {
       "from": "技能创建器",
       "to": "技能",
       "rel": "用于",
       "w": 3,
-      "docs": 3
+      "docs": [
+        "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/how-to-create-skills-key-steps-limitations-and-examples.md"
+      ],
+      "note": "技能创建器提供构建、测试与迭代流程，让工作流一次封装成按需加载的技能文件。",
+      "quote": "本指南涵盖如何构建、测试和分发 Skills"
     },
     {
       "from": "模型上下文协议",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 3,
-      "docs": 3
+      "docs": [
+        "articles/claude-code-guide-for-startups.md",
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "articles/using-claude-md-files.md"
+      ],
+      "note": "Claude Code 通过 MCP 接入外部工具与数据源，扩展智能体在编程任务中可调用的上下文范围。"
     },
     {
       "from": "Claude-Cowork",
       "to": "技能",
       "rel": "依赖",
       "w": 3,
-      "docs": 3
+      "docs": [
+        "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md"
+      ],
+      "note": "非技术员工在 Cowork 中调用封装好的技能包，无需自建代码即可复用销售、营销等团队沉淀的工作流。",
+      "quote": "借助插件、Skills（技能）和命令，Claude 会变得更加强大，也能更好地适配你的工作环境。"
     },
     {
       "from": "Claude-Cowork",
       "to": "定时任务",
       "rel": "启用",
       "w": 3,
-      "docs": 3
+      "docs": [
+        "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "articles/the-claude-cowork-product-guide.md"
+      ],
+      "note": "非技术员工可在 Cowork 内把周期性报告等重复工作配置成技能与定时任务，无需写代码即可自动触发。",
+      "quote": "这些工作中的很大一部分已经在 Claude Cowork 中配置成了 Skills（技能）和定时任务"
     },
     {
       "from": "智能体编程",
       "to": "子代理",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "articles/claude-code-guide-for-startups.md"
+      ],
+      "note": "子代理以独立上下文分担编码、审查与测试任务，使智能体能并行推进开发流程。"
     },
     {
       "from": "Claude-Code",
       "to": "Claude-平台",
       "rel": "属于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md"
+      ],
+      "note": "Claude Code 是 Claude 平台上的编程工具，Curative 团队用它重建理赔等核心系统，体现平台承载智能体开发。",
+      "quote": "他们所有的智能体都运行在自研的理赔、事前授权和财务系统上，这些系统由 13 名工程师今年用 Claude Code 重建"
     },
     {
       "from": "渐进式披露",
       "to": "上下文窗口",
       "rel": "解决",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/how-to-create-skills-key-steps-limitations-and-examples.md"
+      ],
+      "note": "通过运行时仅暴露元数据、按需加载详细文件，避免大量信息一次性占满令牌上限，从而保护上下文窗口。",
+      "quote": "它们采用渐进式披露：在运行时，只有元数据（YAML frontmatter 中的名称和描述）会展示给模型。"
     },
     {
       "from": "Claude-Agent-SDK",
       "to": "智能体循环",
       "rel": "启用",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "articles/building-agents-with-the-claude-agent-sdk.md"
+      ],
+      "note": "SDK 内置评估自身输出的机制，让智能体在循环中自动发现错误并自我纠正，无需开发者自行搭建验证逻辑。",
+      "quote": "Claude Agent SDK 通过评估其工作来完成智能体循环。"
     },
     {
       "from": "上下文工程",
       "to": "子代理",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/building-agents-with-the-claude-agent-sdk.md",
+        "articles/seeing-like-an-agent.md"
+      ],
+      "note": "主代理通过为子代理分配独立上下文并编排其任务，把上下文工程落实到多代理分工中。",
+      "quote": "智能体的文件夹和文件结构成为了一种上下文工程形式"
     },
     {
       "from": "现场演示",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "webinars/claude-code-live.md",
+        "webinars/claude-code-service-delivery.md"
+      ],
+      "note": "活动现场用Claude Code实时完成真实编程任务，直观展示多智能体并行与动态工作流的实际效果。"
     },
     {
       "from": "提示缓存",
       "to": "令牌成本",
       "rel": "解决",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "webinars/claude-code-maximizing-value.md",
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "note": "提示缓存通过复用重复前缀令牌避免重复计费，直接削减会话中按量计费的输入令牌开销。"
     },
     {
       "from": "Claude-Cowork",
       "to": "对话式-AI",
       "rel": "替代",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "guides/claude-cowork-product-guide.md",
+        "articles/the-claude-cowork-product-guide.md"
+      ],
+      "note": "对话式AI只给答案，Cowork则直接读写文件、跨应用执行多步骤任务并交付成果，覆盖知识工作全流程。",
+      "quote": "Claude Cowork 是为工作本身而构建的，而不只是为答案。"
     },
     {
       "from": "验证",
       "to": "努力等级",
       "rel": "启用",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/claude-model-and-effort-level-in-claude-code.md",
+        "articles/spending-your-effort.md"
+      ],
+      "note": "在硬件、代码审查等验证价值高的场景，调高努力等级可让智能体投入更多验证与边界测试。",
+      "quote": "effort 是一种很好的方式，用来调节 Claude 做多少验证和边界情况测试"
     },
     {
       "from": "单任务成本",
       "to": "努力等级",
       "rel": "衡量",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "articles/which-claude-model-should-you-build-with.md"
+      ],
+      "note": "高能力模型在低努力等级下用更少轮次完成任务，使单任务成本反而低于低价小模型。",
+      "quote": "对于更智能的模型，单任务成本往往更低，尤其是在较低的 effort level 下"
     },
     {
       "from": "技能",
       "to": "工作流自动化",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/complete-guide-to-building-skills-for-claude.md",
+        "articles/how-anthropic-uses-claude-legal.md"
+      ],
+      "note": "技能把一次性教会的工作流固化为可复用能力包，使智能体稳定执行原本耗时的业务流程。",
+      "quote": "Skills（技能）让你只需教会 Claude 一次你的工作流，就能始终如一地应用它们。"
     },
     {
       "from": "Claude-Cowork",
       "to": "插件",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/cowork-plugins.md",
+        "articles/the-claude-cowork-product-guide.md"
+      ],
+      "note": "非技术知识工作者可在 Cowork 中安装插件，定制工作方式、数据来源与斜杠命令，让团队产出更一致。",
+      "quote": "告诉 Claude 你希望工作如何完成、从哪些工具和数据中获取信息"
     },
     {
       "from": "Claude-Cowork",
       "to": "连接器",
       "rel": "启用",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/deploying-claude-across-the-legal-industry.md",
+        "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md"
+      ],
+      "note": "非技术员工可在 Cowork 内搭建工作流，通过连接器打通 Salesforce、HubSpot 等外部工具，把数天手动操作压缩到数小时。",
+      "quote": "两人都通过在 Claude Cowork 中搭建工作流，把原本需要数天的手动工作压缩到了数小时"
     },
     {
       "from": "Claude-Code",
       "to": "长时运行智能体",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "articles/working-at-the-frontier-rakuten.md"
+      ],
+      "note": "Outtake 团队用 Claude Code 与 Agent SDK 构建了可连续数小时自主调查网络的长时程智能体。",
+      "quote": "在 Claude 上构建 Recon Agent 这一长时程自主网络调查员的过程"
     },
     {
       "from": "渐进式披露",
       "to": "上下文工程",
       "rel": "属于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "articles/seeing-like-an-agent.md"
+      ],
+      "note": "渐进式披露是上下文工程的具体实现手段，通过按需逐层加载让智能体逐步发现相关上下文以控制令牌消耗。",
+      "quote": "我们将渐进式披露（progressive disclosure）的理念正式化，它允许智能体通过探索逐步发现相关上下文"
     },
     {
       "from": "CLAUDE-md",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "articles/scaling-agentic-coding.md",
+        "articles/the-ai-native-sdlc-playbook.md"
+      ],
+      "note": "团队把审阅CLAUDE.md列入新人上手清单，使其成为在该项目上下文中正确使用Claude Code的前提。",
+      "quote": "新团队成员应同时理解代码库以及如何在该上下文中使用 Claude Code。"
     },
     {
       "from": "Claude-平台",
       "to": "企业AI转型",
       "rel": "用于",
       "w": 2,
-      "docs": 2
+      "docs": [
+        "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "guides/the-enterprise-ai-transformation-guide.md"
+      ],
+      "note": "Claude 平台提供模型与智能体构建能力，让企业能把 AI 嵌入实际业务流程，从而推动系统性转型。"
     },
     {
       "from": "Claude-托管智能体",
       "to": "会话",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "托管智能体以会话为运行单元，借助其持久记录在多轮任务中延续上下文与工具调用状态。"
     },
     {
       "from": "Claude-托管智能体",
       "to": "沙箱",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "托管智能体在云端运行不可信代码时，需借助沙箱隔离执行环境来防止工具调用越权或影响宿主。"
     },
     {
       "from": "Claude-托管智能体",
       "to": "可观测性",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "托管智能体在云端自主执行多步任务，需借助可观测性追踪其决策链路与数据来源以便审计排障。"
     },
     {
       "from": "Claude-Agent-SDK",
       "to": "智能体框架",
       "rel": "依赖",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "Claude Agent SDK 把循环、工具执行与上下文管理封装成可编程接口，开发者无需自建脚手架。"
     },
     {
       "from": "插件",
       "to": "模型上下文协议",
       "rel": "依赖",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "MCP 作为标准连接层，常被封装进插件以复用工具接入能力，使插件无需自建协议即可对接外部数据源。"
     },
     {
       "from": "Claude-平台",
       "to": "Claude-托管智能体",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "托管智能体为平台补齐运行时与会话记忆能力，使开发者无需自建基础设施即可部署智能体。"
     },
     {
       "from": "Claude-平台",
       "to": "子代理",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "Claude 平台提供模型与编排能力，使主代理能创建并调度拥有独立上下文的子代理执行任务。"
     },
     {
       "from": "Claude-Code",
       "to": "工具搜索",
       "rel": "依赖",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "工具搜索是 Claude Code 在工具数量庞大时按需检索定义、避免上下文被占满的加载机制。"
     },
     {
       "from": "Claude-Code",
       "to": "提示缓存",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "提示缓存让 Claude Code 多智能体并行时复用系统提示与上下文，减少重复输入开销并加快响应。"
     },
     {
       "from": "Claude-平台",
       "to": "提示缓存",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "Claude 平台原生支持提示缓存，开发者可缓存长系统提示与文档，重复调用时降低输入费用并加快首字返回。"
     },
     {
       "from": "子代理",
       "to": "上下文窗口",
       "rel": "解决",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "子代理将任务拆分到独立上下文执行，避免主代理的上下文窗口被中间结果占满。"
     },
     {
       "from": "模型上下文协议",
       "to": "MCP-服务器",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "MCP 定义统一的接口与消息格式，使服务端能以标准方式向任意兼容智能体暴露工具和数据，无需定制集成。"
     },
     {
       "from": "Claude-Code",
       "to": "子代理",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "Claude Code 通过主代理编排多个拥有独立上下文的子代理，实现并行分工与专注执行。"
     },
     {
       "from": "Claude-Code",
       "to": "技能",
       "rel": "启用",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "Claude Code 通过按需加载技能文件，把可复用工作流注入多智能体并行任务中。"
     },
     {
       "from": "插件",
       "to": "技能",
       "rel": "依赖",
       "w": 2,
-      "docs": 1,
-      "qa": true
+      "docs": [],
+      "qa": true,
+      "note": "插件通过打包技能等组件实现可安装定制，技能是其内部按需加载的能力单元。"
     },
     {
       "from": "顾问策略",
       "to": "模型路由",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/a-guide-to-cost-visibility-and-control-in-claude.md"
+      ],
+      "note": "顾问策略是模型路由的一种具体实现，按任务难度动态切换小模型与前沿模型。"
     },
     {
       "from": "子代理",
       "to": "动态工作流",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md"
+      ],
+      "note": "动态工作流按任务即时生成编排框架，子代理作为其中被调度的执行单元，其独立上下文支撑并行分工。",
+      "quote": "动态工作流通常使用更多 token，最适合复杂、高价值的任务。"
     },
     {
       "from": "Claude-Code",
       "to": "动态工作流",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md"
+      ],
+      "note": "用户可通过触发词 ultracode 让 Claude Code 即时生成并编排多智能体工作流，无需预先搭建框架。",
+      "quote": "你可以直接让 Claude 创建一个工作流来开始使用动态工作流"
     },
     {
       "from": "技能",
       "to": "Claude-平台",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md"
+      ],
+      "note": "技能以文件封装组织工作流与专长，在Claude平台上按需加载，使通用助手转为专业智能体。",
+      "quote": "让技能承载你组织独特的工作流与专业知识"
     },
     {
       "from": "分类器",
       "to": "自动模式",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/auto-mode-in-production.md"
+      ],
+      "note": "自动模式靠分类器实时审查高风险操作并拦截危险命令，从而减少人工权限提示的打断。",
+      "quote": "在内部评估中，分类器拦截的危险操作比开发者手动点击权限提示时拦截的还要多"
     },
     {
       "from": "提示注入",
       "to": "自动模式",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/auto-mode-in-production.md"
+      ],
+      "note": "自动模式用分类器审查高风险操作，弥补全跳过权限检查时提示注入等风险易溜进来的漏洞。",
+      "quote": "提示词注入、范围漂移以及偶尔被删除的生产资源也正是这样溜进来的"
     },
     {
       "from": "护栏",
       "to": "分类器",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/auto-mode-in-production.md"
+      ],
+      "note": "护栏设定动作与花费边界，分类器在其中判断动作危害性，使自动模式安全运行。",
+      "quote": "分类器就是在这些护栏之内做出判断的。"
     },
     {
       "from": "上下文工程",
       "to": "提示工程",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/best-practices-for-prompt-engineering.md"
+      ],
+      "note": "提示工程被视为上下文工程的基本构建块，后者在组织模型上下文时仍需以指令编写为基础。",
+      "quote": "它也是上下文工程的基本构建块，后者已成为使用 LLM 时日益重要的一环。"
     },
     {
       "from": "幻觉",
       "to": "提示工程",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/best-practices-for-prompt-engineering.md"
+      ],
+      "note": "提示工程通过提供明确约束和上下文示例，降低模型编造不实信息的概率，是缓解幻觉的常用手段。"
     },
     {
       "from": "扩展思考",
       "to": "自适应思考",
       "rel": "替代",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md"
+      ],
+      "note": "Opus 4.7 取消固定思考预算，改由模型按上下文与步骤复杂度自行决定是否及投入多少思考。",
+      "quote": "Opus 4.7 不支持带固定思考预算的扩展思考（Extended Thinking）。"
     },
     {
       "from": "自动模式",
       "to": "智能体编程",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md"
+      ],
+      "note": "自动模式让智能体在长时程编码任务中无需频繁确认即可连续执行，从而缩短开发周期。",
+      "quote": "自动模式能缩短周期时间。它尤其适合你已在前置提供完整上下文的长时程任务。"
     },
     {
       "from": "上下文工程",
       "to": "智能体循环",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-agents-with-the-claude-agent-sdk.md"
+      ],
+      "note": "智能体在循环中需决定用grep、tail等方式加载哪些内容，文件结构本身即上下文工程的具体实施手段。",
+      "quote": "智能体的文件夹和文件结构成为了一种上下文工程形式"
     },
     {
       "from": "上下文工程",
       "to": "上下文压缩",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-agents-with-the-claude-agent-sdk.md"
+      ],
+      "note": "上下文压缩是上下文工程在窗口逼近上限时的兜底手段，通过摘要历史释放空间以维持长任务连续运行。",
+      "quote": "当 Claude 遇到大文件（如日志或用户上传的文件）时，它会决定通过 `grep` 和 `tail` 等 bash 脚本以何种方式将这些内容加载到上下文中"
     },
     {
       "from": "人在回路",
       "to": "智能体",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-for-startups.md"
+      ],
+      "note": "智能体自主执行多步任务时，人类只在关键节点审核把关，以较低干预成本控制风险。",
+      "quote": "而智能体可以自主管理业务流程，并由人类在环进行监督"
     },
     {
       "from": "智能体",
       "to": "企业AI转型",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-for-the-enterprise.md"
+      ],
+      "note": "企业转型需靠智能体落地多步业务流程，把AI从单点工具升级为可自主执行的团队级能力。",
+      "quote": "我们分享领先组织当下如何借助智能体变革其工作方式"
     },
     {
       "from": "智能体",
       "to": "Claude-Cowork",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-for-the-enterprise.md"
+      ],
+      "note": "智能体的自主规划与工具调用能力被封装进 Cowork，使非技术团队无需自建系统即可直接使用。",
+      "quote": "Claude Cowork 如何将这些能力带给每一个团队"
     },
     {
       "from": "企业AI转型",
       "to": "人在回路",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-for-the-enterprise.md"
+      ],
+      "note": "企业AI转型压缩信息密集流程时，仍需在关键节点保留人类判断与专业能力，故人在回路是其内在组成。",
+      "quote": "组织如何在压缩信息密集型流程的同时，不牺牲人在回路中的判断与专业能力"
     },
     {
       "from": "监管合规",
       "to": "可观测性",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-in-financial-services.md"
+      ],
+      "note": "金融监管要求每个决策可追溯，可观测性通过记录决策链路与数据来源，为审计提供证据。",
+      "quote": "当每一个决策都可能影响客户财务、监管合规和机构风险时"
     },
     {
       "from": "监管合规",
       "to": "审计追踪",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md"
+      ],
+      "note": "智能体面对多机构法规与审计要求时，需靠完整操作日志还原决策依据，供监管核查",
+      "quote": "现在可以自动生成，同时保持监管合规标准"
     },
     {
       "from": "审计追踪",
       "to": "可观测性",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-ai-agents-in-healthcare-and-life-sciences.md"
+      ],
+      "note": "医疗等高风险场景下，审计追踪提供完整操作日志，使智能体决策过程可被追踪审查，从而满足可观测性要求。",
+      "quote": "要求对处理 PHI 的 AI 系统具备全面的可观测性和可问责性"
     },
     {
       "from": "会话",
       "to": "记忆",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-always-on-agents.md"
+      ],
+      "note": "会话通过dreaming回顾历史对话来整理和更新记忆，使跨运行的经验得以沉淀为持久知识。",
+      "quote": "它会回顾过往会话以整理记忆"
     },
     {
       "from": "Claude-平台",
       "to": "商务智能体",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/building-claude-commerce-agents.md"
+      ],
+      "note": "Anthropic 的 Claude 平台提供模型与智能体构建能力，可用于开发电商或旅行场景中辅助搜索、比较与购买的商务智能体。"
     },
     {
       "from": "商家智能体",
       "to": "商务智能体",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/building-claude-commerce-agents.md"
+      ],
+      "note": "商家智能体与消费者智能体同属商务智能体蓝图，前者聚焦店铺运营分析，后者面向购买决策辅助。",
+      "quote": "我们面向消费者智能体和商家智能体的全新蓝图"
     },
     {
       "from": "Claude-Agent-SDK",
       "to": "子代理",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-companies-with-claude-code.md"
+      ],
+      "note": "Ambral 用该 SDK 构建精密子智能体来驱动工作流，实现客户账户管理的 AI 扩展。",
+      "quote": "正在用 Claude Code 和 Claude Agent SDK 构建的精密子智能体驱动工作流"
     },
     {
       "from": "智能体编程",
       "to": "人在回路",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-companies-with-claude-code.md"
+      ],
+      "note": "智能体编程通过将审查与测试交由AI自主执行，减少人工介入环节，从而缓解人在回路机制带来的效率瓶颈。"
     },
     {
       "from": "提示注入",
       "to": "护栏",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-effective-agent-automations.md"
+      ],
+      "note": "护栏通过限定只读访问与单次运行支出上限，压缩注入指令可触达的写入面和破坏成本。",
+      "quote": "在智能体只读取的地方给予只读访问权限，并为每次运行设置支出上限"
     },
     {
       "from": "智能体循环",
       "to": "验证",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-verification-loops-in-claude-code-with-skills.md"
+      ],
+      "note": "验证是智能体循环中判断是否继续迭代的关键环节，缺少它循环无法确定何时终止。",
+      "quote": "刚接触智能体循环？请先阅读循环入门"
     },
     {
       "from": "验证",
       "to": "技能",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-verification-loops-in-claude-code-with-skills.md"
+      ],
+      "note": "技能把验证步骤固化为可复用工作流，让智能体在每次改动后按需加载并执行自检。",
+      "quote": "Claude 收集上下文、采取行动、验证结果，如有需要，再回到收集更多上下文的步骤"
     },
     {
       "from": "验证",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-verification-loops-in-claude-code-with-skills.md"
+      ],
+      "note": "Claude Code 将人工检查步骤转化为迭代验证循环，由 Claude 自行检查并修复工作以达标。",
+      "quote": "在 Claude Code 中，验证循环是一个迭代过程，Claude 在其中检查并尝试修复工作。"
     },
     {
       "from": "智能体",
       "to": "评估",
       "rel": "衡量",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/building-with-claude-in-europe-agent-fundamentals.md"
+      ],
+      "note": "评估用于在生产部署前系统检验智能体多步任务执行的可靠性与安全性，是规模化上线的必要环节。",
+      "quote": "了解如何安全地大规模评估和部署智能体"
     },
     {
       "from": "评估",
       "to": "生产部署",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/building-with-claude-in-europe-agent-fundamentals.md"
+      ],
+      "note": "智能体进入真实业务前需通过系统化评估验证质量与可靠性，才能安全大规模部署。",
+      "quote": "了解如何安全地大规模评估和部署智能体"
     },
     {
       "from": "智能体框架",
       "to": "Claude-托管智能体",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/building-with-claude-managed-agents.md"
+      ],
+      "note": "托管服务承接了框架中循环调度、工具执行与上下文记忆的运维职责，使开发者只需专注定义任务逻辑。"
     },
     {
       "from": "上下文工程",
       "to": "评估框架",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/carta-healthcare-clinical-abstractor.md"
+      ],
+      "note": "上下文工程决定喂给模型的信息质量，评估框架据此衡量智能体表现并定位信息缺失或排序不当的问题。",
+      "quote": "AI 智能体的表现并不完全由模型决定，而是由提供给模型的信息决定"
     },
     {
       "from": "智能体",
       "to": "Claude-Tag",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/ciso-guide-to-agentic-ai.md"
+      ],
+      "note": "Claude Tag 是 Anthropic 推出的共享工作区常驻智能体，能在 Slack 中被 @ 提及并自主协作，属于智能体的一种具体产品形态。",
+      "quote": "这是我们新的共享工作区智能体，让人类团队可以在 Slack 等共享工作区中通过 @ 提及 Claude 与智能体协作"
     },
     {
       "from": "提示注入",
       "to": "智能体",
       "rel": "风险",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/ciso-guide-to-agentic-ai.md"
+      ],
+      "note": "智能体自主调用工具执行多步任务，攻击者可将恶意指令藏于其读取的网页或文档中，诱导其越权操作。",
+      "quote": "某位员工已经在你不知情的情况下把某个智能体连接到了某个系统"
     },
     {
       "from": "Claude-Code",
       "to": "钩子",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/claude-code-best-practices-lightspeed.md"
+      ],
+      "note": "钩子是Claude Code高级工作流的核心组件，用于在智能体生命周期节点自动触发动作以提升开发效率。",
+      "quote": "你将看到子智能体、钩子（hooks）和进阶工作流的现场演示"
     },
     {
       "from": "遗留系统迁移",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/claude-code-financial-services.md"
+      ],
+      "note": "无支撑片段，无法确认 Claude Code 在遗留系统迁移中的具体用途与场景。"
     },
     {
       "from": "自我改进循环",
       "to": "内部试用",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-code-guide-for-startups.md"
+      ],
+      "note": "内部试用中领域专家定期审查并引导推理，这些引导被纳入自我改进循环，从而修正原则而非逐例修补。",
+      "quote": "让领域专家定期审查和引导 Claude 的推理，并确保这些引导成为自我改进循环的一部分"
     },
     {
       "from": "令牌成本",
       "to": "上下文工程",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "note": "上下文工程通过精简提示、压缩历史与按需检索来减少无效令牌，从而直接压低会话的发送与生成费用。"
     },
     {
       "from": "上下文工程",
       "to": "CLAUDE-md",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "note": "CLAUDE.md 是上下文工程的核心载体，其内容每轮注入，需定期清理以免为无用上下文付费。",
+      "quote": "运行 /context 查看 CLAUDE.md 和 MCP 服务器在每一轮中增加了什么，并删掉不属于那里的内容"
     },
     {
       "from": "上下文工程",
       "to": "MCP-服务器",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/claude-code-maximizing-value.md"
+      ],
+      "note": "上下文工程需借助 MCP 服务器暴露的工具与数据来组装模型上下文，并通过 /context 审计其占用。",
+      "quote": "运行 /context 查看 CLAUDE.md 和 MCP 服务器在每一轮中增加了什么"
     },
     {
       "from": "Claude-Cowork",
       "to": "最佳实践",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "guides/claude-cowork-product-guide.md"
+      ],
+      "note": "面向分析师、PM等非技术人员的多步骤任务场景，为信息跨系统流转提供可复用操作规范",
+      "quote": "本指南面向分析师、PM、运营人员、研究人员、市场人员、招聘人员"
     },
     {
       "from": "智能体蓝图",
       "to": "商务智能体",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-for-commerce-agents.md"
+      ],
+      "note": "该蓝图提供执行框架、模式与护栏及参考实现，使工程团队数天内即可搭建出可用的商务智能体。",
+      "quote": "它包含工程团队在几天内让商务智能体跑起来所需的执行框架（harness）、模式和护栏"
     },
     {
       "from": "人在回路",
       "to": "商家智能体",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-for-commerce-agents.md"
+      ],
+      "note": "商家智能体的促销与库存建议涉及资金风险，需在关键决策点由店主审核确认后才执行。",
+      "quote": "它包含工程团队在几天内让商务智能体跑起来所需的执行框架（harness）、模式和护栏"
     },
     {
       "from": "Claude-Code",
       "to": "智能体蓝图",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-for-commerce-agents.md"
+      ],
+      "note": "蓝图附带Claude Code插件，让开发者能快速搭建并运行商务智能体参考实现。",
+      "quote": "它还包含一个 Claude Code 插件，帮助你快速上手。"
     },
     {
       "from": "Claude-Cowork",
       "to": "模型上下文协议",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-for-the-legal-industry.md"
+      ],
+      "note": "法律等知识工作者在 Cowork 中通过 MCP 协议接入案卷、检索等外部工具，实现跨系统协作。",
+      "quote": "法律专业人士已成为所有知识工作职能中 Claude Cowork 使用活跃度最高的用户群体"
     },
     {
       "from": "Claude-Cowork",
       "to": "Claude-Agent-SDK",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-for-the-legal-industry.md"
+      ],
+      "note": "法律等非技术团队在 Cowork 中调用 SDK 封装的智能体能力，无需自建开发环境即可完成合同审查等任务。",
+      "quote": "法律专业人士已成为所有知识工作职能中 Claude Cowork 使用活跃度最高的用户群体"
     },
     {
       "from": "上下文",
       "to": "模型路由",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-model-and-effort-level-in-claude-code.md"
+      ],
+      "note": "上下文是否已充分掌握、任务是否模糊，决定该分派小模型还是大模型，路由判断依赖上下文状态。",
+      "quote": "如果 Claude 已掌握所有相关上下文、明确尝试过，却仍然出错，这就是该选择能力更强模型的信号。"
     },
     {
       "from": "模型路由",
       "to": "Claude-Code",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-model-and-effort-level-in-claude-code.md"
+      ],
+      "note": "Claude Code 通过模型设置与 effort 级别两个维度，按任务难度动态选择不同能力层级的模型来平衡质量与成本。",
+      "quote": "Claude Code 提供两个看似都能「让答案更好」的设置：模型设置和 effort 级别。"
     },
     {
       "from": "单任务成本",
       "to": "顾问策略",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md"
+      ],
+      "note": "顾问策略让小模型处理多数任务、仅难题调用前沿模型，从而压低整体单任务成本。",
+      "quote": "对于更智能的模型，单任务成本往往更低，尤其是在较低的 effort level 下"
     },
     {
       "from": "Claude-Code",
       "to": "Claude-Opus-5-5",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "note": "Claude Code 会话时长与上下文持续增长，Opus 5.5 正是针对这类长程编程场景优化，以支撑其多智能体并行工作流。",
+      "quote": "Coding sessions are longer and use more context. Claude Opus 5.5 is built with that in mind."
     },
     {
       "from": "上下文窗口",
       "to": "智能体编程",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "note": "智能体编程需在单次会话中容纳代码库、工具输出与多轮推理，窗口过小会截断关键上下文导致任务失败。"
     },
     {
       "from": "提示缓存",
       "to": "子代理",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "note": "子代理各自维护独立上下文，重复前缀无法跨代理共享，提示缓存难以命中，故其效果依赖子代理的上下文设计。"
     },
     {
       "from": "令牌成本",
       "to": "Claude-Opus-5-5",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "note": "该模型通过缓存复用与精简上下文降低长程任务中的令牌消耗，从而压低整体调用费用。"
     },
     {
       "from": "令牌成本",
       "to": "缓存命中率",
       "rel": "衡量",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+      ],
+      "note": "缓存命中率决定多少令牌按折扣计价，是拆解单次会话令牌成本结构的关键变量。",
+      "quote": "虽然这不会提高缓存命中率或减少 token 用量，但意味着在长时间运行中等待更少。"
     },
     {
       "from": "连接器",
       "to": "Claude-Tag",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/claude-tag-guide-for-startups.md"
+      ],
+      "note": "Claude Tag 需在 Slack 频道中由团队添加连接器，才能访问外部工具与数据源完成协作任务。",
+      "quote": "你在承载上下文的 Slack 频道里 @Claude，添加连接器，让团队一起分配任务并引导任务推进。"
     },
     {
       "from": "动态工作流",
       "to": "智能体工作流",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md"
+      ],
+      "note": "动态工作流按任务即时生成多智能体编排，为智能体自主执行提供可动态调整的结构化流程。"
     },
     {
       "from": "插件",
       "to": "插件市场",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/cowork-plugins.md"
+      ],
+      "note": "插件市场集中展示可安装插件，让用户按工作流需求挑选并分发团队定制能力。",
+      "quote": "插件让你走得更远：告诉 Claude 你希望工作如何完成、从哪些工具和数据中获取信息"
     },
     {
       "from": "Claude-Cowork",
       "to": "研究预览",
       "rel": "属于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/cowork-plugins.md"
+      ],
+      "note": "Cowork 的插件能力以研究预览形态向付费用户开放，说明该工作空间整体处于早期迭代阶段。",
+      "quote": "Cowork 中的插件支持今天以研究预览形式向所有付费 Claude 用户开放。"
     },
     {
       "from": "代码现代化",
       "to": "智能体",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/deloitte-code-modernization.md"
+      ],
+      "note": "智能体可自动分析遗留代码并规划重构步骤，从而加速代码现代化进程。"
     },
     {
       "from": "遗留系统迁移",
       "to": "代码现代化",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/deloitte-code-modernization.md"
+      ],
+      "note": "迁移前需先通过代码现代化把老旧语言与架构重构为可移植形态，否则业务逻辑难以脱离原平台。"
     },
     {
       "from": "智能体框架",
       "to": "评估框架",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/demystifying-evals-for-ai-agents.md"
+      ],
+      "note": "智能体框架支撑长程复杂任务的执行，促使Qodo构建智能体式评估框架以捕捉真实进展。",
+      "quote": "他们开发了一个新的智能体式评估框架，提供了更清晰的进展图景。"
     },
     {
       "from": "模型上下文协议",
       "to": "多智能体系统",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md"
+      ],
+      "note": "MCP为多智能体系统提供统一的工具接入与上下文共享标准，使各专业智能体能协同完成委派任务。",
+      "quote": "借助 Model Context Protocol（MCP）与 Agent-to-Agent 协议（A2A）实际落地多智能体系统"
     },
     {
       "from": "多智能体系统",
       "to": "Claude-平台",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md"
+      ],
+      "note": "Claude 在 Vertex AI 上借助 MCP 与 A2A 协议连接多个智能体，实现工具集成与任务委派。",
+      "quote": "如何在 Vertex AI 上使用 Claude，借助 Model Context Protocol（MCP）与 Agent-to-Agent 协议（A2A）实际落地多智能体系统"
     },
     {
       "from": "MCP-服务器",
       "to": "程序化工具调用",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/extending-claude-capabilities-with-skills-mcp-servers.md"
+      ],
+      "note": "MCP 服务器暴露的工具可被代码批量编排调用，中间结果留在执行环境，只回传最终值给模型。",
+      "quote": "MCP 服务器让 Claude 能够访问你的外部系统、服务和平台"
     },
     {
       "from": "根因分析",
       "to": "调试",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/fix-software-bugs-faster-with-claude.md"
+      ],
+      "note": "调试中手动追溯最近改动与关联分析的低效环节，正是根因分析要替代的深层定位步骤。",
+      "quote": "翻日志、本地复现、加更多日志、再手动追溯最近的改动"
     },
     {
       "from": "调试",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/fix-software-bugs-faster-with-claude.md"
+      ],
+      "note": "Claude Code 以命令行智能体方式主动排查缺陷，可自主执行调查路径而非被动等待指令。",
+      "quote": "用于智能体式编程的命令行工具"
     },
     {
       "from": "上下文工程",
       "to": "智能体框架",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/harnessing-claudes-intelligence.md"
+      ],
+      "note": "上下文工程需借助智能体框架的循环与工具执行机制，才能动态组装并维护模型上下文。"
     },
     {
       "from": "上下文窗口",
       "to": "程序化工具调用",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/harnessing-claudes-intelligence.md"
+      ],
+      "note": "工具结果若全量回灌会挤占窗口，用代码在外部串联调用只把最终结果送回模型，从而绕开令牌上限。",
+      "quote": "以 token 形式处理工具结果可能缓慢、昂贵且不必要"
     },
     {
       "from": "智能体框架",
       "to": "提示缓存",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/harnessing-claudes-intelligence.md"
+      ],
+      "note": "智能体框架的多轮循环会反复发送相同系统提示与工具定义，提示缓存借此复用前缀以降低每次调用的输入成本。"
     },
     {
       "from": "记忆",
       "to": "Claude-Tag",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-employees-use-claude-tag.md"
+      ],
+      "note": "Claude Tag 作为常驻频道智能体，需靠记忆跨运行保留用户指令与任务进度才能持续协作。"
     },
     {
       "from": "调试",
       "to": "智能体编程",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-teams-use-claude-code.md"
+      ],
+      "note": "智能体编程把调试纳入自主闭环，由AI在编码、审查与测试中持续定位并修复缺陷。",
+      "quote": "虽然他们的许多用例都在意料之中——调试、浏览代码库、管理工作流"
     },
     {
       "from": "测试驱动开发",
       "to": "智能体编程",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-teams-use-claude-code.md"
+      ],
+      "note": "先写测试为AI智能体划定可验证的成功标准，使其能自主迭代编码并自检产出可靠性。",
+      "quote": "引导它进行测试驱动开发，并定期检查进展"
     },
     {
       "from": "工作流自动化",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-uses-claude-gtm-engineering.md"
+      ],
+      "note": "销售员用Claude Code搭建邮件起草应用，无编程经验也能每天省两三小时。",
+      "quote": "Jared 估计 CLAFTS 最终每天为他节省两到三个小时"
     },
     {
       "from": "工作流自动化",
       "to": "提示工程",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-uses-claude-gtm-engineering.md"
+      ],
+      "note": "工作流自动化将提示工程封装为可复用节点，使模型指令在业务流程中稳定执行并减少人工干预。"
     },
     {
       "from": "工作流自动化",
       "to": "模型上下文协议",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-uses-claude-legal.md"
+      ],
+      "note": "工作流自动化借助MCP标准化接入外部工具与数据源，使智能体能跨系统执行原本耗时的业务流程。"
     },
     {
       "from": "工作流自动化",
       "to": "Claude-平台",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-anthropic-uses-claude-legal.md"
+      ],
+      "note": "Claude 平台提供模型与智能体构建能力，使企业能将耗时业务流程交给自动化智能体执行。"
     },
     {
       "from": "上下文工程",
       "to": "智能体编程",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md"
+      ],
+      "note": "智能体自主编码需准确理解代码库与任务意图，上下文工程为其组织文件、历史与约束信息，避免偏离目标。"
     },
     {
       "from": "Claude-平台",
       "to": "模型上下文协议",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md"
+      ],
+      "note": "Claude 平台将 MCP 作为标准接口，让智能体统一接入外部工具与数据源，无需为每个集成单独开发。"
     },
     {
       "from": "Claude-托管智能体",
       "to": "Claude-Code",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md"
+      ],
+      "note": "Datadog 工程师用 Claude Code 编写生产代码，其运行依赖托管智能体提供的运行时与会话管理能力。",
+      "quote": "Datadog 的所有工程师都在使用 AI 编码工具编写生产代码，其中至少三分之二由 Claude Code 驱动"
     },
     {
       "from": "人机团队",
       "to": "Claude-Tag",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-healthcare-organizations-use-claude-tag.md"
+      ],
+      "note": "医疗企业把 Claude Tag 作为常驻成员放进共享频道，与员工分工完成实际业务流程，从而组成人机团队。",
+      "quote": "以下是 Insight Health、Tennr 和 Medallion 目前如何使用 Claude Tag 构建人机团队。"
     },
     {
       "from": "事件响应",
       "to": "Claude-Tag",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-healthcare-organizations-use-claude-tag.md"
+      ],
+      "note": "医疗组织把Claude Tag拉进Slack当队友，用它分诊生产告警并维护内部工具，从而支撑事件响应流程。",
+      "quote": "帮助这些组织分诊生产环境告警、维护内部工具"
     },
     {
       "from": "Claude-Fable-5",
       "to": "智能体编程",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md"
+      ],
+      "note": "该模型单任务成本在复杂长时程编码任务中更低，因而适合支撑智能体自主完成开发流程。",
+      "quote": "尤其是对于更复杂、长时程的工作"
     },
     {
       "from": "长时运行智能体",
       "to": "评估",
       "rel": "衡量",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md"
+      ],
+      "note": "长时运行智能体需连续数小时无人监督，评估套件能同时跑多场景，安全验证模型升级与记忆重构。",
+      "quote": "团队从一开始就集成了智能体评估（eval），并打造出一套强大的评估套件，可同时运行多个场景。"
     },
     {
       "from": "长时运行智能体",
       "to": "提示注入",
       "rel": "风险",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-outtake-built-a-cyber-investigator-on-claude.md"
+      ],
+      "note": "长时运行智能体需持续读取外部内容且无人监督，攻击者可借机注入恶意指令，风险随运行时长累积。"
     },
     {
       "from": "模型上下文协议",
       "to": "Claude-Tag",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/how-we-made-claude-ai-faster.md"
+      ],
+      "note": "Claude Tag 作为常驻协作智能体，需借助 MCP 标准化接入外部工具与数据源才能发现瓶颈并监控部署。",
+      "quote": "Claude 发现瓶颈、构建基准测试、发布改进，并监控每一次部署。"
     },
     {
       "from": "技术债务",
       "to": "智能体编程",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/key-benefits-transitioning-agentic-coding.md"
+      ],
+      "note": "智能体编程通过自主完成编码与测试，使原本需数月偿还的技术债务得以逐步清理，改善项目经济性。",
+      "quote": "需要数月才能解决的技术债务得以逐步解决。"
     },
     {
       "from": "技能",
       "to": "插件市场",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/lessons-from-building-claude-code-how-we-use-skills.md"
+      ],
+      "note": "技能可打包成插件上传到市场，让用户浏览安装，实现团队间复用分发。",
+      "quote": "制作一个插件，并拥有一个 Claude Code 插件市场，用户可以在其中上传和安装插件"
     },
     {
       "from": "提示缓存",
       "to": "计划模式",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md"
+      ],
+      "note": "计划模式若按直觉切换只读工具集会破坏缓存前缀，因此其设计必须服从缓存约束。",
+      "quote": "当用户进入计划模式时，把工具集换成只包含只读工具，但这会破坏缓存"
     },
     {
       "from": "提示缓存",
       "to": "缓存命中率",
       "rel": "衡量",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md"
+      ],
+      "note": "提示缓存的实际收益由命中率决定，命中率低会直接推高成本并触发线上告警。",
+      "quote": "高提示词缓存命中率能降低成本，也帮助我们的订阅方案给出更宽松的速率限制"
     },
     {
       "from": "技术债务",
       "to": "上下文工程",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md"
+      ],
+      "note": "上下文工程通过系统化设计上下文，能减少因信息缺失导致的重复修改，从而偿还技术债务。"
     },
     {
       "from": "代码审查",
       "to": "智能体编程",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/running-an-ai-native-engineering-org.md"
+      ],
+      "note": "智能体接管编码后，人工审查成为验证AI产出的关键环节，是保障质量的主要瓶颈。",
+      "quote": "验证、代码审查和安全取代了它们的位置。"
     },
     {
       "from": "内部试用",
       "to": "Claude-Cowork",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/running-an-ai-native-engineering-org.md"
+      ],
+      "note": "Claude Code 团队把 Cowork 列入日常必用工具，借内部真实工作流验证其协作能力再推向市场。",
+      "quote": "每个 Claude Code 团队成员，包括跨职能伙伴，都使用 Claude Code（也使用 Claude Cowork）"
     },
     {
       "from": "智能体编程",
       "to": "提示工程",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/scaling-agentic-coding.md"
+      ],
+      "note": "智能体编程中，智能体需靠精心设计的提示来规划编码、审查与测试步骤，提示质量直接决定任务成败。"
     },
     {
       "from": "上下文窗口",
       "to": "技能",
       "rel": "解决",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/skills-explained.md"
+      ],
+      "note": "技能按需加载而非一次性塞入提示，避免占满上下文窗口，使长工作流在有限令牌内可执行。",
+      "quote": "每个项目包含一个 200K 上下文窗口，你可以在其中上传文档、提供上下文"
     },
     {
       "from": "验证",
       "to": "CLAUDE-md",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/solving-code-review-at-anthropic.md"
+      ],
+      "note": "CLAUDE.md 记录项目测试命令等约定，让智能体有可执行的验证手段来检查自身工作是否达标。",
+      "quote": "它可能简单到运行一条 bash 命令，或运行一套测试，或在浏览器或手机模拟器中测试应用。"
     },
     {
       "from": "子代理",
       "to": "钩子",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/subagents-in-claude-code.md"
+      ],
+      "note": "钩子在生命周期节点自动触发，无需手动调用即可启动子代理执行任务，实现工作流自动化。",
+      "quote": "钩子在特定操作上触发，无需手动调用即可运行子智能体任务。"
     },
     {
       "from": "子代理",
       "to": "Claude-Cowork",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/the-claude-cowork-product-guide.md"
+      ],
+      "note": "子代理让Cowork能把多步骤任务拆成独立上下文单元并行推进，从而向非技术用户交付完整成果。",
+      "quote": "你描述目标、期望的结果和节奏，Claude 就会列出步骤并完成工作"
     },
     {
       "from": "长时运行智能体",
       "to": "Claude-Cowork",
       "rel": "启用",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "articles/the-claude-cowork-product-guide.md"
+      ],
+      "note": "长时运行能力让 Cowork 能自主推进多步骤任务至交付物，非技术用户只需描述目标与节奏。",
+      "quote": "将多步骤任务推进到真正的交付物，同时附上指向实际文件和消息的引用"
     },
     {
       "from": "代码现代化",
       "to": "智能体编程",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "guides/the-code-modernization-playbook.md"
+      ],
+      "note": "遗留系统改造中，智能体可自动完成代码审查与测试迁移，降低现代化的人力和风险成本。",
+      "quote": "你不必在代码现代化与交付下一个重要功能之间二选一"
     },
     {
       "from": "AI治理",
       "to": "企业AI转型",
       "rel": "依赖",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "guides/the-enterprise-ai-transformation-guide-for-retail.md"
+      ],
+      "note": "企业AI转型需在流程重塑中嵌入控制与审计边界，治理框架为规模化部署提供合规前提。"
     },
     {
       "from": "模型上下文协议",
       "to": "智能体",
       "rel": "用于",
       "w": 1,
-      "docs": 1
+      "docs": [
+        "guides/zero-trust-for-ai-agents.md"
+      ],
+      "note": "MCP 为智能体提供统一接口接入外部工具与数据源，使其能自主完成多步任务。"
     }
   ],
   "reviewed": {

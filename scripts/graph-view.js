@@ -5,10 +5,28 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const graph = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'graph.json'), 'utf8'));
 
+const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'manifest.json'), 'utf8'));
+const zhTitle = (rel) => {
+  const p = path.join(ROOT, 'docs', 'zh', rel);
+  if (!fs.existsSync(p)) return null;
+  const m = fs.readFileSync(p, 'utf8').match(/^title:\s*"(.*)"$/m);
+  return m ? m[1] : null;
+};
+const docIndex = {};
+for (const it of manifest.items) {
+  const rel = `${it.type === 'blogPost' ? 'articles' : it.type === 'guide' ? 'guides' : 'webinars'}/${it.slug}.md`;
+  docIndex[rel] = {
+    t: zhTitle(rel) || it.title,
+    u: it.url,
+    gh: `https://github.com/yibie/claude-best-practices-zh/blob/main/docs/zh/${rel}`,
+  };
+}
+
 const payload = {
-  nodes: graph.nodes.map((n) => ({ id: n.id, label: n.zh, en: n.en, cat: n.cat, count: n.count, def: n.def })),
-  edges: graph.edges.map((e) => ({ source: e.from, target: e.to, rel: e.rel, w: e.w })),
+  nodes: graph.nodes.map((n) => ({ id: n.id, label: n.zh, en: n.en, cat: n.cat, count: n.count, def: n.def, docs: (n.docs || []).slice(0, 6) })),
+  edges: graph.edges.map((e) => ({ source: e.from, target: e.to, rel: e.rel, w: e.w, note: e.note || '', quote: e.quote || '', docs: Array.isArray(e.docs) ? e.docs.slice(0, 4) : [] })),
   cats: graph.categories,
+  docIndex,
   reviewed: graph.reviewed || null,
   generatedAt: graph.generatedAt,
 };
@@ -83,12 +101,40 @@ const html = `<!doctype html>
   .node circle{stroke-width:1.2}
   .halo{fill:none;stroke-width:1;opacity:.5}
   .link{stroke:var(--link-cross);stroke-linecap:round;transition:opacity .2s}
+  .link.hot{stroke:var(--accent) !important;stroke-opacity:.95 !important;stroke-dasharray:none !important}
+  .node.pick circle:last-of-type{stroke-width:2.6}
   .link.hot{stroke:#8fb0ff;opacity:.95 !important}
   .link-label{font-size:9.5px;fill:var(--muted);paint-order:stroke;stroke:var(--label-halo);stroke-width:2.5px;pointer-events:none;opacity:0;transition:opacity .15s}
   .link-label.show{opacity:.95}
   .dim{opacity:.13 !important}
   #legend{position:absolute;right:14px;bottom:12px;font-size:11px;color:var(--muted);text-align:right;line-height:1.7}
   #legend b{color:#cfd7e3;font-weight:500}
+  #card{position:absolute;width:352px;max-height:min(560px,80%);overflow:auto;background:var(--panel-solid);
+    border:1px solid var(--line-strong,#2b3546);border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.38);
+    padding:14px 16px 16px;font-size:12.5px;line-height:1.6;display:none;z-index:8}
+  #card .hd{display:flex;align-items:flex-start;gap:10px;margin-bottom:2px}
+  #card .hd h3{margin:0;font-size:16px;font-weight:600;flex:1;line-height:1.35}
+  #card .hd button{background:none;border:none;color:var(--muted);font-size:16px;line-height:1;cursor:pointer;padding:2px 4px;border-radius:6px}
+  #card .hd button:hover{background:var(--chip);color:var(--fg)}
+  #card .sub{color:var(--muted);font-size:11.5px;font-family:var(--mono);margin-bottom:10px}
+  #card .def{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+  #card .h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--cat-label);margin:14px 0 6px;display:flex;justify-content:space-between}
+  #card .rel{padding:8px 0;border-top:1px solid var(--line)}
+  #card .rel:first-of-type{border-top:none}
+  #card .rel .ln{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+  #card .rel .dir{font-family:var(--mono);font-size:10px;color:var(--accent);border:1px solid var(--line);
+    border-radius:999px;padding:0 6px;white-space:nowrap}
+  #card .rel .nm{color:var(--fg);font-size:12.5px;font-weight:500;cursor:pointer}
+  #card .rel .nm:hover{color:var(--accent)}
+  #card .rel .note{color:var(--muted);font-size:12px;margin-top:3px}
+  #card .rel blockquote{margin:5px 0 0;padding:4px 0 4px 8px;border-left:2px solid var(--line-strong,#2b3546);
+    color:var(--dim,#9aa1ab);font-size:11.5px}
+  #card .rel .src{font-size:11px;color:var(--faint,#5d646e);margin-top:4px}
+  #card .rel .src a{color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--line-strong,#2b3546)}
+  #card .rel .src a:hover{color:var(--accent)}
+  #card .foot{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+  #card .foot a{color:var(--muted)}
   #tooltip{position:absolute;pointer-events:none;background:var(--panel-solid);border:1px solid var(--line);
     border-radius:8px;padding:6px 9px;font-size:12px;max-width:240px;opacity:0;transition:opacity .15s;z-index:5}
 </style></head>
@@ -112,6 +158,7 @@ const html = `<!doctype html>
   </aside>
   <div id="stage">
     <svg id="graph"></svg>
+    <div id="card"></div>
     <div id="tooltip"></div>
     <div id="legend"></div>
   </div>
@@ -151,6 +198,7 @@ const gLabel = gZoom.append('g');
 const gNode = gZoom.append('g');
 
 const stage = document.getElementById('stage');
+let cardId = null;
 let hidden = new Set();
 let coreOnly = false;
 let showLinkLabels = true;
@@ -236,6 +284,7 @@ function tick() {
   nodeSel.attr('transform', d => \`translate(\${d.x},\${d.y})\`);
   labelSel.attr('x', d => d.x).attr('y', d => d.y - r(d) - 6).attr('text-anchor', 'middle');
   blobSel.attr('d', c => blobPath(c));
+  if (cardId) placeCard();
   for (const c of CATS) {
     const members = nodes.filter(n => n.cat === c && n.x != null);
     if (!members.length) continue;
@@ -255,6 +304,7 @@ const zoom = d3.zoom().scaleExtent([0.35, 3.5]).on('zoom', (e) => {
   gZoom.attr('transform', e.transform);
   const k = e.transform.k;
   labelSel.attr('opacity', d => (k < 1.15 && d.count < 4) ? 0 : (visible(d) ? 1 : 0));
+  placeCard();
   catLabels.attr('opacity', k < 0.55 ? 0.4 : 0.9);
 });
 svg.call(zoom).on('dblclick.zoom', null);
@@ -270,7 +320,7 @@ function relatedOf(id) {
     .map(l => {
       const out = (l.source.id || l.source) === id;
       const other = byId.get(out ? (l.target.id || l.target) : (l.source.id || l.source));
-      return { other, rel: l.rel, out, w: l.w };
+      return { other, rel: l.rel, out, w: l.w, note: l.note || '', quote: l.quote || '', docs: l.docs || [] };
     })
     .filter(x => x.other)
     .sort((a, b) => b.w - a.w);
@@ -307,6 +357,78 @@ function clearFocus() {
   labelSel.classed('dim', false);
 }
 
+// ------- 点击卡片：只列这个概念的连线 + 解释 + 出处 -------
+const card = document.getElementById('card');
+
+const GH = 'https://github.com/yibie/claude-best-practices-zh/blob/main';
+const docLink = (rel) => {
+  const meta = DATA.docIndex[rel];
+  const title = meta ? meta.t : rel;
+  const href = meta ? meta.gh : \`\${GH}/docs/zh/\${rel}\`;
+  return \`<a href="\${href}" target="_blank" rel="noopener">《\${title}》</a>\`;
+};
+
+function openCard(d) {
+  cardId = d.id;
+  const rels = relatedOf(d.id);
+  const lines = rels.map((x) => \`
+    <div class="rel">
+      <div class="ln"><span class="dir">\${x.out ? x.rel + ' →' : '← ' + x.rel}</span>
+        <span class="nm" data-goto="\${x.other.id}">\${x.other.label}</span></div>
+      \${x.note ? \`<div class="note">\${x.note}</div>\` : ''}
+      \${x.quote ? \`<blockquote>“\${x.quote}”</blockquote>\` : ''}
+      \${x.docs.length ? \`<div class="src">出处：\${x.docs.slice(0, 2).map(docLink).join('、')}</div>\` : ''}
+    </div>\`).join('');
+
+  const sources = (d.docs || []).slice(0, 4).map(docLink).join('、');
+
+  card.innerHTML = \`
+    <div class="hd"><h3>\${d.label}</h3><button title="关闭" data-close="1">✕</button></div>
+    <div class="sub">\${d.cat} · 提及 \${d.count} 篇 · \${rels.length} 条关联</div>
+    \${d.def ? \`<div class="def">\${d.def}</div>\` : ''}
+    <div class="h4"><span>关系</span><span>\${rels.length}</span></div>
+    \${lines || '<div class="rel"><div class="note">暂无已审阅的关系</div></div>'}
+    \${sources ? \`<div class="foot"><b style="color:var(--muted)">主要出处</b><br/>\${sources}</div>\` : ''}
+    <div class="foot"><a href="\${GH}/wiki/\${encodeURIComponent(d.id)}.md" target="_blank" rel="noopener">打开维基条目 ↗</a></div>\`;
+  card.style.display = 'block';
+  placeCard();
+}
+
+function placeCard() {
+  if (!cardId) return;
+  const n = byId.get(cardId);
+  if (!n) return;
+  const t = d3.zoomTransform(svg.node());
+  const sx = t.applyX(n.x), sy = t.applyY(n.y);
+  const rect = stage.getBoundingClientRect();
+  const cw = card.offsetWidth || 352, ch = card.offsetHeight || 320;
+  let left = sx + 26, top = sy - ch / 3;
+  if (left + cw > rect.width - 14) left = sx - cw - 26;
+  if (left < 14) left = 14;
+  top = Math.max(14, Math.min(top, rect.height - ch - 14));
+  card.style.left = left + 'px';
+  card.style.top = top + 'px';
+}
+
+function closeCard() { cardId = null; card.style.display = 'none'; }
+
+card.addEventListener('click', (e) => {
+  if (e.target.closest('[data-close]')) { closeCard(); clearFocus(); nodeSel.classed('pick', false); return; }
+  const g = e.target.closest('[data-goto]');
+  if (g) {
+    const n = byId.get(g.dataset.goto);
+    if (n) { openCard(n); showDetail(n); pick(n.id); }
+  }
+});
+
+function pick(id) {
+  nodeSel.classed('pick', (d) => d.id === id);
+  focusNode(id);
+}
+
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeCard(); clearFocus(); nodeSel.classed('pick', false); } });
+svg.on('click', (e) => { if (e.target === svg.node()) { closeCard(); clearFocus(); nodeSel.classed('pick', false); } });
+
 nodeSel
   .on('mouseenter', (e, d) => { focusNode(d.id); showDetail(d);
     tip.innerHTML = \`<b>\${d.label}</b><br/><span style="color:#8d97a8">\${d.cat} · 提及 \${d.count} 篇</span>\`;
@@ -316,8 +438,8 @@ nodeSel
     tip.style.left = Math.min(e.clientX - rect.left + 14, rect.width - 250) + 'px';
     tip.style.top = (e.clientY - rect.top + 14) + 'px';
   })
-  .on('mouseleave', () => { clearFocus(); tip.style.opacity = 0; })
-  .on('click', (e, d) => { showDetail(d); focusNode(d.id); })
+  .on('mouseleave', () => { tip.style.opacity = 0; if (!cardId) clearFocus(); })
+  .on('click', (e, d) => { tip.style.opacity = 0; showDetail(d); pick(d.id); openCard(d); e.stopPropagation(); })
   .on('dblclick', (e, d) => { window.open('https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/' + encodeURIComponent(d.id) + '.md', '_blank'); });
 
 // ------- 过滤 -------
