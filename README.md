@@ -2,6 +2,10 @@
 
 > 把 [claude.com/resources/best-practices](https://claude.com/resources/best-practices) 上的全部资源抓取下来，全文译成中文，再按 **Karpathy LLM Wiki** 的思路编译成一套带双向链接的概念维基，并生成可交互的思维导图与知识图谱。
 
+**🌐 在线阅读：<https://claude-best-practices-zh.vercel.app>**
+
+内容经 DeepSeek 三遍审校：① 逐篇对照原文修订译文（526 处）② 重新判定概念关系方向、删除噪声、补充关键缺失（141 条关系）③ 重做知识图谱可视化（分类聚类 + 力导向）。
+
 [![资源](https://img.shields.io/badge/资源-231%20条-blue)]() [![全文翻译](https://img.shields.io/badge/全文翻译-173%20篇-green)]() [![概念](https://img.shields.io/badge/概念条目-100-orange)]() [![关系](https://img.shields.io/badge/概念关系-202-purple)]()
 
 ---
@@ -15,11 +19,12 @@
 | 概念维基 | [`wiki/`](wiki/) | 100 个原子概念条目，双向链接 + Mermaid 知识图谱 + Sources 溯源账本 |
 | 思维导图 | [`mindmap/`](mindmap/) | [交互图谱](mindmap/graph.html)、[思维导图](mindmap/mindmap.html)、Mermaid 源码 |
 
-**三个入口**
+**入口**
 
-1. 想快速建立全局印象 → 打开 [`mindmap/graph.html`](mindmap/graph.html)（力导向知识图谱，按分类着色，点节点看定义）
-2. 想按主题系统学习 → 从 [`wiki/INDEX.md`](wiki/INDEX.md) 进入概念条目
-3. 想读某一篇原文 → 在 [`docs/README.md`](docs/README.md) 的目录里按日期/产品找
+1. 想快速建立全局印象 → [交互式知识图谱](https://claude-best-practices-zh.vercel.app/graph.html)（11 个分类聚类，悬停高亮关联）
+2. 想按主题系统学习 → [概念索引](https://claude-best-practices-zh.vercel.app/wiki/INDEX.html)
+3. 想读某一篇原文 → [中文译文目录](https://claude-best-practices-zh.vercel.app/read/index.html)
+4. 只想在 GitHub 里翻 → 从 [`wiki/INDEX.md`](wiki/INDEX.md) 或 [`docs/README.md`](docs/README.md) 进入
 
 ## 数据规模
 
@@ -83,6 +88,18 @@ node scripts/graph.js           # 6. 汇总节点与关系 → data/graph.json
 node scripts/wiki.js            # 7. 写概念条目 → wiki/*.md
 node scripts/fixlinks.js        # 8. 双向链接 + 反向链接回填
 node scripts/site.js            # 9. 索引、思维导图、图谱 HTML
+
+# 审校（deepseek-v4-pro）
+node scripts/qa-translate.js    # 10. 逐篇对照原文找翻译错误
+node scripts/qa-apply.js        # 11. 应用修订（带守卫：唯一匹配才改）
+node scripts/qa-associations.js # 12. 审查概念关系（删除/反转/补充）
+node scripts/apply-associations.js
+node scripts/relink.js          # 13. 用新关系重建「相关概念」与 Mermaid
+node scripts/graph-view.js      # 14. 生成聚类力导向图谱
+
+# 站点
+node scripts/build-site.js      # 15. 静态站点 → site/
+vercel --prod                   # 16. 发布到 Vercel
 ```
 
 翻译与概念抽取走 DeepSeek API，读取 `~/.pi/agent/auth.json` 中的密钥；所有脚本都是幂等 + 断点续跑，新增文章时重跑即可。
