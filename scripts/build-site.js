@@ -291,8 +291,6 @@ const write = (file, html) => {
 /* 首页：用设计稿，链接改到站内索引 */
 {
   let h = fs.readFileSync(path.join(SRC, 'landing.html'), 'utf8');
-  h = h.replace('href="https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/INDEX.md"', 'href="/wiki/INDEX.html"');
-  h = h.replace('href="https://github.com/yibie/claude-best-practices-zh/blob/main/docs/README.md"', 'href="/read/index.html"');
   h = h.replace('target="_blank" rel="noopener">\n          <div class="card"><svg', '>\n          <div class="card"><svg');
   write('index.html', h);
   write('404.html', h.replace('<title>', '<title>404 · '));
