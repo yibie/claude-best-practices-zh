@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+  "concepts": [
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude托管代理",
+      "def_zh": "一套可组合API，用于构建和部署生产级代理，提供托管基础设施。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent Harness",
+      "zh": "代理框架",
+      "def_zh": "驱动代理的循环、工具执行、上下文管理等底层机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude代理SDK",
+      "def_zh": "基于Claude Code框架构建自定义代理的开发者工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "Session",
+      "zh": "会话",
+      "def_zh": "代理与环境的单次运行实例，持久化事件历史与沙箱状态。",
+      "kind": "technique"
+    },
+    {
+      "en": "Sandbox",
+      "zh": "沙箱",
+      "def_zh": "隔离的执行环境，用于运行代理生成的代码和工具调用。",
+      "kind": "technique"
+    },
+    {
+      "en": "Vault",
+      "zh": "凭证保险库",
+      "def_zh": "安全存储和管理代理访问外部系统所需凭证的服务。",
+      "kind": "product"
+    },
+    {
+      "en": "Context Anxiety",
+      "zh": "上下文焦虑",
+      "def_zh": "模型在接近上下文限制时过早结束任务的行为模式。",
+      "kind": "risk"
+    },
+    {
+      "en": "Dreaming",
+      "zh": "梦境",
+      "def_zh": "定期审查会话和记忆存储，提取模式并优化记忆的进程。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Tunnels",
+      "zh": "MCP隧道",
+      "def_zh": "安全连接私有网络中MCP服务器的通道，控制访问路径。",
+      "kind": "product"
+    },
+    {
+      "en": "Observability",
+      "zh": "可观测性",
+      "def_zh": "通过事件日志和可视化时间线追踪代理运行过程的能力。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude托管代理",
+      "to": "代理框架",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude托管代理",
+      "to": "会话",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude托管代理",
+      "to": "沙箱",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude托管代理",
+      "to": "凭证保险库",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude托管代理",
+      "to": "可观测性",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude代理SDK",
+      "to": "代理框架",
+      "rel": "依赖"
+    },
+    {
+      "from": "梦境",
+      "to": "会话",
+      "rel": "依赖"
+    },
+    {
+      "from": "上下文焦虑",
+      "to": "代理框架",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/building-with-claude-managed-agents.md"
+}

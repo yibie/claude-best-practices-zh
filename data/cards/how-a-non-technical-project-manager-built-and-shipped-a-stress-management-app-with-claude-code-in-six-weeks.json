@@ -1,0 +1,108 @@
+{
+  "summary_zh": "非技术项目经理用 Claude Code 六周内构建并上架压力管理应用 Respiro。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程工具，支持命令行与 IDE 内开发。",
+      "kind": "product"
+    },
+    {
+      "en": "multi-agent architecture",
+      "zh": "多智能体架构",
+      "def_zh": "多个专用 AI 智能体并行协作完成复杂任务的系统设计。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "在主智能体编排下负责特定子任务的专用 AI 代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "vision capabilities",
+      "zh": "视觉能力",
+      "def_zh": "模型解析截图与图像并据此指导操作的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt refinement",
+      "zh": "提示词优化",
+      "def_zh": "通过补充上下文与澄清需求来提升模型输出质量。",
+      "kind": "technique"
+    },
+    {
+      "en": "App Store 上架",
+      "zh": "应用商店发布",
+      "def_zh": "将应用提交至苹果 App Store 并完成审核上线的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "stress detection",
+      "zh": "压力检测",
+      "def_zh": "从设备信号实时识别用户压力状态的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "user funnel analytics",
+      "zh": "用户漏斗分析",
+      "def_zh": "追踪用户从进入到转化各环节流失的分析方法。",
+      "kind": "metric"
+    },
+    {
+      "en": "retention metrics",
+      "zh": "留存指标",
+      "def_zh": "衡量用户持续使用产品比例的量化指标。",
+      "kind": "metric"
+    },
+    {
+      "en": "growth strategy",
+      "zh": "增长策略",
+      "def_zh": "获取用户与扩大产品影响力的系统化方法。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "多智能体架构",
+      "rel": "用于"
+    },
+    {
+      "from": "多智能体架构",
+      "to": "子智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "视觉能力",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "应用商店发布",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "提示词优化",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "用户漏斗分析",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "留存指标",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "增长策略",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md"
+}

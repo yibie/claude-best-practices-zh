@@ -1,0 +1,97 @@
+{
+  "summary_zh": "AI加速漏洞发现与利用，安全团队需调整防御策略，利用AI加速修补与检测。",
+  "concepts": [
+    {
+      "en": "AI-accelerated offense",
+      "zh": "AI加速攻击",
+      "def_zh": "AI模型降低漏洞发现与利用所需资源、时间和技能。",
+      "kind": "risk"
+    },
+    {
+      "en": "patch gap",
+      "zh": "补丁缺口",
+      "def_zh": "从补丁发布到攻击者利用之间的时间窗口。",
+      "kind": "risk"
+    },
+    {
+      "en": "vulnerability management",
+      "zh": "漏洞管理",
+      "def_zh": "接收、分类、修复漏洞的系统化流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI vulnerability scanning",
+      "zh": "AI漏洞扫描",
+      "def_zh": "用前沿模型主动扫描代码和系统以发现漏洞。",
+      "kind": "technique"
+    },
+    {
+      "en": "zero trust architecture",
+      "zh": "零信任架构",
+      "def_zh": "对每个服务请求都进行认证和授权，不默认信任内网。",
+      "kind": "technique"
+    },
+    {
+      "en": "incident response",
+      "zh": "事件响应",
+      "def_zh": "检测、响应和恢复安全事件的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "triage agent",
+      "zh": "分诊代理",
+      "def_zh": "用AI对安全告警进行自动初步调查和分类。",
+      "kind": "technique"
+    },
+    {
+      "en": "MITRE ATT&CK",
+      "zh": "MITRE ATT&CK",
+      "def_zh": "攻击者战术与技术知识库，用于检测覆盖评估。",
+      "kind": "technique"
+    },
+    {
+      "en": "Secure by Design",
+      "zh": "安全设计",
+      "def_zh": "在软件设计阶段内置安全控制，如默认多因素认证。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI加速攻击",
+      "to": "补丁缺口",
+      "rel": "风险"
+    },
+    {
+      "from": "漏洞管理",
+      "to": "补丁缺口",
+      "rel": "解决"
+    },
+    {
+      "from": "AI漏洞扫描",
+      "to": "AI加速攻击",
+      "rel": "用于"
+    },
+    {
+      "from": "零信任架构",
+      "to": "AI加速攻击",
+      "rel": "解决"
+    },
+    {
+      "from": "分诊代理",
+      "to": "事件响应",
+      "rel": "用于"
+    },
+    {
+      "from": "MITRE ATT&CK",
+      "to": "事件响应",
+      "rel": "衡量"
+    },
+    {
+      "from": "安全设计",
+      "to": "漏洞管理",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md"
+}

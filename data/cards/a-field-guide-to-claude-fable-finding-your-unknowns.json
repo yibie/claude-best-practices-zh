@@ -1,0 +1,91 @@
+{
+  "summary_zh": "Claude Fable 5 模型下，工作质量取决于澄清未知，需在实现前后迭代发现未知。",
+  "concepts": [
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "Anthropic 推出的模型，工作质量受限于用户澄清未知的能力。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程工具，用于与 Claude 协作完成编码任务。",
+      "kind": "product"
+    },
+    {
+      "en": "unknowns",
+      "zh": "未知",
+      "def_zh": "地图（提示与上下文）与领土（实际代码库）之间的差异，需 Claude 猜测决策。",
+      "kind": "risk"
+    },
+    {
+      "en": "map and territory",
+      "zh": "地图与领土",
+      "def_zh": "地图指提示、技能与上下文；领土指实际代码库与真实约束。",
+      "kind": "technique"
+    },
+    {
+      "en": "context",
+      "zh": "上下文",
+      "def_zh": "提供给 Claude 的背景信息，用于指导其理解任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "可复用的提示或能力模块，增强 Claude 在特定任务上的表现。",
+      "kind": "technique"
+    },
+    {
+      "en": "iterative process",
+      "zh": "迭代过程",
+      "def_zh": "在实现前、中、后反复发现并澄清未知的工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "clarifying unknowns",
+      "zh": "澄清未知",
+      "def_zh": "通过沟通与探索减少 Claude 对用户意图的猜测，提升工作质量。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Claude Fable 5",
+      "rel": "用于"
+    },
+    {
+      "from": "未知",
+      "to": "地图与领土",
+      "rel": "依赖"
+    },
+    {
+      "from": "澄清未知",
+      "to": "未知",
+      "rel": "解决"
+    },
+    {
+      "from": "迭代过程",
+      "to": "澄清未知",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文",
+      "to": "地图与领土",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "地图与领土",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "澄清未知",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md"
+}

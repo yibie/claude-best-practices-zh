@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 分享用 Claude 实现自助式数据分析的实践，强调准确率取决于上下文与验证而非代码生成。",
+  "concepts": [
+    {
+      "en": "self-service data analytics",
+      "zh": "自助式数据分析",
+      "def_zh": "让非技术用户自主查询数据获取业务洞察的分析模式",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic analytics stack",
+      "zh": "智能体分析栈",
+      "def_zh": "为分析智能体构建的上下文、检索与验证分层架构",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "为模型提供正确实体映射与业务定义等上下文的方法",
+      "kind": "technique"
+    },
+    {
+      "en": "concept-entity ambiguity",
+      "zh": "概念-实体歧义",
+      "def_zh": "用户问题中的概念无法唯一映射到数据模型字段的失败模式",
+      "kind": "risk"
+    },
+    {
+      "en": "data staleness",
+      "zh": "数据陈旧",
+      "def_zh": "数据源、定义与模式变化导致智能体知识过时的失败模式",
+      "kind": "risk"
+    },
+    {
+      "en": "retrieval failure",
+      "zh": "检索失败",
+      "def_zh": "正确信息存在但因搜索空间过大而未被智能体找到的失败模式",
+      "kind": "risk"
+    },
+    {
+      "en": "verification",
+      "zh": "验证",
+      "def_zh": "对智能体生成的分析结果进行正确性核验的机制",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可用于构建分析智能体",
+      "kind": "product"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "封装可复用分析知识与操作模板的智能体能力单元",
+      "kind": "technique"
+    },
+    {
+      "en": "analytics accuracy",
+      "zh": "分析准确率",
+      "def_zh": "智能体回答业务分析问题正确程度的衡量指标",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "上下文工程",
+      "to": "概念-实体歧义",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文工程",
+      "to": "数据陈旧",
+      "rel": "解决"
+    },
+    {
+      "from": "检索失败",
+      "to": "上下文工程",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体分析栈",
+      "to": "上下文工程",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体分析栈",
+      "to": "验证",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能",
+      "to": "智能体分析栈",
+      "rel": "属于"
+    },
+    {
+      "from": "分析准确率",
+      "to": "智能体分析栈",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体分析栈",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md"
+}

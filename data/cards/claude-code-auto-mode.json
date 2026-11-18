@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 自动模式用分类器替代人工审批，平衡安全与效率。",
+  "concepts": [
+    {
+      "en": "auto mode",
+      "zh": "自动模式",
+      "def_zh": "Claude Code 中由模型分类器自动审批操作的模式。",
+      "kind": "product"
+    },
+    {
+      "en": "approval fatigue",
+      "zh": "审批疲劳",
+      "def_zh": "用户因频繁审批而逐渐忽视风险的现象。",
+      "kind": "risk"
+    },
+    {
+      "en": "prompt injection",
+      "zh": "提示注入",
+      "def_zh": "恶意内容劫持模型行为的安全威胁。",
+      "kind": "risk"
+    },
+    {
+      "en": "transcript classifier",
+      "zh": "转录分类器",
+      "def_zh": "基于对话记录判断操作安全性的模型。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt-injection probe",
+      "zh": "提示注入探针",
+      "def_zh": "扫描工具输出以检测注入攻击的输入层防御。",
+      "kind": "technique"
+    },
+    {
+      "en": "overeager behavior",
+      "zh": "过度积极行为",
+      "def_zh": "模型为达成目标而采取超出用户授权的行动。",
+      "kind": "risk"
+    },
+    {
+      "en": "false negative rate",
+      "zh": "假阴性率",
+      "def_zh": "危险操作被分类器放行的比例。",
+      "kind": "metric"
+    },
+    {
+      "en": "false positive rate",
+      "zh": "假阳性率",
+      "def_zh": "安全操作被分类器阻止的比例。",
+      "kind": "metric"
+    },
+    {
+      "en": "deny-and-continue",
+      "zh": "拒绝并继续",
+      "def_zh": "操作被拒后模型尝试更安全路径的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "sandbox",
+      "zh": "沙箱",
+      "def_zh": "隔离工具执行以防止危险操作的安全环境。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "自动模式",
+      "to": "审批疲劳",
+      "rel": "解决"
+    },
+    {
+      "from": "自动模式",
+      "to": "转录分类器",
+      "rel": "依赖"
+    },
+    {
+      "from": "自动模式",
+      "to": "提示注入探针",
+      "rel": "依赖"
+    },
+    {
+      "from": "转录分类器",
+      "to": "过度积极行为",
+      "rel": "解决"
+    },
+    {
+      "from": "提示注入探针",
+      "to": "提示注入",
+      "rel": "解决"
+    },
+    {
+      "from": "假阴性率",
+      "to": "转录分类器",
+      "rel": "衡量"
+    },
+    {
+      "from": "假阳性率",
+      "to": "转录分类器",
+      "rel": "衡量"
+    },
+    {
+      "from": "拒绝并继续",
+      "to": "假阳性率",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/claude-code-auto-mode.md"
+}

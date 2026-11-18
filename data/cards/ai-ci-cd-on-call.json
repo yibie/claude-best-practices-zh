@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 用 Claude Tag 构建 CI/CD 值班智能体，自动检测、分诊、修复并复盘故障。",
+  "concepts": [
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "可加入 Slack 频道、具备记忆与工具访问的常驻智能体产品。",
+      "kind": "product"
+    },
+    {
+      "en": "on-call agent",
+      "zh": "值班智能体",
+      "def_zh": "自动承担故障首响、分诊与沟通的 AI 值班代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "incident response",
+      "zh": "事故响应",
+      "def_zh": "从检测、分诊、修复到复盘验证的故障处理流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Connectors",
+      "zh": "MCP 连接器",
+      "def_zh": "通过 MCP 协议把智能体接入外部工具与数据源的连接组件。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "以 Markdown 文件形式固化指令与排查步骤的可复用能力包。",
+      "kind": "technique"
+    },
+    {
+      "en": "dynamic workflow",
+      "zh": "动态工作流",
+      "def_zh": "由编排智能体调度多个执行子智能体并行调查的任务模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "alert fatigue",
+      "zh": "告警疲劳",
+      "def_zh": "告警过多导致人员麻木、漏判真实故障的风险。",
+      "kind": "risk"
+    },
+    {
+      "en": "MTTR",
+      "zh": "平均修复时间",
+      "def_zh": "从故障发生到恢复的平均耗时，衡量响应效率。",
+      "kind": "metric"
+    },
+    {
+      "en": "lessons.md",
+      "zh": "经验日志",
+      "def_zh": "记录每次事故根因与教训、供后续调查先读的累积文件。",
+      "kind": "technique"
+    },
+    {
+      "en": "feature flag",
+      "zh": "功能开关",
+      "def_zh": "控制功能上线与回滚的开关，用于渐进发布与快速止损。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "值班智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "值班智能体",
+      "to": "事故响应",
+      "rel": "用于"
+    },
+    {
+      "from": "值班智能体",
+      "to": "MCP 连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "值班智能体",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "动态工作流",
+      "to": "事故响应",
+      "rel": "用于"
+    },
+    {
+      "from": "值班智能体",
+      "to": "告警疲劳",
+      "rel": "解决"
+    },
+    {
+      "from": "事故响应",
+      "to": "平均修复时间",
+      "rel": "衡量"
+    },
+    {
+      "from": "经验日志",
+      "to": "事故响应",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/ai-ci-cd-on-call.md"
+}

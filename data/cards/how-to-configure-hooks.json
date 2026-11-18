@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍 Claude Code 钩子的八种事件类型、配置方法、匹配器语法与调试技巧。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，支持钩子等深度定制。",
+      "kind": "product"
+    },
+    {
+      "en": "Hook",
+      "zh": "钩子",
+      "def_zh": "在特定事件发生时自动执行的自定义 shell 命令。",
+      "kind": "technique"
+    },
+    {
+      "en": "PreToolUse",
+      "zh": "工具调用前钩子",
+      "def_zh": "在工具执行前触发，可拦截、批准或修改工具调用。",
+      "kind": "technique"
+    },
+    {
+      "en": "PostToolUse",
+      "zh": "工具调用后钩子",
+      "def_zh": "在工具成功完成后触发，用于格式化、日志等后续处理。",
+      "kind": "technique"
+    },
+    {
+      "en": "PermissionRequest",
+      "zh": "权限请求钩子",
+      "def_zh": "在权限确认对话框出现前触发，可自动批准或拒绝。",
+      "kind": "technique"
+    },
+    {
+      "en": "SessionStart",
+      "zh": "会话启动钩子",
+      "def_zh": "在会话开始或恢复时触发，输出自动注入上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "UserPromptSubmit",
+      "zh": "用户提示提交钩子",
+      "def_zh": "在用户提交提示后、Claude 处理前触发，可注入动态上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "Matcher",
+      "zh": "匹配器",
+      "def_zh": "用于过滤哪些工具或事件触发钩子的模式字符串。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Injection",
+      "zh": "上下文注入",
+      "def_zh": "通过钩子输出将动态信息自动加入 Claude 的上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "Hook Security",
+      "zh": "钩子安全",
+      "def_zh": "钩子以用户权限执行任意命令，需审查配置并防范注入风险。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "钩子",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "工具调用前钩子",
+      "to": "钩子",
+      "rel": "属于"
+    },
+    {
+      "from": "工具调用后钩子",
+      "to": "钩子",
+      "rel": "属于"
+    },
+    {
+      "from": "权限请求钩子",
+      "to": "钩子",
+      "rel": "属于"
+    },
+    {
+      "from": "会话启动钩子",
+      "to": "上下文注入",
+      "rel": "用于"
+    },
+    {
+      "from": "用户提示提交钩子",
+      "to": "上下文注入",
+      "rel": "用于"
+    },
+    {
+      "from": "匹配器",
+      "to": "钩子",
+      "rel": "用于"
+    },
+    {
+      "from": "钩子安全",
+      "to": "钩子",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/how-to-configure-hooks.md"
+}

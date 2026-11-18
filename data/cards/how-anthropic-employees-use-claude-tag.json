@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 员工在 Slack 中用 Claude Tag 生成文档、汇总请求并加速法务审核。",
+  "concepts": [
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "在 Slack 等聊天工具中通过 @ 提及调用 Claude 完成任务的协作产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Slack thread",
+      "zh": "Slack 线程",
+      "def_zh": "Slack 中围绕单条消息展开的连续讨论串，承载上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "context awareness",
+      "zh": "上下文感知",
+      "def_zh": "系统自动读取对话历史与可用资料以理解任务背景的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "standing instructions",
+      "zh": "常驻指令",
+      "def_zh": "预先设定并持续生效的规则，指导助手在后续任务中的行为。",
+      "kind": "technique"
+    },
+    {
+      "en": "memory",
+      "zh": "记忆",
+      "def_zh": "助手跨会话保留并复用先前信息的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "access scoping",
+      "zh": "访问范围控制",
+      "def_zh": "限定助手仅能读取被授权频道与文档的权限机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "fact verification",
+      "zh": "事实核验",
+      "def_zh": "将文档中的陈述与公开资料比对以确认准确性的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "legal review",
+      "zh": "法务审核",
+      "def_zh": "对营销素材进行合规与事实性检查并给出修改意见的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "turnaround time",
+      "zh": "周转时间",
+      "def_zh": "从提出请求到交付结果所耗费的时间，用于衡量效率。",
+      "kind": "metric"
+    },
+    {
+      "en": "marketing collateral",
+      "zh": "营销素材",
+      "def_zh": "面向客户与潜在客户的宣传文档、邮件、落地页等内容。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "Slack 线程",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "上下文感知",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "常驻指令",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "记忆",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "访问范围控制",
+      "rel": "依赖"
+    },
+    {
+      "from": "事实核验",
+      "to": "营销素材",
+      "rel": "用于"
+    },
+    {
+      "from": "法务审核",
+      "to": "营销素材",
+      "rel": "用于"
+    },
+    {
+      "from": "周转时间",
+      "to": "Claude Tag",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/how-anthropic-employees-use-claude-tag.md"
+}

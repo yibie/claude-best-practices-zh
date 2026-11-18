@@ -1,0 +1,103 @@
+{
+  "summary_zh": "Cognition 用 Devin 实测 Claude Fable 5，长时自主运行与混乱上下文中的清醒表现成为关键突破。",
+  "concepts": [
+    {
+      "en": "agent horizon",
+      "zh": "智能体任务时长",
+      "def_zh": "智能体在失去任务线索前能持续自主工作的时长。",
+      "kind": "metric"
+    },
+    {
+      "en": "context robustness",
+      "zh": "上下文鲁棒性",
+      "def_zh": "模型在嘈杂混乱上下文中保持清醒并正确推理的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "Frontier Code",
+      "zh": "前沿代码基准",
+      "def_zh": "Cognition 自建、惩罚仅通过测试却不可维护代码的评测基准。",
+      "kind": "metric"
+    },
+    {
+      "en": "anti-slop standard",
+      "zh": "反劣质代码标准",
+      "def_zh": "以代码能否在真实代码库中存活为标准的质量门槛。",
+      "kind": "metric"
+    },
+    {
+      "en": "dogfooding",
+      "zh": "内部试用",
+      "def_zh": "让自家工程师用真实工作日检验新模型的做法。",
+      "kind": "technique"
+    },
+    {
+      "en": "proactive agent session",
+      "zh": "主动式智能体会话",
+      "def_zh": "无需被指派即自行发现问题、扫描代码并给出修复的会话。",
+      "kind": "technique"
+    },
+    {
+      "en": "incident triage",
+      "zh": "事故分诊",
+      "def_zh": "从日志噪声中定位根因并给出处置的运维任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "codebase migration",
+      "zh": "代码库迁移",
+      "def_zh": "大规模改写代码以适配新框架或新平台的工程任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Devin",
+      "zh": "Devin",
+      "def_zh": "Cognition 开发的自主 AI 软件工程师产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "Anthropic 推出的长时自主运行能力显著提升的模型。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "上下文鲁棒性",
+      "to": "智能体任务时长",
+      "rel": "解决"
+    },
+    {
+      "from": "前沿代码基准",
+      "to": "反劣质代码标准",
+      "rel": "属于"
+    },
+    {
+      "from": "内部试用",
+      "to": "前沿代码基准",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "智能体任务时长",
+      "rel": "解决"
+    },
+    {
+      "from": "Devin",
+      "to": "主动式智能体会话",
+      "rel": "启用"
+    },
+    {
+      "from": "Devin",
+      "to": "代码库迁移",
+      "rel": "用于"
+    },
+    {
+      "from": "Devin",
+      "to": "事故分诊",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md"
+}

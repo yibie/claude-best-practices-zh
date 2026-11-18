@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Brex 团队使用 Claude Code 提升代码质量与生产力，实现角色融合与数据民主化。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程解决方案，可辅助编写、审查和解释代码。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "由 AI 智能体主导代码生成与修改，人类负责引导和审查的编程范式。",
+      "kind": "technique"
+    },
+    {
+      "en": "context management",
+      "zh": "上下文管理",
+      "def_zh": "为 AI 提供结构化领域知识（如 CLAUDE.md 文件）以提升代码理解与生成质量。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，用于连接 AI 模型与外部数据源和工具。",
+      "kind": "product"
+    },
+    {
+      "en": "text-to-SQL",
+      "zh": "文本转 SQL",
+      "def_zh": "将自然语言查询自动转换为 SQL 语句并执行的数据访问技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI data engineering agent",
+      "zh": "AI 数据工程智能体",
+      "def_zh": "自动完成数据表添加、文件编辑和测试配置等数据工程任务的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "headless mode",
+      "zh": "无头模式",
+      "def_zh": "Claude Code 的非交互运行模式，适合自动化脚本和快速构建工具。",
+      "kind": "technique"
+    },
+    {
+      "en": "organizational knowledge repository",
+      "zh": "组织知识库",
+      "def_zh": "将代码库和文档作为可查询的知识源，替代对个人经验的依赖。",
+      "kind": "technique"
+    },
+    {
+      "en": "democratizing data access",
+      "zh": "数据访问民主化",
+      "def_zh": "让非技术角色也能通过自然语言查询和分析数据。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体编程",
+      "to": "上下文管理",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "rel": "依赖"
+    },
+    {
+      "from": "文本转 SQL",
+      "to": "数据访问民主化",
+      "rel": "解决"
+    },
+    {
+      "from": "AI 数据工程智能体",
+      "to": "数据访问民主化",
+      "rel": "用于"
+    },
+    {
+      "from": "无头模式",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "组织知识库",
+      "to": "上下文管理",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md"
+}

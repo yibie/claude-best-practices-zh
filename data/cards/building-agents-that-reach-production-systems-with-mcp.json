@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍连接智能体与外部系统的三种方式，重点阐述MCP在生产环境中的优势与构建模式。",
+  "concepts": [
+    {
+      "en": "Model Context Protocol (MCP)",
+      "zh": "模型上下文协议",
+      "def_zh": "标准化智能体与外部系统连接、认证与发现的开放协议。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Server",
+      "zh": "MCP服务器",
+      "def_zh": "通过MCP协议向智能体暴露系统能力的服务端。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Client",
+      "zh": "MCP客户端",
+      "def_zh": "连接MCP服务器并管理上下文与工具调用的智能体端。",
+      "kind": "product"
+    },
+    {
+      "en": "Direct API Calls",
+      "zh": "直接API调用",
+      "def_zh": "智能体通过代码或函数调用直接请求外部API的方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Command-Line Interface (CLI)",
+      "zh": "命令行接口",
+      "def_zh": "智能体在shell中运行命令行工具以连接外部系统的方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Tool Search",
+      "zh": "工具搜索",
+      "def_zh": "按需检索并加载工具定义以减少上下文占用的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "Programmatic Tool Calling",
+      "zh": "程序化工具调用",
+      "def_zh": "在代码沙箱中处理工具结果，仅将最终输出返回模型。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "教智能体如何使用工具完成实际工作的程序性知识包。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Apps",
+      "zh": "MCP应用",
+      "def_zh": "允许工具返回交互式界面的首个官方协议扩展。",
+      "kind": "product"
+    },
+    {
+      "en": "Elicitation",
+      "zh": "引导请求",
+      "def_zh": "服务器在工具调用中暂停并向用户请求输入或确认的机制。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型上下文协议",
+      "to": "直接API调用",
+      "rel": "替代"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "命令行接口",
+      "rel": "替代"
+    },
+    {
+      "from": "MCP服务器",
+      "to": "模型上下文协议",
+      "rel": "属于"
+    },
+    {
+      "from": "MCP客户端",
+      "to": "模型上下文协议",
+      "rel": "属于"
+    },
+    {
+      "from": "工具搜索",
+      "to": "MCP客户端",
+      "rel": "用于"
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "MCP客户端",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "MCP服务器",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP应用",
+      "to": "MCP服务器",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md"
+}

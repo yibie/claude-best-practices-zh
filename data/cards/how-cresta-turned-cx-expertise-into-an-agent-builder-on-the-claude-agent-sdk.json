@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Cresta 基于 Claude Agent SDK 构建元智能体 Conductor，将 CX 专业知识转化为可复用的智能体构建能力。",
+  "concepts": [
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude 智能体 SDK",
+      "def_zh": "通用智能体执行框架，用于收集上下文、调用工具、编写运行代码。",
+      "kind": "product"
+    },
+    {
+      "en": "Meta-agent",
+      "zh": "元智能体",
+      "def_zh": "能够构建、改进其他智能体的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent builder",
+      "zh": "智能体构建器",
+      "def_zh": "将业务上下文转化为生产级智能体的工具或系统。",
+      "kind": "product"
+    },
+    {
+      "en": "Knowledge flywheel",
+      "zh": "知识飞轮",
+      "def_zh": "通过复用已验证模式与经验，使后续开发更快更一致的循环机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Deterministic workflow",
+      "zh": "确定性工作流",
+      "def_zh": "必须始终按明确业务规则执行、不可出错的关键流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Evaluation",
+      "zh": "评估",
+      "def_zh": "从结果、执行路径、质量和资源使用等维度衡量智能体表现。",
+      "kind": "metric"
+    },
+    {
+      "en": "Human-in-the-loop",
+      "zh": "人在回路",
+      "def_zh": "在关键决策点保留人工介入的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context engineering",
+      "zh": "上下文工程",
+      "def_zh": "为智能体收集、组织并提供恰当业务上下文的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skill",
+      "zh": "技能",
+      "def_zh": "可共享复用的智能体构建模式、规则与评估方法封装。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "元智能体",
+      "to": "Claude 智能体 SDK",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体构建器",
+      "to": "元智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "知识飞轮",
+      "to": "技能",
+      "rel": "启用"
+    },
+    {
+      "from": "评估",
+      "to": "确定性工作流",
+      "rel": "衡量"
+    },
+    {
+      "from": "上下文工程",
+      "to": "智能体构建器",
+      "rel": "用于"
+    },
+    {
+      "from": "人在回路",
+      "to": "确定性工作流",
+      "rel": "解决"
+    },
+    {
+      "from": "评估",
+      "to": "元智能体",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md"
+}

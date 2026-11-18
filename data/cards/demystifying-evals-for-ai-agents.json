@@ -1,0 +1,108 @@
+{
+  "summary_zh": "本文系统阐述AI智能体评估的结构、类型、评分方法及从零构建评估的路线图。",
+  "concepts": [
+    {
+      "en": "AI agent evaluation",
+      "zh": "AI智能体评估",
+      "def_zh": "对AI智能体在多轮交互中的表现进行自动化测试与评分的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "grader",
+      "zh": "评分器",
+      "def_zh": "对智能体表现某方面进行打分的逻辑，可基于代码、模型或人工。",
+      "kind": "technique"
+    },
+    {
+      "en": "transcript",
+      "zh": "执行记录",
+      "def_zh": "一次试验的完整记录，包括输出、工具调用、推理和中间结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "evaluation harness",
+      "zh": "评估框架",
+      "def_zh": "端到端运行评估的基础设施，负责任务执行、记录和评分聚合。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent harness",
+      "zh": "智能体框架",
+      "def_zh": "使模型能作为智能体行动的系统，处理输入、编排工具调用并返回结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "capability eval",
+      "zh": "能力评估",
+      "def_zh": "衡量智能体能做好哪些任务的评估，通常从低通过率开始。",
+      "kind": "metric"
+    },
+    {
+      "en": "regression eval",
+      "zh": "回归评估",
+      "def_zh": "确保智能体仍能处理以往任务的评估，通过率应接近100%。",
+      "kind": "metric"
+    },
+    {
+      "en": "pass@k",
+      "zh": "pass@k",
+      "def_zh": "智能体在k次尝试中至少一次成功的概率。",
+      "kind": "metric"
+    },
+    {
+      "en": "pass^k",
+      "zh": "pass^k",
+      "def_zh": "智能体在k次尝试中全部成功的概率，衡量一致性。",
+      "kind": "metric"
+    },
+    {
+      "en": "computer use agent",
+      "zh": "计算机使用智能体",
+      "def_zh": "通过截图、鼠标键盘等图形界面与软件交互的智能体。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI智能体评估",
+      "to": "评分器",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI智能体评估",
+      "to": "评估框架",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估框架",
+      "to": "智能体框架",
+      "rel": "用于"
+    },
+    {
+      "from": "能力评估",
+      "to": "回归评估",
+      "rel": "替代"
+    },
+    {
+      "from": "pass@k",
+      "to": "AI智能体评估",
+      "rel": "衡量"
+    },
+    {
+      "from": "pass^k",
+      "to": "AI智能体评估",
+      "rel": "衡量"
+    },
+    {
+      "from": "执行记录",
+      "to": "评分器",
+      "rel": "用于"
+    },
+    {
+      "from": "计算机使用智能体",
+      "to": "AI智能体评估",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/demystifying-evals-for-ai-agents.md"
+}

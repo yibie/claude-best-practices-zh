@@ -1,0 +1,86 @@
+{
+  "summary_zh": "面向非营利组织员工的实操指南：连接工作数据与技能，让 Claude 当天产出可用文稿。",
+  "concepts": [
+    {
+      "en": "Claude for Nonprofits",
+      "zh": "非营利组织版 Claude",
+      "def_zh": "面向非营利组织的 Claude 产品方案，含预置技能与团队/企业版支持。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "预置在账户中的可复用能力包，把任务从计划推进到成稿。",
+      "kind": "product"
+    },
+    {
+      "en": "data connection",
+      "zh": "数据连接",
+      "def_zh": "将文件、捐赠记录等工作数据接入模型，使其可见可用。",
+      "kind": "technique"
+    },
+    {
+      "en": "organizational voice",
+      "zh": "组织文风",
+      "def_zh": "组织特有的写作风格与表达习惯，可由模型学习并复现。",
+      "kind": "technique"
+    },
+    {
+      "en": "year-end appeal",
+      "zh": "年终募捐信",
+      "def_zh": "非营利组织年末向捐赠者发出的筹款文稿。",
+      "kind": "product"
+    },
+    {
+      "en": "AI use policy",
+      "zh": "AI 使用政策",
+      "def_zh": "规定哪些数据可输入 AI 工具的组织内部规范。",
+      "kind": "org"
+    },
+    {
+      "en": "generic answer",
+      "zh": "泛化回答",
+      "def_zh": "缺乏组织上下文时模型给出的通用、低针对性输出。",
+      "kind": "risk"
+    },
+    {
+      "en": "draft in your voice",
+      "zh": "符合本组织文风的草稿",
+      "def_zh": "基于组织数据与文风生成的初稿，可直接修改发送。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "数据连接",
+      "to": "泛化回答",
+      "rel": "解决"
+    },
+    {
+      "from": "技能",
+      "to": "符合本组织文风的草稿",
+      "rel": "启用"
+    },
+    {
+      "from": "数据连接",
+      "to": "组织文风",
+      "rel": "依赖"
+    },
+    {
+      "from": "非营利组织版 Claude",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "AI 使用政策",
+      "to": "数据连接",
+      "rel": "衡量"
+    },
+    {
+      "from": "技能",
+      "to": "年终募捐信",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md"
+}

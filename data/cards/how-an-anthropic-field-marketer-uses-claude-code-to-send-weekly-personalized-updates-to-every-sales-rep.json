@@ -1,0 +1,102 @@
+{
+  "summary_zh": "市场人员用 Claude Code 将周报自动化为每位销售代表的个性化周一简报。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的命令行 AI 编程与自动化工具，可用自然语言驱动工作流。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，让 Claude 连接外部数据源与工具的标准接口。",
+      "kind": "product"
+    },
+    {
+      "en": "prompt engineering",
+      "zh": "提示工程",
+      "def_zh": "通过编写与迭代指令来引导模型输出符合预期结果的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "personalized digest",
+      "zh": "个性化简报",
+      "def_zh": "按收件人账户与职责定制的定期信息汇总。",
+      "kind": "product"
+    },
+    {
+      "en": "single source of truth",
+      "zh": "单一数据源",
+      "def_zh": "组织内被公认为权威、唯一的数据来源。",
+      "kind": "technique"
+    },
+    {
+      "en": "data enrichment",
+      "zh": "数据丰富化",
+      "def_zh": "为已有数据补充更多维度信息以提升可用性。",
+      "kind": "technique"
+    },
+    {
+      "en": "pilot rollout",
+      "zh": "试点推广",
+      "def_zh": "先在小范围用户中试用并收集反馈，再逐步扩大范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "hallucination",
+      "zh": "幻觉",
+      "def_zh": "模型生成看似合理但实际虚假或无效的内容。",
+      "kind": "risk"
+    },
+    {
+      "en": "field marketer",
+      "zh": "现场营销人员",
+      "def_zh": "面向销售团队与客户提供营销支持的市场角色。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "个性化简报",
+      "rel": "用于"
+    },
+    {
+      "from": "提示工程",
+      "to": "个性化简报",
+      "rel": "启用"
+    },
+    {
+      "from": "单一数据源",
+      "to": "个性化简报",
+      "rel": "依赖"
+    },
+    {
+      "from": "数据丰富化",
+      "to": "个性化简报",
+      "rel": "启用"
+    },
+    {
+      "from": "试点推广",
+      "to": "个性化简报",
+      "rel": "用于"
+    },
+    {
+      "from": "幻觉",
+      "to": "个性化简报",
+      "rel": "风险"
+    },
+    {
+      "from": "现场营销人员",
+      "to": "Claude Code",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md"
+}

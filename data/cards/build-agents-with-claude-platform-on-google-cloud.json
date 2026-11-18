@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Claude 平台登陆 Google Cloud，可用现有账号构建智能体。",
+  "concepts": [
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供的模型与智能体构建平台服务。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具产品。",
+      "kind": "product"
+    },
+    {
+      "en": "AI agent",
+      "zh": "智能体",
+      "def_zh": "能自主调用工具完成多步任务的 AI 系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "可复用的智能体能力模块，扩展其任务范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "code execution",
+      "zh": "代码执行",
+      "def_zh": "智能体在运行环境中编写并运行代码的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "long-running tasks",
+      "zh": "长时任务",
+      "def_zh": "需持续较长时间、跨多步骤完成的智能体任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Google Cloud IAM",
+      "zh": "Google Cloud IAM",
+      "def_zh": "Google Cloud 的身份与访问权限管理机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "governance",
+      "zh": "治理",
+      "def_zh": "对智能体使用、权限与合规进行管控的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Anthropic managed",
+      "zh": "Anthropic 托管",
+      "def_zh": "由 Anthropic 负责运营底层平台的服务模式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 平台",
+      "to": "智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体",
+      "to": "代码执行",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体",
+      "to": "长时任务",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "Google Cloud IAM",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "治理",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "Anthropic 托管",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude 平台",
+      "rel": "属于"
+    }
+  ],
+  "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md"
+}

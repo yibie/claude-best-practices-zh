@@ -1,0 +1,86 @@
+{
+  "summary_zh": "介绍创建Claude Skills的步骤、最佳实践、限制与示例。",
+  "concepts": [
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "扩展Claude能力的自定义指令，用于特定任务或领域。",
+      "kind": "product"
+    },
+    {
+      "en": "SKILL.md",
+      "zh": "技能定义文件",
+      "def_zh": "包含技能名称、描述和指令的Markdown文件。",
+      "kind": "product"
+    },
+    {
+      "en": "Skill Creator",
+      "zh": "技能创建器",
+      "def_zh": "辅助创建结构化技能的模板或工具。",
+      "kind": "product"
+    },
+    {
+      "en": "Triggering",
+      "zh": "触发",
+      "def_zh": "Claude根据描述判断是否调用技能的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Progressive Disclosure",
+      "zh": "渐进式披露",
+      "def_zh": "主文件精简，按需引用详细文件以节省上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Window",
+      "zh": "上下文窗口",
+      "def_zh": "模型一次能处理的文本量限制。",
+      "kind": "metric"
+    },
+    {
+      "en": "Test Matrix",
+      "zh": "测试矩阵",
+      "def_zh": "覆盖正常、边缘和范围外场景的测试计划。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skill Limitations",
+      "zh": "技能限制",
+      "def_zh": "技能在触发、文件大小等方面的边界。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "技能定义文件",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能创建器",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "触发",
+      "to": "技能",
+      "rel": "启用"
+    },
+    {
+      "from": "渐进式披露",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "测试矩阵",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "技能限制",
+      "to": "技能",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md"
+}

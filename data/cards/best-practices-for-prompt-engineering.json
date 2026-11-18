@@ -1,0 +1,97 @@
+{
+  "summary_zh": "介绍提示工程的核心与进阶技巧，并说明其与上下文工程的关系。",
+  "concepts": [
+    {
+      "en": "prompt engineering",
+      "zh": "提示工程",
+      "def_zh": "结构化编写指令以引导模型产出更佳结果的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "系统化管理模型上下文信息以塑造行为的实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "few-shot prompting",
+      "zh": "少样本提示",
+      "def_zh": "在提示中提供示例来示范期望格式或风格。",
+      "kind": "technique"
+    },
+    {
+      "en": "prefilling",
+      "zh": "预填充",
+      "def_zh": "预先写入模型回复开头以控制格式或跳过开场白。",
+      "kind": "technique"
+    },
+    {
+      "en": "chain of thought prompting",
+      "zh": "思维链提示",
+      "def_zh": "要求模型先逐步推理再给出最终答案的提示方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt chaining",
+      "zh": "提示链",
+      "def_zh": "将复杂任务拆成多个顺序提示，前一步输出作为后一步输入。",
+      "kind": "technique"
+    },
+    {
+      "en": "extended thinking",
+      "zh": "扩展思考",
+      "def_zh": "Claude 自动执行结构化推理的内置功能。",
+      "kind": "product"
+    },
+    {
+      "en": "hallucination",
+      "zh": "幻觉",
+      "def_zh": "模型编造不实信息而非承认不确定的现象。",
+      "kind": "risk"
+    },
+    {
+      "en": "role prompting",
+      "zh": "角色提示",
+      "def_zh": "通过设定专家人设来引导模型回答风格的技巧。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "提示工程",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "少样本提示",
+      "to": "提示工程",
+      "rel": "属于"
+    },
+    {
+      "from": "预填充",
+      "to": "提示工程",
+      "rel": "属于"
+    },
+    {
+      "from": "思维链提示",
+      "to": "扩展思考",
+      "rel": "替代"
+    },
+    {
+      "from": "提示链",
+      "to": "提示工程",
+      "rel": "属于"
+    },
+    {
+      "from": "提示工程",
+      "to": "幻觉",
+      "rel": "解决"
+    },
+    {
+      "from": "角色提示",
+      "to": "提示工程",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/best-practices-for-prompt-engineering.md"
+}

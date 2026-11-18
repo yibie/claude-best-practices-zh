@@ -1,0 +1,108 @@
+{
+  "summary_zh": "合作伙伴基于 Claude Opus 构建网络安全防御产品，覆盖攻击性测试、漏洞修复与受治理部署。",
+  "concepts": [
+    {
+      "en": "Claude Opus",
+      "zh": "Claude Opus",
+      "def_zh": "Anthropic 的前沿大模型，用于代码推理与长程智能体工作流。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Security",
+      "zh": "Claude 安全",
+      "def_zh": "Anthropic 面向安全用例的产品，处于公开测试阶段。",
+      "kind": "product"
+    },
+    {
+      "en": "continuous offensive testing",
+      "zh": "持续攻击性测试",
+      "def_zh": "像攻击者一样持续攻击自身系统，先发现可利用路径。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic AI",
+      "zh": "智能体式 AI",
+      "def_zh": "能自主规划并执行多步任务的 AI 系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "vulnerability remediation",
+      "zh": "漏洞修复",
+      "def_zh": "对已发现漏洞进行分诊、优先级排序与修补的闭环过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "virtual patching",
+      "zh": "虚拟补丁",
+      "def_zh": "在厂商补丁发布前通过缓解措施临时阻断漏洞利用。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI governance",
+      "zh": "AI 治理",
+      "def_zh": "为 AI 部署设定控制、审计证据与自主性边界的框架。",
+      "kind": "technique"
+    },
+    {
+      "en": "zero-day vulnerability",
+      "zh": "零日漏洞",
+      "def_zh": "尚未有官方补丁、可被攻击者利用的未知漏洞。",
+      "kind": "risk"
+    },
+    {
+      "en": "false positive",
+      "zh": "误报",
+      "def_zh": "安全工具错误标记为威胁的正常行为或无效发现。",
+      "kind": "metric"
+    },
+    {
+      "en": "security testing coverage",
+      "zh": "安全测试覆盖率",
+      "def_zh": "被安全测试覆盖的应用与 API 占全部资产的比例。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Opus",
+      "to": "持续攻击性测试",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Opus",
+      "to": "智能体式 AI",
+      "rel": "启用"
+    },
+    {
+      "from": "持续攻击性测试",
+      "to": "零日漏洞",
+      "rel": "解决"
+    },
+    {
+      "from": "虚拟补丁",
+      "to": "零日漏洞",
+      "rel": "解决"
+    },
+    {
+      "from": "漏洞修复",
+      "to": "误报",
+      "rel": "解决"
+    },
+    {
+      "from": "AI 治理",
+      "to": "智能体式 AI",
+      "rel": "用于"
+    },
+    {
+      "from": "安全测试覆盖率",
+      "to": "持续攻击性测试",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude 安全",
+      "to": "Claude Opus",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md"
+}

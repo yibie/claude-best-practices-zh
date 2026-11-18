@@ -1,0 +1,91 @@
+{
+  "summary_zh": "金融服务业构建自主AI智能体的指南，涵盖用例、蓝图与时间线。",
+  "concepts": [
+    {
+      "en": "Autonomous AI Agent",
+      "zh": "自主AI智能体",
+      "def_zh": "能自主规划并执行多步任务的AI系统",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic推出的注重安全可靠的基础模型系列",
+      "kind": "product"
+    },
+    {
+      "en": "Amazon Bedrock",
+      "zh": "Amazon Bedrock",
+      "def_zh": "AWS全托管生成式AI基础设施服务",
+      "kind": "product"
+    },
+    {
+      "en": "Compliance",
+      "zh": "合规性",
+      "def_zh": "满足金融行业监管与法规要求的能力",
+      "kind": "risk"
+    },
+    {
+      "en": "Security",
+      "zh": "安全性",
+      "def_zh": "保护系统与数据免受威胁的保障能力",
+      "kind": "risk"
+    },
+    {
+      "en": "Production-scale Deployment",
+      "zh": "生产级部署",
+      "def_zh": "从实验走向满足性能标准的规模化上线",
+      "kind": "technique"
+    },
+    {
+      "en": "Use Case Blueprint",
+      "zh": "用例蓝图",
+      "def_zh": "面向具体业务场景的智能体构建方案模板",
+      "kind": "technique"
+    },
+    {
+      "en": "Financial Services",
+      "zh": "金融服务业",
+      "def_zh": "银行、保险等受严格监管的金融服务行业",
+      "kind": "org"
+    }
+  ],
+  "relations": [
+    {
+      "from": "自主AI智能体",
+      "to": "Claude",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude",
+      "to": "Amazon Bedrock",
+      "rel": "用于"
+    },
+    {
+      "from": "自主AI智能体",
+      "to": "合规性",
+      "rel": "风险"
+    },
+    {
+      "from": "自主AI智能体",
+      "to": "安全性",
+      "rel": "风险"
+    },
+    {
+      "from": "用例蓝图",
+      "to": "自主AI智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "生产级部署",
+      "to": "自主AI智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "金融服务业",
+      "to": "自主AI智能体",
+      "rel": "用于"
+    }
+  ],
+  "rel": "guides/financial-services-guide-to-building-autonomous-ai-agents.md"
+}

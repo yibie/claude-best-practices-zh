@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍五种多智能体协调模式及其适用场景与演进路径。",
+  "concepts": [
+    {
+      "en": "Generator-Verifier",
+      "zh": "生成器-验证器",
+      "def_zh": "生成器产出初稿，验证器按明确标准评估并反馈迭代的模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Orchestrator-Subagent",
+      "zh": "编排器-子智能体",
+      "def_zh": "主智能体规划并派发有界子任务给子智能体，再综合结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Teams",
+      "zh": "智能体团队",
+      "def_zh": "协调者派生持久工作智能体，从共享队列领取独立长任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Message Bus",
+      "zh": "消息总线",
+      "def_zh": "智能体通过发布/订阅事件、由路由器分发的共享通信层。",
+      "kind": "technique"
+    },
+    {
+      "en": "Shared State",
+      "zh": "共享状态",
+      "def_zh": "智能体无中心协调，直接读写同一持久存储来协作。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context-Centric Decomposition",
+      "zh": "上下文中心分解",
+      "def_zh": "按各智能体所需上下文而非工作类型来划分任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Reactive Loop",
+      "zh": "反应式循环",
+      "def_zh": "智能体互相响应彼此写入，导致不收敛地持续消耗令牌。",
+      "kind": "risk"
+    },
+    {
+      "en": "Termination Condition",
+      "zh": "终止条件",
+      "def_zh": "限定时间、收敛阈值或指定裁决者来结束多智能体协作。",
+      "kind": "technique"
+    },
+    {
+      "en": "Single Point of Failure",
+      "zh": "单点故障",
+      "def_zh": "中心协调者或路由器失效即导致整个系统停摆的风险。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "生成器-验证器",
+      "to": "终止条件",
+      "rel": "依赖"
+    },
+    {
+      "from": "编排器-子智能体",
+      "to": "上下文中心分解",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体团队",
+      "to": "编排器-子智能体",
+      "rel": "替代"
+    },
+    {
+      "from": "消息总线",
+      "to": "编排器-子智能体",
+      "rel": "替代"
+    },
+    {
+      "from": "共享状态",
+      "to": "单点故障",
+      "rel": "解决"
+    },
+    {
+      "from": "共享状态",
+      "to": "反应式循环",
+      "rel": "风险"
+    },
+    {
+      "from": "终止条件",
+      "to": "反应式循环",
+      "rel": "解决"
+    },
+    {
+      "from": "消息总线",
+      "to": "智能体团队",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/multi-agent-coordination-patterns.md"
+}

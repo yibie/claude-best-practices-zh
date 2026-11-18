@@ -1,0 +1,108 @@
+{
+  "summary_zh": "乐天利用Claude Fable 5的自我验证与品味对齐能力，构建可长时间无人值守运行的企业智能体。",
+  "concepts": [
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "具备自我反思与自我验证能力的前沿大模型。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "用于加速软件开发与智能体构建的编程工具。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude 托管智能体",
+      "def_zh": "可跨业务部门部署的托管式智能体服务。",
+      "kind": "product"
+    },
+    {
+      "en": "self-verification",
+      "zh": "自我验证",
+      "def_zh": "模型在运行中主动检查自身工作正确性的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "taste alignment",
+      "zh": "品味对齐",
+      "def_zh": "模型在模糊判断上与团队偏好保持一致的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "long-running agents",
+      "zh": "长时运行智能体",
+      "def_zh": "可连续数小时无人监督执行复杂任务的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "human judgment",
+      "zh": "人类判断",
+      "def_zh": "智能体规模化后仍需人来完成的最终决策环节。",
+      "kind": "role"
+    },
+    {
+      "en": "cost per task",
+      "zh": "单任务成本",
+      "def_zh": "完成单个任务所消耗的模型调用成本。",
+      "kind": "metric"
+    },
+    {
+      "en": "task completion ratio",
+      "zh": "任务完成率",
+      "def_zh": "智能体成功完成任务的比例。",
+      "kind": "metric"
+    },
+    {
+      "en": "AI-nization",
+      "zh": "AI 化",
+      "def_zh": "企业将 AI 全面融入各项业务与流程的转型举措。",
+      "kind": "org"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Fable 5",
+      "to": "自我验证",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "品味对齐",
+      "rel": "启用"
+    },
+    {
+      "from": "自我验证",
+      "to": "长时运行智能体",
+      "rel": "解决"
+    },
+    {
+      "from": "长时运行智能体",
+      "to": "人类判断",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 托管智能体",
+      "to": "AI 化",
+      "rel": "用于"
+    },
+    {
+      "from": "单任务成本",
+      "to": "Claude Fable 5",
+      "rel": "衡量"
+    },
+    {
+      "from": "任务完成率",
+      "to": "Claude Fable 5",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Code",
+      "to": "长时运行智能体",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-rakuten.md"
+}

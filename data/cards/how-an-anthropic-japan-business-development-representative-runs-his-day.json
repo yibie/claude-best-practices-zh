@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+  "concepts": [
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude托管智能体",
+      "def_zh": "Claude平台上托管智能体部署、调度与凭证的基础设施。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "以Slack成员身份被@提及并在线程中处理请求的Claude。",
+      "kind": "product"
+    },
+    {
+      "en": "memory store",
+      "zh": "记忆存储",
+      "def_zh": "多个智能体共享读写、保存修正与知识的持久存储。",
+      "kind": "technique"
+    },
+    {
+      "en": "scheduled deployment",
+      "zh": "定时部署",
+      "def_zh": "按设定时区与频率自动运行智能体的部署方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "managed vault",
+      "zh": "托管凭证库",
+      "def_zh": "集中保管并限定智能体访问外部服务凭证的保险库。",
+      "kind": "technique"
+    },
+    {
+      "en": "advisor strategy",
+      "zh": "顾问策略",
+      "def_zh": "小模型执行、遇难题时向大模型请求建议的协作模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "single-responsibility agent",
+      "zh": "单一职责智能体",
+      "def_zh": "每个智能体只承担一项明确任务以便追踪与优化。",
+      "kind": "technique"
+    },
+    {
+      "en": "knowledge base",
+      "zh": "知识库",
+      "def_zh": "存放修正、历史交互与内部资料供智能体取用的共享来源。",
+      "kind": "technique"
+    },
+    {
+      "en": "business development representative",
+      "zh": "业务拓展代表",
+      "def_zh": "负责线索筛选、客户沟通与商机推进的销售角色。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude托管智能体",
+      "to": "定时部署",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude托管智能体",
+      "to": "记忆存储",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude托管智能体",
+      "to": "托管凭证库",
+      "rel": "依赖"
+    },
+    {
+      "from": "顾问策略",
+      "to": "Claude托管智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "单一职责智能体",
+      "to": "知识库",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Claude托管智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "业务拓展代表",
+      "to": "Claude托管智能体",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md"
+}

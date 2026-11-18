@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Curative 用 Claude 构建多智能体层级，将医疗服务提供者合同签署速度提升约 50 倍。",
+  "concepts": [
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供的模型与智能体开发平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可读写代码与执行任务。",
+      "kind": "product"
+    },
+    {
+      "en": "multi-agent hierarchy",
+      "zh": "多智能体层级",
+      "def_zh": "由主智能体与多个子智能体分工协作的架构。",
+      "kind": "technique"
+    },
+    {
+      "en": "judge agent",
+      "zh": "评审智能体",
+      "def_zh": "在消息发出前审查内容合规性的辅助智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "rate reviewer agent",
+      "zh": "费率审核智能体",
+      "def_zh": "审核主智能体提出的费率是否合理的辅助智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "isolated run",
+      "zh": "隔离运行",
+      "def_zh": "每次运行只处理单一对象且不保留跨任务记忆。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，标准化智能体与外部系统的连接。",
+      "kind": "product"
+    },
+    {
+      "en": "PHI",
+      "zh": "受保护健康信息",
+      "def_zh": "HIPAA 监管下需严格保护的病人健康数据。",
+      "kind": "risk"
+    },
+    {
+      "en": "BAA",
+      "zh": "业务伙伴协议",
+      "def_zh": "HIPAA 要求处理 PHI 前签署的合规合同。",
+      "kind": "risk"
+    },
+    {
+      "en": "human-in-the-loop",
+      "zh": "人工介入",
+      "def_zh": "非标准决策交由人类审批的协作机制。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "多智能体层级",
+      "to": "评审智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "多智能体层级",
+      "to": "费率审核智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "评审智能体",
+      "to": "受保护健康信息",
+      "rel": "风险"
+    },
+    {
+      "from": "费率审核智能体",
+      "to": "人工介入",
+      "rel": "依赖"
+    },
+    {
+      "from": "隔离运行",
+      "to": "多智能体层级",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude 平台",
+      "rel": "属于"
+    },
+    {
+      "from": "MCP",
+      "to": "Claude 平台",
+      "rel": "用于"
+    },
+    {
+      "from": "业务伙伴协议",
+      "to": "受保护健康信息",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md"
+}

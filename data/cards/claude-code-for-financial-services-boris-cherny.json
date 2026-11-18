@@ -1,0 +1,91 @@
+{
+  "summary_zh": "面向金融服务工程团队的 Claude Code 与 Agent SDK 实操演示，覆盖研发、合规与理赔智能体。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 推出的智能体式编程工具，可在终端中执行开发任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent SDK",
+      "zh": "智能体 SDK",
+      "def_zh": "用于构建自定义智能体应用的开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "SWE agent",
+      "zh": "软件工程智能体",
+      "def_zh": "自动完成编码、修复与开发流程任务的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "compliance agent",
+      "zh": "合规智能体",
+      "def_zh": "自动执行合规审查与监管检查流程的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "claims agent",
+      "zh": "理赔智能体",
+      "def_zh": "自动化处理保险理赔审核与判定的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "financial services",
+      "zh": "金融服务",
+      "def_zh": "银行、保险、资管等受监管行业的业务领域。",
+      "kind": "org"
+    },
+    {
+      "en": "production deployment",
+      "zh": "生产部署",
+      "def_zh": "将智能体工具投入实际业务环境运行的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "workflow automation",
+      "zh": "工作流自动化",
+      "def_zh": "用智能体替代人工执行复杂业务流程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "软件工程智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体 SDK",
+      "to": "合规智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体 SDK",
+      "to": "理赔智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "软件工程智能体",
+      "to": "工作流自动化",
+      "rel": "解决"
+    },
+    {
+      "from": "合规智能体",
+      "to": "金融服务",
+      "rel": "用于"
+    },
+    {
+      "from": "理赔智能体",
+      "to": "金融服务",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "生产部署",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "webinars/claude-code-for-financial-services-boris-cherny.md"
+}

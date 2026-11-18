@@ -1,0 +1,91 @@
+{
+  "summary_zh": "Anthropic与Deloitte网络研讨会：用智能体AI和Claude Code加速遗留系统现代化改造",
+  "concepts": [
+    {
+      "en": "Agentic AI",
+      "zh": "智能体AI",
+      "def_zh": "能自主规划并执行多步任务的AI系统",
+      "kind": "technique"
+    },
+    {
+      "en": "Code Modernization",
+      "zh": "代码现代化",
+      "def_zh": "将遗留代码迁移重构为现代架构的工程实践",
+      "kind": "technique"
+    },
+    {
+      "en": "Legacy System Migration",
+      "zh": "遗留系统迁移",
+      "def_zh": "把老旧系统及其业务逻辑迁移到新平台的过程",
+      "kind": "technique"
+    },
+    {
+      "en": "COBOL Migration",
+      "zh": "COBOL迁移",
+      "def_zh": "将COBOL大型机程序转换到现代语言的专项迁移",
+      "kind": "technique"
+    },
+    {
+      "en": "Microservices Transformation",
+      "zh": "微服务改造",
+      "def_zh": "将单体应用拆分为微服务架构的重构方式",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic的智能体编程工具，可读写代码并执行开发任务",
+      "kind": "product"
+    },
+    {
+      "en": "AI-Driven SDLC",
+      "zh": "AI驱动软件开发生命周期",
+      "def_zh": "在需求到运维各环节嵌入AI的软件开发流程框架",
+      "kind": "technique"
+    },
+    {
+      "en": "Business Logic Preservation",
+      "zh": "业务逻辑保全",
+      "def_zh": "现代化过程中确保原有业务规则不丢失",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体AI",
+      "to": "代码现代化",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体AI",
+      "rel": "属于"
+    },
+    {
+      "from": "代码现代化",
+      "to": "遗留系统迁移",
+      "rel": "依赖"
+    },
+    {
+      "from": "遗留系统迁移",
+      "to": "COBOL迁移",
+      "rel": "属于"
+    },
+    {
+      "from": "代码现代化",
+      "to": "微服务改造",
+      "rel": "用于"
+    },
+    {
+      "from": "AI驱动软件开发生命周期",
+      "to": "代码现代化",
+      "rel": "解决"
+    },
+    {
+      "from": "代码现代化",
+      "to": "业务逻辑保全",
+      "rel": "风险"
+    }
+  ],
+  "rel": "webinars/deloitte-code-modernization.md"
+}

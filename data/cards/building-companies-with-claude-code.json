@@ -1,0 +1,97 @@
+{
+  "summary_zh": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic推出的终端智能体编程工具，可加速软件开发。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude Agent SDK",
+      "def_zh": "用于构建无头智能体应用的开发套件，支持子智能体编排。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "由AI智能体自主完成编码任务的开发范式。",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "系统化设计与管理模型上下文以提升输出质量的实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "由主智能体调度、专精特定任务的从属智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "human-in-the-loop approval",
+      "zh": "人工审批",
+      "def_zh": "在智能体执行高风险操作前引入人类确认的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "research-planning-implementation workflow",
+      "zh": "研究-规划-实施工作流",
+      "def_zh": "将开发拆分为研究、规划、实施三个离散阶段的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "non-technical founder",
+      "zh": "非技术创始人",
+      "def_zh": "无传统工程背景但借助AI工具构建产品的创业者。",
+      "kind": "role"
+    },
+    {
+      "en": "regulatory complexity",
+      "zh": "监管复杂性",
+      "def_zh": "法规条文累积冗余导致的理解与合规难题。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Agent SDK",
+      "to": "子智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文工程",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "人工审批",
+      "to": "智能体编程",
+      "rel": "解决"
+    },
+    {
+      "from": "研究-规划-实施工作流",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "非技术创始人",
+      "to": "Claude Code",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "监管复杂性",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/building-companies-with-claude-code.md"
+}

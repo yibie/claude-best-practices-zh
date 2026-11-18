@@ -1,0 +1,80 @@
+{
+  "summary_zh": "企业AI转型需超越单纯投资，采用Anthropic三步法实现规模化落地。",
+  "concepts": [
+    {
+      "en": "Enterprise AI Transformation",
+      "zh": "企业AI转型",
+      "def_zh": "企业规模化应用生成式AI并实现成熟价值的系统性变革",
+      "kind": "technique"
+    },
+    {
+      "en": "Generative AI",
+      "zh": "生成式AI",
+      "def_zh": "能生成文本、图像等新内容的人工智能技术",
+      "kind": "technique"
+    },
+    {
+      "en": "AI Maturity",
+      "zh": "AI成熟度",
+      "def_zh": "衡量企业AI投资转化为实际业务价值的程度",
+      "kind": "metric"
+    },
+    {
+      "en": "Three-Step Approach",
+      "zh": "三步法",
+      "def_zh": "Anthropic提出的驱动企业AI规模化转型的递进方法",
+      "kind": "technique"
+    },
+    {
+      "en": "AI Investment",
+      "zh": "AI投资",
+      "def_zh": "企业在生成式AI技术上的资金与资源投入",
+      "kind": "metric"
+    },
+    {
+      "en": "Claude Enterprise",
+      "zh": "Claude企业版",
+      "def_zh": "Anthropic面向企业提供的Claude产品与服务平台",
+      "kind": "product"
+    },
+    {
+      "en": "Scale",
+      "zh": "规模化",
+      "def_zh": "将AI应用从试点扩展到全企业范围的能力",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "企业AI转型",
+      "to": "生成式AI",
+      "rel": "依赖"
+    },
+    {
+      "from": "三步法",
+      "to": "企业AI转型",
+      "rel": "用于"
+    },
+    {
+      "from": "AI成熟度",
+      "to": "AI投资",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude企业版",
+      "to": "企业AI转型",
+      "rel": "用于"
+    },
+    {
+      "from": "规模化",
+      "to": "企业AI转型",
+      "rel": "属于"
+    },
+    {
+      "from": "三步法",
+      "to": "规模化",
+      "rel": "解决"
+    }
+  ],
+  "rel": "guides/the-enterprise-ai-transformation-guide.md"
+}

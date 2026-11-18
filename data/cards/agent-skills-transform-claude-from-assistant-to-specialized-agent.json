@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍 Agent Skills 如何将 Claude 从对话助手转变为可执行复杂可重复工作流的专用智能体。",
+  "concepts": [
+    {
+      "en": "Agent Skills",
+      "zh": "智能体技能",
+      "def_zh": "将 Claude 从对话助手转变为执行特定工作流的专用智能体的能力单元。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic 推出的对话式 AI 助手，可通过技能扩展为专用智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "specialized agent",
+      "zh": "专用智能体",
+      "def_zh": "针对特定领域或任务定制、能自主执行复杂工作流的 AI 代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "repeatable workflows",
+      "zh": "可重复工作流",
+      "def_zh": "可被标准化、自动化并反复执行的业务流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "custom skills",
+      "zh": "自定义技能",
+      "def_zh": "用户根据组织独特流程和专业知识构建的智能体技能。",
+      "kind": "technique"
+    },
+    {
+      "en": "pre-built skills",
+      "zh": "预置技能",
+      "def_zh": "由 Anthropic 预先构建、可直接使用的智能体技能。",
+      "kind": "product"
+    },
+    {
+      "en": "skill architecture",
+      "zh": "技能架构",
+      "def_zh": "支撑智能体技能定义、加载与执行的技术结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "workflow automation",
+      "zh": "工作流自动化",
+      "def_zh": "用智能体技能自动完成原本耗时数小时的任务流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "organizational expertise",
+      "zh": "组织专业知识",
+      "def_zh": "企业特有的流程知识与经验，可编码进技能中复用。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体技能",
+      "to": "Claude",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体技能",
+      "to": "专用智能体",
+      "rel": "启用"
+    },
+    {
+      "from": "自定义技能",
+      "to": "智能体技能",
+      "rel": "属于"
+    },
+    {
+      "from": "预置技能",
+      "to": "智能体技能",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体技能",
+      "to": "可重复工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体技能",
+      "to": "工作流自动化",
+      "rel": "解决"
+    },
+    {
+      "from": "技能架构",
+      "to": "智能体技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "组织专业知识",
+      "to": "自定义技能",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md"
+}

@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍用 Claude.ai 与 Claude Code 从被动性能剖析转向主动代码性能优化的方法。",
+  "concepts": [
+    {
+      "en": "performance bottleneck",
+      "zh": "性能瓶颈",
+      "def_zh": "导致系统响应变慢或超时的代码或架构限制点。",
+      "kind": "risk"
+    },
+    {
+      "en": "profiling",
+      "zh": "性能剖析",
+      "def_zh": "用工具采集运行时数据以定位耗时热点的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "algorithmic complexity",
+      "zh": "算法复杂度",
+      "def_zh": "衡量算法随输入规模增长所需时间或空间的指标。",
+      "kind": "metric"
+    },
+    {
+      "en": "load testing",
+      "zh": "负载测试",
+      "def_zh": "模拟生产流量以测量吞吐量与延迟的测试方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "incremental refactoring",
+      "zh": "增量重构",
+      "def_zh": "分小步替换低效代码以降低部署风险的实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "N+1 query problem",
+      "zh": "N+1 查询问题",
+      "def_zh": "循环内逐条查询数据库导致请求数暴增的反模式。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude.ai",
+      "zh": "Claude.ai",
+      "def_zh": "可粘贴代码片段获取复杂度分析与优化建议的网页界面。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "可跨文件分析并自动实施优化的终端智能编程工具。",
+      "kind": "product"
+    },
+    {
+      "en": "proactive performance engineering",
+      "zh": "主动性能工程",
+      "def_zh": "在瓶颈影响用户前预先识别并修复的性能实践。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "性能剖析",
+      "to": "性能瓶颈",
+      "rel": "用于"
+    },
+    {
+      "from": "算法复杂度",
+      "to": "性能瓶颈",
+      "rel": "衡量"
+    },
+    {
+      "from": "负载测试",
+      "to": "性能瓶颈",
+      "rel": "用于"
+    },
+    {
+      "from": "增量重构",
+      "to": "性能瓶颈",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude.ai",
+      "to": "算法复杂度",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "N+1 查询问题",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Code",
+      "to": "增量重构",
+      "rel": "用于"
+    },
+    {
+      "from": "主动性能工程",
+      "to": "性能瓶颈",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/optimize-code-performance-quickly.md"
+}

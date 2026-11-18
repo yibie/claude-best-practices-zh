@@ -1,0 +1,108 @@
+{
+  "summary_zh": "通过生成器-评估器多智能体架构与评分标准，提升长时自主编码与前端设计质量。",
+  "concepts": [
+    {
+      "en": "Harness Design",
+      "zh": "智能体框架设计",
+      "def_zh": "为AI智能体设计运行框架以提升任务表现的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Generator-Evaluator Architecture",
+      "zh": "生成器-评估器架构",
+      "def_zh": "分离生成与评估角色的多智能体协作结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "Grading Criteria",
+      "zh": "评分标准",
+      "def_zh": "将主观质量转化为可评分维度的具体准则。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Reset",
+      "zh": "上下文重置",
+      "def_zh": "清空上下文窗口并交接状态以保持任务连贯。",
+      "kind": "technique"
+    },
+    {
+      "en": "Self-Evaluation Bias",
+      "zh": "自评估偏差",
+      "def_zh": "智能体倾向于过度正面评价自身产出的现象。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude智能体SDK",
+      "def_zh": "用于构建和编排Claude智能体应用的开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "Playwright MCP",
+      "zh": "Playwright MCP",
+      "def_zh": "让智能体通过浏览器交互测试网页的MCP工具。",
+      "kind": "product"
+    },
+    {
+      "en": "Sprint Contract",
+      "zh": "冲刺契约",
+      "def_zh": "生成器与评估器就单次迭代完成标准达成的协议。",
+      "kind": "technique"
+    },
+    {
+      "en": "Planner Agent",
+      "zh": "规划器智能体",
+      "def_zh": "将简短提示扩展为完整产品规格的智能体角色。",
+      "kind": "role"
+    },
+    {
+      "en": "Evaluator Agent",
+      "zh": "评估器智能体",
+      "def_zh": "独立评审生成结果并给出具体反馈的智能体角色。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体框架设计",
+      "to": "生成器-评估器架构",
+      "rel": "启用"
+    },
+    {
+      "from": "生成器-评估器架构",
+      "to": "自评估偏差",
+      "rel": "解决"
+    },
+    {
+      "from": "评分标准",
+      "to": "生成器-评估器架构",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文重置",
+      "to": "智能体框架设计",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude智能体SDK",
+      "to": "生成器-评估器架构",
+      "rel": "用于"
+    },
+    {
+      "from": "Playwright MCP",
+      "to": "评估器智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "冲刺契约",
+      "to": "生成器-评估器架构",
+      "rel": "属于"
+    },
+    {
+      "from": "规划器智能体",
+      "to": "生成器-评估器架构",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/harness-design-long-running-apps.md"
+}

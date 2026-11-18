@@ -1,0 +1,86 @@
+{
+  "summary_zh": "投资公司采用AI需重构运营模式，让Claude承担例行工作，并新增AI工程师等角色。",
+  "concepts": [
+    {
+      "en": "AI adoption",
+      "zh": "AI采用",
+      "def_zh": "机构将AI融入业务流程与运营模式的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "operating model",
+      "zh": "运营模式",
+      "def_zh": "工作分工、执行主体与控制方式的整体设计。",
+      "kind": "technique"
+    },
+    {
+      "en": "embedded AI engineer",
+      "zh": "嵌入式AI工程师",
+      "def_zh": "驻场投资团队、为分析师构建智能体的角色。",
+      "kind": "role"
+    },
+    {
+      "en": "agent",
+      "zh": "智能体",
+      "def_zh": "可代用户执行多步任务的AI系统。",
+      "kind": "product"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "Claude遵循的可复用任务指令与能力单元。",
+      "kind": "product"
+    },
+    {
+      "en": "evals",
+      "zh": "评估",
+      "def_zh": "系统化测试AI输出质量与可靠性的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "routine work automation",
+      "zh": "例行工作自动化",
+      "def_zh": "由AI承担更新模型、对账等重复性任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "investment decision",
+      "zh": "投资决策",
+      "def_zh": "决定收益的关键判断与执行活动。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI采用",
+      "to": "运营模式",
+      "rel": "依赖"
+    },
+    {
+      "from": "嵌入式AI工程师",
+      "to": "智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体",
+      "to": "例行工作自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "评估",
+      "to": "技能",
+      "rel": "衡量"
+    },
+    {
+      "from": "例行工作自动化",
+      "to": "投资决策",
+      "rel": "解决"
+    }
+  ],
+  "rel": "guides/the-ai-investment-firm.md"
+}

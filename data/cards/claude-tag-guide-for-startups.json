@@ -1,0 +1,103 @@
+{
+  "summary_zh": "Claude Tag 帮助初创团队在 Slack 中协作，通过五个核心用例提升效率。",
+  "concepts": [
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "在 Slack 频道中通过 @Claude 协作的 AI 助手产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程助手，用于代码生成与审查。",
+      "kind": "product"
+    },
+    {
+      "en": "Slack",
+      "zh": "Slack",
+      "def_zh": "团队协作沟通平台，支持频道和线程。",
+      "kind": "product"
+    },
+    {
+      "en": "connectors",
+      "zh": "连接器",
+      "def_zh": "将外部工具（如 GitHub、Jira）接入 Claude 的集成配置。",
+      "kind": "technique"
+    },
+    {
+      "en": "routines",
+      "zh": "例行任务",
+      "def_zh": "按计划自动执行的重复性工作流。",
+      "kind": "technique"
+    },
+    {
+      "en": "on-call",
+      "zh": "值班响应",
+      "def_zh": "监控告警频道，自动分诊和初步处理问题。",
+      "kind": "technique"
+    },
+    {
+      "en": "thread to PR",
+      "zh": "线程到 PR",
+      "def_zh": "从 Slack 讨论直接生成代码拉取请求的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "company brain",
+      "zh": "公司大脑",
+      "def_zh": "集中回答内部问题并维护知识库的 AI 系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "self-serve data",
+      "zh": "自助数据",
+      "def_zh": "业务人员用自然语言查询数据，无需数据团队介入。",
+      "kind": "technique"
+    },
+    {
+      "en": "semantic layer",
+      "zh": "语义层",
+      "def_zh": "统一指标定义和业务逻辑的数据抽象层。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "Slack",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "例行任务",
+      "rel": "启用"
+    },
+    {
+      "from": "线程到 PR",
+      "to": "Claude Code",
+      "rel": "依赖"
+    },
+    {
+      "from": "自助数据",
+      "to": "语义层",
+      "rel": "依赖"
+    },
+    {
+      "from": "值班响应",
+      "to": "连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "公司大脑",
+      "to": "Slack",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/claude-tag-guide-for-startups.md"
+}

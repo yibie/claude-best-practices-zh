@@ -1,0 +1,92 @@
+{
+  "summary_zh": "零售企业将AI试点扩展为企业级转型的三步路径与关键实践。",
+  "concepts": [
+    {
+      "en": "enterprise AI transformation",
+      "zh": "企业级AI转型",
+      "def_zh": "将AI从局部试点推广到全组织并产生可衡量回报的系统性变革",
+      "kind": "technique"
+    },
+    {
+      "en": "pilot purgatory",
+      "zh": "试点困境",
+      "def_zh": "AI试点启动顺利却难以扩展、长期停滞在验证阶段的状态",
+      "kind": "risk"
+    },
+    {
+      "en": "stakeholder alignment and governance",
+      "zh": "利益相关方对齐与治理",
+      "def_zh": "在转型初期统一各方目标并建立决策与责任机制的基础工作",
+      "kind": "technique"
+    },
+    {
+      "en": "low-risk pilot",
+      "zh": "低风险试点",
+      "def_zh": "从风险较低的应用场景入手、快速验证价值的启动方式",
+      "kind": "technique"
+    },
+    {
+      "en": "scaling organizational capability",
+      "zh": "组织能力规模化",
+      "def_zh": "在推广AI的同时建设人员技能与流程以支撑持续扩展",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-agent system",
+      "zh": "多智能体系统",
+      "def_zh": "由多个专业化智能体协同完成复杂任务的AI架构",
+      "kind": "technique"
+    },
+    {
+      "en": "AI assistant",
+      "zh": "AI助手",
+      "def_zh": "以自然语言交互为用户提供问答、洞察与操作支持的AI应用",
+      "kind": "product"
+    },
+    {
+      "en": "measurable ROI",
+      "zh": "可衡量投资回报",
+      "def_zh": "能够用具体指标量化验证的AI投入产出效果",
+      "kind": "metric"
+    },
+    {
+      "en": "fragmented technology stack",
+      "zh": "碎片化技术栈",
+      "def_zh": "电商、POS、库存与CRM等系统彼此割裂、难以集成的现状",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "企业级AI转型",
+      "to": "试点困境",
+      "rel": "解决"
+    },
+    {
+      "from": "企业级AI转型",
+      "to": "利益相关方对齐与治理",
+      "rel": "依赖"
+    },
+    {
+      "from": "低风险试点",
+      "to": "可衡量投资回报",
+      "rel": "衡量"
+    },
+    {
+      "from": "组织能力规模化",
+      "to": "企业级AI转型",
+      "rel": "属于"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "AI助手",
+      "rel": "用于"
+    },
+    {
+      "from": "碎片化技术栈",
+      "to": "企业级AI转型",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md"
+}

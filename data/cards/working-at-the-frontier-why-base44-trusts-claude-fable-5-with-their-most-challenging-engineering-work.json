@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Base44 借助 Claude Fable 5 的资深工程师级推理，攻克核心工程难题并扩大团队产能。",
+  "concepts": [
+    {
+      "en": "vibe coding platform",
+      "zh": "氛围编程平台",
+      "def_zh": "让非技术用户通过自然语言构建全栈应用的平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "具备资深工程师级软件推理能力的 Claude 模型。",
+      "kind": "product"
+    },
+    {
+      "en": "system prompt",
+      "zh": "系统提示词",
+      "def_zh": "定义模型行为与约束的顶层指令集合。",
+      "kind": "technique"
+    },
+    {
+      "en": "evals",
+      "zh": "模型评估",
+      "def_zh": "按应用类型测量延迟、成本与构建错误的测试体系。",
+      "kind": "technique"
+    },
+    {
+      "en": "A/B testing infrastructure",
+      "zh": "A/B 测试基础设施",
+      "def_zh": "用于对比变更效果并支持快速上线的实验平台。",
+      "kind": "technique"
+    },
+    {
+      "en": "cache hits",
+      "zh": "缓存命中",
+      "def_zh": "提示词变更后仍复用缓存以控制大规模成本。",
+      "kind": "metric"
+    },
+    {
+      "en": "senior engineer reasoning",
+      "zh": "资深工程师式推理",
+      "def_zh": "理解软件构建方式并自主定位跨代码库修复的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "Superagents",
+      "zh": "Superagents",
+      "def_zh": "围绕应用运行工作流的 Base44 智能体平台。",
+      "kind": "product"
+    },
+    {
+      "en": "native mobile infrastructure",
+      "zh": "原生移动基础设施",
+      "def_zh": "需移动领域专家才能改动的底层移动端架构。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "氛围编程平台",
+      "to": "Claude Fable 5",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "资深工程师式推理",
+      "rel": "启用"
+    },
+    {
+      "from": "模型评估",
+      "to": "缓存命中",
+      "rel": "衡量"
+    },
+    {
+      "from": "A/B 测试基础设施",
+      "to": "系统提示词",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "系统提示词",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "原生移动基础设施",
+      "rel": "用于"
+    },
+    {
+      "from": "Superagents",
+      "to": "Claude Fable 5",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md"
+}

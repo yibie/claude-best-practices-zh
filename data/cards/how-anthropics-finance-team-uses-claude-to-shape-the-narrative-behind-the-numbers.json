@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Anthropic财务团队用Claude Cowork维护财务叙事一致性并释放高价值工作时间。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向知识工作的协作式AI产品，可读写文档并保持上下文。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude for Excel",
+      "zh": "Claude for Excel",
+      "def_zh": "在Excel中直接编辑和分析财务模型的Claude集成产品。",
+      "kind": "product"
+    },
+    {
+      "en": "financial narrative",
+      "zh": "财务叙事",
+      "def_zh": "解释数字背后原因、趋势与战略含义的连贯故事。",
+      "kind": "technique"
+    },
+    {
+      "en": "narrative integrity",
+      "zh": "叙事一致性",
+      "def_zh": "确保文档中数字与论述跨页面对齐且不矛盾。",
+      "kind": "metric"
+    },
+    {
+      "en": "project memory",
+      "zh": "项目记忆",
+      "def_zh": "为特定项目持久保存文档与决策上下文的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "variance analysis",
+      "zh": "差异分析",
+      "def_zh": "对比实际与预测并解释偏差原因的财务分析方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "model diagnostics",
+      "zh": "模型诊断",
+      "def_zh": "追踪跨表引用并定位财务模型结构性问题的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "为AI系统组织与供给相关背景信息以提升输出质量。",
+      "kind": "technique"
+    },
+    {
+      "en": "finance plugins",
+      "zh": "财务插件",
+      "def_zh": "面向财务场景预置技能与工作流的Claude扩展包。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "财务叙事",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "叙事一致性",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "项目记忆",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude for Excel",
+      "to": "模型诊断",
+      "rel": "用于"
+    },
+    {
+      "from": "项目记忆",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "财务插件",
+      "to": "Claude Cowork",
+      "rel": "属于"
+    },
+    {
+      "from": "差异分析",
+      "to": "财务叙事",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md"
+}

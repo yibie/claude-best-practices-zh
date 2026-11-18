@@ -1,0 +1,97 @@
+{
+  "summary_zh": "ABC Legal 用 Claude 托管智能体将员工变为构建者，实现可治理的智能体集群。",
+  "concepts": [
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude 托管智能体",
+      "def_zh": "提供运行时、会话、记忆与版本管理的云端智能体托管平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent as Code",
+      "zh": "智能体即代码",
+      "def_zh": "将智能体的提示、配置与调度以代码形式存入仓库管理。",
+      "kind": "technique"
+    },
+    {
+      "en": "Human-in-the-Loop",
+      "zh": "人在回路",
+      "def_zh": "智能体先给出建议，由人工审核后再执行或自动化。",
+      "kind": "technique"
+    },
+    {
+      "en": "Harvester-Tuner Loop",
+      "zh": "采集-调优循环",
+      "def_zh": "采集人工反馈并据此提出提示与配置变更的自我改进闭环。",
+      "kind": "technique"
+    },
+    {
+      "en": "Pull Request as Control Surface",
+      "zh": "拉取请求控制面",
+      "def_zh": "以拉取请求作为智能体变更的审批、审计与回滚入口。",
+      "kind": "technique"
+    },
+    {
+      "en": "Efficiency Ratio",
+      "zh": "效率比",
+      "def_zh": "智能体交付价值与其运行成本之比，用于衡量投入产出。",
+      "kind": "metric"
+    },
+    {
+      "en": "Agent Fleet",
+      "zh": "智能体集群",
+      "def_zh": "统一部署、可观测、可版本化的一组生产智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Wiring",
+      "zh": "MCP 接入",
+      "def_zh": "通过模型上下文协议将智能体连接到外部工具与数据源。",
+      "kind": "technique"
+    },
+    {
+      "en": "Credential Vault",
+      "zh": "凭据保险库",
+      "def_zh": "集中托管智能体访问外部系统所需密钥的安全存储。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 托管智能体",
+      "to": "智能体集群",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体即代码",
+      "to": "拉取请求控制面",
+      "rel": "依赖"
+    },
+    {
+      "from": "采集-调优循环",
+      "to": "人在回路",
+      "rel": "依赖"
+    },
+    {
+      "from": "效率比",
+      "to": "智能体集群",
+      "rel": "衡量"
+    },
+    {
+      "from": "MCP 接入",
+      "to": "Claude 托管智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "凭据保险库",
+      "to": "Claude 托管智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "人在回路",
+      "to": "智能体集群",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md"
+}

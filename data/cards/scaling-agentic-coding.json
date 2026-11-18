@@ -1,0 +1,108 @@
+{
+  "summary_zh": "系统化推广智能体编程：试点先行、内部专家扩散、CLAUDE.md 共享上下文、多维指标衡量成效。",
+  "concepts": [
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "AI 理解上下文并自主完成多步开发任务的编程方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，支持多步任务与代码库理解。",
+      "kind": "product"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 文件",
+      "def_zh": "记录仓库约定、环境与项目上下文的共享配置文件。",
+      "kind": "technique"
+    },
+    {
+      "en": "super users",
+      "zh": "超级用户",
+      "def_zh": "先行试点并沉淀内部经验的资深开发者小组。",
+      "kind": "role"
+    },
+    {
+      "en": "hackathon",
+      "zh": "黑客松",
+      "def_zh": "集中体验与共创的推广活动，降低采纳门槛。",
+      "kind": "technique"
+    },
+    {
+      "en": "test-driven development",
+      "zh": "测试驱动开发",
+      "def_zh": "先写测试定义成功标准，再增量实现功能。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompting",
+      "zh": "提示工程",
+      "def_zh": "结构化、具体化地向 AI 表达需求以获优质结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "developer satisfaction",
+      "zh": "开发者满意度",
+      "def_zh": "衡量工程师对重复性与创造性工作分配的满意程度。",
+      "kind": "metric"
+    },
+    {
+      "en": "sprint throughput",
+      "zh": "冲刺吞吐量",
+      "def_zh": "团队单位时间内交付功能的速度指标。",
+      "kind": "metric"
+    },
+    {
+      "en": "scope creep",
+      "zh": "范围蔓延",
+      "def_zh": "任务范围无序扩大导致质量与进度失控的风险。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "属于"
+    },
+    {
+      "from": "CLAUDE.md 文件",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "超级用户",
+      "to": "智能体编程",
+      "rel": "启用"
+    },
+    {
+      "from": "黑客松",
+      "to": "超级用户",
+      "rel": "依赖"
+    },
+    {
+      "from": "测试驱动开发",
+      "to": "范围蔓延",
+      "rel": "解决"
+    },
+    {
+      "from": "提示工程",
+      "to": "智能体编程",
+      "rel": "用于"
+    },
+    {
+      "from": "冲刺吞吐量",
+      "to": "智能体编程",
+      "rel": "衡量"
+    },
+    {
+      "from": "开发者满意度",
+      "to": "智能体编程",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/scaling-agentic-coding.md"
+}

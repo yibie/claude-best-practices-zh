@@ -1,0 +1,107 @@
+{
+  "summary_zh": "托管代理通过解耦大脑与手，以稳定接口支持长周期代理工作。",
+  "concepts": [
+    {
+      "en": "Managed Agents",
+      "zh": "托管代理",
+      "def_zh": "在Claude平台上托管运行长周期代理的服务。",
+      "kind": "product"
+    },
+    {
+      "en": "Harness",
+      "zh": "代理框架",
+      "def_zh": "调用Claude并路由工具调用的循环程序。",
+      "kind": "technique"
+    },
+    {
+      "en": "Session",
+      "zh": "会话日志",
+      "def_zh": "记录代理所有事件的仅追加持久化日志。",
+      "kind": "technique"
+    },
+    {
+      "en": "Sandbox",
+      "zh": "沙箱",
+      "def_zh": "供Claude运行代码和编辑文件的隔离执行环境。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Engineering",
+      "zh": "上下文工程",
+      "def_zh": "管理上下文窗口内信息以优化模型表现的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "Time-to-First-Token",
+      "zh": "首令牌时间",
+      "def_zh": "从接受任务到产生首个响应令牌的延迟。",
+      "kind": "metric"
+    },
+    {
+      "en": "Prompt Injection",
+      "zh": "提示注入",
+      "def_zh": "通过恶意输入诱导模型执行非预期操作的安全风险。",
+      "kind": "risk"
+    },
+    {
+      "en": "Meta-Harness",
+      "zh": "元框架",
+      "def_zh": "对具体框架无偏好、提供通用接口的系统设计。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "连接Claude与外部工具和服务的开放协议。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "托管代理",
+      "to": "代理框架",
+      "rel": "启用"
+    },
+    {
+      "from": "托管代理",
+      "to": "会话日志",
+      "rel": "依赖"
+    },
+    {
+      "from": "托管代理",
+      "to": "沙箱",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理框架",
+      "to": "上下文工程",
+      "rel": "用于"
+    },
+    {
+      "from": "会话日志",
+      "to": "上下文工程",
+      "rel": "解决"
+    },
+    {
+      "from": "沙箱",
+      "to": "提示注入",
+      "rel": "风险"
+    },
+    {
+      "from": "托管代理",
+      "to": "首令牌时间",
+      "rel": "衡量"
+    },
+    {
+      "from": "元框架",
+      "to": "代理框架",
+      "rel": "属于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "沙箱",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/managed-agents.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude 推出金融插件与跨应用工作流，打通 Excel 与 PowerPoint 并接入机构数据。",
+  "concepts": [
+    {
+      "en": "Cowork",
+      "zh": "Cowork",
+      "def_zh": "面向企业团队、可按工作方式定制的 Claude 协作产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Plugins",
+      "zh": "插件",
+      "def_zh": "封装领域专长与工作流模式、可安装复用的能力包。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Connectors",
+      "zh": "MCP 连接器",
+      "def_zh": "通过 MCP 协议把外部数据源接入 Claude 上下文的接口。",
+      "kind": "product"
+    },
+    {
+      "en": "Cross-app Workflow",
+      "zh": "跨应用工作流",
+      "def_zh": "在多个应用间携带上下文完成端到端任务的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Carryover",
+      "zh": "上下文延续",
+      "def_zh": "任务跨工具切换时不丢失已有信息与状态。",
+      "kind": "technique"
+    },
+    {
+      "en": "Financial Analysis Plugin",
+      "zh": "财务分析插件",
+      "def_zh": "覆盖市场研究、财务建模与模板质检的基础插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Equity Research Plugin",
+      "zh": "股票研究插件",
+      "def_zh": "解析财报电话会、更新模型并起草研究笔记的插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Private Equity Plugin",
+      "zh": "私募股权插件",
+      "def_zh": "支持项目筛选与尽调、提取财务数据并评分的插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Institutional Data",
+      "zh": "机构数据",
+      "def_zh": "来自专业数据平台的实时市场与基本面数据。",
+      "kind": "metric"
+    },
+    {
+      "en": "Research Preview",
+      "zh": "研究预览",
+      "def_zh": "面向付费用户开放、仍在迭代中的功能发布阶段。",
+      "kind": "org"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cowork",
+      "to": "插件",
+      "rel": "启用"
+    },
+    {
+      "from": "插件",
+      "to": "MCP 连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "跨应用工作流",
+      "to": "上下文延续",
+      "rel": "依赖"
+    },
+    {
+      "from": "财务分析插件",
+      "to": "跨应用工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "股票研究插件",
+      "to": "机构数据",
+      "rel": "依赖"
+    },
+    {
+      "from": "私募股权插件",
+      "to": "机构数据",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP 连接器",
+      "to": "机构数据",
+      "rel": "用于"
+    },
+    {
+      "from": "研究预览",
+      "to": "跨应用工作流",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/cowork-plugins-finance.md"
+}

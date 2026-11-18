@@ -1,0 +1,28 @@
+{
+  "name": "claude-best-practices-zh",
+  "version": "1.0.0",
+  "description": "Claude 官方最佳实践全集：中文译文 + LLM Wiki 概念网络 + 知识图谱/思维导图",
+  "scripts": {
+    "manifest": "node scripts/manifest.js",
+    "fetch": "node scripts/fetch.js",
+    "translate": "node scripts/translate.js",
+    "concepts": "node scripts/concepts.js",
+    "taxonomy": "node scripts/taxonomy.js",
+    "graph": "node scripts/graph.js",
+    "wiki": "node scripts/wiki.js",
+    "links": "node scripts/fixlinks.js",
+    "site": "node scripts/site.js",
+    "build": "npm run manifest && npm run fetch && npm run translate && npm run concepts && npm run taxonomy && npm run graph && npm run wiki && npm run links && npm run site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "jsdom": "^31.0.1",
+    "playwright-core": "^1.65.1",
+    "turndown": "^7.2.5",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "private": true
+}

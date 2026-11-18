@@ -1,0 +1,102 @@
+{
+  "summary_zh": "CodeRabbit 用 Claude 构建编码前的规划编排层，以结构化计划提升代码质量。",
+  "concepts": [
+    {
+      "en": "agent orchestration",
+      "zh": "智能体编排",
+      "def_zh": "协调多个模型或智能体完成复杂任务的系统层。",
+      "kind": "technique"
+    },
+    {
+      "en": "planning layer",
+      "zh": "规划层",
+      "def_zh": "在代码生成前分析需求并产出结构化计划的系统层。",
+      "kind": "technique"
+    },
+    {
+      "en": "structured coding plan",
+      "zh": "结构化编码计划",
+      "def_zh": "明确目标、约束与假设的可评审执行计划。",
+      "kind": "technique"
+    },
+    {
+      "en": "implicit assumptions",
+      "zh": "隐式假设",
+      "def_zh": "开发者未明说、被智能体自行填补的前提。",
+      "kind": "risk"
+    },
+    {
+      "en": "eval harness",
+      "zh": "评估框架",
+      "def_zh": "系统化衡量计划或代码质量的评测基础设施。",
+      "kind": "technique"
+    },
+    {
+      "en": "LLM judges",
+      "zh": "LLM 评审器",
+      "def_zh": "用大模型按维度自动打分评估产出的组件。",
+      "kind": "technique"
+    },
+    {
+      "en": "model routing",
+      "zh": "模型路由",
+      "def_zh": "按任务复杂度分配不同模型层级以优化成本与延迟。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编码工具，可生成实现计划与代码。",
+      "kind": "product"
+    },
+    {
+      "en": "quality gate",
+      "zh": "质量门禁",
+      "def_zh": "在流程早期拦截缺陷的评审检查点。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体编排",
+      "to": "规划层",
+      "rel": "启用"
+    },
+    {
+      "from": "规划层",
+      "to": "结构化编码计划",
+      "rel": "用于"
+    },
+    {
+      "from": "结构化编码计划",
+      "to": "隐式假设",
+      "rel": "解决"
+    },
+    {
+      "from": "评估框架",
+      "to": "LLM 评审器",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估框架",
+      "to": "结构化编码计划",
+      "rel": "衡量"
+    },
+    {
+      "from": "模型路由",
+      "to": "智能体编排",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "结构化编码计划",
+      "rel": "依赖"
+    },
+    {
+      "from": "质量门禁",
+      "to": "结构化编码计划",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md"
+}

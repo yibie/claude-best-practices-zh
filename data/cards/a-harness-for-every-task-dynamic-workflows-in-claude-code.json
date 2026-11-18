@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 动态工作流可即时生成多智能体执行框架，应对复杂任务。",
+  "concepts": [
+    {
+      "en": "dynamic workflows",
+      "zh": "动态工作流",
+      "def_zh": "Claude Code 按任务即时编写并编排多智能体框架的机制",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic harness",
+      "zh": "智能体执行框架",
+      "def_zh": "围绕模型构建的规划、工具与编排结构，决定任务执行方式",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "由主流程派生、拥有独立上下文窗口的专注执行单元",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic laziness",
+      "zh": "智能体惰性",
+      "def_zh": "复杂多步任务未完成即提前宣告完成的失败模式",
+      "kind": "risk"
+    },
+    {
+      "en": "self-preferential bias",
+      "zh": "自我偏好偏差",
+      "def_zh": "模型倾向偏袒自身产出、难以客观评判的失败模式",
+      "kind": "risk"
+    },
+    {
+      "en": "goal drift",
+      "zh": "目标漂移",
+      "def_zh": "多轮压缩后逐渐偏离原始目标与约束的失败模式",
+      "kind": "risk"
+    },
+    {
+      "en": "adversarial verification",
+      "zh": "对抗性验证",
+      "def_zh": "用独立子智能体按标准批判性核查另一智能体输出",
+      "kind": "technique"
+    },
+    {
+      "en": "fan-out-and-synthesize",
+      "zh": "扇出再综合",
+      "def_zh": "拆分任务并行处理，再汇总结构化结果为单一输出",
+      "kind": "technique"
+    },
+    {
+      "en": "tournament",
+      "zh": "锦标赛",
+      "def_zh": "多个智能体竞争同一任务，经两两评判选出最优",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，支持动态工作流",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "动态工作流",
+      "to": "智能体执行框架",
+      "rel": "启用"
+    },
+    {
+      "from": "动态工作流",
+      "to": "子智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "动态工作流",
+      "to": "智能体惰性",
+      "rel": "解决"
+    },
+    {
+      "from": "动态工作流",
+      "to": "自我偏好偏差",
+      "rel": "解决"
+    },
+    {
+      "from": "动态工作流",
+      "to": "目标漂移",
+      "rel": "解决"
+    },
+    {
+      "from": "对抗性验证",
+      "to": "自我偏好偏差",
+      "rel": "解决"
+    },
+    {
+      "from": "扇出再综合",
+      "to": "子智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "动态工作流",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic安全团队用Claude Code构建CLUE平台，自动化威胁检测与调查。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic的AI编程助手，支持自然语言构建软件。",
+      "kind": "product"
+    },
+    {
+      "en": "Threat Detection Platform",
+      "zh": "威胁检测平台",
+      "def_zh": "监控系统异常并响应安全威胁的软件系统。",
+      "kind": "product"
+    },
+    {
+      "en": "Alert Triage",
+      "zh": "告警分诊",
+      "def_zh": "对安全告警进行初步筛选和优先级排序的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Enrichment",
+      "zh": "上下文增强",
+      "def_zh": "为告警补充内部信息以辅助判断威胁真实性。",
+      "kind": "technique"
+    },
+    {
+      "en": "Natural Language Interface",
+      "zh": "自然语言接口",
+      "def_zh": "允许用户用自然语言查询和操作系统的界面。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Loop",
+      "zh": "代理循环",
+      "def_zh": "AI代理迭代执行命令、收集结果并综合的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "False Positive Rate",
+      "zh": "误报率",
+      "def_zh": "被误判为威胁的告警占总告警的比例。",
+      "kind": "metric"
+    },
+    {
+      "en": "Time Savings",
+      "zh": "时间节省",
+      "def_zh": "自动化工具相比人工操作减少的时间消耗。",
+      "kind": "metric"
+    },
+    {
+      "en": "Bitter Lesson",
+      "zh": "苦涩教训",
+      "def_zh": "AI研究中通用方法优于人类特定推理编码的观察。",
+      "kind": "technique"
+    },
+    {
+      "en": "Data Governance Review",
+      "zh": "数据治理审查",
+      "def_zh": "检查数据访问权限和合规性的安全调查流程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "威胁检测平台",
+      "rel": "用于"
+    },
+    {
+      "from": "威胁检测平台",
+      "to": "告警分诊",
+      "rel": "启用"
+    },
+    {
+      "from": "告警分诊",
+      "to": "上下文增强",
+      "rel": "依赖"
+    },
+    {
+      "from": "威胁检测平台",
+      "to": "自然语言接口",
+      "rel": "启用"
+    },
+    {
+      "from": "自然语言接口",
+      "to": "代理循环",
+      "rel": "依赖"
+    },
+    {
+      "from": "告警分诊",
+      "to": "误报率",
+      "rel": "衡量"
+    },
+    {
+      "from": "威胁检测平台",
+      "to": "时间节省",
+      "rel": "衡量"
+    },
+    {
+      "from": "威胁检测平台",
+      "to": "数据治理审查",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-anthropic-uses-claude-cybersecurity.md"
+}

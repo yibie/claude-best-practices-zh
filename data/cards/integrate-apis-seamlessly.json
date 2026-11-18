@@ -1,0 +1,97 @@
+{
+  "summary_zh": "介绍如何借助Claude与Claude Code系统化设计API集成，提前处理认证、限流与错误。",
+  "concepts": [
+    {
+      "en": "API integration",
+      "zh": "API集成",
+      "def_zh": "将第三方API接入自有系统并处理其交互与故障的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "authentication flow",
+      "zh": "认证流程",
+      "def_zh": "获取、刷新与校验访问凭证以调用API的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "rate limiting",
+      "zh": "限流",
+      "def_zh": "API对请求频率的限制，超限会返回429等错误。",
+      "kind": "risk"
+    },
+    {
+      "en": "error handling",
+      "zh": "错误处理",
+      "def_zh": "对失败响应进行重试、退避与降级的系统化处理。",
+      "kind": "technique"
+    },
+    {
+      "en": "exponential backoff with jitter",
+      "zh": "带抖动的指数退避",
+      "def_zh": "重试间隔指数增长并加随机抖动，避免同时重试。",
+      "kind": "technique"
+    },
+    {
+      "en": "failure mode",
+      "zh": "故障模式",
+      "def_zh": "集成中可预见的失败情形，如超时、令牌过期。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "可自主分析代码库并生成生产级集成代码的终端工具。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude.ai",
+      "zh": "Claude.ai",
+      "def_zh": "用于分析API规范与规划集成策略的网页对话界面。",
+      "kind": "product"
+    },
+    {
+      "en": "contract testing",
+      "zh": "契约测试",
+      "def_zh": "验证服务间接口schema与行为一致性的测试方法。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "API集成",
+      "to": "认证流程",
+      "rel": "依赖"
+    },
+    {
+      "from": "API集成",
+      "to": "限流",
+      "rel": "风险"
+    },
+    {
+      "from": "错误处理",
+      "to": "限流",
+      "rel": "解决"
+    },
+    {
+      "from": "错误处理",
+      "to": "带抖动的指数退避",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude.ai",
+      "to": "故障模式",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "API集成",
+      "rel": "用于"
+    },
+    {
+      "from": "契约测试",
+      "to": "API集成",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/integrate-apis-seamlessly.md"
+}

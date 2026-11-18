@@ -1,0 +1,91 @@
+{
+  "summary_zh": "Anthropic销售负责人用Claude Cowork自动生成客户简报、周度预测并夜间评分4000个账户。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向企业协作的Claude产品，可自动处理销售等业务流程。",
+      "kind": "product"
+    },
+    {
+      "en": "customer brief",
+      "zh": "客户简报",
+      "def_zh": "汇总客户背景与关键信息的结构化摘要文档。",
+      "kind": "technique"
+    },
+    {
+      "en": "weekly forecast",
+      "zh": "周度预测",
+      "def_zh": "按周汇总销售管道与业绩预期的预测报告。",
+      "kind": "technique"
+    },
+    {
+      "en": "territory scoring",
+      "zh": "区域评分",
+      "def_zh": "对销售区域或账户按潜力与优先级进行量化打分。",
+      "kind": "technique"
+    },
+    {
+      "en": "account book",
+      "zh": "账户组合",
+      "def_zh": "销售负责人所管辖的全部客户账户集合。",
+      "kind": "metric"
+    },
+    {
+      "en": "cross-functional team",
+      "zh": "跨职能团队",
+      "def_zh": "由多个部门人员组成、协同完成任务的团队。",
+      "kind": "role"
+    },
+    {
+      "en": "overnight automation",
+      "zh": "夜间自动化",
+      "def_zh": "在非工作时段自动批量执行重复性任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "GTM",
+      "zh": "市场进入",
+      "def_zh": "将产品推向市场并获取客户的整体策略与执行。",
+      "kind": "org"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "客户简报",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "周度预测",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "区域评分",
+      "rel": "用于"
+    },
+    {
+      "from": "区域评分",
+      "to": "账户组合",
+      "rel": "衡量"
+    },
+    {
+      "from": "夜间自动化",
+      "to": "区域评分",
+      "rel": "启用"
+    },
+    {
+      "from": "夜间自动化",
+      "to": "跨职能团队",
+      "rel": "替代"
+    },
+    {
+      "from": "市场进入",
+      "to": "账户组合",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.md"
+}

@@ -1,0 +1,103 @@
+{
+  "summary_zh": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic的AI编程工具，支持无代码经验者构建应用。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "团队协作平台，可打包技能和连接器为插件。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP (Model Context Protocol)",
+      "zh": "模型上下文协议",
+      "def_zh": "连接AI与外部数据源的开放协议。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "可复用的Claude任务模块，如每日简报。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent SDK",
+      "zh": "智能体SDK",
+      "def_zh": "开发链式AI工作流的软件开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "GTM Engineering",
+      "zh": "GTM工程",
+      "def_zh": "用工程方法优化销售市场团队工作流。",
+      "kind": "technique"
+    },
+    {
+      "en": "Prompt Engineering",
+      "zh": "提示工程",
+      "def_zh": "迭代设计提示词以控制AI输出风格与内容。",
+      "kind": "technique"
+    },
+    {
+      "en": "Workflow Automation",
+      "zh": "工作流自动化",
+      "def_zh": "用AI自动执行重复性任务，如邮件草稿。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Workflow",
+      "zh": "智能体工作流",
+      "def_zh": "多个AI步骤串联，输出作为下一步输入。",
+      "kind": "technique"
+    },
+    {
+      "en": "Sales Enablement",
+      "zh": "销售赋能",
+      "def_zh": "通过工具和培训提升销售团队效率。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "工作流自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体SDK",
+      "to": "智能体工作流",
+      "rel": "启用"
+    },
+    {
+      "from": "提示工程",
+      "to": "工作流自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "GTM工程",
+      "to": "销售赋能",
+      "rel": "属于"
+    },
+    {
+      "from": "工作流自动化",
+      "to": "销售赋能",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md"
+}

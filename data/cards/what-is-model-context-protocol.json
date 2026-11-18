@@ -1,0 +1,91 @@
+{
+  "summary_zh": "MCP 是连接 AI 与外部系统的开放标准，类似 USB-C，简化集成并扩展 AI 能力。",
+  "concepts": [
+    {
+      "en": "Model Context Protocol",
+      "zh": "模型上下文协议",
+      "def_zh": "定义 LLM 与外部系统通信方式的开放标准。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Client",
+      "zh": "MCP 客户端",
+      "def_zh": "AI 应用中用于连接 MCP 服务器的组件。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Server",
+      "zh": "MCP 服务器",
+      "def_zh": "对外提供工具和数据接口的服务器。",
+      "kind": "technique"
+    },
+    {
+      "en": "Connectors",
+      "zh": "连接器",
+      "def_zh": "Claude 中预构建的 MCP 服务器集成。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Registry",
+      "zh": "MCP 注册表",
+      "def_zh": "开源 MCP 服务器的公共目录。",
+      "kind": "product"
+    },
+    {
+      "en": "Language Server Protocol",
+      "zh": "语言服务器协议",
+      "def_zh": "MCP 设计所基于的编辑器与语言工具通信协议。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI-native ecosystem",
+      "zh": "AI 原生生态",
+      "def_zh": "软件为 AI 交互设计接口的开放生态。",
+      "kind": "org"
+    },
+    {
+      "en": "M×N integration problem",
+      "zh": "M×N 集成问题",
+      "def_zh": "多应用与多系统间需大量定制集成的问题。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型上下文协议",
+      "to": "MCP 客户端",
+      "rel": "依赖"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "MCP 服务器",
+      "rel": "依赖"
+    },
+    {
+      "from": "连接器",
+      "to": "MCP 服务器",
+      "rel": "属于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "M×N 集成问题",
+      "rel": "解决"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "语言服务器协议",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP 注册表",
+      "to": "MCP 服务器",
+      "rel": "用于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "AI 原生生态",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/what-is-model-context-protocol.md"
+}

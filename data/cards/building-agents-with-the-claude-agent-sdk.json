@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+  "concepts": [
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude 智能体 SDK",
+      "def_zh": "基于 Claude Code 的智能体开发工具集，提供构建自主智能体的原语。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent Loop",
+      "zh": "智能体循环",
+      "def_zh": "智能体反复执行收集上下文、执行动作、验证工作的反馈循环。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Engineering",
+      "zh": "上下文工程",
+      "def_zh": "设计与管理模型上下文信息以提升智能体表现的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Search",
+      "zh": "智能体搜索",
+      "def_zh": "智能体通过文件系统与 bash 命令自主检索所需上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "Semantic Search",
+      "zh": "语义搜索",
+      "def_zh": "将文本分块向量化后按概念相似度检索上下文的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Subagents",
+      "zh": "子智能体",
+      "def_zh": "拥有独立上下文窗口、可并行处理子任务并只回传相关信息的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "Compaction",
+      "zh": "上下文压缩",
+      "def_zh": "上下文接近上限时自动摘要历史消息以延续长任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Model Context Protocol",
+      "zh": "模型上下文协议",
+      "def_zh": "标准化连接外部服务、自动处理认证与 API 调用的集成协议。",
+      "kind": "product"
+    },
+    {
+      "en": "Tools",
+      "zh": "工具",
+      "def_zh": "智能体执行动作的主要构建块，在上下文中显眼并影响决策。",
+      "kind": "technique"
+    },
+    {
+      "en": "LLM as a Judge",
+      "zh": "LLM 评审",
+      "def_zh": "用另一个语言模型按模糊规则评判智能体输出质量的方法。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 智能体 SDK",
+      "to": "智能体循环",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体循环",
+      "to": "上下文工程",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体循环",
+      "to": "工具",
+      "rel": "依赖"
+    },
+    {
+      "from": "子智能体",
+      "to": "上下文工程",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文工程",
+      "rel": "解决"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "工具",
+      "rel": "用于"
+    },
+    {
+      "from": "LLM 评审",
+      "to": "智能体循环",
+      "rel": "用于"
+    },
+    {
+      "from": "语义搜索",
+      "to": "智能体搜索",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/building-agents-with-the-claude-agent-sdk.md"
+}

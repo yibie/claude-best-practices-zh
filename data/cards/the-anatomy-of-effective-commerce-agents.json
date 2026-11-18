@@ -1,0 +1,92 @@
+{
+  "summary_zh": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+  "concepts": [
+    {
+      "en": "commerce agent",
+      "zh": "电商智能体",
+      "def_zh": "简化在线目录买卖流程的智能体，可面向消费者或商家。",
+      "kind": "product"
+    },
+    {
+      "en": "agent loop",
+      "zh": "智能体循环",
+      "def_zh": "模型推理、调用工具、观察结果直至完成目标的迭代过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent skills",
+      "zh": "智能体技能",
+      "def_zh": "按需加载的模块化指令，扩展智能体能力而不增加交接开销。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "由主智能体调用的专用智能体，用于窄范围或独立任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "presentation tool",
+      "zh": "呈现工具",
+      "def_zh": "将 UI 组件建模为工具调用，使模型输出结构化界面。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "基于前缀复用缓存降低输入成本并加速响应。",
+      "kind": "technique"
+    },
+    {
+      "en": "perceived latency",
+      "zh": "感知延迟",
+      "def_zh": "用户从发起请求到界面出现反馈所感受到的时间。",
+      "kind": "metric"
+    },
+    {
+      "en": "long-term memory",
+      "zh": "长期记忆",
+      "def_zh": "跨会话持久保存用户事实与偏好的系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "eval suite",
+      "zh": "评估套件",
+      "def_zh": "用于衡量智能体质量、延迟与成本的系统化测试集。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "电商智能体",
+      "to": "智能体循环",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体技能",
+      "to": "子智能体",
+      "rel": "替代"
+    },
+    {
+      "from": "呈现工具",
+      "to": "感知延迟",
+      "rel": "解决"
+    },
+    {
+      "from": "提示缓存",
+      "to": "感知延迟",
+      "rel": "解决"
+    },
+    {
+      "from": "长期记忆",
+      "to": "电商智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "评估套件",
+      "to": "电商智能体",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/the-anatomy-of-effective-commerce-agents.md"
+}

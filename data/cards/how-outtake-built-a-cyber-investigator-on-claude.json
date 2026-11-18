@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Outtake 用 Claude Code 与 Agent SDK 构建长时自主网络调查智能体，并总结工程实践。",
+  "concepts": [
+    {
+      "en": "long-running agent",
+      "zh": "长时运行智能体",
+      "def_zh": "可自主持续运行数十分钟至数小时完成复杂任务的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent harness",
+      "zh": "智能体运行框架",
+      "def_zh": "为智能体提供记忆、工具、技能与护栏的支持性运行环境。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的编码智能体工具，可读写并运行代码进行原型验证。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent SDK",
+      "zh": "Agent SDK",
+      "def_zh": "提供底层原语以构建生产级智能体的开发套件。",
+      "kind": "product"
+    },
+    {
+      "en": "agent evals",
+      "zh": "智能体评估",
+      "def_zh": "对智能体运行过程与结果进行结构化打分以加速迭代。",
+      "kind": "metric"
+    },
+    {
+      "en": "prompt injection",
+      "zh": "提示注入",
+      "def_zh": "通过恶意输入劫持智能体行为的攻击方式。",
+      "kind": "risk"
+    },
+    {
+      "en": "orchestration guardrails",
+      "zh": "编排层护栏",
+      "def_zh": "在编排层硬编码的强制约束，确保智能体始终执行关键步骤。",
+      "kind": "technique"
+    },
+    {
+      "en": "filesystem and bash tools",
+      "zh": "文件系统与 Bash 工具",
+      "def_zh": "赋予智能体读写文件与执行命令的开放式能力以应对障碍。",
+      "kind": "technique"
+    },
+    {
+      "en": "blastbox sandbox",
+      "zh": "隔离沙箱",
+      "def_zh": "将智能体与敏感内部系统隔离以限制被劫持后损害范围。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "长时运行智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "Agent SDK",
+      "to": "智能体运行框架",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体运行框架",
+      "to": "长时运行智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体评估",
+      "to": "长时运行智能体",
+      "rel": "衡量"
+    },
+    {
+      "from": "提示注入",
+      "to": "长时运行智能体",
+      "rel": "风险"
+    },
+    {
+      "from": "隔离沙箱",
+      "to": "提示注入",
+      "rel": "解决"
+    },
+    {
+      "from": "编排层护栏",
+      "to": "智能体运行框架",
+      "rel": "属于"
+    },
+    {
+      "from": "文件系统与 Bash 工具",
+      "to": "智能体运行框架",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md"
+}

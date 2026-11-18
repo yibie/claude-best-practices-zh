@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+  "concepts": [
+    {
+      "en": "agent harness",
+      "zh": "智能体框架",
+      "def_zh": "围绕模型的软件脚手架，含循环、工具、上下文管理与护栏。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent harness design",
+      "zh": "智能体框架设计",
+      "def_zh": "决定脚手架中保留什么、随模型变强可移除什么的实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "管理模型上下文窗口内容以提升效果与效率的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "programmatic tool calling",
+      "zh": "程序化工具调用",
+      "def_zh": "让模型写代码表达工具调用及调用间逻辑，减少上下文消耗。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Skills",
+      "zh": "智能体技能",
+      "def_zh": "按需渐进披露的任务相关上下文包，由模型自行读取。",
+      "kind": "product"
+    },
+    {
+      "en": "subagents",
+      "zh": "子智能体",
+      "def_zh": "模型派生出的独立上下文窗口，用于隔离特定子任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "compaction",
+      "zh": "上下文压缩",
+      "def_zh": "让模型总结过往上下文以维持长任务连续性。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "按断点缓存稳定前缀，降低重复输入成本与延迟。",
+      "kind": "technique"
+    },
+    {
+      "en": "declarative tools",
+      "zh": "声明式工具",
+      "def_zh": "为特定动作提供类型化参数钩子，便于拦截、渲染与审计。",
+      "kind": "technique"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次可处理的 token 范围，是框架设计的核心约束。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体框架设计",
+      "to": "智能体框架",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体框架",
+      "to": "上下文工程",
+      "rel": "依赖"
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体技能",
+      "to": "上下文工程",
+      "rel": "用于"
+    },
+    {
+      "from": "子智能体",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "提示缓存",
+      "to": "智能体框架",
+      "rel": "用于"
+    },
+    {
+      "from": "声明式工具",
+      "to": "智能体框架",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/harnessing-claudes-intelligence.md"
+}

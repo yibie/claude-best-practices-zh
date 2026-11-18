@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude 通过 MCP 连接器与实务插件接入法律技术栈，覆盖合同、诉讼、合规等场景。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向知识工作者的协作式 AI 工作空间，支持跨文档任务与定时作业。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP connector",
+      "zh": "MCP 连接器",
+      "def_zh": "基于模型上下文协议将外部系统数据与操作接入 Claude 的标准化接口。",
+      "kind": "technique"
+    },
+    {
+      "en": "practice-area plugin",
+      "zh": "实务领域插件",
+      "def_zh": "按法律执业角色打包常用任务与工作流的可安装扩展。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude skills",
+      "zh": "Claude 技能",
+      "def_zh": "编码团队手册与标准的可复用指令，用于起草、审阅等重复任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Projects",
+      "zh": "项目空间",
+      "def_zh": "跨对话持久保留先例与既往草稿的事项工作区。",
+      "kind": "product"
+    },
+    {
+      "en": "contract lifecycle management",
+      "zh": "合同生命周期管理",
+      "def_zh": "覆盖合同起草、签署到签署后管理的全流程系统与工作流。",
+      "kind": "technique"
+    },
+    {
+      "en": "e-discovery",
+      "zh": "电子取证",
+      "def_zh": "在诉讼中对电子文档进行检索、审阅与证据开示的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "legal research platform",
+      "zh": "法律研究平台",
+      "def_zh": "提供判例、法规与权威引证检索验证的专业数据库。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude Agent SDK",
+      "def_zh": "用于构建可编程智能体应用的开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "open protocol",
+      "zh": "开放协议",
+      "def_zh": "公开可扩展的接口规范，允许第三方提交连接器与技能。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "MCP 连接器",
+      "to": "合同生命周期管理",
+      "rel": "用于"
+    },
+    {
+      "from": "MCP 连接器",
+      "to": "电子取证",
+      "rel": "用于"
+    },
+    {
+      "from": "MCP 连接器",
+      "to": "法律研究平台",
+      "rel": "用于"
+    },
+    {
+      "from": "实务领域插件",
+      "to": "Claude 技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "MCP 连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "实务领域插件",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Agent SDK",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "开放协议",
+      "to": "MCP 连接器",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/claude-for-the-legal-industry.md"
+}

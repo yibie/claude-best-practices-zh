@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可在本地代码库中自主导航与编辑。",
+      "kind": "product"
+    },
+    {
+      "en": "Agentic Search",
+      "zh": "智能体搜索",
+      "def_zh": "通过遍历文件系统、grep 与引用追踪实时定位代码，无需索引。",
+      "kind": "technique"
+    },
+    {
+      "en": "Harness",
+      "zh": "扩展层",
+      "def_zh": "围绕模型的配置生态，由 CLAUDE.md、钩子、技能、插件与 MCP 组成。",
+      "kind": "technique"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 上下文文件",
+      "def_zh": "每次会话自动加载的上下文文件，提供代码库知识与约定。",
+      "kind": "technique"
+    },
+    {
+      "en": "Hooks",
+      "zh": "钩子",
+      "def_zh": "在关键事件触发的脚本，用于自动化一致行为并捕获会话经验。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "按需加载的打包指令，通过渐进披露提供可复用领域专长。",
+      "kind": "technique"
+    },
+    {
+      "en": "Plugins",
+      "zh": "插件",
+      "def_zh": "打包技能、钩子与 MCP 配置的可安装包，用于分发有效配置。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Servers",
+      "zh": "MCP 服务器",
+      "def_zh": "让 Claude 连接内部工具、数据源与 API 的扩展服务。",
+      "kind": "product"
+    },
+    {
+      "en": "Subagents",
+      "zh": "子代理",
+      "def_zh": "拥有独立上下文窗口的隔离 Claude 实例，用于拆分探索与编辑。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Manager",
+      "zh": "智能体管理员",
+      "def_zh": "负责管理 Claude Code 生态的 PM/工程师混合角色。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体搜索",
+      "rel": "依赖"
+    },
+    {
+      "from": "扩展层",
+      "to": "CLAUDE.md 上下文文件",
+      "rel": "属于"
+    },
+    {
+      "from": "扩展层",
+      "to": "钩子",
+      "rel": "属于"
+    },
+    {
+      "from": "扩展层",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "扩展层",
+      "to": "插件",
+      "rel": "属于"
+    },
+    {
+      "from": "扩展层",
+      "to": "MCP 服务器",
+      "rel": "属于"
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体管理员",
+      "to": "扩展层",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md"
+}

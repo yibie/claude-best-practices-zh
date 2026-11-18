@@ -1,0 +1,108 @@
+{
+  "summary_zh": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+  "concepts": [
+    {
+      "en": "AI agent",
+      "zh": "AI代理",
+      "def_zh": "能推理、规划并执行多步任务的智能系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "data fragmentation",
+      "zh": "数据碎片化",
+      "def_zh": "医疗数据分散于互不兼容的系统，难以整合。",
+      "kind": "risk"
+    },
+    {
+      "en": "interoperability",
+      "zh": "互操作性",
+      "def_zh": "不同系统间交换与使用数据的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "regulatory compliance",
+      "zh": "监管合规",
+      "def_zh": "满足医疗数据隐私与审计等法规要求。",
+      "kind": "risk"
+    },
+    {
+      "en": "human-in-the-loop",
+      "zh": "人在回路",
+      "def_zh": "关键决策保留人类审核与最终决定权。",
+      "kind": "technique"
+    },
+    {
+      "en": "clinical oversight",
+      "zh": "临床监督",
+      "def_zh": "临床医生对AI建议的审查与干预机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "audit trail",
+      "zh": "审计追踪",
+      "def_zh": "记录AI决策过程与数据来源的完整日志。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "连接AI模型与外部工具及数据源的开放协议。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic的AI编程代理产品。",
+      "kind": "product"
+    },
+    {
+      "en": "observability",
+      "zh": "可观测性",
+      "def_zh": "实时监控AI系统行为与性能的能力。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI代理",
+      "to": "数据碎片化",
+      "rel": "解决"
+    },
+    {
+      "from": "AI代理",
+      "to": "互操作性",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI代理",
+      "to": "监管合规",
+      "rel": "依赖"
+    },
+    {
+      "from": "人在回路",
+      "to": "临床监督",
+      "rel": "属于"
+    },
+    {
+      "from": "审计追踪",
+      "to": "监管合规",
+      "rel": "用于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "互操作性",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "AI代理",
+      "rel": "用于"
+    },
+    {
+      "from": "可观测性",
+      "to": "审计追踪",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md"
+}

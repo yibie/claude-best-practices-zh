@@ -1,0 +1,86 @@
+{
+  "summary_zh": "以智能体编码分阶段改造遗留系统，兼顾现代化与业务交付。",
+  "concepts": [
+    {
+      "en": "Code Modernization",
+      "zh": "代码现代化",
+      "def_zh": "将遗留系统升级为现代语言与架构的改造过程",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Coding",
+      "zh": "智能体编码",
+      "def_zh": "由AI智能体自主完成编码与迁移任务的方式",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic推出的智能体编码工具",
+      "kind": "product"
+    },
+    {
+      "en": "Legacy System",
+      "zh": "遗留系统",
+      "def_zh": "技术栈陈旧、维护成本高的既有系统",
+      "kind": "risk"
+    },
+    {
+      "en": "Monolith",
+      "zh": "单体架构",
+      "def_zh": "功能集中部署于单一应用的架构形态",
+      "kind": "technique"
+    },
+    {
+      "en": "Microservices",
+      "zh": "微服务",
+      "def_zh": "将应用拆分为独立部署的小型服务",
+      "kind": "technique"
+    },
+    {
+      "en": "ROI",
+      "zh": "投资回报率",
+      "def_zh": "衡量改造投入与业务收益之比的指标",
+      "kind": "metric"
+    },
+    {
+      "en": "Phased Plan",
+      "zh": "分阶段计划",
+      "def_zh": "按阶段推进迁移以控制风险的实施方案",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体编码",
+      "to": "代码现代化",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编码",
+      "rel": "启用"
+    },
+    {
+      "from": "代码现代化",
+      "to": "遗留系统",
+      "rel": "解决"
+    },
+    {
+      "from": "微服务",
+      "to": "单体架构",
+      "rel": "替代"
+    },
+    {
+      "from": "投资回报率",
+      "to": "代码现代化",
+      "rel": "衡量"
+    },
+    {
+      "from": "分阶段计划",
+      "to": "代码现代化",
+      "rel": "用于"
+    }
+  ],
+  "rel": "guides/the-code-modernization-playbook.md"
+}

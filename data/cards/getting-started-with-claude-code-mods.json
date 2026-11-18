@@ -1,0 +1,113 @@
+{
+  "summary_zh": "Claude Code 模组是运行在会话内的插件，可观察、改写或接管事件并绘制自定义界面。",
+  "concepts": [
+    {
+      "en": "Claude Code mod",
+      "zh": "Claude Code 模组",
+      "def_zh": "运行在 Claude Code 会话内、可观察改写事件并绘制界面的插件模块。",
+      "kind": "product"
+    },
+    {
+      "en": "hook",
+      "zh": "钩子",
+      "def_zh": "模组中注册的事件处理函数，按链式顺序观察、改写或接管事件。",
+      "kind": "technique"
+    },
+    {
+      "en": "plugin",
+      "zh": "插件",
+      "def_zh": "Claude Code 的可分发扩展单元，模组以插件形式打包与安装。",
+      "kind": "product"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次响应可容纳的输入 token 总量上限。",
+      "kind": "metric"
+    },
+    {
+      "en": "hot reload",
+      "zh": "热重载",
+      "def_zh": "保存模组文件后无需重启即在当前会话中重新加载。",
+      "kind": "technique"
+    },
+    {
+      "en": "state",
+      "zh": "状态存储",
+      "def_zh": "由宿主保存的命名值，跨热重载在会话内持久保留。",
+      "kind": "technique"
+    },
+    {
+      "en": "ui.render",
+      "zh": "界面渲染事件",
+      "def_zh": "在界面各组件绘制时触发、可返回元素树的事件。",
+      "kind": "technique"
+    },
+    {
+      "en": "tool.call",
+      "zh": "工具调用事件",
+      "def_zh": "模型请求调用工具时触发、可放行或拒绝的事件。",
+      "kind": "technique"
+    },
+    {
+      "en": "plugin marketplace",
+      "zh": "插件市场",
+      "def_zh": "托管并分发插件的仓库或目录，供用户安装模组。",
+      "kind": "product"
+    },
+    {
+      "en": "permission rules",
+      "zh": "权限规则",
+      "def_zh": "对工具调用进行硬性允许或阻止的配置机制。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code 模组",
+      "to": "插件",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code 模组",
+      "to": "钩子",
+      "rel": "依赖"
+    },
+    {
+      "from": "钩子",
+      "to": "工具调用事件",
+      "rel": "用于"
+    },
+    {
+      "from": "钩子",
+      "to": "界面渲染事件",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code 模组",
+      "to": "状态存储",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code 模组",
+      "to": "热重载",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code 模组",
+      "to": "上下文窗口",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Code 模组",
+      "to": "插件市场",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code 模组",
+      "to": "权限规则",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/getting-started-with-claude-code-mods.md"
+}

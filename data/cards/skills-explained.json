@@ -1,0 +1,96 @@
+{
+  "summary_zh": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+  "concepts": [
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "按需动态加载的指令、脚本与资源文件夹，赋予 Claude 领域专长。",
+      "kind": "product"
+    },
+    {
+      "en": "Prompts",
+      "zh": "提示词",
+      "def_zh": "对话中以自然语言给出的即时、临时性指令。",
+      "kind": "technique"
+    },
+    {
+      "en": "Projects",
+      "zh": "项目",
+      "def_zh": "带独立知识库与上下文的持久工作区，跨对话共享背景知识。",
+      "kind": "product"
+    },
+    {
+      "en": "Subagents",
+      "zh": "子代理",
+      "def_zh": "拥有独立上下文、系统提示与工具权限的专用 AI 助手。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "连接 AI 应用与外部工具和数据源的开放标准协议。",
+      "kind": "product"
+    },
+    {
+      "en": "Progressive Disclosure",
+      "zh": "渐进式披露",
+      "def_zh": "先加载元数据、按需再加载完整指令与文件的分层加载机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次可处理的信息容量上限。",
+      "kind": "metric"
+    },
+    {
+      "en": "Agentic Workflow",
+      "zh": "代理式工作流",
+      "def_zh": "组合多种构建块、由 AI 自主编排完成的复杂任务流程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "渐进式披露",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能",
+      "to": "提示词",
+      "rel": "替代"
+    },
+    {
+      "from": "技能",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "子代理",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "项目",
+      "to": "上下文窗口",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理式工作流",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "代理式工作流",
+      "to": "子代理",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/skills-explained.md"
+}

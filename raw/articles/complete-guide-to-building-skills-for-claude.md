@@ -1,0 +1,48 @@
+---
+title: "A complete guide to building skills for Claude"
+source_url: "https://claude.com/resources/articles/complete-guide-to-building-skills-for-claude"
+publisher: "claude.com"
+type: "blogPost"
+date: "2026-01-29"
+products: ["Claude Code"]
+read_time: 3
+excerpt: "Skills let you teach Claude your workflows once and apply them consistently. This guide covers how to build, test, and distribute them—whether for standalone workflows or MCP-enhanced integrations."
+fetched_at: "2026-11-18"
+---
+
+# A complete guide to building skills for Claude
+Claude Resources
+
+Skills let you teach Claude your workflows once and apply them consistently. This guide covers how to build, test, and distribute them—whether for standalone workflows or MCP-enhanced integrations.
+
+Since [launching Skills in October](https://claude.com/resources/articles/skills), we've seen strong interest from developers who want Claude to follow specific workflows consistently, power users automating repeatable tasks like document creation or research processes, teams looking to standardize how Claude operates across their organization, and MCP connector builders pairing their integrations with reliable workflows.
+
+The common thread: people want more detailed guidance on building effective skills—whether for standalone workflows or MCP-enhanced integrations—from planning and structure to testing and distribution.
+
+We put together this guide to fill that gap. It covers everything from technical requirements and skill structure to testing approaches and common troubleshooting patterns. Whether you're building standalone skills that work with Claude's built-in capabilities or enhancing an MCP integration, you'll find the guidance relevant—with a dedicated section on MCP + Skills for those who want it.
+
+**What you'll learn:**
+
+-   Technical requirements and best practices for skill structure
+-   Patterns for standalone skills and MCP-enhanced workflows
+-   Patterns that have worked across different use cases
+-   How to test, iterate, and distribute your skills
+
+If you know the top 2-3 workflows you want to automate, expect about 15-30 minutes to build and test your first working skill using [the skill-creator](https://claude.com/resources/articles/improving-skill-creator-test-measure-and-refine-agent-skills).
+
+**Who this is for:**
+
+-   Developers who want Claude to follow specific workflows consistently
+-   MCP connector builders adding workflow knowledge to their integrations
+-   Power users automating repeatable tasks
+-   Teams looking to standardize how Claude works across their organization
+
+Download the guide [here](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf?hsLang=en).
+
+For a shorter walkthrough with examples, see [How to create Skills: Key steps, limitations, and examples](https://claude.com/resources/articles/how-to-create-skills-key-steps-limitations-and-examples), and [how the Claude Code team uses skills day to day](https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/).
+
+### Get the developer newsletter
+
+Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.
+
+Please provide your email address if you'd like to receive our monthly developer newsletter. You can unsubscribe at any time.

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic与Mesh-AI网络研讨会：讲解生产级AI智能体的基础、评估与部署。",
+  "concepts": [
+    {
+      "en": "AI agent",
+      "zh": "AI智能体",
+      "def_zh": "能自主规划并执行多步任务以实现目标的AI系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic AI",
+      "zh": "智能体式AI",
+      "def_zh": "以自主决策与行动为核心的AI系统范式。",
+      "kind": "technique"
+    },
+    {
+      "en": "workflow",
+      "zh": "工作流",
+      "def_zh": "按预定义步骤编排的自动化流程，缺乏自主性。",
+      "kind": "technique"
+    },
+    {
+      "en": "agency",
+      "zh": "能动性",
+      "def_zh": "系统自主设定目标并采取行动的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent development",
+      "zh": "智能体开发",
+      "def_zh": "构建、调试与集成AI智能体的工程实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent evaluation",
+      "zh": "智能体评估",
+      "def_zh": "衡量智能体能力与性能是否达标的系统方法。",
+      "kind": "metric"
+    },
+    {
+      "en": "production deployment",
+      "zh": "生产部署",
+      "def_zh": "将智能体安全地投入实际业务环境运行。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude平台",
+      "def_zh": "Anthropic提供的构建与运行Claude应用的平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Agents",
+      "zh": "Claude智能体",
+      "def_zh": "基于Claude模型构建的可自主执行任务的智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "regulatory considerations",
+      "zh": "监管考量",
+      "def_zh": "部署AI智能体时需满足的合规与法规要求。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体式AI",
+      "to": "AI智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "AI智能体",
+      "to": "工作流",
+      "rel": "替代"
+    },
+    {
+      "from": "智能体开发",
+      "to": "能动性",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体评估",
+      "to": "AI智能体",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude平台",
+      "to": "Claude智能体",
+      "rel": "启用"
+    },
+    {
+      "from": "生产部署",
+      "to": "智能体评估",
+      "rel": "依赖"
+    },
+    {
+      "from": "生产部署",
+      "to": "监管考量",
+      "rel": "风险"
+    },
+    {
+      "from": "Claude智能体",
+      "to": "生产部署",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/building-with-claude-in-europe-agent-fundamentals.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "支持技能与定时任务的协作式 AI 工作平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "封装特定工作流、可复用的 Claude 能力模块。",
+      "kind": "technique"
+    },
+    {
+      "en": "Scheduled Tasks",
+      "zh": "定时任务",
+      "def_zh": "按预设时间自动触发技能执行的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Knowledge Base",
+      "zh": "知识库",
+      "def_zh": "集中存放常见问题与标准答案的参考文档。",
+      "kind": "technique"
+    },
+    {
+      "en": "Voice Profile",
+      "zh": "写作风格画像",
+      "def_zh": "描述个人写作风格、供 AI 模仿生成的档案。",
+      "kind": "technique"
+    },
+    {
+      "en": "Business Development Representative",
+      "zh": "业务拓展代表",
+      "def_zh": "负责线索筛选与商机挖掘的一线销售角色。",
+      "kind": "role"
+    },
+    {
+      "en": "Ideal Customer Profile",
+      "zh": "理想客户画像",
+      "def_zh": "定义高价值目标客户特征的标准。",
+      "kind": "metric"
+    },
+    {
+      "en": "Discovery Call",
+      "zh": "探索性通话",
+      "def_zh": "销售初期了解客户需求与痛点的沟通环节。",
+      "kind": "technique"
+    },
+    {
+      "en": "Call Scorecard",
+      "zh": "通话评分卡",
+      "def_zh": "依据销售手册对通话表现打分并给出反馈。",
+      "kind": "metric"
+    },
+    {
+      "en": "Context Engineering",
+      "zh": "上下文工程",
+      "def_zh": "为 AI 精心组织提示、资料与示例以提升输出质量。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "技能",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "定时任务",
+      "rel": "启用"
+    },
+    {
+      "from": "技能",
+      "to": "知识库",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能",
+      "to": "写作风格画像",
+      "rel": "依赖"
+    },
+    {
+      "from": "业务拓展代表",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "通话评分卡",
+      "to": "探索性通话",
+      "rel": "衡量"
+    },
+    {
+      "from": "理想客户画像",
+      "to": "业务拓展代表",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文工程",
+      "to": "技能",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md"
+}

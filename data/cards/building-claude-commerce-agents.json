@@ -1,0 +1,86 @@
+{
+  "summary_zh": "介绍面向消费者与商家的 Claude 商务智能体蓝图及参考实现",
+  "concepts": [
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供的模型与工具开发平台",
+      "kind": "product"
+    },
+    {
+      "en": "commerce agent",
+      "zh": "商务智能体",
+      "def_zh": "面向购物与交易场景的自主 AI 代理",
+      "kind": "technique"
+    },
+    {
+      "en": "consumer agent",
+      "zh": "消费者智能体",
+      "def_zh": "代表终端用户完成选购与服务的代理",
+      "kind": "technique"
+    },
+    {
+      "en": "merchant agent",
+      "zh": "商家智能体",
+      "def_zh": "代表商家处理商品与订单的代理",
+      "kind": "technique"
+    },
+    {
+      "en": "agent blueprint",
+      "zh": "智能体蓝图",
+      "def_zh": "可复用的智能体架构与实现模板",
+      "kind": "technique"
+    },
+    {
+      "en": "reference implementation",
+      "zh": "参考实现",
+      "def_zh": "可直接借鉴的完整示例代码方案",
+      "kind": "technique"
+    },
+    {
+      "en": "authentication",
+      "zh": "身份认证",
+      "def_zh": "验证智能体与用户身份的安全机制",
+      "kind": "technique"
+    },
+    {
+      "en": "latency",
+      "zh": "延迟",
+      "def_zh": "智能体响应所需的时间开销",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 平台",
+      "to": "商务智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "参考实现",
+      "rel": "依赖"
+    },
+    {
+      "from": "商务智能体",
+      "to": "消费者智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "商务智能体",
+      "to": "商家智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "商务智能体",
+      "to": "身份认证",
+      "rel": "依赖"
+    },
+    {
+      "from": "延迟",
+      "to": "商务智能体",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "webinars/building-claude-commerce-agents.md"
+}

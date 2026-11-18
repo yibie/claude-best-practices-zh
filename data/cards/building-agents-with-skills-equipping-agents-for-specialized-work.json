@@ -1,0 +1,97 @@
+{
+  "summary_zh": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+  "concepts": [
+    {
+      "en": "Agent Skills",
+      "zh": "智能体技能",
+      "def_zh": "以文件封装领域工作流与最佳实践、供智能体按需加载的专长包。",
+      "kind": "product"
+    },
+    {
+      "en": "Progressive Disclosure",
+      "zh": "渐进披露",
+      "def_zh": "运行时仅暴露技能元数据，按需逐层加载全文与参考文件以节省上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "连接智能体与外部工具及数据源的标准协议。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "以代码为接口、可执行通用数字工作的编码智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude 智能体 SDK",
+      "def_zh": "开箱即用的生产级智能体开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent Loop",
+      "zh": "智能体循环",
+      "def_zh": "决定下一步行动的核心推理系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Runtime",
+      "zh": "智能体运行时",
+      "def_zh": "提供代码执行与文件系统访问的执行环境。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次可处理的令牌总量，是技能加载需保护的核心资源。",
+      "kind": "metric"
+    },
+    {
+      "en": "Domain Expertise",
+      "zh": "领域专长",
+      "def_zh": "资深从业者积累的工作流、规范与机构知识。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体技能",
+      "to": "领域专长",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体技能",
+      "to": "渐进披露",
+      "rel": "依赖"
+    },
+    {
+      "from": "渐进披露",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体技能",
+      "to": "模型上下文协议",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体运行时",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 智能体 SDK",
+      "to": "智能体循环",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体技能",
+      "to": "Claude Code",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md"
+}

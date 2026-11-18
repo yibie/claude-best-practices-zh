@@ -1,0 +1,97 @@
+{
+  "summary_zh": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+  "concepts": [
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 配置文件",
+      "def_zh": "存放于仓库中、自动注入每次对话的项目上下文配置文件。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程代理工具，可读写代码并执行命令。",
+      "kind": "product"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "有意识地设计和管理注入模型上下文的信息。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt engineering",
+      "zh": "提示工程",
+      "def_zh": "设计提示词以引导模型输出更符合预期的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "让 Claude 连接外部工具与数据源的开放协议。",
+      "kind": "product"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "拥有隔离上下文的独立代理，用于分阶段处理任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "custom slash command",
+      "zh": "自定义斜杠命令",
+      "def_zh": "以 Markdown 文件保存、可复用的提示模板命令。",
+      "kind": "technique"
+    },
+    {
+      "en": "/init",
+      "zh": "/init 命令",
+      "def_zh": "分析代码库并自动生成 CLAUDE.md 初始配置的命令。",
+      "kind": "product"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次对话可容纳的 token 总量上限。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "CLAUDE.md 配置文件",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "CLAUDE.md 配置文件",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "/init 命令",
+      "to": "CLAUDE.md 配置文件",
+      "rel": "启用"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "自定义斜杠命令",
+      "to": "提示工程",
+      "rel": "属于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文工程",
+      "to": "上下文窗口",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/using-claude-md-files.md"
+}

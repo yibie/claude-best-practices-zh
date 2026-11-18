@@ -1,0 +1,91 @@
+{
+  "summary_zh": "介绍如何将 Claude Code 等智能体编程工具从试点推广到整个工程组织的最佳实践。",
+  "concepts": [
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "由 AI 智能体自主完成编码任务的开发方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 推出的智能体编程工具。",
+      "kind": "product"
+    },
+    {
+      "en": "engineering organization",
+      "zh": "工程组织",
+      "def_zh": "负责软件研发的团队与部门整体。",
+      "kind": "org"
+    },
+    {
+      "en": "pilot to production",
+      "zh": "试点到生产",
+      "def_zh": "从早期试用逐步推广到正式生产环境的落地过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "early adopters",
+      "zh": "早期采用者",
+      "def_zh": "率先试用并推动新工具落地的成员。",
+      "kind": "role"
+    },
+    {
+      "en": "technical leaders",
+      "zh": "技术负责人",
+      "def_zh": "负责技术决策与团队推广的管理者。",
+      "kind": "role"
+    },
+    {
+      "en": "force multiplier",
+      "zh": "效能倍增器",
+      "def_zh": "能显著放大团队产出的工具或方法。",
+      "kind": "metric"
+    },
+    {
+      "en": "Applied AI team",
+      "zh": "应用 AI 团队",
+      "def_zh": "负责将 AI 技术落地到实际业务的团队。",
+      "kind": "org"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体编程",
+      "to": "工程组织",
+      "rel": "用于"
+    },
+    {
+      "from": "试点到生产",
+      "to": "工程组织",
+      "rel": "用于"
+    },
+    {
+      "from": "早期采用者",
+      "to": "试点到生产",
+      "rel": "启用"
+    },
+    {
+      "from": "技术负责人",
+      "to": "试点到生产",
+      "rel": "启用"
+    },
+    {
+      "from": "效能倍增器",
+      "to": "智能体编程",
+      "rel": "衡量"
+    },
+    {
+      "from": "应用 AI 团队",
+      "to": "试点到生产",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "guides/scaling-agentic-coding-across-your-organization.md"
+}

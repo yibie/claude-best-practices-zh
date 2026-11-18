@@ -1,0 +1,108 @@
+{
+  "summary_zh": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+  "concepts": [
+    {
+      "en": "AI agent",
+      "zh": "AI代理",
+      "def_zh": "能自主处理长周期、上下文密集任务并采取行动的系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic workflow",
+      "zh": "代理工作流",
+      "def_zh": "由AI代理协调多系统、完成端到端流程的工作模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "human-in-the-loop",
+      "zh": "人在回路",
+      "def_zh": "关键决策保留人工审核与授权的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "legacy system integration",
+      "zh": "遗留系统集成",
+      "def_zh": "将AI代理与老旧核心银行系统连接的技术挑战。",
+      "kind": "risk"
+    },
+    {
+      "en": "regulatory compliance",
+      "zh": "监管合规",
+      "def_zh": "AI代理需满足多监管机构的法规与审计要求。",
+      "kind": "risk"
+    },
+    {
+      "en": "real-time risk management",
+      "zh": "实时风险管理",
+      "def_zh": "在代理即时影响账户与市场时控制风险参数。",
+      "kind": "risk"
+    },
+    {
+      "en": "observability",
+      "zh": "可观测性",
+      "def_zh": "对代理决策与数据来源进行追踪和审查的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "fraud detection",
+      "zh": "欺诈检测",
+      "def_zh": "AI代理实时监控交易以识别金融犯罪模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Model Context Protocol",
+      "zh": "模型上下文协议",
+      "def_zh": "连接AI代理与外部系统的开放协议标准。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic提供的大语言模型平台，用于构建金融AI代理。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI代理",
+      "to": "代理工作流",
+      "rel": "启用"
+    },
+    {
+      "from": "AI代理",
+      "to": "欺诈检测",
+      "rel": "用于"
+    },
+    {
+      "from": "AI代理",
+      "to": "遗留系统集成",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI代理",
+      "to": "监管合规",
+      "rel": "风险"
+    },
+    {
+      "from": "AI代理",
+      "to": "实时风险管理",
+      "rel": "风险"
+    },
+    {
+      "from": "人在回路",
+      "to": "实时风险管理",
+      "rel": "解决"
+    },
+    {
+      "from": "可观测性",
+      "to": "监管合规",
+      "rel": "解决"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "遗留系统集成",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/building-ai-agents-in-financial-services.md"
+}

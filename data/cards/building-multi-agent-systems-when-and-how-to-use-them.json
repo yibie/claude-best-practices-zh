@@ -1,0 +1,103 @@
+{
+  "summary_zh": "多智能体系统在上下文保护、并行化和专业化三种场景下优于单智能体，但需权衡协调成本。",
+  "concepts": [
+    {
+      "en": "multi-agent system",
+      "zh": "多智能体系统",
+      "def_zh": "多个LLM实例在独立上下文中通过代码协调完成任务的架构。",
+      "kind": "technique"
+    },
+    {
+      "en": "single-agent system",
+      "zh": "单智能体系统",
+      "def_zh": "一个LLM实例在单一上下文中处理所有任务的架构。",
+      "kind": "technique"
+    },
+    {
+      "en": "orchestrator-subagent pattern",
+      "zh": "编排器-子智能体模式",
+      "def_zh": "主智能体生成并管理专门子智能体以处理子任务的层次化模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "context pollution",
+      "zh": "上下文污染",
+      "def_zh": "无关信息在上下文中积累导致模型推理质量下降的现象。",
+      "kind": "risk"
+    },
+    {
+      "en": "context isolation",
+      "zh": "上下文隔离",
+      "def_zh": "子智能体在独立干净上下文中运行，避免信息干扰。",
+      "kind": "technique"
+    },
+    {
+      "en": "parallelization",
+      "zh": "并行化",
+      "def_zh": "多个子智能体同时处理独立子任务以扩大搜索范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "specialization",
+      "zh": "专业化",
+      "def_zh": "为不同任务分配具有定制工具和提示的专门智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "context-centric decomposition",
+      "zh": "以上下文为中心的任务分解",
+      "def_zh": "按上下文边界而非问题类型划分工作，减少协调开销。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification subagent",
+      "zh": "验证子智能体",
+      "def_zh": "专门负责测试或验证主智能体工作的子智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "early victory problem",
+      "zh": "过早胜利问题",
+      "def_zh": "验证子智能体未充分测试就标记任务通过的失败模式。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "多智能体系统",
+      "to": "单智能体系统",
+      "rel": "替代"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "编排器-子智能体模式",
+      "rel": "属于"
+    },
+    {
+      "from": "上下文隔离",
+      "to": "上下文污染",
+      "rel": "解决"
+    },
+    {
+      "from": "并行化",
+      "to": "多智能体系统",
+      "rel": "用于"
+    },
+    {
+      "from": "专业化",
+      "to": "多智能体系统",
+      "rel": "用于"
+    },
+    {
+      "from": "以上下文为中心的任务分解",
+      "to": "多智能体系统",
+      "rel": "用于"
+    },
+    {
+      "from": "验证子智能体",
+      "to": "过早胜利问题",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md"
+}

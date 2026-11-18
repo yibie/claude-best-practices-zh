@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍如何用 Claude 托管代理构建定时自动化，并给出六条避免常见故障的规则。",
+  "concepts": [
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude 托管代理",
+      "def_zh": "在 Anthropic 基础设施上按配置运行代理的平台产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的命令行编程代理工具。",
+      "kind": "product"
+    },
+    {
+      "en": "agent automation",
+      "zh": "代理自动化",
+      "def_zh": "按计划自动读取信息并主动汇报的代理任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "vault",
+      "zh": "凭据保管库",
+      "def_zh": "在沙箱外安全存放并注入凭据的存储。",
+      "kind": "technique"
+    },
+    {
+      "en": "memory store",
+      "zh": "记忆存储",
+      "def_zh": "跨运行挂载到沙箱的文本文件目录，保存状态与偏好。",
+      "kind": "technique"
+    },
+    {
+      "en": "bookmark",
+      "zh": "书签",
+      "def_zh": "记录每个来源上次读取时间戳，用于增量读取。",
+      "kind": "technique"
+    },
+    {
+      "en": "scheduled deployment",
+      "zh": "定时部署",
+      "def_zh": "按 cron 计划启动代理会话的部署配置。",
+      "kind": "technique"
+    },
+    {
+      "en": "guardrails",
+      "zh": "护栏",
+      "def_zh": "限制代理权限与花费的边界措施。",
+      "kind": "technique"
+    },
+    {
+      "en": "spending cap",
+      "zh": "花费上限",
+      "def_zh": "每次运行可消耗的最大预算，超出即暂停。",
+      "kind": "metric"
+    },
+    {
+      "en": "prompt injection",
+      "zh": "提示注入",
+      "def_zh": "外部文本被当作指令执行的安全风险。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 托管代理",
+      "to": "代理自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "代理自动化",
+      "to": "定时部署",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理自动化",
+      "to": "记忆存储",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理自动化",
+      "to": "书签",
+      "rel": "依赖"
+    },
+    {
+      "from": "凭据保管库",
+      "to": "护栏",
+      "rel": "属于"
+    },
+    {
+      "from": "花费上限",
+      "to": "护栏",
+      "rel": "属于"
+    },
+    {
+      "from": "护栏",
+      "to": "提示注入",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude 托管代理",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/building-effective-agent-automations.md"
+}

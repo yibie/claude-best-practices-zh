@@ -1,0 +1,108 @@
+{
+  "summary_zh": "通过提示缓存、指令清理与努力度校准，在不牺牲性能的前提下降低 Claude 应用成本。",
+  "concepts": [
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用提示前缀的 KV 状态，避免重复预填充以降低输入成本。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt cache hit rate",
+      "zh": "提示缓存命中率",
+      "def_zh": "请求中命中缓存前缀的比例，是成本优化的核心监控指标。",
+      "kind": "metric"
+    },
+    {
+      "en": "effort",
+      "zh": "努力度",
+      "def_zh": "控制模型思考与验证投入程度的参数，影响成本与质量。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt anti-pattern",
+      "zh": "提示反模式",
+      "def_zh": "针对旧模型弱点、会拖累前沿模型并增加成本的提示写法。",
+      "kind": "risk"
+    },
+    {
+      "en": "prompt audit",
+      "zh": "提示审计",
+      "def_zh": "扫描提示、技能与工具描述，识别并移除反模式的检查流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "hillclimb",
+      "zh": "爬山调优",
+      "def_zh": "在评估集上迭代搜索模型、努力度与提示配置的优化方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "cost-optimize",
+      "zh": "成本优化",
+      "def_zh": "剖析 token 花费并自动应用缓存、批处理等降本手段的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "提供模型调用、缓存、批处理与成本诊断的开发者平台。",
+      "kind": "product"
+    },
+    {
+      "en": "claude-api skill",
+      "zh": "claude-api 技能",
+      "def_zh": "封装成本与性能优化命令的 Claude Code 可复用技能。",
+      "kind": "product"
+    },
+    {
+      "en": "batch API",
+      "zh": "批处理 API",
+      "def_zh": "以更低单价异步处理非实时任务的接口。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "提示缓存",
+      "to": "提示缓存命中率",
+      "rel": "衡量"
+    },
+    {
+      "from": "提示审计",
+      "to": "提示反模式",
+      "rel": "解决"
+    },
+    {
+      "from": "爬山调优",
+      "to": "努力度",
+      "rel": "用于"
+    },
+    {
+      "from": "成本优化",
+      "to": "提示缓存",
+      "rel": "依赖"
+    },
+    {
+      "from": "成本优化",
+      "to": "批处理 API",
+      "rel": "用于"
+    },
+    {
+      "from": "claude-api 技能",
+      "to": "提示审计",
+      "rel": "启用"
+    },
+    {
+      "from": "claude-api 技能",
+      "to": "爬山调优",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "提示缓存",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md"
+}

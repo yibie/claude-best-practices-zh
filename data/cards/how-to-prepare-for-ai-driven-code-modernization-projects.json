@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍AI驱动代码现代化项目的六步准备方法：定义目标、证书、晋升策略与工作流。",
+  "concepts": [
+    {
+      "en": "code modernization",
+      "zh": "代码现代化",
+      "def_zh": "用AI将遗留系统升级、重写或重建的工程实践",
+      "kind": "technique"
+    },
+    {
+      "en": "target state",
+      "zh": "目标状态",
+      "def_zh": "现代化完成后代码应具备的技术栈与行为",
+      "kind": "technique"
+    },
+    {
+      "en": "certificate",
+      "zh": "证书",
+      "def_zh": "每项变更须满足的可自动校验的正确性条件集合",
+      "kind": "technique"
+    },
+    {
+      "en": "promotion policy",
+      "zh": "晋升策略",
+      "def_zh": "按影响范围与置信度分级决定人工审查深度的路径",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic workflow",
+      "zh": "智能体工作流",
+      "def_zh": "由多个并行子智能体分发执行现代化任务的定制流程",
+      "kind": "technique"
+    },
+    {
+      "en": "dynamic workflow",
+      "zh": "动态工作流",
+      "def_zh": "Claude Code中可编排多子智能体并行任务的运行机制",
+      "kind": "product"
+    },
+    {
+      "en": "code modernization plugin",
+      "zh": "代码现代化插件",
+      "def_zh": "提供评估、映射与规则抽取命令的Claude Code插件",
+      "kind": "product"
+    },
+    {
+      "en": "behavioral spec",
+      "zh": "行为规格",
+      "def_zh": "书面描述新系统应具备行为的规范文档",
+      "kind": "technique"
+    },
+    {
+      "en": "blast radius",
+      "zh": "影响范围",
+      "def_zh": "一项变更失败时波及的系统与业务范围",
+      "kind": "metric"
+    },
+    {
+      "en": "change management",
+      "zh": "变更管理",
+      "def_zh": "对关键系统变更进行审查、批准与追溯的流程",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "代码现代化",
+      "to": "目标状态",
+      "rel": "依赖"
+    },
+    {
+      "from": "证书",
+      "to": "目标状态",
+      "rel": "衡量"
+    },
+    {
+      "from": "晋升策略",
+      "to": "证书",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "证书",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "动态工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "代码现代化插件",
+      "to": "智能体工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "晋升策略",
+      "to": "影响范围",
+      "rel": "衡量"
+    },
+    {
+      "from": "代码现代化",
+      "to": "变更管理",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md"
+}

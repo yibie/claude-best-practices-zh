@@ -1,0 +1,92 @@
+{
+  "summary_zh": "Hebbia 用 Claude 构建金融尽调 AI，通过基准测试验证模型精度，并借助 Agent SDK 分解复杂任务。",
+  "concepts": [
+    {
+      "en": "meta-prompting",
+      "zh": "元提示",
+      "def_zh": "将自然语言请求转化为结构化提示的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "finance-specific benchmark",
+      "zh": "金融基准测试",
+      "def_zh": "针对金融场景设计的模型能力评估标准。",
+      "kind": "metric"
+    },
+    {
+      "en": "agent system",
+      "zh": "智能体系统",
+      "def_zh": "由模型自主调用工具完成多步任务的系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "citation finding",
+      "zh": "引文溯源",
+      "def_zh": "在文档中定位并引用答案来源的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "unstructured document analysis",
+      "zh": "非结构化文档分析",
+      "def_zh": "从自由文本中提取关键信息并分析。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude 智能体 SDK",
+      "def_zh": "用于构建可组合、可检查的智能体工作流的开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "Matrix",
+      "zh": "Matrix 平台",
+      "def_zh": "Hebbia 的金融分析平台，以网格形式呈现可追溯答案。",
+      "kind": "product"
+    },
+    {
+      "en": "covenant review",
+      "zh": "契约审查",
+      "def_zh": "对信贷协议中的条款进行提取、比对与风险评估。",
+      "kind": "technique"
+    },
+    {
+      "en": "hallucination",
+      "zh": "幻觉",
+      "def_zh": "模型生成看似合理但实际错误或无依据的内容。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "元提示",
+      "to": "Matrix 平台",
+      "rel": "用于"
+    },
+    {
+      "from": "金融基准测试",
+      "to": "幻觉",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude 智能体 SDK",
+      "to": "智能体系统",
+      "rel": "启用"
+    },
+    {
+      "from": "引文溯源",
+      "to": "非结构化文档分析",
+      "rel": "属于"
+    },
+    {
+      "from": "契约审查",
+      "to": "非结构化文档分析",
+      "rel": "依赖"
+    },
+    {
+      "from": "Matrix 平台",
+      "to": "契约审查",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md"
+}

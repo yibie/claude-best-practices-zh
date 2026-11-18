@@ -1,0 +1,2312 @@
+[
+  {
+    "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+    "in": 6245,
+    "out": 4758,
+    "ms": 21492,
+    "heads": [
+      20,
+      20
+    ],
+    "fence": [
+      10,
+      10
+    ]
+  },
+  {
+    "rel": "articles/best-practices-for-prompt-engineering.md",
+    "in": 6362,
+    "out": 4612,
+    "ms": 27208,
+    "heads": [
+      26,
+      26
+    ],
+    "fence": [
+      16,
+      16
+    ]
+  },
+  {
+    "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "in": 7262,
+    "out": 5334,
+    "ms": 32862,
+    "heads": [
+      12,
+      12
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-code-guide-for-startups.md",
+    "in": 7236,
+    "out": 5407,
+    "ms": 35758,
+    "heads": [
+      14,
+      14
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/harness-design-long-running-apps.md",
+    "in": 7453,
+    "out": 5391,
+    "ms": 37214,
+    "heads": [
+      11,
+      11
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+    "in": 9066,
+    "out": 7351,
+    "ms": 41383,
+    "heads": [
+      29,
+      29
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/getting-started-with-claude-code-mods.md",
+    "in": 8993,
+    "out": 7519,
+    "ms": 34055,
+    "heads": [
+      15,
+      15
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/safely-scaling-multi-agent-teams-with-fable-5-2.md",
+    "in": 7003,
+    "out": 5357,
+    "ms": 26546,
+    "heads": [
+      16,
+      16
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-we-made-claude-ai-faster.md",
+    "in": 7013,
+    "out": 5174,
+    "ms": 31086,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/redesigning-source-control.md",
+    "in": 6298,
+    "out": 4228,
+    "ms": 28191,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/ciso-guide-to-agentic-ai.md",
+    "in": 6155,
+    "out": 4369,
+    "ms": 28311,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/skills-explained.md",
+    "in": 6014,
+    "out": 4679,
+    "ms": 23836,
+    "heads": [
+      22,
+      22
+    ],
+    "fence": [
+      8,
+      8
+    ]
+  },
+  {
+    "rel": "articles/the-ai-native-sdlc-playbook.md",
+    "in": 16754,
+    "out": 14202,
+    "ms": 67944,
+    "heads": [
+      94,
+      94
+    ],
+    "fence": [
+      26,
+      26
+    ]
+  },
+  {
+    "rel": "articles/ai-code-migration.md",
+    "in": 6206,
+    "out": 4458,
+    "ms": 27217,
+    "heads": [
+      16,
+      16
+    ],
+    "fence": [
+      8,
+      8
+    ]
+  },
+  {
+    "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+    "in": 5871,
+    "out": 4001,
+    "ms": 20883,
+    "heads": [
+      16,
+      16
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-code-auto-mode.md",
+    "in": 5972,
+    "out": 4154,
+    "ms": 21532,
+    "heads": [
+      15,
+      15
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/automating-eval-design-and-hillclimbing.md",
+    "in": 6338,
+    "out": 4655,
+    "ms": 22942,
+    "heads": [
+      14,
+      14
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/solving-code-review-at-anthropic.md",
+    "in": 6262,
+    "out": 4439,
+    "ms": 23282,
+    "heads": [
+      23,
+      23
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+    "in": 5547,
+    "out": 3803,
+    "ms": 21549,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-effective-agent-automations.md",
+    "in": 6766,
+    "out": 5176,
+    "ms": 24365,
+    "heads": [
+      21,
+      21
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+    "in": 6235,
+    "out": 4648,
+    "ms": 26285,
+    "heads": [
+      27,
+      27
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+    "in": 5420,
+    "out": 3795,
+    "ms": 22587,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "in": 6146,
+    "out": 4479,
+    "ms": 25113,
+    "heads": [
+      30,
+      30
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/multi-agent-coordination-patterns.md",
+    "in": 5056,
+    "out": 3527,
+    "ms": 18865,
+    "heads": [
+      27,
+      27
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-to-configure-hooks.md",
+    "in": 5489,
+    "out": 3941,
+    "ms": 16600,
+    "heads": [
+      22,
+      22
+    ],
+    "fence": [
+      24,
+      24
+    ]
+  },
+  {
+    "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "in": 5648,
+    "out": 4002,
+    "ms": 23969,
+    "heads": [
+      14,
+      14
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+    "in": 5840,
+    "out": 4319,
+    "ms": 22822,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "in": 5618,
+    "out": 3998,
+    "ms": 23281,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-with-claude-managed-agents.md",
+    "in": 5138,
+    "out": 3455,
+    "ms": 21633,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/subagents-in-claude-code.md",
+    "in": 5023,
+    "out": 3507,
+    "ms": 19666,
+    "heads": [
+      21,
+      21
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-with-claude-sonnet-5-5.md",
+    "in": 6107,
+    "out": 4751,
+    "ms": 21927,
+    "heads": [
+      20,
+      20
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/improving-frontend-design-through-skills.md",
+    "in": 5041,
+    "out": 3454,
+    "ms": 19349,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      6,
+      6
+    ]
+  },
+  {
+    "rel": "articles/using-claude-md-files.md",
+    "in": 4865,
+    "out": 3266,
+    "ms": 17923,
+    "heads": [
+      30,
+      30
+    ],
+    "fence": [
+      18,
+      18
+    ]
+  },
+  {
+    "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+    "in": 5399,
+    "out": 3738,
+    "ms": 18991,
+    "heads": [
+      19,
+      19
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+    "in": 5245,
+    "out": 3484,
+    "ms": 23522,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-ai-agents-in-financial-services.md",
+    "in": 4389,
+    "out": 2800,
+    "ms": 18953,
+    "heads": [
+      19,
+      19
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "in": 4908,
+    "out": 3249,
+    "ms": 20286,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+    "in": 4228,
+    "out": 2815,
+    "ms": 19347,
+    "heads": [
+      18,
+      18
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+    "in": 5561,
+    "out": 3983,
+    "ms": 20970,
+    "heads": [
+      26,
+      26
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+    "in": 5204,
+    "out": 3302,
+    "ms": 19954,
+    "heads": [
+      12,
+      12
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+    "in": 4819,
+    "out": 3109,
+    "ms": 17295,
+    "heads": [
+      21,
+      21
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-companies-with-claude-code.md",
+    "in": 4721,
+    "out": 3128,
+    "ms": 19919,
+    "heads": [
+      17,
+      17
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "in": 4993,
+    "out": 3332,
+    "ms": 20037,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/harnessing-claudes-intelligence.md",
+    "in": 5023,
+    "out": 3444,
+    "ms": 18573,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      4,
+      4
+    ]
+  },
+  {
+    "rel": "articles/claude-for-the-legal-industry.md",
+    "in": 4442,
+    "out": 2898,
+    "ms": 17352,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+    "in": 4124,
+    "out": 2637,
+    "ms": 16256,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+    "in": 4615,
+    "out": 3068,
+    "ms": 17279,
+    "heads": [
+      20,
+      20
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+    "in": 4610,
+    "out": 2885,
+    "ms": 19829,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+    "in": 4492,
+    "out": 2871,
+    "ms": 19396,
+    "heads": [
+      13,
+      13
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+    "in": 4404,
+    "out": 2888,
+    "ms": 16431,
+    "heads": [
+      23,
+      23
+    ],
+    "fence": [
+      8,
+      8
+    ]
+  },
+  {
+    "rel": "articles/managed-agents.md",
+    "in": 4386,
+    "out": 2664,
+    "ms": 16947,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+    "in": 3756,
+    "out": 2199,
+    "ms": 14456,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/build-responsive-web-layouts.md",
+    "in": 4116,
+    "out": 2695,
+    "ms": 14349,
+    "heads": [
+      17,
+      17
+    ],
+    "fence": [
+      12,
+      12
+    ]
+  },
+  {
+    "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+    "in": 4348,
+    "out": 2878,
+    "ms": 15774,
+    "heads": [
+      18,
+      18
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/ai-ci-cd-on-call.md",
+    "in": 4481,
+    "out": 2738,
+    "ms": 17299,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/spending-your-effort.md",
+    "in": 4716,
+    "out": 3086,
+    "ms": 17658,
+    "heads": [
+      12,
+      12
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/scaling-agentic-coding.md",
+    "in": 3708,
+    "out": 2202,
+    "ms": 15276,
+    "heads": [
+      13,
+      13
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+    "in": 4148,
+    "out": 2594,
+    "ms": 17108,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+    "in": 4230,
+    "out": 2582,
+    "ms": 15332,
+    "heads": [
+      21,
+      21
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-ai-agents-for-startups.md",
+    "in": 3868,
+    "out": 2440,
+    "ms": 15781,
+    "heads": [
+      15,
+      15
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+    "in": 4154,
+    "out": 2491,
+    "ms": 14805,
+    "heads": [
+      15,
+      15
+    ],
+    "fence": [
+      8,
+      8
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-cybersecurity.md",
+    "in": 3796,
+    "out": 2189,
+    "ms": 14696,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+    "in": 4283,
+    "out": 2558,
+    "ms": 17740,
+    "heads": [
+      11,
+      11
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "in": 4152,
+    "out": 2681,
+    "ms": 15183,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+    "in": 4111,
+    "out": 2425,
+    "ms": 13654,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+    "in": 3948,
+    "out": 2407,
+    "ms": 13570,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/introduction-to-agentic-coding.md",
+    "in": 3598,
+    "out": 2121,
+    "ms": 12471,
+    "heads": [
+      20,
+      20
+    ],
+    "fence": [
+      12,
+      12
+    ]
+  },
+  {
+    "rel": "articles/seeing-like-an-agent.md",
+    "in": 4136,
+    "out": 2468,
+    "ms": 14962,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/which-claude-model-should-you-build-with.md",
+    "in": 7615,
+    "out": 6159,
+    "ms": 30243,
+    "heads": [
+      16,
+      16
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-employees-use-claude-tag.md",
+    "in": 3900,
+    "out": 2273,
+    "ms": 14974,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate.md",
+    "in": 3752,
+    "out": 2233,
+    "ms": 14680,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/getting-started-with-loops.md",
+    "in": 4066,
+    "out": 2420,
+    "ms": 13680,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      8,
+      8
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-marketing.md",
+    "in": 3777,
+    "out": 2220,
+    "ms": 13398,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+    "in": 3798,
+    "out": 2281,
+    "ms": 14695,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+    "in": 3971,
+    "out": 2241,
+    "ms": 13656,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/optimize-code-performance-quickly.md",
+    "in": 3630,
+    "out": 2172,
+    "ms": 11986,
+    "heads": [
+      17,
+      17
+    ],
+    "fence": [
+      10,
+      10
+    ]
+  },
+  {
+    "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+    "in": 3745,
+    "out": 2278,
+    "ms": 14875,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+    "in": 3830,
+    "out": 2147,
+    "ms": 15010,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+    "in": 3662,
+    "out": 2098,
+    "ms": 15389,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+    "in": 3594,
+    "out": 2020,
+    "ms": 12022,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "in": 3638,
+    "out": 1958,
+    "ms": 15171,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/fix-software-bugs-faster-with-claude.md",
+    "in": 3469,
+    "out": 2009,
+    "ms": 12747,
+    "heads": [
+      18,
+      18
+    ],
+    "fence": [
+      10,
+      10
+    ]
+  },
+  {
+    "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+    "in": 3504,
+    "out": 2035,
+    "ms": 13732,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/what-is-model-context-protocol.md",
+    "in": 3661,
+    "out": 2163,
+    "ms": 12022,
+    "heads": [
+      21,
+      21
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+    "in": 3510,
+    "out": 1967,
+    "ms": 12713,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-legal.md",
+    "in": 3585,
+    "out": 1980,
+    "ms": 14268,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+    "in": 3686,
+    "out": 2093,
+    "ms": 13722,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+    "in": 3729,
+    "out": 2016,
+    "ms": 11744,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/running-an-ai-native-engineering-org.md",
+    "in": 3627,
+    "out": 1874,
+    "ms": 11575,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/auto-mode-in-production.md",
+    "in": 3508,
+    "out": 1886,
+    "ms": 12226,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+    "in": 3531,
+    "out": 1856,
+    "ms": 13015,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md",
+    "in": 3488,
+    "out": 1860,
+    "ms": 13599,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md",
+    "in": 3565,
+    "out": 1879,
+    "ms": 14110,
+    "heads": [
+      9,
+      9
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/agent-identity-access-model.md",
+    "in": 3420,
+    "out": 1818,
+    "ms": 12598,
+    "heads": [
+      10,
+      10
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+    "in": 3360,
+    "out": 1835,
+    "ms": 10319,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/carta-healthcare-clinical-abstractor.md",
+    "in": 3403,
+    "out": 1811,
+    "ms": 16355,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+    "in": 3370,
+    "out": 1724,
+    "ms": 12029,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+    "in": 3404,
+    "out": 1755,
+    "ms": 12287,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+    "in": 3468,
+    "out": 1820,
+    "ms": 12060,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/integrate-apis-seamlessly.md",
+    "in": 3118,
+    "out": 1689,
+    "ms": 9162,
+    "heads": [
+      14,
+      14
+    ],
+    "fence": [
+      6,
+      6
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-rakuten.md",
+    "in": 3471,
+    "out": 1855,
+    "ms": 13061,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+    "in": 3210,
+    "out": 1582,
+    "ms": 10761,
+    "heads": [
+      11,
+      11
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+    "in": 3255,
+    "out": 1687,
+    "ms": 12058,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+    "in": 3413,
+    "out": 1836,
+    "ms": 12093,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+    "in": 3316,
+    "out": 1735,
+    "ms": 12214,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-teams-use-claude-code.md",
+    "in": 3040,
+    "out": 1521,
+    "ms": 10484,
+    "heads": [
+      8,
+      8
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+    "in": 3269,
+    "out": 1634,
+    "ms": 10265,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+    "in": 3217,
+    "out": 1616,
+    "ms": 10784,
+    "heads": [
+      11,
+      11
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+    "in": 3124,
+    "out": 1547,
+    "ms": 10682,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-cursor.md",
+    "in": 3231,
+    "out": 1578,
+    "ms": 12073,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+    "in": 3043,
+    "out": 1589,
+    "ms": 9439,
+    "heads": [
+      3,
+      3
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/cowork-plugins-finance.md",
+    "in": 2795,
+    "out": 1284,
+    "ms": 7684,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+    "in": 2956,
+    "out": 1370,
+    "ms": 8878,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+    "in": 3009,
+    "out": 1469,
+    "ms": 9325,
+    "heads": [
+      7,
+      7
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/product-development-in-the-agentic-era.md",
+    "in": 2868,
+    "out": 1292,
+    "ms": 8753,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+    "in": 2851,
+    "out": 1240,
+    "ms": 9679,
+    "heads": [
+      3,
+      3
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+    "in": 2870,
+    "out": 1313,
+    "ms": 10001,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/zero-trust-for-ai-agents.md",
+    "in": 2271,
+    "out": 732,
+    "ms": 6440,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+    "in": 2377,
+    "out": 797,
+    "ms": 6644,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-excel-powerpoint-updates.md",
+    "in": 2778,
+    "out": 1251,
+    "ms": 7488,
+    "heads": [
+      5,
+      5
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/cowork-plugins.md",
+    "in": 2310,
+    "out": 767,
+    "ms": 6591,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/deploying-claude-across-the-legal-industry.md",
+    "in": 2279,
+    "out": 735,
+    "ms": 5375,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-for-commerce-agents.md",
+    "in": 2770,
+    "out": 1178,
+    "ms": 8662,
+    "heads": [
+      6,
+      6
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+    "in": 2222,
+    "out": 715,
+    "ms": 4822,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+    "in": 2173,
+    "out": 653,
+    "ms": 5314,
+    "heads": [
+      4,
+      4
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/deploying-claude-across-financial-services.md",
+    "in": 2155,
+    "out": 609,
+    "ms": 4665,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-ai-agents-for-the-enterprise.md",
+    "in": 2198,
+    "out": 662,
+    "ms": 5117,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/the-founders-playbook.md",
+    "in": 2150,
+    "out": 598,
+    "ms": 4328,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/claude-model-and-effort-level-in-claude-code.md",
+    "in": 2060,
+    "out": 499,
+    "ms": 3847,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+    "in": 2158,
+    "out": 607,
+    "ms": 4741,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/building-an-ai-native-revenue-organization.md",
+    "in": 2244,
+    "out": 696,
+    "ms": 6233,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/the-claude-cowork-product-guide.md",
+    "in": 2119,
+    "out": 563,
+    "ms": 4798,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+    "in": 1995,
+    "out": 448,
+    "ms": 3601,
+    "heads": [
+      2,
+      2
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-code-maximizing-value.md",
+    "in": 1967,
+    "out": 411,
+    "ms": 3334,
+    "heads": [
+      3,
+      3
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+    "in": 1887,
+    "out": 308,
+    "ms": 2480,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-ai-investment-firm.md",
+    "in": 1885,
+    "out": 342,
+    "ms": 3394,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md",
+    "in": 1934,
+    "out": 407,
+    "ms": 3898,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/future-of-ai-coding-mcp-vs-code.md",
+    "in": 1855,
+    "out": 332,
+    "ms": 2843,
+    "heads": [
+      3,
+      3
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "articles/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.md",
+    "in": 1853,
+    "out": 318,
+    "ms": 2524,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+    "in": 1865,
+    "out": 335,
+    "ms": 3115,
+    "heads": [
+      3,
+      3
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+    "in": 1802,
+    "out": 263,
+    "ms": 2769,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/building-effective-ai-agents.md",
+    "in": 1756,
+    "out": 214,
+    "ms": 2149,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-code-for-financial-services-boris-cherny.md",
+    "in": 1790,
+    "out": 253,
+    "ms": 2534,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+    "in": 1802,
+    "out": 276,
+    "ms": 2340,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-code-financial-services.md",
+    "in": 1756,
+    "out": 217,
+    "ms": 2138,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+    "in": 1804,
+    "out": 290,
+    "ms": 3163,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-founders-playbook-building-an-ai-native-startup.md",
+    "in": 1792,
+    "out": 251,
+    "ms": 2651,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-complete-guide-to-building-skills-for-claude.md",
+    "in": 1762,
+    "out": 209,
+    "ms": 2449,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-code-best-practices-lightspeed.md",
+    "in": 1762,
+    "out": 243,
+    "ms": 2134,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/scaling-agentic-coding-across-your-organization.md",
+    "in": 1748,
+    "out": 207,
+    "ms": 2144,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/unified-claude-what-it-means-for-admins.md",
+    "in": 1791,
+    "out": 253,
+    "ms": 2699,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/building-claude-commerce-agents.md",
+    "in": 1768,
+    "out": 233,
+    "ms": 2503,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+    "in": 1740,
+    "out": 218,
+    "ms": 2876,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/financial-services-guide-to-building-autonomous-ai-agents.md",
+    "in": 1741,
+    "out": 213,
+    "ms": 2213,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/deploying-claude-across-your-organization.md",
+    "in": 1773,
+    "out": 241,
+    "ms": 3096,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/claude-cowork-product-guide.md",
+    "in": 1779,
+    "out": 247,
+    "ms": 2539,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-code-modernization-playbook.md",
+    "in": 1753,
+    "out": 228,
+    "ms": 2976,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/deloitte-code-modernization.md",
+    "in": 1746,
+    "out": 225,
+    "ms": 1811,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-on-vertex-ai.md",
+    "in": 1744,
+    "out": 240,
+    "ms": 2186,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/zero-trust-for-ai-agents.md",
+    "in": 1713,
+    "out": 180,
+    "ms": 1957,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-enterprise-ai-transformation-guide-for-life-sciences.md",
+    "in": 1723,
+    "out": 186,
+    "ms": 2092,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-code-live.md",
+    "in": 1765,
+    "out": 213,
+    "ms": 2279,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/the-enterprise-ai-transformation-guide.md",
+    "in": 1726,
+    "out": 191,
+    "ms": 2128,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "guides/claude-science-product-guide.md",
+    "in": 1748,
+    "out": 213,
+    "ms": 2409,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  },
+  {
+    "rel": "webinars/claude-code-service-delivery.md",
+    "in": 1755,
+    "out": 219,
+    "ms": 2906,
+    "heads": [
+      1,
+      1
+    ],
+    "fence": [
+      0,
+      0
+    ]
+  }
+]

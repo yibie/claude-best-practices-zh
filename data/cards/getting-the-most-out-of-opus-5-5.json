@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍 Opus 5.5 在 Claude 与 Claude Code 中的提示、长任务引导与结果核查技巧。",
+  "concepts": [
+    {
+      "en": "Opus 5.5",
+      "zh": "Opus 5.5 模型",
+      "def_zh": "会先思考再回复、可长时间自主执行多步任务的 Claude 模型。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "面向代码库的智能体式编程工具，支持长任务与子代理。",
+      "kind": "product"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 项目指令文件",
+      "def_zh": "存放项目级规则、约定与停止条件的持久指令文件。",
+      "kind": "technique"
+    },
+    {
+      "en": "finish line definition",
+      "zh": "完成标准定义",
+      "def_zh": "在提示中明确任务“做完”的可验证条件。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagents",
+      "zh": "子代理",
+      "def_zh": "把大任务拆分给多个并行代理执行并汇总结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "task list in a file",
+      "zh": "文件化任务清单",
+      "def_zh": "将待办清单写入文件并随进度更新，避免上下文丢失。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort control",
+      "zh": "思考投入控制",
+      "def_zh": "调节模型在回复前思考量的机制，无需提示“仔细思考”。",
+      "kind": "technique"
+    },
+    {
+      "en": "fast mode",
+      "zh": "快速模式",
+      "def_zh": "同一模型下更快返回文本、按 token 计费更高的模式。",
+      "kind": "product"
+    },
+    {
+      "en": "bio and cyber safeguards",
+      "zh": "生物与网络安全防护",
+      "def_zh": "对敏感内容自动标记并切换到旧模型的安全机制。",
+      "kind": "risk"
+    },
+    {
+      "en": "code review pass",
+      "zh": "代码审查环节",
+      "def_zh": "在人工评审前由模型审查 diff 并列出阻断性问题。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "完成标准定义",
+      "to": "Opus 5.5 模型",
+      "rel": "用于"
+    },
+    {
+      "from": "CLAUDE.md 项目指令文件",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "子代理",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "文件化任务清单",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "思考投入控制",
+      "to": "Opus 5.5 模型",
+      "rel": "用于"
+    },
+    {
+      "from": "快速模式",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "生物与网络安全防护",
+      "to": "Opus 5.5 模型",
+      "rel": "风险"
+    },
+    {
+      "from": "代码审查环节",
+      "to": "Claude Code",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/getting-the-most-out-of-opus-5-5.md"
+}

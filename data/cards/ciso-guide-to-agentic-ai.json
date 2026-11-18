@@ -1,0 +1,108 @@
+{
+  "summary_zh": "CISO 应使智能体风险可读且有界，通过四问框架和七项控制安全部署智能体。",
+  "concepts": [
+    {
+      "en": "agentic AI",
+      "zh": "智能体 AI",
+      "def_zh": "能自主规划并调用工具执行多步任务的 AI 系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt injection",
+      "zh": "提示注入",
+      "def_zh": "攻击者将指令藏于内容中，诱使智能体违背用户意图。",
+      "kind": "risk"
+    },
+    {
+      "en": "least agency",
+      "zh": "最小自主权",
+      "def_zh": "仅授予完成当前任务所需的最窄能力与权限。",
+      "kind": "technique"
+    },
+    {
+      "en": "blast radius",
+      "zh": "爆炸半径",
+      "def_zh": "智能体行为失准或遭攻击时可能影响的范围与严重度。",
+      "kind": "metric"
+    },
+    {
+      "en": "agent identity spectrum",
+      "zh": "智能体身份谱系",
+      "def_zh": "从系统服务账号到人类凭证的身份与问责连续区间。",
+      "kind": "technique"
+    },
+    {
+      "en": "egress allowlisting",
+      "zh": "出站白名单",
+      "def_zh": "仅允许智能体访问预先批准的外部目标，阻断数据外泄。",
+      "kind": "technique"
+    },
+    {
+      "en": "sandboxed execution",
+      "zh": "沙箱执行",
+      "def_zh": "在隔离临时环境中运行智能体，避免接触生产凭证。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "以人类操作员为问责主体的智能体工作环境。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "可在共享工作区中与人类团队协作的智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "insider risk",
+      "zh": "内部风险",
+      "def_zh": "拥有合法访问权限者（含失准智能体）造成的安全威胁。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "最小自主权",
+      "to": "爆炸半径",
+      "rel": "解决"
+    },
+    {
+      "from": "出站白名单",
+      "to": "提示注入",
+      "rel": "解决"
+    },
+    {
+      "from": "沙箱执行",
+      "to": "爆炸半径",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体身份谱系",
+      "to": "内部风险",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "沙箱执行",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "出站白名单",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "智能体 AI",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体 AI",
+      "to": "提示注入",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/ciso-guide-to-agentic-ai.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+  "concepts": [
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "封装流程知识与领域专长的可复用指令集，教 Claude 如何完成任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Model Context Protocol (MCP)",
+      "zh": "模型上下文协议",
+      "def_zh": "标准化协议，为 Claude 提供对外部系统与工具的安全连接访问。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP server",
+      "zh": "MCP 服务器",
+      "def_zh": "实现 MCP 协议、向 Claude 暴露工具与数据的外部系统连接端点。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent Skills",
+      "zh": "智能体技能",
+      "def_zh": "面向跨平台可移植的开放技能标准，用于封装可复用工作流知识。",
+      "kind": "product"
+    },
+    {
+      "en": "procedural knowledge",
+      "zh": "流程知识",
+      "def_zh": "描述如何按步骤完成任务的领域知识与工作流逻辑。",
+      "kind": "technique"
+    },
+    {
+      "en": "tool connectivity",
+      "zh": "工具连接",
+      "def_zh": "让模型能够访问和调用外部工具、数据与平台的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "progressive disclosure",
+      "zh": "渐进式披露",
+      "def_zh": "按需加载上下文信息以节省 token 并保持相关性的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "programmatic tool calling",
+      "zh": "程序化工具调用",
+      "def_zh": "由代码编排多个工具调用以高效完成复杂工作流的方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "workflow orchestration",
+      "zh": "工作流编排",
+      "def_zh": "按明确顺序协调多步骤、多工具任务以保证结果可预测。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent",
+      "zh": "智能体",
+      "def_zh": "能自主调用工具、遵循工作流并产出稳定结果的 AI 系统。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "流程知识",
+      "rel": "属于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "工具连接",
+      "rel": "属于"
+    },
+    {
+      "from": "MCP 服务器",
+      "to": "模型上下文协议",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "MCP 服务器",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能",
+      "to": "工作流编排",
+      "rel": "启用"
+    },
+    {
+      "from": "渐进式披露",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "程序化工具调用",
+      "to": "MCP 服务器",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体",
+      "to": "技能",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "医疗组织在无PHI渠道中用Claude Tag构建人机团队，处理告警、维护工具与解答规则。",
+  "concepts": [
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "将Claude作为Slack队友接入频道、可读线程并调用连接器的产品。",
+      "kind": "product"
+    },
+    {
+      "en": "human-agent team",
+      "zh": "人机团队",
+      "def_zh": "人类与AI代理在同一工作流中分工协作的团队模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "channel memory",
+      "zh": "频道记忆",
+      "def_zh": "代理记住各频道历史上下文以延续长期工作的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "access bundle",
+      "zh": "访问捆绑",
+      "def_zh": "按频道限定代理可连接的数据源与工具集合。",
+      "kind": "technique"
+    },
+    {
+      "en": "per-channel scoping",
+      "zh": "按频道限定范围",
+      "def_zh": "管理员逐频道控制代理可见内容与可访问系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "PHI",
+      "zh": "受保护健康信息",
+      "def_zh": "受隐私法规保护的患者可识别健康数据。",
+      "kind": "risk"
+    },
+    {
+      "en": "BAA",
+      "zh": "商业伙伴协议",
+      "def_zh": "HIPAA下规范服务商处理受保护健康信息的合同。",
+      "kind": "risk"
+    },
+    {
+      "en": "Agent SDK",
+      "zh": "Agent SDK",
+      "def_zh": "用于构建自定义AI代理的软件开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "incident response",
+      "zh": "事件响应",
+      "def_zh": "从告警发现到定位根因并修复的生产故障处理流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "internal tooling",
+      "zh": "内部工具",
+      "def_zh": "企业自建供内部团队使用的应用与自动化工具。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "人机团队",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "频道记忆",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "按频道限定范围",
+      "rel": "依赖"
+    },
+    {
+      "from": "访问捆绑",
+      "to": "按频道限定范围",
+      "rel": "属于"
+    },
+    {
+      "from": "按频道限定范围",
+      "to": "受保护健康信息",
+      "rel": "解决"
+    },
+    {
+      "from": "商业伙伴协议",
+      "to": "受保护健康信息",
+      "rel": "风险"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "事件响应",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "内部工具",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-healthcare-organizations-use-claude-tag.md"
+}

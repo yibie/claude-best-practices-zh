@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍智能体编程的演进、工作原理及 Claude Code 的实践应用。",
+  "concepts": [
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "AI 自主执行多步骤开发任务并迭代直至目标完成的编程范式",
+      "kind": "technique"
+    },
+    {
+      "en": "code prediction and completion",
+      "zh": "代码补全",
+      "def_zh": "基于编辑器内上下文预测并建议下一段代码的传统辅助方式",
+      "kind": "technique"
+    },
+    {
+      "en": "conversational AI chat interface",
+      "zh": "对话式编程助手",
+      "def_zh": "通过对话分析代码片段与问题并给出建议的交互式工具",
+      "kind": "technique"
+    },
+    {
+      "en": "context gathering",
+      "zh": "上下文收集",
+      "def_zh": "读取配置、测试与依赖以理解项目全貌的准备工作",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-file coordination",
+      "zh": "多文件协同修改",
+      "def_zh": "跨多个相关文件一致地修改代码以完成整体变更",
+      "kind": "technique"
+    },
+    {
+      "en": "permission model",
+      "zh": "权限审批模型",
+      "def_zh": "在修改文件前请求用户审阅并批准变更的控制机制",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "在终端中直接访问整个代码库执行开发任务的智能体编程产品",
+      "kind": "product"
+    },
+    {
+      "en": "Model Context Protocol",
+      "zh": "模型上下文协议",
+      "def_zh": "为 Claude Code 连接外部工具与系统提供上下文的开放协议",
+      "kind": "product"
+    },
+    {
+      "en": "autonomy",
+      "zh": "自主性",
+      "def_zh": "系统无需人工逐步编排即可独立执行与调整任务的程度",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体编程",
+      "to": "代码补全",
+      "rel": "替代"
+    },
+    {
+      "from": "智能体编程",
+      "to": "对话式编程助手",
+      "rel": "替代"
+    },
+    {
+      "from": "智能体编程",
+      "to": "上下文收集",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体编程",
+      "to": "多文件协同修改",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "权限审批模型",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "模型上下文协议",
+      "rel": "用于"
+    },
+    {
+      "from": "自主性",
+      "to": "智能体编程",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/introduction-to-agentic-coding.md"
+}

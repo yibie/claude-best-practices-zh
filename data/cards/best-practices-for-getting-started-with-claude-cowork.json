@@ -1,0 +1,97 @@
+{
+  "summary_zh": "介绍Claude Cowork的适用场景、任务选择标准与上手实践，强调将多步骤知识工作委托给AI。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向非技术知识工作者的AI工作空间，可指向文件夹、连接应用并交付成品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "面向开发者的AI编程工具，用于构建和交付软件。",
+      "kind": "product"
+    },
+    {
+      "en": "Chat",
+      "zh": "对话式AI",
+      "def_zh": "以问答和头脑风暴为主的交互模式，输出为想法而非成品。",
+      "kind": "product"
+    },
+    {
+      "en": "Delegation",
+      "zh": "任务委托",
+      "def_zh": "将多步骤、跨文件或跨应用的工作整体交给AI完成。",
+      "kind": "technique"
+    },
+    {
+      "en": "Connectors",
+      "zh": "应用连接器",
+      "def_zh": "将Slack、Gmail、广告平台等外部应用接入AI工作空间的集成机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Scheduling",
+      "zh": "任务调度",
+      "def_zh": "让重复性任务按设定时间自动运行的功能。",
+      "kind": "technique"
+    },
+    {
+      "en": "Clarifying Questions",
+      "zh": "澄清提问",
+      "def_zh": "在任务开始前让AI复述需求并主动提问以对齐预期。",
+      "kind": "technique"
+    },
+    {
+      "en": "Deliverable",
+      "zh": "交付物",
+      "def_zh": "可供他人打开、展示或分享的成品文件，如文档、幻灯片或表格。",
+      "kind": "metric"
+    },
+    {
+      "en": "Context Provision",
+      "zh": "上下文供给",
+      "def_zh": "为AI提供充足的文件、文件夹或应用数据以提升输出质量。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "任务委托",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "应用连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "任务调度",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "交付物",
+      "rel": "衡量"
+    },
+    {
+      "from": "澄清提问",
+      "to": "任务委托",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文供给",
+      "to": "交付物",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "Claude Code",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md"
+}

@@ -1,0 +1,97 @@
+{
+  "summary_zh": "零售企业AI转型指南：从利益相关方对齐与治理起步，经战略试点快速见效，再规模化并建设组织能力。",
+  "concepts": [
+    {
+      "en": "enterprise AI transformation",
+      "zh": "企业AI转型",
+      "def_zh": "企业系统性引入AI并重塑流程与能力的整体变革。",
+      "kind": "technique"
+    },
+    {
+      "en": "stakeholder alignment",
+      "zh": "利益相关方对齐",
+      "def_zh": "让各业务与管理部门就AI目标与优先级达成一致。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI governance",
+      "zh": "AI治理",
+      "def_zh": "为AI应用制定规则、责任与风险管控的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "strategic pilot",
+      "zh": "战略试点",
+      "def_zh": "以快速见效为目标的小范围AI落地验证项目。",
+      "kind": "technique"
+    },
+    {
+      "en": "scaling AI initiatives",
+      "zh": "AI规模化",
+      "def_zh": "将验证成功的试点推广到全组织的扩展过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "organizational capability building",
+      "zh": "组织能力建设",
+      "def_zh": "培养人员技能、流程与工具以持续支撑AI应用。",
+      "kind": "technique"
+    },
+    {
+      "en": "measurable ROI",
+      "zh": "可衡量投资回报",
+      "def_zh": "以量化指标验证AI投入产出效果的标准。",
+      "kind": "metric"
+    },
+    {
+      "en": "personalized service",
+      "zh": "个性化服务",
+      "def_zh": "依据客户数据提供定制化体验的服务方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Enterprise",
+      "zh": "Claude企业版",
+      "def_zh": "面向企业提供安全合规与协作能力的Claude产品。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "企业AI转型",
+      "to": "利益相关方对齐",
+      "rel": "依赖"
+    },
+    {
+      "from": "企业AI转型",
+      "to": "AI治理",
+      "rel": "依赖"
+    },
+    {
+      "from": "战略试点",
+      "to": "可衡量投资回报",
+      "rel": "衡量"
+    },
+    {
+      "from": "AI规模化",
+      "to": "战略试点",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI规模化",
+      "to": "组织能力建设",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude企业版",
+      "to": "企业AI转型",
+      "rel": "用于"
+    },
+    {
+      "from": "个性化服务",
+      "to": "可衡量投资回报",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md"
+}

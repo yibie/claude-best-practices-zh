@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向非开发者的桌面智能体产品，可操作本地文件与连接应用。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "命令行智能体工具，用于开发者委派编码与数据工作流。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic AI",
+      "zh": "智能体 AI",
+      "def_zh": "能自主规划并执行多步任务的 AI 系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "plugins",
+      "zh": "插件",
+      "def_zh": "扩展 Claude 能力并适配工作环境的可配置组件。",
+      "kind": "product"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "封装特定任务能力的可复用模块。",
+      "kind": "product"
+    },
+    {
+      "en": "commands",
+      "zh": "命令",
+      "def_zh": "触发预设工作流的快捷指令。",
+      "kind": "product"
+    },
+    {
+      "en": "maturity model",
+      "zh": "成熟度模型",
+      "def_zh": "分五级描述企业采用 Claude Cowork 的演进路径。",
+      "kind": "metric"
+    },
+    {
+      "en": "pilot evaluation",
+      "zh": "试点评估",
+      "def_zh": "选择首个用例并结构化验证效果的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "adoption at scale",
+      "zh": "规模化推广",
+      "def_zh": "从先锋团队扩展到全组织的部署策略。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "智能体 AI",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "插件",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "命令",
+      "rel": "依赖"
+    },
+    {
+      "from": "成熟度模型",
+      "to": "规模化推广",
+      "rel": "用于"
+    },
+    {
+      "from": "试点评估",
+      "to": "规模化推广",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体 AI",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md"
+}

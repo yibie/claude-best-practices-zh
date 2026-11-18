@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Warp 用技能文件构建自我改进智能体：内层技能执行任务，外层改进技能吸收人类反馈并迭代更新。",
+  "concepts": [
+    {
+      "en": "Agent Skills",
+      "zh": "智能体技能",
+      "def_zh": "以文件形式编码知识、供智能体按需查阅的指令单元。",
+      "kind": "product"
+    },
+    {
+      "en": "self-improving agent",
+      "zh": "自我改进智能体",
+      "def_zh": "能持续吸收反馈并自动更新自身行为能力的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "self-improvement loop",
+      "zh": "自我改进循环",
+      "def_zh": "采集反馈、生成技能修改、经审核合并后生效的闭环流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "base skill",
+      "zh": "基础技能",
+      "def_zh": "承载领域知识与任务指令、直接驱动智能体执行的内层技能。",
+      "kind": "technique"
+    },
+    {
+      "en": "improver skill",
+      "zh": "改进技能",
+      "def_zh": "定时运行的观察者技能，依据反馈对基础技能提出最小修改。",
+      "kind": "technique"
+    },
+    {
+      "en": "human feedback",
+      "zh": "人类反馈",
+      "def_zh": "人类对智能体输出的评价与理由，是自我改进循环的信号来源。",
+      "kind": "technique"
+    },
+    {
+      "en": "progressive disclosure",
+      "zh": "渐进式披露",
+      "def_zh": "技能只引用资源文件与脚本，按需加载而非一次性塞入上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent orchestration platform",
+      "zh": "智能体编排平台",
+      "def_zh": "调度、运行与监控多个智能体及其定时任务的底层系统。",
+      "kind": "product"
+    },
+    {
+      "en": "verification harness",
+      "zh": "验证框架",
+      "def_zh": "用参考语料或黄金输出自动比对智能体产出的评测机制。",
+      "kind": "metric"
+    },
+    {
+      "en": "human in the loop",
+      "zh": "人在回路",
+      "def_zh": "在反馈过滤或最终审核环节保留人工把关的控制方式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "自我改进智能体",
+      "to": "自我改进循环",
+      "rel": "依赖"
+    },
+    {
+      "from": "自我改进循环",
+      "to": "基础技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "自我改进循环",
+      "to": "改进技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "改进技能",
+      "to": "基础技能",
+      "rel": "用于"
+    },
+    {
+      "from": "人类反馈",
+      "to": "改进技能",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体技能",
+      "to": "渐进式披露",
+      "rel": "启用"
+    },
+    {
+      "from": "验证框架",
+      "to": "自我改进循环",
+      "rel": "衡量"
+    },
+    {
+      "from": "人在回路",
+      "to": "自我改进循环",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md"
+}

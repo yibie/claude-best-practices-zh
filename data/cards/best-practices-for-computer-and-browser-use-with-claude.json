@@ -1,0 +1,102 @@
+{
+  "summary_zh": "本文分享使用Claude进行计算机和浏览器操作的最佳实践，涵盖截图缩放、坐标映射、模型选择与思考努力调优。",
+  "concepts": [
+    {
+      "en": "Computer Use API",
+      "zh": "计算机使用API",
+      "def_zh": "Claude提供的让模型通过截图和点击坐标操作图形界面的接口。",
+      "kind": "product"
+    },
+    {
+      "en": "click accuracy",
+      "zh": "点击准确率",
+      "def_zh": "模型预测的点击坐标与实际目标位置一致的程度。",
+      "kind": "metric"
+    },
+    {
+      "en": "screenshot downscaling",
+      "zh": "截图降采样",
+      "def_zh": "在发送截图前将其缩放至API限制内，避免模型看到降质图像。",
+      "kind": "technique"
+    },
+    {
+      "en": "coordinate scaling",
+      "zh": "坐标缩放",
+      "def_zh": "将模型返回的显示坐标按比例映射回实际屏幕分辨率。",
+      "kind": "technique"
+    },
+    {
+      "en": "adaptive thinking",
+      "zh": "自适应思考",
+      "def_zh": "让模型根据任务复杂度动态决定推理深度和token预算的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "thinking effort",
+      "zh": "思考努力",
+      "def_zh": "控制模型在行动前进行推理的深度等级，如低、中、高。",
+      "kind": "metric"
+    },
+    {
+      "en": "zoom capability",
+      "zh": "缩放能力",
+      "def_zh": "允许模型在点击前放大查看屏幕特定区域以提升小目标精度。",
+      "kind": "technique"
+    },
+    {
+      "en": "orchestrator + sub-agent pattern",
+      "zh": "编排器-子代理模式",
+      "def_zh": "由推理模型规划、执行模型负责机械点击的分工架构。",
+      "kind": "technique"
+    },
+    {
+      "en": "OSWorld Verified benchmark",
+      "zh": "OSWorld验证基准",
+      "def_zh": "评估模型在桌面和浏览器端到端UI自动化任务表现的基准。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "截图降采样",
+      "to": "点击准确率",
+      "rel": "解决"
+    },
+    {
+      "from": "坐标缩放",
+      "to": "点击准确率",
+      "rel": "解决"
+    },
+    {
+      "from": "缩放能力",
+      "to": "点击准确率",
+      "rel": "解决"
+    },
+    {
+      "from": "自适应思考",
+      "to": "思考努力",
+      "rel": "启用"
+    },
+    {
+      "from": "思考努力",
+      "to": "点击准确率",
+      "rel": "衡量"
+    },
+    {
+      "from": "编排器-子代理模式",
+      "to": "点击准确率",
+      "rel": "解决"
+    },
+    {
+      "from": "OSWorld验证基准",
+      "to": "点击准确率",
+      "rel": "衡量"
+    },
+    {
+      "from": "计算机使用API",
+      "to": "截图降采样",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/best-practices-for-computer-and-browser-use-with-claude.md"
+}

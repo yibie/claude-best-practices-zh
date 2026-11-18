@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Cursor 通过自建 CursorBench 评估前沿模型，发现 Claude Fable 5 具备全局推理能力，能解决最难的 1% 工程问题。",
+  "concepts": [
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "Anthropic 的前沿编码模型，擅长全局推理与长时任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Cursor",
+      "zh": "Cursor",
+      "def_zh": "支持多模型的前沿 AI 编码代理平台。",
+      "kind": "product"
+    },
+    {
+      "en": "CursorBench",
+      "zh": "CursorBench",
+      "def_zh": "Cursor 自建的内部基准，模拟真实开发者模糊任务。",
+      "kind": "metric"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "代理式编码",
+      "def_zh": "AI 代理自主完成编码、调试与验证任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "global reasoning",
+      "zh": "全局推理",
+      "def_zh": "模型从整体任务目标出发规划多步行动的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "local reasoning",
+      "zh": "局部推理",
+      "def_zh": "模型仅关注当前步骤或即时上下文的推理方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "eval",
+      "zh": "模型评估",
+      "def_zh": "系统化测试模型在特定任务上表现的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "token efficiency",
+      "zh": "令牌效率",
+      "def_zh": "模型以更少 token 完成同等工作的能力。",
+      "kind": "metric"
+    },
+    {
+      "en": "time to solution",
+      "zh": "求解时间",
+      "def_zh": "从问题提出到获得有效解决方案的耗时。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cursor",
+      "to": "CursorBench",
+      "rel": "依赖"
+    },
+    {
+      "from": "CursorBench",
+      "to": "模型评估",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "全局推理",
+      "rel": "启用"
+    },
+    {
+      "from": "全局推理",
+      "to": "代理式编码",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "令牌效率",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "求解时间",
+      "rel": "衡量"
+    },
+    {
+      "from": "全局推理",
+      "to": "局部推理",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-cursor.md"
+}

@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Kepler 用 Claude 做推理层、确定性基础设施做验证层，构建可审计的金融 AI 研究平台。",
+  "concepts": [
+    {
+      "en": "verifiable AI",
+      "zh": "可验证 AI",
+      "def_zh": "输出可追溯至源文档并逐项核验的 AI 系统",
+      "kind": "technique"
+    },
+    {
+      "en": "deterministic infrastructure",
+      "zh": "确定性基础设施",
+      "def_zh": "保证计算与数据操作可复现、可审计的系统层",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "围绕模型调用设计结构化知识与边界的系统工程",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-stage pipeline",
+      "zh": "多阶段流水线",
+      "def_zh": "将复杂任务拆为多阶段并分配合适模型的架构",
+      "kind": "technique"
+    },
+    {
+      "en": "provenance",
+      "zh": "溯源",
+      "def_zh": "每个数字可回溯到源文件具体行项的追踪能力",
+      "kind": "technique"
+    },
+    {
+      "en": "automated evaluation",
+      "zh": "自动化评估",
+      "def_zh": "用已知正确答案批量测试模型各阶段输出的流程",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供的模型调用与构建 AI 应用的平台",
+      "kind": "product"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "针对常见工作流封装的可复用、幂等执行单元",
+      "kind": "technique"
+    },
+    {
+      "en": "audit logging",
+      "zh": "审计日志",
+      "def_zh": "完整记录系统操作以供合规审查的日志机制",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "可验证 AI",
+      "to": "确定性基础设施",
+      "rel": "依赖"
+    },
+    {
+      "from": "可验证 AI",
+      "to": "溯源",
+      "rel": "依赖"
+    },
+    {
+      "from": "上下文工程",
+      "to": "多阶段流水线",
+      "rel": "用于"
+    },
+    {
+      "from": "自动化评估",
+      "to": "多阶段流水线",
+      "rel": "衡量"
+    },
+    {
+      "from": "技能",
+      "to": "多阶段流水线",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "可验证 AI",
+      "rel": "用于"
+    },
+    {
+      "from": "审计日志",
+      "to": "可验证 AI",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md"
+}

@@ -1,0 +1,102 @@
+{
+  "summary_zh": "智能体编程让AI自主执行完整开发任务，显著加速交付、降低门槛并提升代码质量。",
+  "concepts": [
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "AI智能体自主执行完整开发任务而非仅建议代码片段。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic推出的终端/IDE内智能体编程工具。",
+      "kind": "product"
+    },
+    {
+      "en": "AI-assisted coding",
+      "zh": "AI辅助编程",
+      "def_zh": "传统AI工具提供补全与问答，需人工集成。",
+      "kind": "technique"
+    },
+    {
+      "en": "autonomous execution",
+      "zh": "自主执行",
+      "def_zh": "智能体独立规划、实施并验证开发任务的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "developer onboarding",
+      "zh": "开发者上手",
+      "def_zh": "新成员熟悉代码库并贡献的周期与过程。",
+      "kind": "metric"
+    },
+    {
+      "en": "code quality",
+      "zh": "代码质量",
+      "def_zh": "代码在正确性、可维护性与安全性上的综合水平。",
+      "kind": "metric"
+    },
+    {
+      "en": "technical debt",
+      "zh": "技术债务",
+      "def_zh": "为短期交付而积累的长期维护成本。",
+      "kind": "risk"
+    },
+    {
+      "en": "multi-file operations",
+      "zh": "多文件操作",
+      "def_zh": "跨多个文件协调修改并保持一致的开发操作。",
+      "kind": "technique"
+    },
+    {
+      "en": "democratized development",
+      "zh": "开发民主化",
+      "def_zh": "降低专业门槛，使非专家也能完成复杂开发任务。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体编程",
+      "to": "AI辅助编程",
+      "rel": "替代"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体编程",
+      "to": "自主执行",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体编程",
+      "to": "多文件操作",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体编程",
+      "to": "开发者上手",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体编程",
+      "to": "代码质量",
+      "rel": "衡量"
+    },
+    {
+      "from": "智能体编程",
+      "to": "技术债务",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体编程",
+      "to": "开发民主化",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/key-benefits-transitioning-agentic-coding.md"
+}

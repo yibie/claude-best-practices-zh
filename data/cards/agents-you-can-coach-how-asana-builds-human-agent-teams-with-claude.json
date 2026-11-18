@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Asana 将 AI 智能体作为团队成员，赋予角色、共享记忆与可见工作流，由 Claude 驱动。",
+  "concepts": [
+    {
+      "en": "AI teammate",
+      "zh": "AI 队友",
+      "def_zh": "以角色化身份加入团队、可被训练和审计的 AI 智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "Work Graph",
+      "zh": "工作图谱",
+      "def_zh": "将任务、项目、目标与对话映射为关系网络的结构化模型。",
+      "kind": "technique"
+    },
+    {
+      "en": "shared memory",
+      "zh": "共享记忆",
+      "def_zh": "智能体保留历史指令与反馈，供多人复用以加速任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "role-based agent",
+      "zh": "角色化智能体",
+      "def_zh": "围绕特定工作类型构建、预置技能与集成的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "access control",
+      "zh": "访问控制",
+      "def_zh": "限定智能体可读写的项目、文档与应用及可执行动作。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent training",
+      "zh": "智能体训练",
+      "def_zh": "由管理员或编辑者将反馈写入永久记忆以塑造智能体行为。",
+      "kind": "technique"
+    },
+    {
+      "en": "work visibility",
+      "zh": "工作可见性",
+      "def_zh": "智能体的计划、步骤与产出在共享任务中对所有人透明。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP server",
+      "zh": "MCP 服务器",
+      "def_zh": "让 Claude 等助手读取外部系统数据的连接协议服务。",
+      "kind": "product"
+    },
+    {
+      "en": "human-agent team",
+      "zh": "人机团队",
+      "def_zh": "人类与 AI 智能体在同一平台协作、共担角色的工作团队。",
+      "kind": "org"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI 队友",
+      "to": "共享记忆",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI 队友",
+      "to": "角色化智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "角色化智能体",
+      "to": "访问控制",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体训练",
+      "to": "共享记忆",
+      "rel": "用于"
+    },
+    {
+      "from": "工作可见性",
+      "to": "人机团队",
+      "rel": "用于"
+    },
+    {
+      "from": "工作图谱",
+      "to": "AI 队友",
+      "rel": "启用"
+    },
+    {
+      "from": "MCP 服务器",
+      "to": "工作图谱",
+      "rel": "用于"
+    },
+    {
+      "from": "访问控制",
+      "to": "共享记忆",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md"
+}

@@ -1,0 +1,102 @@
+{
+  "summary_zh": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，按 token 计费。",
+      "kind": "product"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用相同请求前缀的服务器状态，降低重复计算成本。",
+      "kind": "technique"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次请求可处理的最大 token 范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "token efficiency",
+      "zh": "token 效率",
+      "def_zh": "让 token 用于实际任务而非无关上下文的能力。",
+      "kind": "metric"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "拥有独立上下文窗口、只回传结果的代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "控制模型每轮思考 token 量的设置。",
+      "kind": "technique"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md",
+      "def_zh": "会话启动时加载的项目指令文件。",
+      "kind": "product"
+    },
+    {
+      "en": "context compaction",
+      "zh": "上下文压缩",
+      "def_zh": "将长对话替换为摘要以缩短上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "为模型提供工具定义的模型上下文协议。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "提示缓存",
+      "to": "token 效率",
+      "rel": "衡量"
+    },
+    {
+      "from": "上下文窗口",
+      "to": "token 效率",
+      "rel": "衡量"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "努力等级",
+      "to": "提示缓存",
+      "rel": "依赖"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "rel": "解决"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "上下文窗口",
+      "rel": "属于"
+    },
+    {
+      "from": "MCP",
+      "to": "上下文窗口",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "提示缓存",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md"
+}

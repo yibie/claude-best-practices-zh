@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 围绕提示缓存构建，通过前缀匹配、消息更新、工具延迟加载和缓存安全分叉优化缓存命中率。",
+  "concepts": [
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用请求前缀计算结果的机制，降低延迟与成本。",
+      "kind": "technique"
+    },
+    {
+      "en": "prefix matching",
+      "zh": "前缀匹配",
+      "def_zh": "缓存按请求开头逐字节匹配，前缀变化使后续缓存失效。",
+      "kind": "technique"
+    },
+    {
+      "en": "cache hit rate",
+      "zh": "缓存命中率",
+      "def_zh": "请求中命中缓存部分的比例，直接影响成本与延迟。",
+      "kind": "metric"
+    },
+    {
+      "en": "static-first prompt layout",
+      "zh": "静态优先提示布局",
+      "def_zh": "将稳定内容放前、动态内容放后的提示组织方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "system-reminder",
+      "zh": "系统提醒",
+      "def_zh": "在消息中插入更新信息以保持缓存稳定的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Plan Mode",
+      "zh": "计划模式",
+      "def_zh": "通过工具切换而非改工具集实现只读探索的模式。",
+      "kind": "product"
+    },
+    {
+      "en": "defer_loading",
+      "zh": "延迟加载",
+      "def_zh": "仅发送工具轻量存根，按需加载完整工具定义。",
+      "kind": "technique"
+    },
+    {
+      "en": "compaction",
+      "zh": "压缩",
+      "def_zh": "上下文窗口满时摘要对话并继续新会话的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "cache-safe forking",
+      "zh": "缓存安全分叉",
+      "def_zh": "复用父会话相同前缀执行摘要等侧计算以命中缓存。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "由主代理派生、可独立调用其他模型的代理实例。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "提示缓存",
+      "to": "前缀匹配",
+      "rel": "依赖"
+    },
+    {
+      "from": "静态优先提示布局",
+      "to": "提示缓存",
+      "rel": "用于"
+    },
+    {
+      "from": "系统提醒",
+      "to": "提示缓存",
+      "rel": "用于"
+    },
+    {
+      "from": "计划模式",
+      "to": "提示缓存",
+      "rel": "依赖"
+    },
+    {
+      "from": "延迟加载",
+      "to": "提示缓存",
+      "rel": "用于"
+    },
+    {
+      "from": "压缩",
+      "to": "缓存安全分叉",
+      "rel": "依赖"
+    },
+    {
+      "from": "缓存安全分叉",
+      "to": "提示缓存",
+      "rel": "用于"
+    },
+    {
+      "from": "缓存命中率",
+      "to": "提示缓存",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic营销运营团队用Claude Cowork自动化周报生成与活动搭建，将数天手工工作压缩至数小时。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "Anthropic推出的自动化工作流产品，可连接多平台并执行任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Skill",
+      "zh": "技能",
+      "def_zh": "封装特定任务指令与逻辑的可复用模块，供Claude执行。",
+      "kind": "technique"
+    },
+    {
+      "en": "Connector",
+      "zh": "连接器",
+      "def_zh": "连接外部平台与工具的接口，使Claude能读写数据。",
+      "kind": "technique"
+    },
+    {
+      "en": "Scheduled Task",
+      "zh": "定时任务",
+      "def_zh": "按预设时间自动触发的工作流，无需人工干预。",
+      "kind": "technique"
+    },
+    {
+      "en": "Dispatcher Skill",
+      "zh": "调度技能",
+      "def_zh": "读取请求渠道并路由到相应专家技能的分发模块。",
+      "kind": "technique"
+    },
+    {
+      "en": "Audit Agent",
+      "zh": "审计代理",
+      "def_zh": "独立无上下文运行的代理，验证任务输出是否正确。",
+      "kind": "technique"
+    },
+    {
+      "en": "Human Validation",
+      "zh": "人工验证",
+      "def_zh": "在自动化流程中由人复核关键结果，确保准确性。",
+      "kind": "technique"
+    },
+    {
+      "en": "Marketing Operations",
+      "zh": "营销运营",
+      "def_zh": "负责营销系统、数据与流程协调的职能团队。",
+      "kind": "role"
+    },
+    {
+      "en": "Campaign Build",
+      "zh": "活动搭建",
+      "def_zh": "在CRM、营销自动化等平台配置活动基础设施的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Weekly Metrics Report",
+      "zh": "周度指标报告",
+      "def_zh": "汇总关键营销指标并附分析叙述的定期报告。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "定时任务",
+      "rel": "启用"
+    },
+    {
+      "from": "调度技能",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "审计代理",
+      "to": "人工验证",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "周度指标报告",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "活动搭建",
+      "rel": "用于"
+    },
+    {
+      "from": "营销运营",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md"
+}

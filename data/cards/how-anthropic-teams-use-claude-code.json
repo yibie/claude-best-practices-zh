@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编码工具，可自主读写代码并执行开发任务。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编码",
+      "def_zh": "由 AI 智能体自主规划并执行编码任务的工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "codebase navigation",
+      "zh": "代码库导航",
+      "def_zh": "快速理解陌生代码库结构与依赖关系的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "test-driven development",
+      "zh": "测试驱动开发",
+      "def_zh": "先写测试再实现代码、以测试引导设计的开发方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "code review",
+      "zh": "代码审查",
+      "def_zh": "对代码变更进行检查以发现缺陷与改进点的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "debugging",
+      "zh": "调试",
+      "def_zh": "定位并修复软件缺陷与生产问题的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "rapid prototyping",
+      "zh": "快速原型",
+      "def_zh": "以最短时间构建可验证想法的最小可用版本。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，让 AI 连接外部数据源与工具的开放标准。",
+      "kind": "product"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md",
+      "def_zh": "存放项目上下文与指令、供 Claude Code 读取的配置文件。",
+      "kind": "product"
+    },
+    {
+      "en": "sub-agent",
+      "zh": "子智能体",
+      "def_zh": "在主智能体编排下负责特定子任务的独立智能体。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编码",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体编码",
+      "to": "代码库导航",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体编码",
+      "to": "调试",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体编码",
+      "to": "测试驱动开发",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体编码",
+      "to": "快速原型",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE.md",
+      "rel": "依赖"
+    },
+    {
+      "from": "子智能体",
+      "to": "智能体编码",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-anthropic-teams-use-claude-code.md"
+}

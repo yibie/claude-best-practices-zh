@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+  "concepts": [
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "Anthropic 最强通用模型，擅长长时间复杂异步任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向知识工作的智能体系统，可交付完整成果。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "封装团队可重复流程、供模型调用的能力单元。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context",
+      "zh": "上下文",
+      "def_zh": "模型工作所依据的提示、文件与已连接工具信息。",
+      "kind": "technique"
+    },
+    {
+      "en": "Subagent",
+      "zh": "子代理",
+      "def_zh": "并行处理大任务某一部分并回报的独立模型实例。",
+      "kind": "technique"
+    },
+    {
+      "en": "Effort Setting",
+      "zh": "努力度设置",
+      "def_zh": "调节模型规划与检查投入程度的参数。",
+      "kind": "technique"
+    },
+    {
+      "en": "Delegation",
+      "zh": "任务委派",
+      "def_zh": "将完整工作连同决策权交给模型自主完成。",
+      "kind": "technique"
+    },
+    {
+      "en": "Classifiers",
+      "zh": "分类器",
+      "def_zh": "检测网络安全与生化领域潜在滥用的独立 AI 系统。",
+      "kind": "risk"
+    },
+    {
+      "en": "Connectors",
+      "zh": "连接器",
+      "def_zh": "把外部工具与数据源接入模型的集成机制。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "Claude Fable 5",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "子代理",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "上下文",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "任务委派",
+      "to": "Claude Fable 5",
+      "rel": "用于"
+    },
+    {
+      "from": "努力度设置",
+      "to": "Claude Fable 5",
+      "rel": "用于"
+    },
+    {
+      "from": "分类器",
+      "to": "Claude Fable 5",
+      "rel": "风险"
+    },
+    {
+      "from": "连接器",
+      "to": "上下文",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md"
+}

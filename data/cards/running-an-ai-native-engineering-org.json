@@ -1,0 +1,108 @@
+{
+  "summary_zh": "AI 原生工程组织以智能体编码为默认，重构规划、上下文获取、代码审查与团队角色。",
+  "concepts": [
+    {
+      "en": "agentic coding",
+      "zh": "智能体编码",
+      "def_zh": "由 AI 智能体自动完成写码、测试与重构的默认工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "just-in-time planning",
+      "zh": "即时规划",
+      "def_zh": "按需在恰当时机做恰量规划，替代长周期路线图。",
+      "kind": "technique"
+    },
+    {
+      "en": "context gathering",
+      "zh": "上下文获取",
+      "def_zh": "通过询问 Claude 而非代码作者来获取决策与问题背景。",
+      "kind": "technique"
+    },
+    {
+      "en": "code review",
+      "zh": "代码审查",
+      "def_zh": "由 Claude 处理风格、缺陷与测试，人类聚焦专业判断。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编码产品，支持命令行与网页端。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向团队协作的 Claude 产品，与 Claude Code 配合使用。",
+      "kind": "product"
+    },
+    {
+      "en": "dogfooding",
+      "zh": "内部试用",
+      "def_zh": "团队全员日常使用自家产品以驱动改进。",
+      "kind": "technique"
+    },
+    {
+      "en": "PR cycle time",
+      "zh": "PR 周期时间",
+      "def_zh": "从提交到合并的时长，衡量流水线扩展瓶颈。",
+      "kind": "metric"
+    },
+    {
+      "en": "onboarding ramp time",
+      "zh": "入职上手时间",
+      "def_zh": "新成员达到有效产出所需的时间。",
+      "kind": "metric"
+    },
+    {
+      "en": "Claude-assisted commits",
+      "zh": "Claude 辅助提交",
+      "def_zh": "由 Claude 参与生成的代码提交占比。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体编码",
+      "to": "即时规划",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体编码",
+      "to": "上下文获取",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体编码",
+      "to": "代码审查",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编码",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "内部试用",
+      "rel": "用于"
+    },
+    {
+      "from": "PR 周期时间",
+      "to": "智能体编码",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude 辅助提交",
+      "to": "智能体编码",
+      "rel": "衡量"
+    },
+    {
+      "from": "入职上手时间",
+      "to": "内部试用",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/running-an-ai-native-engineering-org.md"
+}

@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+  "concepts": [
+    {
+      "en": "Claude Opus 5.5",
+      "zh": "Claude Opus 5.5",
+      "def_zh": "面向长时高上下文编码会话优化的 Claude 模型版本",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编码工具，支持长会话与工具调用",
+      "kind": "product"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "设计与管理模型输入上下文以提升效果和成本效率的实践",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用已处理上下文以降低重复输入成本的机制",
+      "kind": "technique"
+    },
+    {
+      "en": "cache hit rate",
+      "zh": "缓存命中率",
+      "def_zh": "请求中从缓存读取而非重新计算的上下文比例",
+      "kind": "metric"
+    },
+    {
+      "en": "token cost",
+      "zh": "令牌成本",
+      "def_zh": "按输入输出令牌计费的模型使用费用",
+      "kind": "metric"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编码",
+      "def_zh": "由 AI 智能体自主执行多步编码任务的工作方式",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "从父会话派生、可继承父级缓存的辅助智能体",
+      "kind": "technique"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次请求可处理的令牌总量上限",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Opus 5.5",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "提示缓存",
+      "to": "令牌成本",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文工程",
+      "to": "缓存命中率",
+      "rel": "衡量"
+    },
+    {
+      "from": "智能体编码",
+      "to": "上下文窗口",
+      "rel": "依赖"
+    },
+    {
+      "from": "子智能体",
+      "to": "提示缓存",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Opus 5.5",
+      "to": "令牌成本",
+      "rel": "解决"
+    },
+    {
+      "from": "缓存命中率",
+      "to": "令牌成本",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md"
+}

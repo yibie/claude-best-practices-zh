@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍Claude企业版与API的成本可见性与控制手段，强调按成果而非token衡量成本。",
+  "concepts": [
+    {
+      "en": "cost-per-outcome",
+      "zh": "成果成本",
+      "def_zh": "以完成任务的业务价值而非token消耗衡量AI成本的指标。",
+      "kind": "metric"
+    },
+    {
+      "en": "model routing",
+      "zh": "模型路由",
+      "def_zh": "按任务难度与推理需求匹配不同能力层级模型的做法。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort control",
+      "zh": "推理力度控制",
+      "def_zh": "调节模型在单次调用中投入推理量多少的参数。",
+      "kind": "technique"
+    },
+    {
+      "en": "advisor strategy",
+      "zh": "顾问策略",
+      "def_zh": "小模型在关键节点调用前沿模型获取判断的用法。",
+      "kind": "technique"
+    },
+    {
+      "en": "access gating",
+      "zh": "访问门控",
+      "def_zh": "按团队与自定义角色分批开放产品使用权限的管理手段。",
+      "kind": "technique"
+    },
+    {
+      "en": "hard spend cap",
+      "zh": "硬性支出上限",
+      "def_zh": "对组织、用户组或个人设定即时生效的用量费用天花板。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "缓存跨请求复用内容，避免模型重复处理以降低输入成本。",
+      "kind": "technique"
+    },
+    {
+      "en": "batch processing",
+      "zh": "批处理",
+      "def_zh": "将无需即时响应的任务以折扣价格异步执行。",
+      "kind": "technique"
+    },
+    {
+      "en": "usage analytics",
+      "zh": "用量分析",
+      "def_zh": "按人员、团队与模型拆分支出并与账单对账的观测功能。",
+      "kind": "product"
+    },
+    {
+      "en": "workspace",
+      "zh": "工作区",
+      "def_zh": "按产品、团队或环境隔离API用量并独立计费的组织单元。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型路由",
+      "to": "成果成本",
+      "rel": "解决"
+    },
+    {
+      "from": "推理力度控制",
+      "to": "成果成本",
+      "rel": "解决"
+    },
+    {
+      "from": "顾问策略",
+      "to": "模型路由",
+      "rel": "属于"
+    },
+    {
+      "from": "提示缓存",
+      "to": "成果成本",
+      "rel": "解决"
+    },
+    {
+      "from": "批处理",
+      "to": "成果成本",
+      "rel": "解决"
+    },
+    {
+      "from": "硬性支出上限",
+      "to": "用量分析",
+      "rel": "依赖"
+    },
+    {
+      "from": "访问门控",
+      "to": "硬性支出上限",
+      "rel": "启用"
+    },
+    {
+      "from": "用量分析",
+      "to": "成果成本",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md"
+}

@@ -1,0 +1,103 @@
+{
+  "summary_zh": "介绍 Claude Code 七种指令注入方式，按上下文成本与权威性权衡选择。",
+  "concepts": [
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 文件",
+      "def_zh": "项目根目录的 Markdown 文件，会话开始时加载并常驻上下文。",
+      "kind": "product"
+    },
+    {
+      "en": "Rules",
+      "zh": "规则",
+      "def_zh": "在会话开始或匹配文件时注入的硬性约束指令。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "按需加载的可复用流程性工作流，仅调用时载入全文。",
+      "kind": "product"
+    },
+    {
+      "en": "Subagents",
+      "zh": "子代理",
+      "def_zh": "在隔离上下文中执行任务并只返回摘要的委派单元。",
+      "kind": "product"
+    },
+    {
+      "en": "Hooks",
+      "zh": "钩子",
+      "def_zh": "在生命周期事件上触发的确定性自动化脚本。",
+      "kind": "technique"
+    },
+    {
+      "en": "Output styles",
+      "zh": "输出风格",
+      "def_zh": "会话开始时注入系统提示、改变角色定位的全局设置。",
+      "kind": "technique"
+    },
+    {
+      "en": "System prompt appending",
+      "zh": "系统提示追加",
+      "def_zh": "通过 CLI 参数在单次调用中追加系统提示内容。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context cost",
+      "zh": "上下文成本",
+      "def_zh": "指令占用上下文窗口的 token 开销。",
+      "kind": "metric"
+    },
+    {
+      "en": "Compaction",
+      "zh": "上下文压缩",
+      "def_zh": "长会话中压缩对话历史并重载关键指令的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Instruction authority",
+      "zh": "指令权威性",
+      "def_zh": "不同注入方式对 Claude 行为的约束强度。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "CLAUDE.md 文件",
+      "to": "上下文成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "技能",
+      "to": "上下文成本",
+      "rel": "解决"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文成本",
+      "rel": "解决"
+    },
+    {
+      "from": "钩子",
+      "to": "上下文压缩",
+      "rel": "解决"
+    },
+    {
+      "from": "规则",
+      "to": "CLAUDE.md 文件",
+      "rel": "替代"
+    },
+    {
+      "from": "输出风格",
+      "to": "指令权威性",
+      "rel": "衡量"
+    },
+    {
+      "from": "系统提示追加",
+      "to": "输出风格",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md"
+}

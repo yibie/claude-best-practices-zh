@@ -1,0 +1,102 @@
+{
+  "summary_zh": "面向营收团队，介绍在销售组织内推广 Claude 的成熟度模型、三阶段落地计划与 ROI 衡量框架。",
+  "concepts": [
+    {
+      "en": "AI-native revenue organization",
+      "zh": "AI 原生营收组织",
+      "def_zh": "把 AI 深度嵌入销售流程与系统、使团队整体受益的营收组织形态",
+      "kind": "org"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向企业团队协作与工作流落地的 Claude 产品",
+      "kind": "product"
+    },
+    {
+      "en": "maturity model",
+      "zh": "成熟度模型",
+      "def_zh": "评估组织当前 AI 应用水平并指明升级路径的分级框架",
+      "kind": "technique"
+    },
+    {
+      "en": "three-phase rollout",
+      "zh": "三阶段推广",
+      "def_zh": "按搭建、试点、规模化三步在组织内推广 AI 的方法",
+      "kind": "technique"
+    },
+    {
+      "en": "connectors",
+      "zh": "连接器",
+      "def_zh": "让 Claude 读写 CRM、邮件等外部系统的集成组件",
+      "kind": "technique"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "把顶尖员工的最佳实践固化为可复用的 Claude 任务能力",
+      "kind": "technique"
+    },
+    {
+      "en": "ROI measurement framework",
+      "zh": "ROI 衡量框架",
+      "def_zh": "从效率、扩展、新能力三方面评估 AI 投入回报的框架",
+      "kind": "metric"
+    },
+    {
+      "en": "spend visibility",
+      "zh": "支出可见性",
+      "def_zh": "管理层对 AI 使用量与成本的透明监控能力",
+      "kind": "metric"
+    },
+    {
+      "en": "rollout pitfalls",
+      "zh": "推广陷阱",
+      "def_zh": "导致组织级 AI 推广停滞的常见障碍",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI 原生营收组织",
+      "to": "Claude Cowork",
+      "rel": "依赖"
+    },
+    {
+      "from": "三阶段推广",
+      "to": "成熟度模型",
+      "rel": "依赖"
+    },
+    {
+      "from": "三阶段推广",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "连接器",
+      "to": "Claude Cowork",
+      "rel": "启用"
+    },
+    {
+      "from": "技能",
+      "to": "Claude Cowork",
+      "rel": "启用"
+    },
+    {
+      "from": "ROI 衡量框架",
+      "to": "AI 原生营收组织",
+      "rel": "衡量"
+    },
+    {
+      "from": "支出可见性",
+      "to": "ROI 衡量框架",
+      "rel": "属于"
+    },
+    {
+      "from": "推广陷阱",
+      "to": "三阶段推广",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/building-an-ai-native-revenue-organization.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍响应式布局的常见做法，以及用 Claude.ai 和 Claude Code 生成与重构响应式布局的方法。",
+  "concepts": [
+    {
+      "en": "responsive web layout",
+      "zh": "响应式网页布局",
+      "def_zh": "让页面在不同视口尺寸下自适应显示的布局方式",
+      "kind": "technique"
+    },
+    {
+      "en": "media query",
+      "zh": "媒体查询",
+      "def_zh": "按视口宽度等条件覆盖样式的 CSS 规则",
+      "kind": "technique"
+    },
+    {
+      "en": "breakpoint",
+      "zh": "断点",
+      "def_zh": "触发布局样式切换的特定视口宽度",
+      "kind": "technique"
+    },
+    {
+      "en": "flexbox",
+      "zh": "弹性盒布局",
+      "def_zh": "按主轴与交叉轴分配空间的一维 CSS 布局模型",
+      "kind": "technique"
+    },
+    {
+      "en": "CSS grid",
+      "zh": "网格布局",
+      "def_zh": "以行列网格组织元素位置的二维 CSS 布局模型",
+      "kind": "technique"
+    },
+    {
+      "en": "responsive utility framework",
+      "zh": "响应式工具类框架",
+      "def_zh": "用预定义类名封装断点样式的 CSS 框架",
+      "kind": "technique"
+    },
+    {
+      "en": "device testing",
+      "zh": "设备测试",
+      "def_zh": "在真实设备或模拟器上验证布局渲染效果",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude.ai",
+      "zh": "Claude.ai",
+      "def_zh": "浏览器端对话界面，可生成响应式 HTML/CSS 代码",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "命令行工具，可分析并重构代码库中的布局问题",
+      "kind": "product"
+    },
+    {
+      "en": "Playwright test suite",
+      "zh": "Playwright 测试套件",
+      "def_zh": "自动化验证多视口响应式行为的端到端测试",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "响应式网页布局",
+      "to": "媒体查询",
+      "rel": "依赖"
+    },
+    {
+      "from": "媒体查询",
+      "to": "断点",
+      "rel": "依赖"
+    },
+    {
+      "from": "响应式网页布局",
+      "to": "弹性盒布局",
+      "rel": "用于"
+    },
+    {
+      "from": "响应式网页布局",
+      "to": "网格布局",
+      "rel": "用于"
+    },
+    {
+      "from": "响应式工具类框架",
+      "to": "断点",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude.ai",
+      "to": "响应式网页布局",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "响应式网页布局",
+      "rel": "用于"
+    },
+    {
+      "from": "Playwright 测试套件",
+      "to": "设备测试",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/build-responsive-web-layouts.md"
+}

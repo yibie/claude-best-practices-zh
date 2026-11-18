@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Anthropic 数据团队将语义层、技能文件与评估套件复用到 Slack 中的 Claude Tag，实现自助式数据分析。",
+  "concepts": [
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "Claude 在 Slack 中提供问答的公开测试产品，是数据分析智能体的基础。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "面向数据科学家与工程师的智能体开发界面，用于构建分析能力。",
+      "kind": "product"
+    },
+    {
+      "en": "governed semantic layer",
+      "zh": "受治理语义层",
+      "def_zh": "统一管理指标与维度定义、确保分析口径一致的数据层。",
+      "kind": "technique"
+    },
+    {
+      "en": "skill files",
+      "zh": "技能文件",
+      "def_zh": "编码分析约定与规范、供智能体复用的指令文件。",
+      "kind": "technique"
+    },
+    {
+      "en": "evaluation suite",
+      "zh": "评估套件",
+      "def_zh": "用于量化智能体回答准确率与性能的测试集合。",
+      "kind": "technique"
+    },
+    {
+      "en": "data analytics agent",
+      "zh": "数据分析智能体",
+      "def_zh": "自动回答数据问题并生成分析结论的 AI 智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "self-service data analytics",
+      "zh": "自助式数据分析",
+      "def_zh": "非分析师用户无需数据团队介入即可自行获取数据答案。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic accuracy",
+      "zh": "智能体准确率",
+      "def_zh": "智能体回答正确、符合分析口径的比例指标。",
+      "kind": "metric"
+    },
+    {
+      "en": "observability",
+      "zh": "可观测性",
+      "def_zh": "对智能体运行过程与输出进行监控和追踪的能力。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "数据分析智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "数据分析智能体",
+      "to": "受治理语义层",
+      "rel": "依赖"
+    },
+    {
+      "from": "数据分析智能体",
+      "to": "技能文件",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估套件",
+      "to": "智能体准确率",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Code",
+      "to": "受治理语义层",
+      "rel": "启用"
+    },
+    {
+      "from": "自助式数据分析",
+      "to": "数据分析智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "可观测性",
+      "to": "数据分析智能体",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+  "concepts": [
+    {
+      "en": "auto mode",
+      "zh": "自动模式",
+      "def_zh": "由分类器评估并拦截危险命令的默认权限模式",
+      "kind": "product"
+    },
+    {
+      "en": "classifier",
+      "zh": "分类器",
+      "def_zh": "自动判断代理动作是否具有潜在危害的模型组件",
+      "kind": "technique"
+    },
+    {
+      "en": "permission fatigue",
+      "zh": "权限疲劳",
+      "def_zh": "频繁人工审批命令导致效率下降与注意力耗竭",
+      "kind": "risk"
+    },
+    {
+      "en": "prompt injection",
+      "zh": "提示注入",
+      "def_zh": "恶意输入诱导代理执行非预期操作的攻击方式",
+      "kind": "risk"
+    },
+    {
+      "en": "scope drift",
+      "zh": "范围漂移",
+      "def_zh": "代理行为逐渐偏离用户原始意图的现象",
+      "kind": "risk"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "可复用的标准化代理能力模块，用于约束与编排任务",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "连接代理与外部工具及数据源的开放协议",
+      "kind": "product"
+    },
+    {
+      "en": "guardrails",
+      "zh": "护栏",
+      "def_zh": "在分类器判断前限制代理可执行动作的预设规则",
+      "kind": "technique"
+    },
+    {
+      "en": "defense-in-depth",
+      "zh": "纵深防御",
+      "def_zh": "多层安全控制叠加以降低单点失效风险",
+      "kind": "technique"
+    },
+    {
+      "en": "long-running agent",
+      "zh": "长时运行代理",
+      "def_zh": "可无人值守持续迭代数小时的任务型代理",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "自动模式",
+      "to": "分类器",
+      "rel": "依赖"
+    },
+    {
+      "from": "自动模式",
+      "to": "权限疲劳",
+      "rel": "解决"
+    },
+    {
+      "from": "自动模式",
+      "to": "提示注入",
+      "rel": "解决"
+    },
+    {
+      "from": "自动模式",
+      "to": "范围漂移",
+      "rel": "解决"
+    },
+    {
+      "from": "分类器",
+      "to": "护栏",
+      "rel": "依赖"
+    },
+    {
+      "from": "长时运行代理",
+      "to": "自动模式",
+      "rel": "依赖"
+    },
+    {
+      "from": "纵深防御",
+      "to": "护栏",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "长时运行代理",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/auto-mode-in-production.md"
+}

@@ -1,0 +1,102 @@
+{
+  "summary_zh": "面向生命科学企业的前沿AI部署指南，涵盖治理、合规与可扩展试点。",
+  "concepts": [
+    {
+      "en": "Frontier AI",
+      "zh": "前沿AI",
+      "def_zh": "能力处于当前最先进水平的人工智能模型。",
+      "kind": "technique"
+    },
+    {
+      "en": "Life Sciences AI Transformation",
+      "zh": "生命科学AI转型",
+      "def_zh": "在生命科学组织中规模化引入AI以重塑工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Regulated Science",
+      "zh": "受监管科学",
+      "def_zh": "受严格法规约束的科研与临床活动领域。",
+      "kind": "org"
+    },
+    {
+      "en": "AI Governance",
+      "zh": "AI治理",
+      "def_zh": "对AI使用进行政策、监督与责任分配的制度安排。",
+      "kind": "technique"
+    },
+    {
+      "en": "Compliance",
+      "zh": "合规",
+      "def_zh": "使AI应用满足行业法规与监管要求。",
+      "kind": "risk"
+    },
+    {
+      "en": "Scalable Pilots",
+      "zh": "可扩展试点",
+      "def_zh": "设计为可复制推广到全组织的AI试点项目。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Enterprise",
+      "zh": "Claude企业版",
+      "def_zh": "面向企业部署的Claude产品版本。",
+      "kind": "product"
+    },
+    {
+      "en": "Regulatory Teams",
+      "zh": "监管团队",
+      "def_zh": "负责法规事务与合规审查的组织角色。",
+      "kind": "role"
+    },
+    {
+      "en": "Scientists",
+      "zh": "科研人员",
+      "def_zh": "在生命科学组织中从事研究与实验的专业角色。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "生命科学AI转型",
+      "to": "前沿AI",
+      "rel": "依赖"
+    },
+    {
+      "from": "生命科学AI转型",
+      "to": "AI治理",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI治理",
+      "to": "合规",
+      "rel": "解决"
+    },
+    {
+      "from": "可扩展试点",
+      "to": "生命科学AI转型",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude企业版",
+      "to": "前沿AI",
+      "rel": "属于"
+    },
+    {
+      "from": "科研人员",
+      "to": "前沿AI",
+      "rel": "用于"
+    },
+    {
+      "from": "监管团队",
+      "to": "合规",
+      "rel": "依赖"
+    },
+    {
+      "from": "受监管科学",
+      "to": "合规",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "guides/the-enterprise-ai-transformation-guide-for-life-sciences.md"
+}

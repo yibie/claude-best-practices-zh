@@ -1,0 +1,102 @@
+{
+  "summary_zh": "AI 原生创业手册：用 AI 压缩从想法到规模化的四阶段路径。",
+  "concepts": [
+    {
+      "en": "AI-Native Startup",
+      "zh": "AI 原生创业",
+      "def_zh": "以 AI 为核心构建技术与组织的创业模式",
+      "kind": "org"
+    },
+    {
+      "en": "Idea Stage",
+      "zh": "想法阶段",
+      "def_zh": "创业初期验证问题与机会的阶段",
+      "kind": "technique"
+    },
+    {
+      "en": "MVP Stage",
+      "zh": "最小可行产品阶段",
+      "def_zh": "快速构建可验证产品原型的阶段",
+      "kind": "technique"
+    },
+    {
+      "en": "Launch Stage",
+      "zh": "发布阶段",
+      "def_zh": "将产品推向市场并获取早期用户的阶段",
+      "kind": "technique"
+    },
+    {
+      "en": "Scale Stage",
+      "zh": "规模化阶段",
+      "def_zh": "扩大用户与组织规模的成长阶段",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程代理产品",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供模型与 API 的平台",
+      "kind": "product"
+    },
+    {
+      "en": "Lean Startup",
+      "zh": "精益创业",
+      "def_zh": "以最小成本快速验证假设的创业方法论",
+      "kind": "technique"
+    },
+    {
+      "en": "Timeline Compression",
+      "zh": "周期压缩",
+      "def_zh": "借助 AI 缩短各阶段所需时间的效应",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI 原生创业",
+      "to": "想法阶段",
+      "rel": "属于"
+    },
+    {
+      "from": "AI 原生创业",
+      "to": "最小可行产品阶段",
+      "rel": "属于"
+    },
+    {
+      "from": "AI 原生创业",
+      "to": "发布阶段",
+      "rel": "属于"
+    },
+    {
+      "from": "AI 原生创业",
+      "to": "规模化阶段",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "最小可行产品阶段",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "规模化阶段",
+      "rel": "用于"
+    },
+    {
+      "from": "周期压缩",
+      "to": "AI 原生创业",
+      "rel": "衡量"
+    },
+    {
+      "from": "AI 原生创业",
+      "to": "精益创业",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "guides/the-founders-playbook-building-an-ai-native-startup.md"
+}

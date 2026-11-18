@@ -1,0 +1,86 @@
+{
+  "summary_zh": "Claude Code 创作者分享其起源、开发挑战、现场演示及融入现有工作流的最佳实践。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 推出的首个 AI 编程智能体产品。",
+      "kind": "product"
+    },
+    {
+      "en": "AI agent",
+      "zh": "AI 智能体",
+      "def_zh": "能自主感知环境并采取行动完成任务的 AI 系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "best practices",
+      "zh": "最佳实践",
+      "def_zh": "经实践验证的高效使用与集成方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "existing workflows",
+      "zh": "现有工作流",
+      "def_zh": "团队当前已使用的开发流程与工具链。",
+      "kind": "technique"
+    },
+    {
+      "en": "real codebases",
+      "zh": "真实代码库",
+      "def_zh": "实际生产环境中使用的完整代码仓库。",
+      "kind": "technique"
+    },
+    {
+      "en": "live demos",
+      "zh": "现场演示",
+      "def_zh": "实时展示产品功能与操作流程的演示。",
+      "kind": "technique"
+    },
+    {
+      "en": "development journey",
+      "zh": "开发历程",
+      "def_zh": "产品从构思到发布所经历的过程与挑战。",
+      "kind": "technique"
+    },
+    {
+      "en": "technical session",
+      "zh": "技术研讨会",
+      "def_zh": "面向技术人员的深度分享与交流活动。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "AI 智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "最佳实践",
+      "to": "现有工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "最佳实践",
+      "to": "真实代码库",
+      "rel": "用于"
+    },
+    {
+      "from": "现场演示",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "开发历程",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "技术研讨会",
+      "to": "最佳实践",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/claude-code-live.md"
+}

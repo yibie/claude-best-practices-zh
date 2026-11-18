@@ -1,0 +1,97 @@
+{
+  "summary_zh": "介绍金融机构如何用Claude产品矩阵压缩耗时工作，并提供三阶段采用指南。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向跨文件与应用的项目级协作产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "面向量化与工程团队的代码智能体产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "用于构建和部署自定义应用与智能体的平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude 托管智能体",
+      "def_zh": "可托管部署的自定义智能体服务。",
+      "kind": "product"
+    },
+    {
+      "en": "finance agent reference architecture",
+      "zh": "金融智能体参考架构",
+      "def_zh": "预置的金融场景智能体模板与架构。",
+      "kind": "technique"
+    },
+    {
+      "en": "adoption playbook",
+      "zh": "采用路线图",
+      "def_zh": "分阶段落地AI能力的实施方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "KYC screening",
+      "zh": "KYC 筛查",
+      "def_zh": "客户身份尽职调查与合规筛查流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "month-end close",
+      "zh": "月末结账",
+      "def_zh": "财务周期末的账务核对与结算流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "general ledger reconciliation",
+      "zh": "总账对账",
+      "def_zh": "核对总账与明细账一致性的财务流程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "采用路线图",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "采用路线图",
+      "rel": "用于"
+    },
+    {
+      "from": "金融智能体参考架构",
+      "to": "Claude 托管智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "金融智能体参考架构",
+      "to": "KYC 筛查",
+      "rel": "用于"
+    },
+    {
+      "from": "金融智能体参考架构",
+      "to": "月末结账",
+      "rel": "用于"
+    },
+    {
+      "from": "金融智能体参考架构",
+      "to": "总账对账",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "Claude 托管智能体",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/deploying-claude-across-financial-services.md"
+}

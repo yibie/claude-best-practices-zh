@@ -1,0 +1,97 @@
+{
+  "summary_zh": "将零信任安全框架应用于企业自主AI智能体的部署与防御。",
+  "concepts": [
+    {
+      "en": "Zero Trust",
+      "zh": "零信任",
+      "def_zh": "不默认信任任何主体、持续验证的安全架构原则。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI Agents",
+      "zh": "AI智能体",
+      "def_zh": "可自主规划并执行任务的AI系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Deployment",
+      "zh": "智能体部署",
+      "def_zh": "在企业环境中上线并运行AI智能体的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Threat Vectors",
+      "zh": "威胁向量",
+      "def_zh": "攻击者入侵或滥用系统的路径与方式。",
+      "kind": "risk"
+    },
+    {
+      "en": "Tiered Security Controls",
+      "zh": "分级安全控制",
+      "def_zh": "按风险等级分层配置的安全措施集合。",
+      "kind": "technique"
+    },
+    {
+      "en": "Defensive Operations",
+      "zh": "防御运营",
+      "def_zh": "持续监测、检测与响应威胁的安全运维活动。",
+      "kind": "technique"
+    },
+    {
+      "en": "Secure Foundation",
+      "zh": "安全基础能力",
+      "def_zh": "支撑智能体安全运行的身份、权限与隔离底座。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic推出的智能体式编程工具。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "连接AI与外部工具和数据源的开放协议。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "零信任",
+      "to": "AI智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体部署",
+      "to": "零信任",
+      "rel": "依赖"
+    },
+    {
+      "from": "分级安全控制",
+      "to": "威胁向量",
+      "rel": "解决"
+    },
+    {
+      "from": "防御运营",
+      "to": "威胁向量",
+      "rel": "解决"
+    },
+    {
+      "from": "安全基础能力",
+      "to": "智能体部署",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "AI智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "MCP",
+      "to": "AI智能体",
+      "rel": "用于"
+    }
+  ],
+  "rel": "guides/zero-trust-for-ai-agents.md"
+}

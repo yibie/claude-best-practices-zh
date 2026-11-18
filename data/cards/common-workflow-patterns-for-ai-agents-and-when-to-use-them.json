@@ -1,0 +1,113 @@
+{
+  "summary_zh": "介绍AI智能体的三种常见工作流模式：顺序、并行和评估-优化器，及其适用场景与权衡。",
+  "concepts": [
+    {
+      "en": "AI agent",
+      "zh": "AI智能体",
+      "def_zh": "能自主决策并使用工具完成任务的智能系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent workflow",
+      "zh": "智能体工作流",
+      "def_zh": "为智能体自主性提供结构化执行流程的模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "sequential workflow",
+      "zh": "顺序工作流",
+      "def_zh": "按预定顺序执行任务，每步依赖前一步输出。",
+      "kind": "technique"
+    },
+    {
+      "en": "parallel workflow",
+      "zh": "并行工作流",
+      "def_zh": "将独立任务分发给多个智能体同时执行并聚合结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "evaluator-optimizer workflow",
+      "zh": "评估-优化器工作流",
+      "def_zh": "生成器与评估器迭代循环，直到输出达到质量阈值。",
+      "kind": "technique"
+    },
+    {
+      "en": "fan-out/fan-in",
+      "zh": "扇出/扇入",
+      "def_zh": "分布式系统中分发任务到多个节点再聚合结果的模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "aggregation strategy",
+      "zh": "聚合策略",
+      "def_zh": "合并多个智能体输出以解决冲突或综合结果的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "quality threshold",
+      "zh": "质量阈值",
+      "def_zh": "评估-优化器工作流中判断输出是否达标的量化标准。",
+      "kind": "metric"
+    },
+    {
+      "en": "latency",
+      "zh": "延迟",
+      "def_zh": "任务从开始到完成所需的时间，影响工作流选择。",
+      "kind": "metric"
+    },
+    {
+      "en": "token usage",
+      "zh": "令牌用量",
+      "def_zh": "智能体调用大模型消耗的令牌数量，影响成本。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体工作流",
+      "to": "AI智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "顺序工作流",
+      "to": "智能体工作流",
+      "rel": "属于"
+    },
+    {
+      "from": "并行工作流",
+      "to": "智能体工作流",
+      "rel": "属于"
+    },
+    {
+      "from": "评估-优化器工作流",
+      "to": "智能体工作流",
+      "rel": "属于"
+    },
+    {
+      "from": "并行工作流",
+      "to": "扇出/扇入",
+      "rel": "依赖"
+    },
+    {
+      "from": "并行工作流",
+      "to": "聚合策略",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估-优化器工作流",
+      "to": "质量阈值",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "延迟",
+      "rel": "衡量"
+    },
+    {
+      "from": "智能体工作流",
+      "to": "令牌用量",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md"
+}

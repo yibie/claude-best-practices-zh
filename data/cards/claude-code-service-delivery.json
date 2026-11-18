@@ -1,0 +1,91 @@
+{
+  "summary_zh": "Claude Code 面向专业服务交付团队，演示将 COBOL 迁移上云等现代化工作流从数月压缩至数周。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 推出的智能体式编程工具，可执行代码任务与工作流。",
+      "kind": "product"
+    },
+    {
+      "en": "service delivery",
+      "zh": "服务交付",
+      "def_zh": "专业服务团队向客户交付项目与解决方案的过程。",
+      "kind": "role"
+    },
+    {
+      "en": "legacy modernization",
+      "zh": "遗留系统现代化",
+      "def_zh": "将老旧系统与技术栈升级改造为现代架构的工程实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "COBOL-to-cloud migration",
+      "zh": "COBOL 上云迁移",
+      "def_zh": "把 COBOL 大型机应用迁移重构到云端的改造工作。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体式编程",
+      "def_zh": "由 AI 智能体自主规划并执行编码任务的工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "workflow automation",
+      "zh": "工作流自动化",
+      "def_zh": "用工具自动执行重复性流程以减少人工投入。",
+      "kind": "technique"
+    },
+    {
+      "en": "live demonstration",
+      "zh": "现场演示",
+      "def_zh": "在活动中实时展示产品完成真实任务的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "professional services team",
+      "zh": "专业服务团队",
+      "def_zh": "为客户提供咨询、实施与交付服务的组织单元。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体式编程",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "服务交付",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "遗留系统现代化",
+      "rel": "用于"
+    },
+    {
+      "from": "COBOL 上云迁移",
+      "to": "遗留系统现代化",
+      "rel": "属于"
+    },
+    {
+      "from": "工作流自动化",
+      "to": "服务交付",
+      "rel": "用于"
+    },
+    {
+      "from": "现场演示",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "专业服务团队",
+      "to": "服务交付",
+      "rel": "属于"
+    }
+  ],
+  "rel": "webinars/claude-code-service-delivery.md"
+}

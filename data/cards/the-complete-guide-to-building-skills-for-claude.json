@@ -1,0 +1,91 @@
+{
+  "summary_zh": "本指南介绍如何为 Claude 构建技能：从规划、结构到测试与分发。",
+  "concepts": [
+    {
+      "en": "Skill",
+      "zh": "技能",
+      "def_zh": "以文件夹打包的指令集，教 Claude 处理特定任务或工作流。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可加载并执行技能。",
+      "kind": "product"
+    },
+    {
+      "en": "Skill Structure",
+      "zh": "技能结构",
+      "def_zh": "技能文件夹的组织方式，包含指令与资源文件。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skill Planning",
+      "zh": "技能规划",
+      "def_zh": "构建技能前明确任务范围、流程与领域知识的步骤。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skill Testing",
+      "zh": "技能测试",
+      "def_zh": "验证技能在真实任务中是否按预期生效的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skill Distribution",
+      "zh": "技能分发",
+      "def_zh": "将技能分享给个人、团队或社区的方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Workflow",
+      "zh": "工作流",
+      "def_zh": "技能所封装的可复用任务执行流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Domain Expertise",
+      "zh": "领域专业知识",
+      "def_zh": "技能中固化的专业偏好与业务知识。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "技能规划",
+      "to": "技能",
+      "rel": "启用"
+    },
+    {
+      "from": "技能结构",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "技能测试",
+      "to": "技能",
+      "rel": "衡量"
+    },
+    {
+      "from": "技能分发",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "工作流",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能",
+      "to": "领域专业知识",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "guides/the-complete-guide-to-building-skills-for-claude.md"
+}

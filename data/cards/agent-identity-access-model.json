@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Claude Tag 采用代理身份访问模型，让 AI 在团队频道中以自身账户运行，实现按频道而非按用户授权。",
+  "concepts": [
+    {
+      "en": "agent identity",
+      "zh": "代理身份",
+      "def_zh": "AI 代理在工具系统中拥有独立账户，由管理员配置并绑定工作区。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "Anthropic 推出的多人协作 AI 产品，Claude 在共享频道中与团队共同工作。",
+      "kind": "product"
+    },
+    {
+      "en": "multiplayer AI",
+      "zh": "多人 AI",
+      "def_zh": "多个用户与 AI 在同一共享空间协作的交互模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "per-channel permissions",
+      "zh": "按频道权限",
+      "def_zh": "以频道为单位定义 AI 可访问的工具和上下文，而非按个人用户。",
+      "kind": "technique"
+    },
+    {
+      "en": "workspace-level identity",
+      "zh": "工作区级身份",
+      "def_zh": "在组织工作区层面定义的代理身份基线，所有频道默认继承。",
+      "kind": "technique"
+    },
+    {
+      "en": "role-based access control",
+      "zh": "基于角色的访问控制",
+      "def_zh": "根据成员角色限制谁可以调用 AI 或访问特定资源。",
+      "kind": "technique"
+    },
+    {
+      "en": "audit trail",
+      "zh": "审计追踪",
+      "def_zh": "记录 AI 代理所有操作和网络调用的日志，用于安全审查。",
+      "kind": "metric"
+    },
+    {
+      "en": "just-in-time credential grants",
+      "zh": "即时凭证授予",
+      "def_zh": "用户可临时批准单次敏感操作，而不永久扩大代理权限范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "least-privileged member",
+      "zh": "最小权限成员",
+      "def_zh": "频道中权限最低的成员，用于限定该频道代理的访问范围。",
+      "kind": "role"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "代理身份",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理身份",
+      "to": "按频道权限",
+      "rel": "启用"
+    },
+    {
+      "from": "按频道权限",
+      "to": "工作区级身份",
+      "rel": "依赖"
+    },
+    {
+      "from": "基于角色的访问控制",
+      "to": "按频道权限",
+      "rel": "用于"
+    },
+    {
+      "from": "审计追踪",
+      "to": "代理身份",
+      "rel": "衡量"
+    },
+    {
+      "from": "即时凭证授予",
+      "to": "代理身份",
+      "rel": "解决"
+    },
+    {
+      "from": "多人 AI",
+      "to": "代理身份",
+      "rel": "依赖"
+    },
+    {
+      "from": "最小权限成员",
+      "to": "按频道权限",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/agent-identity-access-model.md"
+}

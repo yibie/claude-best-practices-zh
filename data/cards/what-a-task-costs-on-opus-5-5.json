@@ -1,0 +1,108 @@
+{
+  "summary_zh": "分析 Claude Code 任务在 Opus 5.5 上的成本构成与优化策略。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，以任务循环方式工作。",
+      "kind": "product"
+    },
+    {
+      "en": "Opus 5.5",
+      "zh": "Opus 5.5",
+      "def_zh": "Anthropic 的旗舰模型，定价更低且默认思考更多。",
+      "kind": "product"
+    },
+    {
+      "en": "effort",
+      "zh": "努力等级",
+      "def_zh": "控制模型每轮思考与工具调用量的设置。",
+      "kind": "technique"
+    },
+    {
+      "en": "cache read",
+      "zh": "缓存读取",
+      "def_zh": "复用先前对话前缀的计费方式，价格远低于新输入。",
+      "kind": "metric"
+    },
+    {
+      "en": "turn",
+      "zh": "轮次",
+      "def_zh": "模型读取对话、调用工具并获取结果的一次循环。",
+      "kind": "metric"
+    },
+    {
+      "en": "output token",
+      "zh": "输出 token",
+      "def_zh": "模型生成的文本与思考，按输出价格计费。",
+      "kind": "metric"
+    },
+    {
+      "en": "compaction",
+      "zh": "压缩",
+      "def_zh": "总结旧对话以缩短上下文，降低后续轮次成本。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "在独立上下文窗口中运行并返回摘要的辅助代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt audit",
+      "zh": "提示审计",
+      "def_zh": "检查并移除导致模型多写或重复调用的提示模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "retry",
+      "zh": "重试",
+      "def_zh": "任务失败后重新运行，成本高于节省 token 的优化。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "轮次",
+      "rel": "依赖"
+    },
+    {
+      "from": "努力等级",
+      "to": "输出 token",
+      "rel": "衡量"
+    },
+    {
+      "from": "缓存读取",
+      "to": "轮次",
+      "rel": "用于"
+    },
+    {
+      "from": "压缩",
+      "to": "缓存读取",
+      "rel": "解决"
+    },
+    {
+      "from": "子代理",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "提示审计",
+      "to": "重试",
+      "rel": "解决"
+    },
+    {
+      "from": "重试",
+      "to": "Claude Code",
+      "rel": "风险"
+    },
+    {
+      "from": "Opus 5.5",
+      "to": "努力等级",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/what-a-task-costs-on-opus-5-5.md"
+}

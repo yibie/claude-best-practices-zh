@@ -1,0 +1,86 @@
+{
+  "summary_zh": "技术研讨会介绍在 Vertex AI 上构建高级智能体的记忆、推理与工具集成能力",
+  "concepts": [
+    {
+      "en": "AI agent",
+      "zh": "AI 智能体",
+      "def_zh": "能自主规划并调用工具完成多步任务的 AI 系统",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-layered memory architecture",
+      "zh": "多层记忆架构",
+      "def_zh": "跨会话持久保存并学习信息的分层记忆机制",
+      "kind": "technique"
+    },
+    {
+      "en": "advanced reasoning pattern",
+      "zh": "高级推理模式",
+      "def_zh": "支持多步规划与自我纠错的推理方法",
+      "kind": "technique"
+    },
+    {
+      "en": "self-correction",
+      "zh": "自我纠错",
+      "def_zh": "模型在推理过程中发现并修正自身错误的能力",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-step planning",
+      "zh": "多步规划",
+      "def_zh": "将复杂任务拆解为有序步骤并逐步执行的能力",
+      "kind": "technique"
+    },
+    {
+      "en": "custom tool integration",
+      "zh": "自定义工具集成",
+      "def_zh": "将外部工具接入模型以扩展其行动能力的方式",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供模型与智能体能力的平台产品",
+      "kind": "product"
+    },
+    {
+      "en": "Vertex AI",
+      "zh": "Vertex AI",
+      "def_zh": "Google Cloud 的机器学习模型开发与部署平台",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "多层记忆架构",
+      "to": "AI 智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "高级推理模式",
+      "to": "AI 智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "自定义工具集成",
+      "to": "AI 智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "高级推理模式",
+      "to": "多步规划",
+      "rel": "依赖"
+    },
+    {
+      "from": "高级推理模式",
+      "to": "自我纠错",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "Vertex AI",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "webinars/claude-on-vertex-ai.md"
+}

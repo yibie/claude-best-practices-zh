@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Anthropic 分享 Claude Code 中技能的分类、编写技巧、分发与度量经验。",
+  "concepts": [
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "包含指令、脚本和资源的文件夹，供智能体发现并执行任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，支持技能等扩展点。",
+      "kind": "product"
+    },
+    {
+      "en": "Progressive Disclosure",
+      "zh": "渐进式披露",
+      "def_zh": "按需逐步向模型暴露文件与信息，以节省上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Engineering",
+      "zh": "上下文工程",
+      "def_zh": "设计模型可见信息的内容与结构以提升表现。",
+      "kind": "technique"
+    },
+    {
+      "en": "Gotchas Section",
+      "zh": "陷阱清单",
+      "def_zh": "技能中记录常见失败点与边缘情况的高信号章节。",
+      "kind": "technique"
+    },
+    {
+      "en": "Verification Skills",
+      "zh": "验证技能",
+      "def_zh": "描述如何测试或验证代码是否正常工作的技能。",
+      "kind": "technique"
+    },
+    {
+      "en": "On-demand Hooks",
+      "zh": "按需钩子",
+      "def_zh": "仅在技能调用期间生效的钩子，用于临时约束。",
+      "kind": "technique"
+    },
+    {
+      "en": "Plugin Marketplace",
+      "zh": "插件市场",
+      "def_zh": "供用户上传、安装和分发技能插件的内部平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Skill Description",
+      "zh": "技能描述",
+      "def_zh": "面向模型编写的触发条件说明，而非人类摘要。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "渐进式披露",
+      "rel": "依赖"
+    },
+    {
+      "from": "渐进式披露",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "陷阱清单",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "验证技能",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "按需钩子",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "插件市场",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "技能描述",
+      "to": "技能",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md"
+}

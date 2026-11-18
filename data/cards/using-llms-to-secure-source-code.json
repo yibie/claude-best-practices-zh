@@ -1,0 +1,102 @@
+{
+  "summary_zh": "利用LLM保障源代码安全：发现易并行，瓶颈转向验证、分诊与修补。",
+  "concepts": [
+    {
+      "en": "threat model",
+      "zh": "威胁模型",
+      "def_zh": "定义系统信任边界与漏洞范围的文档，指导扫描与分诊。",
+      "kind": "technique"
+    },
+    {
+      "en": "sandbox",
+      "zh": "沙箱",
+      "def_zh": "隔离运行代理与目标的环境，用于安全执行和验证漏洞可利用性。",
+      "kind": "technique"
+    },
+    {
+      "en": "vulnerability discovery",
+      "zh": "漏洞发现",
+      "def_zh": "利用模型在源代码中搜索潜在漏洞，优化召回率。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification",
+      "zh": "验证",
+      "def_zh": "独立确认发现是否真正可利用，优化精确率。",
+      "kind": "technique"
+    },
+    {
+      "en": "triage",
+      "zh": "分诊",
+      "def_zh": "对发现去重、评级并排定修补优先级。",
+      "kind": "technique"
+    },
+    {
+      "en": "patching",
+      "zh": "修补",
+      "def_zh": "应用修复、确认漏洞消除并搜索变体。",
+      "kind": "technique"
+    },
+    {
+      "en": "proof of concept",
+      "zh": "概念验证",
+      "def_zh": "可复现的利用脚本或输入，证明漏洞真实可利用。",
+      "kind": "technique"
+    },
+    {
+      "en": "false positive",
+      "zh": "误报",
+      "def_zh": "被标记为漏洞但实际不可利用或不符合威胁模型的发现。",
+      "kind": "risk"
+    },
+    {
+      "en": "find-and-fix loop",
+      "zh": "发现-修复循环",
+      "def_zh": "威胁建模与沙箱支撑下反复执行发现、验证、分诊、修补的流程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "威胁模型",
+      "to": "漏洞发现",
+      "rel": "用于"
+    },
+    {
+      "from": "威胁模型",
+      "to": "分诊",
+      "rel": "用于"
+    },
+    {
+      "from": "沙箱",
+      "to": "验证",
+      "rel": "用于"
+    },
+    {
+      "from": "概念验证",
+      "to": "验证",
+      "rel": "用于"
+    },
+    {
+      "from": "验证",
+      "to": "误报",
+      "rel": "解决"
+    },
+    {
+      "from": "分诊",
+      "to": "误报",
+      "rel": "解决"
+    },
+    {
+      "from": "发现-修复循环",
+      "to": "漏洞发现",
+      "rel": "属于"
+    },
+    {
+      "from": "发现-修复循环",
+      "to": "修补",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/using-llms-to-secure-source-code.md"
+}

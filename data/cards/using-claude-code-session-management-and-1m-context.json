@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍 Claude Code 中会话管理与上下文窗口策略，包括压缩、回退、子代理等技巧。",
+  "concepts": [
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型一次生成时能看到的全部内容，含提示、对话与工具输出。",
+      "kind": "technique"
+    },
+    {
+      "en": "context rot",
+      "zh": "上下文腐化",
+      "def_zh": "上下文增长导致注意力分散、模型性能下降的现象。",
+      "kind": "risk"
+    },
+    {
+      "en": "compaction",
+      "zh": "上下文压缩",
+      "def_zh": "将长对话摘要为简短描述以腾出上下文空间。",
+      "kind": "technique"
+    },
+    {
+      "en": "rewind",
+      "zh": "回退",
+      "def_zh": "跳回之前消息并重新提示，丢弃之后的内容。",
+      "kind": "technique"
+    },
+    {
+      "en": "clear",
+      "zh": "清空会话",
+      "def_zh": "结束当前会话，用提炼的要点开启全新上下文。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "拥有独立干净上下文窗口的代理，只回传最终结果。",
+      "kind": "technique"
+    },
+    {
+      "en": "session management",
+      "zh": "会话管理",
+      "def_zh": "决定何时继续、回退、压缩或新开会话的实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的终端内 AI 编程代理产品。",
+      "kind": "product"
+    },
+    {
+      "en": "usage command",
+      "zh": "用量命令",
+      "def_zh": "查看 Claude Code 使用情况的斜杠命令。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "上下文压缩",
+      "to": "上下文窗口",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文腐化",
+      "to": "上下文窗口",
+      "rel": "风险"
+    },
+    {
+      "from": "回退",
+      "to": "上下文窗口",
+      "rel": "用于"
+    },
+    {
+      "from": "清空会话",
+      "to": "上下文腐化",
+      "rel": "解决"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "用于"
+    },
+    {
+      "from": "会话管理",
+      "to": "上下文压缩",
+      "rel": "依赖"
+    },
+    {
+      "from": "会话管理",
+      "to": "回退",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "会话管理",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/using-claude-code-session-management-and-1m-context.md"
+}

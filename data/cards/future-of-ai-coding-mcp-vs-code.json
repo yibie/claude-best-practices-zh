@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍VS Code中MCP实现如何赋能Claude的AI编程工作流，涵盖MCP生态与服务器构建。",
+  "concepts": [
+    {
+      "en": "Model Context Protocol (MCP)",
+      "zh": "模型上下文协议",
+      "def_zh": "标准化协议，用于连接AI模型与外部工具和数据源。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP Server",
+      "zh": "MCP服务器",
+      "def_zh": "实现MCP协议、向AI客户端暴露工具与资源的服务端程序。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Ecosystem",
+      "zh": "MCP生态",
+      "def_zh": "围绕MCP协议构建的服务器、客户端与工具集合。",
+      "kind": "org"
+    },
+    {
+      "en": "AI Coding Workflow",
+      "zh": "AI编程工作流",
+      "def_zh": "借助AI辅助完成编码、调试与集成的开发流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Mode",
+      "zh": "智能体模式",
+      "def_zh": "AI可自主规划并调用工具执行多步任务的运行模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Resources",
+      "zh": "MCP资源",
+      "def_zh": "MCP中供模型读取的上下文数据对象。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP Prompts",
+      "zh": "MCP提示",
+      "def_zh": "MCP中预定义的可复用提示模板。",
+      "kind": "technique"
+    },
+    {
+      "en": "VS Code",
+      "zh": "VS Code",
+      "def_zh": "微软推出的代码编辑器，支持MCP集成。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic开发的大语言模型系列。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型上下文协议",
+      "to": "MCP服务器",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP服务器",
+      "to": "MCP生态",
+      "rel": "属于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "AI编程工作流",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体模式",
+      "to": "模型上下文协议",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP资源",
+      "to": "模型上下文协议",
+      "rel": "属于"
+    },
+    {
+      "from": "MCP提示",
+      "to": "模型上下文协议",
+      "rel": "属于"
+    },
+    {
+      "from": "VS Code",
+      "to": "模型上下文协议",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude",
+      "to": "智能体模式",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/future-of-ai-coding-mcp-vs-code.md"
+}

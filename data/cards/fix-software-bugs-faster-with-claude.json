@@ -1,0 +1,102 @@
+{
+  "summary_zh": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+  "concepts": [
+    {
+      "en": "Debugging",
+      "zh": "调试",
+      "def_zh": "定位并修复软件缺陷的过程",
+      "kind": "technique"
+    },
+    {
+      "en": "Root Cause Analysis",
+      "zh": "根因分析",
+      "def_zh": "追溯缺陷根本原因而非表面症状的方法",
+      "kind": "technique"
+    },
+    {
+      "en": "Stack Trace Analysis",
+      "zh": "堆栈跟踪分析",
+      "def_zh": "通过调用栈定位代码失败位置的分析手段",
+      "kind": "technique"
+    },
+    {
+      "en": "Local Reproduction",
+      "zh": "本地复现",
+      "def_zh": "在受控环境中重建生产问题以调试",
+      "kind": "technique"
+    },
+    {
+      "en": "Instrumentation",
+      "zh": "插桩",
+      "def_zh": "在代码中加日志以观测运行时行为",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude.ai",
+      "zh": "Claude.ai",
+      "def_zh": "可粘贴错误信息获取快速分析的网页界面",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "可自主跨文件调查并修复缺陷的命令行工具",
+      "kind": "product"
+    },
+    {
+      "en": "Agentic Coding",
+      "zh": "智能体编程",
+      "def_zh": "AI 自主完成多步开发任务的工作方式",
+      "kind": "technique"
+    },
+    {
+      "en": "Incident Triage",
+      "zh": "事故分诊",
+      "def_zh": "对故障事件快速分类并定位责任环节",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "调试",
+      "to": "根因分析",
+      "rel": "依赖"
+    },
+    {
+      "from": "调试",
+      "to": "堆栈跟踪分析",
+      "rel": "依赖"
+    },
+    {
+      "from": "调试",
+      "to": "本地复现",
+      "rel": "依赖"
+    },
+    {
+      "from": "调试",
+      "to": "插桩",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude.ai",
+      "to": "堆栈跟踪分析",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "调试",
+      "rel": "用于"
+    },
+    {
+      "from": "事故分诊",
+      "to": "Claude Code",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/fix-software-bugs-faster-with-claude.md"
+}

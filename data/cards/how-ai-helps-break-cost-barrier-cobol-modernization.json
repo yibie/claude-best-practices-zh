@@ -1,0 +1,108 @@
+{
+  "summary_zh": "AI 通过自动化遗留代码的探索与分析，降低 COBOL 现代化成本，使重写路径变得可行。",
+  "concepts": [
+    {
+      "en": "COBOL modernization",
+      "zh": "COBOL 现代化",
+      "def_zh": "更新遗留 COBOL 应用并保留其业务逻辑的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "legacy code",
+      "zh": "遗留代码",
+      "def_zh": "长期运行、难以维护且文档缺失的旧系统代码。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可自动化代码分析与迁移。",
+      "kind": "product"
+    },
+    {
+      "en": "automated discovery",
+      "zh": "自动化发现",
+      "def_zh": "AI 自动读取代码库并映射结构、依赖与数据流。",
+      "kind": "technique"
+    },
+    {
+      "en": "dependency mapping",
+      "zh": "依赖映射",
+      "def_zh": "识别代码模块间显式与隐式依赖关系的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "risk analysis",
+      "zh": "风险分析",
+      "def_zh": "评估各组件现代化风险并识别高耦合或技术债区域。",
+      "kind": "technique"
+    },
+    {
+      "en": "incremental implementation",
+      "zh": "增量实施",
+      "def_zh": "逐个组件迁移并持续验证，降低整体失败风险。",
+      "kind": "technique"
+    },
+    {
+      "en": "rewrite",
+      "zh": "重写",
+      "def_zh": "将 COBOL 代码转换为 Java 等现代语言，收益高但成本风险大。",
+      "kind": "technique"
+    },
+    {
+      "en": "refactor",
+      "zh": "重构",
+      "def_zh": "在不改变行为的前提下调整代码结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "rehost",
+      "zh": "重托管",
+      "def_zh": "将 COBOL 代码原样迁移到更廉价的基础设施。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "自动化发现",
+      "rel": "启用"
+    },
+    {
+      "from": "自动化发现",
+      "to": "依赖映射",
+      "rel": "依赖"
+    },
+    {
+      "from": "自动化发现",
+      "to": "风险分析",
+      "rel": "启用"
+    },
+    {
+      "from": "COBOL 现代化",
+      "to": "重写",
+      "rel": "属于"
+    },
+    {
+      "from": "COBOL 现代化",
+      "to": "重构",
+      "rel": "属于"
+    },
+    {
+      "from": "COBOL 现代化",
+      "to": "重托管",
+      "rel": "属于"
+    },
+    {
+      "from": "增量实施",
+      "to": "风险分析",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "COBOL 现代化",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md"
+}

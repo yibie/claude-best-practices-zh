@@ -1,0 +1,91 @@
+{
+  "summary_zh": "Claude Cowork 是能读写文件、连接工作应用并执行多步任务的 Claude 版本。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "可读写本地文件、连接工作应用并执行多步任务的 Claude 版本",
+      "kind": "product"
+    },
+    {
+      "en": "multi-step task execution",
+      "zh": "多步任务执行",
+      "def_zh": "由 AI 代表用户连续完成多个步骤的工作流程",
+      "kind": "technique"
+    },
+    {
+      "en": "file read/write",
+      "zh": "文件读写",
+      "def_zh": "AI 直接读取和修改计算机上的文件",
+      "kind": "technique"
+    },
+    {
+      "en": "connected work apps",
+      "zh": "工作应用连接",
+      "def_zh": "将 AI 接入用户日常工作应用以操作数据",
+      "kind": "technique"
+    },
+    {
+      "en": "conversational AI",
+      "zh": "对话式 AI",
+      "def_zh": "仅在聊天窗口问答、不直接产出交付物的 AI 形态",
+      "kind": "technique"
+    },
+    {
+      "en": "plugins",
+      "zh": "插件",
+      "def_zh": "扩展 Claude Cowork 能力的可安装组件",
+      "kind": "product"
+    },
+    {
+      "en": "workflows",
+      "zh": "工作流",
+      "def_zh": "面向特定场景的预定义任务执行流程",
+      "kind": "technique"
+    },
+    {
+      "en": "best practices",
+      "zh": "最佳实践",
+      "def_zh": "使用 Claude Cowork 的推荐方法与规范",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "多步任务执行",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "文件读写",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "工作应用连接",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "对话式 AI",
+      "rel": "替代"
+    },
+    {
+      "from": "插件",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "工作流",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "最佳实践",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    }
+  ],
+  "rel": "guides/claude-cowork-product-guide.md"
+}

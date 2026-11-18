@@ -1,0 +1,97 @@
+{
+  "summary_zh": "解释 Claude Code 中 effort 等级的含义、效果曲线与适用场景，并给出按任务选择 effort 的实践建议。",
+  "concepts": [
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "控制模型在任务上投入算力与自主判断程度的设置。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort curve",
+      "zh": "努力曲线",
+      "def_zh": "描述不同努力等级下基准得分与 token 消耗关系的曲线。",
+      "kind": "metric"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用已处理提示前缀以降低延迟与成本的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification",
+      "zh": "验证",
+      "def_zh": "通过测试、复现与对抗检查确认结果正确性的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "edge case testing",
+      "zh": "边界用例测试",
+      "def_zh": "针对隐藏边界条件与异常输入进行测试的做法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Terminal-Bench 3.0",
+      "zh": "Terminal-Bench 3.0",
+      "def_zh": "社区贡献的终端任务基准，覆盖安全、硬件、ML 等领域。",
+      "kind": "metric"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的终端内 AI 编程代理产品。",
+      "kind": "product"
+    },
+    {
+      "en": "brownfield codebase",
+      "zh": "棕地代码库",
+      "def_zh": "已有大量历史代码、修改需谨慎的存量代码库。",
+      "kind": "technique"
+    },
+    {
+      "en": "autonomous operation",
+      "zh": "自主运行",
+      "def_zh": "模型在无用户逐步介入下独立完成构建与验证。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "努力等级",
+      "to": "验证",
+      "rel": "启用"
+    },
+    {
+      "from": "努力等级",
+      "to": "边界用例测试",
+      "rel": "启用"
+    },
+    {
+      "from": "努力曲线",
+      "to": "努力等级",
+      "rel": "衡量"
+    },
+    {
+      "from": "Terminal-Bench 3.0",
+      "to": "努力等级",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Code",
+      "to": "努力等级",
+      "rel": "用于"
+    },
+    {
+      "from": "努力等级",
+      "to": "自主运行",
+      "rel": "启用"
+    },
+    {
+      "from": "提示缓存",
+      "to": "努力等级",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/spending-your-effort.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "产品设计师用Claude Design在构建前探索视觉创意，涵盖原型、幻灯片与动画。",
+  "concepts": [
+    {
+      "en": "Claude Design",
+      "zh": "Claude Design",
+      "def_zh": "基于HTML的视觉创意与沟通产物生成工具",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "面向生产软件开发的终端编码代理工具",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Slides",
+      "zh": "Claude Slides",
+      "def_zh": "Claude Design中生成演示文稿的专用起点",
+      "kind": "product"
+    },
+    {
+      "en": "HTML as visual medium",
+      "zh": "HTML视觉媒介",
+      "def_zh": "用HTML制作交互式视觉产物的创作方式",
+      "kind": "technique"
+    },
+    {
+      "en": "design system",
+      "zh": "设计系统",
+      "def_zh": "由品牌资产生成、约束输出一致性的组件规范",
+      "kind": "technique"
+    },
+    {
+      "en": "interactive prototype",
+      "zh": "交互原型",
+      "def_zh": "可点击流转、用于早期验证想法的界面原型",
+      "kind": "technique"
+    },
+    {
+      "en": "wireframe",
+      "zh": "线框图",
+      "def_zh": "低保真、聚焦结构而非视觉的设计草图",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt engineering",
+      "zh": "提示工程",
+      "def_zh": "在生成前明确表达需求与视觉方向的技巧",
+      "kind": "technique"
+    },
+    {
+      "en": "early ideation",
+      "zh": "早期构思",
+      "def_zh": "在投入构建前探索方向并获取反馈的阶段",
+      "kind": "technique"
+    },
+    {
+      "en": "brand compliance",
+      "zh": "品牌一致性",
+      "def_zh": "输出遵循品牌字体、色彩与资产规范的程度",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Design",
+      "to": "HTML视觉媒介",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Design",
+      "to": "设计系统",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Design",
+      "to": "交互原型",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Design",
+      "to": "早期构思",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Slides",
+      "to": "Claude Design",
+      "rel": "属于"
+    },
+    {
+      "from": "设计系统",
+      "to": "品牌一致性",
+      "rel": "衡量"
+    },
+    {
+      "from": "提示工程",
+      "to": "Claude Design",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Design",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md"
+}

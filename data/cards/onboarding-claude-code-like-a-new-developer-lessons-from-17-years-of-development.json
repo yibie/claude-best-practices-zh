@@ -1,0 +1,97 @@
+{
+  "summary_zh": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic推出的AI编程助手，支持代理式编码与自动化。",
+      "kind": "product"
+    },
+    {
+      "en": "Context Engineering",
+      "zh": "上下文工程",
+      "def_zh": "系统化构建和维护AI所需背景信息的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "可复用的AI能力模块，封装领域知识与操作流程。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，标准化AI与外部数据源的连接。",
+      "kind": "product"
+    },
+    {
+      "en": "Legacy Codebase",
+      "zh": "遗留代码库",
+      "def_zh": "长期维护、结构复杂且难以修改的代码基础。",
+      "kind": "risk"
+    },
+    {
+      "en": "Technical Debt",
+      "zh": "技术债务",
+      "def_zh": "因快速开发或人员流动积累的维护负担。",
+      "kind": "risk"
+    },
+    {
+      "en": "Onboarding",
+      "zh": "新人引导",
+      "def_zh": "帮助新成员快速熟悉项目与环境的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Root Cause Analysis",
+      "zh": "根因分析",
+      "def_zh": "定位问题根本原因而非仅修复表象的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Coding",
+      "zh": "代理式编码",
+      "def_zh": "AI代理自主完成编码任务的工作模式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "上下文工程",
+      "to": "Claude Code",
+      "rel": "启用"
+    },
+    {
+      "from": "技能",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "MCP",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "新人引导",
+      "to": "遗留代码库",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文工程",
+      "to": "技术债务",
+      "rel": "解决"
+    },
+    {
+      "from": "根因分析",
+      "to": "技术债务",
+      "rel": "解决"
+    },
+    {
+      "from": "代理式编码",
+      "to": "Claude Code",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md"
+}

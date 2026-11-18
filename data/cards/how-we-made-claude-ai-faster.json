@@ -1,0 +1,103 @@
+{
+  "summary_zh": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+  "concepts": [
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "在 Slack 频道中常驻、可自主执行任务的 Claude 智能体产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程产品，可在终端与 IDE 中执行编码任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "支持云端会话协作的 Claude 产品形态。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "模型上下文协议",
+      "def_zh": "让模型安全接入外部工具与数据源的开放协议。",
+      "kind": "technique"
+    },
+    {
+      "en": "hill climbing",
+      "zh": "爬山优化",
+      "def_zh": "围绕单一可量化指标持续迭代、只降不升的优化方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "benchmark ratchet",
+      "zh": "基准棘轮",
+      "def_zh": "把基准数值设为 CI 门槛，只允许下降、回升即失败的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "guardrail",
+      "zh": "护栏",
+      "def_zh": "自动化测试、评审与灰度发布等防止改动引入风险的安全机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "feature flag",
+      "zh": "功能开关",
+      "def_zh": "控制新功能灰度放量与快速回滚的运行时开关。",
+      "kind": "technique"
+    },
+    {
+      "en": "real user monitoring",
+      "zh": "真实用户监控",
+      "def_zh": "从真实用户端采集性能数据的可观测性手段。",
+      "kind": "metric"
+    },
+    {
+      "en": "Cumulative Layout Shift",
+      "zh": "累积布局偏移",
+      "def_zh": "衡量页面加载中元素意外位移程度的用户体验指标。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Tag",
+      "to": "模型上下文协议",
+      "rel": "依赖"
+    },
+    {
+      "from": "爬山优化",
+      "to": "基准棘轮",
+      "rel": "依赖"
+    },
+    {
+      "from": "基准棘轮",
+      "to": "护栏",
+      "rel": "属于"
+    },
+    {
+      "from": "功能开关",
+      "to": "护栏",
+      "rel": "属于"
+    },
+    {
+      "from": "真实用户监控",
+      "to": "累积布局偏移",
+      "rel": "衡量"
+    },
+    {
+      "from": "爬山优化",
+      "to": "真实用户监控",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "爬山优化",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-we-made-claude-ai-faster.md"
+}

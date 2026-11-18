@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+  "concepts": [
+    {
+      "en": "commerce agent",
+      "zh": "商务智能体",
+      "def_zh": "在电商或旅行场景中辅助用户搜索、比较与购买商品的 AI 智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "shopping agent",
+      "zh": "购物智能体",
+      "def_zh": "嵌入商家应用、面向消费者完成选品、加购与客服的智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "merchant agent",
+      "zh": "商家智能体",
+      "def_zh": "面向店铺运营者，分析销售、库存并建议促销的智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "blueprint",
+      "zh": "智能体蓝图",
+      "def_zh": "含脚手架、模式与护栏的可复用参考实现，用于快速搭建智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "guardrails",
+      "zh": "护栏",
+      "def_zh": "约束智能体价格与商品来源、避免操纵性推销的安全机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent SDK",
+      "zh": "智能体 SDK",
+      "def_zh": "用于构建和运行 Claude 智能体的开发工具包。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "可在终端中编写与定制代码的 Claude 编程工具。",
+      "kind": "product"
+    },
+    {
+      "en": "human-in-the-loop approval",
+      "zh": "人工审批",
+      "def_zh": "智能体提出变更后须由人确认才生效的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "in-conversation UI",
+      "zh": "对话内界面",
+      "def_zh": "在对话中直接呈现商品对比、购物车等交互组件。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic payments",
+      "zh": "智能体支付",
+      "def_zh": "由智能体代为完成结账与支付的机制。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "商务智能体",
+      "to": "智能体蓝图",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "购物智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "商家智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "购物智能体",
+      "to": "护栏",
+      "rel": "依赖"
+    },
+    {
+      "from": "购物智能体",
+      "to": "对话内界面",
+      "rel": "启用"
+    },
+    {
+      "from": "购物智能体",
+      "to": "智能体支付",
+      "rel": "用于"
+    },
+    {
+      "from": "商家智能体",
+      "to": "人工审批",
+      "rel": "依赖"
+    },
+    {
+      "from": "智能体蓝图",
+      "to": "Claude Code",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/claude-for-commerce-agents.md"
+}

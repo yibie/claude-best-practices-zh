@@ -1,0 +1,113 @@
+{
+  "summary_zh": "介绍评估设计与爬山优化原则，及 claude-api 技能如何自动化实现。",
+  "concepts": [
+    {
+      "en": "evaluation design",
+      "zh": "评估设计",
+      "def_zh": "设计能反映生产任务、可区分模型能力且低方差的评测集。",
+      "kind": "technique"
+    },
+    {
+      "en": "hillclimbing",
+      "zh": "爬山优化",
+      "def_zh": "基于评估信号逐步修改提示或参数以提升性能或降低成本。",
+      "kind": "technique"
+    },
+    {
+      "en": "overfitting",
+      "zh": "过拟合",
+      "def_zh": "系统在评估集上提升但在生产流量上无改善的现象。",
+      "kind": "risk"
+    },
+    {
+      "en": "held-out test set",
+      "zh": "留出测试集",
+      "def_zh": "爬山过程中不可见、用于检测过拟合的评估子集。",
+      "kind": "technique"
+    },
+    {
+      "en": "LLM-as-judge",
+      "zh": "LLM 评判",
+      "def_zh": "用另一个模型按可核查标准对输出打分或比较优劣。",
+      "kind": "technique"
+    },
+    {
+      "en": "programmatic verification",
+      "zh": "程序化验证",
+      "def_zh": "用代码检查精确匹配、固定标签或模式等约束输出。",
+      "kind": "technique"
+    },
+    {
+      "en": "adversarial sampling",
+      "zh": "对抗采样",
+      "def_zh": "按人类判断的难度而非模型失败点挑选评估用例。",
+      "kind": "technique"
+    },
+    {
+      "en": "claude-api skill",
+      "zh": "claude-api 技能",
+      "def_zh": "Claude Code 中提供 build-eval 与 hillclimb 命令的技能。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可运行技能命令。",
+      "kind": "product"
+    },
+    {
+      "en": "grader",
+      "zh": "评分器",
+      "def_zh": "对评估输出给出分数或判定、需验证一致性的组件。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "评估设计",
+      "to": "过拟合",
+      "rel": "解决"
+    },
+    {
+      "from": "爬山优化",
+      "to": "评估设计",
+      "rel": "依赖"
+    },
+    {
+      "from": "爬山优化",
+      "to": "过拟合",
+      "rel": "风险"
+    },
+    {
+      "from": "留出测试集",
+      "to": "过拟合",
+      "rel": "解决"
+    },
+    {
+      "from": "claude-api 技能",
+      "to": "评估设计",
+      "rel": "启用"
+    },
+    {
+      "from": "claude-api 技能",
+      "to": "爬山优化",
+      "rel": "启用"
+    },
+    {
+      "from": "LLM 评判",
+      "to": "评分器",
+      "rel": "属于"
+    },
+    {
+      "from": "程序化验证",
+      "to": "评分器",
+      "rel": "属于"
+    },
+    {
+      "from": "对抗采样",
+      "to": "评估设计",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/automating-eval-design-and-hillclimbing.md"
+}

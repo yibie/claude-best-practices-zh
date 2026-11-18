@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 团队分享智能体时代的分层代码审查流程，以风险分级和自动化保障质量。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可自主编写和审查代码。",
+      "kind": "product"
+    },
+    {
+      "en": "Code Review for Claude Code",
+      "zh": "Claude Code 代码审查",
+      "def_zh": "对每个拉取请求自动进行 AI 审查并给出发现的产品功能。",
+      "kind": "product"
+    },
+    {
+      "en": "risk-tiered human approval",
+      "zh": "风险分级人工审批",
+      "def_zh": "按变更风险等级决定所需人工审批人数的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification",
+      "zh": "验证",
+      "def_zh": "让智能体运行测试、构建或截图以证明工作完成的做法。",
+      "kind": "technique"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md",
+      "def_zh": "向 Claude 说明项目技术栈、约定与目标的指令文件。",
+      "kind": "product"
+    },
+    {
+      "en": "REVIEW.md",
+      "zh": "REVIEW.md",
+      "def_zh": "由代码所有者编写、告知审查者关注点的说明文件。",
+      "kind": "product"
+    },
+    {
+      "en": "merge queue",
+      "zh": "合并队列",
+      "def_zh": "在合并前对主分支重新运行全部检查的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "feature flag",
+      "zh": "功能开关",
+      "def_zh": "无需部署即可开启或关闭新行为的发布控制手段。",
+      "kind": "technique"
+    },
+    {
+      "en": "eval set",
+      "zh": "评估集",
+      "def_zh": "由历史事故和回滚构建、用于持续评分审查者的测试集。",
+      "kind": "metric"
+    },
+    {
+      "en": "review convergence",
+      "zh": "审查收敛",
+      "def_zh": "通过轮次上限和仅审新差异避免审查无限循环的做法。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code 代码审查",
+      "to": "Claude Code",
+      "rel": "属于"
+    },
+    {
+      "from": "风险分级人工审批",
+      "to": "Claude Code 代码审查",
+      "rel": "依赖"
+    },
+    {
+      "from": "验证",
+      "to": "Claude Code 代码审查",
+      "rel": "用于"
+    },
+    {
+      "from": "REVIEW.md",
+      "to": "Claude Code 代码审查",
+      "rel": "用于"
+    },
+    {
+      "from": "合并队列",
+      "to": "功能开关",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估集",
+      "to": "Claude Code 代码审查",
+      "rel": "衡量"
+    },
+    {
+      "from": "审查收敛",
+      "to": "Claude Code 代码审查",
+      "rel": "解决"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "验证",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/solving-code-review-at-anthropic.md"
+}

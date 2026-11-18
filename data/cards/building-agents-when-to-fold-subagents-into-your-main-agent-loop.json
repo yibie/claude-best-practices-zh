@@ -1,0 +1,103 @@
+{
+  "summary_zh": "将子代理折叠进主代理循环，用渐进披露的技能与工具替代多代理编排，可提升质量并降低延迟与成本。",
+  "concepts": [
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "拥有独立上下文窗口、工具与指令，由协调器编排的代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "main agent loop",
+      "zh": "主代理循环",
+      "def_zh": "单一模型在单一上下文窗口中反复调用工具直至完成任务的运行结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "progressive disclosure",
+      "zh": "渐进披露",
+      "def_zh": "先向模型展示技能与工具的简短描述，需要时才完整加载。",
+      "kind": "technique"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "封装团队工作步骤、规则与判断的按需加载知识单元。",
+      "kind": "product"
+    },
+    {
+      "en": "tool search",
+      "zh": "工具搜索",
+      "def_zh": "按需检索并延迟加载工具定义，避免工具列表膨胀。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP tools",
+      "zh": "MCP 工具",
+      "def_zh": "通过模型上下文协议暴露、供代理调用以执行动作或读取数据的接口。",
+      "kind": "product"
+    },
+    {
+      "en": "orchestrator-subagent",
+      "zh": "编排器-子代理架构",
+      "def_zh": "由中央编排器把任务分派给多个专业子代理的多代理结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "context bloat",
+      "zh": "上下文膨胀",
+      "def_zh": "上下文窗口被过多信息占满，导致性能下降与成本上升。",
+      "kind": "risk"
+    },
+    {
+      "en": "task-completion evals",
+      "zh": "任务完成度评估",
+      "def_zh": "以端到端任务结果衡量代理整体表现的评测集。",
+      "kind": "metric"
+    },
+    {
+      "en": "Conway's law",
+      "zh": "康威定律",
+      "def_zh": "系统架构往往复制组织沟通结构的现象。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "渐进披露",
+      "to": "上下文膨胀",
+      "rel": "解决"
+    },
+    {
+      "from": "主代理循环",
+      "to": "子代理",
+      "rel": "替代"
+    },
+    {
+      "from": "技能",
+      "to": "渐进披露",
+      "rel": "依赖"
+    },
+    {
+      "from": "工具搜索",
+      "to": "MCP 工具",
+      "rel": "用于"
+    },
+    {
+      "from": "任务完成度评估",
+      "to": "主代理循环",
+      "rel": "衡量"
+    },
+    {
+      "from": "编排器-子代理架构",
+      "to": "康威定律",
+      "rel": "风险"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文膨胀",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md"
+}

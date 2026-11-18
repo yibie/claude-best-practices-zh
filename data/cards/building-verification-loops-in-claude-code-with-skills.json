@@ -1,0 +1,108 @@
+{
+  "summary_zh": "将手动检查编码为技能，让 Claude Code 自动闭环验证并修复。",
+  "concepts": [
+    {
+      "en": "verification loop",
+      "zh": "验证循环",
+      "def_zh": "AI 代理反复检查自身工作并修复失败的迭代过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic loop",
+      "zh": "代理循环",
+      "def_zh": "代理收集上下文、采取行动、验证结果的重复工作流。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的代理式编程工具，支持技能与验证循环。",
+      "kind": "product"
+    },
+    {
+      "en": "skill",
+      "zh": "技能",
+      "def_zh": "以 Markdown 文件编码的可复用指令，供 Claude 自动执行。",
+      "kind": "product"
+    },
+    {
+      "en": "skill-creator",
+      "zh": "技能创建器",
+      "def_zh": "通过访谈用户来生成技能文件的插件工具。",
+      "kind": "product"
+    },
+    {
+      "en": "standalone verification",
+      "zh": "独立验证",
+      "def_zh": "在产物存在后由用户主动调用的验证技能。",
+      "kind": "technique"
+    },
+    {
+      "en": "embedded verification",
+      "zh": "嵌入式验证",
+      "def_zh": "作为生产技能的一部分自动触发的验证步骤。",
+      "kind": "technique"
+    },
+    {
+      "en": "chained verification",
+      "zh": "链式验证",
+      "def_zh": "一个技能结束时调用另一个验证技能，形成端到端流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "PR-wide verification",
+      "zh": "PR 级验证",
+      "def_zh": "在每次拉取请求上自动运行相同验证门禁的团队实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "rubric grading",
+      "zh": "评分标准评估",
+      "def_zh": "用独立评分代理按评分标准验证结果并回环返工。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "验证循环",
+      "to": "代理循环",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "验证循环",
+      "rel": "启用"
+    },
+    {
+      "from": "技能创建器",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "嵌入式验证",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "链式验证",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "PR 级验证",
+      "to": "链式验证",
+      "rel": "依赖"
+    },
+    {
+      "from": "评分标准评估",
+      "to": "验证循环",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Code",
+      "to": "验证循环",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/building-verification-loops-in-claude-code-with-skills.md"
+}

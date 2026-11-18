@@ -1,0 +1,108 @@
+{
+  "summary_zh": "BAM 以真实金融任务评测前沿模型，并用自建代理平台与治理控制安全部署 Claude Fable 5。",
+  "concepts": [
+    {
+      "en": "frontier model",
+      "zh": "前沿模型",
+      "def_zh": "能力处于当前最先进水平、可承担复杂长程任务的大模型。",
+      "kind": "product"
+    },
+    {
+      "en": "agent harness",
+      "zh": "代理执行框架",
+      "def_zh": "围绕模型提供工具、数据与流程控制以支撑长程任务执行的运行环境。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic execution",
+      "zh": "代理式执行",
+      "def_zh": "模型自主规划、调用工具并多步推进直至产出可用结果的工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "model evaluation",
+      "zh": "模型评测",
+      "def_zh": "用可验证的真实任务系统衡量模型能力与失败模式的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "model routing",
+      "zh": "模型路由",
+      "def_zh": "按任务、成本与效率将请求分派给不同模型的调度策略。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI governance",
+      "zh": "AI 治理",
+      "def_zh": "围绕数据边界、权限、日志与人工审核建立的控制与问责体系。",
+      "kind": "technique"
+    },
+    {
+      "en": "least-privilege access",
+      "zh": "最小权限访问",
+      "def_zh": "仅授予完成特定任务所必需的数据与工具权限。",
+      "kind": "technique"
+    },
+    {
+      "en": "human-in-the-loop review",
+      "zh": "人工审核",
+      "def_zh": "在关键产出被依赖前由人复核并保留最终判断与责任。",
+      "kind": "technique"
+    },
+    {
+      "en": "hosted-agent platform",
+      "zh": "托管代理平台",
+      "def_zh": "在企业内安全部署、运行与管控大量自主代理的统一平台。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的代理式编程与任务执行工具，可作为执行框架使用。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "代理执行框架",
+      "to": "前沿模型",
+      "rel": "启用"
+    },
+    {
+      "from": "代理式执行",
+      "to": "代理执行框架",
+      "rel": "依赖"
+    },
+    {
+      "from": "模型评测",
+      "to": "模型路由",
+      "rel": "用于"
+    },
+    {
+      "from": "AI 治理",
+      "to": "最小权限访问",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI 治理",
+      "to": "人工审核",
+      "rel": "依赖"
+    },
+    {
+      "from": "托管代理平台",
+      "to": "代理式执行",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "代理执行框架",
+      "rel": "属于"
+    },
+    {
+      "from": "模型评测",
+      "to": "前沿模型",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md"
+}

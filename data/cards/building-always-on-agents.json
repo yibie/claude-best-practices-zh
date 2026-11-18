@@ -1,0 +1,108 @@
+{
+  "summary_zh": "常驻智能体通过事件收件箱、定时器、记忆、权限和发件箱五个原语实现跨会话的自主运行。",
+  "concepts": [
+    {
+      "en": "always-on agent",
+      "zh": "常驻智能体",
+      "def_zh": "跨会话保持状态、无需直接监督即可主动行动的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "run",
+      "zh": "运行",
+      "def_zh": "智能体被事件唤醒后完成一次任务并保存状态的执行片段。",
+      "kind": "technique"
+    },
+    {
+      "en": "session",
+      "zh": "会话",
+      "def_zh": "记录消息与工具调用的对话转录，可跨多次运行延续。",
+      "kind": "technique"
+    },
+    {
+      "en": "event inbox",
+      "zh": "事件收件箱",
+      "def_zh": "持久化存储待处理事件并唤醒工作进程的队列。",
+      "kind": "technique"
+    },
+    {
+      "en": "timer",
+      "zh": "定时器",
+      "def_zh": "让智能体在指定时间或周期被唤醒的持久化调度记录。",
+      "kind": "technique"
+    },
+    {
+      "en": "memory",
+      "zh": "记忆",
+      "def_zh": "跨运行持久保存用户指令、笔记、历史消息与任务进度的存储。",
+      "kind": "technique"
+    },
+    {
+      "en": "permissions",
+      "zh": "权限",
+      "def_zh": "控制智能体工具调用是自主执行、阻止还是等待批准的安全机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "outbox",
+      "zh": "发件箱",
+      "def_zh": "暂存智能体待发送消息并由分发器投递给用户的队列表。",
+      "kind": "technique"
+    },
+    {
+      "en": "deferred tool call",
+      "zh": "延迟工具调用",
+      "def_zh": "暂停运行以等待用户批准或补充输入的工具调用模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "auto mode",
+      "zh": "自动模式",
+      "def_zh": "用分类器审查高风险操作并阻止危险动作的自主执行模式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "事件收件箱",
+      "to": "运行",
+      "rel": "启用"
+    },
+    {
+      "from": "定时器",
+      "to": "事件收件箱",
+      "rel": "用于"
+    },
+    {
+      "from": "运行",
+      "to": "会话",
+      "rel": "属于"
+    },
+    {
+      "from": "记忆",
+      "to": "会话",
+      "rel": "解决"
+    },
+    {
+      "from": "权限",
+      "to": "延迟工具调用",
+      "rel": "依赖"
+    },
+    {
+      "from": "运行",
+      "to": "发件箱",
+      "rel": "用于"
+    },
+    {
+      "from": "自动模式",
+      "to": "权限",
+      "rel": "属于"
+    },
+    {
+      "from": "常驻智能体",
+      "to": "运行",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/building-always-on-agents.md"
+}

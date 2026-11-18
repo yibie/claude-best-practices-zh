@@ -1,0 +1,108 @@
+{
+  "summary_zh": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+  "concepts": [
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "控制模型思考深度与工具调用量的可调参数，影响成本与延迟。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "在独立上下文窗口中运行、向主代理返回摘要的辅助代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用已处理上下文以降低重复输入成本的机制，缓存归属生成它的模型。",
+      "kind": "technique"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次可处理的token上限，当前各模型均为100万token。",
+      "kind": "metric"
+    },
+    {
+      "en": "cost per finished task",
+      "zh": "单任务成本",
+      "def_zh": "完成一个实际任务的总花费，比每token价格更能反映真实开销。",
+      "kind": "metric"
+    },
+    {
+      "en": "advisor tool",
+      "zh": "顾问工具",
+      "def_zh": "让廉价执行模型在任务中途向更强模型咨询的配对机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "preserved thinking",
+      "zh": "保留思考",
+      "def_zh": "跨模型切换时保留或丢弃先前推理块的行为规则。",
+      "kind": "technique"
+    },
+    {
+      "en": "multiagent orchestration",
+      "zh": "多代理编排",
+      "def_zh": "由协调代理拆分任务并分派给多个廉价并行工作代理的模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic的编码代理产品，默认使用Opus模型。",
+      "kind": "product"
+    },
+    {
+      "en": "fast mode",
+      "zh": "快速模式",
+      "def_zh": "以溢价换取更高输出速度的API选项，仅部分模型支持。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "努力等级",
+      "to": "单任务成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "依赖"
+    },
+    {
+      "from": "提示缓存",
+      "to": "单任务成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "顾问工具",
+      "to": "子代理",
+      "rel": "替代"
+    },
+    {
+      "from": "多代理编排",
+      "to": "子代理",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "努力等级",
+      "rel": "用于"
+    },
+    {
+      "from": "保留思考",
+      "to": "提示缓存",
+      "rel": "依赖"
+    },
+    {
+      "from": "快速模式",
+      "to": "Claude Code",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/which-claude-model-should-you-build-with.md"
+}

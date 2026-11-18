@@ -1,0 +1,97 @@
+{
+  "summary_zh": "初创公司用AI智能体自主处理业务流程，节省人力、获取专业能力并兼顾速度与质量。",
+  "concepts": [
+    {
+      "en": "AI agent",
+      "zh": "AI智能体",
+      "def_zh": "能自主管理业务流程、仅需人工监督的AI系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "human-in-the-loop",
+      "zh": "人工在环",
+      "def_zh": "在关键决策点保留人工审核与批准的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic use case",
+      "zh": "智能体用例",
+      "def_zh": "用智能体自动化运营、分析或开发流程的具体场景。",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-purpose agent capability",
+      "zh": "多用途智能体能力",
+      "def_zh": "可复用于多个业务问题的基础智能体能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "modular agent architecture",
+      "zh": "模块化智能体架构",
+      "def_zh": "可替换组件、便于扩展的智能体系统设计。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent observability",
+      "zh": "智能体可观测性",
+      "def_zh": "可追踪智能体决策过程与推理路径的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic提供的大模型平台，用于构建AI智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "startup resource constraint",
+      "zh": "初创资源约束",
+      "def_zh": "初创企业人力、时间与专业能力有限的限制。",
+      "kind": "risk"
+    },
+    {
+      "en": "speed-quality tradeoff",
+      "zh": "速度与质量权衡",
+      "def_zh": "快速交付与保持质量之间难以兼顾的矛盾。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI智能体",
+      "to": "人工在环",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI智能体",
+      "to": "初创资源约束",
+      "rel": "解决"
+    },
+    {
+      "from": "AI智能体",
+      "to": "速度与质量权衡",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude",
+      "to": "AI智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "多用途智能体能力",
+      "to": "智能体用例",
+      "rel": "用于"
+    },
+    {
+      "from": "模块化智能体架构",
+      "to": "多用途智能体能力",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体可观测性",
+      "to": "人工在环",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/building-ai-agents-for-startups.md"
+}

@@ -1,0 +1,102 @@
+{
+  "summary_zh": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的命令行编程代理产品，按 token 计费。",
+      "kind": "product"
+    },
+    {
+      "en": "token cost",
+      "zh": "令牌成本",
+      "def_zh": "一次会话中发送与生成 token 所产生的费用。",
+      "kind": "metric"
+    },
+    {
+      "en": "model selection",
+      "zh": "模型选择",
+      "def_zh": "按任务难度在大小模型间取舍以平衡成本与能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort level",
+      "zh": "努力级别",
+      "def_zh": "控制模型推理投入程度的可调参数，影响成本与质量。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "复用已发送上下文以大幅降低重复输入费用的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "context management",
+      "zh": "上下文管理",
+      "def_zh": "通过清理、压缩与回退保持会话上下文精简的做法。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "承接高输出任务并只回传结果的独立代理实例。",
+      "kind": "technique"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md",
+      "def_zh": "每轮都会注入的项目说明文件，构成固定启动上下文。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP server",
+      "zh": "MCP 服务器",
+      "def_zh": "为代理提供外部工具与数据的服务端，会增加每轮上下文。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型选择",
+      "to": "令牌成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "努力级别",
+      "to": "令牌成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "提示缓存",
+      "to": "令牌成本",
+      "rel": "解决"
+    },
+    {
+      "from": "上下文管理",
+      "to": "令牌成本",
+      "rel": "解决"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文管理",
+      "rel": "用于"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "上下文管理",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP 服务器",
+      "to": "上下文管理",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "令牌成本",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "webinars/claude-code-maximizing-value.md"
+}

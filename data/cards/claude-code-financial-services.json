@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Claude Code 在金融服务中用于分析交易数据、预测及迁移遗留系统。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程助手，用于代码分析与迁移。",
+      "kind": "product"
+    },
+    {
+      "en": "Financial Services",
+      "zh": "金融服务",
+      "def_zh": "银行、交易等金融行业领域。",
+      "kind": "org"
+    },
+    {
+      "en": "Trading Dataset Analysis",
+      "zh": "交易数据分析",
+      "def_zh": "对大规模交易数据进行处理与洞察。",
+      "kind": "technique"
+    },
+    {
+      "en": "Forecasting",
+      "zh": "预测",
+      "def_zh": "基于数据生成未来趋势估计。",
+      "kind": "technique"
+    },
+    {
+      "en": "Legacy System Migration",
+      "zh": "遗留系统迁移",
+      "def_zh": "将旧系统（如 COBOL）迁移至现代云平台。",
+      "kind": "technique"
+    },
+    {
+      "en": "COBOL",
+      "zh": "COBOL",
+      "def_zh": "一种传统编程语言，常见于金融遗留系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "Cloud Migration",
+      "zh": "云迁移",
+      "def_zh": "将应用和数据迁移到云环境。",
+      "kind": "technique"
+    },
+    {
+      "en": "Manual Code Review",
+      "zh": "人工代码审查",
+      "def_zh": "由开发者手动检查代码质量与安全。",
+      "kind": "technique"
+    },
+    {
+      "en": "Development Workflow",
+      "zh": "开发工作流",
+      "def_zh": "软件开发中的流程与协作方式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "交易数据分析",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "预测",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "遗留系统迁移",
+      "rel": "用于"
+    },
+    {
+      "from": "遗留系统迁移",
+      "to": "COBOL",
+      "rel": "依赖"
+    },
+    {
+      "from": "遗留系统迁移",
+      "to": "云迁移",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "人工代码审查",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Code",
+      "to": "开发工作流",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/claude-code-financial-services.md"
+}

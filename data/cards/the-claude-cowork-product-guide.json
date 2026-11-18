@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "运行于桌面应用的知识工作代理，可读写本地文件并跨应用完成多步任务。",
+      "kind": "product"
+    },
+    {
+      "en": "knowledge work agent",
+      "zh": "知识工作代理",
+      "def_zh": "面向知识工作场景、能自主执行多步任务并交付成果的 AI 代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "conversational AI",
+      "zh": "对话式 AI",
+      "def_zh": "以问答交互为主、不直接产出可用交付物的 AI 工具形态。",
+      "kind": "technique"
+    },
+    {
+      "en": "local file access",
+      "zh": "本地文件访问",
+      "def_zh": "代理直接读取和写入用户本地文件的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagents",
+      "zh": "子代理",
+      "def_zh": "由主代理调度、分担子任务的次级代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "long-running work",
+      "zh": "长时任务",
+      "def_zh": "代理持续执行较长时间、跨多步骤完成的工作。",
+      "kind": "technique"
+    },
+    {
+      "en": "scheduled tasks",
+      "zh": "定时任务",
+      "def_zh": "按设定节奏自动重复执行的任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "plugins",
+      "zh": "插件",
+      "def_zh": "为特定知识工作场景扩展代理能力的可复用模块。",
+      "kind": "product"
+    },
+    {
+      "en": "permissions model",
+      "zh": "权限模型",
+      "def_zh": "规定代理可访问哪些文件与应用的安全控制机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "面向编码任务的 Claude 代理产品。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "知识工作代理",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "本地文件访问",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "子代理",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "长时任务",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "定时任务",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "插件",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "权限模型",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "对话式 AI",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/the-claude-cowork-product-guide.md"
+}

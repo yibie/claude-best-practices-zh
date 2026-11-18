@@ -1,0 +1,102 @@
+{
+  "summary_zh": "通过 Skills 按需加载前端设计指导，克服模型分布收敛，提升界面美学与产物质量。",
+  "concepts": [
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "按需加载的指令与领域知识文档，避免常驻上下文开销。",
+      "kind": "product"
+    },
+    {
+      "en": "Distributional Convergence",
+      "zh": "分布收敛",
+      "def_zh": "模型采样偏向训练数据高概率中心，导致输出同质化。",
+      "kind": "risk"
+    },
+    {
+      "en": "Context Engineering",
+      "zh": "上下文工程",
+      "def_zh": "在合适高度组织提示与上下文，平衡具体与抽象。",
+      "kind": "technique"
+    },
+    {
+      "en": "Frontend Design Skill",
+      "zh": "前端设计技能",
+      "def_zh": "针对字体、色彩、动效与背景的可复用设计指导技能。",
+      "kind": "technique"
+    },
+    {
+      "en": "Steerability",
+      "zh": "可引导性",
+      "def_zh": "模型对提示指导敏感、能按约束调整输出的能力。",
+      "kind": "metric"
+    },
+    {
+      "en": "Artifacts",
+      "zh": "产物",
+      "def_zh": "Claude 在对话旁生成的可交互、可编辑内容。",
+      "kind": "product"
+    },
+    {
+      "en": "Web Artifacts Builder",
+      "zh": "网页产物构建器",
+      "def_zh": "用多文件与现代前端工具构建并打包为单文件的技能。",
+      "kind": "product"
+    },
+    {
+      "en": "AI Slop Aesthetic",
+      "zh": "AI 套路美学",
+      "def_zh": "通用字体、紫色渐变等可识别的同质化 AI 设计风格。",
+      "kind": "risk"
+    },
+    {
+      "en": "Prompt Altitude",
+      "zh": "提示高度",
+      "def_zh": "提示的具体程度，需避免硬编码与空泛两个极端。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "分布收敛",
+      "rel": "解决"
+    },
+    {
+      "from": "前端设计技能",
+      "to": "AI 套路美学",
+      "rel": "解决"
+    },
+    {
+      "from": "前端设计技能",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "网页产物构建器",
+      "to": "产物",
+      "rel": "用于"
+    },
+    {
+      "from": "网页产物构建器",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "提示高度",
+      "to": "可引导性",
+      "rel": "衡量"
+    },
+    {
+      "from": "分布收敛",
+      "to": "可引导性",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/improving-frontend-design-through-skills.md"
+}

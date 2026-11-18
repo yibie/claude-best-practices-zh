@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 团队用 HTML 替代 Markdown 生成更丰富、易读、可分享的输出。",
+  "concepts": [
+    {
+      "en": "HTML",
+      "zh": "HTML",
+      "def_zh": "超文本标记语言，可承载表格、图形、交互等丰富信息。",
+      "kind": "technique"
+    },
+    {
+      "en": "Markdown",
+      "zh": "Markdown",
+      "def_zh": "轻量标记语言，简单便携但表达力有限。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可读取文件系统与外部上下文。",
+      "kind": "product"
+    },
+    {
+      "en": "HTML artifact",
+      "zh": "HTML 制品",
+      "def_zh": "由 Claude 生成的独立 HTML 文件，用于展示或交互。",
+      "kind": "product"
+    },
+    {
+      "en": "information density",
+      "zh": "信息密度",
+      "def_zh": "单位篇幅内可承载的信息量，HTML 远高于 Markdown。",
+      "kind": "metric"
+    },
+    {
+      "en": "visual clarity",
+      "zh": "视觉清晰度",
+      "def_zh": "通过布局、图表等提升文档可读性的程度。",
+      "kind": "metric"
+    },
+    {
+      "en": "two-way interaction",
+      "zh": "双向交互",
+      "def_zh": "文档内可调节参数并导出回提示词的双向操作。",
+      "kind": "technique"
+    },
+    {
+      "en": "data ingestion",
+      "zh": "数据摄取",
+      "def_zh": "Claude Code 读取文件、MCP、浏览器等上下文的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "custom editing interface",
+      "zh": "自定义编辑界面",
+      "def_zh": "为特定数据临时生成的单文件 HTML 编辑器。",
+      "kind": "technique"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次可处理的 token 总量，影响输出格式选择。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "HTML",
+      "to": "Markdown",
+      "rel": "替代"
+    },
+    {
+      "from": "HTML 制品",
+      "to": "HTML",
+      "rel": "属于"
+    },
+    {
+      "from": "HTML",
+      "to": "信息密度",
+      "rel": "衡量"
+    },
+    {
+      "from": "HTML",
+      "to": "视觉清晰度",
+      "rel": "衡量"
+    },
+    {
+      "from": "HTML",
+      "to": "双向交互",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "数据摄取",
+      "rel": "启用"
+    },
+    {
+      "from": "自定义编辑界面",
+      "to": "双向交互",
+      "rel": "依赖"
+    },
+    {
+      "from": "HTML",
+      "to": "上下文窗口",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md"
+}

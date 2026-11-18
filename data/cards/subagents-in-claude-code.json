@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+  "concepts": [
+    {
+      "en": "subagent",
+      "zh": "子代理",
+      "def_zh": "拥有独立上下文窗口、只回传结果的隔离 Claude 实例",
+      "kind": "technique"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次会话可容纳并处理的信息范围",
+      "kind": "technique"
+    },
+    {
+      "en": "context isolation",
+      "zh": "上下文隔离",
+      "def_zh": "将子任务放入独立上下文以避免主会话被污染",
+      "kind": "technique"
+    },
+    {
+      "en": "parallel execution",
+      "zh": "并行执行",
+      "def_zh": "多个无依赖子任务同时运行以缩短总耗时",
+      "kind": "technique"
+    },
+    {
+      "en": "custom subagent",
+      "zh": "自定义子代理",
+      "def_zh": "以 Markdown 定义、可被自动委派的专用代理",
+      "kind": "product"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 指令文件",
+      "def_zh": "每次会话加载、规定代理使用策略的项目配置文件",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "按需加载、可复用的多步骤工作流封装",
+      "kind": "product"
+    },
+    {
+      "en": "Hooks",
+      "zh": "钩子",
+      "def_zh": "在生命周期事件点自动执行的脚本或提示",
+      "kind": "technique"
+    },
+    {
+      "en": "agent teams",
+      "zh": "代理团队",
+      "def_zh": "跨会话协作、可相互通信的多代理编排方式",
+      "kind": "product"
+    },
+    {
+      "en": "token cost",
+      "zh": "令牌成本",
+      "def_zh": "上下文与调用所消耗的 token 带来的开销",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "子代理",
+      "to": "上下文窗口",
+      "rel": "依赖"
+    },
+    {
+      "from": "子代理",
+      "to": "上下文隔离",
+      "rel": "启用"
+    },
+    {
+      "from": "子代理",
+      "to": "并行执行",
+      "rel": "启用"
+    },
+    {
+      "from": "自定义子代理",
+      "to": "子代理",
+      "rel": "属于"
+    },
+    {
+      "from": "CLAUDE.md 指令文件",
+      "to": "子代理",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "子代理",
+      "rel": "用于"
+    },
+    {
+      "from": "钩子",
+      "to": "子代理",
+      "rel": "用于"
+    },
+    {
+      "from": "代理团队",
+      "to": "子代理",
+      "rel": "替代"
+    }
+  ],
+  "rel": "articles/subagents-in-claude-code.md"
+}

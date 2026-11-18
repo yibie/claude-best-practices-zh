@@ -1,0 +1,103 @@
+{
+  "summary_zh": "Anthropic 副 CISO 阐述在 AI 编写 80% 代码的 SDLC 中，如何通过左移安全、身份边界、自动化审查与人工治理保障安全。",
+  "concepts": [
+    {
+      "en": "AI-native SDLC",
+      "zh": "AI 原生软件开发生命周期",
+      "def_zh": "由 AI 代理深度参与规划、编码、测试、部署与监控的软件开发流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Shift Left Security",
+      "zh": "安全左移",
+      "def_zh": "在开发早期阶段嵌入安全控制，降低修复成本与风险。",
+      "kind": "technique"
+    },
+    {
+      "en": "Blast Radius Containment",
+      "zh": "爆炸半径控制",
+      "def_zh": "通过硬性身份与权限边界限制代理可访问和影响的范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agentic Code Review",
+      "zh": "代理式代码审查",
+      "def_zh": "由多个专用 AI 代理自动审查代码变更并验证发现。",
+      "kind": "technique"
+    },
+    {
+      "en": "Human-in-the-Loop",
+      "zh": "人工在环",
+      "def_zh": "在关键决策点保留人类审批与问责的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Identity and Access Model",
+      "zh": "代理身份与访问模型",
+      "def_zh": "为每个代理分配单一用途身份和最小权限的治理框架。",
+      "kind": "technique"
+    },
+    {
+      "en": "Prompt Injection",
+      "zh": "提示注入",
+      "def_zh": "攻击者通过不可信输入操纵 AI 代理执行恶意指令的风险。",
+      "kind": "risk"
+    },
+    {
+      "en": "Supply Chain Poisoning",
+      "zh": "供应链投毒",
+      "def_zh": "攻击者污染依赖或输入源，使代理将其当作可信内容处理。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的代理式编码工具，用于生成、审查与迁移代码。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Tag",
+      "zh": "Claude Tag",
+      "def_zh": "Anthropic 内部用于自动合并代码与响应 CI/CD 故障的代理系统。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "安全左移",
+      "to": "AI 原生软件开发生命周期",
+      "rel": "用于"
+    },
+    {
+      "from": "爆炸半径控制",
+      "to": "代理身份与访问模型",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理式代码审查",
+      "to": "人工在环",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理身份与访问模型",
+      "to": "提示注入",
+      "rel": "解决"
+    },
+    {
+      "from": "代理身份与访问模型",
+      "to": "供应链投毒",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Code",
+      "to": "代理式代码审查",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "AI 原生软件开发生命周期",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md"
+}

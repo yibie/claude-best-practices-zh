@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Datadog 用 Temper 让智能体产出可验证规格而非代码，实现软件工业化。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，用于生成与修改生产代码。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude 托管智能体",
+      "def_zh": "可长时间运行、由平台托管会话与生命周期的智能体服务。",
+      "kind": "product"
+    },
+    {
+      "en": "machine tool",
+      "zh": "机床",
+      "def_zh": "制造中生产精确可重复零件的工具，是工业化的基础。",
+      "kind": "technique"
+    },
+    {
+      "en": "Temper",
+      "zh": "Temper",
+      "def_zh": "Datadog 的通用机床式内核，智能体产出规格并由内核验证部署。",
+      "kind": "product"
+    },
+    {
+      "en": "specification",
+      "zh": "规格",
+      "def_zh": "描述系统行为、数据与授权的机器可解析契约，可被证明并执行。",
+      "kind": "technique"
+    },
+    {
+      "en": "deterministic kernel",
+      "zh": "确定性内核",
+      "def_zh": "在 LLM 之外读取规格、验证并部署运行系统的执行核心。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification gap",
+      "zh": "验证缺口",
+      "def_zh": "智能体生成速度远超人工审查，生成物与已证明物之间的差距。",
+      "kind": "risk"
+    },
+    {
+      "en": "dark factory",
+      "zh": "黑灯工厂",
+      "def_zh": "智能体在无人值守的虚拟工厂中持续工作的软件流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "control logic",
+      "zh": "控制逻辑",
+      "def_zh": "围绕数据库 API 的状态、变更策略与生命周期转换逻辑。",
+      "kind": "technique"
+    },
+    {
+      "en": "mechanization and industrialization",
+      "zh": "机械化与工业化",
+      "def_zh": "智能体承担更多工作并使工作可重复、可验证、可扩展。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Claude 托管智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "Temper",
+      "to": "规格",
+      "rel": "依赖"
+    },
+    {
+      "from": "Temper",
+      "to": "确定性内核",
+      "rel": "属于"
+    },
+    {
+      "from": "规格",
+      "to": "验证缺口",
+      "rel": "解决"
+    },
+    {
+      "from": "黑灯工厂",
+      "to": "Temper",
+      "rel": "依赖"
+    },
+    {
+      "from": "控制逻辑",
+      "to": "规格",
+      "rel": "用于"
+    },
+    {
+      "from": "机床",
+      "to": "机械化与工业化",
+      "rel": "启用"
+    },
+    {
+      "from": "Temper",
+      "to": "机床",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md"
+}

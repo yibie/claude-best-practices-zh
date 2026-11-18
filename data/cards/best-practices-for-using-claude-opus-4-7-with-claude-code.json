@@ -1,0 +1,103 @@
+{
+  "summary_zh": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+  "concepts": [
+    {
+      "en": "Claude Opus 4.7",
+      "zh": "Claude Opus 4.7",
+      "def_zh": "面向编码与长时智能体任务的高能力大模型版本。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的命令行编码智能体产品。",
+      "kind": "product"
+    },
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "控制模型推理投入与延迟成本权衡的档位设置。",
+      "kind": "technique"
+    },
+    {
+      "en": "adaptive thinking",
+      "zh": "自适应思考",
+      "def_zh": "模型按步骤自行决定是否及投入多少思考的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "extended thinking",
+      "zh": "扩展思考",
+      "def_zh": "模型在回答前进行额外推理步骤的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "auto mode",
+      "zh": "自动模式",
+      "def_zh": "减少人工确认、让模型自主执行任务的运行模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "由主智能体派生、并行处理子任务的智能体实例。",
+      "kind": "technique"
+    },
+    {
+      "en": "token efficiency",
+      "zh": "令牌效率",
+      "def_zh": "单位任务所消耗令牌与产出质量之间的比率。",
+      "kind": "metric"
+    },
+    {
+      "en": "overthinking",
+      "zh": "过度思考",
+      "def_zh": "模型在简单步骤上耗费过多推理资源的倾向。",
+      "kind": "risk"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编码",
+      "def_zh": "由模型自主规划并执行多步编码任务的工作方式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Claude Opus 4.7",
+      "rel": "用于"
+    },
+    {
+      "from": "努力等级",
+      "to": "Claude Opus 4.7",
+      "rel": "用于"
+    },
+    {
+      "from": "自适应思考",
+      "to": "扩展思考",
+      "rel": "替代"
+    },
+    {
+      "from": "自适应思考",
+      "to": "过度思考",
+      "rel": "解决"
+    },
+    {
+      "from": "自动模式",
+      "to": "智能体编码",
+      "rel": "用于"
+    },
+    {
+      "from": "子智能体",
+      "to": "智能体编码",
+      "rel": "属于"
+    },
+    {
+      "from": "令牌效率",
+      "to": "努力等级",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md"
+}

@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向非开发者的 Claude 协作工作产品，设定目标即可交付成品。",
+      "kind": "product"
+    },
+    {
+      "en": "Plugin",
+      "zh": "插件",
+      "def_zh": "打包技能、连接器、斜杠命令与子代理的可复用定制单元。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "以文件形式定义的可复用能力模块，供 Claude 按需调用。",
+      "kind": "technique"
+    },
+    {
+      "en": "Connectors",
+      "zh": "连接器",
+      "def_zh": "将 Claude 接入外部工具与数据源的集成组件。",
+      "kind": "technique"
+    },
+    {
+      "en": "Slash Commands",
+      "zh": "斜杠命令",
+      "def_zh": "用户以斜杠触发的预设指令，快速调用特定工作流。",
+      "kind": "technique"
+    },
+    {
+      "en": "Sub-agents",
+      "zh": "子代理",
+      "def_zh": "插件内定义的专用代理，分担特定子任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Plugin Marketplace",
+      "zh": "插件市场",
+      "def_zh": "集中浏览、安装与分享插件的分发渠道。",
+      "kind": "product"
+    },
+    {
+      "en": "Research Preview",
+      "zh": "研究预览",
+      "def_zh": "面向付费用户开放、功能尚在迭代的早期发布形态。",
+      "kind": "org"
+    },
+    {
+      "en": "Org-wide Sharing",
+      "zh": "组织级共享",
+      "def_zh": "在团队或企业范围内统一分发与管理插件的能力。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "插件",
+      "rel": "启用"
+    },
+    {
+      "from": "插件",
+      "to": "技能",
+      "rel": "属于"
+    },
+    {
+      "from": "插件",
+      "to": "连接器",
+      "rel": "属于"
+    },
+    {
+      "from": "插件",
+      "to": "斜杠命令",
+      "rel": "属于"
+    },
+    {
+      "from": "插件",
+      "to": "子代理",
+      "rel": "属于"
+    },
+    {
+      "from": "插件市场",
+      "to": "插件",
+      "rel": "用于"
+    },
+    {
+      "from": "组织级共享",
+      "to": "插件",
+      "rel": "用于"
+    },
+    {
+      "from": "研究预览",
+      "to": "Claude Cowork",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/cowork-plugins.md"
+}

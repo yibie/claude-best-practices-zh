@@ -1,0 +1,108 @@
+{
+  "summary_zh": "智能体编码使 CI 负载激增 25 倍，Anthropic 重构测试影响分析服务实现水平扩展。",
+  "concepts": [
+    {
+      "en": "agentic coding",
+      "zh": "智能体编码",
+      "def_zh": "由 AI 智能体大规模生成与审查代码的开发方式",
+      "kind": "technique"
+    },
+    {
+      "en": "test impact analysis",
+      "zh": "测试影响分析",
+      "def_zh": "依据历史结果与包相关性决定每次变更运行哪些测试",
+      "kind": "technique"
+    },
+    {
+      "en": "test selection service",
+      "zh": "测试选择服务",
+      "def_zh": "为每个 PR 挑选有效测试集合的确定性服务",
+      "kind": "product"
+    },
+    {
+      "en": "listener",
+      "zh": "监听器",
+      "def_zh": "记录每次 CI 运行测试结果的组件",
+      "kind": "technique"
+    },
+    {
+      "en": "selector",
+      "zh": "选择器",
+      "def_zh": "读取测试历史并决定 PR 运行哪些测试的组件",
+      "kind": "technique"
+    },
+    {
+      "en": "horizontal scaling",
+      "zh": "水平扩展",
+      "def_zh": "通过增加无状态工作节点分担负载的扩展方式",
+      "kind": "technique"
+    },
+    {
+      "en": "stateless architecture",
+      "zh": "无状态架构",
+      "def_zh": "进程不持有状态、可任意分片与重启的架构",
+      "kind": "technique"
+    },
+    {
+      "en": "in-memory data store",
+      "zh": "内存数据存储",
+      "def_zh": "以日志形式承接结果写入并支持快速查询的存储",
+      "kind": "technique"
+    },
+    {
+      "en": "listener lag",
+      "zh": "监听器滞后",
+      "def_zh": "测试结果记录落后于 PR 队列的程度",
+      "kind": "metric"
+    },
+    {
+      "en": "CI job volume",
+      "zh": "CI 任务量",
+      "def_zh": "单位时间内 CI 作业数量的增长规模",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体编码",
+      "to": "CI 任务量",
+      "rel": "衡量"
+    },
+    {
+      "from": "测试影响分析",
+      "to": "测试选择服务",
+      "rel": "启用"
+    },
+    {
+      "from": "测试选择服务",
+      "to": "监听器",
+      "rel": "依赖"
+    },
+    {
+      "from": "测试选择服务",
+      "to": "选择器",
+      "rel": "依赖"
+    },
+    {
+      "from": "监听器滞后",
+      "to": "测试选择服务",
+      "rel": "风险"
+    },
+    {
+      "from": "水平扩展",
+      "to": "无状态架构",
+      "rel": "依赖"
+    },
+    {
+      "from": "无状态架构",
+      "to": "内存数据存储",
+      "rel": "依赖"
+    },
+    {
+      "from": "水平扩展",
+      "to": "监听器滞后",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md"
+}

@@ -1,0 +1,80 @@
+{
+  "summary_zh": "介绍在企业职能中部署 Claude Cowork 的用例、试点结构与规模化最佳实践。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向企业职能协作与工作流自动化的 Claude 产品。",
+      "kind": "product"
+    },
+    {
+      "en": "enterprise deployment",
+      "zh": "企业部署",
+      "def_zh": "将 AI 产品在组织业务职能中落地并推广的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "pilot structure",
+      "zh": "试点结构",
+      "def_zh": "小范围验证 AI 用例并评估效果的组织安排。",
+      "kind": "technique"
+    },
+    {
+      "en": "use case selection",
+      "zh": "用例选择",
+      "def_zh": "挑选适合 AI 落地的高价值业务场景的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "scaling best practices",
+      "zh": "规模化最佳实践",
+      "def_zh": "把试点成功经验推广到全组织的规范做法。",
+      "kind": "technique"
+    },
+    {
+      "en": "business function",
+      "zh": "业务职能",
+      "def_zh": "财务、法务、销售、产品等组织内职能单元。",
+      "kind": "org"
+    },
+    {
+      "en": "production rollout",
+      "zh": "生产环境推广",
+      "def_zh": "将验证过的 AI 方案投入正式业务运行。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "企业部署",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "试点结构",
+      "to": "企业部署",
+      "rel": "属于"
+    },
+    {
+      "from": "用例选择",
+      "to": "试点结构",
+      "rel": "依赖"
+    },
+    {
+      "from": "规模化最佳实践",
+      "to": "生产环境推广",
+      "rel": "用于"
+    },
+    {
+      "from": "企业部署",
+      "to": "业务职能",
+      "rel": "用于"
+    },
+    {
+      "from": "规模化最佳实践",
+      "to": "试点结构",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "guides/deploying-claude-across-your-organization.md"
+}

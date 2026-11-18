@@ -1,0 +1,102 @@
+{
+  "summary_zh": "产品经理借助 Claude 与托管智能体，从协调事务转向原型构建与工艺打磨。",
+  "concepts": [
+    {
+      "en": "Claude Managed Agents",
+      "zh": "托管智能体",
+      "def_zh": "可组合 API，用于构建和部署云端托管智能体。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "用于编写、运行和交付自定义智能体的开发工具。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向开放式研究与探索的协作式对话产品。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic prototyping",
+      "zh": "智能体原型开发",
+      "def_zh": "基于预发布 API 快速搭建端到端智能体原型。",
+      "kind": "technique"
+    },
+    {
+      "en": "job to be done",
+      "zh": "待办任务",
+      "def_zh": "用户需要完成的具体工作目标，驱动智能体定制。",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-agent fan-out",
+      "zh": "多智能体并行分发",
+      "def_zh": "将研究任务分发给多个智能体并行执行并汇总。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent memory",
+      "zh": "智能体记忆",
+      "def_zh": "智能体保留历史运行结果并持续积累认知的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "product craft",
+      "zh": "产品工艺",
+      "def_zh": "产品经理投入用户研究与产品打磨的核心创造工作。",
+      "kind": "role"
+    },
+    {
+      "en": "operational long tail",
+      "zh": "运营长尾",
+      "def_zh": "零散、重复、易积压的运营性工作任务。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "托管智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "智能体原型开发",
+      "to": "托管智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "多智能体并行分发",
+      "to": "托管智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体记忆",
+      "to": "托管智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "托管智能体",
+      "to": "运营长尾",
+      "rel": "解决"
+    },
+    {
+      "from": "托管智能体",
+      "to": "产品工艺",
+      "rel": "启用"
+    },
+    {
+      "from": "待办任务",
+      "to": "托管智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "待办任务",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/product-development-in-the-agentic-era.md"
+}

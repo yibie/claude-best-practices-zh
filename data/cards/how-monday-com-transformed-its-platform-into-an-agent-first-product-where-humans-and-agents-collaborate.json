@@ -1,0 +1,108 @@
+{
+  "summary_zh": "monday.com 以 Claude 为核心重构平台，从附加 AI 功能转向人类与智能体协作的智能体优先产品。",
+  "concepts": [
+    {
+      "en": "agent-first product",
+      "zh": "智能体优先产品",
+      "def_zh": "以智能体为核心协作单元重新设计的产品形态",
+      "kind": "technique"
+    },
+    {
+      "en": "human-agent collaboration",
+      "zh": "人机协作",
+      "def_zh": "人类与 AI 智能体在同一工作流中协同完成任务",
+      "kind": "technique"
+    },
+    {
+      "en": "AI dust",
+      "zh": "AI 点缀",
+      "def_zh": "仅在既有流程上叠加 AI 功能而不改变产品内核",
+      "kind": "risk"
+    },
+    {
+      "en": "monday Agents",
+      "zh": "monday 智能体",
+      "def_zh": "monday 平台内可命名、分配任务的自定义智能体",
+      "kind": "product"
+    },
+    {
+      "en": "Bring Your Own Agent (BYOA)",
+      "zh": "自带智能体",
+      "def_zh": "允许外部构建的智能体作为团队成员接入平台",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude 托管智能体",
+      "def_zh": "在客户自有环境中执行任务的 Claude 托管智能体服务",
+      "kind": "product"
+    },
+    {
+      "en": "Pre-built Agents",
+      "zh": "预构建智能体",
+      "def_zh": "智能体商店中按职能封装的即用型智能体",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Coding integration",
+      "zh": "Claude 编码集成",
+      "def_zh": "在业务看板中规划并执行编码任务的集成能力",
+      "kind": "product"
+    },
+    {
+      "en": "governance and permissions",
+      "zh": "治理与权限",
+      "def_zh": "控制智能体访问范围与行为边界的信任机制",
+      "kind": "technique"
+    },
+    {
+      "en": "agent layer infrastructure",
+      "zh": "智能体基础设施",
+      "def_zh": "支撑智能体规模化运行的数据与后端底座",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体优先产品",
+      "to": "人机协作",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI 点缀",
+      "to": "智能体优先产品",
+      "rel": "替代"
+    },
+    {
+      "from": "monday 智能体",
+      "to": "Claude 托管智能体",
+      "rel": "依赖"
+    },
+    {
+      "from": "自带智能体",
+      "to": "Claude 托管智能体",
+      "rel": "启用"
+    },
+    {
+      "from": "预构建智能体",
+      "to": "monday 智能体",
+      "rel": "属于"
+    },
+    {
+      "from": "治理与权限",
+      "to": "人机协作",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体基础设施",
+      "to": "智能体优先产品",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 编码集成",
+      "to": "Claude 托管智能体",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate.md"
+}

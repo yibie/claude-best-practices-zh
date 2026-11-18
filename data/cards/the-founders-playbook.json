@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 发布创始人手册，指导如何用 AI 构建 AI 原生初创公司。",
+  "concepts": [
+    {
+      "en": "AI-native startup",
+      "zh": "AI 原生初创公司",
+      "def_zh": "从第一天起围绕 AI 架构公司并运营的初创企业。",
+      "kind": "org"
+    },
+    {
+      "en": "founder as orchestrator",
+      "zh": "创始人即编排者",
+      "def_zh": "创始人从执行者转变为协调 AI 代理完成工作的角色。",
+      "kind": "role"
+    },
+    {
+      "en": "startup lifecycle stages",
+      "zh": "初创生命周期阶段",
+      "def_zh": "创意、MVP、发布、规模化四个核心阶段。",
+      "kind": "technique"
+    },
+    {
+      "en": "problem hypothesis validation",
+      "zh": "问题假设验证",
+      "def_zh": "用 AI 验证待解决问题是否真实存在的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "customer discovery",
+      "zh": "客户发现",
+      "def_zh": "借助 AI 进行用户访谈与需求挖掘的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "technical debt",
+      "zh": "技术债务",
+      "def_zh": "AI 生成代码库若缺乏架构与安全实践而累积的维护负担。",
+      "kind": "risk"
+    },
+    {
+      "en": "product-market fit",
+      "zh": "产品市场契合",
+      "def_zh": "产品真正满足市场需求，需与早期炒作区分。",
+      "kind": "metric"
+    },
+    {
+      "en": "agentic workflows",
+      "zh": "代理式工作流",
+      "def_zh": "由 AI 代理自主执行任务、替代创始人注意力的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向团队协作场景的 Claude 产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "用于编写和交付生产代码的 Claude 编程产品。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI 原生初创公司",
+      "to": "创始人即编排者",
+      "rel": "依赖"
+    },
+    {
+      "from": "初创生命周期阶段",
+      "to": "问题假设验证",
+      "rel": "属于"
+    },
+    {
+      "from": "初创生命周期阶段",
+      "to": "客户发现",
+      "rel": "属于"
+    },
+    {
+      "from": "技术债务",
+      "to": "产品市场契合",
+      "rel": "风险"
+    },
+    {
+      "from": "代理式工作流",
+      "to": "创始人即编排者",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "技术债务",
+      "rel": "风险"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "代理式工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "产品市场契合",
+      "to": "初创生命周期阶段",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/the-founders-playbook.md"
+}

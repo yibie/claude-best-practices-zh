@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 团队定义循环为智能体重复工作直至满足停止条件，并分类为轮次、目标、时间与主动循环。",
+  "concepts": [
+    {
+      "en": "loop engineering",
+      "zh": "循环工程",
+      "def_zh": "设计智能体重复工作循环而非单次提示的工程方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic loop",
+      "zh": "智能体循环",
+      "def_zh": "智能体反复收集上下文、行动、验证直至完成的循环。",
+      "kind": "technique"
+    },
+    {
+      "en": "turn-based loop",
+      "zh": "轮次循环",
+      "def_zh": "由用户提示触发、每轮人工引导的智能体循环。",
+      "kind": "technique"
+    },
+    {
+      "en": "goal-based loop",
+      "zh": "目标循环",
+      "def_zh": "设定可验证完成标准与轮次上限的迭代循环。",
+      "kind": "technique"
+    },
+    {
+      "en": "time-based loop",
+      "zh": "时间循环",
+      "def_zh": "按固定时间间隔触发重复工作的循环。",
+      "kind": "technique"
+    },
+    {
+      "en": "proactive loop",
+      "zh": "主动循环",
+      "def_zh": "由事件或计划触发、无需实时人工介入的循环。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "以 SKILL.md 编码验证步骤供智能体自检的机制。",
+      "kind": "product"
+    },
+    {
+      "en": "dynamic workflows",
+      "zh": "动态工作流",
+      "def_zh": "编排多个子智能体并行处理任务的机制。",
+      "kind": "product"
+    },
+    {
+      "en": "token usage",
+      "zh": "令牌用量",
+      "def_zh": "循环运行消耗的模型令牌量，需通过边界控制管理。",
+      "kind": "metric"
+    },
+    {
+      "en": "verification",
+      "zh": "验证",
+      "def_zh": "智能体检查自身工作是否达到完成标准的过程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "循环工程",
+      "to": "智能体循环",
+      "rel": "依赖"
+    },
+    {
+      "from": "轮次循环",
+      "to": "智能体循环",
+      "rel": "属于"
+    },
+    {
+      "from": "目标循环",
+      "to": "智能体循环",
+      "rel": "属于"
+    },
+    {
+      "from": "时间循环",
+      "to": "智能体循环",
+      "rel": "属于"
+    },
+    {
+      "from": "主动循环",
+      "to": "智能体循环",
+      "rel": "属于"
+    },
+    {
+      "from": "技能",
+      "to": "验证",
+      "rel": "用于"
+    },
+    {
+      "from": "动态工作流",
+      "to": "主动循环",
+      "rel": "用于"
+    },
+    {
+      "from": "令牌用量",
+      "to": "智能体循环",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/getting-started-with-loops.md"
+}

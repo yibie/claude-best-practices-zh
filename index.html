@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Claude 最佳实践 · 中文知识库</title>
+<style>
+  :root{--bg:#0d0f13;--panel:#151922;--line:#232a36;--fg:#e8eaed;--muted:#8b93a1;--accent:#d97757}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 20% -10%, #1b2230 0%, var(--bg) 60%);color:var(--fg);
+       font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",sans-serif;min-height:100vh}
+  .wrap{max-width:1020px;margin:0 auto;padding:64px 24px 80px}
+  .kicker{color:var(--accent);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  h1{font-size:40px;line-height:1.25;margin:12px 0 16px;font-weight:700}
+  .lead{color:var(--muted);font-size:17px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:36px 0 40px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .stat b{display:block;font-size:26px;font-weight:700}
+  .stat span{color:var(--muted);font-size:13px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  a.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;
+         text-decoration:none;color:inherit;transition:.18s transform,.18s border-color}
+  a.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  a.card h2{margin:0 0 6px;font-size:17px}
+  a.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+  .tag{display:inline-block;font-size:11px;color:var(--accent);border:1px solid rgba(217,119,87,.4);
+       border-radius:999px;padding:1px 8px;margin-bottom:10px}
+  footer{margin-top:56px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Claude Best Practices · 中文知识库</div>
+  <h1>把 231 条官方最佳实践<br/>编译成一张能走通的知识网</h1>
+  <p class="lead">全文抓取 claude.com 的资源库，173 篇长文整篇译为中文，再用 LLM Wiki 的方式拆成原子概念、建立双向链接，最后生成可交互的思维导图与知识图谱。</p>
+
+  <div class="stats">
+    <div class="stat"><b>231</b><span>官方资源条目</span></div>
+    <div class="stat"><b>173</b><span>篇全文翻译</span></div>
+    <div class="stat"><b>100</b><span>概念条目</span></div>
+    <div class="stat"><b>202</b><span>概念关系</span></div>
+    <div class="stat"><b>95 万</b><span>中文字数</span></div>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="mindmap/graph.html">
+      <span class="tag">Interaction</span>
+      <h2>交互式知识图谱 →</h2>
+      <p>力导向图展示 100 个概念与 202 条关系，按 11 个分类着色，点节点看定义与关联。</p>
+    </a>
+    <a class="card" href="mindmap/mindmap.html">
+      <span class="tag">Mind Map</span>
+      <h2>思维导图 →</h2>
+      <p>按分类折叠展开的层级导图，适合从上到下快速建立主题地图。</p>
+    </a>
+    <a class="card" href="wiki/INDEX.md">
+      <span class="tag">Wiki</span>
+      <h2>概念维基 →</h2>
+      <p>100 个原子条目：摘要、关键做法、在 Claude 里的用法、常见误区、来源账本。</p>
+    </a>
+    <a class="card" href="docs/README.md">
+      <span class="tag">Reading</span>
+      <h2>中文译文目录 →</h2>
+      <p>173 篇全文译文，按日期与产品排列，每篇都链回英文原文便于对照。</p>
+    </a>
+    <a class="card" href="https://github.com/yibie/claude-best-practices-zh">
+      <span class="tag">Source</span>
+      <h2>GitHub 仓库 →</h2>
+      <p>原文快照、译文、维基与生成脚本，可复现、可增量更新。</p>
+    </a>
+    <a class="card" href="mindmap/knowledge-graph.mmd">
+      <span class="tag">Mermaid</span>
+      <h2>图谱源码 →</h2>
+      <p>Mermaid 全图，可粘进 Obsidian、Notion 或任何支持 Mermaid 的工具。</p>
+    </a>
+  </div>
+
+  <footer>
+    原文版权归 Anthropic PBC 所有，本页为个人学习用途的非官方中文整理，详见 <a href="NOTICE.md">NOTICE</a>。
+  </footer>
+</div>
+</body>
+</html>

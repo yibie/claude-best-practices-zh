@@ -1,0 +1,86 @@
+{
+  "summary_zh": "Claude Science 产品指南：面向生命科学实验数字化步骤的应用，强调可追溯与可复现。",
+  "concepts": [
+    {
+      "en": "Claude Science",
+      "zh": "Claude Science",
+      "def_zh": "面向生命科学全流程数字步骤的科研应用，结果可追溯可复现。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude surface",
+      "zh": "Claude 使用界面",
+      "def_zh": "Claude 的不同产品入口，按场景选择使用。",
+      "kind": "product"
+    },
+    {
+      "en": "toil tax",
+      "zh": "重复劳动税",
+      "def_zh": "实验中非核心重复性工作带来的效率损耗。",
+      "kind": "risk"
+    },
+    {
+      "en": "reproducibility",
+      "zh": "可复现性",
+      "def_zh": "实验结果可被独立重复验证的能力。",
+      "kind": "metric"
+    },
+    {
+      "en": "traceability",
+      "zh": "可追溯性",
+      "def_zh": "实验步骤与结果可被完整记录和回溯的能力。",
+      "kind": "metric"
+    },
+    {
+      "en": "research organization deployment",
+      "zh": "科研机构部署",
+      "def_zh": "在科研组织中落地 AI 工具的规划与实施过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "rollout roadmap",
+      "zh": "推广路线图",
+      "def_zh": "分阶段在组织内推广产品的计划。",
+      "kind": "technique"
+    },
+    {
+      "en": "life science workflow",
+      "zh": "生命科学工作流",
+      "def_zh": "生命科学实验从设计到分析的数字化流程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Science",
+      "to": "重复劳动税",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Science",
+      "to": "可追溯性",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude Science",
+      "to": "可复现性",
+      "rel": "衡量"
+    },
+    {
+      "from": "科研机构部署",
+      "to": "推广路线图",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 使用界面",
+      "to": "生命科学工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "科研机构部署",
+      "to": "Claude Science",
+      "rel": "启用"
+    }
+  ],
+  "rel": "guides/claude-science-product-guide.md"
+}

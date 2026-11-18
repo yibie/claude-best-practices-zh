@@ -1,0 +1,103 @@
+{
+  "summary_zh": "JetBrains 用私有仓库评测前沿模型，按任务成本选用 Claude Fable 5，并以系统化安全网保障部署。",
+  "concepts": [
+    {
+      "en": "frontier model",
+      "zh": "前沿模型",
+      "def_zh": "能力处于当前最先进水平的通用大模型。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Fable 5",
+      "zh": "Claude Fable 5",
+      "def_zh": "Anthropic 面向高难度推理与长程任务的前沿模型。",
+      "kind": "product"
+    },
+    {
+      "en": "private repository evaluation",
+      "zh": "私有仓库评测",
+      "def_zh": "用企业自有代码库检验模型真实任务表现的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "cost per task",
+      "zh": "单任务成本",
+      "def_zh": "完成一个实际任务的总花费，而非按 token 计价。",
+      "kind": "metric"
+    },
+    {
+      "en": "pass rate",
+      "zh": "通过率",
+      "def_zh": "模型生成代码通过测试用例的比例。",
+      "kind": "metric"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "由智能体自主规划、编写并验证代码的开发方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "white-box testing",
+      "zh": "白盒测试",
+      "def_zh": "在可见内部实现的前提下探测产品漏洞的测试。",
+      "kind": "technique"
+    },
+    {
+      "en": "data retention",
+      "zh": "数据保留",
+      "def_zh": "服务方对用户交互数据的存储与审查策略。",
+      "kind": "risk"
+    },
+    {
+      "en": "safeguards",
+      "zh": "安全防护措施",
+      "def_zh": "围绕模型与运行框架构建的安全网与分类器。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic software development lifecycle",
+      "zh": "智能体软件开发生命周期",
+      "def_zh": "以智能体参与贯穿开发全流程的下一代研发范式。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "私有仓库评测",
+      "to": "前沿模型",
+      "rel": "用于"
+    },
+    {
+      "from": "私有仓库评测",
+      "to": "通过率",
+      "rel": "衡量"
+    },
+    {
+      "from": "单任务成本",
+      "to": "Claude Fable 5",
+      "rel": "衡量"
+    },
+    {
+      "from": "智能体编程",
+      "to": "Claude Fable 5",
+      "rel": "依赖"
+    },
+    {
+      "from": "白盒测试",
+      "to": "安全防护措施",
+      "rel": "属于"
+    },
+    {
+      "from": "安全防护措施",
+      "to": "数据保留",
+      "rel": "解决"
+    },
+    {
+      "from": "智能体软件开发生命周期",
+      "to": "智能体编程",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md"
+}

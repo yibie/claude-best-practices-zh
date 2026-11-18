@@ -1,0 +1,108 @@
+{
+  "summary_zh": "千个智能体在安全沙箱与监控下，仅用Git和共享数据库自主协作完成费马大定理形式化证明。",
+  "concepts": [
+    {
+      "en": "multi-agent team",
+      "zh": "多智能体团队",
+      "def_zh": "多个AI智能体分工协作完成长周期复杂任务的系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "sandboxing",
+      "zh": "沙箱隔离",
+      "def_zh": "将每个智能体限制在独立无网络虚拟机中运行的安全机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "real-time monitoring",
+      "zh": "实时监控",
+      "def_zh": "用分类器在工具调用执行前拦截危险行为的在线防护层。",
+      "kind": "technique"
+    },
+    {
+      "en": "offline monitoring",
+      "zh": "离线监控",
+      "def_zh": "事后分析智能体团队全部动作以检测威胁的审查机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "shared database coordination",
+      "zh": "共享数据库协调",
+      "def_zh": "智能体通过SQL表认领任务、共享笔记与记录成果的协作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "task tree",
+      "zh": "任务树",
+      "def_zh": "将大目标逐层拆分为可并行认领子任务的分层结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "lead-helper hierarchy",
+      "zh": "主从层级",
+      "def_zh": "一个主智能体分配任务、多个辅助智能体执行的团队结构。",
+      "kind": "technique"
+    },
+    {
+      "en": "Lean",
+      "zh": "Lean",
+      "def_zh": "可机器逐行检验数学证明正确性的编程语言与工具链。",
+      "kind": "product"
+    },
+    {
+      "en": "Prove2Me",
+      "zh": "Prove2Me",
+      "def_zh": "用共享图组织数学形式化任务、支持多智能体并行的平台。",
+      "kind": "product"
+    },
+    {
+      "en": "formal verification",
+      "zh": "形式化验证",
+      "def_zh": "将证明写成计算机可逐步检验的代码以确保无误的过程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "多智能体团队",
+      "to": "沙箱隔离",
+      "rel": "依赖"
+    },
+    {
+      "from": "多智能体团队",
+      "to": "实时监控",
+      "rel": "依赖"
+    },
+    {
+      "from": "多智能体团队",
+      "to": "离线监控",
+      "rel": "依赖"
+    },
+    {
+      "from": "多智能体团队",
+      "to": "共享数据库协调",
+      "rel": "用于"
+    },
+    {
+      "from": "共享数据库协调",
+      "to": "任务树",
+      "rel": "启用"
+    },
+    {
+      "from": "主从层级",
+      "to": "任务树",
+      "rel": "启用"
+    },
+    {
+      "from": "形式化验证",
+      "to": "Lean",
+      "rel": "依赖"
+    },
+    {
+      "from": "Prove2Me",
+      "to": "形式化验证",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/safely-scaling-multi-agent-teams-with-fable-5-2.md"
+}

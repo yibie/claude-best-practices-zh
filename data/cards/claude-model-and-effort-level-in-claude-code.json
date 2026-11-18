@@ -1,0 +1,91 @@
+{
+  "summary_zh": "在 Claude Code 中按任务复杂度选择模型与努力等级，以平衡能力、成本与自主性。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的命令行编程代理产品，可配置模型与努力等级。",
+      "kind": "product"
+    },
+    {
+      "en": "model selection",
+      "zh": "模型选择",
+      "def_zh": "选定模型固定权重，从而确定其整体能力范围。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "控制 Claude 完成请求的总工作量，含思考、读文件与验证。",
+      "kind": "technique"
+    },
+    {
+      "en": "thinking time",
+      "zh": "思考时间",
+      "def_zh": "模型在作答前用于推理的时长，是努力等级的一部分。",
+      "kind": "metric"
+    },
+    {
+      "en": "context",
+      "zh": "上下文",
+      "def_zh": "提供给模型的背景信息，决定其能否正确完成任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "multi-step task",
+      "zh": "多步任务",
+      "def_zh": "需多次读取、验证与推进才能完成的复杂工作。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification",
+      "zh": "验证",
+      "def_zh": "模型运行测试、复核结果以确认正确性的行为。",
+      "kind": "technique"
+    },
+    {
+      "en": "model capability",
+      "zh": "模型能力",
+      "def_zh": "由固定权重决定的知识与推理水平，可用基准衡量。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型选择",
+      "to": "模型能力",
+      "rel": "衡量"
+    },
+    {
+      "from": "努力等级",
+      "to": "思考时间",
+      "rel": "属于"
+    },
+    {
+      "from": "努力等级",
+      "to": "验证",
+      "rel": "启用"
+    },
+    {
+      "from": "努力等级",
+      "to": "多步任务",
+      "rel": "用于"
+    },
+    {
+      "from": "模型选择",
+      "to": "上下文",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "模型选择",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "努力等级",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/claude-model-and-effort-level-in-claude-code.md"
+}

@@ -1,0 +1,97 @@
+{
+  "summary_zh": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+  "concepts": [
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "可复用工作流单元，让 Claude 一致地执行特定任务。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，支持技能等扩展。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，标准化连接外部工具与数据源。",
+      "kind": "product"
+    },
+    {
+      "en": "MCP-enhanced integration",
+      "zh": "MCP 增强集成",
+      "def_zh": "将 MCP 连接器与技能结合，提供可靠工作流。",
+      "kind": "technique"
+    },
+    {
+      "en": "skill structure",
+      "zh": "技能结构",
+      "def_zh": "技能的技术组成与组织方式，含元数据与指令。",
+      "kind": "technique"
+    },
+    {
+      "en": "skill-creator",
+      "zh": "技能创建器",
+      "def_zh": "用于构建、测试和迭代技能的辅助工具。",
+      "kind": "product"
+    },
+    {
+      "en": "workflow automation",
+      "zh": "工作流自动化",
+      "def_zh": "将重复性任务交由 Claude 按固定流程执行。",
+      "kind": "technique"
+    },
+    {
+      "en": "skill distribution",
+      "zh": "技能分发",
+      "def_zh": "将构建好的技能分享或部署给其他用户或团队。",
+      "kind": "technique"
+    },
+    {
+      "en": "skill testing",
+      "zh": "技能测试",
+      "def_zh": "验证技能行为是否符合预期并迭代改进的过程。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "工作流自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "技能结构",
+      "rel": "依赖"
+    },
+    {
+      "from": "技能创建器",
+      "to": "技能测试",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "技能分发",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP 增强集成",
+      "to": "MCP",
+      "rel": "依赖"
+    },
+    {
+      "from": "MCP 增强集成",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "技能",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/complete-guide-to-building-skills-for-claude.md"
+}

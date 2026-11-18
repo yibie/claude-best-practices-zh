@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic销售团队用Claude托管代理构建采购代理，自动回答入站咨询并促成购买。",
+  "concepts": [
+    {
+      "en": "Claude Managed Agents",
+      "zh": "Claude托管代理",
+      "def_zh": "托管代理运行、会话与工具编排的平台服务",
+      "kind": "product"
+    },
+    {
+      "en": "buying agent",
+      "zh": "采购代理",
+      "def_zh": "引导客户从咨询到完成购买的对话式代理",
+      "kind": "product"
+    },
+    {
+      "en": "inbound sales",
+      "zh": "入站销售",
+      "def_zh": "处理客户主动提交的咨询与购买意向的销售流程",
+      "kind": "technique"
+    },
+    {
+      "en": "agent escalation",
+      "zh": "代理转人工",
+      "def_zh": "代理将复杂或大额交易连同上下文移交销售代表",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt engineering",
+      "zh": "提示工程",
+      "def_zh": "通过目标化、精简的提示引导模型行为的方法",
+      "kind": "technique"
+    },
+    {
+      "en": "agent versioning",
+      "zh": "代理版本管理",
+      "def_zh": "将代理每次变更保存为独立版本以支持迭代回滚",
+      "kind": "technique"
+    },
+    {
+      "en": "self-serve purchase",
+      "zh": "自助购买",
+      "def_zh": "客户无需销售代表介入即可完成购买的方式",
+      "kind": "technique"
+    },
+    {
+      "en": "lead qualification",
+      "zh": "线索资格认定",
+      "def_zh": "判断潜在客户需求与适配方案的过程",
+      "kind": "technique"
+    },
+    {
+      "en": "sales development representative",
+      "zh": "销售开发代表",
+      "def_zh": "负责初步筛选和跟进入站线索的销售角色",
+      "kind": "role"
+    },
+    {
+      "en": "conversion rate",
+      "zh": "转化率",
+      "def_zh": "线索转化为销售机会或成交的比例",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "采购代理",
+      "to": "Claude托管代理",
+      "rel": "依赖"
+    },
+    {
+      "from": "采购代理",
+      "to": "入站销售",
+      "rel": "用于"
+    },
+    {
+      "from": "采购代理",
+      "to": "自助购买",
+      "rel": "启用"
+    },
+    {
+      "from": "采购代理",
+      "to": "代理转人工",
+      "rel": "启用"
+    },
+    {
+      "from": "提示工程",
+      "to": "采购代理",
+      "rel": "用于"
+    },
+    {
+      "from": "代理版本管理",
+      "to": "采购代理",
+      "rel": "用于"
+    },
+    {
+      "from": "采购代理",
+      "to": "线索资格认定",
+      "rel": "用于"
+    },
+    {
+      "from": "转化率",
+      "to": "采购代理",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md"
+}

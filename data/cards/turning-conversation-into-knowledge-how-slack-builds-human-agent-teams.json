@@ -1,0 +1,103 @@
+{
+  "summary_zh": "Slack 高管分享如何将对话沉淀为知识，构建人机协作团队的最佳实践。",
+  "concepts": [
+    {
+      "en": "human-agent team",
+      "zh": "人机协作团队",
+      "def_zh": "人类与 AI 代理分工协作、循环交接任务的工作团队。",
+      "kind": "technique"
+    },
+    {
+      "en": "conversation as knowledge base",
+      "zh": "对话知识库",
+      "def_zh": "把公开频道中的对话与决策沉淀为可检索的组织知识。",
+      "kind": "technique"
+    },
+    {
+      "en": "public-by-default channels",
+      "zh": "默认公开频道",
+      "def_zh": "除敏感内容外，工作对话默认在全员可见频道中进行。",
+      "kind": "technique"
+    },
+    {
+      "en": "task handoff",
+      "zh": "任务交接",
+      "def_zh": "代理完成生产性工作后交由人类审阅决策，再交回代理执行。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent role delegation",
+      "zh": "代理角色委派",
+      "def_zh": "为每个代理设定明确目标与职责，像同事一样分工。",
+      "kind": "technique"
+    },
+    {
+      "en": "agent-built briefing",
+      "zh": "代理生成简报",
+      "def_zh": "由代理自动汇总回顾、升级事项与会议准备等材料。",
+      "kind": "technique"
+    },
+    {
+      "en": "outcome-based measurement",
+      "zh": "结果导向度量",
+      "def_zh": "以业务成果而非消息量、token 用量等活动指标衡量价值。",
+      "kind": "metric"
+    },
+    {
+      "en": "adoption through show-and-tell",
+      "zh": "示范式推广",
+      "def_zh": "通过公开分享技能与工作流技巧来扩散新工作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "psychological safety",
+      "zh": "心理安全感",
+      "def_zh": "成员敢于公开草稿与半成品而不担心被负面评判。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude in Slack",
+      "zh": "Slack 中的 Claude",
+      "def_zh": "在 Slack 频道内运行的 Claude 代理，承担起草与监控等任务。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "人机协作团队",
+      "to": "任务交接",
+      "rel": "依赖"
+    },
+    {
+      "from": "对话知识库",
+      "to": "默认公开频道",
+      "rel": "依赖"
+    },
+    {
+      "from": "Slack 中的 Claude",
+      "to": "代理生成简报",
+      "rel": "用于"
+    },
+    {
+      "from": "代理角色委派",
+      "to": "人机协作团队",
+      "rel": "属于"
+    },
+    {
+      "from": "结果导向度量",
+      "to": "人机协作团队",
+      "rel": "衡量"
+    },
+    {
+      "from": "心理安全感",
+      "to": "默认公开频道",
+      "rel": "风险"
+    },
+    {
+      "from": "示范式推广",
+      "to": "人机协作团队",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams.md"
+}

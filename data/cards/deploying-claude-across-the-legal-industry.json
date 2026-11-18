@@ -1,0 +1,92 @@
+{
+  "summary_zh": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+  "concepts": [
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向跨文件与应用的事务级协作的Claude产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude for Microsoft 365",
+      "zh": "Claude for Microsoft 365",
+      "def_zh": "在Word、Excel、PowerPoint和Outlook中使用的Claude插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "用于构建和部署自定义法律应用的开发平台。",
+      "kind": "product"
+    },
+    {
+      "en": "connectors",
+      "zh": "连接器",
+      "def_zh": "将Claude与外部数据源或应用集成的组件。",
+      "kind": "technique"
+    },
+    {
+      "en": "skills",
+      "zh": "技能",
+      "def_zh": "定制Claude以执行特定任务的可复用能力模块。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagents",
+      "zh": "子代理",
+      "def_zh": "在Claude中执行特定子任务的辅助代理。",
+      "kind": "technique"
+    },
+    {
+      "en": "plugins",
+      "zh": "插件",
+      "def_zh": "针对特定业务领域预配置的Claude功能扩展包。",
+      "kind": "technique"
+    },
+    {
+      "en": "agentic AI",
+      "zh": "代理式AI",
+      "def_zh": "能自主规划并执行多步任务的AI系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "three-phase adoption roadmap",
+      "zh": "三阶段采用路线图",
+      "def_zh": "分三阶段推进Claude在法律团队落地的计划。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Cowork",
+      "to": "连接器",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "插件",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude for Microsoft 365",
+      "to": "插件",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "子代理",
+      "rel": "启用"
+    },
+    {
+      "from": "技能",
+      "to": "代理式AI",
+      "rel": "用于"
+    },
+    {
+      "from": "三阶段采用路线图",
+      "to": "代理式AI",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/deploying-claude-across-the-legal-industry.md"
+}

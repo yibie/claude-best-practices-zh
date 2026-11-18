@@ -1,0 +1,108 @@
+{
+  "summary_zh": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，支持代码生成、审查与自动化。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic coding",
+      "zh": "智能体编程",
+      "def_zh": "由 AI 智能体自主完成编码、审查与测试等开发任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP",
+      "zh": "MCP",
+      "def_zh": "模型上下文协议，连接 Claude 与外部工具和数据源。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "可复用的指令文件，编码团队标准与上下文供智能体调用。",
+      "kind": "product"
+    },
+    {
+      "en": "subagents",
+      "zh": "子智能体",
+      "def_zh": "由主智能体派生、并行处理独立任务的智能体实例。",
+      "kind": "technique"
+    },
+    {
+      "en": "SDLC",
+      "zh": "软件开发生命周期",
+      "def_zh": "从需求到部署维护的软件开发全流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "code review",
+      "zh": "代码审查",
+      "def_zh": "对代码变更进行自动化或人工检查以发现问题。",
+      "kind": "technique"
+    },
+    {
+      "en": "evaluation golden set",
+      "zh": "评估黄金集",
+      "def_zh": "经人工验证的问答对集合，用于衡量智能体准确率。",
+      "kind": "metric"
+    },
+    {
+      "en": "self-improvement loop",
+      "zh": "自我改进循环",
+      "def_zh": "智能体依据反馈修正指令并持续迭代的闭环机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "dogfooding",
+      "zh": "内部试用",
+      "def_zh": "团队先在内部使用自建智能体，再决定是否产品化。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "智能体编程",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体编程",
+      "to": "软件开发生命周期",
+      "rel": "用于"
+    },
+    {
+      "from": "MCP",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "子智能体",
+      "to": "智能体编程",
+      "rel": "属于"
+    },
+    {
+      "from": "代码审查",
+      "to": "软件开发生命周期",
+      "rel": "属于"
+    },
+    {
+      "from": "评估黄金集",
+      "to": "自我改进循环",
+      "rel": "衡量"
+    },
+    {
+      "from": "内部试用",
+      "to": "自我改进循环",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/claude-code-guide-for-startups.md"
+}

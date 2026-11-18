@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Anthropic法务团队用Claude构建自动化工作流，将审查时间从数天缩短至数小时。",
+  "concepts": [
+    {
+      "en": "Claude Enterprise",
+      "zh": "Claude企业版",
+      "def_zh": "面向企业提供安全合规AI服务的产品版本",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "包含指令和资源的文件，Claude按需加载以执行专门任务",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP (Model Context Protocol)",
+      "zh": "模型上下文协议",
+      "def_zh": "连接Claude与外部数据源和工具的开放协议",
+      "kind": "technique"
+    },
+    {
+      "en": "Workflow Automation",
+      "zh": "工作流自动化",
+      "def_zh": "将重复性任务转化为可重复执行的自动化流程",
+      "kind": "technique"
+    },
+    {
+      "en": "Contract Redlining",
+      "zh": "合同红线批注",
+      "def_zh": "对比合同版本并建议修改条款的审查过程",
+      "kind": "technique"
+    },
+    {
+      "en": "Marketing Review",
+      "zh": "营销内容审查",
+      "def_zh": "对营销材料进行法律风险识别与合规检查",
+      "kind": "technique"
+    },
+    {
+      "en": "Privacy Impact Assessment",
+      "zh": "隐私影响评估",
+      "def_zh": "评估数据处理活动对隐私影响的合规文档",
+      "kind": "technique"
+    },
+    {
+      "en": "Human Oversight",
+      "zh": "人工监督",
+      "def_zh": "由人类对AI输出进行验证和最终判断的机制",
+      "kind": "technique"
+    },
+    {
+      "en": "Hallucination",
+      "zh": "幻觉",
+      "def_zh": "AI生成看似合理但实际虚假或错误信息的现象",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "技能",
+      "to": "工作流自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "模型上下文协议",
+      "to": "工作流自动化",
+      "rel": "用于"
+    },
+    {
+      "from": "工作流自动化",
+      "to": "合同红线批注",
+      "rel": "用于"
+    },
+    {
+      "from": "工作流自动化",
+      "to": "营销内容审查",
+      "rel": "用于"
+    },
+    {
+      "from": "工作流自动化",
+      "to": "隐私影响评估",
+      "rel": "用于"
+    },
+    {
+      "from": "人工监督",
+      "to": "幻觉",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude企业版",
+      "to": "工作流自动化",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/how-anthropic-uses-claude-legal.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Anthropic 因智能体编码导致合并量激增，自研面向始终在线智能体的版本控制系统 Scion 并五个月迁移。",
+  "concepts": [
+    {
+      "en": "Scion",
+      "zh": "Scion",
+      "def_zh": "Anthropic 自研的面向始终在线智能体的分布式版本控制系统。",
+      "kind": "product"
+    },
+    {
+      "en": "agent-scale source control",
+      "zh": "智能体规模版本控制",
+      "def_zh": "为海量在线智能体高频提交与检出而设计的版本控制范式。",
+      "kind": "technique"
+    },
+    {
+      "en": "changeset",
+      "zh": "变更集",
+      "def_zh": "Scion 中记录相对首父变更文件列表的写前日志工作单元。",
+      "kind": "technique"
+    },
+    {
+      "en": "derived data",
+      "zh": "派生数据",
+      "def_zh": "由变更集递归计算出的 blame、路径历史等辅助索引数据。",
+      "kind": "technique"
+    },
+    {
+      "en": "sparse checkout",
+      "zh": "稀疏检出",
+      "def_zh": "仅按需获取指定目录文件、避免全量工作副本的检出方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "virtualized checkout",
+      "zh": "虚拟化检出",
+      "def_zh": "按需物化文件、客户端只为实际读取内容付费的检出方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "monorepo",
+      "zh": "单体仓库",
+      "def_zh": "将大量项目代码集中于单一仓库统一管理的代码组织方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "merge queue",
+      "zh": "合并队列",
+      "def_zh": "串行化待合并变更以保证主干测试通过的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "always-online agents",
+      "zh": "始终在线智能体",
+      "def_zh": "持续联网运行、可随时访问服务端的自动化编码智能体。",
+      "kind": "role"
+    },
+    {
+      "en": "Antique",
+      "zh": "Antique",
+      "def_zh": "Anthropic 自研的代码评审界面工具。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Scion",
+      "to": "智能体规模版本控制",
+      "rel": "属于"
+    },
+    {
+      "from": "Scion",
+      "to": "变更集",
+      "rel": "依赖"
+    },
+    {
+      "from": "Scion",
+      "to": "派生数据",
+      "rel": "依赖"
+    },
+    {
+      "from": "Scion",
+      "to": "稀疏检出",
+      "rel": "启用"
+    },
+    {
+      "from": "Scion",
+      "to": "虚拟化检出",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体规模版本控制",
+      "to": "始终在线智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "单体仓库",
+      "to": "智能体规模版本控制",
+      "rel": "依赖"
+    },
+    {
+      "from": "合并队列",
+      "to": "智能体规模版本控制",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/redesigning-source-control.md"
+}

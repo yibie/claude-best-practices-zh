@@ -1,0 +1,97 @@
+{
+  "summary_zh": "企业AI转型需将智能体嵌入工作流程，通过三大支柱实现复利回报。",
+  "concepts": [
+    {
+      "en": "agentic AI",
+      "zh": "智能体AI",
+      "def_zh": "能自主规划并执行多步任务的AI系统。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向团队的企业级AI协作产品，无需定制开发。",
+      "kind": "product"
+    },
+    {
+      "en": "agentic thinking divide",
+      "zh": "智能体思维鸿沟",
+      "def_zh": "企业间在智能体应用思维上的差距，导致部署效果分化。",
+      "kind": "risk"
+    },
+    {
+      "en": "institutional knowledge encoding",
+      "zh": "组织知识编码",
+      "def_zh": "将企业隐性知识转化为系统可复用资产的过程。",
+      "kind": "technique"
+    },
+    {
+      "en": "human-in-the-loop",
+      "zh": "人在回路",
+      "def_zh": "在自动化流程中保留人类判断与专业干预的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "upskilling",
+      "zh": "员工技能提升",
+      "def_zh": "通过培训使员工掌握与组织实际工作结合的AI能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "enterprise AI transformation",
+      "zh": "企业AI转型",
+      "def_zh": "将AI嵌入员工工作、流程与产品以实现持续回报的变革。",
+      "kind": "technique"
+    },
+    {
+      "en": "deployment framework",
+      "zh": "部署框架",
+      "def_zh": "分阶段落地AI产品的结构化实施方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "product capability building",
+      "zh": "产品能力构建",
+      "def_zh": "利用AI创造新收入来源而非仅降低成本的产品开发。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "企业AI转型",
+      "to": "智能体AI",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "智能体AI",
+      "rel": "启用"
+    },
+    {
+      "from": "组织知识编码",
+      "to": "智能体思维鸿沟",
+      "rel": "解决"
+    },
+    {
+      "from": "人在回路",
+      "to": "企业AI转型",
+      "rel": "属于"
+    },
+    {
+      "from": "员工技能提升",
+      "to": "智能体思维鸿沟",
+      "rel": "解决"
+    },
+    {
+      "from": "部署框架",
+      "to": "Claude Cowork",
+      "rel": "用于"
+    },
+    {
+      "from": "产品能力构建",
+      "to": "企业AI转型",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/building-ai-agents-for-the-enterprise.md"
+}

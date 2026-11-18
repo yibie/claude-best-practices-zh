@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍在谷歌云上管理 Claude Code 成本并证明投资回报的控制、追踪、证明三杠杆框架。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体式编程工具，可多步读写文件、运行工具并推理。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude apps gateway",
+      "zh": "Claude 应用网关",
+      "def_zh": "自托管服务，位于 Claude Code 与云端之间，统一身份、限额与遥测。",
+      "kind": "product"
+    },
+    {
+      "en": "spend limits",
+      "zh": "支出限额",
+      "def_zh": "按用户、身份组或组织设定日/周/月花费上限的管控机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "model allowlist",
+      "zh": "模型白名单",
+      "def_zh": "限定各身份组可调用模型范围，由网关在服务端逐请求强制执行。",
+      "kind": "technique"
+    },
+    {
+      "en": "OpenTelemetry telemetry",
+      "zh": "OpenTelemetry 遥测",
+      "def_zh": "Claude Code 导出的用量、成本与活动指标及事件，可按用户团队模型拆分。",
+      "kind": "technique"
+    },
+    {
+      "en": "cost per task",
+      "zh": "单任务成本",
+      "def_zh": "完成一个任务所消耗的 token 与模型费用，比单价更能反映真实成本。",
+      "kind": "metric"
+    },
+    {
+      "en": "ROI",
+      "zh": "投资回报率",
+      "def_zh": "将使用量映射到采用、满意度与工程影响三维度以衡量投入产出。",
+      "kind": "metric"
+    },
+    {
+      "en": "impact metrics",
+      "zh": "影响指标",
+      "def_zh": "以时间、工作量、产出量衡量工程成效，如 PR 周期与评审周转。",
+      "kind": "metric"
+    },
+    {
+      "en": "unit of work",
+      "zh": "工作单元",
+      "def_zh": "可计数的完成事项，如合并的特定类别 PR 或闭环事故。",
+      "kind": "metric"
+    },
+    {
+      "en": "control-track-prove framework",
+      "zh": "控制-追踪-证明框架",
+      "def_zh": "管理 AI 支出的三杠杆：设护栏、细粒度观测、映射价值回报。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 应用网关",
+      "to": "支出限额",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude 应用网关",
+      "to": "模型白名单",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "OpenTelemetry 遥测",
+      "rel": "启用"
+    },
+    {
+      "from": "OpenTelemetry 遥测",
+      "to": "单任务成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "影响指标",
+      "to": "投资回报率",
+      "rel": "衡量"
+    },
+    {
+      "from": "工作单元",
+      "to": "影响指标",
+      "rel": "用于"
+    },
+    {
+      "from": "控制-追踪-证明框架",
+      "to": "投资回报率",
+      "rel": "解决"
+    },
+    {
+      "from": "控制-追踪-证明框架",
+      "to": "Claude Code",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md"
+}

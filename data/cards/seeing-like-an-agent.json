@@ -1,0 +1,97 @@
+{
+  "summary_zh": "Claude Code 团队从模型视角设计工具，通过实验迭代工具形态并随模型能力演进。",
+  "concepts": [
+    {
+      "en": "tool design",
+      "zh": "工具设计",
+      "def_zh": "为智能体构建和调整可调用工具的过程与方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "elicitation",
+      "zh": "引导提问",
+      "def_zh": "智能体主动向用户提问以获取必要信息的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "AskUserQuestion tool",
+      "zh": "提问工具",
+      "def_zh": "Claude Code 中用于结构化向用户提问并展示选项的工具。",
+      "kind": "product"
+    },
+    {
+      "en": "progressive disclosure",
+      "zh": "渐进式披露",
+      "def_zh": "智能体按需逐步发现和加载上下文的技术。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Skills",
+      "zh": "智能体技能",
+      "def_zh": "可被智能体递归读取和引用的模块化能力文件。",
+      "kind": "product"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "由主智能体调用、在独立上下文中执行子任务的智能体。",
+      "kind": "technique"
+    },
+    {
+      "en": "Task tool",
+      "zh": "任务工具",
+      "def_zh": "支持依赖关系与子智能体协作的任务管理工具。",
+      "kind": "product"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "设计和管理智能体上下文以提升表现的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "RAG",
+      "zh": "检索增强生成",
+      "def_zh": "通过向量检索预取相关片段注入上下文的方案。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "工具设计",
+      "to": "引导提问",
+      "rel": "用于"
+    },
+    {
+      "from": "提问工具",
+      "to": "引导提问",
+      "rel": "解决"
+    },
+    {
+      "from": "渐进式披露",
+      "to": "上下文工程",
+      "rel": "属于"
+    },
+    {
+      "from": "智能体技能",
+      "to": "渐进式披露",
+      "rel": "启用"
+    },
+    {
+      "from": "任务工具",
+      "to": "子智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "检索增强生成",
+      "to": "上下文工程",
+      "rel": "替代"
+    },
+    {
+      "from": "子智能体",
+      "to": "上下文工程",
+      "rel": "解决"
+    }
+  ],
+  "rel": "articles/seeing-like-an-agent.md"
+}

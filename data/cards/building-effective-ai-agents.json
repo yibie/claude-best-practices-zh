@@ -1,0 +1,91 @@
+{
+  "summary_zh": "介绍构建高效 AI 智能体的架构模式、决策框架与真实用例。",
+  "concepts": [
+    {
+      "en": "AI Agent",
+      "zh": "AI 智能体",
+      "def_zh": "能自主规划并执行多步任务的智能系统",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Architecture Pattern",
+      "zh": "智能体架构模式",
+      "def_zh": "组织智能体结构与协作方式的可复用设计范式",
+      "kind": "technique"
+    },
+    {
+      "en": "Multi-Agent Orchestration",
+      "zh": "多智能体编排",
+      "def_zh": "协调多个智能体分工协作完成复杂任务",
+      "kind": "technique"
+    },
+    {
+      "en": "Single Agent",
+      "zh": "单智能体",
+      "def_zh": "由单个智能体独立完成任务的架构形态",
+      "kind": "technique"
+    },
+    {
+      "en": "Decision Framework",
+      "zh": "决策框架",
+      "def_zh": "依据用例特征选择合适架构模式的判断方法",
+      "kind": "technique"
+    },
+    {
+      "en": "Enterprise AI Transformation",
+      "zh": "企业 AI 转型",
+      "def_zh": "企业借助 AI 重塑运营与业务流程的变革",
+      "kind": "org"
+    },
+    {
+      "en": "Automation",
+      "zh": "自动化",
+      "def_zh": "按预设规则执行重复流程的传统技术手段",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Platform",
+      "zh": "Claude 平台",
+      "def_zh": "Anthropic 提供模型与智能体构建能力的平台",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "智能体架构模式",
+      "to": "AI 智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "多智能体编排",
+      "to": "智能体架构模式",
+      "rel": "属于"
+    },
+    {
+      "from": "单智能体",
+      "to": "智能体架构模式",
+      "rel": "属于"
+    },
+    {
+      "from": "决策框架",
+      "to": "智能体架构模式",
+      "rel": "解决"
+    },
+    {
+      "from": "AI 智能体",
+      "to": "自动化",
+      "rel": "替代"
+    },
+    {
+      "from": "Claude 平台",
+      "to": "AI 智能体",
+      "rel": "用于"
+    },
+    {
+      "from": "AI 智能体",
+      "to": "企业 AI 转型",
+      "rel": "用于"
+    }
+  ],
+  "rel": "guides/building-effective-ai-agents.md"
+}

@@ -1,0 +1,91 @@
+{
+  "summary_zh": "介绍用 MCP 与 A2A 协议在 Vertex AI 上构建多智能体系统",
+  "concepts": [
+    {
+      "en": "multi-agent system",
+      "zh": "多智能体系统",
+      "def_zh": "多个 AI 智能体协作完成复杂任务的系统架构",
+      "kind": "technique"
+    },
+    {
+      "en": "Model Context Protocol",
+      "zh": "模型上下文协议",
+      "def_zh": "标准化智能体与外部工具及数据源连接的开源协议",
+      "kind": "product"
+    },
+    {
+      "en": "Agent-to-Agent protocol",
+      "zh": "智能体间协议",
+      "def_zh": "规范智能体之间通信与协作的开放协议",
+      "kind": "product"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic 开发的大语言模型系列",
+      "kind": "product"
+    },
+    {
+      "en": "Vertex AI",
+      "zh": "Vertex AI",
+      "def_zh": "Google Cloud 的机器学习模型训练与部署平台",
+      "kind": "product"
+    },
+    {
+      "en": "tool integration",
+      "zh": "工具集成",
+      "def_zh": "将外部工具与 API 接入智能体以扩展其能力",
+      "kind": "technique"
+    },
+    {
+      "en": "context sharing",
+      "zh": "上下文共享",
+      "def_zh": "智能体之间传递和复用任务相关信息与状态",
+      "kind": "technique"
+    },
+    {
+      "en": "task delegation",
+      "zh": "任务委派",
+      "def_zh": "将子任务分派给合适的智能体执行",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "模型上下文协议",
+      "to": "工具集成",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体间协议",
+      "to": "上下文共享",
+      "rel": "启用"
+    },
+    {
+      "from": "智能体间协议",
+      "to": "任务委派",
+      "rel": "启用"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "模型上下文协议",
+      "rel": "依赖"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "智能体间协议",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude",
+      "to": "多智能体系统",
+      "rel": "用于"
+    },
+    {
+      "from": "Vertex AI",
+      "to": "Claude",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md"
+}

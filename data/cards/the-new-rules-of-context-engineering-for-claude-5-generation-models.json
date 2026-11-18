@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude 5 代模型上下文工程新规则：精简系统提示，让模型自主判断，用渐进披露替代堆砌。",
+  "concepts": [
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "组装系统提示、技能、记忆等上下文以引导模型的方法。",
+      "kind": "technique"
+    },
+    {
+      "en": "system prompt",
+      "zh": "系统提示",
+      "def_zh": "告知模型所处产品与任务的基础指令集合。",
+      "kind": "technique"
+    },
+    {
+      "en": "progressive disclosure",
+      "zh": "渐进披露",
+      "def_zh": "按需在合适时机加载上下文，而非一次性全部前置。",
+      "kind": "technique"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "轻量指南文件，让模型在需要时查找特定知识或流程。",
+      "kind": "product"
+    },
+    {
+      "en": "CLAUDE.md",
+      "zh": "CLAUDE.md 文件",
+      "def_zh": "仓库级轻量说明文件，记录代码库陷阱与约定。",
+      "kind": "product"
+    },
+    {
+      "en": "auto-memory",
+      "zh": "自动记忆",
+      "def_zh": "模型自动保存与工作和用户相关的记忆，无需手动写入。",
+      "kind": "technique"
+    },
+    {
+      "en": "tool description",
+      "zh": "工具描述",
+      "def_zh": "定义工具参数与用法的说明，替代系统提示中的重复指令。",
+      "kind": "technique"
+    },
+    {
+      "en": "references",
+      "zh": "引用",
+      "def_zh": "以文件、代码、HTML 工件等形式提供的深度上下文材料。",
+      "kind": "technique"
+    },
+    {
+      "en": "overconstraining",
+      "zh": "过度约束",
+      "def_zh": "用过多规则限制模型，导致冲突并削弱其判断力。",
+      "kind": "risk"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程产品，支持技能与记忆等上下文机制。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "上下文工程",
+      "to": "系统提示",
+      "rel": "属于"
+    },
+    {
+      "from": "上下文工程",
+      "to": "渐进披露",
+      "rel": "依赖"
+    },
+    {
+      "from": "渐进披露",
+      "to": "技能",
+      "rel": "用于"
+    },
+    {
+      "from": "渐进披露",
+      "to": "引用",
+      "rel": "用于"
+    },
+    {
+      "from": "过度约束",
+      "to": "上下文工程",
+      "rel": "风险"
+    },
+    {
+      "from": "自动记忆",
+      "to": "CLAUDE.md 文件",
+      "rel": "替代"
+    },
+    {
+      "from": "工具描述",
+      "to": "系统提示",
+      "rel": "替代"
+    },
+    {
+      "from": "Claude Code",
+      "to": "上下文工程",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md"
+}

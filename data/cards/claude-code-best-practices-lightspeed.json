@@ -1,0 +1,91 @@
+{
+  "summary_zh": "Anthropic 网络研讨会分享 Claude Code 高级用法、子代理与钩子等最佳实践。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的 AI 编程代理产品，支持终端内编码与工作流自动化。",
+      "kind": "product"
+    },
+    {
+      "en": "subagents",
+      "zh": "子代理",
+      "def_zh": "由主代理派生、并行处理子任务的独立代理实例。",
+      "kind": "technique"
+    },
+    {
+      "en": "hooks",
+      "zh": "钩子",
+      "def_zh": "在代理生命周期特定节点自动触发的外部脚本或动作。",
+      "kind": "technique"
+    },
+    {
+      "en": "AI-powered development supervision",
+      "zh": "AI 开发监督",
+      "def_zh": "从手写代码转向监督 AI 代理完成开发任务的工作模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "advanced workflows",
+      "zh": "高级工作流",
+      "def_zh": "组合多代理、钩子与自动化步骤的复杂开发流程编排。",
+      "kind": "technique"
+    },
+    {
+      "en": "quantified ROI",
+      "zh": "量化投资回报",
+      "def_zh": "用可度量指标衡量 AI 工具带来的效率与成本收益。",
+      "kind": "metric"
+    },
+    {
+      "en": "productivity",
+      "zh": "生产力",
+      "def_zh": "单位时间内完成的开发产出，常以倍数提升衡量。",
+      "kind": "metric"
+    },
+    {
+      "en": "best practices",
+      "zh": "最佳实践",
+      "def_zh": "经实践验证、可复用的高效使用方法与规范。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "子代理",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "钩子",
+      "rel": "启用"
+    },
+    {
+      "from": "子代理",
+      "to": "高级工作流",
+      "rel": "属于"
+    },
+    {
+      "from": "钩子",
+      "to": "高级工作流",
+      "rel": "属于"
+    },
+    {
+      "from": "AI 开发监督",
+      "to": "生产力",
+      "rel": "衡量"
+    },
+    {
+      "from": "量化投资回报",
+      "to": "生产力",
+      "rel": "衡量"
+    },
+    {
+      "from": "最佳实践",
+      "to": "高级工作流",
+      "rel": "用于"
+    }
+  ],
+  "rel": "webinars/claude-code-best-practices-lightspeed.md"
+}

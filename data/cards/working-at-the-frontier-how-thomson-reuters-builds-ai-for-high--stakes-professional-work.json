@@ -1,0 +1,103 @@
+{
+  "summary_zh": "汤森路透CTO分享如何用Claude构建高 stakes专业AI，强调验证、代理与人类监督。",
+  "concepts": [
+    {
+      "en": "Fiduciary-Grade AI",
+      "zh": "信托级AI",
+      "def_zh": "基于权威内容、领域专长与工作流集成，输出可验证、可辩护的AI。",
+      "kind": "technique"
+    },
+    {
+      "en": "Citation Validation",
+      "zh": "引文验证",
+      "def_zh": "AI系统在呈现结果前自动核查所引来源的准确性与可靠性。",
+      "kind": "technique"
+    },
+    {
+      "en": "Agent Orchestration",
+      "zh": "代理编排",
+      "def_zh": "代理实时规划、委派并协调多个工具与内容源以完成复杂任务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Human-in-the-Loop",
+      "zh": "人类在环",
+      "def_zh": "在AI工作流中引入人类判断与审查，确保最终产出可问责。",
+      "kind": "technique"
+    },
+    {
+      "en": "Context Management",
+      "zh": "上下文管理",
+      "def_zh": "在长任务链中维持对话与工具调用上下文连贯性的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Agent SDK",
+      "zh": "Claude代理SDK",
+      "def_zh": "用于构建能规划、使用工具并自主执行任务的AI代理的开发套件。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude代码助手",
+      "def_zh": "Anthropic的AI编程工具，帮助开发者理解代码库并构建长期运行代理。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude协作助手",
+      "def_zh": "面向团队流程自动化与轻量原型设计的AI协作产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Deep Research",
+      "zh": "深度研究",
+      "def_zh": "AI代理自主进行多步检索、验证与综合，快速产出高质量研究起点。",
+      "kind": "technique"
+    },
+    {
+      "en": "Evaluation Infrastructure",
+      "zh": "评估基础设施",
+      "def_zh": "用于系统测试模型在专业场景中规划、工具使用与准确性的框架。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "信托级AI",
+      "to": "引文验证",
+      "rel": "依赖"
+    },
+    {
+      "from": "信托级AI",
+      "to": "人类在环",
+      "rel": "依赖"
+    },
+    {
+      "from": "代理编排",
+      "to": "上下文管理",
+      "rel": "依赖"
+    },
+    {
+      "from": "Claude代理SDK",
+      "to": "代理编排",
+      "rel": "启用"
+    },
+    {
+      "from": "深度研究",
+      "to": "引文验证",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估基础设施",
+      "to": "代理编排",
+      "rel": "衡量"
+    },
+    {
+      "from": "Claude代码助手",
+      "to": "代理编排",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md"
+}

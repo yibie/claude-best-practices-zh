@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Code 云会话在独立虚拟机中运行，支持并行任务、安全隔离和多种工作流。",
+  "concepts": [
+    {
+      "en": "Cloud Session",
+      "zh": "云会话",
+      "def_zh": "在独立虚拟机中运行的 Claude Code 会话，每个任务有独立环境。",
+      "kind": "product"
+    },
+    {
+      "en": "Virtual Machine",
+      "zh": "虚拟机",
+      "def_zh": "为每个云会话提供的隔离计算环境，包含克隆的仓库。",
+      "kind": "technique"
+    },
+    {
+      "en": "Parallel Workflows",
+      "zh": "并行工作流",
+      "def_zh": "同时运行多个独立任务，互不干扰，提高效率。",
+      "kind": "technique"
+    },
+    {
+      "en": "GitHub Proxy",
+      "zh": "GitHub 代理",
+      "def_zh": "在虚拟机外持有 GitHub 令牌，为会话提供短期凭证的代理服务。",
+      "kind": "technique"
+    },
+    {
+      "en": "Network Allowlist",
+      "zh": "网络允许列表",
+      "def_zh": "限制云会话可访问的网络资源，增强安全性。",
+      "kind": "technique"
+    },
+    {
+      "en": "Teleport",
+      "zh": "传送",
+      "def_zh": "将云会话的对话和分支拉取到本地终端继续工作的功能。",
+      "kind": "product"
+    },
+    {
+      "en": "Routine",
+      "zh": "例程",
+      "def_zh": "由触发器（如计划或 GitHub 事件）自动启动的云会话。",
+      "kind": "product"
+    },
+    {
+      "en": "Auto-fix",
+      "zh": "自动修复",
+      "def_zh": "云会话自动处理 CI 失败和审查评论的功能。",
+      "kind": "product"
+    },
+    {
+      "en": "Self-hosted Environment",
+      "zh": "自托管环境",
+      "def_zh": "在组织自有基础设施上运行云会话的环境。",
+      "kind": "product"
+    },
+    {
+      "en": "Zero Data Retention",
+      "zh": "零数据保留",
+      "def_zh": "组织策略，禁止数据保留，会禁用云会话。",
+      "kind": "risk"
+    }
+  ],
+  "relations": [
+    {
+      "from": "云会话",
+      "to": "虚拟机",
+      "rel": "依赖"
+    },
+    {
+      "from": "云会话",
+      "to": "GitHub 代理",
+      "rel": "依赖"
+    },
+    {
+      "from": "云会话",
+      "to": "网络允许列表",
+      "rel": "依赖"
+    },
+    {
+      "from": "并行工作流",
+      "to": "云会话",
+      "rel": "用于"
+    },
+    {
+      "from": "传送",
+      "to": "云会话",
+      "rel": "用于"
+    },
+    {
+      "from": "例程",
+      "to": "云会话",
+      "rel": "启用"
+    },
+    {
+      "from": "自动修复",
+      "to": "云会话",
+      "rel": "启用"
+    },
+    {
+      "from": "零数据保留",
+      "to": "云会话",
+      "rel": "风险"
+    }
+  ],
+  "rel": "articles/claude-code-in-the-cloud.md"
+}

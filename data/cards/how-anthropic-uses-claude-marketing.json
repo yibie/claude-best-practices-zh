@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Anthropic增长营销团队用Claude Code构建Figma插件与广告文案工作流，将广告制作从30分钟缩短至30秒。",
+  "concepts": [
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic推出的可让非技术用户通过自然语言构建工具的AI编程产品。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent Skills",
+      "zh": "Agent Skills",
+      "def_zh": "可复用的技能模块，为Claude提供品牌语调、产品准确性等专业指导。",
+      "kind": "product"
+    },
+    {
+      "en": "Figma plugin",
+      "zh": "Figma插件",
+      "def_zh": "在Figma中一键批量生成广告创意变体的自动化插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Responsive Search Ads",
+      "zh": "响应式搜索广告",
+      "def_zh": "Google要求提供多条标题与描述并自动组合的搜索广告格式。",
+      "kind": "product"
+    },
+    {
+      "en": "Ad copy generation workflow",
+      "zh": "广告文案生成工作流",
+      "def_zh": "结合活动数据与品牌规范自动生成并导出可上传广告文案的流程。",
+      "kind": "technique"
+    },
+    {
+      "en": "Prompting as problem explanation",
+      "zh": "问题描述式提示",
+      "def_zh": "用清晰简洁的语言向Claude说明业务挑战而非编写代码的交互方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "Growth marketer as builder",
+      "zh": "构建型增长营销者",
+      "def_zh": "能自行构建工具产品以达成营销目标的增长营销角色。",
+      "kind": "role"
+    },
+    {
+      "en": "Repetitive marketing busywork",
+      "zh": "重复性营销杂务",
+      "def_zh": "复制粘贴、字符校验等低价值且高频重复的营销执行工作。",
+      "kind": "risk"
+    },
+    {
+      "en": "Ad creation time",
+      "zh": "广告制作时长",
+      "def_zh": "从构思到产出可上传广告素材所耗费的时间，衡量效率的核心指标。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Figma插件",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "广告文案生成工作流",
+      "rel": "用于"
+    },
+    {
+      "from": "广告文案生成工作流",
+      "to": "Agent Skills",
+      "rel": "依赖"
+    },
+    {
+      "from": "问题描述式提示",
+      "to": "Claude Code",
+      "rel": "用于"
+    },
+    {
+      "from": "Figma插件",
+      "to": "重复性营销杂务",
+      "rel": "解决"
+    },
+    {
+      "from": "广告文案生成工作流",
+      "to": "重复性营销杂务",
+      "rel": "解决"
+    },
+    {
+      "from": "广告制作时长",
+      "to": "Figma插件",
+      "rel": "衡量"
+    },
+    {
+      "from": "构建型增长营销者",
+      "to": "Claude Code",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/how-anthropic-uses-claude-marketing.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "用AI智能体将生产代码库迁移到新语言，通过规则手册与验证循环压缩多年工程。",
+  "concepts": [
+    {
+      "en": "AI code migration",
+      "zh": "AI代码迁移",
+      "def_zh": "用AI智能体将生产代码库移植到新语言或框架的工程实践。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic的智能体编程工具，支持多智能体并行与动态工作流。",
+      "kind": "product"
+    },
+    {
+      "en": "rulebook",
+      "zh": "规则手册",
+      "def_zh": "规定代码翻译策略与歧义处理方式的文档，随迁移持续增补。",
+      "kind": "technique"
+    },
+    {
+      "en": "gap inventory",
+      "zh": "差距清单",
+      "def_zh": "记录规则手册默认无法覆盖、需重构而非直译的代码位置。",
+      "kind": "technique"
+    },
+    {
+      "en": "verification loop",
+      "zh": "验证循环",
+      "def_zh": "以编译器、测试套件等客观裁判驱动智能体反复修复的闭环。",
+      "kind": "technique"
+    },
+    {
+      "en": "adversarial review",
+      "zh": "对抗式评审",
+      "def_zh": "用独立上下文的评审智能体互相挑错，分歧交由第三方裁决。",
+      "kind": "technique"
+    },
+    {
+      "en": "parity harness",
+      "zh": "行为对齐测试",
+      "def_zh": "对比新旧代码库在真实场景下输出是否一致的验证机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "dependency map",
+      "zh": "依赖图",
+      "def_zh": "梳理文件间依赖关系以划分并行迁移批次与顺序。",
+      "kind": "technique"
+    },
+    {
+      "en": "subagent",
+      "zh": "子智能体",
+      "def_zh": "由主智能体分派、并行执行独立工作单元的智能体实例。",
+      "kind": "technique"
+    },
+    {
+      "en": "dynamic workflows",
+      "zh": "动态工作流",
+      "def_zh": "Claude Code中编排多智能体实现、评审与修复循环的能力。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AI代码迁移",
+      "to": "Claude Code",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI代码迁移",
+      "to": "规则手册",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI代码迁移",
+      "to": "差距清单",
+      "rel": "依赖"
+    },
+    {
+      "from": "AI代码迁移",
+      "to": "验证循环",
+      "rel": "依赖"
+    },
+    {
+      "from": "验证循环",
+      "to": "对抗式评审",
+      "rel": "启用"
+    },
+    {
+      "from": "验证循环",
+      "to": "行为对齐测试",
+      "rel": "启用"
+    },
+    {
+      "from": "依赖图",
+      "to": "AI代码迁移",
+      "rel": "用于"
+    },
+    {
+      "from": "动态工作流",
+      "to": "子智能体",
+      "rel": "启用"
+    }
+  ],
+  "rel": "articles/ai-code-migration.md"
+}

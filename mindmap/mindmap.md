@@ -1,0 +1,175 @@
+# Claude 最佳实践 · 知识地图
+
+## 智能体架构
+### 子代理 <small>30</small>
+#### 上下文窗口（解决）
+#### 上下文工程（解决）
+### 智能体 <small>18</small>
+#### Claude Code（用于）
+#### Claude 平台（用于）
+### 智能体工作流 <small>8</small>
+#### 智能体（替代）
+#### Claude Cowork（用于）
+### 动态工作流 <small>7</small>
+#### 子代理（依赖）
+#### 智能体工作流（属于）
+### 智能体循环 <small>6</small>
+#### Claude Agent SDK（启用）
+### 智能体框架 <small>5</small>
+#### 上下文工程（依赖）
+### 记忆 <small>4</small>
+### 长时运行智能体 <small>4</small>
+#### Claude Code（用于）
+### 多智能体系统 <small>3</small>
+### 会话 <small>2</small>
+### 智能体蓝图 <small>2</small>
+### 任务委派 <small>2</small>
+### 自我改进循环 <small>2</small>
+## Claude Code 与编程
+### Claude Code <small>79</small>
+#### 智能体编程（启用）
+#### 模型上下文协议（用于）
+### 智能体编程 <small>15</small>
+#### Claude Code（启用）
+#### 子代理（属于）
+### Claude Agent SDK <small>12</small>
+#### 智能体循环（启用）
+### 代码审查 <small>3</small>
+### 代码现代化 <small>3</small>
+### 技术债务 <small>3</small>
+### 计划模式 <small>2</small>
+### 合并队列 <small>2</small>
+### 测试驱动开发 <small>2</small>
+### 调试 <small>2</small>
+### 根因分析 <small>2</small>
+## 上下文工程
+### 上下文工程 <small>24</small>
+#### 子代理（解决）
+#### 技能（用于）
+### 上下文窗口 <small>13</small>
+#### 子代理（解决）
+#### 上下文压缩（解决）
+### 提示工程 <small>10</small>
+#### 上下文工程（属于）
+### 渐进式披露 <small>9</small>
+#### 技能（依赖）
+#### 上下文工程（属于）
+### CLAUDE.md <small>8</small>
+#### Claude Code（依赖）
+### 上下文压缩 <small>7</small>
+#### 上下文窗口（解决）
+### 工具搜索 <small>4</small>
+### 上下文 <small>3</small>
+## 工具与扩展
+### 技能 <small>46</small>
+#### 渐进式披露（依赖）
+#### Claude Code（用于）
+### 模型上下文协议 <small>31</small>
+#### Claude Code（用于）
+#### MCP 服务器（属于）
+### 插件 <small>10</small>
+#### Claude Cowork（用于）
+#### 技能（用于）
+### 连接器 <small>7</small>
+#### Claude Cowork（启用）
+### MCP 服务器 <small>7</small>
+#### 模型上下文协议（属于）
+#### 技能（依赖）
+### 钩子 <small>7</small>
+#### Claude Code（启用）
+### 插件市场 <small>3</small>
+### 技能创建器 <small>3</small>
+#### 技能（用于）
+### 定时任务 <small>3</small>
+#### Claude Cowork（启用）
+### 程序化工具调用 <small>3</small>
+## 模型与能力
+### 努力等级 <small>8</small>
+#### Claude Code（启用）
+#### 验证（启用）
+### Claude Fable 5 <small>7</small>
+#### 单任务成本（衡量）
+### 自适应思考 <small>3</small>
+### 扩展思考 <small>2</small>
+### Claude Opus 5.5 <small>2</small>
+### 前沿模型 <small>2</small>
+## 评估与验证
+### 验证 <small>8</small>
+#### 技能（启用）
+#### 努力等级（启用）
+### 评估 <small>6</small>
+### 评估框架 <small>5</small>
+### 评分器 <small>2</small>
+## 成本与性能
+### 提示缓存 <small>11</small>
+#### 令牌成本（解决）
+#### 努力等级（依赖）
+### 单任务成本 <small>5</small>
+#### 努力等级（衡量）
+#### Claude Fable 5（衡量）
+### 模型路由 <small>5</small>
+### 令牌成本 <small>5</small>
+#### 提示缓存（解决）
+### 投资回报率 <small>4</small>
+### 顾问策略 <small>3</small>
+### 令牌效率 <small>2</small>
+### 爬山优化 <small>2</small>
+### 快速模式 <small>2</small>
+#### Claude Code（属于）
+### 延迟 <small>2</small>
+### 缓存命中率 <small>2</small>
+## 安全与治理
+### 人在回路 <small>10</small>
+### 提示注入 <small>7</small>
+### 护栏 <small>4</small>
+### 沙箱 <small>4</small>
+### 自动模式 <small>4</small>
+### 幻觉 <small>4</small>
+### 可观测性 <small>4</small>
+### AI治理 <small>4</small>
+### 分类器 <small>2</small>
+### 审计追踪 <small>2</small>
+### 监管合规 <small>2</small>
+#### 智能体（风险）
+### 事件响应 <small>2</small>
+### 事故分诊 <small>2</small>
+### 误报 <small>2</small>
+### 受保护健康信息 <small>2</small>
+## 企业落地与组织
+### 工作流自动化 <small>6</small>
+#### 技能（解决）
+### 功能开关 <small>3</small>
+### 内部试用 <small>3</small>
+### 企业AI转型 <small>3</small>
+#### Claude 平台（用于）
+### 最佳实践 <small>3</small>
+### 成熟度模型 <small>2</small>
+### 人机团队 <small>2</small>
+### 生产部署 <small>2</small>
+### 定时部署 <small>2</small>
+### 研究预览 <small>2</small>
+### 现场演示 <small>2</small>
+#### Claude Code（用于）
+### 业务拓展代表 <small>2</small>
+## 产品线与功能
+### Claude 平台 <small>26</small>
+#### 智能体（用于）
+#### Claude Code（属于）
+### Claude Cowork <small>23</small>
+#### 技能（启用）
+#### 插件（用于）
+### Claude Tag <small>10</small>
+### Claude 托管智能体 <small>7</small>
+## 行业与场景
+### 商务智能体 <small>2</small>
+### 对话式 AI <small>2</small>
+#### Claude Cowork（替代）
+### 自助式数据分析 <small>2</small>
+### 金融服务 <small>2</small>
+### 遗留系统迁移 <small>2</small>
+### 商家智能体 <small>2</small>
+
+## 入口
+### [维基索引](../wiki/INDEX.md)
+### [译文目录](../docs/README.md)
+### [互动知识图谱](graph.html)

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "介绍 Claude 模型家族各档位差异，并给出按任务难度、延迟、成本与评测选型的实践建议。",
+  "concepts": [
+    {
+      "en": "Claude model family",
+      "zh": "Claude 模型家族",
+      "def_zh": "Anthropic 按智能、速度与成本分层提供的模型系列。",
+      "kind": "product"
+    },
+    {
+      "en": "Mythos",
+      "zh": "Mythos 模型档",
+      "def_zh": "面向前沿能力与高难度任务的最强模型档位。",
+      "kind": "product"
+    },
+    {
+      "en": "Fable",
+      "zh": "Fable 模型档",
+      "def_zh": "与 Mythos 同源、面向公众加装安全防护的模型档位。",
+      "kind": "product"
+    },
+    {
+      "en": "Opus",
+      "zh": "Opus 模型档",
+      "def_zh": "面向推理密集型与企业任务的强能力模型档位。",
+      "kind": "product"
+    },
+    {
+      "en": "Sonnet",
+      "zh": "Sonnet 模型档",
+      "def_zh": "兼顾性能、成本与速度的通用模型档位。",
+      "kind": "product"
+    },
+    {
+      "en": "Haiku",
+      "zh": "Haiku 模型档",
+      "def_zh": "成本最低、速度最快的高频负载模型档位。",
+      "kind": "product"
+    },
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "调节模型思考投入量以平衡质量、速度与成本的参数。",
+      "kind": "technique"
+    },
+    {
+      "en": "advisor strategy",
+      "zh": "顾问策略",
+      "def_zh": "低成本执行模型按需调用更强模型审核计划的协作方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "cost-per-task",
+      "zh": "单任务成本",
+      "def_zh": "完成一个任务的总花费，比单 token 价格更能反映经济性。",
+      "kind": "metric"
+    },
+    {
+      "en": "custom evaluations",
+      "zh": "自定义评测",
+      "def_zh": "从生产任务中挑选难题并自定成功标准的模型评估方法。",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 模型家族",
+      "to": "Mythos 模型档",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude 模型家族",
+      "to": "Fable 模型档",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude 模型家族",
+      "to": "Opus 模型档",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude 模型家族",
+      "to": "Sonnet 模型档",
+      "rel": "属于"
+    },
+    {
+      "from": "Claude 模型家族",
+      "to": "Haiku 模型档",
+      "rel": "属于"
+    },
+    {
+      "from": "努力等级",
+      "to": "单任务成本",
+      "rel": "衡量"
+    },
+    {
+      "from": "顾问策略",
+      "to": "单任务成本",
+      "rel": "解决"
+    },
+    {
+      "from": "自定义评测",
+      "to": "Claude 模型家族",
+      "rel": "用于"
+    }
+  ],
+  "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md"
+}

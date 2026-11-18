@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Carta Healthcare用Claude构建临床数据抽象平台，通过上下文工程实现99%准确率。",
+  "concepts": [
+    {
+      "en": "clinical data abstraction",
+      "zh": "临床数据抽象",
+      "def_zh": "从患者病历中提取标准化注册数据的过程",
+      "kind": "technique"
+    },
+    {
+      "en": "context engineering",
+      "zh": "上下文工程",
+      "def_zh": "为模型构建、筛选和排序输入信息的工程实践",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude",
+      "zh": "Claude",
+      "def_zh": "Anthropic开发的大语言模型系列",
+      "kind": "product"
+    },
+    {
+      "en": "large language model",
+      "zh": "大语言模型",
+      "def_zh": "基于海量文本训练的通用语言生成模型",
+      "kind": "technique"
+    },
+    {
+      "en": "natural language processing",
+      "zh": "自然语言处理",
+      "def_zh": "让计算机理解和处理人类语言的技术",
+      "kind": "technique"
+    },
+    {
+      "en": "clinical registry",
+      "zh": "临床注册库",
+      "def_zh": "收集特定疾病或手术标准化数据的数据库",
+      "kind": "product"
+    },
+    {
+      "en": "inter-rater reliability",
+      "zh": "评分者间信度",
+      "def_zh": "不同评估者对同一病例判断的一致程度",
+      "kind": "metric"
+    },
+    {
+      "en": "prompt engineering",
+      "zh": "提示工程",
+      "def_zh": "设计输入提示以引导模型输出的方法",
+      "kind": "technique"
+    },
+    {
+      "en": "evaluation framework",
+      "zh": "评估框架",
+      "def_zh": "系统化衡量模型表现并定位问题的体系",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "上下文工程",
+      "to": "大语言模型",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文工程",
+      "to": "临床数据抽象",
+      "rel": "解决"
+    },
+    {
+      "from": "大语言模型",
+      "to": "自然语言处理",
+      "rel": "替代"
+    },
+    {
+      "from": "Claude",
+      "to": "大语言模型",
+      "rel": "属于"
+    },
+    {
+      "from": "评分者间信度",
+      "to": "临床数据抽象",
+      "rel": "衡量"
+    },
+    {
+      "from": "提示工程",
+      "to": "上下文工程",
+      "rel": "依赖"
+    },
+    {
+      "from": "评估框架",
+      "to": "上下文工程",
+      "rel": "用于"
+    },
+    {
+      "from": "临床注册库",
+      "to": "临床数据抽象",
+      "rel": "依赖"
+    }
+  ],
+  "rel": "articles/carta-healthcare-clinical-abstractor.md"
+}

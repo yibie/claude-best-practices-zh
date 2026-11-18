@@ -1,0 +1,5284 @@
+[
+  {
+    "zh": "Claude Code",
+    "en": "Claude Code",
+    "cat": "Claude Code 与编程",
+    "kind": "product",
+    "aliases": [
+      "Claude Code"
+    ],
+    "def_zh": "Anthropic 的智能体编程工具，支持多智能体并行与动态工作流。",
+    "count": 79,
+    "docs": [
+      {
+        "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "summary": "Claude Fable 5 模型下，工作质量取决于澄清未知，需在实现前后迭代发现未知。",
+        "def": "Anthropic 的 AI 编程工具，用于与 Claude 协作完成编码任务。"
+      },
+      {
+        "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "summary": "Claude Code 动态工作流可即时生成多智能体执行框架，应对复杂任务。",
+        "def": "Anthropic 的智能体编程工具，支持动态工作流"
+      },
+      {
+        "rel": "articles/ai-code-migration.md",
+        "summary": "用AI智能体将生产代码库迁移到新语言，通过规则手册与验证循环压缩多年工程。",
+        "def": "Anthropic的智能体编程工具，支持多智能体并行与动态工作流。"
+      },
+      {
+        "rel": "articles/automating-eval-design-and-hillclimbing.md",
+        "summary": "介绍评估设计与爬山优化原则，及 claude-api 技能如何自动化实现。",
+        "def": "Anthropic 的智能体编程工具，可运行技能命令。"
+      },
+      {
+        "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+        "summary": "介绍Claude Cowork的适用场景、任务选择标准与上手实践，强调将多步骤知识工作委托给AI。",
+        "def": "面向开发者的AI编程工具，用于构建和交付软件。"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "Anthropic 的命令行编码智能体产品。"
+      },
+      {
+        "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "summary": "Claude 平台登陆 Google Cloud，可用现有账号构建智能体。",
+        "def": "Anthropic 的智能体编程工具产品。"
+      },
+      {
+        "rel": "articles/build-responsive-web-layouts.md",
+        "summary": "介绍响应式布局的常见做法，以及用 Claude.ai 和 Claude Code 生成与重构响应式布局的方法。",
+        "def": "命令行工具，可分析并重构代码库中的布局问题"
+      },
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "以代码为接口、可执行通用数字工作的编码智能体。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "Anthropic的AI编程代理产品。"
+      },
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "Anthropic推出的终端智能体编程工具，可加速软件开发。"
+      },
+      {
+        "rel": "articles/building-effective-agent-automations.md",
+        "summary": "介绍如何用 Claude 托管代理构建定时自动化，并给出六条避免常见故障的规则。",
+        "def": "Anthropic 的命令行编程代理工具。"
+      },
+      {
+        "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "summary": "将手动检查编码为技能，让 Claude Code 自动闭环验证并修复。",
+        "def": "Anthropic 的代理式编程工具，支持技能与验证循环。"
+      },
+      {
+        "rel": "articles/building-with-claude-sonnet-5-5.md",
+        "summary": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+        "def": "Anthropic 的智能体编程工具，可执行迁移与编码任务。"
+      },
+      {
+        "rel": "webinars/claude-code-best-practices-lightspeed.md",
+        "summary": "Anthropic 网络研讨会分享 Claude Code 高级用法、子代理与钩子等最佳实践。",
+        "def": "Anthropic 的 AI 编程代理产品，支持终端内编码与工作流自动化。"
+      },
+      {
+        "rel": "webinars/claude-code-financial-services.md",
+        "summary": "Claude Code 在金融服务中用于分析交易数据、预测及迁移遗留系统。",
+        "def": "Anthropic 的 AI 编程助手，用于代码分析与迁移。"
+      },
+      {
+        "rel": "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "summary": "面向金融服务工程团队的 Claude Code 与 Agent SDK 实操演示，覆盖研发、合规与理赔智能体。",
+        "def": "Anthropic 推出的智能体式编程工具，可在终端中执行开发任务。"
+      },
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "Anthropic 的智能体编程工具，支持代码生成、审查与自动化。"
+      },
+      {
+        "rel": "webinars/claude-code-live.md",
+        "summary": "Claude Code 创作者分享其起源、开发挑战、现场演示及融入现有工作流的最佳实践。",
+        "def": "Anthropic 推出的首个 AI 编程智能体产品。"
+      },
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "Anthropic 的命令行编程代理产品，按 token 计费。"
+      },
+      {
+        "rel": "webinars/claude-code-service-delivery.md",
+        "summary": "Claude Code 面向专业服务交付团队，演示将 COBOL 迁移上云等现代化工作流从数月压缩至数周。",
+        "def": "Anthropic 推出的智能体式编程工具，可执行代码任务与工作流。"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "可在终端中编写与定制代码的 Claude 编程工具。"
+      },
+      {
+        "rel": "articles/claude-model-and-effort-level-in-claude-code.md",
+        "summary": "在 Claude Code 中按任务复杂度选择模型与努力等级，以平衡能力、成本与自主性。",
+        "def": "Anthropic 的命令行编程代理产品，可配置模型与努力等级。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "Anthropic 的智能体编码工具，支持长会话与工具调用"
+      },
+      {
+        "rel": "articles/claude-tag-guide-for-startups.md",
+        "summary": "Claude Tag 帮助初创团队在 Slack 中协作，通过五个核心用例提升效率。",
+        "def": "Anthropic 的 AI 编程助手，用于代码生成与审查。"
+      },
+      {
+        "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+        "def": "Anthropic 的智能体编程工具，支持技能等扩展。"
+      },
+      {
+        "rel": "webinars/deloitte-code-modernization.md",
+        "summary": "Anthropic与Deloitte网络研讨会：用智能体AI和Claude Code加速遗留系统现代化改造",
+        "def": "Anthropic的智能体编程工具，可读写代码并执行开发任务"
+      },
+      {
+        "rel": "articles/deploying-claude-across-financial-services.md",
+        "summary": "介绍金融机构如何用Claude产品矩阵压缩耗时工作，并提供三阶段采用指南。",
+        "def": "面向量化与工程团队的代码智能体产品。"
+      },
+      {
+        "rel": "articles/fix-software-bugs-faster-with-claude.md",
+        "summary": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+        "def": "可自主跨文件调查并修复缺陷的命令行工具"
+      },
+      {
+        "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+        "summary": "介绍 Opus 5.5 在 Claude 与 Claude Code 中的提示、长任务引导与结果核查技巧。",
+        "def": "面向代码库的智能体式编程工具，支持长任务与子代理。"
+      },
+      {
+        "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+        "summary": "非技术项目经理用 Claude Code 六周内构建并上架压力管理应用 Respiro。",
+        "def": "Anthropic 的 AI 编程工具，支持命令行与 IDE 内开发。"
+      },
+      {
+        "rel": "articles/how-ai-helps-break-cost-barrier-cobol-modernization.md",
+        "summary": "AI 通过自动化遗留代码的探索与分析，降低 COBOL 现代化成本，使重写路径变得可行。",
+        "def": "Anthropic 的智能体编程工具，可自动化代码分析与迁移。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "summary": "市场人员用 Claude Code 将周报自动化为每位销售代表的个性化周一简报。",
+        "def": "Anthropic 的命令行 AI 编程与自动化工具，可用自然语言驱动工作流。"
+      },
+      {
+        "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "summary": "Anthropic 分享用 Claude 实现自助式数据分析的实践，强调准确率取决于上下文与验证而非代码生成。",
+        "def": "Anthropic 的智能体编程工具，可用于构建分析智能体"
+      },
+      {
+        "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "summary": "Anthropic 副 CISO 阐述在 AI 编写 80% 代码的 SDLC 中，如何通过左移安全、身份边界、自动化审查与人工治理保障安全。",
+        "def": "Anthropic 的代理式编码工具，用于生成、审查与迁移代码。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "Anthropic 的智能体编码工具，可自主读写代码并执行开发任务。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-cybersecurity.md",
+        "summary": "Anthropic安全团队用Claude Code构建CLUE平台，自动化威胁检测与调查。",
+        "def": "Anthropic的AI编程助手，支持自然语言构建软件。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "Anthropic的AI编程工具，支持无代码经验者构建应用。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-marketing.md",
+        "summary": "Anthropic增长营销团队用Claude Code构建Figma插件与广告文案工作流，将广告制作从30分钟缩短至30秒。",
+        "def": "Anthropic推出的可让非技术用户通过自然语言构建工具的AI编程产品。"
+      },
+      {
+        "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "summary": "Brex 团队使用 Claude Code 提升代码质量与生产力，实现角色融合与数据民主化。",
+        "def": "Anthropic 的智能体编程解决方案，可辅助编写、审查和解释代码。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "Anthropic 的智能体编程工具，可在本地代码库中自主导航与编辑。"
+      },
+      {
+        "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+        "summary": "CodeRabbit 用 Claude 构建编码前的规划编排层，以结构化计划提升代码质量。",
+        "def": "Anthropic 的智能体编码工具，可生成实现计划与代码。"
+      },
+      {
+        "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "summary": "Curative 用 Claude 构建多智能体层级，将医疗服务提供者合同签署速度提升约 50 倍。",
+        "def": "Anthropic 的智能体编程工具，可读写代码与执行任务。"
+      },
+      {
+        "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+        "summary": "Datadog 用 Temper 让智能体产出可验证规格而非代码，实现软件工业化。",
+        "def": "Anthropic 的智能体编程工具，用于生成与修改生产代码。"
+      },
+      {
+        "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "summary": "Outtake 用 Claude Code 与 Agent SDK 构建长时自主网络调查智能体，并总结工程实践。",
+        "def": "Anthropic 的编码智能体工具，可读写并运行代码进行原型验证。"
+      },
+      {
+        "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+        "summary": "产品设计师用Claude Design在构建前探索视觉创意，涵盖原型、幻灯片与动画。",
+        "def": "面向生产软件开发的终端编码代理工具"
+      },
+      {
+        "rel": "articles/how-to-configure-hooks.md",
+        "summary": "介绍 Claude Code 钩子的八种事件类型、配置方法、匹配器语法与调试技巧。",
+        "def": "Anthropic 的智能体编程工具，支持钩子等深度定制。"
+      },
+      {
+        "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+        "summary": "介绍在谷歌云上管理 Claude Code 成本并证明投资回报的控制、追踪、证明三杠杆框架。",
+        "def": "Anthropic 的智能体式编程工具，可多步读写文件、运行工具并推理。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "Anthropic 的智能体编程产品，可在终端与 IDE 中执行编码任务。"
+      },
+      {
+        "rel": "articles/integrate-apis-seamlessly.md",
+        "summary": "介绍如何借助Claude与Claude Code系统化设计API集成，提前处理认证、限流与错误。",
+        "def": "可自主分析代码库并生成生产级集成代码的终端工具。"
+      },
+      {
+        "rel": "articles/introduction-to-agentic-coding.md",
+        "summary": "介绍智能体编程的演进、工作原理及 Claude Code 的实践应用。",
+        "def": "在终端中直接访问整个代码库执行开发任务的智能体编程产品"
+      },
+      {
+        "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+        "summary": "智能体编程让AI自主执行完整开发任务，显著加速交付、降低门槛并提升代码质量。",
+        "def": "Anthropic推出的终端/IDE内智能体编程工具。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "summary": "Anthropic 分享 Claude Code 中技能的分类、编写技巧、分发与度量经验。",
+        "def": "Anthropic 的智能体编程工具，支持技能等扩展点。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "Anthropic 的智能体编程工具，按 token 计费。"
+      },
+      {
+        "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "summary": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+        "def": "命令行智能体工具，用于开发者委派编码与数据工作流。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "Anthropic推出的AI编程助手，支持代理式编码与自动化。"
+      },
+      {
+        "rel": "articles/optimize-code-performance-quickly.md",
+        "summary": "介绍用 Claude.ai 与 Claude Code 从被动性能剖析转向主动代码性能优化的方法。",
+        "def": "可跨文件分析并自动实施优化的终端智能编程工具。"
+      },
+      {
+        "rel": "articles/product-development-in-the-agentic-era.md",
+        "summary": "产品经理借助 Claude 与托管智能体，从协调事务转向原型构建与工艺打磨。",
+        "def": "用于编写、运行和交付自定义智能体的开发工具。"
+      },
+      {
+        "rel": "articles/running-an-ai-native-engineering-org.md",
+        "summary": "AI 原生工程组织以智能体编码为默认，重构规划、上下文获取、代码审查与团队角色。",
+        "def": "Anthropic 的智能体编码产品，支持命令行与网页端。"
+      },
+      {
+        "rel": "guides/scaling-agentic-coding-across-your-organization.md",
+        "summary": "介绍如何将 Claude Code 等智能体编程工具从试点推广到整个工程组织的最佳实践。",
+        "def": "Anthropic 推出的智能体编程工具。"
+      },
+      {
+        "rel": "articles/scaling-agentic-coding.md",
+        "summary": "系统化推广智能体编程：试点先行、内部专家扩散、CLAUDE.md 共享上下文、多维指标衡量成效。",
+        "def": "Anthropic 的智能体编程工具，支持多步任务与代码库理解。"
+      },
+      {
+        "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "summary": "Anthropic 数据团队将语义层、技能文件与评估套件复用到 Slack 中的 Claude Tag，实现自助式数据分析。",
+        "def": "面向数据科学家与工程师的智能体开发界面，用于构建分析能力。"
+      },
+      {
+        "rel": "articles/solving-code-review-at-anthropic.md",
+        "summary": "Claude Code 团队分享智能体时代的分层代码审查流程，以风险分级和自动化保障质量。",
+        "def": "Anthropic 的智能体编程工具，可自主编写和审查代码。"
+      },
+      {
+        "rel": "articles/spending-your-effort.md",
+        "summary": "解释 Claude Code 中 effort 等级的含义、效果曲线与适用场景，并给出按任务选择 effort 的实践建议。",
+        "def": "Anthropic 的终端内 AI 编程代理产品。"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "支持计划模式与自动模式的智能体编程工具。"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "面向编码任务的 Claude 代理产品。"
+      },
+      {
+        "rel": "guides/the-code-modernization-playbook.md",
+        "summary": "以智能体编码分阶段改造遗留系统，兼顾现代化与业务交付。",
+        "def": "Anthropic推出的智能体编码工具"
+      },
+      {
+        "rel": "guides/the-complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建技能：从规划、结构到测试与分发。",
+        "def": "Anthropic 的智能体编程工具，可加载并执行技能。"
+      },
+      {
+        "rel": "guides/the-founders-playbook-building-an-ai-native-startup.md",
+        "summary": "AI 原生创业手册：用 AI 压缩从想法到规模化的四阶段路径。",
+        "def": "Anthropic 的 AI 编程代理产品"
+      },
+      {
+        "rel": "articles/the-founders-playbook.md",
+        "summary": "Anthropic 发布创始人手册，指导如何用 AI 构建 AI 原生初创公司。",
+        "def": "用于编写和交付生产代码的 Claude 编程产品。"
+      },
+      {
+        "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "summary": "Claude 5 代模型上下文工程新规则：精简系统提示，让模型自主判断，用渐进披露替代堆砌。",
+        "def": "Anthropic 的智能体编程产品，支持技能与记忆等上下文机制。"
+      },
+      {
+        "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+        "summary": "介绍 Claude Code 中会话管理与上下文窗口策略，包括压缩、回退、子代理等技巧。",
+        "def": "Anthropic 的终端内 AI 编程代理产品。"
+      },
+      {
+        "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+        "summary": "Claude Code 团队用 HTML 替代 Markdown 生成更丰富、易读、可分享的输出。",
+        "def": "Anthropic 的智能体编程工具，可读取文件系统与外部上下文。"
+      },
+      {
+        "rel": "articles/using-claude-md-files.md",
+        "summary": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+        "def": "Anthropic 的 AI 编程代理工具，可读写代码并执行命令。"
+      },
+      {
+        "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+        "summary": "分析 Claude Code 任务在 Opus 5.5 上的成本构成与优化策略。",
+        "def": "Anthropic 的智能体编程工具，以任务循环方式工作。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "Anthropic的编码代理产品，默认使用Opus模型。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "summary": "BAM 以真实金融任务评测前沿模型，并用自建代理平台与治理控制安全部署 Claude Fable 5。",
+        "def": "Anthropic 的代理式编程与任务执行工具，可作为执行框架使用。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-rakuten.md",
+        "summary": "乐天利用Claude Fable 5的自我验证与品味对齐能力，构建可长时间无人值守运行的企业智能体。",
+        "def": "用于加速软件开发与智能体构建的编程工具。"
+      },
+      {
+        "rel": "guides/zero-trust-for-ai-agents.md",
+        "summary": "将零信任安全框架应用于企业自主AI智能体的部署与防御。",
+        "def": "Anthropic推出的智能体式编程工具。"
+      }
+    ]
+  },
+  {
+    "zh": "技能",
+    "en": "Skills",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "技能",
+      "智能体技能",
+      "Agent Skills",
+      "agent skills",
+      "技能结构",
+      "技能分发",
+      "技能测试"
+    ],
+    "def_zh": "以文件封装可复用工作流与专长、按需加载的能力包。",
+    "count": 44,
+    "docs": [
+      {
+        "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "summary": "Claude Fable 5 模型下，工作质量取决于澄清未知，需在实现前后迭代发现未知。",
+        "def": "可复用的提示或能力模块，增强 Claude 在特定任务上的表现。"
+      },
+      {
+        "rel": "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+        "summary": "介绍 Agent Skills 如何将 Claude 从对话助手转变为可执行复杂可重复工作流的专用智能体。",
+        "def": "将 Claude 从对话助手转变为执行特定工作流的专用智能体的能力单元。"
+      },
+      {
+        "rel": "articles/ai-ci-cd-on-call.md",
+        "summary": "Anthropic 用 Claude Tag 构建 CI/CD 值班智能体，自动检测、分诊、修复并复盘故障。",
+        "def": "以 Markdown 文件形式固化指令与排查步骤的可复用能力包。"
+      },
+      {
+        "rel": "articles/auto-mode-in-production.md",
+        "summary": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+        "def": "可复用的标准化代理能力模块，用于约束与编排任务"
+      },
+      {
+        "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "summary": "Claude 平台登陆 Google Cloud，可用现有账号构建智能体。",
+        "def": "可复用的智能体能力模块，扩展其任务范围。"
+      },
+      {
+        "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "summary": "介绍连接智能体与外部系统的三种方式，重点阐述MCP在生产环境中的优势与构建模式。",
+        "def": "教智能体如何使用工具完成实际工作的程序性知识包。"
+      },
+      {
+        "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "summary": "将子代理折叠进主代理循环，用渐进披露的技能与工具替代多代理编排，可提升质量并降低延迟与成本。",
+        "def": "封装团队工作步骤、规则与判断的按需加载知识单元。"
+      },
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "以文件封装领域工作流与最佳实践、供智能体按需加载的专长包。"
+      },
+      {
+        "rel": "articles/building-an-ai-native-revenue-organization.md",
+        "summary": "面向营收团队，介绍在销售组织内推广 Claude 的成熟度模型、三阶段落地计划与 ROI 衡量框架。",
+        "def": "把顶尖员工的最佳实践固化为可复用的 Claude 任务能力"
+      },
+      {
+        "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "summary": "将手动检查编码为技能，让 Claude Code 自动闭环验证并修复。",
+        "def": "以 Markdown 文件编码的可复用指令，供 Claude 自动执行。"
+      },
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "可复用的指令文件，编码团队标准与上下文供智能体调用。"
+      },
+      {
+        "rel": "articles/claude-excel-powerpoint-updates.md",
+        "summary": "Claude for Excel 与 PowerPoint 跨文件共享上下文，并支持技能复用工作流。",
+        "def": "把完整工作流封装为一键可复用动作的能力。"
+      },
+      {
+        "rel": "webinars/claude-for-nonprofits-a-staff-guide-to-making-claude-useful-on-day-one.md",
+        "summary": "面向非营利组织员工的实操指南：连接工作数据与技能，让 Claude 当天产出可用文稿。",
+        "def": "预置在账户中的可复用能力包，把任务从计划推进到成稿。"
+      },
+      {
+        "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+        "def": "可复用工作流单元，让 Claude 一致地执行特定任务。"
+      },
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "以文件形式定义的可复用能力模块，供 Claude 按需调用。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-the-legal-industry.md",
+        "summary": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+        "def": "定制Claude以执行特定任务的可复用能力模块。"
+      },
+      {
+        "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "summary": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+        "def": "封装流程知识与领域专长的可复用指令集，教 Claude 如何完成任务。"
+      },
+      {
+        "rel": "articles/getting-started-with-loops.md",
+        "summary": "Claude Code 团队定义循环为智能体重复工作直至满足停止条件，并分类为轮次、目标、时间与主动循环。",
+        "def": "以 SKILL.md 编码验证步骤供智能体自检的机制。"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "按需渐进披露的任务相关上下文包，由模型自行读取。"
+      },
+      {
+        "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "summary": "Anthropic 分享用 Claude 实现自助式数据分析的实践，强调准确率取决于上下文与验证而非代码生成。",
+        "def": "封装可复用分析知识与操作模板的智能体能力单元"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "可复用的Claude任务模块，如每日简报。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-legal.md",
+        "summary": "Anthropic法务团队用Claude构建自动化工作流，将审查时间从数天缩短至数小时。",
+        "def": "包含指令和资源的文件，Claude按需加载以执行专门任务"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-marketing.md",
+        "summary": "Anthropic增长营销团队用Claude Code构建Figma插件与广告文案工作流，将广告制作从30分钟缩短至30秒。",
+        "def": "可复用的技能模块，为Claude提供品牌语调、产品准确性等专业指导。"
+      },
+      {
+        "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "summary": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+        "def": "封装特定工作流、可复用的 Claude 能力模块。"
+      },
+      {
+        "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "summary": "Anthropic营销运营团队用Claude Cowork自动化周报生成与活动搭建，将数天手工工作压缩至数小时。",
+        "def": "封装特定任务指令与逻辑的可复用模块，供Claude执行。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "按需加载的打包指令，通过渐进披露提供可复用领域专长。"
+      },
+      {
+        "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "summary": "Cresta 基于 Claude Agent SDK 构建元智能体 Conductor，将 CX 专业知识转化为可复用的智能体构建能力。",
+        "def": "可共享复用的智能体构建模式、规则与评估方法封装。"
+      },
+      {
+        "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+        "summary": "Kepler 用 Claude 做推理层、确定性基础设施做验证层，构建可审计的金融 AI 研究平台。",
+        "def": "针对常见工作流封装的可复用、幂等执行单元"
+      },
+      {
+        "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "summary": "介绍创建Claude Skills的步骤、最佳实践、限制与示例。",
+        "def": "扩展Claude能力的自定义指令，用于特定任务或领域。"
+      },
+      {
+        "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+        "summary": "Warp 用技能文件构建自我改进智能体：内层技能执行任务，外层改进技能吸收人类反馈并迭代更新。",
+        "def": "以文件形式编码知识、供智能体按需查阅的指令单元。"
+      },
+      {
+        "rel": "articles/improving-frontend-design-through-skills.md",
+        "summary": "通过 Skills 按需加载前端设计指导，克服模型分布收敛，提升界面美学与产物质量。",
+        "def": "按需加载的指令与领域知识文档，避免常驻上下文开销。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "summary": "Anthropic 分享 Claude Code 中技能的分类、编写技巧、分发与度量经验。",
+        "def": "包含指令、脚本和资源的文件夹，供智能体发现并执行任务。"
+      },
+      {
+        "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "summary": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+        "def": "封装特定任务能力的可复用模块。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "可复用的AI能力模块，封装领域知识与操作流程。"
+      },
+      {
+        "rel": "articles/seeing-like-an-agent.md",
+        "summary": "Claude Code 团队从模型视角设计工具，通过实验迭代工具形态并随模型能力演进。",
+        "def": "可被智能体递归读取和引用的模块化能力文件。"
+      },
+      {
+        "rel": "articles/skills-explained.md",
+        "summary": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+        "def": "按需动态加载的指令、脚本与资源文件夹，赋予 Claude 领域专长。"
+      },
+      {
+        "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "summary": "介绍 Claude Code 七种指令注入方式，按上下文成本与权威性权衡选择。",
+        "def": "按需加载的可复用流程性工作流，仅调用时载入全文。"
+      },
+      {
+        "rel": "articles/subagents-in-claude-code.md",
+        "summary": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+        "def": "按需加载、可复用的多步骤工作流封装"
+      },
+      {
+        "rel": "guides/the-ai-investment-firm.md",
+        "summary": "投资公司采用AI需重构运营模式，让Claude承担例行工作，并新增AI工程师等角色。",
+        "def": "Claude遵循的可复用任务指令与能力单元。"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "将品牌、安全、合规等政策编码为可复用约束的机制。"
+      },
+      {
+        "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+        "summary": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+        "def": "按需加载的模块化指令，扩展智能体能力而不增加交接开销。"
+      },
+      {
+        "rel": "guides/the-complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建技能：从规划、结构到测试与分发。",
+        "def": "以文件夹打包的指令集，教 Claude 处理特定任务或工作流。"
+      },
+      {
+        "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "summary": "Claude 5 代模型上下文工程新规则：精简系统提示，让模型自主判断，用渐进披露替代堆砌。",
+        "def": "轻量指南文件，让模型在需要时查找特定知识或流程。"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "封装团队可重复流程、供模型调用的能力单元。"
+      }
+    ]
+  },
+  {
+    "zh": "模型上下文协议",
+    "en": "MCP",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "模型上下文协议",
+      "MCP",
+      "MCP 连接器",
+      "MCP Connectors",
+      "MCP connectors"
+    ],
+    "def_zh": "标准化连接智能体与外部工具及数据源的开放协议。",
+    "count": 31,
+    "docs": [
+      {
+        "rel": "articles/ai-ci-cd-on-call.md",
+        "summary": "Anthropic 用 Claude Tag 构建 CI/CD 值班智能体，自动检测、分诊、修复并复盘故障。",
+        "def": "通过 MCP 协议把智能体接入外部工具与数据源的连接组件。"
+      },
+      {
+        "rel": "articles/auto-mode-in-production.md",
+        "summary": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+        "def": "连接代理与外部工具及数据源的开放协议"
+      },
+      {
+        "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "summary": "介绍连接智能体与外部系统的三种方式，重点阐述MCP在生产环境中的优势与构建模式。",
+        "def": "标准化智能体与外部系统连接、认证与发现的开放协议。"
+      },
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "连接智能体与外部工具及数据源的标准协议。"
+      },
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "标准化连接外部服务、自动处理认证与 API 调用的集成协议。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-financial-services.md",
+        "summary": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+        "def": "连接AI代理与外部系统的开放协议标准。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "连接AI模型与外部工具及数据源的开放协议。"
+      },
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "模型上下文协议，连接 Claude 与外部工具和数据源。"
+      },
+      {
+        "rel": "articles/claude-excel-powerpoint-updates.md",
+        "summary": "Claude for Excel 与 PowerPoint 跨文件共享上下文，并支持技能复用工作流。",
+        "def": "通过模型上下文协议接入外部工具与数据的连接方式。"
+      },
+      {
+        "rel": "articles/claude-for-the-legal-industry.md",
+        "summary": "Claude 通过 MCP 连接器与实务插件接入法律技术栈，覆盖合同、诉讼、合规等场景。",
+        "def": "基于模型上下文协议将外部系统数据与操作接入 Claude 的标准化接口。"
+      },
+      {
+        "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+        "def": "模型上下文协议，标准化连接外部工具与数据源。"
+      },
+      {
+        "rel": "articles/cowork-plugins-finance.md",
+        "summary": "Claude 推出金融插件与跨应用工作流，打通 Excel 与 PowerPoint 并接入机构数据。",
+        "def": "通过 MCP 协议把外部数据源接入 Claude 上下文的接口。"
+      },
+      {
+        "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "summary": "介绍用 MCP 与 A2A 协议在 Vertex AI 上构建多智能体系统",
+        "def": "标准化智能体与外部工具及数据源连接的开源协议"
+      },
+      {
+        "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "summary": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+        "def": "标准化协议，为 Claude 提供对外部系统与工具的安全连接访问。"
+      },
+      {
+        "rel": "webinars/future-of-ai-coding-mcp-vs-code.md",
+        "summary": "介绍VS Code中MCP实现如何赋能Claude的AI编程工作流，涵盖MCP生态与服务器构建。",
+        "def": "标准化协议，用于连接AI模型与外部工具和数据源。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "summary": "市场人员用 Claude Code 将周报自动化为每位销售代表的个性化周一简报。",
+        "def": "模型上下文协议，让 Claude 连接外部数据源与工具的标准接口。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "模型上下文协议，让 AI 连接外部数据源与工具的开放标准。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "连接AI与外部数据源的开放协议。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-legal.md",
+        "summary": "Anthropic法务团队用Claude构建自动化工作流，将审查时间从数天缩短至数小时。",
+        "def": "连接Claude与外部数据源和工具的开放协议"
+      },
+      {
+        "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "summary": "Brex 团队使用 Claude Code 提升代码质量与生产力，实现角色融合与数据民主化。",
+        "def": "模型上下文协议，用于连接 AI 模型与外部数据源和工具。"
+      },
+      {
+        "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "summary": "Curative 用 Claude 构建多智能体层级，将医疗服务提供者合同签署速度提升约 50 倍。",
+        "def": "模型上下文协议，标准化智能体与外部系统的连接。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "让模型安全接入外部工具与数据源的开放协议。"
+      },
+      {
+        "rel": "articles/introduction-to-agentic-coding.md",
+        "summary": "介绍智能体编程的演进、工作原理及 Claude Code 的实践应用。",
+        "def": "为 Claude Code 连接外部工具与系统提供上下文的开放协议"
+      },
+      {
+        "rel": "articles/managed-agents.md",
+        "summary": "托管代理通过解耦大脑与手，以稳定接口支持长周期代理工作。",
+        "def": "连接Claude与外部工具和服务的开放协议。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "为模型提供工具定义的模型上下文协议。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "模型上下文协议，标准化AI与外部数据源的连接。"
+      },
+      {
+        "rel": "articles/skills-explained.md",
+        "summary": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+        "def": "连接 AI 应用与外部工具和数据源的开放标准协议。"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "连接外部系统、读写权威记录的模型上下文协议。"
+      },
+      {
+        "rel": "articles/using-claude-md-files.md",
+        "summary": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+        "def": "让 Claude 连接外部工具与数据源的开放协议。"
+      },
+      {
+        "rel": "articles/what-is-model-context-protocol.md",
+        "summary": "MCP 是连接 AI 与外部系统的开放标准，类似 USB-C，简化集成并扩展 AI 能力。",
+        "def": "定义 LLM 与外部系统通信方式的开放标准。"
+      },
+      {
+        "rel": "guides/zero-trust-for-ai-agents.md",
+        "summary": "将零信任安全框架应用于企业自主AI智能体的部署与防御。",
+        "def": "连接AI与外部工具和数据源的开放协议。"
+      }
+    ]
+  },
+  {
+    "zh": "子代理",
+    "en": "Subagents",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "子代理",
+      "subagent",
+      "subagents",
+      "子智能体",
+      "Subagents"
+    ],
+    "def_zh": "拥有独立上下文、由主代理编排的专注执行单元。",
+    "count": 30,
+    "docs": [
+      {
+        "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "summary": "Claude Code 动态工作流可即时生成多智能体执行框架，应对复杂任务。",
+        "def": "由主流程派生、拥有独立上下文窗口的专注执行单元"
+      },
+      {
+        "rel": "articles/ai-code-migration.md",
+        "summary": "用AI智能体将生产代码库迁移到新语言，通过规则手册与验证循环压缩多年工程。",
+        "def": "由主智能体分派、并行执行独立工作单元的智能体实例。"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "由主智能体派生、并行处理子任务的智能体实例。"
+      },
+      {
+        "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "summary": "将子代理折叠进主代理循环，用渐进披露的技能与工具替代多代理编排，可提升质量并降低延迟与成本。",
+        "def": "拥有独立上下文窗口、工具与指令，由协调器编排的代理。"
+      },
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "拥有独立上下文窗口、可并行处理子任务并只回传相关信息的智能体。"
+      },
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "由主智能体调度、专精特定任务的从属智能体。"
+      },
+      {
+        "rel": "webinars/claude-code-best-practices-lightspeed.md",
+        "summary": "Anthropic 网络研讨会分享 Claude Code 高级用法、子代理与钩子等最佳实践。",
+        "def": "由主代理派生、并行处理子任务的独立代理实例。"
+      },
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "由主智能体派生、并行处理独立任务的智能体实例。"
+      },
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "承接高输出任务并只回传结果的独立代理实例。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "从父会话派生、可继承父级缓存的辅助智能体"
+      },
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "插件内定义的专用代理，分担特定子任务。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-the-legal-industry.md",
+        "summary": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+        "def": "在Claude中执行特定子任务的辅助代理。"
+      },
+      {
+        "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+        "summary": "介绍 Opus 5.5 在 Claude 与 Claude Code 中的提示、长任务引导与结果核查技巧。",
+        "def": "把大任务拆分给多个并行代理执行并汇总结果。"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "模型派生出的独立上下文窗口，用于隔离特定子任务。"
+      },
+      {
+        "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+        "summary": "非技术项目经理用 Claude Code 六周内构建并上架压力管理应用 Respiro。",
+        "def": "在主智能体编排下负责特定子任务的专用 AI 代理。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "在主智能体编排下负责特定子任务的独立智能体。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "拥有独立上下文窗口的隔离 Claude 实例，用于拆分探索与编辑。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "summary": "Claude Code 围绕提示缓存构建，通过前缀匹配、消息更新、工具延迟加载和缓存安全分叉优化缓存命中率。",
+        "def": "由主代理派生、可独立调用其他模型的代理实例。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "拥有独立上下文窗口、只回传结果的代理。"
+      },
+      {
+        "rel": "articles/seeing-like-an-agent.md",
+        "summary": "Claude Code 团队从模型视角设计工具，通过实验迭代工具形态并随模型能力演进。",
+        "def": "由主智能体调用、在独立上下文中执行子任务的智能体。"
+      },
+      {
+        "rel": "articles/skills-explained.md",
+        "summary": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+        "def": "拥有独立上下文、系统提示与工具权限的专用 AI 助手。"
+      },
+      {
+        "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "summary": "介绍 Claude Code 七种指令注入方式，按上下文成本与权威性权衡选择。",
+        "def": "在隔离上下文中执行任务并只返回摘要的委派单元。"
+      },
+      {
+        "rel": "articles/subagents-in-claude-code.md",
+        "summary": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+        "def": "拥有独立上下文窗口、只回传结果的隔离 Claude 实例"
+      },
+      {
+        "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+        "summary": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+        "def": "由主智能体调用的专用智能体，用于窄范围或独立任务。"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "由主代理调度、分担子任务的次级代理。"
+      },
+      {
+        "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+        "summary": "介绍 Claude Code 中会话管理与上下文窗口策略，包括压缩、回退、子代理等技巧。",
+        "def": "拥有独立干净上下文窗口的代理，只回传最终结果。"
+      },
+      {
+        "rel": "articles/using-claude-md-files.md",
+        "summary": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+        "def": "拥有隔离上下文的独立代理，用于分阶段处理任务。"
+      },
+      {
+        "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+        "summary": "分析 Claude Code 任务在 Opus 5.5 上的成本构成与优化策略。",
+        "def": "在独立上下文窗口中运行并返回摘要的辅助代理。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "在独立上下文窗口中运行、向主代理返回摘要的辅助代理。"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "并行处理大任务某一部分并回报的独立模型实例。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude Cowork",
+    "en": "Claude Cowork",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude Cowork"
+    ],
+    "def_zh": "面向非技术知识工作者的企业级 AI 协作工作空间。",
+    "count": 23,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-getting-started-with-claude-cowork.md",
+        "summary": "介绍Claude Cowork的适用场景、任务选择标准与上手实践，强调将多步骤知识工作委托给AI。",
+        "def": "面向非技术知识工作者的AI工作空间，可指向文件夹、连接应用并交付成品。"
+      },
+      {
+        "rel": "articles/building-ai-agents-for-the-enterprise.md",
+        "summary": "企业AI转型需将智能体嵌入工作流程，通过三大支柱实现复利回报。",
+        "def": "面向团队的企业级AI协作产品，无需定制开发。"
+      },
+      {
+        "rel": "articles/building-an-ai-native-revenue-organization.md",
+        "summary": "面向营收团队，介绍在销售组织内推广 Claude 的成熟度模型、三阶段落地计划与 ROI 衡量框架。",
+        "def": "面向企业团队协作与工作流落地的 Claude 产品"
+      },
+      {
+        "rel": "articles/ciso-guide-to-agentic-ai.md",
+        "summary": "CISO 应使智能体风险可读且有界，通过四问框架和七项控制安全部署智能体。",
+        "def": "以人类操作员为问责主体的智能体工作环境。"
+      },
+      {
+        "rel": "guides/claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是能读写文件、连接工作应用并执行多步任务的 Claude 版本。",
+        "def": "可读写本地文件、连接工作应用并执行多步任务的 Claude 版本"
+      },
+      {
+        "rel": "articles/claude-for-the-legal-industry.md",
+        "summary": "Claude 通过 MCP 连接器与实务插件接入法律技术栈，覆盖合同、诉讼、合规等场景。",
+        "def": "面向知识工作者的协作式 AI 工作空间，支持跨文档任务与定时作业。"
+      },
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "面向非开发者的 Claude 协作工作产品，设定目标即可交付成品。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-financial-services.md",
+        "summary": "介绍金融机构如何用Claude产品矩阵压缩耗时工作，并提供三阶段采用指南。",
+        "def": "面向跨文件与应用的项目级协作产品。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-the-legal-industry.md",
+        "summary": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+        "def": "面向跨文件与应用的事务级协作的Claude产品。"
+      },
+      {
+        "rel": "guides/deploying-claude-across-your-organization.md",
+        "summary": "介绍在企业职能中部署 Claude Cowork 的用例、试点结构与规模化最佳实践。",
+        "def": "面向企业职能协作与工作流自动化的 Claude 产品。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.md",
+        "summary": "Anthropic销售负责人用Claude Cowork自动生成客户简报、周度预测并夜间评分4000个账户。",
+        "def": "面向企业协作的Claude产品，可自动处理销售等业务流程。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "团队协作平台，可打包技能和连接器为插件。"
+      },
+      {
+        "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "summary": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+        "def": "支持技能与定时任务的协作式 AI 工作平台。"
+      },
+      {
+        "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+        "summary": "Anthropic财务团队用Claude Cowork维护财务叙事一致性并释放高价值工作时间。",
+        "def": "面向知识工作的协作式AI产品，可读写文档并保持上下文。"
+      },
+      {
+        "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "summary": "Anthropic营销运营团队用Claude Cowork自动化周报生成与活动搭建，将数天手工工作压缩至数小时。",
+        "def": "Anthropic推出的自动化工作流产品，可连接多平台并执行任务。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "支持云端会话协作的 Claude 产品形态。"
+      },
+      {
+        "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "summary": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+        "def": "面向非开发者的桌面智能体产品，可操作本地文件与连接应用。"
+      },
+      {
+        "rel": "articles/product-development-in-the-agentic-era.md",
+        "summary": "产品经理借助 Claude 与托管智能体，从协调事务转向原型构建与工艺打磨。",
+        "def": "面向开放式研究与探索的协作式对话产品。"
+      },
+      {
+        "rel": "articles/running-an-ai-native-engineering-org.md",
+        "summary": "AI 原生工程组织以智能体编码为默认，重构规划、上下文获取、代码审查与团队角色。",
+        "def": "面向团队协作的 Claude 产品，与 Claude Code 配合使用。"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "运行于桌面应用的知识工作代理，可读写本地文件并跨应用完成多步任务。"
+      },
+      {
+        "rel": "articles/the-founders-playbook.md",
+        "summary": "Anthropic 发布创始人手册，指导如何用 AI 构建 AI 原生初创公司。",
+        "def": "面向团队协作场景的 Claude 产品。"
+      },
+      {
+        "rel": "webinars/unified-claude-what-it-means-for-admins.md",
+        "summary": "Claude 将聊天与 Cowork 合并为跨平台统一体验，便于管理员治理。",
+        "def": "面向团队协作与交付物产出的 Claude 工作空间"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "面向知识工作的智能体系统，可交付完整成果。"
+      }
+    ]
+  },
+  {
+    "zh": "上下文工程",
+    "en": "Context Engineering",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "上下文工程",
+      "context engineering",
+      "Context Engineering"
+    ],
+    "def_zh": "系统化设计与管理模型上下文以提升输出质量。",
+    "count": 18,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-prompt-engineering.md",
+        "summary": "介绍提示工程的核心与进阶技巧，并说明其与上下文工程的关系。",
+        "def": "系统化管理模型上下文信息以塑造行为的实践。"
+      },
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "设计与管理模型上下文信息以提升智能体表现的方法。"
+      },
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "系统化设计与管理模型上下文以提升输出质量的实践。"
+      },
+      {
+        "rel": "articles/carta-healthcare-clinical-abstractor.md",
+        "summary": "Carta Healthcare用Claude构建临床数据抽象平台，通过上下文工程实现99%准确率。",
+        "def": "为模型构建、筛选和排序输入信息的工程实践"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "设计与管理模型输入上下文以提升效果和成本效率的实践"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "管理模型上下文窗口内容以提升效果与效率的方法。"
+      },
+      {
+        "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "summary": "Anthropic 分享用 Claude 实现自助式数据分析的实践，强调准确率取决于上下文与验证而非代码生成。",
+        "def": "为模型提供正确实体映射与业务定义等上下文的方法"
+      },
+      {
+        "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "summary": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+        "def": "为 AI 精心组织提示、资料与示例以提升输出质量。"
+      },
+      {
+        "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+        "summary": "Anthropic财务团队用Claude Cowork维护财务叙事一致性并释放高价值工作时间。",
+        "def": "为AI系统组织与供给相关背景信息以提升输出质量。"
+      },
+      {
+        "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "summary": "Cresta 基于 Claude Agent SDK 构建元智能体 Conductor，将 CX 专业知识转化为可复用的智能体构建能力。",
+        "def": "为智能体收集、组织并提供恰当业务上下文的方法。"
+      },
+      {
+        "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+        "summary": "Kepler 用 Claude 做推理层、确定性基础设施做验证层，构建可审计的金融 AI 研究平台。",
+        "def": "围绕模型调用设计结构化知识与边界的系统工程"
+      },
+      {
+        "rel": "articles/improving-frontend-design-through-skills.md",
+        "summary": "通过 Skills 按需加载前端设计指导，克服模型分布收敛，提升界面美学与产物质量。",
+        "def": "在合适高度组织提示与上下文，平衡具体与抽象。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "summary": "Anthropic 分享 Claude Code 中技能的分类、编写技巧、分发与度量经验。",
+        "def": "设计模型可见信息的内容与结构以提升表现。"
+      },
+      {
+        "rel": "articles/managed-agents.md",
+        "summary": "托管代理通过解耦大脑与手，以稳定接口支持长周期代理工作。",
+        "def": "管理上下文窗口内信息以优化模型表现的技术。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "系统化构建和维护AI所需背景信息的方法。"
+      },
+      {
+        "rel": "articles/seeing-like-an-agent.md",
+        "summary": "Claude Code 团队从模型视角设计工具，通过实验迭代工具形态并随模型能力演进。",
+        "def": "设计和管理智能体上下文以提升表现的方法。"
+      },
+      {
+        "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "summary": "Claude 5 代模型上下文工程新规则：精简系统提示，让模型自主判断，用渐进披露替代堆砌。",
+        "def": "组装系统提示、技能、记忆等上下文以引导模型的方法。"
+      },
+      {
+        "rel": "articles/using-claude-md-files.md",
+        "summary": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+        "def": "有意识地设计和管理注入模型上下文的信息。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体",
+    "en": "AI Agent",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "智能体",
+      "AI agent",
+      "agent",
+      "AI智能体",
+      "AI Agent",
+      "AI 智能体",
+      "智能体AI",
+      "agentic AI",
+      "Agentic AI",
+      "AI代理",
+      "智能体 AI",
+      "代理式编码"
+    ],
+    "def_zh": "能自主规划、调用工具并执行多步任务的 AI 系统。",
+    "count": 18,
+    "docs": [
+      {
+        "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "summary": "Claude 平台登陆 Google Cloud，可用现有账号构建智能体。",
+        "def": "能自主调用工具完成多步任务的 AI 系统。"
+      },
+      {
+        "rel": "articles/building-ai-agents-for-startups.md",
+        "summary": "初创公司用AI智能体自主处理业务流程，节省人力、获取专业能力并兼顾速度与质量。",
+        "def": "能自主管理业务流程、仅需人工监督的AI系统。"
+      },
+      {
+        "rel": "articles/building-ai-agents-for-the-enterprise.md",
+        "summary": "企业AI转型需将智能体嵌入工作流程，通过三大支柱实现复利回报。",
+        "def": "能自主规划并执行多步任务的AI系统。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-financial-services.md",
+        "summary": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+        "def": "能自主处理长周期、上下文密集任务并采取行动的系统。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "能推理、规划并执行多步任务的智能系统。"
+      },
+      {
+        "rel": "guides/building-effective-ai-agents.md",
+        "summary": "介绍构建高效 AI 智能体的架构模式、决策框架与真实用例。",
+        "def": "能自主规划并执行多步任务的智能系统"
+      },
+      {
+        "rel": "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+        "summary": "Anthropic与Mesh-AI网络研讨会：讲解生产级AI智能体的基础、评估与部署。",
+        "def": "能自主规划并执行多步任务以实现目标的AI系统。"
+      },
+      {
+        "rel": "articles/ciso-guide-to-agentic-ai.md",
+        "summary": "CISO 应使智能体风险可读且有界，通过四问框架和七项控制安全部署智能体。",
+        "def": "能自主规划并调用工具执行多步任务的 AI 系统。"
+      },
+      {
+        "rel": "webinars/claude-code-live.md",
+        "summary": "Claude Code 创作者分享其起源、开发挑战、现场演示及融入现有工作流的最佳实践。",
+        "def": "能自主感知环境并采取行动完成任务的 AI 系统。"
+      },
+      {
+        "rel": "webinars/claude-on-vertex-ai.md",
+        "summary": "技术研讨会介绍在 Vertex AI 上构建高级智能体的记忆、推理与工具集成能力",
+        "def": "能自主规划并调用工具完成多步任务的 AI 系统"
+      },
+      {
+        "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "summary": "介绍AI智能体的三种常见工作流模式：顺序、并行和评估-优化器，及其适用场景与权衡。",
+        "def": "能自主决策并使用工具完成任务的智能系统。"
+      },
+      {
+        "rel": "webinars/deloitte-code-modernization.md",
+        "summary": "Anthropic与Deloitte网络研讨会：用智能体AI和Claude Code加速遗留系统现代化改造",
+        "def": "能自主规划并执行多步任务的AI系统"
+      },
+      {
+        "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "summary": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+        "def": "能自主调用工具、遵循工作流并产出稳定结果的 AI 系统。"
+      },
+      {
+        "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "summary": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+        "def": "能自主规划并执行多步任务的 AI 系统。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "AI代理自主完成编码任务的工作模式。"
+      },
+      {
+        "rel": "guides/the-ai-investment-firm.md",
+        "summary": "投资公司采用AI需重构运营模式，让Claude承担例行工作，并新增AI工程师等角色。",
+        "def": "可代用户执行多步任务的AI系统。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-cursor.md",
+        "summary": "Cursor 通过自建 CursorBench 评估前沿模型，发现 Claude Fable 5 具备全局推理能力，能解决最难的 1% 工程问题。",
+        "def": "AI 代理自主完成编码、调试与验证任务。"
+      },
+      {
+        "rel": "guides/zero-trust-for-ai-agents.md",
+        "summary": "将零信任安全框架应用于企业自主AI智能体的部署与防御。",
+        "def": "可自主规划并执行任务的AI系统。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体编程",
+    "en": "Agentic Coding",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "智能体编程",
+      "agentic coding",
+      "Agentic Coding",
+      "智能体编码"
+    ],
+    "def_zh": "由 AI 智能体自主完成编码、审查与测试的开发范式。",
+    "count": 15,
+    "docs": [
+      {
+        "rel": "articles/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+        "summary": "智能体编码使 CI 负载激增 25 倍，Anthropic 重构测试影响分析服务实现水平扩展。",
+        "def": "由 AI 智能体大规模生成与审查代码的开发方式"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "由模型自主规划并执行多步编码任务的工作方式。"
+      },
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "由AI智能体自主完成编码任务的开发范式。"
+      },
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "由 AI 智能体自主完成编码、审查与测试等开发任务。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "由 AI 智能体自主执行多步编码任务的工作方式"
+      },
+      {
+        "rel": "articles/fix-software-bugs-faster-with-claude.md",
+        "summary": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+        "def": "AI 自主完成多步开发任务的工作方式"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "由 AI 智能体自主规划并执行编码任务的工作方式。"
+      },
+      {
+        "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "summary": "Brex 团队使用 Claude Code 提升代码质量与生产力，实现角色融合与数据民主化。",
+        "def": "由 AI 智能体主导代码生成与修改，人类负责引导和审查的编程范式。"
+      },
+      {
+        "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "summary": "JetBrains 用私有仓库评测前沿模型，按任务成本选用 Claude Fable 5，并以系统化安全网保障部署。",
+        "def": "由智能体自主规划、编写并验证代码的开发方式。"
+      },
+      {
+        "rel": "articles/introduction-to-agentic-coding.md",
+        "summary": "介绍智能体编程的演进、工作原理及 Claude Code 的实践应用。",
+        "def": "AI 自主执行多步骤开发任务并迭代直至目标完成的编程范式"
+      },
+      {
+        "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+        "summary": "智能体编程让AI自主执行完整开发任务，显著加速交付、降低门槛并提升代码质量。",
+        "def": "AI智能体自主执行完整开发任务而非仅建议代码片段。"
+      },
+      {
+        "rel": "articles/running-an-ai-native-engineering-org.md",
+        "summary": "AI 原生工程组织以智能体编码为默认，重构规划、上下文获取、代码审查与团队角色。",
+        "def": "由 AI 智能体自动完成写码、测试与重构的默认工作方式。"
+      },
+      {
+        "rel": "guides/scaling-agentic-coding-across-your-organization.md",
+        "summary": "介绍如何将 Claude Code 等智能体编程工具从试点推广到整个工程组织的最佳实践。",
+        "def": "由 AI 智能体自主完成编码任务的开发方式。"
+      },
+      {
+        "rel": "articles/scaling-agentic-coding.md",
+        "summary": "系统化推广智能体编程：试点先行、内部专家扩散、CLAUDE.md 共享上下文、多维指标衡量成效。",
+        "def": "AI 理解上下文并自主完成多步开发任务的编程方式。"
+      },
+      {
+        "rel": "guides/the-code-modernization-playbook.md",
+        "summary": "以智能体编码分阶段改造遗留系统，兼顾现代化与业务交付。",
+        "def": "由AI智能体自主完成编码与迁移任务的方式"
+      }
+    ]
+  },
+  {
+    "zh": "上下文窗口",
+    "en": "Context Window",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "上下文窗口",
+      "Context Window",
+      "context window"
+    ],
+    "def_zh": "模型单次请求可处理的令牌总量上限。",
+    "count": 13,
+    "docs": [
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "模型单次可处理的令牌总量，是技能加载需保护的核心资源。"
+      },
+      {
+        "rel": "articles/building-with-claude-sonnet-5-5.md",
+        "summary": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+        "def": "模型单次可处理的最大 token 数，本模型为 100 万。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "模型单次请求可处理的令牌总量上限"
+      },
+      {
+        "rel": "articles/getting-started-with-claude-code-mods.md",
+        "summary": "Claude Code 模组是运行在会话内的插件，可观察、改写或接管事件并绘制自定义界面。",
+        "def": "模型单次响应可容纳的输入 token 总量上限。"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "模型单次可处理的 token 范围，是框架设计的核心约束。"
+      },
+      {
+        "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "summary": "介绍创建Claude Skills的步骤、最佳实践、限制与示例。",
+        "def": "模型一次能处理的文本量限制。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "模型单次请求可处理的最大 token 范围。"
+      },
+      {
+        "rel": "articles/skills-explained.md",
+        "summary": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+        "def": "模型单次可处理的信息容量上限。"
+      },
+      {
+        "rel": "articles/subagents-in-claude-code.md",
+        "summary": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+        "def": "模型单次会话可容纳并处理的信息范围"
+      },
+      {
+        "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+        "summary": "介绍 Claude Code 中会话管理与上下文窗口策略，包括压缩、回退、子代理等技巧。",
+        "def": "模型一次生成时能看到的全部内容，含提示、对话与工具输出。"
+      },
+      {
+        "rel": "articles/using-claude-code-the-unreasonable-effectiveness-of-html.md",
+        "summary": "Claude Code 团队用 HTML 替代 Markdown 生成更丰富、易读、可分享的输出。",
+        "def": "模型单次可处理的 token 总量，影响输出格式选择。"
+      },
+      {
+        "rel": "articles/using-claude-md-files.md",
+        "summary": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+        "def": "模型单次对话可容纳的 token 总量上限。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "模型单次可处理的token上限，当前各模型均为100万token。"
+      }
+    ]
+  },
+  {
+    "zh": "子智能体",
+    "en": "subagent",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "子智能体"
+    ],
+    "def_zh": "由主智能体派生、在独立上下文中执行子任务的智能体。",
+    "count": 12,
+    "docs": [
+      {
+        "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "summary": "Claude Code 动态工作流可即时生成多智能体执行框架，应对复杂任务。",
+        "def": "由主流程派生、拥有独立上下文窗口的专注执行单元"
+      },
+      {
+        "rel": "articles/ai-code-migration.md",
+        "summary": "用AI智能体将生产代码库迁移到新语言，通过规则手册与验证循环压缩多年工程。",
+        "def": "由主智能体分派、并行执行独立工作单元的智能体实例。"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "由主智能体派生、并行处理子任务的智能体实例。"
+      },
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "拥有独立上下文窗口、可并行处理子任务并只回传相关信息的智能体。"
+      },
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "由主智能体调度、专精特定任务的从属智能体。"
+      },
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "由主智能体派生、并行处理独立任务的智能体实例。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "从父会话派生、可继承父级缓存的辅助智能体"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "模型派生出的独立上下文窗口，用于隔离特定子任务。"
+      },
+      {
+        "rel": "articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+        "summary": "非技术项目经理用 Claude Code 六周内构建并上架压力管理应用 Respiro。",
+        "def": "在主智能体编排下负责特定子任务的专用 AI 代理。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "在主智能体编排下负责特定子任务的独立智能体。"
+      },
+      {
+        "rel": "articles/seeing-like-an-agent.md",
+        "summary": "Claude Code 团队从模型视角设计工具，通过实验迭代工具形态并随模型能力演进。",
+        "def": "由主智能体调用、在独立上下文中执行子任务的智能体。"
+      },
+      {
+        "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+        "summary": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+        "def": "由主智能体调用的专用智能体，用于窄范围或独立任务。"
+      }
+    ]
+  },
+  {
+    "zh": "提示缓存",
+    "en": "prompt caching",
+    "cat": "成本与性能",
+    "kind": "technique",
+    "aliases": [
+      "提示缓存"
+    ],
+    "def_zh": "缓存跨请求复用内容以降低输入成本、提升响应速度。",
+    "count": 11,
+    "docs": [
+      {
+        "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+        "summary": "介绍Claude企业版与API的成本可见性与控制手段，强调按成果而非token衡量成本。",
+        "def": "缓存跨请求复用内容，避免模型重复处理以降低输入成本。"
+      },
+      {
+        "rel": "articles/building-with-claude-sonnet-5-5.md",
+        "summary": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+        "def": "缓存重复提示前缀以降低输入成本、提升响应速度。"
+      },
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "复用已发送上下文以大幅降低重复输入费用的机制。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "复用已处理上下文以降低重复输入成本的机制"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "按断点缓存稳定前缀，降低重复输入成本与延迟。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "summary": "Claude Code 围绕提示缓存构建，通过前缀匹配、消息更新、工具延迟加载和缓存安全分叉优化缓存命中率。",
+        "def": "复用请求前缀计算结果的机制，降低延迟与成本。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "复用相同请求前缀的服务器状态，降低重复计算成本。"
+      },
+      {
+        "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "summary": "通过提示缓存、指令清理与努力度校准，在不牺牲性能的前提下降低 Claude 应用成本。",
+        "def": "复用提示前缀的 KV 状态，避免重复预填充以降低输入成本。"
+      },
+      {
+        "rel": "articles/spending-your-effort.md",
+        "summary": "解释 Claude Code 中 effort 等级的含义、效果曲线与适用场景，并给出按任务选择 effort 的实践建议。",
+        "def": "复用已处理提示前缀以降低延迟与成本的机制。"
+      },
+      {
+        "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+        "summary": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+        "def": "基于前缀复用缓存降低输入成本并加速响应。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "复用已处理上下文以降低重复输入成本的机制，缓存归属生成它的模型。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude Tag",
+    "en": "Claude Tag",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude Tag"
+    ],
+    "def_zh": "可加入共享频道、具备记忆与工具访问的常驻协作智能体。",
+    "count": 10,
+    "docs": [
+      {
+        "rel": "articles/agent-identity-access-model.md",
+        "summary": "Claude Tag 采用代理身份访问模型，让 AI 在团队频道中以自身账户运行，实现按频道而非按用户授权。",
+        "def": "Anthropic 推出的多人协作 AI 产品，Claude 在共享频道中与团队共同工作。"
+      },
+      {
+        "rel": "articles/ai-ci-cd-on-call.md",
+        "summary": "Anthropic 用 Claude Tag 构建 CI/CD 值班智能体，自动检测、分诊、修复并复盘故障。",
+        "def": "可加入 Slack 频道、具备记忆与工具访问的常驻智能体产品。"
+      },
+      {
+        "rel": "articles/ciso-guide-to-agentic-ai.md",
+        "summary": "CISO 应使智能体风险可读且有界，通过四问框架和七项控制安全部署智能体。",
+        "def": "可在共享工作区中与人类团队协作的智能体。"
+      },
+      {
+        "rel": "articles/claude-tag-guide-for-startups.md",
+        "summary": "Claude Tag 帮助初创团队在 Slack 中协作，通过五个核心用例提升效率。",
+        "def": "在 Slack 频道中通过 @Claude 协作的 AI 助手产品。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "summary": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+        "def": "以Slack成员身份被@提及并在线程中处理请求的Claude。"
+      },
+      {
+        "rel": "articles/how-anthropic-employees-use-claude-tag.md",
+        "summary": "Anthropic 员工在 Slack 中用 Claude Tag 生成文档、汇总请求并加速法务审核。",
+        "def": "在 Slack 等聊天工具中通过 @ 提及调用 Claude 完成任务的协作产品。"
+      },
+      {
+        "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "summary": "Anthropic 副 CISO 阐述在 AI 编写 80% 代码的 SDLC 中，如何通过左移安全、身份边界、自动化审查与人工治理保障安全。",
+        "def": "Anthropic 内部用于自动合并代码与响应 CI/CD 故障的代理系统。"
+      },
+      {
+        "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+        "summary": "医疗组织在无PHI渠道中用Claude Tag构建人机团队，处理告警、维护工具与解答规则。",
+        "def": "将Claude作为Slack队友接入频道、可读线程并调用连接器的产品。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "在 Slack 频道中常驻、可自主执行任务的 Claude 智能体产品。"
+      },
+      {
+        "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "summary": "Anthropic 数据团队将语义层、技能文件与评估套件复用到 Slack 中的 Claude Tag，实现自助式数据分析。",
+        "def": "Claude 在 Slack 中提供问答的公开测试产品，是数据分析智能体的基础。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude 平台",
+    "en": "Claude Platform",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude 平台"
+    ],
+    "def_zh": "Anthropic 提供模型与智能体构建能力的开发平台。",
+    "count": 10,
+    "docs": [
+      {
+        "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "summary": "Claude 平台登陆 Google Cloud，可用现有账号构建智能体。",
+        "def": "Anthropic 提供的模型与智能体构建平台服务。"
+      },
+      {
+        "rel": "webinars/building-claude-commerce-agents.md",
+        "summary": "介绍面向消费者与商家的 Claude 商务智能体蓝图及参考实现",
+        "def": "Anthropic 提供的模型与工具开发平台"
+      },
+      {
+        "rel": "guides/building-effective-ai-agents.md",
+        "summary": "介绍构建高效 AI 智能体的架构模式、决策框架与真实用例。",
+        "def": "Anthropic 提供模型与智能体构建能力的平台"
+      },
+      {
+        "rel": "webinars/claude-on-vertex-ai.md",
+        "summary": "技术研讨会介绍在 Vertex AI 上构建高级智能体的记忆、推理与工具集成能力",
+        "def": "Anthropic 提供模型与智能体能力的平台产品"
+      },
+      {
+        "rel": "articles/deploying-claude-across-financial-services.md",
+        "summary": "介绍金融机构如何用Claude产品矩阵压缩耗时工作，并提供三阶段采用指南。",
+        "def": "用于构建和部署自定义应用与智能体的平台。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-the-legal-industry.md",
+        "summary": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+        "def": "用于构建和部署自定义法律应用的开发平台。"
+      },
+      {
+        "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "summary": "Curative 用 Claude 构建多智能体层级，将医疗服务提供者合同签署速度提升约 50 倍。",
+        "def": "Anthropic 提供的模型与智能体开发平台。"
+      },
+      {
+        "rel": "articles/how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+        "summary": "Kepler 用 Claude 做推理层、确定性基础设施做验证层，构建可审计的金融 AI 研究平台。",
+        "def": "Anthropic 提供的模型调用与构建 AI 应用的平台"
+      },
+      {
+        "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "summary": "通过提示缓存、指令清理与努力度校准，在不牺牲性能的前提下降低 Claude 应用成本。",
+        "def": "提供模型调用、缓存、批处理与成本诊断的开发者平台。"
+      },
+      {
+        "rel": "guides/the-founders-playbook-building-an-ai-native-startup.md",
+        "summary": "AI 原生创业手册：用 AI 压缩从想法到规模化的四阶段路径。",
+        "def": "Anthropic 提供模型与 API 的平台"
+      }
+    ]
+  },
+  {
+    "zh": "MCP",
+    "en": "Model Context Protocol",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "MCP"
+    ],
+    "def_zh": "连接模型与外部工具及数据源的开放协议。",
+    "count": 10,
+    "docs": [
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "模型上下文协议，连接 Claude 与外部工具和数据源。"
+      },
+      {
+        "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+        "def": "模型上下文协议，标准化连接外部工具与数据源。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "summary": "市场人员用 Claude Code 将周报自动化为每位销售代表的个性化周一简报。",
+        "def": "模型上下文协议，让 Claude 连接外部数据源与工具的标准接口。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "模型上下文协议，让 AI 连接外部数据源与工具的开放标准。"
+      },
+      {
+        "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "summary": "Brex 团队使用 Claude Code 提升代码质量与生产力，实现角色融合与数据民主化。",
+        "def": "模型上下文协议，用于连接 AI 模型与外部数据源和工具。"
+      },
+      {
+        "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "summary": "Curative 用 Claude 构建多智能体层级，将医疗服务提供者合同签署速度提升约 50 倍。",
+        "def": "模型上下文协议，标准化智能体与外部系统的连接。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "为模型提供工具定义的模型上下文协议。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "模型上下文协议，标准化AI与外部数据源的连接。"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "连接外部系统、读写权威记录的模型上下文协议。"
+      },
+      {
+        "rel": "guides/zero-trust-for-ai-agents.md",
+        "summary": "将零信任安全框架应用于企业自主AI智能体的部署与防御。",
+        "def": "连接AI与外部工具和数据源的开放协议。"
+      }
+    ]
+  },
+  {
+    "zh": "渐进式披露",
+    "en": "Progressive Disclosure",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "渐进式披露",
+      "progressive disclosure",
+      "Progressive Disclosure",
+      "渐进披露"
+    ],
+    "def_zh": "按需逐层加载上下文信息以节省令牌并保持相关性。",
+    "count": 9,
+    "docs": [
+      {
+        "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "summary": "将子代理折叠进主代理循环，用渐进披露的技能与工具替代多代理编排，可提升质量并降低延迟与成本。",
+        "def": "先向模型展示技能与工具的简短描述，需要时才完整加载。"
+      },
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "运行时仅暴露技能元数据，按需逐层加载全文与参考文件以节省上下文。"
+      },
+      {
+        "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "summary": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+        "def": "按需加载上下文信息以节省 token 并保持相关性的机制。"
+      },
+      {
+        "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "summary": "介绍创建Claude Skills的步骤、最佳实践、限制与示例。",
+        "def": "主文件精简，按需引用详细文件以节省上下文。"
+      },
+      {
+        "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+        "summary": "Warp 用技能文件构建自我改进智能体：内层技能执行任务，外层改进技能吸收人类反馈并迭代更新。",
+        "def": "技能只引用资源文件与脚本，按需加载而非一次性塞入上下文。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "summary": "Anthropic 分享 Claude Code 中技能的分类、编写技巧、分发与度量经验。",
+        "def": "按需逐步向模型暴露文件与信息，以节省上下文。"
+      },
+      {
+        "rel": "articles/seeing-like-an-agent.md",
+        "summary": "Claude Code 团队从模型视角设计工具，通过实验迭代工具形态并随模型能力演进。",
+        "def": "智能体按需逐步发现和加载上下文的技术。"
+      },
+      {
+        "rel": "articles/skills-explained.md",
+        "summary": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+        "def": "先加载元数据、按需再加载完整指令与文件的分层加载机制。"
+      },
+      {
+        "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "summary": "Claude 5 代模型上下文工程新规则：精简系统提示，让模型自主判断，用渐进披露替代堆砌。",
+        "def": "按需在合适时机加载上下文，而非一次性全部前置。"
+      }
+    ]
+  },
+  {
+    "zh": "插件",
+    "en": "Plugins",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "插件",
+      "plugins",
+      "Plugins"
+    ],
+    "def_zh": "打包技能、连接器、命令与子代理的可安装定制单元。",
+    "count": 8,
+    "docs": [
+      {
+        "rel": "guides/claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是能读写文件、连接工作应用并执行多步任务的 Claude 版本。",
+        "def": "扩展 Claude Cowork 能力的可安装组件"
+      },
+      {
+        "rel": "articles/cowork-plugins-finance.md",
+        "summary": "Claude 推出金融插件与跨应用工作流，打通 Excel 与 PowerPoint 并接入机构数据。",
+        "def": "封装领域专长与工作流模式、可安装复用的能力包。"
+      },
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "打包技能、连接器、斜杠命令与子代理的可复用定制单元。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-the-legal-industry.md",
+        "summary": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+        "def": "针对特定业务领域预配置的Claude功能扩展包。"
+      },
+      {
+        "rel": "articles/getting-started-with-claude-code-mods.md",
+        "summary": "Claude Code 模组是运行在会话内的插件，可观察、改写或接管事件并绘制自定义界面。",
+        "def": "Claude Code 的可分发扩展单元，模组以插件形式打包与安装。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "打包技能、钩子与 MCP 配置的可安装包，用于分发有效配置。"
+      },
+      {
+        "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "summary": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+        "def": "扩展 Claude 能力并适配工作环境的可配置组件。"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "为特定知识工作场景扩展代理能力的可复用模块。"
+      }
+    ]
+  },
+  {
+    "zh": "CLAUDE.md",
+    "en": "CLAUDE.md",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "CLAUDE.md",
+      "CLAUDE.md 文件"
+    ],
+    "def_zh": "会话启动时加载、记录项目约定与上下文的指令文件。",
+    "count": 8,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "每轮都会注入的项目说明文件，构成固定启动上下文。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "存放项目上下文与指令、供 Claude Code 读取的配置文件。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "会话启动时加载的项目指令文件。"
+      },
+      {
+        "rel": "articles/scaling-agentic-coding.md",
+        "summary": "系统化推广智能体编程：试点先行、内部专家扩散、CLAUDE.md 共享上下文、多维指标衡量成效。",
+        "def": "记录仓库约定、环境与项目上下文的共享配置文件。"
+      },
+      {
+        "rel": "articles/solving-code-review-at-anthropic.md",
+        "summary": "Claude Code 团队分享智能体时代的分层代码审查流程，以风险分级和自动化保障质量。",
+        "def": "向 Claude 说明项目技术栈、约定与目标的指令文件。"
+      },
+      {
+        "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "summary": "介绍 Claude Code 七种指令注入方式，按上下文成本与权威性权衡选择。",
+        "def": "项目根目录的 Markdown 文件，会话开始时加载并常驻上下文。"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "为Claude提供项目上下文与机构知识的版本化文件。"
+      },
+      {
+        "rel": "articles/the-new-rules-of-context-engineering-for-claude-5-generation-models.md",
+        "summary": "Claude 5 代模型上下文工程新规则：精简系统提示，让模型自主判断，用渐进披露替代堆砌。",
+        "def": "仓库级轻量说明文件，记录代码库陷阱与约定。"
+      }
+    ]
+  },
+  {
+    "zh": "提示工程",
+    "en": "Prompt Engineering",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "提示工程",
+      "prompt engineering",
+      "Prompt Engineering"
+    ],
+    "def_zh": "通过编写与迭代指令引导模型输出预期结果。",
+    "count": 8,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-prompt-engineering.md",
+        "summary": "介绍提示工程的核心与进阶技巧，并说明其与上下文工程的关系。",
+        "def": "结构化编写指令以引导模型产出更佳结果的技术。"
+      },
+      {
+        "rel": "articles/carta-healthcare-clinical-abstractor.md",
+        "summary": "Carta Healthcare用Claude构建临床数据抽象平台，通过上下文工程实现99%准确率。",
+        "def": "设计输入提示以引导模型输出的方法"
+      },
+      {
+        "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "summary": "市场人员用 Claude Code 将周报自动化为每位销售代表的个性化周一简报。",
+        "def": "通过编写与迭代指令来引导模型输出符合预期结果的方法。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "迭代设计提示词以控制AI输出风格与内容。"
+      },
+      {
+        "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+        "summary": "Anthropic销售团队用Claude托管代理构建采购代理，自动回答入站咨询并促成购买。",
+        "def": "通过目标化、精简的提示引导模型行为的方法"
+      },
+      {
+        "rel": "articles/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them.md",
+        "summary": "产品设计师用Claude Design在构建前探索视觉创意，涵盖原型、幻灯片与动画。",
+        "def": "在生成前明确表达需求与视觉方向的技巧"
+      },
+      {
+        "rel": "articles/scaling-agentic-coding.md",
+        "summary": "系统化推广智能体编程：试点先行、内部专家扩散、CLAUDE.md 共享上下文、多维指标衡量成效。",
+        "def": "结构化、具体化地向 AI 表达需求以获优质结果。"
+      },
+      {
+        "rel": "articles/using-claude-md-files.md",
+        "summary": "介绍用 CLAUDE.md 为 Claude Code 提供持久项目上下文，并给出结构、工作流与优化技巧。",
+        "def": "设计提示词以引导模型输出更符合预期的技术。"
+      }
+    ]
+  },
+  {
+    "zh": "努力等级",
+    "en": "Effort Level",
+    "cat": "模型与能力",
+    "kind": "technique",
+    "aliases": [
+      "努力等级",
+      "effort level",
+      "effort"
+    ],
+    "def_zh": "控制模型推理投入与延迟成本权衡的档位设置。",
+    "count": 8,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "控制模型推理投入与延迟成本权衡的档位设置。"
+      },
+      {
+        "rel": "articles/building-with-claude-sonnet-5-5.md",
+        "summary": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+        "def": "控制模型思考量与成本的档位，从低到最高共五级。"
+      },
+      {
+        "rel": "articles/claude-model-and-effort-level-in-claude-code.md",
+        "summary": "在 Claude Code 中按任务复杂度选择模型与努力等级，以平衡能力、成本与自主性。",
+        "def": "控制 Claude 完成请求的总工作量，含思考、读文件与验证。"
+      },
+      {
+        "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "summary": "介绍 Claude 模型家族各档位差异，并给出按任务难度、延迟、成本与评测选型的实践建议。",
+        "def": "调节模型思考投入量以平衡质量、速度与成本的参数。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "控制模型每轮思考 token 量的设置。"
+      },
+      {
+        "rel": "articles/spending-your-effort.md",
+        "summary": "解释 Claude Code 中 effort 等级的含义、效果曲线与适用场景，并给出按任务选择 effort 的实践建议。",
+        "def": "控制模型在任务上投入算力与自主判断程度的设置。"
+      },
+      {
+        "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+        "summary": "分析 Claude Code 任务在 Opus 5.5 上的成本构成与优化策略。",
+        "def": "控制模型每轮思考与工具调用量的设置。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "控制模型思考深度与工具调用量的可调参数，影响成本与延迟。"
+      }
+    ]
+  },
+  {
+    "zh": "人在回路",
+    "en": "Human-in-the-Loop",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "人在回路",
+      "human-in-the-loop",
+      "Human-in-the-Loop",
+      "人工在环"
+    ],
+    "def_zh": "在关键决策点保留人类审核与最终决定权的机制。",
+    "count": 8,
+    "docs": [
+      {
+        "rel": "articles/building-ai-agents-for-startups.md",
+        "summary": "初创公司用AI智能体自主处理业务流程，节省人力、获取专业能力并兼顾速度与质量。",
+        "def": "在关键决策点保留人工审核与批准的机制。"
+      },
+      {
+        "rel": "articles/building-ai-agents-for-the-enterprise.md",
+        "summary": "企业AI转型需将智能体嵌入工作流程，通过三大支柱实现复利回报。",
+        "def": "在自动化流程中保留人类判断与专业干预的机制。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-financial-services.md",
+        "summary": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+        "def": "关键决策保留人工审核与授权的机制。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "关键决策保留人类审核与最终决定权。"
+      },
+      {
+        "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+        "summary": "ABC Legal 用 Claude 托管智能体将员工变为构建者，实现可治理的智能体集群。",
+        "def": "智能体先给出建议，由人工审核后再执行或自动化。"
+      },
+      {
+        "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "summary": "Anthropic 副 CISO 阐述在 AI 编写 80% 代码的 SDLC 中，如何通过左移安全、身份边界、自动化审查与人工治理保障安全。",
+        "def": "在关键决策点保留人类审批与问责的机制。"
+      },
+      {
+        "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "summary": "Cresta 基于 Claude Agent SDK 构建元智能体 Conductor，将 CX 专业知识转化为可复用的智能体构建能力。",
+        "def": "在关键决策点保留人工介入的机制。"
+      },
+      {
+        "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+        "summary": "Warp 用技能文件构建自我改进智能体：内层技能执行任务，外层改进技能吸收人类反馈并迭代更新。",
+        "def": "在反馈过滤或最终审核环节保留人工把关的控制方式。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude Agent SDK",
+    "en": "Claude Agent SDK",
+    "cat": "Claude Code 与编程",
+    "kind": "product",
+    "aliases": [
+      "Claude Agent SDK",
+      "Claude代理SDK",
+      "智能体 SDK",
+      "Agent SDK"
+    ],
+    "def_zh": "构建可编程智能体应用的开发工具包。",
+    "count": 8,
+    "docs": [
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "用于构建无头智能体应用的开发套件，支持子智能体编排。"
+      },
+      {
+        "rel": "articles/building-with-claude-managed-agents.md",
+        "summary": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+        "def": "基于Claude Code框架构建自定义代理的开发者工具包。"
+      },
+      {
+        "rel": "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "summary": "面向金融服务工程团队的 Claude Code 与 Agent SDK 实操演示，覆盖研发、合规与理赔智能体。",
+        "def": "用于构建自定义智能体应用的开发工具包。"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "用于构建和运行 Claude 智能体的开发工具包。"
+      },
+      {
+        "rel": "articles/claude-for-the-legal-industry.md",
+        "summary": "Claude 通过 MCP 连接器与实务插件接入法律技术栈，覆盖合同、诉讼、合规等场景。",
+        "def": "用于构建可编程智能体应用的开发工具包。"
+      },
+      {
+        "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+        "summary": "医疗组织在无PHI渠道中用Claude Tag构建人机团队，处理告警、维护工具与解答规则。",
+        "def": "用于构建自定义AI代理的软件开发工具包。"
+      },
+      {
+        "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "summary": "Outtake 用 Claude Code 与 Agent SDK 构建长时自主网络调查智能体，并总结工程实践。",
+        "def": "提供底层原语以构建生产级智能体的开发套件。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md",
+        "summary": "汤森路透CTO分享如何用Claude构建高 stakes专业AI，强调验证、代理与人类监督。",
+        "def": "用于构建能规划、使用工具并自主执行任务的AI代理的开发套件。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude",
+    "en": "Claude",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude"
+    ],
+    "def_zh": "Anthropic 的大语言模型与对话助手平台。",
+    "count": 7,
+    "docs": [
+      {
+        "rel": "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+        "summary": "介绍 Agent Skills 如何将 Claude 从对话助手转变为可执行复杂可重复工作流的专用智能体。",
+        "def": "Anthropic 推出的对话式 AI 助手，可通过技能扩展为专用智能体。"
+      },
+      {
+        "rel": "articles/building-ai-agents-for-startups.md",
+        "summary": "初创公司用AI智能体自主处理业务流程，节省人力、获取专业能力并兼顾速度与质量。",
+        "def": "Anthropic提供的大模型平台，用于构建AI智能体。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-financial-services.md",
+        "summary": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+        "def": "Anthropic提供的大语言模型平台，用于构建金融AI代理。"
+      },
+      {
+        "rel": "articles/carta-healthcare-clinical-abstractor.md",
+        "summary": "Carta Healthcare用Claude构建临床数据抽象平台，通过上下文工程实现99%准确率。",
+        "def": "Anthropic开发的大语言模型系列"
+      },
+      {
+        "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "summary": "介绍用 MCP 与 A2A 协议在 Vertex AI 上构建多智能体系统",
+        "def": "Anthropic 开发的大语言模型系列"
+      },
+      {
+        "rel": "guides/financial-services-guide-to-building-autonomous-ai-agents.md",
+        "summary": "金融服务业构建自主AI智能体的指南，涵盖用例、蓝图与时间线。",
+        "def": "Anthropic推出的注重安全可靠的基础模型系列"
+      },
+      {
+        "rel": "webinars/future-of-ai-coding-mcp-vs-code.md",
+        "summary": "介绍VS Code中MCP实现如何赋能Claude的AI编程工作流，涵盖MCP生态与服务器构建。",
+        "def": "Anthropic开发的大语言模型系列。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude Fable 5",
+    "en": "Claude Fable 5",
+    "cat": "模型与能力",
+    "kind": "product",
+    "aliases": [
+      "Claude Fable 5"
+    ],
+    "def_zh": "面向高难度推理与长程任务的前沿模型。",
+    "count": 7,
+    "docs": [
+      {
+        "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "summary": "Claude Fable 5 模型下，工作质量取决于澄清未知，需在实现前后迭代发现未知。",
+        "def": "Anthropic 推出的模型，工作质量受限于用户澄清未知的能力。"
+      },
+      {
+        "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "summary": "JetBrains 用私有仓库评测前沿模型，按任务成本选用 Claude Fable 5，并以系统化安全网保障部署。",
+        "def": "Anthropic 面向高难度推理与长程任务的前沿模型。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-cursor.md",
+        "summary": "Cursor 通过自建 CursorBench 评估前沿模型，发现 Claude Fable 5 具备全局推理能力，能解决最难的 1% 工程问题。",
+        "def": "Anthropic 的前沿编码模型，擅长全局推理与长时任务。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+        "summary": "Cognition 用 Devin 实测 Claude Fable 5，长时自主运行与混乱上下文中的清醒表现成为关键突破。",
+        "def": "Anthropic 推出的长时自主运行能力显著提升的模型。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-rakuten.md",
+        "summary": "乐天利用Claude Fable 5的自我验证与品味对齐能力，构建可长时间无人值守运行的企业智能体。",
+        "def": "具备自我反思与自我验证能力的前沿大模型。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+        "summary": "Base44 借助 Claude Fable 5 的资深工程师级推理，攻克核心工程难题并扩大团队产能。",
+        "def": "具备资深工程师级软件推理能力的 Claude 模型。"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "Anthropic 最强通用模型，擅长长时间复杂异步任务。"
+      }
+    ]
+  },
+  {
+    "zh": "连接器",
+    "en": "Connectors",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "连接器",
+      "connectors",
+      "Connectors"
+    ],
+    "def_zh": "将 Claude 接入外部工具与数据源的集成组件。",
+    "count": 7,
+    "docs": [
+      {
+        "rel": "articles/building-an-ai-native-revenue-organization.md",
+        "summary": "面向营收团队，介绍在销售组织内推广 Claude 的成熟度模型、三阶段落地计划与 ROI 衡量框架。",
+        "def": "让 Claude 读写 CRM、邮件等外部系统的集成组件"
+      },
+      {
+        "rel": "articles/claude-tag-guide-for-startups.md",
+        "summary": "Claude Tag 帮助初创团队在 Slack 中协作，通过五个核心用例提升效率。",
+        "def": "将外部工具（如 GitHub、Jira）接入 Claude 的集成配置。"
+      },
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "将 Claude 接入外部工具与数据源的集成组件。"
+      },
+      {
+        "rel": "articles/deploying-claude-across-the-legal-industry.md",
+        "summary": "介绍法律行业如何部署Claude产品，涵盖产品选择、连接器、插件及三阶段采用路线图。",
+        "def": "将Claude与外部数据源或应用集成的组件。"
+      },
+      {
+        "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "summary": "Anthropic营销运营团队用Claude Cowork自动化周报生成与活动搭建，将数天手工工作压缩至数小时。",
+        "def": "连接外部平台与工具的接口，使Claude能读写数据。"
+      },
+      {
+        "rel": "articles/what-is-model-context-protocol.md",
+        "summary": "MCP 是连接 AI 与外部系统的开放标准，类似 USB-C，简化集成并扩展 AI 能力。",
+        "def": "Claude 中预构建的 MCP 服务器集成。"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "把外部工具与数据源接入模型的集成机制。"
+      }
+    ]
+  },
+  {
+    "zh": "MCP 服务器",
+    "en": "MCP Server",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "MCP 服务器",
+      "MCP server",
+      "MCP Servers",
+      "MCP服务器",
+      "MCP Server"
+    ],
+    "def_zh": "实现 MCP 协议、向智能体暴露工具与数据的服务端。",
+    "count": 7,
+    "docs": [
+      {
+        "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+        "summary": "Asana 将 AI 智能体作为团队成员，赋予角色、共享记忆与可见工作流，由 Claude 驱动。",
+        "def": "让 Claude 等助手读取外部系统数据的连接协议服务。"
+      },
+      {
+        "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "summary": "介绍连接智能体与外部系统的三种方式，重点阐述MCP在生产环境中的优势与构建模式。",
+        "def": "通过MCP协议向智能体暴露系统能力的服务端。"
+      },
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "为代理提供外部工具与数据的服务端，会增加每轮上下文。"
+      },
+      {
+        "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "summary": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+        "def": "实现 MCP 协议、向 Claude 暴露工具与数据的外部系统连接端点。"
+      },
+      {
+        "rel": "webinars/future-of-ai-coding-mcp-vs-code.md",
+        "summary": "介绍VS Code中MCP实现如何赋能Claude的AI编程工作流，涵盖MCP生态与服务器构建。",
+        "def": "实现MCP协议、向AI客户端暴露工具与资源的服务端程序。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "让 Claude 连接内部工具、数据源与 API 的扩展服务。"
+      },
+      {
+        "rel": "articles/what-is-model-context-protocol.md",
+        "summary": "MCP 是连接 AI 与外部系统的开放标准，类似 USB-C，简化集成并扩展 AI 能力。",
+        "def": "对外提供工具和数据接口的服务器。"
+      }
+    ]
+  },
+  {
+    "zh": "钩子",
+    "en": "Hooks",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "钩子",
+      "hooks",
+      "hook"
+    ],
+    "def_zh": "在智能体生命周期特定节点自动触发的脚本或动作。",
+    "count": 7,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-best-practices-lightspeed.md",
+        "summary": "Anthropic 网络研讨会分享 Claude Code 高级用法、子代理与钩子等最佳实践。",
+        "def": "在代理生命周期特定节点自动触发的外部脚本或动作。"
+      },
+      {
+        "rel": "articles/getting-started-with-claude-code-mods.md",
+        "summary": "Claude Code 模组是运行在会话内的插件，可观察、改写或接管事件并绘制自定义界面。",
+        "def": "模组中注册的事件处理函数，按链式顺序观察、改写或接管事件。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "在关键事件触发的脚本，用于自动化一致行为并捕获会话经验。"
+      },
+      {
+        "rel": "articles/how-to-configure-hooks.md",
+        "summary": "介绍 Claude Code 钩子的八种事件类型、配置方法、匹配器语法与调试技巧。",
+        "def": "在特定事件发生时自动执行的自定义 shell 命令。"
+      },
+      {
+        "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "summary": "介绍 Claude Code 七种指令注入方式，按上下文成本与权威性权衡选择。",
+        "def": "在生命周期事件上触发的确定性自动化脚本。"
+      },
+      {
+        "rel": "articles/subagents-in-claude-code.md",
+        "summary": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+        "def": "在生命周期事件点自动执行的脚本或提示"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "在AI行动时强制执行审批门禁的自动化控制点。"
+      }
+    ]
+  },
+  {
+    "zh": "提示注入",
+    "en": "Prompt Injection",
+    "cat": "安全与治理",
+    "kind": "risk",
+    "aliases": [
+      "提示注入",
+      "prompt injection",
+      "Prompt Injection"
+    ],
+    "def_zh": "攻击者将指令藏于内容中诱使智能体违背用户意图。",
+    "count": 7,
+    "docs": [
+      {
+        "rel": "articles/auto-mode-in-production.md",
+        "summary": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+        "def": "恶意输入诱导代理执行非预期操作的攻击方式"
+      },
+      {
+        "rel": "articles/building-effective-agent-automations.md",
+        "summary": "介绍如何用 Claude 托管代理构建定时自动化，并给出六条避免常见故障的规则。",
+        "def": "外部文本被当作指令执行的安全风险。"
+      },
+      {
+        "rel": "articles/ciso-guide-to-agentic-ai.md",
+        "summary": "CISO 应使智能体风险可读且有界，通过四问框架和七项控制安全部署智能体。",
+        "def": "攻击者将指令藏于内容中，诱使智能体违背用户意图。"
+      },
+      {
+        "rel": "articles/claude-code-auto-mode.md",
+        "summary": "Claude Code 自动模式用分类器替代人工审批，平衡安全与效率。",
+        "def": "恶意内容劫持模型行为的安全威胁。"
+      },
+      {
+        "rel": "articles/how-anthropic-secures-its-ai-native-software-development-lifecycle.md",
+        "summary": "Anthropic 副 CISO 阐述在 AI 编写 80% 代码的 SDLC 中，如何通过左移安全、身份边界、自动化审查与人工治理保障安全。",
+        "def": "攻击者通过不可信输入操纵 AI 代理执行恶意指令的风险。"
+      },
+      {
+        "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "summary": "Outtake 用 Claude Code 与 Agent SDK 构建长时自主网络调查智能体，并总结工程实践。",
+        "def": "通过恶意输入劫持智能体行为的攻击方式。"
+      },
+      {
+        "rel": "articles/managed-agents.md",
+        "summary": "托管代理通过解耦大脑与手，以稳定接口支持长周期代理工作。",
+        "def": "通过恶意输入诱导模型执行非预期操作的安全风险。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体循环",
+    "en": "Agent Loop",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "智能体循环",
+      "Agent Loop",
+      "agentic loop",
+      "代理循环"
+    ],
+    "def_zh": "智能体反复收集上下文、行动、验证直至完成的循环。",
+    "count": 6,
+    "docs": [
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "决定下一步行动的核心推理系统。"
+      },
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "智能体反复执行收集上下文、执行动作、验证工作的反馈循环。"
+      },
+      {
+        "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "summary": "将手动检查编码为技能，让 Claude Code 自动闭环验证并修复。",
+        "def": "代理收集上下文、采取行动、验证结果的重复工作流。"
+      },
+      {
+        "rel": "articles/getting-started-with-loops.md",
+        "summary": "Claude Code 团队定义循环为智能体重复工作直至满足停止条件，并分类为轮次、目标、时间与主动循环。",
+        "def": "智能体反复收集上下文、行动、验证直至完成的循环。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-cybersecurity.md",
+        "summary": "Anthropic安全团队用Claude Code构建CLUE平台，自动化威胁检测与调查。",
+        "def": "AI代理迭代执行命令、收集结果并综合的流程。"
+      },
+      {
+        "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+        "summary": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+        "def": "模型推理、调用工具、观察结果直至完成目标的迭代过程。"
+      }
+    ]
+  },
+  {
+    "zh": "工作流自动化",
+    "en": "Workflow Automation",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "工作流自动化",
+      "workflow automation",
+      "Workflow Automation"
+    ],
+    "def_zh": "用智能体自动完成原本耗时的业务流程。",
+    "count": 6,
+    "docs": [
+      {
+        "rel": "webinars/agent-skills-transform-claude-from-assistant-to-specialized-agent.md",
+        "summary": "介绍 Agent Skills 如何将 Claude 从对话助手转变为可执行复杂可重复工作流的专用智能体。",
+        "def": "用智能体技能自动完成原本耗时数小时的任务流程。"
+      },
+      {
+        "rel": "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "summary": "面向金融服务工程团队的 Claude Code 与 Agent SDK 实操演示，覆盖研发、合规与理赔智能体。",
+        "def": "用智能体替代人工执行复杂业务流程。"
+      },
+      {
+        "rel": "webinars/claude-code-service-delivery.md",
+        "summary": "Claude Code 面向专业服务交付团队，演示将 COBOL 迁移上云等现代化工作流从数月压缩至数周。",
+        "def": "用工具自动执行重复性流程以减少人工投入。"
+      },
+      {
+        "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+        "def": "将重复性任务交由 Claude 按固定流程执行。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "用AI自动执行重复性任务，如邮件草稿。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-legal.md",
+        "summary": "Anthropic法务团队用Claude构建自动化工作流，将审查时间从数天缩短至数小时。",
+        "def": "将重复性任务转化为可重复执行的自动化流程"
+      }
+    ]
+  },
+  {
+    "zh": "验证",
+    "en": "Verification",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "验证"
+    ],
+    "def_zh": "智能体检查自身工作是否达到完成标准的过程。",
+    "count": 6,
+    "docs": [
+      {
+        "rel": "articles/claude-model-and-effort-level-in-claude-code.md",
+        "summary": "在 Claude Code 中按任务复杂度选择模型与努力等级，以平衡能力、成本与自主性。",
+        "def": "模型运行测试、复核结果以确认正确性的行为。"
+      },
+      {
+        "rel": "articles/getting-started-with-loops.md",
+        "summary": "Claude Code 团队定义循环为智能体重复工作直至满足停止条件，并分类为轮次、目标、时间与主动循环。",
+        "def": "智能体检查自身工作是否达到完成标准的过程。"
+      },
+      {
+        "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "summary": "Anthropic 分享用 Claude 实现自助式数据分析的实践，强调准确率取决于上下文与验证而非代码生成。",
+        "def": "对智能体生成的分析结果进行正确性核验的机制"
+      },
+      {
+        "rel": "articles/solving-code-review-at-anthropic.md",
+        "summary": "Claude Code 团队分享智能体时代的分层代码审查流程，以风险分级和自动化保障质量。",
+        "def": "让智能体运行测试、构建或截图以证明工作完成的做法。"
+      },
+      {
+        "rel": "articles/spending-your-effort.md",
+        "summary": "解释 Claude Code 中 effort 等级的含义、效果曲线与适用场景，并给出按任务选择 effort 的实践建议。",
+        "def": "通过测试、复现与对抗检查确认结果正确性的过程。"
+      },
+      {
+        "rel": "articles/using-llms-to-secure-source-code.md",
+        "summary": "利用LLM保障源代码安全：发现易并行，瓶颈转向验证、分诊与修补。",
+        "def": "独立确认发现是否真正可利用，优化精确率。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude 托管智能体",
+    "en": "Claude Managed Agents",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude 托管智能体"
+    ],
+    "def_zh": "提供运行时、会话与记忆管理的云端智能体托管服务。",
+    "count": 5,
+    "docs": [
+      {
+        "rel": "articles/deploying-claude-across-financial-services.md",
+        "summary": "介绍金融机构如何用Claude产品矩阵压缩耗时工作，并提供三阶段采用指南。",
+        "def": "可托管部署的自定义智能体服务。"
+      },
+      {
+        "rel": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+        "summary": "ABC Legal 用 Claude 托管智能体将员工变为构建者，实现可治理的智能体集群。",
+        "def": "提供运行时、会话、记忆与版本管理的云端智能体托管平台。"
+      },
+      {
+        "rel": "articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
+        "summary": "Datadog 用 Temper 让智能体产出可验证规格而非代码，实现软件工业化。",
+        "def": "可长时间运行、由平台托管会话与生命周期的智能体服务。"
+      },
+      {
+        "rel": "articles/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate.md",
+        "summary": "monday.com 以 Claude 为核心重构平台，从附加 AI 功能转向人类与智能体协作的智能体优先产品。",
+        "def": "在客户自有环境中执行任务的 Claude 托管智能体服务"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-rakuten.md",
+        "summary": "乐天利用Claude Fable 5的自我验证与品味对齐能力，构建可长时间无人值守运行的企业智能体。",
+        "def": "可跨业务部门部署的托管式智能体服务。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude 企业版",
+    "en": "Claude Enterprise",
+    "cat": "企业落地与组织",
+    "kind": "product",
+    "aliases": [
+      "Claude 企业版",
+      "Claude企业版"
+    ],
+    "def_zh": "面向企业提供安全合规与协作能力的 Claude 版本。",
+    "count": 5,
+    "docs": [
+      {
+        "rel": "articles/how-anthropic-uses-claude-legal.md",
+        "summary": "Anthropic法务团队用Claude构建自动化工作流，将审查时间从数天缩短至数小时。",
+        "def": "面向企业提供安全合规AI服务的产品版本"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide-for-life-sciences.md",
+        "summary": "面向生命科学企业的前沿AI部署指南，涵盖治理、合规与可扩展试点。",
+        "def": "面向企业部署的Claude产品版本。"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "summary": "零售企业AI转型指南：从利益相关方对齐与治理起步，经战略试点快速见效，再规模化并建设组织能力。",
+        "def": "面向企业提供安全合规与协作能力的Claude产品。"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide.md",
+        "summary": "企业AI转型需超越单纯投资，采用Anthropic三步法实现规模化落地。",
+        "def": "Anthropic面向企业提供的Claude产品与服务平台"
+      },
+      {
+        "rel": "webinars/unified-claude-what-it-means-for-admins.md",
+        "summary": "Claude 将聊天与 Cowork 合并为跨平台统一体验，便于管理员治理。",
+        "def": "面向组织提供管理与安全治理能力的 Claude 版本"
+      }
+    ]
+  },
+  {
+    "zh": "上下文压缩",
+    "en": "Compaction",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "上下文压缩",
+      "Compaction",
+      "compaction"
+    ],
+    "def_zh": "上下文接近上限时摘要历史以延续长任务。",
+    "count": 5,
+    "docs": [
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "上下文接近上限时自动摘要历史消息以延续长任务。"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "让模型总结过往上下文以维持长任务连续性。"
+      },
+      {
+        "rel": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+        "summary": "通过管理上下文、缓存与模型选择，提升 Claude Code 会话的 token 使用效率。",
+        "def": "将长对话替换为摘要以缩短上下文。"
+      },
+      {
+        "rel": "articles/steering-claude-code-skills-hooks-rules-subagents-and-more.md",
+        "summary": "介绍 Claude Code 七种指令注入方式，按上下文成本与权威性权衡选择。",
+        "def": "长会话中压缩对话历史并重载关键指令的机制。"
+      },
+      {
+        "rel": "articles/using-claude-code-session-management-and-1m-context.md",
+        "summary": "介绍 Claude Code 中会话管理与上下文窗口策略，包括压缩、回退、子代理等技巧。",
+        "def": "将长对话摘要为简短描述以腾出上下文空间。"
+      }
+    ]
+  },
+  {
+    "zh": "动态工作流",
+    "en": "Dynamic Workflows",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "动态工作流",
+      "dynamic workflows",
+      "dynamic workflow"
+    ],
+    "def_zh": "按任务即时编写并编排多智能体框架的机制。",
+    "count": 5,
+    "docs": [
+      {
+        "rel": "articles/a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+        "summary": "Claude Code 动态工作流可即时生成多智能体执行框架，应对复杂任务。",
+        "def": "Claude Code 按任务即时编写并编排多智能体框架的机制"
+      },
+      {
+        "rel": "articles/ai-ci-cd-on-call.md",
+        "summary": "Anthropic 用 Claude Tag 构建 CI/CD 值班智能体，自动检测、分诊、修复并复盘故障。",
+        "def": "由编排智能体调度多个执行子智能体并行调查的任务模式。"
+      },
+      {
+        "rel": "articles/ai-code-migration.md",
+        "summary": "用AI智能体将生产代码库迁移到新语言，通过规则手册与验证循环压缩多年工程。",
+        "def": "Claude Code中编排多智能体实现、评审与修复循环的能力。"
+      },
+      {
+        "rel": "articles/getting-started-with-loops.md",
+        "summary": "Claude Code 团队定义循环为智能体重复工作直至满足停止条件，并分类为轮次、目标、时间与主动循环。",
+        "def": "编排多个子智能体并行处理任务的机制。"
+      },
+      {
+        "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+        "summary": "介绍AI驱动代码现代化项目的六步准备方法：定义目标、证书、晋升策略与工作流。",
+        "def": "Claude Code中可编排多子智能体并行任务的运行机制"
+      }
+    ]
+  },
+  {
+    "zh": "单任务成本",
+    "en": "Cost per Task",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "单任务成本",
+      "cost-per-task",
+      "cost per task"
+    ],
+    "def_zh": "完成一个实际任务的总花费，比单价更能反映经济性。",
+    "count": 5,
+    "docs": [
+      {
+        "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "summary": "介绍 Claude 模型家族各档位差异，并给出按任务难度、延迟、成本与评测选型的实践建议。",
+        "def": "完成一个任务的总花费，比单 token 价格更能反映经济性。"
+      },
+      {
+        "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "summary": "JetBrains 用私有仓库评测前沿模型，按任务成本选用 Claude Fable 5，并以系统化安全网保障部署。",
+        "def": "完成一个实际任务的总花费，而非按 token 计价。"
+      },
+      {
+        "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+        "summary": "介绍在谷歌云上管理 Claude Code 成本并证明投资回报的控制、追踪、证明三杠杆框架。",
+        "def": "完成一个任务所消耗的 token 与模型费用，比单价更能反映真实成本。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "完成一个实际任务的总花费，比每token价格更能反映真实开销。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-rakuten.md",
+        "summary": "乐天利用Claude Fable 5的自我验证与品味对齐能力，构建可长时间无人值守运行的企业智能体。",
+        "def": "完成单个任务所消耗的模型调用成本。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体框架",
+    "en": "agent harness",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "智能体框架",
+      "代理框架",
+      "智能体框架设计"
+    ],
+    "def_zh": "围绕模型的循环、工具执行与上下文管理脚手架。",
+    "count": 5,
+    "docs": [
+      {
+        "rel": "articles/building-with-claude-managed-agents.md",
+        "summary": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+        "def": "驱动代理的循环、工具执行、上下文管理等底层机制。"
+      },
+      {
+        "rel": "articles/demystifying-evals-for-ai-agents.md",
+        "summary": "本文系统阐述AI智能体评估的结构、类型、评分方法及从零构建评估的路线图。",
+        "def": "使模型能作为智能体行动的系统，处理输入、编排工具调用并返回结果。"
+      },
+      {
+        "rel": "articles/harness-design-long-running-apps.md",
+        "summary": "通过生成器-评估器多智能体架构与评分标准，提升长时自主编码与前端设计质量。",
+        "def": "为AI智能体设计运行框架以提升任务表现的方法。"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "围绕模型的软件脚手架，含循环、工具、上下文管理与护栏。"
+      },
+      {
+        "rel": "articles/managed-agents.md",
+        "summary": "托管代理通过解耦大脑与手，以稳定接口支持长周期代理工作。",
+        "def": "调用Claude并路由工具调用的循环程序。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude 智能体 SDK",
+    "en": "Claude Agent SDK",
+    "cat": "智能体架构",
+    "kind": "product",
+    "aliases": [
+      "Claude 智能体 SDK"
+    ],
+    "def_zh": "构建自主智能体的生产级开发工具包。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
+        "summary": "技能以文件封装领域专长，让通用智能体通过渐进披露成为专业专家。",
+        "def": "开箱即用的生产级智能体开发工具包。"
+      },
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "基于 Claude Code 的智能体开发工具集，提供构建自主智能体的原语。"
+      },
+      {
+        "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "summary": "Cresta 基于 Claude Agent SDK 构建元智能体 Conductor，将 CX 专业知识转化为可复用的智能体构建能力。",
+        "def": "通用智能体执行框架，用于收集上下文、调用工具、编写运行代码。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+        "summary": "Hebbia 用 Claude 构建金融尽调 AI，通过基准测试验证模型精度，并借助 Agent SDK 分解复杂任务。",
+        "def": "用于构建可组合、可检查的智能体工作流的开发工具包。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude.ai",
+    "en": "Claude.ai",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude.ai"
+    ],
+    "def_zh": "Claude 的浏览器端对话界面。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/build-responsive-web-layouts.md",
+        "summary": "介绍响应式布局的常见做法，以及用 Claude.ai 和 Claude Code 生成与重构响应式布局的方法。",
+        "def": "浏览器端对话界面，可生成响应式 HTML/CSS 代码"
+      },
+      {
+        "rel": "articles/fix-software-bugs-faster-with-claude.md",
+        "summary": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+        "def": "可粘贴错误信息获取快速分析的网页界面"
+      },
+      {
+        "rel": "articles/integrate-apis-seamlessly.md",
+        "summary": "介绍如何借助Claude与Claude Code系统化设计API集成，提前处理认证、限流与错误。",
+        "def": "用于分析API规范与规划集成策略的网页对话界面。"
+      },
+      {
+        "rel": "articles/optimize-code-performance-quickly.md",
+        "summary": "介绍用 Claude.ai 与 Claude Code 从被动性能剖析转向主动代码性能优化的方法。",
+        "def": "可粘贴代码片段获取复杂度分析与优化建议的网页界面。"
+      }
+    ]
+  },
+  {
+    "zh": "护栏",
+    "en": "Guardrails",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "护栏",
+      "guardrails",
+      "guardrail"
+    ],
+    "def_zh": "限制智能体可执行动作与花费的边界措施。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/auto-mode-in-production.md",
+        "summary": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+        "def": "在分类器判断前限制代理可执行动作的预设规则"
+      },
+      {
+        "rel": "articles/building-effective-agent-automations.md",
+        "summary": "介绍如何用 Claude 托管代理构建定时自动化，并给出六条避免常见故障的规则。",
+        "def": "限制代理权限与花费的边界措施。"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "约束智能体价格与商品来源、避免操纵性推销的安全机制。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "自动化测试、评审与灰度发布等防止改动引入风险的安全机制。"
+      }
+    ]
+  },
+  {
+    "zh": "沙箱",
+    "en": "Sandbox",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "沙箱",
+      "Sandbox",
+      "sandbox"
+    ],
+    "def_zh": "隔离运行智能体生成代码与工具调用的执行环境。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/building-with-claude-managed-agents.md",
+        "summary": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+        "def": "隔离的执行环境，用于运行代理生成的代码和工具调用。"
+      },
+      {
+        "rel": "articles/claude-code-auto-mode.md",
+        "summary": "Claude Code 自动模式用分类器替代人工审批，平衡安全与效率。",
+        "def": "隔离工具执行以防止危险操作的安全环境。"
+      },
+      {
+        "rel": "articles/managed-agents.md",
+        "summary": "托管代理通过解耦大脑与手，以稳定接口支持长周期代理工作。",
+        "def": "供Claude运行代码和编辑文件的隔离执行环境。"
+      },
+      {
+        "rel": "articles/using-llms-to-secure-source-code.md",
+        "summary": "利用LLM保障源代码安全：发现易并行，瓶颈转向验证、分诊与修补。",
+        "def": "隔离运行代理与目标的环境，用于安全执行和验证漏洞可利用性。"
+      }
+    ]
+  },
+  {
+    "zh": "自动模式",
+    "en": "Auto Mode",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "自动模式"
+    ],
+    "def_zh": "用分类器审查高风险操作并拦截危险命令的自主执行模式。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/auto-mode-in-production.md",
+        "summary": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+        "def": "由分类器评估并拦截危险命令的默认权限模式"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "减少人工确认、让模型自主执行任务的运行模式。"
+      },
+      {
+        "rel": "articles/building-always-on-agents.md",
+        "summary": "常驻智能体通过事件收件箱、定时器、记忆、权限和发件箱五个原语实现跨会话的自主运行。",
+        "def": "用分类器审查高风险操作并阻止危险动作的自主执行模式。"
+      },
+      {
+        "rel": "articles/claude-code-auto-mode.md",
+        "summary": "Claude Code 自动模式用分类器替代人工审批，平衡安全与效率。",
+        "def": "Claude Code 中由模型分类器自动审批操作的模式。"
+      }
+    ]
+  },
+  {
+    "zh": "幻觉",
+    "en": "Hallucination",
+    "cat": "安全与治理",
+    "kind": "risk",
+    "aliases": [
+      "幻觉",
+      "hallucination",
+      "Hallucination"
+    ],
+    "def_zh": "模型生成看似合理但实际虚假或错误的内容。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-prompt-engineering.md",
+        "summary": "介绍提示工程的核心与进阶技巧，并说明其与上下文工程的关系。",
+        "def": "模型编造不实信息而非承认不确定的现象。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+        "summary": "市场人员用 Claude Code 将周报自动化为每位销售代表的个性化周一简报。",
+        "def": "模型生成看似合理但实际虚假或无效的内容。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-legal.md",
+        "summary": "Anthropic法务团队用Claude构建自动化工作流，将审查时间从数天缩短至数小时。",
+        "def": "AI生成看似合理但实际虚假或错误信息的现象"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.md",
+        "summary": "Hebbia 用 Claude 构建金融尽调 AI，通过基准测试验证模型精度，并借助 Agent SDK 分解复杂任务。",
+        "def": "模型生成看似合理但实际错误或无依据的内容。"
+      }
+    ]
+  },
+  {
+    "zh": "可观测性",
+    "en": "Observability",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "可观测性",
+      "observability",
+      "Observability"
+    ],
+    "def_zh": "追踪与审查智能体决策过程与数据来源的能力。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/building-ai-agents-in-financial-services.md",
+        "summary": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+        "def": "对代理决策与数据来源进行追踪和审查的能力。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "实时监控AI系统行为与性能的能力。"
+      },
+      {
+        "rel": "articles/building-with-claude-managed-agents.md",
+        "summary": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+        "def": "通过事件日志和可视化时间线追踪代理运行过程的能力。"
+      },
+      {
+        "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "summary": "Anthropic 数据团队将语义层、技能文件与评估套件复用到 Slack 中的 Claude Tag，实现自助式数据分析。",
+        "def": "对智能体运行过程与输出进行监控和追踪的能力。"
+      }
+    ]
+  },
+  {
+    "zh": "投资回报率",
+    "en": "ROI",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "投资回报率",
+      "可衡量投资回报"
+    ],
+    "def_zh": "衡量AI投入与业务收益之比的量化指标。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+        "summary": "零售企业将AI试点扩展为企业级转型的三步路径与关键实践。",
+        "def": "能够用具体指标量化验证的AI投入产出效果"
+      },
+      {
+        "rel": "articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+        "summary": "介绍在谷歌云上管理 Claude Code 成本并证明投资回报的控制、追踪、证明三杠杆框架。",
+        "def": "将使用量映射到采用、满意度与工程影响三维度以衡量投入产出。"
+      },
+      {
+        "rel": "guides/the-code-modernization-playbook.md",
+        "summary": "以智能体编码分阶段改造遗留系统，兼顾现代化与业务交付。",
+        "def": "衡量改造投入与业务收益之比的指标"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "summary": "零售企业AI转型指南：从利益相关方对齐与治理起步，经战略试点快速见效，再规模化并建设组织能力。",
+        "def": "以量化指标验证AI投入产出效果的标准。"
+      }
+    ]
+  },
+  {
+    "zh": "评估",
+    "en": "evaluation",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "评估",
+      "Evaluation",
+      "evals",
+      "模型评估",
+      "eval"
+    ],
+    "def_zh": "系统化测试AI输出质量与可靠性的方法。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+        "summary": "Cresta 基于 Claude Agent SDK 构建元智能体 Conductor，将 CX 专业知识转化为可复用的智能体构建能力。",
+        "def": "从结果、执行路径、质量和资源使用等维度衡量智能体表现。"
+      },
+      {
+        "rel": "guides/the-ai-investment-firm.md",
+        "summary": "投资公司采用AI需重构运营模式，让Claude承担例行工作，并新增AI工程师等角色。",
+        "def": "系统化测试AI输出质量与可靠性的方法。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-cursor.md",
+        "summary": "Cursor 通过自建 CursorBench 评估前沿模型，发现 Claude Fable 5 具备全局推理能力，能解决最难的 1% 工程问题。",
+        "def": "系统化测试模型在特定任务上表现的方法。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work.md",
+        "summary": "Base44 借助 Claude Fable 5 的资深工程师级推理，攻克核心工程难题并扩大团队产能。",
+        "def": "按应用类型测量延迟、成本与构建错误的测试体系。"
+      }
+    ]
+  },
+  {
+    "zh": "AI治理",
+    "en": "AI governance",
+    "cat": "安全与治理",
+    "kind": "org",
+    "aliases": [
+      "AI治理",
+      "AI Governance",
+      "AI 治理"
+    ],
+    "def_zh": "为AI部署设定控制、审计与自主性边界的框架。",
+    "count": 4,
+    "docs": [
+      {
+        "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+        "summary": "合作伙伴基于 Claude Opus 构建网络安全防御产品，覆盖攻击性测试、漏洞修复与受治理部署。",
+        "def": "为 AI 部署设定控制、审计证据与自主性边界的框架。"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide-for-life-sciences.md",
+        "summary": "面向生命科学企业的前沿AI部署指南，涵盖治理、合规与可扩展试点。",
+        "def": "对AI使用进行政策、监督与责任分配的制度安排。"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "summary": "零售企业AI转型指南：从利益相关方对齐与治理起步，经战略试点快速见效，再规模化并建设组织能力。",
+        "def": "为AI应用制定规则、责任与风险管控的机制。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "summary": "BAM 以真实金融任务评测前沿模型，并用自建代理平台与治理控制安全部署 Claude Fable 5。",
+        "def": "围绕数据边界、权限、日志与人工审核建立的控制与问责体系。"
+      }
+    ]
+  },
+  {
+    "zh": "插件市场",
+    "en": "Plugin Marketplace",
+    "cat": "工具与扩展",
+    "kind": "product",
+    "aliases": [
+      "插件市场",
+      "Plugin Marketplace",
+      "plugin marketplace"
+    ],
+    "def_zh": "集中浏览、安装与分发插件的渠道。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "集中浏览、安装与分享插件的分发渠道。"
+      },
+      {
+        "rel": "articles/getting-started-with-claude-code-mods.md",
+        "summary": "Claude Code 模组是运行在会话内的插件，可观察、改写或接管事件并绘制自定义界面。",
+        "def": "托管并分发插件的仓库或目录，供用户安装模组。"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-how-we-use-skills.md",
+        "summary": "Anthropic 分享 Claude Code 中技能的分类、编写技巧、分发与度量经验。",
+        "def": "供用户上传、安装和分发技能插件的内部平台。"
+      }
+    ]
+  },
+  {
+    "zh": "技能创建器",
+    "en": "Skill Creator",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "技能创建器",
+      "skill-creator",
+      "Skill Creator"
+    ],
+    "def_zh": "辅助构建、测试与迭代技能文件的工具。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "summary": "将手动检查编码为技能，让 Claude Code 自动闭环验证并修复。",
+        "def": "通过访谈用户来生成技能文件的插件工具。"
+      },
+      {
+        "rel": "articles/complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建、测试和分发 Skills，涵盖独立工作流与 MCP 增强集成。",
+        "def": "用于构建、测试和迭代技能的辅助工具。"
+      },
+      {
+        "rel": "articles/how-to-create-skills-key-steps-limitations-and-examples.md",
+        "summary": "介绍创建Claude Skills的步骤、最佳实践、限制与示例。",
+        "def": "辅助创建结构化技能的模板或工具。"
+      }
+    ]
+  },
+  {
+    "zh": "定时任务",
+    "en": "Scheduled Tasks",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "定时任务",
+      "Scheduled Tasks",
+      "Scheduled Task"
+    ],
+    "def_zh": "按预设时间自动触发技能或工作流的机制。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "summary": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+        "def": "按预设时间自动触发技能执行的机制。"
+      },
+      {
+        "rel": "articles/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds.md",
+        "summary": "Anthropic营销运营团队用Claude Cowork自动化周报生成与活动搭建，将数天手工工作压缩至数小时。",
+        "def": "按预设时间自动触发的工作流，无需人工干预。"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "按设定节奏自动重复执行的任务。"
+      }
+    ]
+  },
+  {
+    "zh": "程序化工具调用",
+    "en": "Programmatic Tool Calling",
+    "cat": "工具与扩展",
+    "kind": "technique",
+    "aliases": [
+      "程序化工具调用",
+      "Programmatic Tool Calling",
+      "programmatic tool calling"
+    ],
+    "def_zh": "用代码编排工具调用，仅将最终结果返回模型。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "summary": "介绍连接智能体与外部系统的三种方式，重点阐述MCP在生产环境中的优势与构建模式。",
+        "def": "在代码沙箱中处理工具结果，仅将最终输出返回模型。"
+      },
+      {
+        "rel": "articles/extending-claude-capabilities-with-skills-mcp-servers.md",
+        "summary": "技能提供流程知识，MCP提供工具连接，二者结合可构建遵循团队工作流的智能体。",
+        "def": "由代码编排多个工具调用以高效完成复杂工作流的方式。"
+      },
+      {
+        "rel": "articles/harnessing-claudes-intelligence.md",
+        "summary": "介绍智能体框架设计的三种模式：善用模型已有能力、精简框架、谨慎设边界。",
+        "def": "让模型写代码表达工具调用及调用间逻辑，减少上下文消耗。"
+      }
+    ]
+  },
+  {
+    "zh": "上下文管理",
+    "en": "Context Management",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "上下文管理",
+      "context management",
+      "Context Management"
+    ],
+    "def_zh": "通过清理、压缩与回退保持会话上下文精简。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "通过清理、压缩与回退保持会话上下文精简的做法。"
+      },
+      {
+        "rel": "articles/how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+        "summary": "Brex 团队使用 Claude Code 提升代码质量与生产力，实现角色融合与数据民主化。",
+        "def": "为 AI 提供结构化领域知识（如 CLAUDE.md 文件）以提升代码理解与生成质量。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work.md",
+        "summary": "汤森路透CTO分享如何用Claude构建高 stakes专业AI，强调验证、代理与人类监督。",
+        "def": "在长任务链中维持对话与工具调用上下文连贯性的能力。"
+      }
+    ]
+  },
+  {
+    "zh": "多智能体系统",
+    "en": "Multi-Agent System",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "多智能体系统"
+    ],
+    "def_zh": "多个专业化智能体在独立上下文中协同完成任务的架构。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+        "summary": "多智能体系统在上下文保护、并行化和专业化三种场景下优于单智能体，但需权衡协调成本。",
+        "def": "多个LLM实例在独立上下文中通过代码协调完成任务的架构。"
+      },
+      {
+        "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "summary": "介绍用 MCP 与 A2A 协议在 Vertex AI 上构建多智能体系统",
+        "def": "多个 AI 智能体协作完成复杂任务的系统架构"
+      },
+      {
+        "rel": "articles/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+        "summary": "零售企业将AI试点扩展为企业级转型的三步路径与关键实践。",
+        "def": "由多个专业化智能体协同完成复杂任务的AI架构"
+      }
+    ]
+  },
+  {
+    "zh": "智能体工作流",
+    "en": "Agentic Workflow",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "智能体工作流",
+      "agent workflow",
+      "Agentic Workflow"
+    ],
+    "def_zh": "为智能体自主性提供结构化执行流程的模式。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "summary": "介绍AI智能体的三种常见工作流模式：顺序、并行和评估-优化器，及其适用场景与权衡。",
+        "def": "为智能体自主性提供结构化执行流程的模式。"
+      },
+      {
+        "rel": "articles/how-anthropic-uses-claude-gtm-engineering.md",
+        "summary": "Anthropic销售用Claude Code构建邮件草稿与销售技能插件，提升团队效率。",
+        "def": "多个AI步骤串联，输出作为下一步输入。"
+      },
+      {
+        "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+        "summary": "介绍AI驱动代码现代化项目的六步准备方法：定义目标、证书、晋升策略与工作流。",
+        "def": "由多个并行子智能体分发执行现代化任务的定制流程"
+      }
+    ]
+  },
+  {
+    "zh": "工作流",
+    "en": "Workflow",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "工作流",
+      "workflow",
+      "workflows"
+    ],
+    "def_zh": "按预定义步骤编排的自动化任务执行流程。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+        "summary": "Anthropic与Mesh-AI网络研讨会：讲解生产级AI智能体的基础、评估与部署。",
+        "def": "按预定义步骤编排的自动化流程，缺乏自主性。"
+      },
+      {
+        "rel": "guides/claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是能读写文件、连接工作应用并执行多步任务的 Claude 版本。",
+        "def": "面向特定场景的预定义任务执行流程"
+      },
+      {
+        "rel": "guides/the-complete-guide-to-building-skills-for-claude.md",
+        "summary": "本指南介绍如何为 Claude 构建技能：从规划、结构到测试与分发。",
+        "def": "技能所封装的可复用任务执行流程。"
+      }
+    ]
+  },
+  {
+    "zh": "代码审查",
+    "en": "Code Review",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "代码审查"
+    ],
+    "def_zh": "对代码变更进行检查以发现缺陷与改进点。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "对代码变更进行自动化或人工检查以发现问题。"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "对代码变更进行检查以发现缺陷与改进点的过程。"
+      },
+      {
+        "rel": "articles/running-an-ai-native-engineering-org.md",
+        "summary": "AI 原生工程组织以智能体编码为默认，重构规划、上下文获取、代码审查与团队角色。",
+        "def": "由 Claude 处理风格、缺陷与测试，人类聚焦专业判断。"
+      }
+    ]
+  },
+  {
+    "zh": "代码现代化",
+    "en": "Code Modernization",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "代码现代化",
+      "Code Modernization",
+      "code modernization"
+    ],
+    "def_zh": "将遗留系统升级重构为现代语言与架构的实践。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "webinars/deloitte-code-modernization.md",
+        "summary": "Anthropic与Deloitte网络研讨会：用智能体AI和Claude Code加速遗留系统现代化改造",
+        "def": "将遗留代码迁移重构为现代架构的工程实践"
+      },
+      {
+        "rel": "articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
+        "summary": "介绍AI驱动代码现代化项目的六步准备方法：定义目标、证书、晋升策略与工作流。",
+        "def": "用AI将遗留系统升级、重写或重建的工程实践"
+      },
+      {
+        "rel": "guides/the-code-modernization-playbook.md",
+        "summary": "以智能体编码分阶段改造遗留系统，兼顾现代化与业务交付。",
+        "def": "将遗留系统升级为现代语言与架构的改造过程"
+      }
+    ]
+  },
+  {
+    "zh": "技术债务",
+    "en": "Technical Debt",
+    "cat": "Claude Code 与编程",
+    "kind": "risk",
+    "aliases": [
+      "技术债务",
+      "technical debt",
+      "Technical Debt"
+    ],
+    "def_zh": "为短期交付积累、需长期偿还的维护负担。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/key-benefits-transitioning-agentic-coding.md",
+        "summary": "智能体编程让AI自主执行完整开发任务，显著加速交付、降低门槛并提升代码质量。",
+        "def": "为短期交付而积累的长期维护成本。"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "因快速开发或人员流动积累的维护负担。"
+      },
+      {
+        "rel": "articles/the-founders-playbook.md",
+        "summary": "Anthropic 发布创始人手册，指导如何用 AI 构建 AI 原生初创公司。",
+        "def": "AI 生成代码库若缺乏架构与安全实践而累积的维护负担。"
+      }
+    ]
+  },
+  {
+    "zh": "自适应思考",
+    "en": "Adaptive Thinking",
+    "cat": "模型与能力",
+    "kind": "technique",
+    "aliases": [
+      "自适应思考"
+    ],
+    "def_zh": "模型按任务复杂度动态决定推理深度的机制。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-computer-and-browser-use-with-claude.md",
+        "summary": "本文分享使用Claude进行计算机和浏览器操作的最佳实践，涵盖截图缩放、坐标映射、模型选择与思考努力调优。",
+        "def": "让模型根据任务复杂度动态决定推理深度和token预算的机制。"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "模型按步骤自行决定是否及投入多少思考的机制。"
+      },
+      {
+        "rel": "articles/building-with-claude-sonnet-5-5.md",
+        "summary": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+        "def": "模型按需自动分配思考量的默认推理模式。"
+      }
+    ]
+  },
+  {
+    "zh": "模型路由",
+    "en": "Model Routing",
+    "cat": "成本与性能",
+    "kind": "technique",
+    "aliases": [
+      "模型路由"
+    ],
+    "def_zh": "按任务复杂度将请求分派给不同能力层级模型的策略。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+        "summary": "介绍Claude企业版与API的成本可见性与控制手段，强调按成果而非token衡量成本。",
+        "def": "按任务难度与推理需求匹配不同能力层级模型的做法。"
+      },
+      {
+        "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+        "summary": "CodeRabbit 用 Claude 构建编码前的规划编排层，以结构化计划提升代码质量。",
+        "def": "按任务复杂度分配不同模型层级以优化成本与延迟。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "summary": "BAM 以真实金融任务评测前沿模型，并用自建代理平台与治理控制安全部署 Claude Fable 5。",
+        "def": "按任务、成本与效率将请求分派给不同模型的调度策略。"
+      }
+    ]
+  },
+  {
+    "zh": "顾问策略",
+    "en": "Advisor Strategy",
+    "cat": "成本与性能",
+    "kind": "technique",
+    "aliases": [
+      "顾问策略"
+    ],
+    "def_zh": "小模型执行、遇难题时调用前沿模型获取判断的协作模式。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/a-guide-to-cost-visibility-and-control-in-claude.md",
+        "summary": "介绍Claude企业版与API的成本可见性与控制手段，强调按成果而非token衡量成本。",
+        "def": "小模型在关键节点调用前沿模型获取判断的用法。"
+      },
+      {
+        "rel": "articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
+        "summary": "介绍 Claude 模型家族各档位差异，并给出按任务难度、延迟、成本与评测选型的实践建议。",
+        "def": "低成本执行模型按需调用更强模型审核计划的协作方式。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "summary": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+        "def": "小模型执行、遇难题时向大模型请求建议的协作模式。"
+      }
+    ]
+  },
+  {
+    "zh": "令牌成本",
+    "en": "Token Cost",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "令牌成本"
+    ],
+    "def_zh": "会话中发送与生成令牌所产生的费用。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "一次会话中发送与生成 token 所产生的费用。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "按输入输出令牌计费的模型使用费用"
+      },
+      {
+        "rel": "articles/subagents-in-claude-code.md",
+        "summary": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+        "def": "上下文与调用所消耗的 token 带来的开销"
+      }
+    ]
+  },
+  {
+    "zh": "评估框架",
+    "en": "Evaluation Framework",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "评估框架",
+      "evaluation framework",
+      "evaluation harness"
+    ],
+    "def_zh": "系统化衡量模型表现并定位问题的评测基础设施。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/carta-healthcare-clinical-abstractor.md",
+        "summary": "Carta Healthcare用Claude构建临床数据抽象平台，通过上下文工程实现99%准确率。",
+        "def": "系统化衡量模型表现并定位问题的体系"
+      },
+      {
+        "rel": "articles/demystifying-evals-for-ai-agents.md",
+        "summary": "本文系统阐述AI智能体评估的结构、类型、评分方法及从零构建评估的路线图。",
+        "def": "端到端运行评估的基础设施，负责任务执行、记录和评分聚合。"
+      },
+      {
+        "rel": "articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+        "summary": "CodeRabbit 用 Claude 构建编码前的规划编排层，以结构化计划提升代码质量。",
+        "def": "系统化衡量计划或代码质量的评测基础设施。"
+      }
+    ]
+  },
+  {
+    "zh": "功能开关",
+    "en": "Feature Flag",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "功能开关"
+    ],
+    "def_zh": "控制新功能灰度放量与快速回滚的运行时开关。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/ai-ci-cd-on-call.md",
+        "summary": "Anthropic 用 Claude Tag 构建 CI/CD 值班智能体，自动检测、分诊、修复并复盘故障。",
+        "def": "控制功能上线与回滚的开关，用于渐进发布与快速止损。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "控制新功能灰度放量与快速回滚的运行时开关。"
+      },
+      {
+        "rel": "articles/solving-code-review-at-anthropic.md",
+        "summary": "Claude Code 团队分享智能体时代的分层代码审查流程，以风险分级和自动化保障质量。",
+        "def": "无需部署即可开启或关闭新行为的发布控制手段。"
+      }
+    ]
+  },
+  {
+    "zh": "内部试用",
+    "en": "Dogfooding",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "内部试用"
+    ],
+    "def_zh": "团队先在内部使用自建智能体再决定是否产品化。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "团队先在内部使用自建智能体，再决定是否产品化。"
+      },
+      {
+        "rel": "articles/running-an-ai-native-engineering-org.md",
+        "summary": "AI 原生工程组织以智能体编码为默认，重构规划、上下文获取、代码审查与团队角色。",
+        "def": "团队全员日常使用自家产品以驱动改进。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+        "summary": "Cognition 用 Devin 实测 Claude Fable 5，长时自主运行与混乱上下文中的清醒表现成为关键突破。",
+        "def": "让自家工程师用真实工作日检验新模型的做法。"
+      }
+    ]
+  },
+  {
+    "zh": "企业AI转型",
+    "en": "Enterprise AI Transformation",
+    "cat": "企业落地与组织",
+    "kind": "org",
+    "aliases": [
+      "企业AI转型",
+      "enterprise AI transformation",
+      "Enterprise AI Transformation"
+    ],
+    "def_zh": "企业系统性引入 AI 并重塑流程与能力的整体变革。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/building-ai-agents-for-the-enterprise.md",
+        "summary": "企业AI转型需将智能体嵌入工作流程，通过三大支柱实现复利回报。",
+        "def": "将AI嵌入员工工作、流程与产品以实现持续回报的变革。"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide-for-retail.md",
+        "summary": "零售企业AI转型指南：从利益相关方对齐与治理起步，经战略试点快速见效，再规模化并建设组织能力。",
+        "def": "企业系统性引入AI并重塑流程与能力的整体变革。"
+      },
+      {
+        "rel": "guides/the-enterprise-ai-transformation-guide.md",
+        "summary": "企业AI转型需超越单纯投资，采用Anthropic三步法实现规模化落地。",
+        "def": "企业规模化应用生成式AI并实现成熟价值的系统性变革"
+      }
+    ]
+  },
+  {
+    "zh": "最佳实践",
+    "en": "Best Practices",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "最佳实践"
+    ],
+    "def_zh": "经实践验证、可复用的高效使用方法与规范。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-best-practices-lightspeed.md",
+        "summary": "Anthropic 网络研讨会分享 Claude Code 高级用法、子代理与钩子等最佳实践。",
+        "def": "经实践验证、可复用的高效使用方法与规范。"
+      },
+      {
+        "rel": "webinars/claude-code-live.md",
+        "summary": "Claude Code 创作者分享其起源、开发挑战、现场演示及融入现有工作流的最佳实践。",
+        "def": "经实践验证的高效使用与集成方法。"
+      },
+      {
+        "rel": "guides/claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是能读写文件、连接工作应用并执行多步任务的 Claude 版本。",
+        "def": "使用 Claude Cowork 的推荐方法与规范"
+      }
+    ]
+  },
+  {
+    "zh": "上下文",
+    "en": "Context",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "上下文",
+      "context",
+      "Context"
+    ],
+    "def_zh": "提供给模型的提示、文件与工具信息等背景依据。",
+    "count": 3,
+    "docs": [
+      {
+        "rel": "articles/a-field-guide-to-claude-fable-finding-your-unknowns.md",
+        "summary": "Claude Fable 5 模型下，工作质量取决于澄清未知，需在实现前后迭代发现未知。",
+        "def": "提供给 Claude 的背景信息，用于指导其理解任务。"
+      },
+      {
+        "rel": "articles/claude-model-and-effort-level-in-claude-code.md",
+        "summary": "在 Claude Code 中按任务复杂度选择模型与努力等级，以平衡能力、成本与自主性。",
+        "def": "提供给模型的背景信息，决定其能否正确完成任务。"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "模型工作所依据的提示、文件与已连接工具信息。"
+      }
+    ]
+  },
+  {
+    "zh": "工具搜索",
+    "en": "Tool Search",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "工具搜索",
+      "Tool Search",
+      "tool search"
+    ],
+    "def_zh": "按需检索并延迟加载工具定义以节省上下文。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-agents-that-reach-production-systems-with-mcp.md",
+        "summary": "介绍连接智能体与外部系统的三种方式，重点阐述MCP在生产环境中的优势与构建模式。",
+        "def": "按需检索并加载工具定义以减少上下文占用的技术。"
+      },
+      {
+        "rel": "articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+        "summary": "将子代理折叠进主代理循环，用渐进披露的技能与工具替代多代理编排，可提升质量并降低延迟与成本。",
+        "def": "按需检索并延迟加载工具定义，避免工具列表膨胀。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体搜索",
+    "en": "Agentic Search",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "智能体搜索",
+      "Agentic Search"
+    ],
+    "def_zh": "智能体通过文件系统与命令自主检索所需上下文。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-agents-with-the-claude-agent-sdk.md",
+        "summary": "Claude Agent SDK 通过给 Claude 一台计算机，让开发者构建自主智能体，并遵循收集上下文、执行动作、验证工作的循环。",
+        "def": "智能体通过文件系统与 bash 命令自主检索所需上下文。"
+      },
+      {
+        "rel": "articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+        "summary": "Claude Code 在大型代码库中依赖智能体搜索与扩展层配置，并需组织治理与持续维护。",
+        "def": "通过遍历文件系统、grep 与引用追踪实时定位代码，无需索引。"
+      }
+    ]
+  },
+  {
+    "zh": "扩展思考",
+    "en": "Extended Thinking",
+    "cat": "模型与能力",
+    "kind": "technique",
+    "aliases": [
+      "扩展思考"
+    ],
+    "def_zh": "模型在回答前执行额外结构化推理的能力。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-prompt-engineering.md",
+        "summary": "介绍提示工程的核心与进阶技巧，并说明其与上下文工程的关系。",
+        "def": "Claude 自动执行结构化推理的内置功能。"
+      },
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "模型在回答前进行额外推理步骤的能力。"
+      }
+    ]
+  },
+  {
+    "zh": "令牌效率",
+    "en": "Token Efficiency",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "令牌效率"
+    ],
+    "def_zh": "以更少令牌完成同等工作的能力。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+        "summary": "介绍 Opus 4.7 在 Claude Code 中的最佳实践：努力等级、自适应思考与交互式会话结构。",
+        "def": "单位任务所消耗令牌与产出质量之间的比率。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-cursor.md",
+        "summary": "Cursor 通过自建 CursorBench 评估前沿模型，发现 Claude Fable 5 具备全局推理能力，能解决最难的 1% 工程问题。",
+        "def": "模型以更少 token 完成同等工作的能力。"
+      }
+    ]
+  },
+  {
+    "zh": "爬山优化",
+    "en": "Hill Climbing",
+    "cat": "成本与性能",
+    "kind": "technique",
+    "aliases": [
+      "爬山优化",
+      "hillclimbing",
+      "hill climbing"
+    ],
+    "def_zh": "围绕单一可量化指标持续迭代优化的方法。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/automating-eval-design-and-hillclimbing.md",
+        "summary": "介绍评估设计与爬山优化原则，及 claude-api 技能如何自动化实现。",
+        "def": "基于评估信号逐步修改提示或参数以提升性能或降低成本。"
+      },
+      {
+        "rel": "articles/how-we-made-claude-ai-faster.md",
+        "summary": "Anthropic 用 Claude 在两周内将 claude.ai 核心体验提速约 3 倍，靠可测量基准与护栏安全合并三千余改动。",
+        "def": "围绕单一可量化指标持续迭代、只降不升的优化方法。"
+      }
+    ]
+  },
+  {
+    "zh": "claude-api 技能",
+    "en": "claude-api skill",
+    "cat": "成本与性能",
+    "kind": "technique",
+    "aliases": [
+      "claude-api 技能"
+    ],
+    "def_zh": "封装成本与性能优化命令的 Claude Code 技能。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/automating-eval-design-and-hillclimbing.md",
+        "summary": "介绍评估设计与爬山优化原则，及 claude-api 技能如何自动化实现。",
+        "def": "Claude Code 中提供 build-eval 与 hillclimb 命令的技能。"
+      },
+      {
+        "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "summary": "通过提示缓存、指令清理与努力度校准，在不牺牲性能的前提下降低 Claude 应用成本。",
+        "def": "封装成本与性能优化命令的 Claude Code 可复用技能。"
+      }
+    ]
+  },
+  {
+    "zh": "评分器",
+    "en": "Grader",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "评分器"
+    ],
+    "def_zh": "对智能体表现某方面给出分数或判定的组件。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/automating-eval-design-and-hillclimbing.md",
+        "summary": "介绍评估设计与爬山优化原则，及 claude-api 技能如何自动化实现。",
+        "def": "对评估输出给出分数或判定、需验证一致性的组件。"
+      },
+      {
+        "rel": "articles/demystifying-evals-for-ai-agents.md",
+        "summary": "本文系统阐述AI智能体评估的结构、类型、评分方法及从零构建评估的路线图。",
+        "def": "对智能体表现某方面进行打分的逻辑，可基于代码、模型或人工。"
+      }
+    ]
+  },
+  {
+    "zh": "验证循环",
+    "en": "Verification Loop",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "验证循环"
+    ],
+    "def_zh": "以测试等客观裁判驱动智能体反复修复的闭环。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/ai-code-migration.md",
+        "summary": "用AI智能体将生产代码库迁移到新语言，通过规则手册与验证循环压缩多年工程。",
+        "def": "以编译器、测试套件等客观裁判驱动智能体反复修复的闭环。"
+      },
+      {
+        "rel": "articles/building-verification-loops-in-claude-code-with-skills.md",
+        "summary": "将手动检查编码为技能，让 Claude Code 自动闭环验证并修复。",
+        "def": "AI 代理反复检查自身工作并修复失败的迭代过程。"
+      }
+    ]
+  },
+  {
+    "zh": "分类器",
+    "en": "Classifier",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "分类器",
+      "classifier",
+      "Classifiers"
+    ],
+    "def_zh": "自动判断智能体动作是否具有潜在危害的模型组件。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/auto-mode-in-production.md",
+        "summary": "Claude Code 自动模式以分类器替代逐条审批，在生产环境中平衡速度与安全。",
+        "def": "自动判断代理动作是否具有潜在危害的模型组件"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "检测网络安全与生化领域潜在滥用的独立 AI 系统。"
+      }
+    ]
+  },
+  {
+    "zh": "审计追踪",
+    "en": "Audit Trail",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "审计追踪"
+    ],
+    "def_zh": "记录智能体所有操作与决策来源的完整日志。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/agent-identity-access-model.md",
+        "summary": "Claude Tag 采用代理身份访问模型，让 AI 在团队频道中以自身账户运行，实现按频道而非按用户授权。",
+        "def": "记录 AI 代理所有操作和网络调用的日志，用于安全审查。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "记录AI决策过程与数据来源的完整日志。"
+      }
+    ]
+  },
+  {
+    "zh": "监管合规",
+    "en": "Regulatory Compliance",
+    "cat": "安全与治理",
+    "kind": "risk",
+    "aliases": [
+      "监管合规"
+    ],
+    "def_zh": "智能体需满足多监管机构的法规与审计要求。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-ai-agents-in-financial-services.md",
+        "summary": "金融机构部署自主AI代理以提升运营效率，同时应对监管与风险挑战。",
+        "def": "AI代理需满足多监管机构的法规与审计要求。"
+      },
+      {
+        "rel": "articles/building-ai-agents-in-healthcare-and-life-sciences.md",
+        "summary": "医疗与生命科学领域AI代理的架构、合规与实施策略。",
+        "def": "满足医疗数据隐私与审计等法规要求。"
+      }
+    ]
+  },
+  {
+    "zh": "成熟度模型",
+    "en": "Maturity Model",
+    "cat": "企业落地与组织",
+    "kind": "org",
+    "aliases": [
+      "成熟度模型"
+    ],
+    "def_zh": "分级评估组织 AI 应用水平并指明升级路径的框架。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-an-ai-native-revenue-organization.md",
+        "summary": "面向营收团队，介绍在销售组织内推广 Claude 的成熟度模型、三阶段落地计划与 ROI 衡量框架。",
+        "def": "评估组织当前 AI 应用水平并指明升级路径的分级框架"
+      },
+      {
+        "rel": "articles/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+        "summary": "Claude Cowork 将智能体能力扩展到桌面，助力企业全员部署智能体 AI。",
+        "def": "分五级描述企业采用 Claude Cowork 的演进路径。"
+      }
+    ]
+  },
+  {
+    "zh": "人机团队",
+    "en": "Human-Agent Team",
+    "cat": "企业落地与组织",
+    "kind": "org",
+    "aliases": [
+      "人机团队"
+    ],
+    "def_zh": "人类与 AI 智能体在同一平台分工协作的团队模式。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude.md",
+        "summary": "Asana 将 AI 智能体作为团队成员，赋予角色、共享记忆与可见工作流，由 Claude 驱动。",
+        "def": "人类与 AI 智能体在同一平台协作、共担角色的工作团队。"
+      },
+      {
+        "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+        "summary": "医疗组织在无PHI渠道中用Claude Tag构建人机团队，处理告警、维护工具与解答规则。",
+        "def": "人类与AI代理在同一工作流中分工协作的团队模式。"
+      }
+    ]
+  },
+  {
+    "zh": "会话",
+    "en": "Session",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "会话",
+      "session",
+      "Session"
+    ],
+    "def_zh": "记录消息与工具调用、可跨多次运行延续的对话实例。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-always-on-agents.md",
+        "summary": "常驻智能体通过事件收件箱、定时器、记忆、权限和发件箱五个原语实现跨会话的自主运行。",
+        "def": "记录消息与工具调用的对话转录，可跨多次运行延续。"
+      },
+      {
+        "rel": "articles/building-with-claude-managed-agents.md",
+        "summary": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+        "def": "代理与环境的单次运行实例，持久化事件历史与沙箱状态。"
+      }
+    ]
+  },
+  {
+    "zh": "记忆",
+    "en": "Memory",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "记忆"
+    ],
+    "def_zh": "跨运行持久保存用户指令、笔记与任务进度的存储。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-always-on-agents.md",
+        "summary": "常驻智能体通过事件收件箱、定时器、记忆、权限和发件箱五个原语实现跨会话的自主运行。",
+        "def": "跨运行持久保存用户指令、笔记、历史消息与任务进度的存储。"
+      },
+      {
+        "rel": "articles/how-anthropic-employees-use-claude-tag.md",
+        "summary": "Anthropic 员工在 Slack 中用 Claude Tag 生成文档、汇总请求并加速法务审核。",
+        "def": "助手跨会话保留并复用先前信息的能力。"
+      }
+    ]
+  },
+  {
+    "zh": "长时任务",
+    "en": "Long-Running Tasks",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "长时任务",
+      "long-running tasks",
+      "long-running work"
+    ],
+    "def_zh": "需持续较长时间、跨多步骤完成的智能体任务。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/build-agents-with-claude-platform-on-google-cloud.md",
+        "summary": "Claude 平台登陆 Google Cloud，可用现有账号构建智能体。",
+        "def": "需持续较长时间、跨多步骤完成的智能体任务。"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "代理持续执行较长时间、跨多步骤完成的工作。"
+      }
+    ]
+  },
+  {
+    "zh": "商务智能体",
+    "en": "Commerce Agent",
+    "cat": "行业与场景",
+    "kind": "technique",
+    "aliases": [
+      "商务智能体"
+    ],
+    "def_zh": "在电商或旅行场景中辅助用户搜索、比较与购买的智能体。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/building-claude-commerce-agents.md",
+        "summary": "介绍面向消费者与商家的 Claude 商务智能体蓝图及参考实现",
+        "def": "面向购物与交易场景的自主 AI 代理"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "在电商或旅行场景中辅助用户搜索、比较与购买商品的 AI 智能体。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体蓝图",
+    "en": "agent blueprint",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "智能体蓝图"
+    ],
+    "def_zh": "含脚手架、模式与护栏的可复用智能体参考实现。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/building-claude-commerce-agents.md",
+        "summary": "介绍面向消费者与商家的 Claude 商务智能体蓝图及参考实现",
+        "def": "可复用的智能体架构与实现模板"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "含脚手架、模式与护栏的可复用参考实现，用于快速搭建智能体。"
+      }
+    ]
+  },
+  {
+    "zh": "任务委派",
+    "en": "task delegation",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "任务委派",
+      "Delegation"
+    ],
+    "def_zh": "将子任务连同决策权分派给合适智能体执行。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "summary": "介绍用 MCP 与 A2A 协议在 Vertex AI 上构建多智能体系统",
+        "def": "将子任务分派给合适的智能体执行"
+      },
+      {
+        "rel": "articles/working-with-claude-fable-5-in-claude-cowork.md",
+        "summary": "介绍在 Claude Cowork 中高效使用 Claude Fable 5 的方法，涵盖上下文、技能、委派与审查。",
+        "def": "将完整工作连同决策权交给模型自主完成。"
+      }
+    ]
+  },
+  {
+    "zh": "并行工作流",
+    "en": "parallel workflow",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "并行工作流",
+      "Parallel Workflows"
+    ],
+    "def_zh": "将独立任务分发给多个智能体同时执行并聚合结果。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/claude-code-in-the-cloud.md",
+        "summary": "Claude Code 云会话在独立虚拟机中运行，支持并行任务、安全隔离和多种工作流。",
+        "def": "同时运行多个独立任务，互不干扰，提高效率。"
+      },
+      {
+        "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "summary": "介绍AI智能体的三种常见工作流模式：顺序、并行和评估-优化器，及其适用场景与权衡。",
+        "def": "将独立任务分发给多个智能体同时执行并聚合结果。"
+      }
+    ]
+  },
+  {
+    "zh": "代理式工作流",
+    "en": "agentic workflow",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "代理式工作流",
+      "Agentic Workflow"
+    ],
+    "def_zh": "由AI自主编排多种构建块完成的复杂任务流程。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/skills-explained.md",
+        "summary": "解析 Skills 与提示词、Projects、MCP、子代理的定位差异与协作方式。",
+        "def": "组合多种构建块、由 AI 自主编排完成的复杂任务流程。"
+      },
+      {
+        "rel": "articles/the-founders-playbook.md",
+        "summary": "Anthropic 发布创始人手册，指导如何用 AI 构建 AI 原生初创公司。",
+        "def": "由 AI 代理自主执行任务、替代创始人注意力的流程。"
+      }
+    ]
+  },
+  {
+    "zh": "长时运行智能体",
+    "en": "long-running agent",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "长时运行智能体",
+      "long-running agents"
+    ],
+    "def_zh": "可连续数小时无人监督执行复杂任务的智能体。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "summary": "Outtake 用 Claude Code 与 Agent SDK 构建长时自主网络调查智能体，并总结工程实践。",
+        "def": "可自主持续运行数十分钟至数小时完成复杂任务的智能体。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-rakuten.md",
+        "summary": "乐天利用Claude Fable 5的自我验证与品味对齐能力，构建可长时间无人值守运行的企业智能体。",
+        "def": "可连续数小时无人监督执行复杂任务的智能体。"
+      }
+    ]
+  },
+  {
+    "zh": "自我改进循环",
+    "en": "self-improvement loop",
+    "cat": "智能体架构",
+    "kind": "technique",
+    "aliases": [
+      "自我改进循环"
+    ],
+    "def_zh": "依据反馈修正指令并持续迭代的闭环机制。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/claude-code-guide-for-startups.md",
+        "summary": "初创公司用 Claude Code 实现全员交付、自动化流程与持续重建的五条运营原则。",
+        "def": "智能体依据反馈修正指令并持续迭代的闭环机制。"
+      },
+      {
+        "rel": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+        "summary": "Warp 用技能文件构建自我改进智能体：内层技能执行任务，外层改进技能吸收人类反馈并迭代更新。",
+        "def": "采集反馈、生成技能修改、经审核合并后生效的闭环流程。"
+      }
+    ]
+  },
+  {
+    "zh": "上下文隔离",
+    "en": "context isolation",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "上下文隔离"
+    ],
+    "def_zh": "子任务在独立干净上下文中运行以避免信息干扰。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-multi-agent-systems-when-and-how-to-use-them.md",
+        "summary": "多智能体系统在上下文保护、并行化和专业化三种场景下优于单智能体，但需权衡协调成本。",
+        "def": "子智能体在独立干净上下文中运行，避免信息干扰。"
+      },
+      {
+        "rel": "articles/subagents-in-claude-code.md",
+        "summary": "介绍 Claude Code 子代理的适用场景、调用方式与自动化编排方法。",
+        "def": "将子任务放入独立上下文以避免主会话被污染"
+      }
+    ]
+  },
+  {
+    "zh": "压缩",
+    "en": "compaction",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "压缩"
+    ],
+    "def_zh": "上下文窗口满时摘要旧对话并继续新会话。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "summary": "Claude Code 围绕提示缓存构建，通过前缀匹配、消息更新、工具延迟加载和缓存安全分叉优化缓存命中率。",
+        "def": "上下文窗口满时摘要对话并继续新会话的机制。"
+      },
+      {
+        "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+        "summary": "分析 Claude Code 任务在 Opus 5.5 上的成本构成与优化策略。",
+        "def": "总结旧对话以缩短上下文，降低后续轮次成本。"
+      }
+    ]
+  },
+  {
+    "zh": "记忆存储",
+    "en": "memory store",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "记忆存储"
+    ],
+    "def_zh": "跨运行持久保存状态、偏好与修正的共享存储。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-effective-agent-automations.md",
+        "summary": "介绍如何用 Claude 托管代理构建定时自动化，并给出六条避免常见故障的规则。",
+        "def": "跨运行挂载到沙箱的文本文件目录，保存状态与偏好。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "summary": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+        "def": "多个智能体共享读写、保存修正与知识的持久存储。"
+      }
+    ]
+  },
+  {
+    "zh": "知识库",
+    "en": "knowledge base",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "知识库",
+      "Knowledge Base"
+    ],
+    "def_zh": "集中存放修正、历史交互与内部资料供取用。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "summary": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+        "def": "存放修正、历史交互与内部资料供智能体取用的共享来源。"
+      },
+      {
+        "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "summary": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+        "def": "集中存放常见问题与标准答案的参考文档。"
+      }
+    ]
+  },
+  {
+    "zh": "提示审计",
+    "en": "prompt audit",
+    "cat": "上下文工程",
+    "kind": "technique",
+    "aliases": [
+      "提示审计"
+    ],
+    "def_zh": "扫描提示与工具描述以识别并移除反模式。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+        "summary": "通过提示缓存、指令清理与努力度校准，在不牺牲性能的前提下降低 Claude 应用成本。",
+        "def": "扫描提示、技能与工具描述，识别并移除反模式的检查流程。"
+      },
+      {
+        "rel": "articles/what-a-task-costs-on-opus-5-5.md",
+        "summary": "分析 Claude Code 任务在 Opus 5.5 上的成本构成与优化策略。",
+        "def": "检查并移除导致模型多写或重复调用的提示模式。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude托管代理",
+    "en": "Claude Managed Agents",
+    "cat": "Claude Code 与编程",
+    "kind": "product",
+    "aliases": [
+      "Claude托管代理"
+    ],
+    "def_zh": "托管代理运行、会话与工具编排的平台服务。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-with-claude-managed-agents.md",
+        "summary": "Claude托管代理通过解耦代理循环与沙箱，提供生产级基础设施，简化代理部署与扩展。",
+        "def": "一套可组合API，用于构建和部署生产级代理，提供托管基础设施。"
+      },
+      {
+        "rel": "articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
+        "summary": "Anthropic销售团队用Claude托管代理构建采购代理，自动回答入站咨询并促成购买。",
+        "def": "托管代理运行、会话与工具编排的平台服务"
+      }
+    ]
+  },
+  {
+    "zh": "计划模式",
+    "en": "Plan Mode",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "计划模式",
+      "plan mode"
+    ],
+    "def_zh": "只读探索代码库、先产出计划再执行的工作模式。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "summary": "Claude Code 围绕提示缓存构建，通过前缀匹配、消息更新、工具延迟加载和缓存安全分叉优化缓存命中率。",
+        "def": "通过工具切换而非改工具集实现只读探索的模式。"
+      },
+      {
+        "rel": "articles/the-ai-native-sdlc-playbook.md",
+        "summary": "AI原生SDLC将线性流程转为循环，以提交物驱动各阶段，人类聚焦决策与治理。",
+        "def": "Claude只读代码库、先产出计划再执行的工作模式。"
+      }
+    ]
+  },
+  {
+    "zh": "合并队列",
+    "en": "merge queue",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "合并队列"
+    ],
+    "def_zh": "合并前对主分支重新运行全部检查的机制。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/redesigning-source-control.md",
+        "summary": "Anthropic 因智能体编码导致合并量激增，自研面向始终在线智能体的版本控制系统 Scion 并五个月迁移。",
+        "def": "串行化待合并变更以保证主干测试通过的机制。"
+      },
+      {
+        "rel": "articles/solving-code-review-at-anthropic.md",
+        "summary": "Claude Code 团队分享智能体时代的分层代码审查流程，以风险分级和自动化保障质量。",
+        "def": "在合并前对主分支重新运行全部检查的机制。"
+      }
+    ]
+  },
+  {
+    "zh": "测试驱动开发",
+    "en": "test-driven development",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "测试驱动开发"
+    ],
+    "def_zh": "先写测试定义成功标准再增量实现功能。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "先写测试再实现代码、以测试引导设计的开发方法。"
+      },
+      {
+        "rel": "articles/scaling-agentic-coding.md",
+        "summary": "系统化推广智能体编程：试点先行、内部专家扩散、CLAUDE.md 共享上下文、多维指标衡量成效。",
+        "def": "先写测试定义成功标准，再增量实现功能。"
+      }
+    ]
+  },
+  {
+    "zh": "调试",
+    "en": "debugging",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "调试",
+      "Debugging"
+    ],
+    "def_zh": "定位并修复软件缺陷与生产问题的过程。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/fix-software-bugs-faster-with-claude.md",
+        "summary": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+        "def": "定位并修复软件缺陷的过程"
+      },
+      {
+        "rel": "articles/how-anthropic-teams-use-claude-code.md",
+        "summary": "Anthropic 内部团队用 Claude Code 加速编码、调试、测试与自动化，并让非技术角色也能构建工具。",
+        "def": "定位并修复软件缺陷与生产问题的过程。"
+      }
+    ]
+  },
+  {
+    "zh": "根因分析",
+    "en": "root cause analysis",
+    "cat": "Claude Code 与编程",
+    "kind": "technique",
+    "aliases": [
+      "根因分析",
+      "Root Cause Analysis"
+    ],
+    "def_zh": "追溯问题根本原因而非仅修复表象的方法。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/fix-software-bugs-faster-with-claude.md",
+        "summary": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+        "def": "追溯缺陷根本原因而非表面症状的方法"
+      },
+      {
+        "rel": "articles/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+        "summary": "将Claude Code视为新开发者，通过上下文工程、技能库和MCP集成来管理大型遗留代码库。",
+        "def": "定位问题根本原因而非仅修复表象的方法。"
+      }
+    ]
+  },
+  {
+    "zh": "财务分析插件",
+    "en": "Financial Analysis plugin",
+    "cat": "工具与扩展",
+    "kind": "product",
+    "aliases": [
+      "财务分析插件",
+      "Financial Analysis Plugin"
+    ],
+    "def_zh": "预置技能、面向财务分析的插件包。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/claude-excel-powerpoint-updates.md",
+        "summary": "Claude for Excel 与 PowerPoint 跨文件共享上下文，并支持技能复用工作流。",
+        "def": "自动安装预置技能、面向财务分析的插件包。"
+      },
+      {
+        "rel": "articles/cowork-plugins-finance.md",
+        "summary": "Claude 推出金融插件与跨应用工作流，打通 Excel 与 PowerPoint 并接入机构数据。",
+        "def": "覆盖市场研究、财务建模与模板质检的基础插件。"
+      }
+    ]
+  },
+  {
+    "zh": "Claude for Excel",
+    "en": "Claude for Excel",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Claude for Excel"
+    ],
+    "def_zh": "在Excel中读写单元格、公式与数据的Claude集成。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/claude-excel-powerpoint-updates.md",
+        "summary": "Claude for Excel 与 PowerPoint 跨文件共享上下文，并支持技能复用工作流。",
+        "def": "在 Excel 中读写单元格、公式与数据的 Claude 插件。"
+      },
+      {
+        "rel": "articles/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+        "summary": "Anthropic财务团队用Claude Cowork维护财务叙事一致性并释放高价值工作时间。",
+        "def": "在Excel中直接编辑和分析财务模型的Claude集成产品。"
+      }
+    ]
+  },
+  {
+    "zh": "Vertex AI",
+    "en": "Vertex AI",
+    "cat": "产品线与功能",
+    "kind": "product",
+    "aliases": [
+      "Vertex AI"
+    ],
+    "def_zh": "Google Cloud的机器学习模型训练与部署平台。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/claude-on-vertex-ai.md",
+        "summary": "技术研讨会介绍在 Vertex AI 上构建高级智能体的记忆、推理与工具集成能力",
+        "def": "Google Cloud 的机器学习模型开发与部署平台"
+      },
+      {
+        "rel": "webinars/deploying-multi-agent-systems-using-mcp-and-a2a-with-claude-on-vertex-ai.md",
+        "summary": "介绍用 MCP 与 A2A 协议在 Vertex AI 上构建多智能体系统",
+        "def": "Google Cloud 的机器学习模型训练与部署平台"
+      }
+    ]
+  },
+  {
+    "zh": "Claude Opus 5.5",
+    "en": "Claude Opus 5.5",
+    "cat": "模型与能力",
+    "kind": "product",
+    "aliases": [
+      "Claude Opus 5.5"
+    ],
+    "def_zh": "面向复杂长程任务优化的高端Claude模型版本。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-with-claude-sonnet-5-5.md",
+        "summary": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+        "def": "面向复杂长程任务的高端模型，判断力与智能更强。"
+      },
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "面向长时高上下文编码会话优化的 Claude 模型版本"
+      }
+    ]
+  },
+  {
+    "zh": "前沿模型",
+    "en": "frontier model",
+    "cat": "模型与能力",
+    "kind": "technique",
+    "aliases": [
+      "前沿模型"
+    ],
+    "def_zh": "能力处于当前最先进水平、可承担复杂任务的大模型。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-jetbrains-evaluates-and-deploys-claude-fable-5.md",
+        "summary": "JetBrains 用私有仓库评测前沿模型，按任务成本选用 Claude Fable 5，并以系统化安全网保障部署。",
+        "def": "能力处于当前最先进水平的通用大模型。"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5.md",
+        "summary": "BAM 以真实金融任务评测前沿模型，并用自建代理平台与治理控制安全部署 Claude Fable 5。",
+        "def": "能力处于当前最先进水平、可承担复杂长程任务的大模型。"
+      }
+    ]
+  },
+  {
+    "zh": "模型选择",
+    "en": "model selection",
+    "cat": "模型与能力",
+    "kind": "technique",
+    "aliases": [
+      "模型选择"
+    ],
+    "def_zh": "按任务难度在大小模型间取舍以平衡成本与能力。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-maximizing-value.md",
+        "summary": "讲解如何通过模型与努力级别选择、上下文清理、提示缓存和子代理来降低 Claude Code 会话成本。",
+        "def": "按任务难度在大小模型间取舍以平衡成本与能力。"
+      },
+      {
+        "rel": "articles/claude-model-and-effort-level-in-claude-code.md",
+        "summary": "在 Claude Code 中按任务复杂度选择模型与努力等级，以平衡能力、成本与自主性。",
+        "def": "选定模型固定权重，从而确定其整体能力范围。"
+      }
+    ]
+  },
+  {
+    "zh": "快速模式",
+    "en": "fast mode",
+    "cat": "成本与性能",
+    "kind": "technique",
+    "aliases": [
+      "快速模式"
+    ],
+    "def_zh": "以溢价换取更高输出速度的API选项。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/getting-the-most-out-of-opus-5-5.md",
+        "summary": "介绍 Opus 5.5 在 Claude 与 Claude Code 中的提示、长任务引导与结果核查技巧。",
+        "def": "同一模型下更快返回文本、按 token 计费更高的模式。"
+      },
+      {
+        "rel": "articles/which-claude-model-should-you-build-with.md",
+        "summary": "按任务、成本与努力等级选择Claude模型，并组合使用子代理与顾问。",
+        "def": "以溢价换取更高输出速度的API选项，仅部分模型支持。"
+      }
+    ]
+  },
+  {
+    "zh": "延迟",
+    "en": "latency",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "延迟"
+    ],
+    "def_zh": "任务从开始到完成所需的时间开销。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/building-claude-commerce-agents.md",
+        "summary": "介绍面向消费者与商家的 Claude 商务智能体蓝图及参考实现",
+        "def": "智能体响应所需的时间开销"
+      },
+      {
+        "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "summary": "介绍AI智能体的三种常见工作流模式：顺序、并行和评估-优化器，及其适用场景与权衡。",
+        "def": "任务从开始到完成所需的时间，影响工作流选择。"
+      }
+    ]
+  },
+  {
+    "zh": "令牌用量",
+    "en": "token usage",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "令牌用量"
+    ],
+    "def_zh": "智能体调用大模型消耗的令牌数量，影响成本。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+        "summary": "介绍AI智能体的三种常见工作流模式：顺序、并行和评估-优化器，及其适用场景与权衡。",
+        "def": "智能体调用大模型消耗的令牌数量，影响成本。"
+      },
+      {
+        "rel": "articles/getting-started-with-loops.md",
+        "summary": "Claude Code 团队定义循环为智能体重复工作直至满足停止条件，并分类为轮次、目标、时间与主动循环。",
+        "def": "循环运行消耗的模型令牌量，需通过边界控制管理。"
+      }
+    ]
+  },
+  {
+    "zh": "缓存命中率",
+    "en": "cache hit rate",
+    "cat": "成本与性能",
+    "kind": "metric",
+    "aliases": [
+      "缓存命中率"
+    ],
+    "def_zh": "请求中命中缓存部分的比例，影响成本与延迟。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/claude-opus-5-5-built-for-coding-sessions-that-use-more-context.md",
+        "summary": "Claude Opus 5.5 针对长时高上下文编码会话优化成本，缓存读取降价并提升缓存命中。",
+        "def": "请求中从缓存读取而非重新计算的上下文比例"
+      },
+      {
+        "rel": "articles/lessons-from-building-claude-code-prompt-caching-is-everything.md",
+        "summary": "Claude Code 围绕提示缓存构建，通过前缀匹配、消息更新、工具延迟加载和缓存安全分叉优化缓存命中率。",
+        "def": "请求中命中缓存部分的比例，直接影响成本与延迟。"
+      }
+    ]
+  },
+  {
+    "zh": "智能体评估",
+    "en": "agent evaluation",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "智能体评估",
+      "agent evals"
+    ],
+    "def_zh": "衡量智能体能力与性能是否达标的系统方法。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+        "summary": "Anthropic与Mesh-AI网络研讨会：讲解生产级AI智能体的基础、评估与部署。",
+        "def": "衡量智能体能力与性能是否达标的系统方法。"
+      },
+      {
+        "rel": "articles/how-outtake-built-a-cyber-investigator-on-claude.md",
+        "summary": "Outtake 用 Claude Code 与 Agent SDK 构建长时自主网络调查智能体，并总结工程实践。",
+        "def": "对智能体运行过程与结果进行结构化打分以加速迭代。"
+      }
+    ]
+  },
+  {
+    "zh": "评估套件",
+    "en": "evaluation suite",
+    "cat": "评估与验证",
+    "kind": "technique",
+    "aliases": [
+      "评估套件",
+      "eval suite"
+    ],
+    "def_zh": "用于衡量智能体质量、延迟与成本的系统化测试集。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "summary": "Anthropic 数据团队将语义层、技能文件与评估套件复用到 Slack 中的 Claude Tag，实现自助式数据分析。",
+        "def": "用于量化智能体回答准确率与性能的测试集合。"
+      },
+      {
+        "rel": "articles/the-anatomy-of-effective-commerce-agents.md",
+        "summary": "介绍电商智能体的架构、延迟与成本优化及生产化评估实践。",
+        "def": "用于衡量智能体质量、延迟与成本的系统化测试集。"
+      }
+    ]
+  },
+  {
+    "zh": "人工审批",
+    "en": "human-in-the-loop approval",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "人工审批"
+    ],
+    "def_zh": "高风险操作执行前引入人类确认的机制。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-companies-with-claude-code.md",
+        "summary": "三家YC初创公司借助Claude Code与Agent SDK，以智能体编程实现快速产品构建与规模化。",
+        "def": "在智能体执行高风险操作前引入人类确认的机制。"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "智能体提出变更后须由人确认才生效的流程。"
+      }
+    ]
+  },
+  {
+    "zh": "事件响应",
+    "en": "incident response",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "事件响应"
+    ],
+    "def_zh": "检测、响应和恢复安全事件的过程。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+        "summary": "医疗组织在无PHI渠道中用Claude Tag构建人机团队，处理告警、维护工具与解答规则。",
+        "def": "从告警发现到定位根因并修复的生产故障处理流程。"
+      },
+      {
+        "rel": "articles/preparing-your-security-program-for-ai-accelerated-offense.md",
+        "summary": "AI加速漏洞发现与利用，安全团队需调整防御策略，利用AI加速修补与检测。",
+        "def": "检测、响应和恢复安全事件的过程。"
+      }
+    ]
+  },
+  {
+    "zh": "事故分诊",
+    "en": "incident triage",
+    "cat": "安全与治理",
+    "kind": "technique",
+    "aliases": [
+      "事故分诊",
+      "Incident Triage"
+    ],
+    "def_zh": "对故障事件快速分类并定位责任环节。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/fix-software-bugs-faster-with-claude.md",
+        "summary": "介绍用 Claude 与 Claude Code 加速软件缺陷调试与修复的系统化方法。",
+        "def": "对故障事件快速分类并定位责任环节"
+      },
+      {
+        "rel": "articles/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night.md",
+        "summary": "Cognition 用 Devin 实测 Claude Fable 5，长时自主运行与混乱上下文中的清醒表现成为关键突破。",
+        "def": "从日志噪声中定位根因并给出处置的运维任务。"
+      }
+    ]
+  },
+  {
+    "zh": "误报",
+    "en": "false positive",
+    "cat": "安全与治理",
+    "kind": "risk",
+    "aliases": [
+      "误报"
+    ],
+    "def_zh": "被标记为威胁但实际无效的安全发现。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+        "summary": "合作伙伴基于 Claude Opus 构建网络安全防御产品，覆盖攻击性测试、漏洞修复与受治理部署。",
+        "def": "安全工具错误标记为威胁的正常行为或无效发现。"
+      },
+      {
+        "rel": "articles/using-llms-to-secure-source-code.md",
+        "summary": "利用LLM保障源代码安全：发现易并行，瓶颈转向验证、分诊与修补。",
+        "def": "被标记为漏洞但实际不可利用或不符合威胁模型的发现。"
+      }
+    ]
+  },
+  {
+    "zh": "受保护健康信息",
+    "en": "PHI",
+    "cat": "安全与治理",
+    "kind": "risk",
+    "aliases": [
+      "受保护健康信息"
+    ],
+    "def_zh": "HIPAA监管下需严格保护的患者健康数据。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+        "summary": "Curative 用 Claude 构建多智能体层级，将医疗服务提供者合同签署速度提升约 50 倍。",
+        "def": "HIPAA 监管下需严格保护的病人健康数据。"
+      },
+      {
+        "rel": "articles/how-healthcare-organizations-use-claude-tag.md",
+        "summary": "医疗组织在无PHI渠道中用Claude Tag构建人机团队，处理告警、维护工具与解答规则。",
+        "def": "受隐私法规保护的患者可识别健康数据。"
+      }
+    ]
+  },
+  {
+    "zh": "生产部署",
+    "en": "production deployment",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "生产部署"
+    ],
+    "def_zh": "将智能体安全投入实际业务环境运行的过程。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/building-with-claude-in-europe-agent-fundamentals.md",
+        "summary": "Anthropic与Mesh-AI网络研讨会：讲解生产级AI智能体的基础、评估与部署。",
+        "def": "将智能体安全地投入实际业务环境运行。"
+      },
+      {
+        "rel": "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "summary": "面向金融服务工程团队的 Claude Code 与 Agent SDK 实操演示，覆盖研发、合规与理赔智能体。",
+        "def": "将智能体工具投入实际业务环境运行的过程。"
+      }
+    ]
+  },
+  {
+    "zh": "定时部署",
+    "en": "scheduled deployment",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "定时部署"
+    ],
+    "def_zh": "按设定时区与频率自动运行智能体的部署方式。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/building-effective-agent-automations.md",
+        "summary": "介绍如何用 Claude 托管代理构建定时自动化，并给出六条避免常见故障的规则。",
+        "def": "按 cron 计划启动代理会话的部署配置。"
+      },
+      {
+        "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "summary": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+        "def": "按设定时区与频率自动运行智能体的部署方式。"
+      }
+    ]
+  },
+  {
+    "zh": "研究预览",
+    "en": "Research Preview",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "研究预览"
+    ],
+    "def_zh": "面向付费用户开放、功能尚在迭代的早期发布形态。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/cowork-plugins-finance.md",
+        "summary": "Claude 推出金融插件与跨应用工作流，打通 Excel 与 PowerPoint 并接入机构数据。",
+        "def": "面向付费用户开放、仍在迭代中的功能发布阶段。"
+      },
+      {
+        "rel": "articles/cowork-plugins.md",
+        "summary": "Cowork 新增插件支持，可打包技能、连接器、斜杠命令与子代理，定制角色化工作流。",
+        "def": "面向付费用户开放、功能尚在迭代的早期发布形态。"
+      }
+    ]
+  },
+  {
+    "zh": "现场演示",
+    "en": "live demos",
+    "cat": "企业落地与组织",
+    "kind": "technique",
+    "aliases": [
+      "现场演示",
+      "live demonstration"
+    ],
+    "def_zh": "在活动中实时展示产品完成真实任务的过程。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-live.md",
+        "summary": "Claude Code 创作者分享其起源、开发挑战、现场演示及融入现有工作流的最佳实践。",
+        "def": "实时展示产品功能与操作流程的演示。"
+      },
+      {
+        "rel": "webinars/claude-code-service-delivery.md",
+        "summary": "Claude Code 面向专业服务交付团队，演示将 COBOL 迁移上云等现代化工作流从数月压缩至数周。",
+        "def": "在活动中实时展示产品完成真实任务的过程。"
+      }
+    ]
+  },
+  {
+    "zh": "业务拓展代表",
+    "en": "business development representative",
+    "cat": "企业落地与组织",
+    "kind": "role",
+    "aliases": [
+      "业务拓展代表",
+      "Business Development Representative"
+    ],
+    "def_zh": "负责线索筛选与商机挖掘的一线销售角色。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+        "summary": "Anthropic日本BDR用Claude托管智能体搭建多智能体团队，自动处理线索、邮件与CRM并节省约60小时。",
+        "def": "负责线索筛选、客户沟通与商机推进的销售角色。"
+      },
+      {
+        "rel": "articles/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale.md",
+        "summary": "Anthropic 业务拓展团队用 Claude Cowork 的技能与定时任务自动化销售线索处理与客户研究。",
+        "def": "负责线索筛选与商机挖掘的一线销售角色。"
+      }
+    ]
+  },
+  {
+    "zh": "对话式 AI",
+    "en": "conversational AI",
+    "cat": "行业与场景",
+    "kind": "technique",
+    "aliases": [
+      "对话式 AI"
+    ],
+    "def_zh": "以问答交互为主、不直接产出交付物的AI形态。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "guides/claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是能读写文件、连接工作应用并执行多步任务的 Claude 版本。",
+        "def": "仅在聊天窗口问答、不直接产出交付物的 AI 形态"
+      },
+      {
+        "rel": "articles/the-claude-cowork-product-guide.md",
+        "summary": "Claude Cowork 是知识工作代理，可读写本地文件、跨应用执行多步任务并交付成果。",
+        "def": "以问答交互为主、不直接产出可用交付物的 AI 工具形态。"
+      }
+    ]
+  },
+  {
+    "zh": "自助式数据分析",
+    "en": "self-service data analytics",
+    "cat": "行业与场景",
+    "kind": "technique",
+    "aliases": [
+      "自助式数据分析"
+    ],
+    "def_zh": "非技术用户无需数据团队介入即可自行获取数据洞察。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "articles/how-anthropic-enables-self-service-data-analytics-with-claude.md",
+        "summary": "Anthropic 分享用 Claude 实现自助式数据分析的实践，强调准确率取决于上下文与验证而非代码生成。",
+        "def": "让非技术用户自主查询数据获取业务洞察的分析模式"
+      },
+      {
+        "rel": "articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
+        "summary": "Anthropic 数据团队将语义层、技能文件与评估套件复用到 Slack 中的 Claude Tag，实现自助式数据分析。",
+        "def": "非分析师用户无需数据团队介入即可自行获取数据答案。"
+      }
+    ]
+  },
+  {
+    "zh": "金融服务",
+    "en": "financial services",
+    "cat": "行业与场景",
+    "kind": "org",
+    "aliases": [
+      "金融服务",
+      "Financial Services"
+    ],
+    "def_zh": "银行、保险、资管等受监管行业的业务领域。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-financial-services.md",
+        "summary": "Claude Code 在金融服务中用于分析交易数据、预测及迁移遗留系统。",
+        "def": "银行、交易等金融行业领域。"
+      },
+      {
+        "rel": "webinars/claude-code-for-financial-services-boris-cherny.md",
+        "summary": "面向金融服务工程团队的 Claude Code 与 Agent SDK 实操演示，覆盖研发、合规与理赔智能体。",
+        "def": "银行、保险、资管等受监管行业的业务领域。"
+      }
+    ]
+  },
+  {
+    "zh": "遗留系统迁移",
+    "en": "legacy system migration",
+    "cat": "行业与场景",
+    "kind": "technique",
+    "aliases": [
+      "遗留系统迁移",
+      "Legacy System Migration"
+    ],
+    "def_zh": "把老旧系统及其业务逻辑迁移到新平台的过程。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/claude-code-financial-services.md",
+        "summary": "Claude Code 在金融服务中用于分析交易数据、预测及迁移遗留系统。",
+        "def": "将旧系统（如 COBOL）迁移至现代云平台。"
+      },
+      {
+        "rel": "webinars/deloitte-code-modernization.md",
+        "summary": "Anthropic与Deloitte网络研讨会：用智能体AI和Claude Code加速遗留系统现代化改造",
+        "def": "把老旧系统及其业务逻辑迁移到新平台的过程"
+      }
+    ]
+  },
+  {
+    "zh": "商家智能体",
+    "en": "merchant agent",
+    "cat": "行业与场景",
+    "kind": "product",
+    "aliases": [
+      "商家智能体"
+    ],
+    "def_zh": "面向店铺运营者分析销售、库存并建议促销的智能体。",
+    "count": 2,
+    "docs": [
+      {
+        "rel": "webinars/building-claude-commerce-agents.md",
+        "summary": "介绍面向消费者与商家的 Claude 商务智能体蓝图及参考实现",
+        "def": "代表商家处理商品与订单的代理"
+      },
+      {
+        "rel": "articles/claude-for-commerce-agents.md",
+        "summary": "Anthropic 发布商务智能体蓝图，含购物与商家智能体参考实现及护栏。",
+        "def": "面向店铺运营者，分析销售、库存并建议促销的智能体。"
+      }
+    ]
+  }
+]

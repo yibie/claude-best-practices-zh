@@ -1,0 +1,102 @@
+{
+  "summary_zh": "Claude for Excel 与 PowerPoint 跨文件共享上下文，并支持技能复用工作流。",
+  "concepts": [
+    {
+      "en": "Claude for Excel",
+      "zh": "Claude for Excel",
+      "def_zh": "在 Excel 中读写单元格、公式与数据的 Claude 插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude for PowerPoint",
+      "zh": "Claude for PowerPoint",
+      "def_zh": "在 PowerPoint 中编辑幻灯片与演示文稿的 Claude 插件。",
+      "kind": "product"
+    },
+    {
+      "en": "Skills",
+      "zh": "技能",
+      "def_zh": "把完整工作流封装为一键可复用动作的能力。",
+      "kind": "technique"
+    },
+    {
+      "en": "Cross-file context sharing",
+      "zh": "跨文件上下文共享",
+      "def_zh": "在多个打开文件间传递对话与数据上下文的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Instructions",
+      "zh": "指令",
+      "def_zh": "持久生效的应用级偏好设置，无需重复提示。",
+      "kind": "technique"
+    },
+    {
+      "en": "MCP connectors",
+      "zh": "MCP 连接器",
+      "def_zh": "通过模型上下文协议接入外部工具与数据的连接方式。",
+      "kind": "product"
+    },
+    {
+      "en": "LLM gateway",
+      "zh": "LLM 网关",
+      "def_zh": "统一路由模型请求以满足合规与部署要求的中间层。",
+      "kind": "technique"
+    },
+    {
+      "en": "Financial Analysis plugin",
+      "zh": "财务分析插件",
+      "def_zh": "自动安装预置技能、面向财务分析的插件包。",
+      "kind": "product"
+    },
+    {
+      "en": "Agent Mode",
+      "zh": "代理模式",
+      "def_zh": "在 Excel 内由 Claude 自主执行建表与分析的模式。",
+      "kind": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude for Excel",
+      "to": "跨文件上下文共享",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude for PowerPoint",
+      "to": "跨文件上下文共享",
+      "rel": "启用"
+    },
+    {
+      "from": "技能",
+      "to": "Claude for Excel",
+      "rel": "用于"
+    },
+    {
+      "from": "技能",
+      "to": "Claude for PowerPoint",
+      "rel": "用于"
+    },
+    {
+      "from": "财务分析插件",
+      "to": "技能",
+      "rel": "依赖"
+    },
+    {
+      "from": "指令",
+      "to": "技能",
+      "rel": "解决"
+    },
+    {
+      "from": "LLM 网关",
+      "to": "Claude for Excel",
+      "rel": "用于"
+    },
+    {
+      "from": "代理模式",
+      "to": "Claude for Excel",
+      "rel": "属于"
+    }
+  ],
+  "rel": "articles/claude-excel-powerpoint-updates.md"
+}

@@ -1,0 +1,108 @@
+{
+  "summary_zh": "Claude Sonnet 5.5 面向日常编码与文档任务，更快更省，需按新参数迁移与调优。",
+  "concepts": [
+    {
+      "en": "Claude Sonnet 5.5",
+      "zh": "Claude Sonnet 5.5",
+      "def_zh": "面向日常编码与文档任务的中端模型，速度快、成本低。",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Opus 5.5",
+      "zh": "Claude Opus 5.5",
+      "def_zh": "面向复杂长程任务的高端模型，判断力与智能更强。",
+      "kind": "product"
+    },
+    {
+      "en": "adaptive thinking",
+      "zh": "自适应思考",
+      "def_zh": "模型按需自动分配思考量的默认推理模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "effort level",
+      "zh": "努力等级",
+      "def_zh": "控制模型思考量与成本的档位，从低到最高共五级。",
+      "kind": "technique"
+    },
+    {
+      "en": "between_tools thinking",
+      "zh": "工具间思考",
+      "def_zh": "仅在工具调用之间进行思考，关闭前置思考的模式。",
+      "kind": "technique"
+    },
+    {
+      "en": "prompt caching",
+      "zh": "提示缓存",
+      "def_zh": "缓存重复提示前缀以降低输入成本、提升响应速度。",
+      "kind": "technique"
+    },
+    {
+      "en": "strict tool use",
+      "zh": "严格工具调用",
+      "def_zh": "强制工具输入严格匹配 schema 的调用方式。",
+      "kind": "technique"
+    },
+    {
+      "en": "refusal fallback",
+      "zh": "拒答回退",
+      "def_zh": "请求被拒时自动改用备用模型重试的机制。",
+      "kind": "technique"
+    },
+    {
+      "en": "Claude Code",
+      "zh": "Claude Code",
+      "def_zh": "Anthropic 的智能体编程工具，可执行迁移与编码任务。",
+      "kind": "product"
+    },
+    {
+      "en": "context window",
+      "zh": "上下文窗口",
+      "def_zh": "模型单次可处理的最大 token 数，本模型为 100 万。",
+      "kind": "metric"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Sonnet 5.5",
+      "to": "自适应思考",
+      "rel": "启用"
+    },
+    {
+      "from": "Claude Sonnet 5.5",
+      "to": "努力等级",
+      "rel": "依赖"
+    },
+    {
+      "from": "工具间思考",
+      "to": "自适应思考",
+      "rel": "替代"
+    },
+    {
+      "from": "Claude Sonnet 5.5",
+      "to": "提示缓存",
+      "rel": "用于"
+    },
+    {
+      "from": "Claude Sonnet 5.5",
+      "to": "严格工具调用",
+      "rel": "启用"
+    },
+    {
+      "from": "拒答回退",
+      "to": "Claude Sonnet 5.5",
+      "rel": "解决"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Sonnet 5.5",
+      "rel": "用于"
+    },
+    {
+      "from": "上下文窗口",
+      "to": "Claude Sonnet 5.5",
+      "rel": "衡量"
+    }
+  ],
+  "rel": "articles/building-with-claude-sonnet-5-5.md"
+}

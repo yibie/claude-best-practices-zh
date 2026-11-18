@@ -1,0 +1,75 @@
+{
+  "summary_zh": "Claude 将聊天与 Cowork 合并为跨平台统一体验，便于管理员治理。",
+  "concepts": [
+    {
+      "en": "Unified Claude",
+      "zh": "统一 Claude",
+      "def_zh": "将聊天与协作功能整合为单一跨平台体验的产品形态",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Cowork",
+      "zh": "Claude Cowork",
+      "def_zh": "面向团队协作与交付物产出的 Claude 工作空间",
+      "kind": "product"
+    },
+    {
+      "en": "Claude apps",
+      "zh": "Claude 应用",
+      "def_zh": "覆盖网页、桌面与移动端的 Claude 客户端集合",
+      "kind": "product"
+    },
+    {
+      "en": "Claude Enterprise",
+      "zh": "Claude 企业版",
+      "def_zh": "面向组织提供管理与安全治理能力的 Claude 版本",
+      "kind": "product"
+    },
+    {
+      "en": "admin governance",
+      "zh": "管理员治理",
+      "def_zh": "管理员对组织内 AI 使用进行配置、管控与审计的职责",
+      "kind": "role"
+    },
+    {
+      "en": "security team",
+      "zh": "安全团队",
+      "def_zh": "负责评估与管控组织内 AI 使用风险的团队",
+      "kind": "role"
+    },
+    {
+      "en": "migration",
+      "zh": "迁移切换",
+      "def_zh": "从旧产品形态过渡到统一体验的切换过程",
+      "kind": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "统一 Claude",
+      "to": "Claude Cowork",
+      "rel": "属于"
+    },
+    {
+      "from": "统一 Claude",
+      "to": "Claude 应用",
+      "rel": "依赖"
+    },
+    {
+      "from": "管理员治理",
+      "to": "Claude 企业版",
+      "rel": "依赖"
+    },
+    {
+      "from": "迁移切换",
+      "to": "统一 Claude",
+      "rel": "用于"
+    },
+    {
+      "from": "安全团队",
+      "to": "管理员治理",
+      "rel": "属于"
+    }
+  ],
+  "rel": "webinars/unified-claude-what-it-means-for-admins.md"
+}
