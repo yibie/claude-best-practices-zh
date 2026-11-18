@@ -78,10 +78,10 @@ network.on('click', (p) => {
   const rel = DATA.edges.filter(e => e.from === n.id || e.to === n.id).slice(0, 12)
     .map(e => { const o = DATA.nodes.find(x => x.id === (e.from === n.id ? e.to : e.from)); return '· ' + (o ? o.label : '') + ' — ' + e.rel; }).join('<br/>');
   document.getElementById('p-rel').innerHTML = '<b>关联概念</b><br/>' + (rel || '无');
-  const a = document.getElementById('p-link'); a.href = '../wiki/' + encodeURIComponent(n.id) + '.md';
+  const a = document.getElementById('p-link'); a.href = 'https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/' + encodeURIComponent(n.id) + '.md';
   panel.style.display = 'block';
 });
-network.on('doubleClick', (p) => { if (p.nodes.length) window.open('../wiki/' + encodeURIComponent(p.nodes[0]) + '.md', '_blank'); });
+network.on('doubleClick', (p) => { if (p.nodes.length) window.open('https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/' + encodeURIComponent(p.nodes[0]) + '.md', '_blank'); });
 document.getElementById('q').addEventListener('input', (ev) => {
   const q = ev.target.value.trim();
   if (!q) { network.unselectAll(); return; }
