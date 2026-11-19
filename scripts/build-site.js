@@ -17,8 +17,23 @@ const REPO = 'https://github.com/yibie/claude-best-practices-zh';
 const BLOB = `${REPO}/blob/main`;
 const TREE = `${REPO}/tree/main`;
 
+const CARDS = {};
+(function loadCards() {
+  const dir = path.join(ROOT, 'data', 'cards');
+  if (!fs.existsSync(dir)) return;
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith('.json')) continue;
+    try { CARDS[f.replace(/\.json$/, '')] = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch (e) {}
+  }
+})();
+
 const CATS = ['智能体架构', 'Claude Code 与编程', '上下文工程', '工具与扩展', '模型与能力', '评估与验证', '成本与性能', '安全与治理', '企业落地与组织', '产品线与功能', '行业与场景'];
 const byId = new Map(GRAPH.nodes.map((n) => [n.id, n]));
+const nameToId = new Map();
+for (const n of GRAPH.nodes) {
+  nameToId.set(n.zh, n.id);
+  for (const a of n.aliases || []) if (!nameToId.has(a)) nameToId.set(a, n.id);
+}
 
 /* ---------------- markdown ---------------- */
 const md = new MarkdownIt({ html: true, linkify: true });
@@ -163,6 +178,41 @@ footer a{color:var(--faint)}
 .hero-mini h1 em{font-style:normal;color:var(--accent)}
 .hero-mini p{color:var(--dim);font-size:16px;margin:0;max-width:640px}
 
+
+/* 文章页排版 */
+article.doc{max-width:760px}
+.doc-sub{color:var(--faint);font-size:13px;margin:-6px 0 26px;font-family:var(--mono)}
+.doc h1{font-size:clamp(25px,3vw,32px);line-height:1.28}
+.doc h2{font-size:20px;margin:38px 0 12px}
+.doc h3{font-size:16.5px}
+.doc p{font-size:16px;line-height:1.85;color:var(--dim)}
+.doc li{font-size:15.5px;line-height:1.8}
+.doc blockquote{font-size:15.5px}
+.doc-foot{color:var(--faint);font-size:12px;margin-top:36px}
+.rel-block{margin:44px 0 8px;border-top:1px solid var(--line);padding-top:18px}
+.rel-block h3{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
+.rel-chips{display:flex;gap:7px;flex-wrap:wrap}
+.rel-chips a{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:3px 11px;color:var(--dim);background:var(--panel)}
+.rel-chips a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:34px 0 10px}
+.pager-cell{display:flex;flex-direction:column;gap:3px;border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:var(--panel);color:var(--dim)}
+.pager-cell:hover{border-color:var(--line2);text-decoration:none;color:var(--ink)}
+.pager-cell span{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+.pager-cell b{font-weight:500;font-size:13.5px;line-height:1.5}
+.pager-cell.empty{border:none;background:none}
+.doc-layout{max-width:1120px;margin:0 auto;padding:36px 28px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:36px;align-items:start}
+.doc-layout article.doc{max-width:760px;padding:0;margin:0}
+.toc-rail{display:none}
+@media(min-width:1240px){
+  .doc-layout{grid-template-columns:minmax(0,760px) 220px}
+  .toc-rail{display:block;position:sticky;top:24px;padding-top:4px}
+  .toc-list{border-left:1px solid var(--line);padding-left:14px;max-height:calc(100vh - 90px);overflow:auto}
+  .toc-list .toc-h{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+  .toc-list a{display:block;font-size:12.5px;color:var(--dim);padding:3px 0;line-height:1.5}
+  .toc-list a.lv3{padding-left:10px;font-size:12px;color:var(--faint)}
+  .toc-list a:hover{color:var(--accent);text-decoration:none}
+}
+
 @media(max-width:900px){
   .side{display:none}
   .topbar .meta{display:none}
@@ -216,7 +266,7 @@ function nav(current) {
 }
 
 /* ---------------- 页面模板 ---------------- */
-function page({ title, body, current, desc }) {
+function page({ title, body, current, desc, toc }) {
   return `<!doctype html><html lang="zh-CN"><head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -235,7 +285,7 @@ ${nav(current)}
     <div class="theme-slot"></div>
     <div id="hits"></div>
   </div>
-  ${body}
+  ${toc ? `<div class="doc-layout">${body.replace(/^\s*/, '')}<aside class="toc-rail">${toc}</aside></div>` : body}
   <footer>原文版权归 Anthropic PBC 所有 · 非官方中文整理 · <a href="${REPO}">GitHub</a></footer>
 </main></div>
 <script src="/theme.js" defer></script>
@@ -360,34 +410,102 @@ const write = (file, html) => {
   }
 }
 
-/* 全文页（可选） */
+/* 全文页（站内阅读） */
 if (RENDER_DOCS) {
+  const slugOf = (rel) => path.basename(rel).replace(/\.md$/, '');
+
+  // 按类型分组的文章顺序（日期倒序），用于上一篇/下一篇
+  const ordered = ['articles', 'guides', 'webinars'].map((b) =>
+    readItems.filter((i) => i.hasText && bucketOf(i) === b).sort((a, z) => String(z.date).localeCompare(String(a.date))));
+
+  function articleToc(html) {
+    const items = [];
+    for (const m of html.matchAll(/<h([23]) id="(h-\d+)">([\s\S]*?)<\/h\1>/g)) {
+      const text = m[3].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim();
+      items.push({ level: Number(m[1]), id: m[2], text });
+    }
+    if (items.length < 3) return { html: '', items };
+    return {
+      items,
+      html: `<nav class="toc-list"><div class="toc-h">本文目录</div>${items.map((i) => `<a href="#${i.id}" class="${i.level === 3 ? 'lv3' : ''}">${i.text}</a>`).join('')}</nav>`,
+    };
+  }
+
+  function relatedConcepts(rel) {
+    const slug = slugOf(rel);
+    const card = CARDS[slug];
+    const list = (card?.concepts || []).map((c) => c.zh).filter((z) => nameToId.has(z));
+    const uniq = [...new Set(list)].slice(0, 8);
+    if (!uniq.length) return '';
+    return `<section class="rel-block"><h3>本文涉及的概念</h3><div class="rel-chips">${uniq
+      .map((z) => `<a href="/wiki/${nameToId.get(z)}.html">${z}</a>`).join('')}</div></section>`;
+  }
+
+  function pager(list, idx) {
+    const prev = idx > 0 ? list[idx - 1] : null;
+    const next = idx < list.length - 1 ? list[idx + 1] : null;
+    if (!prev && !next) return '';
+    const cell = (it, dir) => it
+      ? `<a class="pager-cell" href="${it.url}"><span>${dir}</span><b>${it.titleZh}</b></a>`
+      : '<span class="pager-cell empty"></span>';
+    return `<nav class="pager">${cell(prev, '← 上一篇')}${cell(next, '下一篇 →')}</nav>`;
+  }
+
+  // 概念页
   for (const f of fs.readdirSync(WIKI).filter((x) => x.endsWith('.md') && x !== 'INDEX.md')) {
     const id = f.replace(/\.md$/, '');
     const src = fs.readFileSync(path.join(WIKI, f), 'utf8');
     const node = byId.get(id);
     headingSeq = 0;
     const rel = GRAPH.edges.filter((e) => e.from === id || e.to === id).length;
+    const html = md.render(rewrite(strip(src), 'wiki'));
+    const toc = articleToc(html);
+    // 来源文章：概念页里的 ../docs/zh/xxx.md 链接
+    const sources = [...src.matchAll(/\]\(\.\.\/docs\/zh\/([^)]+)\.md\)/g)].map((m) => m[1]);
     write(`wiki/${id}.html`, page({
       title: `${node?.zh || id} · Claude 最佳实践`,
       current: `wiki/${id}.html`,
-      body: `<article><h1>${node?.zh || id}</h1>
-        <div class="meta-line"><span class="tag">${node?.cat || ''}</span><span>${node?.en || ''}</span><span>提及 ${node?.count || 0} 篇</span><span>${rel} 条关联</span></div>
-        ${md.render(rewrite(strip(src), 'wiki'))}</article>`,
+      desc: node?.def || '',
+      body: `<article class="doc">
+        <div class="meta-line"><span class="tag">概念</span><span class="tag">${node?.cat || ''}</span><span>${node?.en || ''}</span><span>提及 ${node?.count || 0} 篇</span><span>${rel} 条关联</span></div>
+        <h1>${node?.zh || id}</h1>
+        ${html}
+        <p class="doc-foot">来源与引用见上方「来源（Sources）」；原文版权归 Anthropic 所有。</p>
+      </article>`,
+      toc: toc.html,
     }));
   }
-  for (const i of readItems) {
-    if (!i.hasText) continue;
-    headingSeq = 0;
-    write(`read/${i.rel.replace(/\.md$/, '.html')}`, page({
-      title: `${i.titleZh} · Claude 最佳实践`,
-      current: `read/${i.rel.replace(/\.md$/, '.html')}`,
-      body: `<article><h1>${i.titleZh}</h1>
-        <div class="meta-line"><span class="tag">${TYPE_LABEL[i.type]}</span><span>${String(i.date).slice(0, 10)}</span>
-        <a href="${i.url.startsWith('http') ? i.url : `${BLOB}/docs/zh/${i.rel}`}" target="_blank">英文原文 ↗</a></div>
-        ${md.render(rewrite(strip(i.src), 'read'))}
-        <div class="note">本文由模型翻译并二次校对，事实以<a href="${i.hasText ? '' : ''}${manifest.items.find((m) => m.slug === i.slug)?.url || ''}" target="_blank">英文原文</a>为准。</div></article>`,
-    }));
+
+  // 文章页
+  for (const list of ordered) {
+    list.forEach((i, idx) => {
+      headingSeq = 0;
+      const html = md.render(rewrite(strip(i.src), 'read'));
+      const toc = articleToc(html);
+      const srcUrl = manifest.items.find((m) => m.slug === i.slug)?.url || '';
+      write(`read/${i.rel.replace(/\.md$/, '.html')}`, page({
+        title: `${i.titleZh} · Claude 最佳实践`,
+        current: `read/${i.rel.replace(/\.md$/, '.html')}`,
+        desc: i.excerpt || '',
+        toc: toc.html,
+        body: `<article class="doc">
+          <div class="meta-line">
+            <span class="tag">${TYPE_LABEL[i.type]}</span>
+            <span>${String(i.date).slice(0, 10)}</span>
+            ${i.readTime ? `<span>${i.readTime} 分钟</span>` : ''}
+            ${(i.products || []).slice(0, 2).map((x) => `<span class="tag">${x}</span>`).join('')}
+            ${srcUrl ? `<a href="${srcUrl}" target="_blank" rel="noopener">原文 ↗</a>` : ''}
+            <a href="${BLOB}/docs/zh/${i.rel}" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+          <h1>${i.titleZh}</h1>
+          <p class="doc-sub">${i.title}</p>
+          ${html}
+          ${relatedConcepts(i.rel)}
+          ${pager(list, idx)}
+          <div class="note">本文由模型翻译并经二次校对，产品行为、价格与限制以<a href="${srcUrl}" target="_blank" rel="noopener">英文原文</a>为准。</div>
+        </article>`,
+      }));
+    });
   }
 }
 
