@@ -1,6 +1,5 @@
 node_modules
 site
 data/page*.json
-data/cards
 data/qa
 *.log
