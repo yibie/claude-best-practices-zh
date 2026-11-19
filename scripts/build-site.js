@@ -64,12 +64,16 @@ const readItems = manifest.items.map((it) => {
   const rel = `${bucketOf(it)}/${it.slug}.md`;
   const p = path.join(DOCS, rel);
   const src = fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : '';
+  const rawPath = path.join(ROOT, 'raw', rel);
+  const rawSrc = fs.existsSync(rawPath) ? fs.readFileSync(rawPath, 'utf8') : '';
   return {
-    ...it, rel, src,
+    ...it, rel, src, rawSrc,
     titleZh: src ? fm(src, 'title') || it.title : it.title,
     hasText: Boolean(src),
+    hasRaw: Boolean(rawSrc),
     // 站内地址（RENDER_DOCS）或 GitHub 地址
     url: RENDER_DOCS && src ? `/read/${rel.replace(/\.md$/, '.html')}` : `${BLOB}/docs/zh/${rel}`,
+    enUrl: RENDER_DOCS && rawSrc ? `/en/${rel.replace(/\.md$/, '.html')}` : `${BLOB}/raw/${rel}`,
   };
 });
 
@@ -169,6 +173,9 @@ footer a{color:var(--faint)}
 .idx-row .t{font-size:15px;color:var(--ink);line-height:1.5}
 .idx-row .t small{display:block;color:var(--faint);font-size:12px;font-family:var(--mono);margin-top:2px}
 .idx-row .m{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap;text-align:right}
+.row-links{display:inline-flex;gap:8px;margin-left:8px}
+.row-links a{font-size:10.5px;color:var(--faint);border-bottom:1px dotted var(--line-strong)}
+.row-links a:hover{color:var(--accent);text-decoration:none}
 .idx-row .m b{color:var(--accent);font-weight:500}
 .cat-block{margin:34px 0 44px;scroll-margin-top:70px}
 .cat-block h3{font-size:15px;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline}
@@ -433,7 +440,12 @@ const write = (file, html) => {
       ${items.map((i) => `
         <div class="idx-row">
           <div class="t"><a href="${i.url}">${i.titleZh}</a><small>${i.title}</small></div>
-          <div class="m">${String(i.date).slice(0, 10)}${i.readTime ? ` · ${i.readTime} min` : ''}</div>
+          <div class="m">${String(i.date).slice(0, 10)}${i.readTime ? ` · ${i.readTime} min` : ''}
+            <span class="row-links">
+              ${i.hasRaw ? `<a href="${i.enUrl}">EN</a>` : ''}
+              <a href="${BLOB}/docs/zh/${i.rel}" target="_blank" rel="noopener" title="仓库里的译文文件">仓库</a>
+            </span>
+          </div>
         </div>`).join('')}
     </section>`;
   const arts = readItems.filter((i) => bucketOf(i) === 'articles').sort((a, b) => String(b.date).localeCompare(String(a.date)));
@@ -445,7 +457,7 @@ const write = (file, html) => {
     desc: '173 篇 Claude 官方文章的中文译文目录',
     body: `<article>
       <div class="hero-mini"><h1>中文译文</h1>
-      <p>${readItems.filter((i) => i.hasText).length} 篇全文译文，${RENDER_DOCS ? '可站内直接阅读' : '全部指向 GitHub 阅读'}，每篇都保留英文原文链接便于对照。</p></div>
+      <p>仓库 <code>docs/zh/</code> 下的 ${readItems.filter((i) => i.hasText).length} 篇译文${RENDER_DOCS ? '，站内可直接读' : ''}。每行右侧另有「EN」跳英文原文快照、「仓库」跳 GitHub 上的原始文件。</p></div>
       ${table(arts, 'articles', '文章')}
       ${table(guides, 'guides', '指南')}
       ${table(webs, 'webinars', '网络研讨会')}
@@ -524,6 +536,64 @@ if (RENDER_DOCS) {
     }));
   }
 
+  // 英文原文页
+  for (const list of ordered) {
+    list.forEach((i, idx) => {
+      if (!i.hasRaw) return;
+      headingSeq = 0;
+      const html = md.render(rewrite(strip(i.rawSrc), 'read'));
+      const toc = articleToc(html);
+      const srcUrl = manifest.items.find((m) => m.slug === i.slug)?.url || '';
+      write(`en/${i.rel.replace(/\.md$/, '.html')}`, page({
+        title: `${i.title} · Claude Best Practices`,
+        current: `en/${i.rel.replace(/\.md$/, '.html')}`,
+        desc: i.excerpt || '',
+        toc: toc.html,
+        doc: true,
+        body: `<article class="doc doc-en">
+          <div class="meta-line">
+            <span class="tag">${TYPE_LABEL[i.type]}</span>
+            <span>${String(i.date).slice(0, 10)}</span>
+            ${i.readTime ? `<span>${i.readTime} min</span>` : ''}
+            ${(i.products || []).slice(0, 2).map((x) => `<span class="tag">${x}</span>`).join('')}
+            <a href="/read/${i.rel.replace(/\.md$/, '.html')}">中文译文</a>
+            ${srcUrl ? `<a href="${srcUrl}" target="_blank" rel="noopener">原文 ↗</a>` : ''}
+          </div>
+          <h1>${i.title}</h1>
+          <p class="doc-sub">英文原文快照 · 抓取自 ${fm(i.rawSrc, 'fetched_at') || ''}</p>
+          ${html}
+          <div class="note">这是抓取当天的英文原文快照，供对照；正式版本以<a href="${srcUrl}" target="_blank" rel="noopener">claude.com 原文</a>为准。</div>
+        </article>`,
+      }));
+    });
+  }
+
+  // 英文原文索引
+  {
+    const rows = (b, label) => {
+      const items = readItems.filter((i) => i.hasRaw && bucketOf(i) === b).sort((x, y) => String(y.date).localeCompare(String(x.date)));
+      if (!items.length) return '';
+      return `<section class="cat-block" id="en-${b}"><h3>${label}<span>${items.length} 篇</span></h3>
+        ${items.map((i) => `<div class="idx-row">
+          <div class="t"><a href="${i.enUrl}">${i.title}</a><small>${i.titleZh}</small></div>
+          <div class="m">${String(i.date).slice(0, 10)}${i.readTime ? ` · ${i.readTime} min` : ''}</div>
+        </div>`).join('')}
+      </section>`;
+    };
+    write('en/index.html', page({
+      title: 'English originals · Claude Best Practices',
+      current: 'en/index.html',
+      desc: '英文原文快照索引',
+      body: `<article class="doc">
+        <div class="meta-line"><span class="tag">English</span><span>${readItems.filter((i) => i.hasRaw).length} 篇</span></div>
+        <h1>English originals</h1>
+        <p class="doc-sub">仓库 <code>raw/</code> 下抓取当天的英文原文快照，与中文译文一一对应；每篇顶部可切回译文。<a href="/read/index.html">← 中文译文目录</a></p>
+        ${rows('articles', 'Articles')}${rows('guides', 'Guides')}${rows('webinars', 'Webinars')}
+      </article>`,
+    }));
+    for (const i of readItems) if (i.hasRaw) search.push({ t: i.title, u: i.enUrl, k: `英文原文 · ${String(i.date).slice(0, 10)}`, x: `${i.titleZh} ${i.excerpt || ''}` });
+  }
+
   // 文章页
   for (const list of ordered) {
     list.forEach((i, idx) => {
@@ -544,6 +614,7 @@ if (RENDER_DOCS) {
             ${i.readTime ? `<span>${i.readTime} 分钟</span>` : ''}
             ${(i.products || []).slice(0, 2).map((x) => `<span class="tag">${x}</span>`).join('')}
             ${srcUrl ? `<a href="${srcUrl}" target="_blank" rel="noopener">原文 ↗</a>` : ''}
+            ${i.hasRaw ? `<a href="${i.enUrl}">English</a>` : ''}
             <a href="${BLOB}/docs/zh/${i.rel}" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
           <h1>${i.titleZh}</h1>
