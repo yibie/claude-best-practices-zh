@@ -179,14 +179,24 @@ footer a{color:var(--faint)}
 .hero-mini p{color:var(--dim);font-size:16px;margin:0;max-width:640px}
 
 
+/* 阅读进度与字号 */
+#readbar{position:fixed;top:0;left:0;right:0;height:2px;z-index:40;background:transparent;pointer-events:none}
+#readbar i{display:block;height:100%;width:0;background:var(--accent);transition:width .1s linear}
+.fontctl{display:inline-flex;align-items:center;gap:1px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1px}
+.fontctl button{background:none;border:0;color:var(--dim);font-family:var(--mono);font-size:11px;padding:3px 7px;border-radius:6px;cursor:pointer}
+.fontctl button:hover{color:var(--ink);background:var(--panel2)}
+.fontctl button.on{color:var(--accent)}
+
 /* 文章页排版 */
 article.doc{max-width:760px}
 .doc-sub{color:var(--faint);font-size:13px;margin:-6px 0 26px;font-family:var(--mono)}
 .doc h1{font-size:clamp(25px,3vw,32px);line-height:1.28}
 .doc h2{font-size:20px;margin:38px 0 12px}
 .doc h3{font-size:16.5px}
-.doc p{font-size:16px;line-height:1.85;color:var(--dim)}
-.doc li{font-size:15.5px;line-height:1.8}
+.doc p{font-size:var(--doc-font,16px);line-height:1.85;color:var(--dim)}
+.doc li{font-size:calc(var(--doc-font,16px) - 0.5px);line-height:1.8}
+.doc blockquote{font-size:calc(var(--doc-font,16px) - 0.5px)}
+.doc h2{font-size:calc(var(--doc-font,16px) + 4px)}
 .doc blockquote{font-size:15.5px}
 .doc-foot{color:var(--faint);font-size:12px;margin-top:36px}
 .rel-block{margin:44px 0 8px;border-top:1px solid var(--line);padding-top:18px}
@@ -266,7 +276,7 @@ function nav(current) {
 }
 
 /* ---------------- 页面模板 ---------------- */
-function page({ title, body, current, desc, toc }) {
+function page({ title, body, current, desc, toc, doc }) {
   return `<!doctype html><html lang="zh-CN"><head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -279,9 +289,15 @@ function page({ title, body, current, desc, toc }) {
 <div class="layout">
 ${nav(current)}
 <main>
+  ${doc ? '<div id="readbar"><i></i></div>' : ''}
   <div class="topbar">
     <input id="q" type="search" placeholder="搜索概念与文章…" autocomplete="off"/>
     <span class="meta">100 概念 · 173 译文</span>
+    ${doc ? `<div class="fontctl" role="group" aria-label="字号">
+      <button type="button" data-fs="-1" title="减小字号">A−</button>
+      <button type="button" data-fs="0" title="默认字号">A</button>
+      <button type="button" data-fs="1" title="放大字号">A+</button>
+    </div>` : ''}
     <div class="theme-slot"></div>
     <div id="hits"></div>
   </div>
@@ -289,6 +305,37 @@ ${nav(current)}
   <footer>原文版权归 Anthropic PBC 所有 · 非官方中文整理 · <a href="${REPO}">GitHub</a></footer>
 </main></div>
 <script src="/theme.js" defer></script>
+<script>
+(function(){
+  var root=document.documentElement;
+  // 字号
+  var FONTS=[15,16,17.5,19];
+  var fs=Number(localStorage.getItem('bp-font')||1)||1;
+  var applyFs=function(v){fs=Math.max(0,Math.min(FONTS.length-1,v));root.style.setProperty('--doc-font',FONTS[fs]+'px');localStorage.setItem('bp-font',String(fs));
+    document.querySelectorAll('.fontctl button').forEach(function(b){b.classList.toggle('on',Number(b.dataset.fs)===0?fs===1:false);});};
+  if(document.querySelector('.doc')) applyFs(fs);
+  document.querySelectorAll('.fontctl button').forEach(function(b){
+    b.addEventListener('click',function(){ var d=Number(b.dataset.fs); applyFs(d===0?1:fs+d); });
+  });
+  // 阅读进度
+  var bar=document.querySelector('#readbar i');
+  if(!bar) return;
+  var main=document.querySelector('main');
+  var scroller=null;
+  var nodes=[document.scrollingElement||document.documentElement];
+  var update=function(){
+    var el=document.scrollingElement||document.documentElement;
+    var max=el.scrollHeight-el.clientHeight;
+    var pct=max>0?Math.min(100,(el.scrollTop/max)*100):0;
+    var doc=document.querySelector('.doc');
+    if(doc){var r=doc.getBoundingClientRect();var top=r.top+el.scrollTop;var h=r.height;var seen=(el.scrollTop+el.clientHeight*0.5-top)/h;pct=Math.max(2,Math.min(100,seen*100));}
+    bar.style.width=pct.toFixed(1)+'%';
+  };
+  document.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 <script>
 const q=document.getElementById('q'),hits=document.getElementById('hits');
 let idx=null,loading=null,timer=null;
@@ -466,6 +513,7 @@ if (RENDER_DOCS) {
       title: `${node?.zh || id} · Claude 最佳实践`,
       current: `wiki/${id}.html`,
       desc: node?.def || '',
+      doc: true,
       body: `<article class="doc">
         <div class="meta-line"><span class="tag">概念</span><span class="tag">${node?.cat || ''}</span><span>${node?.en || ''}</span><span>提及 ${node?.count || 0} 篇</span><span>${rel} 条关联</span></div>
         <h1>${node?.zh || id}</h1>
@@ -488,6 +536,7 @@ if (RENDER_DOCS) {
         current: `read/${i.rel.replace(/\.md$/, '.html')}`,
         desc: i.excerpt || '',
         toc: toc.html,
+        doc: true,
         body: `<article class="doc">
           <div class="meta-line">
             <span class="tag">${TYPE_LABEL[i.type]}</span>
