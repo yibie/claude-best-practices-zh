@@ -795,7 +795,9 @@ Worked example
 
 _Deployed by the platform team via MDM or the admin console; engineers cannot edit or override any of it._
 
-{ "permissions": { "deny": \[ "Read(.env\*)", "Read(./secrets/\*\*)", "WebFetch", "Bash(curl \*)", "Bash(wget \*)" \], "allow": \[ "Bash(git \*)", "Bash(make build)", "Bash(make test)", "Bash(make lint)" \], "disableBypassPermissionsMode": "disable" }, "allowManagedPermissionRulesOnly": true, "sandbox": { "enabled": true, "failIfUnavailable": true, "allowUnsandboxedCommands": false, "network": { "allowedDomains": \["git.internal.example.com", "registry.npmjs.org"\] }, "credentials": { "files": \[ { "path": "~/.ssh", "mode": "deny" }, { "path": "~/.aws/credentials", "mode": "deny" } \], "envVars": \[ { "name": "GITHUB\_TOKEN", "mode": "deny" } \] } }, "allowManagedHooksOnly": true, "disableSideloadFlags": true, "allowManagedMcpServersOnly": true, "strictKnownMarketplaces": \[ { "source": "github", "repo": "example-corp/approved-plugins" } \], "requiredMinimumVersion": "2.1.193" }
+```json
+{ "permissions": { "deny": [ "Read(.env*)", "Read(./secrets/**)", "WebFetch", "Bash(curl *)", "Bash(wget *)" ], "allow": [ "Bash(git *)", "Bash(make build)", "Bash(make test)", "Bash(make lint)" ], "disableBypassPermissionsMode": "disable" }, "allowManagedPermissionRulesOnly": true, "sandbox": { "enabled": true, "failIfUnavailable": true, "allowUnsandboxedCommands": false, "network": { "allowedDomains": ["git.internal.example.com", "registry.npmjs.org"] }, "credentials": { "files": [ { "path": "~/.ssh", "mode": "deny" }, { "path": "~/.aws/credentials", "mode": "deny" } ], "envVars": [ { "name": "GITHUB_TOKEN", "mode": "deny" } ] } }, "allowManagedHooksOnly": true, "disableSideloadFlags": true, "allowManagedMcpServersOnly": true, "strictKnownMarketplaces": [ { "source": "github", "repo": "example-corp/approved-plugins" } ], "requiredMinimumVersion": "2.1.193" }
+```
 
 What each line buys, in control terms
 

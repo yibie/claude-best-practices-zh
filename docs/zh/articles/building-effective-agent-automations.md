@@ -22,12 +22,13 @@ fetched_at: "2026-11-18"
 
 PROMPT
 
+```shell
 /claude-api managed-agents-onboard https://claude.dev/blog/building-effective-agent-automations/
+```
 
 对于这个参考实现，你需要一个 Slack 应用（[从 manifest 创建](https://api.slack.com/apps?new_app=1&manifest_yaml=display_information%3A%0A%20%20name%3A%20Daily%20brief%0A%20%20description%3A%20Posts%20one%20short%20brief%20each%20weekday%20morning.%0Afeatures%3A%0A%20%20bot_user%3A%0A%20%20%20%20display_name%3A%20Daily%20brief%0A%20%20%20%20always_online%3A%20false%0A%20%20app_home%3A%0A%20%20%20%20home_tab_enabled%3A%20false%0A%20%20%20%20messages_tab_enabled%3A%20true%0A%20%20%20%20messages_tab_read_only_enabled%3A%20true%0Aoauth_config%3A%0A%20%20scopes%3A%0A%20%20%20%20bot%3A%0A%20%20%20%20%20%20-%20channels%3Ahistory%0A%20%20%20%20%20%20-%20chat%3Awrite%0Asettings%3A%0A%20%20org_deploy_enabled%3A%20false%0A%20%20socket_mode_enabled%3A%20false%0A%20%20token_rotation_enabled%3A%20false%0A)）和一个 [GitHub token](https://github.com/settings/personal-access-tokens/new)。提供的文件（如下所示）是 Claude API 资源的配置，包括智能体、其环境、记忆存储、vault 和部署。
 
-CODEText
-
+```text
 daily-brief/
 ├── agent.md                        model, tools, instructions
 ├── deployment.md                   schedule, time zone, budget, input message
@@ -37,6 +38,7 @@ daily-brief/
 ├── vault.yaml                      the vault that holds the credentials
 ├── claude-lock.json                resource IDs, written by ant apply
 └── slack/manifest.yaml             one bot app
+```
 
 [`ant apply`](https://platform.claude.com/docs/en/cli-sdks-libraries/cli/apply) 是 ant CLI 中的一条命令，它会读取这些文件，在你的 Claude API 工作区（平台存储和运行这些资源的地方）中创建资源，并将 ID 记录到 `claude-lock.json` 中。
 
@@ -71,26 +73,26 @@ daily-brief/
 
 使用 `ant` CLI 和仓库中的模板文件创建 vault：
 
-CODEShell
-
+```shell
 ant apply vault.yaml
+```
 
 这会在你的 Claude API 工作区（平台存储它的地方）中创建 vault，并将其 ID 记录到 `claude-lock.json` 中。然后使用 [TypeScript SDK](https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript) 将每个凭据添加到 vault 中。以下示例展示了添加 Slack 凭据：
 
-CODETypeScript
-
-const vaultId = process.env.VAULT\_ID!; // the vault's ID, from claude-lock.json
+```typescript
+const vaultId = process.env.VAULT_ID!; // the vault's ID, from claude-lock.json
 
 await client.beta.vaults.credentials.create(vaultId, {
-  display\_name: "SLACK\_BOT\_TOKEN",
+  display_name: "SLACK_BOT_TOKEN",
   auth: {
-    type: "environment\_variable",
-    secret\_name: "SLACK\_BOT\_TOKEN",
-    secret\_value: process.env.SLACK\_BOT\_TOKEN!,
-    networking: { type: "limited", allowed\_hosts: \["slack.com"\] },
-    injection\_location: { header: true },
+    type: "environment_variable",
+    secret_name: "SLACK_BOT_TOKEN",
+    secret_value: process.env.SLACK_BOT_TOKEN!,
+    networking: { type: "limited", allowed_hosts: ["slack.com"] },
+    injection_location: { header: true },
   },
 });
+```
 
 创建 vault 并添加每个凭据后，将 vault 附加到部署。将 `claude-lock.json` 中的 vault ID 复制到部署文件 `deployment.md` 的 `vault_ids` 中。
 
@@ -116,12 +118,12 @@ await client.beta.vaults.credentials.create(vaultId, {
 
 发布无需任何审批。智能体通过 bash 命令发送，内置的 bash 工具默认无需请求批准即可运行。`slack.com` 也在智能体[环境](https://platform.claude.com/docs/en/managed-agents/environments)（其运行的沙箱）的允许列表中。发布只需一个请求：
 
-CODEShell
-
-curl -s https://slack.com/api/chat.postMessage \\
-  -H "Authorization: Bearer $SLACK\_BOT\_TOKEN" \\
-  -H "Content-Type: application/json; charset=utf-8" \\
+```shell
+curl -s https://slack.com/api/chat.postMessage \
+  -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+  -H "Content-Type: application/json; charset=utf-8" \
   -d '{"channel": "C0123456789", "text": "Daily brief, Tue Sep 15 ..."}'
+```
 
 ### 在记录之前确认帖子已送达
 
@@ -139,29 +141,29 @@ curl -s https://slack.com/api/chat.postMessage \\
 
 在我们的参考实现中，智能体配置是 `agent.md`：
 
-CODEMarkdown
-
-\---
+```markdown
+---
 name: Daily brief
 model: claude-sonnet-5-5
-mcp\_servers:
+mcp_servers:
   - type: url
     name: github
     url: https://api.githubcopilot.com/mcp/
 tools:
-  - type: agent\_toolset\_20260401
+  - type: agent_toolset_20260401
     configs:
-      - name: web\_search
+      - name: web_search
         enabled: false
-      - name: web\_fetch
+      - name: web_fetch
         enabled: false
-  - type: mcp\_toolset
-    mcp\_server\_name: github
-    default\_config:
-      permission\_policy:
-        type: always\_allow
+  - type: mcp_toolset
+    mcp_server_name: github
+    default_config:
+      permission_policy:
+        type: always_allow
 ---
-\[Eight numbered run steps; the full text is in agent.md in the repo.\]
+[Eight numbered run steps; the full text is in agent.md in the repo.]
+```
 
 frontmatter 提供智能体名称、模型、工具和 MCP 服务器。正文提供智能体指令。MCP 工具默认请求批准，而现场没有人来批准，因此 GitHub 工具集设置为 `always_allow`，GitHub token 为 `read-only`。
 
@@ -169,17 +171,17 @@ frontmatter 提供智能体名称、模型、工具和 MCP 服务器。正文提
 
 `agent.md` 引导 Claude 保持简洁：
 
-CODEText
-
-4\. Decide. An item earns a line when the reader would act on it today, or it changes a decision they are about to make. When unsure, leave it out. Most days that is a few items, sometimes none. A count ("12 open reviews") is not an item; link the ones that are blocked. An item already in the ledger and still open is carried as one marked line ("still waiting, day 3"), not re-reported; a closed item is dropped without comment. Do not bring back a topic the preferences file has retired.
+```text
+4. Decide. An item earns a line when the reader would act on it today, or it changes a decision they are about to make. When unsure, leave it out. Most days that is a few items, sometimes none. A count ("12 open reviews") is not an item; link the ones that are blocked. An item already in the ledger and still open is carried as one marked line ("still waiting, day 3"), not re-reported; a closed item is dropped without comment. Do not bring back a topic the preferences file has retired.
+```
 
 ### 在发布前重新检查所有仍未关闭的事项
 
 条目在智能体读取来源和发布之间可能发生变化。就在发布之前，`agent.md` 指示智能体重新检查每个条目的实时状态：
 
-CODEText
-
-5\. Verify. The world moved while you read. For every item you will report, re-check its live source just before posting: resolved since you read it, drop it; still open but changed, fix the line; cannot confirm, drop it and list it in the run record's cuts. One stale "still waiting on you" costs more trust than ten missing items, so never hedge an item's status: assert it or drop it. Every link is copied from the source's own link field (a pull request's html\_url, a Slack permalink), never assembled by hand.
+```text
+5. Verify. The world moved while you read. For every item you will report, re-check its live source just before posting: resolved since you read it, drop it; still open but changed, fix the line; cannot confirm, drop it and list it in the run record's cuts. One stale "still waiting on you" costs more trust than ten missing items, so never hedge an item's status: assert it or drop it. Every link is copied from the source's own link field (a pull request's html_url, a Slack permalink), never assembled by hand.
+```
 
 ## 计划
 
@@ -189,36 +191,38 @@ CODEText
 
 在我们的模板中，部署记录在 `deployment.md` 中，第一条消息作为其正文：
 
-CODEMarkdown
-
-\---
+```markdown
+---
 name: Daily brief
 agent: ./agent.md
-environment\_id: ./environment.yaml
+environment_id: ./environment.yaml
 schedule:
   type: cron
-  expression: "32 7 \* \* 1-5"
-  timezone: America/New\_York
-vault\_ids: \[vlt\_...\]   # the vault you create under Sources
+  expression: "32 7 * * 1-5"
+  timezone: America/New_York
+vault_ids: [vlt_...]   # the vault you create under Sources
 resources:
-  - path: ./memory\_store\_preferences.yaml
-    access: read\_only
+  - path: ./memory_store_preferences.yaml
+    access: read_only
     instructions: The reader's preferences. Re-read them every run. Never write here.
-  - path: ./memory\_store\_state.yaml
-    access: read\_write
+  - path: ./memory_store_state.yaml
+    access: read_write
     instructions: Your state. Bookmarks, ledger, notes, proposals, and run records.
 ---
 
 Write today's brief.
-The reader's time zone is America/New\_York. Work out every date in that zone.
+The reader's time zone is America/New_York. Work out every date in that zone.
+```
 
-Follow your run steps in order. Today's edition is titled "Daily brief, <weekday\> <month\> <day\>".
+```text
+Follow your run steps in order. Today's edition is titled "Daily brief, <weekday> <month> <day>".
+```
 
 这会创建部署，其中包含智能体、环境以及按路径指定的记忆存储。
 
-CODEShell
-
+```shell
 ant apply deployment.md
+```
 
 如需在不等待计划的情况下测试，可使用 `ant beta:deployments run --deployment-id <id>` 手动启动一次运行，ID 来自 `claude-lock.json`。
 
@@ -248,11 +252,11 @@ ant apply deployment.md
 
 智能体保留一个台账 `ledger.md`，记录它已报告的每个条目，这样简报就不会重复。每一行记录该条目被报告的时间、来源、一个不会变化的 ID（Slack 消息时间戳或拉取请求编号）以及其最后已知状态：
 
-CODEText
-
+```text
 2026-09-09 slack:C0123456789 1788963600.000100 refund thread: customer waiting on a decision
 2026-09-11 github 481 review blocked, day 2 (still waiting)
 2026-09-11 slack:C0234567891 1789117333.000300 enterprise escalation: owner named, in progress
+```
 
 ## 护栏
 
@@ -270,13 +274,13 @@ Slack 是例外：同一个 token 既读取又发布，因此只在你需要它�
 
 支出上限可以保护你免受失控成本的影响。从正常运行成本的三到五倍开始，然后根据真实数据逐步收紧。达到上限的运行会暂停而不是失败，因此上限设置过低看起来就像简报突然安静了。上限是 `deployment.md` 中的 [`budget`](https://platform.claude.com/docs/en/managed-agents/budgets)。每次运行都会获得全额预算，达到上限的运行会以 `budget_reached` 停止原因暂停：
 
-CODEYAML
-
+```yaml
 budget:
   type: limit
-  max\_list\_cost:
-    amount: "500" \# a string, in cents: "500" is $5.00
+  max_list_cost:
+    amount: "500" # a string, in cents: "500" is $5.00
     currency: USD
+```
 
 ## 开始使用
 
@@ -291,14 +295,16 @@ budget:
 
 Claude Code 可以引导你完成本文提供的指导。首先，更新：
 
-CODEShell
-
+```shell
 claude update
+```
 
 然后，使用 claude-api skill：
 
 PROMPT
 
+```shell
 /claude-api managed-agents-onboard https://claude.dev/blog/building-effective-agent-automations/
+```
 
 claude-api skill 会阅读这篇文章，提出一个设置方案，将文件写入你项目中的 agents/ 文件夹，并使用 ant apply 创建资源。请将其视为起点，并根据你的来源、目标或记忆偏好自定义智能体。

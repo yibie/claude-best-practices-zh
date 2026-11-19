@@ -241,9 +241,9 @@ Example - Changing "30 days" to "60 days" in a sentence:
 ### Tracked changes workflow
 
 1. **Get markdown representation**: Convert document to markdown with tracked changes preserved:
-   ```bash
    pandoc --track-changes=all path-to-file.docx -o current.md
    ```
+   ```bash
 
 2. **Identify and group changes**: Review the document and identify ALL changes needed, organizing them into logical batches:
 
@@ -292,13 +292,13 @@ Example - Changing "30 days" to "60 days" in a sentence:
    - Convert final document to markdown:
      ```bash
      pandoc --track-changes=all reviewed-document.docx -o verification.md
-     ```
    - Verify ALL changes were applied correctly:
      ```bash
      grep "original phrase" verification.md  # Should NOT find it
      grep "replacement phrase" verification.md  # Should find it
      ```
    - Check that no unintended changes were introduced
+     ```
 
 ## Converting Documents to Images
 
@@ -312,8 +312,8 @@ To visually analyze Word documents, convert them to images using a two-step proc
 2. **Convert PDF pages to JPEG images**:
    ```bash
    pdftoppm -jpeg -r 150 document.pdf page
-   ```
    This creates files like `page-1.jpg`, `page-2.jpg`, etc.
+   ```
 
 Options:
 - `-r 150`: Sets resolution to 150 DPI (adjust for quality/size balance)

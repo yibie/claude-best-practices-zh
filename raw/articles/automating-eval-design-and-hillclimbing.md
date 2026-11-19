@@ -181,16 +181,18 @@ After the score stalled for two rounds, Claude analyzed the remaining failures a
 
 **Note:** Run `claude update` first. The claude-api skill ships inside Claude Code, so updating gets you the latest version of these commands.
 
-CODEShell
-
+```shell
 claude update
+```
 
 Then, in Claude Code:
 
 PROMPT
 
+```shell
 /claude-api build-eval
 /claude-api hillclimb
+```
 
 These sub-commands can be used directly in Claude Code via the [claude-api skill](https://github.com/anthropics/skills/tree/main/skills/claude-api):
 

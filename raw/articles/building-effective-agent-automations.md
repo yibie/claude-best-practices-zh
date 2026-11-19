@@ -21,12 +21,13 @@ The reference implementation is [here](https://github.com/anthropics/claude-quic
 
 PROMPT
 
+```shell
 /claude-api managed-agents-onboard https://claude.dev/blog/building-effective-agent-automations/
+```
 
 For this reference implementation, you need a Slack app ([create it from the manifest](https://api.slack.com/apps?new_app=1&manifest_yaml=display_information%3A%0A%20%20name%3A%20Daily%20brief%0A%20%20description%3A%20Posts%20one%20short%20brief%20each%20weekday%20morning.%0Afeatures%3A%0A%20%20bot_user%3A%0A%20%20%20%20display_name%3A%20Daily%20brief%0A%20%20%20%20always_online%3A%20false%0A%20%20app_home%3A%0A%20%20%20%20home_tab_enabled%3A%20false%0A%20%20%20%20messages_tab_enabled%3A%20true%0A%20%20%20%20messages_tab_read_only_enabled%3A%20true%0Aoauth_config%3A%0A%20%20scopes%3A%0A%20%20%20%20bot%3A%0A%20%20%20%20%20%20-%20channels%3Ahistory%0A%20%20%20%20%20%20-%20chat%3Awrite%0Asettings%3A%0A%20%20org_deploy_enabled%3A%20false%0A%20%20socket_mode_enabled%3A%20false%0A%20%20token_rotation_enabled%3A%20false%0A)) and a [GitHub token](https://github.com/settings/personal-access-tokens/new). The provided files (shown below) are configuration for Claude API resources, including the agent, its environment, memory stores, vault, and deployment.
 
-CODEText
-
+```text
 daily-brief/
 ├── agent.md                        model, tools, instructions
 ├── deployment.md                   schedule, time zone, budget, input message
@@ -36,6 +37,7 @@ daily-brief/
 ├── vault.yaml                      the vault that holds the credentials
 ├── claude-lock.json                resource IDs, written by ant apply
 └── slack/manifest.yaml             one bot app
+```
 
 [`ant apply`](https://platform.claude.com/docs/en/cli-sdks-libraries/cli/apply), a command in the ant CLI, reads these files, creates the resources in your Claude API workspace (where the platform stores and runs them), and records the IDs in `claude-lock.json`.
 
@@ -71,26 +73,26 @@ With [Managed Agents](https://platform.claude.com/docs/en/managed-agents/overvie
 
 Create the vault using the `ant` CLI and the template file in the repo:
 
-CODEShell
-
+```shell
 ant apply vault.yaml
+```
 
 This creates the vault in your Claude API workspace, where the platform stores it, and records its ID in `claude-lock.json`. Then add each credential to the vault with the [TypeScript SDK](https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript). Here is an example showing addition of the Slack credential:
 
-CODETypeScript
-
-const vaultId = process.env.VAULT\_ID!; // the vault's ID, from claude-lock.json
+```typescript
+const vaultId = process.env.VAULT_ID!; // the vault's ID, from claude-lock.json
 
 await client.beta.vaults.credentials.create(vaultId, {
-  display\_name: "SLACK\_BOT\_TOKEN",
+  display_name: "SLACK_BOT_TOKEN",
   auth: {
-    type: "environment\_variable",
-    secret\_name: "SLACK\_BOT\_TOKEN",
-    secret\_value: process.env.SLACK\_BOT\_TOKEN!,
-    networking: { type: "limited", allowed\_hosts: \["slack.com"\] },
-    injection\_location: { header: true },
+    type: "environment_variable",
+    secret_name: "SLACK_BOT_TOKEN",
+    secret_value: process.env.SLACK_BOT_TOKEN!,
+    networking: { type: "limited", allowed_hosts: ["slack.com"] },
+    injection_location: { header: true },
   },
 });
+```
 
 After creating the vault and adding each credential, attach the vault to the deployment. Copy the vault ID from `claude-lock.json` into `vault_ids` in the deployment file, `deployment.md`.
 
@@ -116,12 +118,12 @@ The agent posts to Slack using the bash tool in its sandbox, using the same bot 
 
 Nothing has to approve the post. The agent sends it with a bash command, and the built-in bash tool runs without asking for approval by default. `slack.com` is also on the allowlist of the agent's [environment](https://platform.claude.com/docs/en/managed-agents/environments), the sandbox it runs in. The post is one request:
 
-CODEShell
-
-curl -s https://slack.com/api/chat.postMessage \\
-  -H "Authorization: Bearer $SLACK\_BOT\_TOKEN" \\
-  -H "Content-Type: application/json; charset=utf-8" \\
+```shell
+curl -s https://slack.com/api/chat.postMessage \
+  -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+  -H "Content-Type: application/json; charset=utf-8" \
   -d '{"channel": "C0123456789", "text": "Daily brief, Tue Sep 15 ..."}'
+```
 
 ### Confirm the post landed before recording it
 
@@ -139,29 +141,29 @@ In Claude Managed Agents, an [agent](https://platform.claude.com/docs/en/managed
 
 In our reference implementation, the agent configuration is `agent.md`:
 
-CODEMarkdown
-
-\---
+```markdown
+---
 name: Daily brief
 model: claude-sonnet-5-5
-mcp\_servers:
+mcp_servers:
   - type: url
     name: github
     url: https://api.githubcopilot.com/mcp/
 tools:
-  - type: agent\_toolset\_20260401
+  - type: agent_toolset_20260401
     configs:
-      - name: web\_search
+      - name: web_search
         enabled: false
-      - name: web\_fetch
+      - name: web_fetch
         enabled: false
-  - type: mcp\_toolset
-    mcp\_server\_name: github
-    default\_config:
-      permission\_policy:
-        type: always\_allow
+  - type: mcp_toolset
+    mcp_server_name: github
+    default_config:
+      permission_policy:
+        type: always_allow
 ---
-\[Eight numbered run steps; the full text is in agent.md in the repo.\]
+[Eight numbered run steps; the full text is in agent.md in the repo.]
+```
 
 The frontmatter supplies the agent name, model, tools, and MCP servers. The body provides the agent instructions. MCP tools ask for approval by default and nobody is there to give it, so the GitHub toolset is set to `always_allow` and the GitHub token is `read-only`.
 
@@ -169,17 +171,17 @@ The frontmatter supplies the agent name, model, tools, and MCP servers. The body
 
 `agent.md` steers Claude toward brevity:
 
-CODEText
-
-4\. Decide. An item earns a line when the reader would act on it today, or it changes a decision they are about to make. When unsure, leave it out. Most days that is a few items, sometimes none. A count ("12 open reviews") is not an item; link the ones that are blocked. An item already in the ledger and still open is carried as one marked line ("still waiting, day 3"), not re-reported; a closed item is dropped without comment. Do not bring back a topic the preferences file has retired.
+```text
+4. Decide. An item earns a line when the reader would act on it today, or it changes a decision they are about to make. When unsure, leave it out. Most days that is a few items, sometimes none. A count ("12 open reviews") is not an item; link the ones that are blocked. An item already in the ledger and still open is carried as one marked line ("still waiting, day 3"), not re-reported; a closed item is dropped without comment. Do not bring back a topic the preferences file has retired.
+```
 
 ### Re-check anything still open right before posting
 
 Items can change between when the agent reads sources and when it posts. Just before posting, `agent.md` instructs the agent to re-check the live status of each item:
 
-CODEText
-
-5\. Verify. The world moved while you read. For every item you will report, re-check its live source just before posting: resolved since you read it, drop it; still open but changed, fix the line; cannot confirm, drop it and list it in the run record's cuts. One stale "still waiting on you" costs more trust than ten missing items, so never hedge an item's status: assert it or drop it. Every link is copied from the source's own link field (a pull request's html\_url, a Slack permalink), never assembled by hand.
+```text
+5. Verify. The world moved while you read. For every item you will report, re-check its live source just before posting: resolved since you read it, drop it; still open but changed, fix the line; cannot confirm, drop it and list it in the run record's cuts. One stale "still waiting on you" costs more trust than ten missing items, so never hedge an item's status: assert it or drop it. Every link is copied from the source's own link field (a pull request's html_url, a Slack permalink), never assembled by hand.
+```
 
 ## SCHEDULE
 
@@ -189,36 +191,38 @@ With [Claude Managed Agents](https://claude.com/platform/claude-managed-agents),
 
 In our template, the deployment is captured in `deployment.md`, with the first message as its body:
 
-CODEMarkdown
-
-\---
+```markdown
+---
 name: Daily brief
 agent: ./agent.md
-environment\_id: ./environment.yaml
+environment_id: ./environment.yaml
 schedule:
   type: cron
-  expression: "32 7 \* \* 1-5"
-  timezone: America/New\_York
-vault\_ids: \[vlt\_...\]   # the vault you create under Sources
+  expression: "32 7 * * 1-5"
+  timezone: America/New_York
+vault_ids: [vlt_...]   # the vault you create under Sources
 resources:
-  - path: ./memory\_store\_preferences.yaml
-    access: read\_only
+  - path: ./memory_store_preferences.yaml
+    access: read_only
     instructions: The reader's preferences. Re-read them every run. Never write here.
-  - path: ./memory\_store\_state.yaml
-    access: read\_write
+  - path: ./memory_store_state.yaml
+    access: read_write
     instructions: Your state. Bookmarks, ledger, notes, proposals, and run records.
 ---
 
 Write today's brief.
-The reader's time zone is America/New\_York. Work out every date in that zone.
+The reader's time zone is America/New_York. Work out every date in that zone.
+```
 
-Follow your run steps in order. Today's edition is titled "Daily brief, <weekday\> <month\> <day\>".
+```text
+Follow your run steps in order. Today's edition is titled "Daily brief, <weekday> <month> <day>".
+```
 
 This creates the deployment with the agent, environment and memory stores it names by path.
 
-CODEShell
-
+```shell
 ant apply deployment.md
+```
 
 To test it without waiting for the schedule, start a run by hand with `ant beta:deployments run --deployment-id <id>`, using the ID from `claude-lock.json`.
 
@@ -249,11 +253,11 @@ A common problem occurs when a copy of the preferences is baked into the prompt,
 
 The agent keeps a ledger, `ledger.md`, of every item it has reported, so the brief doesn't repeat itself. Each line records when the item was reported, where it came from, an ID that doesn't change (a Slack message timestamp or a pull request number), and its last known status:
 
-CODEText
-
+```text
 2026-09-09 slack:C0123456789 1788963600.000100 refund thread: customer waiting on a decision
 2026-09-11 github 481 review blocked, day 2 (still waiting)
 2026-09-11 slack:C0234567891 1789117333.000300 enterprise escalation: owner named, in progress
+```
 
 ## GUARDRAILS
 
@@ -271,13 +275,13 @@ Slack is the exception: the same token posts, so invite the bot only where it ne
 
 A spending cap protects you from runaway costs. Start at three to five times the cost of a normal run, then tighten it as you see real numbers. A run that hits its cap pauses instead of failing, so a cap set too low looks like a brief that went quiet. The cap is the [`budget`](https://platform.claude.com/docs/en/managed-agents/budgets) in `deployment.md`. Every run gets the full amount, and a run that reaches it pauses with a `budget_reached` stop reason:
 
-CODEYAML
-
+```yaml
 budget:
   type: limit
-  max\_list\_cost:
-    amount: "500" \# a string, in cents: "500" is $5.00
+  max_list_cost:
+    amount: "500" # a string, in cents: "500" is $5.00
     currency: USD
+```
 
 ## GETTING STARTED
 
@@ -292,14 +296,16 @@ Our reference implementation comes down to six rules:
 
 Claude Code can walk you through the guidance provided in this article. First, update:
 
-CODEShell
-
+```shell
 claude update
+```
 
 Then, use the claude-api skill:
 
 PROMPT
 
+```shell
 /claude-api managed-agents-onboard https://claude.dev/blog/building-effective-agent-automations/
+```
 
 The claude-api skill reads this post, proposes a setup, writes the files to an agents/ folder in your project, and creates the resources with ant apply. Treat this as a starting point, and customize the agent for your sources, destination, or memory preferences.

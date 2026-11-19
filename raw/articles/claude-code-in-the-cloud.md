@@ -37,11 +37,11 @@ The sample repository is **tidepool**, a small Node API that predicts tides for 
 
 I started three cloud sessions within 16 seconds of each other, one per problem. I started them programmatically, and because tidepool isn't on GitHub, each session first recreated the repository from files in its prompt. With a real repository you'd skip that step, and from a terminal each session is one `claude --cloud` command. Shortened, the three prompts were:
 
-CODEShell
-
+```shell
 claude --cloud "npm test fails maybe one run in four. Find the flaky test, fix the root cause in the code (not the test), and prove it by running the suite at least 30 times in a row."
 claude --cloud "docs/API.md is out of date with src/server.js. Rewrite it so every endpoint, parameter, default and response shape matches the code. Start the server and run each curl example to check it."
-claude --cloud "Make src/logger.js emit one JSON object per line, keep LOG\_LEVEL, and log method, path, status and duration\_ms as fields. Add a test for the logger."
+claude --cloud "Make src/logger.js emit one JSON object per line, keep LOG_LEVEL, and log method, path, status and duration_ms as fields. Add a test for the logger."
+```
 
 The sessions ran for 61, 65 and 72 seconds, and all three were done 87 seconds after the first one started. Recreating the repository took roughly a third to just over half of each run. Here are the results.
 
@@ -99,11 +99,11 @@ These workflows put the differences in the table to work: a separate machine for
 
 Let's say you have five small, unrelated fixes. Locally, you'd do them one after another, or set up five worktrees and keep their ports and installs apart. In the cloud, you'd start five sessions and review five branches.
 
-CODEShell
-
+```shell
 claude --cloud "Fix the flaky test in auth.spec.ts"
 claude --cloud "Update the API documentation"
 claude --cloud "Refactor the logger to use structured output"
+```
 
 `claude --cloud` clones your GitHub remote at your current branch, so push your local commits first. While the VM starts, the CLI shows a live checklist of setup steps and queues anything you type.
 
@@ -127,18 +127,18 @@ Each of Claude's turns still counts toward your plan, but a long test run inside
 
 For a larger change, agree on the approach first where back-and-forth is cheap. Start Claude in plan mode, work out the plan together, commit the plan, and push it.
 
-CODEShell
-
+```shell
 claude --permission-mode plan
+```
 \# ...agree on the plan, save it to docs/migration-plan.md, commit and push...
 claude --cloud "Execute the migration plan in docs/migration-plan.md"
 
 While the cloud session builds, your terminal is free for other work. When it's done, pull the session down to finish it by hand.
 
-CODEShell
-
-claude --teleport            \# pick a cloud session
+```shell
+claude --teleport            # pick a cloud session
 claude --teleport <session-id>
+```
 
 Teleport checks that you're in the same repository, fetches the session's branch, checks it out, and loads the whole conversation into your terminal. You need a clean working tree (it offers to stash), and the branch has to be pushed. From inside Claude Code, `/teleport` (or `/tp`) opens the same picker, and `/tasks` then `t` works too. The Desktop app goes the other way, and its **Open in** menu sends a local session to the cloud.
 
@@ -160,9 +160,9 @@ A **routine** (research preview) is several saved resources designed to accompli
 
 Two smaller tools help here. You can queue a follow-up into a running session from any machine where you're logged in, including a CI job.
 
-CODEShell
-
+```shell
 claude -p "The integration tier is green now; rebase on main and push" --cloud <session-id>
+```
 
 You can also bookmark a prefilled session. A URL such as `claude.ai/code?prompt=Triage+the+newest+issues&repositories=acme-labs/tidepool` opens claude.ai/code with the prompt and repository already filled in.
 

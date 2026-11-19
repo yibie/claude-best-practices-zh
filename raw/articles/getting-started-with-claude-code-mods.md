@@ -37,8 +37,7 @@ A mod is a Claude Code plugin whose behavior lives in a JavaScript or TypeScript
 
 Every hook has the same shape:
 
-CODEJavaScript
-
+```javascript
 on("tool.call", { tool: "Bash" }, async ($, e, next) => {
   // $    the mods API: ui, session, state, store, fs, process, clock, http, tool, command, model, ...
   // e    this event's input, as plain data
@@ -47,6 +46,7 @@ on("tool.call", { tool: "Bash" }, async ($, e, next) => {
 });
 
 Hooks form a chain, like middleware. Yours runs, `next(e)` hands the event to the next plugin, and at the bottom Claude Code does what it would have done anyway. A hook can do one of three things:
+```
 
 Hooks form a chain
 
@@ -84,8 +84,7 @@ Here it is in a real session. Each turn reads more files, and the band fills fro
 
 You can skip the six steps. Claude Code knows how to write mods, so you can describe the one you want and let it do the work. Start a session with `claude` and paste the prompt below:
 
-CODEText
-
+```text
 Make me a Claude Code mod called token-weather: a live forecast of my context window, shown in the band above the prompt.
 
 What it should show, on one line:
@@ -95,6 +94,7 @@ What it should show, on one line:
 - How much the last turn added, like "▲ +98.3k last turn".
 
 It should update after every turn.
+```
 
 Claude asks once whether to turn on hot reloading for the session. Allow it, and the band appears above the prompt when Claude's turn ends. From then on, every change reloads in place, so you can keep asking for tweaks ("make Storm start at 70%", "add the dollar cost at the end") and watch the band change. The mod loads only in this session, and its folder is cleaned up later, so to keep it, copy the folder out and install it like any plugin ([Step 6](#step-6-share-it)).
 
@@ -106,14 +106,13 @@ If you'd rather see how it's put together first, or want to check what Claude wr
 
 Check that your Claude Code is new enough:
 
-CODEShell
-
-claude --version   \# 2.1.287 or later
+```shell
+claude --version   # 2.1.287 or later
+```
 
 Create this layout:
 
-CODEText
-
+```text
 token-weather/
 ├── .claude-plugin/
 │   ├── plugin.json
@@ -125,11 +124,11 @@ token-weather/
 │   └── index.d.ts        (added in step 3)
 └── tests/
     └── token-weather.test.ts   (added in step 5)
+```
 
 `.claude-plugin/plugin.json` is a standard plugin manifest:
 
-CODEJSON
-
+```json
 {
   "name": "token-weather",
   "version": "0.1.0",
@@ -138,26 +137,26 @@ CODEJSON
 }
 
 `hooks/hooks.json` points at the module. A mod has exactly one:
+```
 
-CODEJSON
-
+```json
 {
-  "modules": \["./token-weather.mjs"\]
+  "modules": ["./token-weather.mjs"]
 }
+```
 
 ### Step 2: Draw something
 
 The band directly above the prompt is a component called `AbovePrompt`. Claude Code draws nothing there itself, so it's a good first target. Hook its `ui.render` event and return a tree of elements:
 
-CODEJavaScript
-
+```javascript
 // hooks/token-weather.mjs
 export function register(on) {
   on("ui.render", { component: "AbovePrompt" }, ($, e, next) => {
     const { Box, Text } = $.ui.resolve(e);
     return Box({
       paddingX: 1,
-      children: \[Text({ color: "yellow", bold: true, children: "☀  Clear skies" })\],
+      children: [Text({ color: "yellow", bold: true, children: "☀  Clear skies" })],
     });
   });
 }
@@ -165,10 +164,11 @@ export function register(on) {
 The elements aren't globals. `$.ui.resolve(e)` returns the constructors for the surface being drawn, because each surface Claude Code draws on supports a slightly different set. JSX works too, with `h` as the factory.
 
 Start a session with the plugin loaded:
+```
 
-CODEShell
-
+```shell
 claude --plugin-dir ./token-weather
+```
 
 "☀ Clear skies" appears above the prompt. Keep the session open. The folder is watched, so every save reloads the module in place, with no restart. That quick feedback loop is most of what makes mods fun to write.
 
@@ -180,8 +180,7 @@ claude --plugin-dir ./token-weather
 
 Take a reading when the session starts and after every turn:
 
-CODEJavaScript
-
+```javascript
 on("session.start", async ($, e, next) => {
   const result = await next(e);
   await takeReading($);
@@ -197,11 +196,11 @@ on("turn.complete", async ($, e, next) => {
 });
 
 Both hooks call `next(e)` first and then observe. Neither one changes what happens.
+```
 
 **Where to keep the readings.** A module-level `let readings = []` looks like the obvious choice, but a hot reload is a fresh load: `register` runs again, `session.start` fires again, and module variables start over. Put the history in `$.state` instead. It holds named values in the host for the whole session, and they survive reloads.
 
-CODEJavaScript
-
+```javascript
 // Held by the host, so the history survives a hot reload of this file.
 const readings = { plugin: "token-weather", key: "readings" };
 
@@ -209,22 +208,23 @@ async function takeReading($) {
   const { context } = await $.session.usage();
   if (!context?.window) return;
   const tokens = context.tokens ?? 0;
-  const percent = context.percent ?? Math.round((tokens / context.window) \* 100);
-  const { value: history = \[\] } = await $.state.get(readings);
-  await $.state.set(readings, \[...history, { tokens, window: context.window, percent }\].slice(-HISTORY));
+  const percent = context.percent ?? Math.round((tokens / context.window) * 100);
+  const { value: history = [] } = await $.state.get(readings);
+  await $.state.set(readings, [...history, { tokens, window: context.window, percent }].slice(-HISTORY));
 }
 
 A state value is declared in the plugin's **type contract**, which is a small `.d.ts` file the manifest points to. Add `types/index.d.ts`:
+```
 
-CODETypeScript
-
+```typescript
 export type TokenWeatherReading = { tokens: number; window: number; percent: number };
 
 declare module "claude-code" {
   interface PluginState {
-    "token-weather": { readings: TokenWeatherReading\[\] };
+    "token-weather": { readings: TokenWeatherReading[] };
   }
 }
+```
 
 Then add `"types": "./types/index.d.ts"` to `plugin.json`. If you skip this step, `claude plugin validate` stops you with an error that names the fix: `token-weather.readings is not declared: the manifest's types contract must name it in interface PluginState { … }`.
 
@@ -234,19 +234,18 @@ In return, you get redraws for free. A `$.state.get` made while a render hook ru
 
 Here is the whole module:
 
-CODEJavaScript
-
+```javascript
 // Token Weather: a live forecast of the context window, above the prompt.
 
 const HISTORY = 12;
 const BARS = "▁▂▃▄▅▆▇█";
-const FORECAST = \[
+const FORECAST = [
   { upTo: 25, icon: "☀", word: "Clear", color: "yellow" },
   { upTo: 50, icon: "☁", word: "Cloudy", color: "cyan" },
   { upTo: 75, icon: "☂", word: "Showers", color: "blue" },
   { upTo: 90, icon: "☇", word: "Storm", color: "magenta" },
   { upTo: Infinity, icon: "↯", word: "Compact soon", color: "red" },
-\];
+];
 
 // Held by the host, so the history survives a hot reload of this file.
 const readings = { plugin: "token-weather", key: "readings" };
@@ -267,7 +266,7 @@ export function register(on) {
   });
 
   on("ui.render", { component: "AbovePrompt" }, async ($, e, next) => {
-    const { value: history = \[\] } = await $.state.get(readings);
+    const { value: history = [] } = await $.state.get(readings);
     if (e.props.hasSurvey || history.length === 0) {
       return next(e);
     }
@@ -280,19 +279,19 @@ async function takeReading($) {
   const { context } = await $.session.usage();
   if (!context?.window) return;
   const tokens = context.tokens ?? 0;
-  const percent = context.percent ?? Math.round((tokens / context.window) \* 100);
-  const { value: history = \[\] } = await $.state.get(readings);
-  await $.state.set(readings, \[...history, { tokens, window: context.window, percent }\].slice(-HISTORY));
+  const percent = context.percent ?? Math.round((tokens / context.window) * 100);
+  const { value: history = [] } = await $.state.get(readings);
+  await $.state.set(readings, [...history, { tokens, window: context.window, percent }].slice(-HISTORY));
 }
 
 function band(Box, Text, history, columns) {
-  const now = history\[history.length - 1\];
+  const now = history[history.length - 1];
   const f = FORECAST.find((b) => now.percent < b.upTo);
-  const parts = \[
-    Text({ color: f.color, bold: true, children: \`${f.icon}  ${f.word}\` }),
-    Text({ children: \`  ${now.percent}% of context\` }),
-    Text({ dimColor: true, children: \`  ${short(now.tokens)} / ${short(now.window)}\` }),
-  \];
+  const parts = [
+    Text({ color: f.color, bold: true, children: `${f.icon}  ${f.word}` }),
+    Text({ children: `  ${now.percent}% of context` }),
+    Text({ dimColor: true, children: `  ${short(now.tokens)} / ${short(now.window)}` }),
+  ];
   if (columns >= 60) {
     parts.push(Text({ dimColor: true, children: "   last turns " }));
     parts.push(Text({ color: f.color, children: sparkline(history) }));
@@ -305,22 +304,23 @@ function band(Box, Text, history, columns) {
 
 function sparkline(history) {
   const top = Math.max(...history.map((r) => r.tokens), 1);
-  return history.map((r) => BARS\[Math.floor((r.tokens / top) \* (BARS.length - 1))\]).join("");
+  return history.map((r) => BARS[Math.floor((r.tokens / top) * (BARS.length - 1))]).join("");
 }
 
 function trend(history) {
-  const delta = history\[history.length - 1\].tokens - history\[history.length - 2\].tokens;
+  const delta = history[history.length - 1].tokens - history[history.length - 2].tokens;
   if (delta === 0) return "  steady";
-  return delta > 0 ? \`  ▲ +${short(delta)} last turn\` : \`  ▼ ${short(-delta)} last turn\`;
+  return delta > 0 ? `  ▲ +${short(delta)} last turn` : `  ▼ ${short(-delta)} last turn`;
 }
 
 function short(n) {
-  if (n >= 1\_000\_000) return \`${+(n / 1\_000\_000).toFixed(1)}M\`;
-  if (n >= 1\_000) return \`${+(n / 1\_000).toFixed(1)}k\`;
+  if (n >= 1_000_000) return `${+(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${+(n / 1_000).toFixed(1)}k`;
   return String(n);
 }
 
 Three details are worth copying into your own mods:
+```
 
 -   **The component's props are on `e.props`.** `hasSurvey` tells you a survey wants the band, so the hook yields to it with `next(e)`. `bodyColumns` is the band's real width, which is narrower than the terminal while a pane is docked beside the transcript. Size the tree to it. Only `e.component`, `e.surface`, `e.requestId` and `e.viewport` sit at the top level of `e`.
 -   **Pass when you have nothing to draw.** Returning `next(e)` gives the band back to Claude Code and to other mods.
@@ -332,30 +332,29 @@ Save the file and the running session picks it up. After a few turns that read l
 
 `claude plugin validate` reads the manifest and the module's source the same way Claude Code will, and reports what the module hooks and calls:
 
-CODEText
-
+```text
 $ claude plugin validate ./token-weather
   > types ./types/index.d.ts declares state: token-weather.readings
   > ./token-weather.mjs hooks: session.start, turn.complete, ui.render{component=AbovePrompt}
   > ./token-weather.mjs calls: $.session.usage (via takeReading), $.state.get, $.state.set (via takeReading), $.ui.resolve
   > ./token-weather.mjs state writes: token-weather.readings
   > ./token-weather.mjs state reads: token-weather.readings
+```
 √ Validation passed
 
 `claude plugin test` runs the plugin's `*.test.ts` files against the real Claude Code runtime. Hooks that a test registers with `on` run _after_ the mod in the chain and stub what Claude Code would answer, so you control exactly what `$.session.usage()` returns:
 
-CODETypeScript
-
+```typescript
 // tests/token-weather.test.ts
 import { describe, expect, test } from "claude-code/testing";
 
 describe("token-weather", () => {
   test("the band follows the context window", async ($, on) => {
     // Hooks registered here run after the mod and stub what Claude Code would answer.
-    let tokens = 36\_100;
+    let tokens = 36_100;
     on("session.start", ($, e) => ({ cwd: e.cwd }));
     on("session.usage", () => ({
-      value: { startedAt: 0, rateLimits: \[\], context: { tokens, window: 200\_000, percent: Math.round(tokens / 2\_000) } },
+      value: { startedAt: 0, rateLimits: [], context: { tokens, window: 200_000, percent: Math.round(tokens / 2_000) } },
     }));
     on("turn.complete", () => ({ text: "" }));
 
@@ -368,18 +367,19 @@ describe("token-weather", () => {
     } as any);
     expect(await ui.find({ type: "Text", text: /Clear/ })).toBeDefined();
 
-    tokens = 134\_400;
+    tokens = 134_400;
     await $.turn.complete({ reason: "answer", answer: "ok", durationMs: 1 } as any);
     expect(await ui.find({ type: "Text", text: /Showers/ })).toBeDefined();
     expect(await ui.find({ type: "Text", text: /67% of context/ })).toBeDefined();
-    expect(await ui.find({ type: "Text", text: /▲ \\+98\\.3k last turn/ })).toBeDefined();
+    expect(await ui.find({ type: "Text", text: /▲ \+98\.3k last turn/ })).toBeDefined();
     await ui.unmount();
   });
 });
+```
 
-CODEText
-
+```text
 $ claude plugin test ./token-weather
+```
 (pass) token-weather > the band follows the context window
  1 pass
  0 fail
@@ -388,18 +388,18 @@ The test also checks the redraw behavior from step 3. The band updates after `tu
 
 A mod is a plugin, so it ships the same way. Put it in a marketplace, which can be as simple as a folder with a `.claude-plugin/marketplace.json`:
 
-CODEJSON
-
+```json
 {
   "name": "my-mods",
   "owner": { "name": "You" },
-  "plugins": \[{ "name": "token-weather", "source": "./token-weather" }\]
+  "plugins": [{ "name": "token-weather", "source": "./token-weather" }]
 }
+```
 
-CODEShell
-
+```shell
 claude plugin marketplace add ./my-mods
 claude plugin install token-weather@my-mods --scope user
+```
 
 To compare your version with a finished one, see [the complete Token Weather mod](https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/token-weather) in anthropics/claude-code-playground.
 
@@ -409,11 +409,11 @@ A mod is a Claude Code plugin, so you share it the same way as any other plugin,
 
 Installing takes three commands in Claude Code:
 
-CODEText
-
+```text
 /plugin marketplace add your-org/my-mods
 /plugin install token-weather@my-mods
 /reload-plugins
+```
 
 The mod starts when you reload. If it doesn't show up, restart Claude Code.
 
@@ -435,8 +435,7 @@ When Claude calls Bash with `rm -rf`, `git reset --hard`, `git clean`, a force p
 
 It uses three hooks: `tool.call` on Bash, and `ui.render` on `Pane` and on `AbovePrompt`. The core of it is the "answer" move from the table above:
 
-CODEJavaScript
-
+```javascript
 on("tool.call", { tool: "Bash" }, async ($, e, next) => {
   const risk = classify(String(e.command ?? ""));
   if (risk === null) return next(e);                 // everything else runs as normal
@@ -447,13 +446,14 @@ on("tool.call", { tool: "Bash" }, async ($, e, next) => {
   if (!opened.isPlaced) held.where = "band";         // too narrow for a pane: draw above the prompt
 
   while (held.decision === null && !next.signal.aborted) {
-    await $.process.run(\["sleep", "0.25"\]);          // time inside $ calls doesn't count against the hook's time limit
+    await $.process.run(["sleep", "0.25"]);          // time inside $ calls doesn't count against the hook's time limit
   }
   if (held.decision === "proceed") return next(e);   // let it run
-  return { deny: \`Blast Radius held this command: the user pressed Cancel. It would have: ${report.summary}.\` };
+  return { deny: `Blast Radius held this command: the user pressed Cancel. It would have: ${report.summary}.` };
 });
 
 What it teaches:
+```
 
 -   **`$.process.run` for dry runs.** The report comes from the tools' own commands: `git status --porcelain`, `git clean -n`, `git log HEAD..origin/main`, `showmigrations`. Arguments go in as an argv array, so nothing in a path is run as shell code.
 -   **Holding a call.** A hook gets 10 seconds of its own time per dispatch, but time spent waiting inside a `$` call doesn't count. The loop waits on short `sleep` processes until a button's `onPress` sets the decision, and it gives up when `next.signal` aborts (you pressed Esc).
@@ -474,14 +474,13 @@ While a turn runs, Replay Theater records every Edit and Write call: the file, p
 
 It never blocks or changes an edit. It observes:
 
-CODEJavaScript
-
+```javascript
 on("tool.call", async ($, e, next) => {
-  if (EDIT\_TOOLS.has(e.tool)) state.pending.push(...(await stepsFor($, e)));  // old/new text → diff
+  if (EDIT_TOOLS.has(e.tool)) state.pending.push(...(await stepsFor($, e)));  // old/new text → diff
   return next(e);                                                              // the edit runs untouched
 });
 
-on("turn.start", ($, e, next) => { if (!e.agentId) state.pending = \[\]; return next(e); });
+on("turn.start", ($, e, next) => { if (!e.agentId) state.pending = []; return next(e); });
 
 on("turn.complete", async ($, e, next) => {
   const r = await next(e);
@@ -497,6 +496,7 @@ on("session.start", async ($, e, next) => {
 on("command.run", { command: "replay" }, async ($, e) => ({ text: (await openReplay($)) ? "Replaying" : "No edits" }));
 
 What it teaches:
+```
 
 -   **Pairing events.** `turn.start` and `turn.complete` bracket the edits into one replay per turn, and `e.agentId` keeps subagent turns out of the grouping.
 -   **Registering a slash command.** `$.command.register` in `session.start`, then answer it on `command.run`.

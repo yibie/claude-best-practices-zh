@@ -37,14 +37,14 @@ mod 是一个 Claude Code 插件，其行为位于一个 JavaScript 或 TypeScri
 
 每个钩子的形状都相同：
 
-CODEJavaScript
-
+```javascript
 on("tool.call", { tool: "Bash" }, async ($, e, next) => {
   // $    the mods API: ui, session, state, store, fs, process, clock, http, tool, command, model, ...
   // e    this event's input, as plain data
   // next passes e to the other plugins and then to Claude Code's own behavior
   return next(e);
 });
+```
 
 钩子形成一条链，就像中间件。你的钩子运行，`next(e)` 把事件交给下一个插件，在最底层 Claude Code 做它本来就会做的事。一个钩子可以做三件事之一：
 
@@ -84,8 +84,7 @@ Token Weather 在每轮之后读取上下文窗口的填充程度，并在提示
 
 你可以跳过这六个步骤。Claude Code 知道如何编写 mod，所以你可以描述你想要的 mod，让它来完成工作。用 `claude` 启动一个会话，粘贴下面的提示词：
 
-CODEText
-
+```text
 Make me a Claude Code mod called token-weather: a live forecast of my context window, shown in the band above the prompt.
 
 What it should show, on one line:
@@ -95,6 +94,7 @@ What it should show, on one line:
 - How much the last turn added, like "▲ +98.3k last turn".
 
 It should update after every turn.
+```
 
 Claude 会询问一次是否为该会话开启热重载。允许它，当 Claude 的轮次结束时，色带就会出现在提示词上方。从那时起，每次更改都会就地重新加载，所以你可以继续要求调整（"让 Storm 从 70% 开始"、"在末尾加上美元成本"），并观察色带变化。该 mod 只在这个会话中加载，它的文件夹之后会被清理，所以要保留它，请把文件夹复制出来，像任何插件一样安装（[第 6 步](#step-6-share-it)）。
 
@@ -106,14 +106,13 @@ Claude 会询问一次是否为该会话开启热重载。允许它，当 Claude
 
 检查你的 Claude Code 版本是否足够新：
 
-CODEShell
-
-claude --version   \# 2.1.287 or later
+```shell
+claude --version   # 2.1.287 or later
+```
 
 创建这个目录结构：
 
-CODEText
-
+```text
 token-weather/
 ├── .claude-plugin/
 │   ├── plugin.json
@@ -125,50 +124,51 @@ token-weather/
 │   └── index.d.ts        (added in step 3)
 └── tests/
     └── token-weather.test.ts   (added in step 5)
+```
 
 `.claude-plugin/plugin.json` 是一个标准的插件清单：
 
-CODEJSON
-
+```json
 {
   "name": "token-weather",
   "version": "0.1.0",
   "description": "A live forecast of the context window, drawn above the prompt.",
   "author": { "name": "You" }
 }
+```
 
 `hooks/hooks.json` 指向该模块。一个 mod 恰好有一个：
 
-CODEJSON
-
+```json
 {
-  "modules": \["./token-weather.mjs"\]
+  "modules": ["./token-weather.mjs"]
 }
+```
 
 ### 第 2 步：绘制一些东西
 
 提示词正上方的色带是一个名为 `AbovePrompt` 的组件。Claude Code 自己不在那里绘制任何东西，所以它是一个很好的第一个目标。钩住它的 `ui.render` 事件并返回一个元素树：
 
-CODEJavaScript
-
+```javascript
 // hooks/token-weather.mjs
 export function register(on) {
   on("ui.render", { component: "AbovePrompt" }, ($, e, next) => {
     const { Box, Text } = $.ui.resolve(e);
     return Box({
       paddingX: 1,
-      children: \[Text({ color: "yellow", bold: true, children: "☀  Clear skies" })\],
+      children: [Text({ color: "yellow", bold: true, children: "☀  Clear skies" })],
     });
   });
 }
+```
 
 这些元素不是全局的。`$.ui.resolve(e)` 返回正在绘制的界面的构造函数，因为 Claude Code 绘制的每个界面支持的集合略有不同。JSX 也可以使用，以 `h` 作为工厂函数。
 
 用加载了插件的命令启动一个会话：
 
-CODEShell
-
+```shell
 claude --plugin-dir ./token-weather
+```
 
 "☀ Clear skies" 出现在提示词上方。保持会话打开。该文件夹被监视，所以每次保存都会就地重新加载模块，无需重启。这个快速反馈循环正是编写 mod 的大部分乐趣所在。
 
@@ -180,8 +180,7 @@ claude --plugin-dir ./token-weather
 
 在会话开始时以及每轮之后取一次读数：
 
-CODEJavaScript
-
+```javascript
 on("session.start", async ($, e, next) => {
   const result = await next(e);
   await takeReading($);
@@ -195,13 +194,13 @@ on("turn.complete", async ($, e, next) => {
   }
   return result;
 });
+```
 
 两个钩子都先调用 `next(e)`，然后观察。两者都不改变发生的事。
 
 **读数保存在哪里。**模块级的 `let readings = []` 看起来是显而易见的选择，但热重载是一次全新的加载：`register` 再次运行，`session.start` 再次触发，模块变量从头开始。把历史记录放在 `$.state` 中。它在整个会话期间在宿主中保存命名值，并且能在重载后存活。
 
-CODEJavaScript
-
+```javascript
 // Held by the host, so the history survives a hot reload of this file.
 const readings = { plugin: "token-weather", key: "readings" };
 
@@ -209,22 +208,23 @@ async function takeReading($) {
   const { context } = await $.session.usage();
   if (!context?.window) return;
   const tokens = context.tokens ?? 0;
-  const percent = context.percent ?? Math.round((tokens / context.window) \* 100);
-  const { value: history = \[\] } = await $.state.get(readings);
-  await $.state.set(readings, \[...history, { tokens, window: context.window, percent }\].slice(-HISTORY));
+  const percent = context.percent ?? Math.round((tokens / context.window) * 100);
+  const { value: history = [] } = await $.state.get(readings);
+  await $.state.set(readings, [...history, { tokens, window: context.window, percent }].slice(-HISTORY));
 }
+```
 
 状态值在插件的**类型契约**中声明，这是一个清单指向的小型 `.d.ts` 文件。添加 `types/index.d.ts`：
 
-CODETypeScript
-
+```typescript
 export type TokenWeatherReading = { tokens: number; window: number; percent: number };
 
 declare module "claude-code" {
   interface PluginState {
-    "token-weather": { readings: TokenWeatherReading\[\] };
+    "token-weather": { readings: TokenWeatherReading[] };
   }
 }
+```
 
 然后在 `plugin.json` 中添加 `"types": "./types/index.d.ts"`。如果你跳过这一步，`claude plugin validate` 会用一个指明修复方法的错误阻止你：`token-weather.readings is not declared: the manifest's types contract must name it in interface PluginState { … }`。
 
@@ -234,19 +234,18 @@ declare module "claude-code" {
 
 这是完整的模块：
 
-CODEJavaScript
-
+```javascript
 // Token Weather: a live forecast of the context window, above the prompt.
 
 const HISTORY = 12;
 const BARS = "▁▂▃▄▅▆▇█";
-const FORECAST = \[
+const FORECAST = [
   { upTo: 25, icon: "☀", word: "Clear", color: "yellow" },
   { upTo: 50, icon: "☁", word: "Cloudy", color: "cyan" },
   { upTo: 75, icon: "☂", word: "Showers", color: "blue" },
   { upTo: 90, icon: "☇", word: "Storm", color: "magenta" },
   { upTo: Infinity, icon: "↯", word: "Compact soon", color: "red" },
-\];
+];
 
 // Held by the host, so the history survives a hot reload of this file.
 const readings = { plugin: "token-weather", key: "readings" };
@@ -267,7 +266,7 @@ export function register(on) {
   });
 
   on("ui.render", { component: "AbovePrompt" }, async ($, e, next) => {
-    const { value: history = \[\] } = await $.state.get(readings);
+    const { value: history = [] } = await $.state.get(readings);
     if (e.props.hasSurvey || history.length === 0) {
       return next(e);
     }
@@ -280,19 +279,19 @@ async function takeReading($) {
   const { context } = await $.session.usage();
   if (!context?.window) return;
   const tokens = context.tokens ?? 0;
-  const percent = context.percent ?? Math.round((tokens / context.window) \* 100);
-  const { value: history = \[\] } = await $.state.get(readings);
-  await $.state.set(readings, \[...history, { tokens, window: context.window, percent }\].slice(-HISTORY));
+  const percent = context.percent ?? Math.round((tokens / context.window) * 100);
+  const { value: history = [] } = await $.state.get(readings);
+  await $.state.set(readings, [...history, { tokens, window: context.window, percent }].slice(-HISTORY));
 }
 
 function band(Box, Text, history, columns) {
-  const now = history\[history.length - 1\];
+  const now = history[history.length - 1];
   const f = FORECAST.find((b) => now.percent < b.upTo);
-  const parts = \[
-    Text({ color: f.color, bold: true, children: \`${f.icon}  ${f.word}\` }),
-    Text({ children: \`  ${now.percent}% of context\` }),
-    Text({ dimColor: true, children: \`  ${short(now.tokens)} / ${short(now.window)}\` }),
-  \];
+  const parts = [
+    Text({ color: f.color, bold: true, children: `${f.icon}  ${f.word}` }),
+    Text({ children: `  ${now.percent}% of context` }),
+    Text({ dimColor: true, children: `  ${short(now.tokens)} / ${short(now.window)}` }),
+  ];
   if (columns >= 60) {
     parts.push(Text({ dimColor: true, children: "   last turns " }));
     parts.push(Text({ color: f.color, children: sparkline(history) }));
@@ -305,20 +304,21 @@ function band(Box, Text, history, columns) {
 
 function sparkline(history) {
   const top = Math.max(...history.map((r) => r.tokens), 1);
-  return history.map((r) => BARS\[Math.floor((r.tokens / top) \* (BARS.length - 1))\]).join("");
+  return history.map((r) => BARS[Math.floor((r.tokens / top) * (BARS.length - 1))]).join("");
 }
 
 function trend(history) {
-  const delta = history\[history.length - 1\].tokens - history\[history.length - 2\].tokens;
+  const delta = history[history.length - 1].tokens - history[history.length - 2].tokens;
   if (delta === 0) return "  steady";
-  return delta > 0 ? \`  ▲ +${short(delta)} last turn\` : \`  ▼ ${short(-delta)} last turn\`;
+  return delta > 0 ? `  ▲ +${short(delta)} last turn` : `  ▼ ${short(-delta)} last turn`;
 }
 
 function short(n) {
-  if (n >= 1\_000\_000) return \`${+(n / 1\_000\_000).toFixed(1)}M\`;
-  if (n >= 1\_000) return \`${+(n / 1\_000).toFixed(1)}k\`;
+  if (n >= 1_000_000) return `${+(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${+(n / 1_000).toFixed(1)}k`;
   return String(n);
 }
+```
 
 有三个细节值得复制到你自己的 mod 中：
 
@@ -332,30 +332,29 @@ function short(n) {
 
 `claude plugin validate` 以与 Claude Code 相同的方式读取清单和模块源码，并报告模块钩住了什么、调用了什么：
 
-CODEText
-
+```text
 $ claude plugin validate ./token-weather
   > types ./types/index.d.ts declares state: token-weather.readings
   > ./token-weather.mjs hooks: session.start, turn.complete, ui.render{component=AbovePrompt}
   > ./token-weather.mjs calls: $.session.usage (via takeReading), $.state.get, $.state.set (via takeReading), $.ui.resolve
   > ./token-weather.mjs state writes: token-weather.readings
   > ./token-weather.mjs state reads: token-weather.readings
+```
 √ Validation passed
 
 `claude plugin test` 针对真实的 Claude Code 运行时运行插件的 `*.test.ts` 文件。测试用 `on` 注册的钩子在链中运行于 mod 之后，并桩掉 Claude Code 会给出的回答，因此你可以精确控制 `$.session.usage()` 返回什么：
 
-CODETypeScript
-
+```typescript
 // tests/token-weather.test.ts
 import { describe, expect, test } from "claude-code/testing";
 
 describe("token-weather", () => {
   test("the band follows the context window", async ($, on) => {
     // Hooks registered here run after the mod and stub what Claude Code would answer.
-    let tokens = 36\_100;
+    let tokens = 36_100;
     on("session.start", ($, e) => ({ cwd: e.cwd }));
     on("session.usage", () => ({
-      value: { startedAt: 0, rateLimits: \[\], context: { tokens, window: 200\_000, percent: Math.round(tokens / 2\_000) } },
+      value: { startedAt: 0, rateLimits: [], context: { tokens, window: 200_000, percent: Math.round(tokens / 2_000) } },
     }));
     on("turn.complete", () => ({ text: "" }));
 
@@ -368,18 +367,19 @@ describe("token-weather", () => {
     } as any);
     expect(await ui.find({ type: "Text", text: /Clear/ })).toBeDefined();
 
-    tokens = 134\_400;
+    tokens = 134_400;
     await $.turn.complete({ reason: "answer", answer: "ok", durationMs: 1 } as any);
     expect(await ui.find({ type: "Text", text: /Showers/ })).toBeDefined();
     expect(await ui.find({ type: "Text", text: /67% of context/ })).toBeDefined();
-    expect(await ui.find({ type: "Text", text: /▲ \\+98\\.3k last turn/ })).toBeDefined();
+    expect(await ui.find({ type: "Text", text: /▲ \+98\.3k last turn/ })).toBeDefined();
     await ui.unmount();
   });
 });
+```
 
-CODEText
-
+```text
 $ claude plugin test ./token-weather
+```
 (pass) token-weather > the band follows the context window
  1 pass
  0 fail
@@ -388,18 +388,18 @@ $ claude plugin test ./token-weather
 
 mod 是一个插件，所以它以相同的方式分发。把它放进一个市场，这可以简单到一个带有 `.claude-plugin/marketplace.json` 的文件夹：
 
-CODEJSON
-
+```json
 {
   "name": "my-mods",
   "owner": { "name": "You" },
-  "plugins": \[{ "name": "token-weather", "source": "./token-weather" }\]
+  "plugins": [{ "name": "token-weather", "source": "./token-weather" }]
 }
+```
 
-CODEShell
-
+```shell
 claude plugin marketplace add ./my-mods
 claude plugin install token-weather@my-mods --scope user
+```
 
 要将你的版本与完成的版本进行比较，请参阅 anthropics/claude-code-playground 中的[完整的 Token Weather mod](https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/token-weather)。
 
@@ -409,11 +409,11 @@ mod 是一个 Claude Code 插件，所以你像分享任何其他插件一样分
 
 在 Claude Code 中安装需要三条命令：
 
-CODEText
-
+```text
 /plugin marketplace add your-org/my-mods
 /plugin install token-weather@my-mods
 /reload-plugins
+```
 
 mod 在你重新加载时启动。如果它没有出现，重启 Claude Code。
 
@@ -435,8 +435,7 @@ Token Weather 只观察和绘制。接下来的两个 mod 会介入事件、打�
 
 它使用三个钩子：Bash 上的 `tool.call`，以及 `Pane` 和 `AbovePrompt` 上的 `ui.render`。它的核心是上表中的"应答"动作：
 
-CODEJavaScript
-
+```javascript
 on("tool.call", { tool: "Bash" }, async ($, e, next) => {
   const risk = classify(String(e.command ?? ""));
   if (risk === null) return next(e);                 // everything else runs as normal
@@ -447,11 +446,12 @@ on("tool.call", { tool: "Bash" }, async ($, e, next) => {
   if (!opened.isPlaced) held.where = "band";         // too narrow for a pane: draw above the prompt
 
   while (held.decision === null && !next.signal.aborted) {
-    await $.process.run(\["sleep", "0.25"\]);          // time inside $ calls doesn't count against the hook's time limit
+    await $.process.run(["sleep", "0.25"]);          // time inside $ calls doesn't count against the hook's time limit
   }
   if (held.decision === "proceed") return next(e);   // let it run
-  return { deny: \`Blast Radius held this command: the user pressed Cancel. It would have: ${report.summary}.\` };
+  return { deny: `Blast Radius held this command: the user pressed Cancel. It would have: ${report.summary}.` };
 });
+```
 
 它教了什么：
 
@@ -474,14 +474,13 @@ on("tool.call", { tool: "Bash" }, async ($, e, next) => {
 
 它从不阻止或改变编辑。它观察：
 
-CODEJavaScript
-
+```javascript
 on("tool.call", async ($, e, next) => {
-  if (EDIT\_TOOLS.has(e.tool)) state.pending.push(...(await stepsFor($, e)));  // old/new text → diff
+  if (EDIT_TOOLS.has(e.tool)) state.pending.push(...(await stepsFor($, e)));  // old/new text → diff
   return next(e);                                                              // the edit runs untouched
 });
 
-on("turn.start", ($, e, next) => { if (!e.agentId) state.pending = \[\]; return next(e); });
+on("turn.start", ($, e, next) => { if (!e.agentId) state.pending = []; return next(e); });
 
 on("turn.complete", async ($, e, next) => {
   const r = await next(e);
@@ -495,6 +494,7 @@ on("session.start", async ($, e, next) => {
   return r;
 });
 on("command.run", { command: "replay" }, async ($, e) => ({ text: (await openReplay($)) ? "Replaying" : "No edits" }));
+```
 
 它教了什么：
 

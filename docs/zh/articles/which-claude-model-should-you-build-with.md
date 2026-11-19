@@ -138,16 +138,18 @@ Haiku 5.5 是唯一一个 token 价格随提示词长度变化的模型。不超
 
 将以下内容保存为 `.claude/agents/log-reader.md`：
 
-CODEMarkdown
-
-\---
+```markdown
+---
 name: log-reader
 description: Reads test output and logs, and reports each failing case. Use after a test run.
 tools: Read, Grep, Glob, Bash
 model: haiku
 ---
+```
 
+```text
 Read the logs you're given. For each failure, report the file, the test name and the first error line. Don't edit any files.
+```
 
 让小模型做那些错误很容易发现的工作，比如查找文件、运行测试和读取日志。把代码编辑和判断性决策留给主模型。当小模型误读搜索结果时，主模型会打开错误的文件并在上面消耗 token。
 

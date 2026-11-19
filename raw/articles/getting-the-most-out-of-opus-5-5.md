@@ -33,9 +33,11 @@ Opus 5.5 works well with the way you already use Claude. A few things behave dif
 
 PROMPT
 
+```text
 Migrate the payment endpoints from the old client to the new one.
 Done means: every endpoint uses the new client, the old client is deleted, and the test suite passes.
 Stop and ask me only if a test fails for a reason you can't explain.
+```
 
 ![The example prompt split into three labelled boxes: the whole task (migrate the payment endpoints from the old client to the new one), the finish line, highlighted (every endpoint uses the new client, the old client is deleted, and the test suite passes), and when to stop (only if a test fails for a reason you can’t explain). Footer: “Give the whole task in one message. Name the finish line. Then leave it alone.”](https://claude.dev/media/88d75704ac7ad2bde70a2a5cb1fd5c1800228810397be996b1dbfd91b61a047e.png)
 
@@ -67,8 +69,10 @@ Stop and ask me only if a test fails for a reason you can't explain.
 
 PROMPT
 
+```text
 Build a personal website with placeholder content.
 Don't use a cream or off-white background, italic accent words in headings, numbered "01 / 02 / 03" section labels, monospace labels, or pill-shaped buttons.
+```
 
 Then look at what it chose instead. If you don’t like that either, add it to the list and ask again.
 
@@ -84,8 +88,10 @@ Then look at what it chose instead. If you don’t like that either, add it to t
 
 PROMPT
 
+```text
 When a step doesn't need my input, keep going. Put status notes in the same message as your next action.
 Stop and ask only when you can't continue without me, or before anything destructive: deleting data, force-pushing, or changing anything outside this repository.
+```
 
 ![A CLAUDE.md card titled “Tell it which stops you want” with two boxes. Keep going: when a step doesn’t need my input, keep going, and put status notes in the same message as your next action. Stop and ask: only when you can’t continue without me, or before anything destructive: deleting data, force-pushing, or changing anything outside this repository. Footer: “Edit it to fit your project. Keep permission prompts on for destructive commands too.”](https://claude.dev/media/33679878db758a7730f1bb8988328df623e2aca8acec93a4bb6ecba3bc37ee43.png)
 
@@ -107,9 +113,11 @@ For pair programming, you may want the opposite: a one-line plan before it start
 
 PROMPT
 
+```text
 Audit every service in services/ for the retry bug in the linked issue.
 Give each service to its own subagent. When a subagent reports back, check its evidence before you accept it.
 Finish with one table: service, affected yes or no, and the evidence.
+```
 
 ![Diagram titled “Give each service to its own subagent.” The prompt “Audit every service in services/ for the retry bug in the linked issue” fans out to four subagents. Their reports join at a “Check its evidence” step (“When a subagent reports back, check its evidence before you accept it”), then an arrow leads to “Finish with one table,” an empty table with the columns Service, Affected yes or no, and The evidence.](https://claude.dev/media/96f05d24a6728ed462139b2430e36c897ec36d8777109fb73ce839e6db266427.png)
 
@@ -143,8 +151,10 @@ Finish with one table: service, affected yes or no, and the evidence.
 
 PROMPT
 
+```text
 Review the diff on this branch against main.
 List only problems you'd block the merge for. For each one, give the file and line, why it's wrong, and how to show it fails.
+```
 
 ### Ask it to mark what it couldn’t confirm
 
@@ -190,7 +200,9 @@ First, check that the model picker says Opus 5.5.
 
 PROMPT
 
+```text
 Once you have answered something, treat that answer as done. Focus on what I'm asking now, and don't go back over an earlier answer unless I ask about it or point out a problem with it.
+```
 
 Leave it out of projects for long analysis, where a later step can show a mistake in an earlier one.
 

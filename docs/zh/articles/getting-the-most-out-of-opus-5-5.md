@@ -33,9 +33,11 @@ Opus 5.5 与你现有的 Claude 使用方式配合得很好。不过有几处行
 
 PROMPT
 
+```text
 Migrate the payment endpoints from the old client to the new one.
 Done means: every endpoint uses the new client, the old client is deleted, and the test suite passes.
 Stop and ask me only if a test fails for a reason you can't explain.
+```
 
 ![示例提示词被分成三个带标签的方框：整个任务（把支付端点从旧客户端迁移到新客户端）、终点（高亮显示：每个端点都使用新客户端，旧客户端被删除，测试套件通过），以及何时停止（仅当测试因你无法解释的原因失败时）。页脚：“在一条消息里给出整个任务。指明终点。然后别去打扰它。”](https://claude.dev/media/88d75704ac7ad2bde70a2a5cb1fd5c1800228810397be996b1dbfd91b61a047e.png)
 
@@ -67,8 +69,10 @@ Stop and ask me only if a test fails for a reason you can't explain.
 
 PROMPT
 
+```text
 Build a personal website with placeholder content.
 Don't use a cream or off-white background, italic accent words in headings, numbered "01 / 02 / 03" section labels, monospace labels, or pill-shaped buttons.
+```
 
 然后看看它改用了什么。如果你也不喜欢，就把它加到列表里再问一次。
 
@@ -84,8 +88,10 @@ Don't use a cream or off-white background, italic accent words in headings, numb
 
 PROMPT
 
+```text
 When a step doesn't need my input, keep going. Put status notes in the same message as your next action.
 Stop and ask only when you can't continue without me, or before anything destructive: deleting data, force-pushing, or changing anything outside this repository.
+```
 
 ![一张标题为“告诉它你希望哪些地方停下来”的 CLAUDE.md 卡片，包含两个方框。继续推进：当某一步不需要我的输入时，继续推进，并把状态说明与你的下一步操作放在同一条消息里。停下来询问：仅当你没有我就无法继续时，或在任何破坏性操作之前：删除数据、强制推送，或更改此仓库之外的任何内容。页脚：“根据你的项目调整它。对破坏性命令也要保持权限提示开启。”](https://claude.dev/media/33679878db758a7730f1bb8988328df623e2aca8acec93a4bb6ecba3bc37ee43.png)
 
@@ -107,9 +113,11 @@ Stop and ask only when you can't continue without me, or before anything destruc
 
 PROMPT
 
+```text
 Audit every service in services/ for the retry bug in the linked issue.
 Give each service to its own subagent. When a subagent reports back, check its evidence before you accept it.
 Finish with one table: service, affected yes or no, and the evidence.
+```
 
 ![标题为“把每个服务交给各自的子智能体”的示意图。提示词“Audit every service in services/ for the retry bug in the linked issue”分发给四个子智能体。它们的报告汇入一个“检查其证据”步骤（“当子智能体回报时，在接受之前检查其证据”），然后一个箭头指向“以一张表收尾”，即一张空表，列为 Service、Affected yes or no 和 The evidence。](https://claude.dev/media/96f05d24a6728ed462139b2430e36c897ec36d8777109fb73ce839e6db266427.png)
 
@@ -143,8 +151,10 @@ Finish with one table: service, affected yes or no, and the evidence.
 
 PROMPT
 
+```text
 Review the diff on this branch against main.
 List only problems you'd block the merge for. For each one, give the file and line, why it's wrong, and how to show it fails.
+```
 
 ### 让它标出无法确认的内容
 
@@ -190,7 +200,9 @@ List only problems you'd block the merge for. For each one, give the file and li
 
 PROMPT
 
+```text
 Once you have answered something, treat that answer as done. Focus on what I'm asking now, and don't go back over an earlier answer unless I ask about it or point out a problem with it.
+```
 
 在长时间分析类项目中不要加这条，因为后面的步骤可能暴露前面步骤中的错误。
 

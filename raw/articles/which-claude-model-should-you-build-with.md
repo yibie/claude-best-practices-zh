@@ -137,16 +137,18 @@ A move down a tier loses the earlier reasoning, because a model never reads the 
 
 Save this as `.claude/agents/log-reader.md`:
 
-CODEMarkdown
-
-\---
+```markdown
+---
 name: log-reader
 description: Reads test output and logs, and reports each failing case. Use after a test run.
 tools: Read, Grep, Glob, Bash
 model: haiku
 ---
+```
 
+```text
 Read the logs you're given. For each failure, report the file, the test name and the first error line. Don't edit any files.
+```
 
 Keep small models on work where a mistake is cheap to spot, like finding files, running tests and reading logs. Keep code edits and judgment calls on the main model. When a small model misreads a search result, the main model opens the wrong file and spends tokens on it.
 

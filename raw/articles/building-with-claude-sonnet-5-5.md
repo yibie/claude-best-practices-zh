@@ -21,22 +21,22 @@ _Credit to [@jkeatn](https://x.com/jkeatn) for ideas related to code-to-painting
 
 This guide is about building with the model. To try it, run this request as written:
 
-CODEPython
-
+```python
 import anthropic
 
 client = anthropic.Anthropic()
 
 response = client.messages.create(
     model="claude-sonnet-5-5",
-    max\_tokens=4096,
-    messages=\[
+    max_tokens=4096,
+    messages=[
         {
             "role": "user",
             "content": "Analyze the trade-offs between microservices and monolithic architectures",
         }
-    \],
-    output\_config={"effort": "medium"},
+    ],
+    output_config={"effort": "medium"},
+```
 )
 
 for block in response.content:
@@ -111,25 +111,29 @@ Claude Code can also do the migration for you. Run `/claude-api migrate this pro
 
 On Sonnet 5.5, a request with no `thinking` field runs with adaptive thinking, and `thinking: {"type": "disabled"}` returns a 400 error. Send the new `between_tools` setting instead. With `between_tools`, thinking only happens between tool calls, and total response time is the same or faster.
 
-CODEPython
-
-\# Before: Claude Sonnet 5
+```python
+# Before: Claude Sonnet 5
+```
+```python
 client.messages.create(
     model="claude-sonnet-5",
-    max\_tokens=16000,
+    max_tokens=16000,
     thinking={"type": "disabled"},
-    output\_config={"effort": "xhigh"},
-    messages=\[{"role": "user", "content": "..."}\],
+    output_config={"effort": "xhigh"},
+    messages=[{"role": "user", "content": "..."}],
 )
+```
 
-\# After: Claude Sonnet 5.5
+```python
+# After: Claude Sonnet 5.5
 client.messages.create(
     model="claude-sonnet-5-5",
-    max\_tokens=16000,
-    thinking={"type": "between\_tools"},
-    output\_config={"effort": "high"},
-    messages=\[{"role": "user", "content": "..."}\],
+    max_tokens=16000,
+    thinking={"type": "between_tools"},
+    output_config={"effort": "high"},
+    messages=[{"role": "user", "content": "..."}],
 )
+```
 
 The example also drops effort from `xhigh` to `high`, because `between_tools` has these limits:
 
@@ -145,15 +149,14 @@ If you turn upfront thinking off with `between_tools`, use adaptive thinking ins
 
 `tool_choice` of type `any` or `tool` returns a 400 error, including on the token counting endpoint. Send `auto`, mark the tool `strict: true` so its input matches the schema, and say in the prompt when to use it:
 
-CODEPython
-
-weather\_tool = {
-    "name": "get\_weather",
+```python
+weather_tool = {
+    "name": "get_weather",
     "description": "Get the current weather in a given location",
-    "input\_schema": {
+    "input_schema": {
         "type": "object",
         "properties": {"location": {"type": "string"}},
-        "required": \["location"\],
+        "required": ["location"],
         "additionalProperties": False,
     },
     "strict": True,
@@ -161,12 +164,13 @@ weather\_tool = {
 
 client.messages.create(
     model="claude-sonnet-5-5",
-    max\_tokens=1024,
-    tools=\[weather\_tool\],
-    tool\_choice={"type": "auto"},  \# was {"type": "tool", "name": "get\_weather"}
-    messages=\[
-        {"role": "user", "content": "What's the weather in Paris? Use the get\_weather tool."}
-    \],
+    max_tokens=1024,
+    tools=[weather_tool],
+    tool_choice={"type": "auto"},  # was {"type": "tool", "name": "get_weather"}
+    messages=[
+        {"role": "user", "content": "What's the weather in Paris? Use the get_weather tool."}
+    ],
+```
 )
 
 Strict tool use needs `additionalProperties: false` on every object.
@@ -207,8 +211,7 @@ Existing Sonnet 5 prompts should perform well without changes. If your prompts c
 
 Sonnet 5.5 generally checks its work before reporting a change as done, but at `low` effort it sometimes skips a check that exercises the change. If you see changes reported as done without test or build output, the prompting guide recommends this system-prompt paragraph:
 
-CODEText
-
+```text
 When you change code that can be run, built, or type-checked, run a real
 check that exercises the change before reporting it done: the project's
 tests, type-checker, or build, or the changed command itself. A syntax-only
@@ -218,14 +221,15 @@ its own package manager and lockfile (e.g. npm install, pip
 install -r requirements.txt), never via sudo or the system package manager,
 unless told not to. Only if no real check can run here, say which one you
 did not run and why instead of reporting the change as done.
+```
 
 ### Use thinking.display for progress
 
 Don't ask the model to write out its reasoning in the response, because that invites `reasoning_extraction` declines. Read summarized thinking instead:
 
-CODEPython
-
+```python
 thinking={"type": "adaptive", "display": "summarized"}
+```
 
 For user-facing progress notes on their own, use `display: "updates"` (beta). If you want updates at predictable points, such as a line before the first tool call and a short recap at the end, say so in the system prompt.
 

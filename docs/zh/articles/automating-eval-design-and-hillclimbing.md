@@ -182,16 +182,18 @@ claude-api skill 评估
 
 **注意：** 先运行 `claude update`。claude-api skill 随 Claude Code 一起提供，因此更新即可获得这些命令的最新版本。
 
-CODEShell
-
+```shell
 claude update
+```
 
 然后，在 Claude Code 中：
 
 PROMPT
 
+```shell
 /claude-api build-eval
 /claude-api hillclimb
+```
 
 这些子命令可以通过 [claude-api skill](https://github.com/anthropics/skills/tree/main/skills/claude-api) 直接在 Claude Code 中使用：
 

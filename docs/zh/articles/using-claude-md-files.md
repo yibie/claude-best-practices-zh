@@ -48,9 +48,9 @@ FastAPI REST API for user authentication and profiles. Uses SQLAlchemy for datab
 - PEP 8 with 100 character lines
 
 ## Common Commands
-```bash
 uvicorn app.main:app --reload  # dev server
 pytest tests/ -v               # run tests
+```bash
 ```
 
 ## Notes

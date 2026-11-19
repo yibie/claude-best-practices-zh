@@ -795,7 +795,9 @@ exit 0
 
 _由平台团队通过 MDM 或管理控制台部署；工程师无法编辑或覆盖其中任何内容。_
 
-{ "permissions": { "deny": \[ "Read(.env\*)", "Read(./secrets/\*\*)", "WebFetch", "Bash(curl \*)", "Bash(wget \*)" \], "allow": \[ "Bash(git \*)", "Bash(make build)", "Bash(make test)", "Bash(make lint)" \], "disableBypassPermissionsMode": "disable" }, "allowManagedPermissionRulesOnly": true, "sandbox": { "enabled": true, "failIfUnavailable": true, "allowUnsandboxedCommands": false, "network": { "allowedDomains": \["git.internal.example.com", "registry.npmjs.org"\] }, "credentials": { "files": \[ { "path": "~/.ssh", "mode": "deny" }, { "path": "~/.aws/credentials", "mode": "deny" } \], "envVars": \[ { "name": "GITHUB\_TOKEN", "mode": "deny" } \] } }, "allowManagedHooksOnly": true, "disableSideloadFlags": true, "allowManagedMcpServersOnly": true, "strictKnownMarketplaces": \[ { "source": "github", "repo": "example-corp/approved-plugins" } \], "requiredMinimumVersion": "2.1.193" }
+```json
+{ "permissions": { "deny": [ "Read(.env*)", "Read(./secrets/**)", "WebFetch", "Bash(curl *)", "Bash(wget *)" ], "allow": [ "Bash(git *)", "Bash(make build)", "Bash(make test)", "Bash(make lint)" ], "disableBypassPermissionsMode": "disable" }, "allowManagedPermissionRulesOnly": true, "sandbox": { "enabled": true, "failIfUnavailable": true, "allowUnsandboxedCommands": false, "network": { "allowedDomains": ["git.internal.example.com", "registry.npmjs.org"] }, "credentials": { "files": [ { "path": "~/.ssh", "mode": "deny" }, { "path": "~/.aws/credentials", "mode": "deny" } ], "envVars": [ { "name": "GITHUB_TOKEN", "mode": "deny" } ] } }, "allowManagedHooksOnly": true, "disableSideloadFlags": true, "allowManagedMcpServersOnly": true, "strictKnownMarketplaces": [ { "source": "github", "repo": "example-corp/approved-plugins" } ], "requiredMinimumVersion": "2.1.193" }
+```
 
 每一行在控制层面带来什么
 

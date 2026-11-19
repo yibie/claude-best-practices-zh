@@ -38,11 +38,11 @@ fetched_at: "2026-11-18"
 
 我在 16 秒内启动了三个云会话，每个问题一个。我是以编程方式启动它们的，而且因为 tidepool 不在 GitHub 上，每个会话首先根据其提示词中的文件重建仓库。对于真实仓库，你会跳过这一步，而从终端启动时，每个会话就是一条 `claude --cloud` 命令。缩短后，三个提示词是：
 
-CODEShell
-
+```shell
 claude --cloud "npm test fails maybe one run in four. Find the flaky test, fix the root cause in the code (not the test), and prove it by running the suite at least 30 times in a row."
 claude --cloud "docs/API.md is out of date with src/server.js. Rewrite it so every endpoint, parameter, default and response shape matches the code. Start the server and run each curl example to check it."
-claude --cloud "Make src/logger.js emit one JSON object per line, keep LOG\_LEVEL, and log method, path, status and duration\_ms as fields. Add a test for the logger."
+claude --cloud "Make src/logger.js emit one JSON object per line, keep LOG_LEVEL, and log method, path, status and duration_ms as fields. Add a test for the logger."
+```
 
 这些会话分别运行了 61、65 和 72 秒，三个都在第一个启动后 87 秒时完成。重建仓库大约占每次运行的 三分之一 到略多于一半。以下是结果。
 
@@ -100,11 +100,11 @@ claude --cloud "Make src/logger.js emit one JSON object per line, keep LOG\_LEVE
 
 假设你有五个小的、不相关的修复。在本地，你会一个接一个地做，或者设置五个 worktree 并让它们的端口和安装互不干扰。在云端，你会启动五个会话并审查五个分支。
 
-CODEShell
-
+```shell
 claude --cloud "Fix the flaky test in auth.spec.ts"
 claude --cloud "Update the API documentation"
 claude --cloud "Refactor the logger to use structured output"
+```
 
 `claude --cloud` 会在你当前分支克隆你的 GitHub 远程仓库，因此请先推送你的本地提交。在虚拟机启动期间，CLI 会显示设置步骤的实时清单，并排队你输入的任何内容。
 
@@ -128,18 +128,18 @@ Claude 的每一轮仍然计入你的套餐，但一条命令中的长时间测�
 
 对于较大的更改，先在来回沟通成本低的地方就方案达成一致。以计划模式启动 Claude，一起制定计划，提交计划并推送。
 
-CODEShell
-
+```shell
 claude --permission-mode plan
+```
 \# ...agree on the plan, save it to docs/migration-plan.md, commit and push...
 claude --cloud "Execute the migration plan in docs/migration-plan.md"
 
 当云会话构建时，你的终端可以自由处理其他工作。完成后，将会话拉下来手动完成。
 
-CODEShell
-
-claude --teleport            \# pick a cloud session
+```shell
+claude --teleport            # pick a cloud session
 claude --teleport <session-id>
+```
 
 Teleport 会检查你在同一个仓库中，获取会话的分支，检出它，并将整个对话加载到你的终端。你需要一个干净的工作树（它会提供暂存选项），并且分支必须已推送。在 Claude Code 内部，`/teleport`（或 `/tp`）打开相同的选择器，`/tasks` 然后 `t` 也可以。Desktop 应用则相反，其 **Open in** 菜单将本地会话发送到云端。
 
@@ -161,9 +161,9 @@ Claude 会为失败的检查和审查评论推送清晰的修复，并解释它�
 
 有两个较小的工具在这里有帮助。你可以从任何已登录的机器（包括 CI 作业）向正在运行的会话排队一个后续消息。
 
-CODEShell
-
+```shell
 claude -p "The integration tier is green now; rebase on main and push" --cloud <session-id>
+```
 
 你也可以为预填的会话添加书签。像 `claude.ai/code?prompt=Triage+the+newest+issues&repositories=acme-labs/tidepool` 这样的 URL 会打开 claude.ai/code，提示词和仓库已经填好。
 

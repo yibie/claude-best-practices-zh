@@ -1,0 +1,618 @@
+[
+  {
+    "file": "docs/zh/articles/automating-eval-design-and-hillclimbing.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude update"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "daily-brief/"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "ant apply vault.yaml"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "typescript",
+    "lines": 12,
+    "loose": false,
+    "first": "const vaultId = process.env.VAULT_ID!; // the vault's ID, fr"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 4,
+    "loose": false,
+    "first": "curl -s https://slack.com/api/chat.postMessage \\"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "markdown",
+    "lines": 21,
+    "loose": true,
+    "first": "---"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": true,
+    "first": "4. Decide. An item earns a line when the reader would act on"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": true,
+    "first": "5. Verify. The world moved while you read. For every item yo"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "markdown",
+    "lines": 20,
+    "loose": true,
+    "first": "---"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "ant apply deployment.md"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 3,
+    "loose": true,
+    "first": "2026-09-09 slack:C0123456789 1788963600.000100 refund thread"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "yaml",
+    "lines": 5,
+    "loose": false,
+    "first": "budget:"
+  },
+  {
+    "file": "docs/zh/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude update"
+  },
+  {
+    "file": "docs/zh/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 14,
+    "loose": false,
+    "first": "import anthropic"
+  },
+  {
+    "file": "docs/zh/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 1,
+    "loose": false,
+    "first": "# Before: Claude Sonnet 5"
+  },
+  {
+    "file": "docs/zh/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 20,
+    "loose": false,
+    "first": "weather_tool = {"
+  },
+  {
+    "file": "docs/zh/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "text",
+    "lines": 9,
+    "loose": true,
+    "first": "When you change code that can be run, built, or type-checked"
+  },
+  {
+    "file": "docs/zh/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 1,
+    "loose": false,
+    "first": "thinking={\"type\": \"adaptive\", \"display\": \"summarized\"}"
+  },
+  {
+    "file": "docs/zh/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 3,
+    "loose": true,
+    "first": "claude --cloud \"npm test fails maybe one run in four. Find t"
+  },
+  {
+    "file": "docs/zh/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 3,
+    "loose": true,
+    "first": "claude --cloud \"Fix the flaky test in auth.spec.ts\""
+  },
+  {
+    "file": "docs/zh/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude --permission-mode plan"
+  },
+  {
+    "file": "docs/zh/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 2,
+    "loose": true,
+    "first": "claude --teleport            # pick a cloud session"
+  },
+  {
+    "file": "docs/zh/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": true,
+    "first": "claude -p \"The integration tier is green now; rebase on main"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 6,
+    "loose": false,
+    "first": "on(\"tool.call\", { tool: \"Bash\" }, async ($, e, next) => {"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 9,
+    "loose": true,
+    "first": "Make me a Claude Code mod called token-weather: a live forec"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude --version   # 2.1.287 or later"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "token-weather/"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "json",
+    "lines": 6,
+    "loose": false,
+    "first": "{"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "json",
+    "lines": 3,
+    "loose": false,
+    "first": "{"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 10,
+    "loose": false,
+    "first": "// hooks/token-weather.mjs"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude --plugin-dir ./token-weather"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 13,
+    "loose": false,
+    "first": "on(\"session.start\", async ($, e, next) => {"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 11,
+    "loose": false,
+    "first": "// Held by the host, so the history survives a hot reload of"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "typescript",
+    "lines": 7,
+    "loose": false,
+    "first": "export type TokenWeatherReading = { tokens: number; window: "
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 83,
+    "loose": false,
+    "first": "// Token Weather: a live forecast of the context window, abo"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "$ claude plugin validate ./token-weather"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "typescript",
+    "lines": 30,
+    "loose": false,
+    "first": "// tests/token-weather.test.ts"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "$ claude plugin test ./token-weather"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "json",
+    "lines": 5,
+    "loose": false,
+    "first": "{"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude plugin marketplace add ./my-mods"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "/plugin marketplace add your-org/my-mods"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 15,
+    "loose": false,
+    "first": "on(\"tool.call\", { tool: \"Bash\" }, async ($, e, next) => {"
+  },
+  {
+    "file": "docs/zh/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 19,
+    "loose": false,
+    "first": "on(\"tool.call\", async ($, e, next) => {"
+  },
+  {
+    "file": "docs/zh/articles/which-claude-model-should-you-build-with.md",
+    "lang": "markdown",
+    "lines": 6,
+    "loose": true,
+    "first": "---"
+  },
+  {
+    "file": "raw/articles/automating-eval-design-and-hillclimbing.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude update"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "daily-brief/"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "ant apply vault.yaml"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "typescript",
+    "lines": 12,
+    "loose": false,
+    "first": "const vaultId = process.env.VAULT_ID!; // the vault's ID, fr"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 4,
+    "loose": false,
+    "first": "curl -s https://slack.com/api/chat.postMessage \\"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "markdown",
+    "lines": 21,
+    "loose": true,
+    "first": "---"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": true,
+    "first": "4. Decide. An item earns a line when the reader would act on"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": true,
+    "first": "5. Verify. The world moved while you read. For every item yo"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "markdown",
+    "lines": 20,
+    "loose": true,
+    "first": "---"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "ant apply deployment.md"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "text",
+    "lines": 3,
+    "loose": true,
+    "first": "2026-09-09 slack:C0123456789 1788963600.000100 refund thread"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "yaml",
+    "lines": 5,
+    "loose": false,
+    "first": "budget:"
+  },
+  {
+    "file": "raw/articles/building-effective-agent-automations.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude update"
+  },
+  {
+    "file": "raw/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 14,
+    "loose": false,
+    "first": "import anthropic"
+  },
+  {
+    "file": "raw/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 1,
+    "loose": false,
+    "first": "# Before: Claude Sonnet 5"
+  },
+  {
+    "file": "raw/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 20,
+    "loose": false,
+    "first": "weather_tool = {"
+  },
+  {
+    "file": "raw/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "text",
+    "lines": 9,
+    "loose": true,
+    "first": "When you change code that can be run, built, or type-checked"
+  },
+  {
+    "file": "raw/articles/building-with-claude-sonnet-5-5.md",
+    "lang": "python",
+    "lines": 1,
+    "loose": false,
+    "first": "thinking={\"type\": \"adaptive\", \"display\": \"summarized\"}"
+  },
+  {
+    "file": "raw/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 3,
+    "loose": true,
+    "first": "claude --cloud \"npm test fails maybe one run in four. Find t"
+  },
+  {
+    "file": "raw/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 3,
+    "loose": true,
+    "first": "claude --cloud \"Fix the flaky test in auth.spec.ts\""
+  },
+  {
+    "file": "raw/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude --permission-mode plan"
+  },
+  {
+    "file": "raw/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 2,
+    "loose": true,
+    "first": "claude --teleport            # pick a cloud session"
+  },
+  {
+    "file": "raw/articles/claude-code-in-the-cloud.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": true,
+    "first": "claude -p \"The integration tier is green now; rebase on main"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 8,
+    "loose": false,
+    "first": "on(\"tool.call\", { tool: \"Bash\" }, async ($, e, next) => {"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 9,
+    "loose": true,
+    "first": "Make me a Claude Code mod called token-weather: a live forec"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude --version   # 2.1.287 or later"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "token-weather/"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "json",
+    "lines": 8,
+    "loose": false,
+    "first": "{"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "json",
+    "lines": 3,
+    "loose": false,
+    "first": "{"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 14,
+    "loose": false,
+    "first": "// hooks/token-weather.mjs"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude --plugin-dir ./token-weather"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 15,
+    "loose": false,
+    "first": "on(\"session.start\", async ($, e, next) => {"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 13,
+    "loose": false,
+    "first": "// Held by the host, so the history survives a hot reload of"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "typescript",
+    "lines": 7,
+    "loose": false,
+    "first": "export type TokenWeatherReading = { tokens: number; window: "
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 85,
+    "loose": false,
+    "first": "// Token Weather: a live forecast of the context window, abo"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "$ claude plugin validate ./token-weather"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "typescript",
+    "lines": 30,
+    "loose": false,
+    "first": "// tests/token-weather.test.ts"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "$ claude plugin test ./token-weather"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "json",
+    "lines": 5,
+    "loose": false,
+    "first": "{"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "shell",
+    "lines": 1,
+    "loose": false,
+    "first": "claude plugin marketplace add ./my-mods"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "text",
+    "lines": 1,
+    "loose": false,
+    "first": "/plugin marketplace add your-org/my-mods"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 17,
+    "loose": false,
+    "first": "on(\"tool.call\", { tool: \"Bash\" }, async ($, e, next) => {"
+  },
+  {
+    "file": "raw/articles/getting-started-with-claude-code-mods.md",
+    "lang": "javascript",
+    "lines": 21,
+    "loose": false,
+    "first": "on(\"tool.call\", async ($, e, next) => {"
+  },
+  {
+    "file": "raw/articles/which-claude-model-should-you-build-with.md",
+    "lang": "markdown",
+    "lines": 6,
+    "loose": true,
+    "first": "---"
+  }
+]

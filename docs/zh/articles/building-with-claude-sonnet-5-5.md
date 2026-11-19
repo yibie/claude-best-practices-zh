@@ -21,22 +21,22 @@ _感谢 [@jkeatn](https://x.com/jkeatn) 提供代码作画相关的想法，感�
 
 本指南讲的是如何用这个模型来构建。想试用的话，按原样运行下面这个请求：
 
-CODEPython
-
+```python
 import anthropic
 
 client = anthropic.Anthropic()
 
 response = client.messages.create(
     model="claude-sonnet-5-5",
-    max\_tokens=4096,
-    messages=\[
+    max_tokens=4096,
+    messages=[
         {
             "role": "user",
             "content": "Analyze the trade-offs between microservices and monolithic architectures",
         }
-    \],
-    output\_config={"effort": "medium"},
+    ],
+    output_config={"effort": "medium"},
+```
 )
 
 for block in response.content:
@@ -111,25 +111,29 @@ Claude Code 也可以替你完成迁移。运行 `/claude-api migrate this proje
 
 在 Sonnet 5.5 上，不带 `thinking` 字段的请求会以自适应思考运行，而 `thinking: {"type": "disabled"}` 会返回 400 错误。请改为发送新的 `between_tools` 设置。使用 `between_tools` 时，思考只发生在工具调用之间，总响应时间相同或更快。
 
-CODEPython
-
-\# Before: Claude Sonnet 5
+```python
+# Before: Claude Sonnet 5
+```
+```python
 client.messages.create(
     model="claude-sonnet-5",
-    max\_tokens=16000,
+    max_tokens=16000,
     thinking={"type": "disabled"},
-    output\_config={"effort": "xhigh"},
-    messages=\[{"role": "user", "content": "..."}\],
+    output_config={"effort": "xhigh"},
+    messages=[{"role": "user", "content": "..."}],
 )
+```
 
-\# After: Claude Sonnet 5.5
+```python
+# After: Claude Sonnet 5.5
 client.messages.create(
     model="claude-sonnet-5-5",
-    max\_tokens=16000,
-    thinking={"type": "between\_tools"},
-    output\_config={"effort": "high"},
-    messages=\[{"role": "user", "content": "..."}\],
+    max_tokens=16000,
+    thinking={"type": "between_tools"},
+    output_config={"effort": "high"},
+    messages=[{"role": "user", "content": "..."}],
 )
+```
 
 这个示例还把 effort 从 `xhigh` 降到了 `high`，因为 `between_tools` 有以下限制：
 
@@ -145,15 +149,14 @@ client.messages.create(
 
 类型为 `any` 或 `tool` 的 `tool_choice` 会返回 400 错误，在 token 计数端点上也是如此。请发送 `auto`，把工具标记为 `strict: true` 使其输入符合 schema，并在提示词中说明何时使用它：
 
-CODEPython
-
-weather\_tool = {
-    "name": "get\_weather",
+```python
+weather_tool = {
+    "name": "get_weather",
     "description": "Get the current weather in a given location",
-    "input\_schema": {
+    "input_schema": {
         "type": "object",
         "properties": {"location": {"type": "string"}},
-        "required": \["location"\],
+        "required": ["location"],
         "additionalProperties": False,
     },
     "strict": True,
@@ -161,12 +164,13 @@ weather\_tool = {
 
 client.messages.create(
     model="claude-sonnet-5-5",
-    max\_tokens=1024,
-    tools=\[weather\_tool\],
-    tool\_choice={"type": "auto"},  \# was {"type": "tool", "name": "get\_weather"}
-    messages=\[
-        {"role": "user", "content": "What's the weather in Paris? Use the get\_weather tool."}
-    \],
+    max_tokens=1024,
+    tools=[weather_tool],
+    tool_choice={"type": "auto"},  # was {"type": "tool", "name": "get_weather"}
+    messages=[
+        {"role": "user", "content": "What's the weather in Paris? Use the get_weather tool."}
+    ],
+```
 )
 
 严格工具调用要求每个对象上都设置 `additionalProperties: false`。
@@ -207,8 +211,7 @@ Effort 级别经过了重新校准，因此某个级别产生的思考量不再�
 
 Sonnet 5.5 通常会在报告变更完成之前检查自己的工作，但在 `low` effort 下，它有时会跳过一项实际检验该变更的检查。如果你看到变更被报告为完成却没有测试或构建输出，提示指南建议使用下面这段系统提示词：
 
-CODEText
-
+```text
 When you change code that can be run, built, or type-checked, run a real
 check that exercises the change before reporting it done: the project's
 tests, type-checker, or build, or the changed command itself. A syntax-only
@@ -218,14 +221,15 @@ its own package manager and lockfile (e.g. npm install, pip
 install -r requirements.txt), never via sudo or the system package manager,
 unless told not to. Only if no real check can run here, say which one you
 did not run and why instead of reporting the change as done.
+```
 
 ### 用 thinking.display 展示进度
 
 不要要求模型在响应中写出它的推理，因为那会招致 `reasoning_extraction` 拒答。改为读取摘要化的思考：
 
-CODEPython
-
+```python
 thinking={"type": "adaptive", "display": "summarized"}
+```
 
 如果希望单独展示面向用户的进度备注，请使用 `display: "updates"`（beta）。如果你希望在可预测的节点获得更新，例如在第一次工具调用前给出一行、在结尾给出简短回顾，请在系统提示词中说明。
 

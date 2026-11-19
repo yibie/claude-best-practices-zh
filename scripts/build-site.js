@@ -205,6 +205,9 @@ article.doc{max-width:760px}
 .doc blockquote{font-size:calc(var(--doc-font,16px) - 0.5px)}
 .doc h2{font-size:calc(var(--doc-font,16px) + 4px)}
 .doc blockquote{font-size:15.5px}
+.doc table{table-layout:auto}
+.doc td:first-child,.doc th:first-child{min-width:4.5em}
+.doc pre{font-size:13px;line-height:1.65}
 .doc-foot{color:var(--faint);font-size:12px;margin-top:36px}
 .rel-block{margin:44px 0 8px;border-top:1px solid var(--line);padding-top:18px}
 .rel-block h3{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
