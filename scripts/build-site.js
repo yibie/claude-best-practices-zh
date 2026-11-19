@@ -275,7 +275,7 @@ function nav(current) {
     <div class="group"><div class="glabel">概念维基</div>${conceptGroups}</div>
     <div class="group"><div class="glabel">中文译文</div>${readGroups}</div>
     <div class="group"><div class="glabel">仓库</div>
-      <details><summary><a href="${TREE}/raw" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;flex:1">英文原文快照 ↗</a></summary></details>
+      <details><summary><a href="${RENDER_DOCS ? '/en/index.html' : `${TREE}/raw`}" style="color:inherit;text-decoration:none;flex:1">英文原文快照</a></summary></details>
       <details><summary><a href="${REPO}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;flex:1">GitHub 仓库 ↗</a></summary></details>
     </div>
   </nav>
@@ -373,7 +373,12 @@ function rewrite(mdText, kind) {
     const [p, hash] = href.split('#');
     const name = path.basename(p, '.md');
     if (kind === 'wiki') {
-      if (p.includes('docs/zh/')) return `](${BLOB}/docs/zh/${p.replace(/^.*docs\/zh\//, '')})`;
+      if (p.includes('docs/zh/')) {
+        const rel = p.replace(/^.*docs\/zh\//, '');
+        return RENDER_DOCS
+          ? `](/read/${rel.replace(/\.md$/, '.html')})`
+          : `](${BLOB}/docs/zh/${rel})`;
+      }
       if (!path.dirname(p) || path.dirname(p) === '.') return RENDER_DOCS ? `](/wiki/${name}.html)` : `](${BLOB}/wiki/${name}.md)`;
       return `](${p.replace(/\.md$/, '.html')})`;
     }
@@ -441,26 +446,36 @@ const write = (file, html) => {
         <div class="idx-row">
           <div class="t"><a href="${i.url}">${i.titleZh}</a><small>${i.title}</small></div>
           <div class="m">${String(i.date).slice(0, 10)}${i.readTime ? ` · ${i.readTime} min` : ''}
-            <span class="row-links">
-              ${i.hasRaw ? `<a href="${i.enUrl}">EN</a>` : ''}
-              <a href="${BLOB}/docs/zh/${i.rel}" target="_blank" rel="noopener" title="仓库里的译文文件">仓库</a>
-            </span>
+            <span class="row-links">${i.hasRaw ? `<a href="${i.enUrl}">EN</a>` : ''}</span>
           </div>
         </div>`).join('')}
     </section>`;
-  const arts = readItems.filter((i) => bucketOf(i) === 'articles').sort((a, b) => String(b.date).localeCompare(String(a.date)));
-  const guides = readItems.filter((i) => bucketOf(i) === 'guides').sort((a, b) => String(b.date).localeCompare(String(a.date)));
-  const webs = readItems.filter((i) => bucketOf(i) === 'webinars').sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const withText = readItems.filter((i) => i.hasText);
+  const noText = readItems.filter((i) => !i.hasText);
+  const arts = withText.filter((i) => bucketOf(i) === 'articles').sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const guides = withText.filter((i) => bucketOf(i) === 'guides').sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const webs = withText.filter((i) => bucketOf(i) === 'webinars').sort((a, b) => String(b.date).localeCompare(String(a.date)));
+
+  const bare = noText.length ? `
+    <section class="cat-block" id="bare">
+      <h3>仅有摘要的资源<span>${noText.length} 条</span></h3>
+      <p class="muted" style="font-size:13px;margin:0 0 10px">这些是录播页或报名页，原站只有摘要，没有正文可译。点标题去 claude.com 看原页面。</p>
+      ${noText.map((i) => `<div class="idx-row">
+        <div class="t"><a href="${manifest.items.find((m) => m.slug === i.slug)?.url || '#'}" target="_blank" rel="noopener">${i.titleZh}</a><small>${i.title}</small></div>
+        <div class="m">${String(i.date).slice(0, 10)}</div>
+      </div>`).join('')}
+    </section>` : '';
   write('read/index.html', page({
     title: '中文译文目录 · Claude 最佳实践',
     current: 'read/index.html',
     desc: '173 篇 Claude 官方文章的中文译文目录',
     body: `<article>
       <div class="hero-mini"><h1>中文译文</h1>
-      <p>仓库 <code>docs/zh/</code> 下的 ${readItems.filter((i) => i.hasText).length} 篇译文${RENDER_DOCS ? '，站内可直接读' : ''}。每行右侧另有「EN」跳英文原文快照、「仓库」跳 GitHub 上的原始文件。</p></div>
+      <p>仓库 <code>docs/zh/</code> 里的 ${readItems.filter((i) => i.hasText).length} 篇译文，全部放在站内直接读；每行右侧的「EN」是同一篇的英文原文快照。</p></div>
       ${table(arts, 'articles', '文章')}
       ${table(guides, 'guides', '指南')}
       ${table(webs, 'webinars', '网络研讨会')}
+      ${bare}
     </article>`,
   }));
   for (const i of readItems) {
@@ -615,7 +630,7 @@ if (RENDER_DOCS) {
             ${(i.products || []).slice(0, 2).map((x) => `<span class="tag">${x}</span>`).join('')}
             ${srcUrl ? `<a href="${srcUrl}" target="_blank" rel="noopener">原文 ↗</a>` : ''}
             ${i.hasRaw ? `<a href="${i.enUrl}">English</a>` : ''}
-            <a href="${BLOB}/docs/zh/${i.rel}" target="_blank" rel="noopener">GitHub ↗</a>
+
           </div>
           <h1>${i.titleZh}</h1>
           <p class="doc-sub">${i.title}</p>
@@ -632,7 +647,39 @@ if (RENDER_DOCS) {
 /* 可视化页 */
 for (const f of ['graph.html', 'mindmap.html', 'mindmap.md', 'knowledge-graph.mmd', 'graph.json']) {
   const p = path.join(ROOT, 'mindmap', f);
-  if (fs.existsSync(p)) fs.copyFileSync(p, path.join(SITE, f));
+  if (!fs.existsSync(p)) continue;
+  if (f === 'graph.html' && RENDER_DOCS) {
+    let html = fs.readFileSync(p, 'utf8');
+    // 站内图：把指向仓库的链接/跳转改成本站页面
+    html = html.replace(
+      /window\.open\('https:\/\/github\.com\/yibie\/claude-best-practices-zh\/blob\/main\/(wiki|docs\/zh)\/'\s*\+\s*([^+]+?)\s*\+\s*'\.md'/g,
+      (m, dir, expr) => `window.open('${dir === 'wiki' ? '/wiki/' : '/read/'}' + ${expr} + '.html'`,
+    );
+    html = html.replace(
+      /\$\{GH\}\/(wiki|docs\/zh)\/\$\{encodeURIComponent\(([^}]+)\)\}\.md/g,
+      (m, dir, name) => `${dir === 'wiki' ? '/wiki/' : '/read/'}\${encodeURIComponent(${name})}.html`,
+    );
+    // 内嵌数据里的出处链接也换成站内
+    html = html.replace(/"gh":"https:\/\/github\.com\/yibie\/claude-best-practices-zh\/blob\/main\/docs\/zh\/([^"]+?)\.md"/g,
+      '"gh":"/read/$1.html"');
+    html = html.replace(/"gh":"https:\/\/github\.com\/yibie\/claude-best-practices-zh\/blob\/main\/wiki\/([^"]+?)\.md"/g,
+      '"gh":"/wiki/$1.html"');
+    // 兜底：页面加载后把残留的仓库链接改写掉
+    html = html.replace('</body>', `<script>
+(function(){
+  var map=function(u){
+    return u.replace('https://github.com/yibie/claude-best-practices-zh/blob/main/wiki/','/wiki/')
+            .replace('https://github.com/yibie/claude-best-practices-zh/blob/main/docs/zh/','/read/')
+            .replace(/\.md$/,'.html');
+  };
+  document.querySelectorAll('a[href*="github.com/yibie/claude-best-practices-zh"]').forEach(function(a){a.href=map(a.href);});
+  var open=window.open; window.open=function(u){ return open.call(window, typeof u==='string'?map(u):u, arguments[1]); };
+})();
+</script></body>`);
+    write(f, html);
+    continue;
+  }
+  fs.copyFileSync(p, path.join(SITE, f));
 }
 fs.copyFileSync(path.join(SRC, 'theme.js'), path.join(SITE, 'theme.js'));
 fs.writeFileSync(path.join(SITE, 'search.json'), JSON.stringify(search));
