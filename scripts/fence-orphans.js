@@ -21,6 +21,7 @@ const RULES = [
   ['# After: Claude Sonnet 5.5', 'python'],
   ['/claude-api build-eval', 'shell'],
   ['client.messages.create(', 'python'],
+  ['\\# ...agree on the plan', 'shell'],
 ];
 
 const unescapeMd = (s) => s.replace(/\\([\\`*_{}\[\]()#+\-.!<>|])/g, '$1');

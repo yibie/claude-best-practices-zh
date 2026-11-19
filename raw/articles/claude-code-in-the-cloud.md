@@ -130,8 +130,10 @@ For a larger change, agree on the approach first where back-and-forth is cheap. 
 ```shell
 claude --permission-mode plan
 ```
-\# ...agree on the plan, save it to docs/migration-plan.md, commit and push...
+```shell
+# ...agree on the plan, save it to docs/migration-plan.md, commit and push...
 claude --cloud "Execute the migration plan in docs/migration-plan.md"
+```
 
 While the cloud session builds, your terminal is free for other work. When it's done, pull the session down to finish it by hand.
 

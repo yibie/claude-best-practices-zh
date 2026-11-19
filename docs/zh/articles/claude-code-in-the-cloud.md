@@ -131,8 +131,10 @@ Claude 的每一轮仍然计入你的套餐，但一条命令中的长时间测�
 ```shell
 claude --permission-mode plan
 ```
-\# ...agree on the plan, save it to docs/migration-plan.md, commit and push...
+```shell
+# ...agree on the plan, save it to docs/migration-plan.md, commit and push...
 claude --cloud "Execute the migration plan in docs/migration-plan.md"
+```
 
 当云会话构建时，你的终端可以自由处理其他工作。完成后，将会话拉下来手动完成。
 
